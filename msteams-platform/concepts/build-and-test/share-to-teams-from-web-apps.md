@@ -1,46 +1,46 @@
 ---
 title: Von Web-Apps für Teams freigeben
-description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" zu Teams eingebetteten Schaltfläche auf Ihrer Website mit einer Websitevorschau hinzufügen, indem Sie Codebeispiele verwenden.
+description: Informationen zum Hinzufügen der eingebetteten Schaltfläche "Zu Teams teilen" auf Ihrer Website mit einer Websitevorschau unter Verwendung von Codebeispielen
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190022"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558478"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
-Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie "Freigeben" auswählen, um die Schaltfläche Teams, wird die Schaltfläche "Freigeben" gestartet, um Teams Oberfläche in einem Popupfenster zu Teams. Auf diese Weise können Sie einen Link direkt für eine beliebige Person oder Microsoft Teams Kanal freigeben, ohne den Kontext zu wechseln.
+Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie die Schaltfläche "In Teams teilen" auswählen, wird die Oberfläche "Für Teams freigeben" in einem Popupfenster gestartet. Auf diese Weise können Sie einen Link direkt mit einer beliebigen Person oder einem Microsoft Teams-Kanal teilen, ohne den Kontext zu wechseln.
 
-In der folgenden Abbildung wird das Popupfenster für "Freigeben" für Teams Vorschau angezeigt:
+In der folgenden Abbildung wird das Popupfenster für die Vorschauoberfläche "Für Teams freigeben" angezeigt:
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams-Popup" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams-Popup":::
 
 > [!NOTE]
 >
 > * Nur die Desktopversionen von Microsoft&nbsp;Edge und Google Chrome werden unterstützt.
 > * Die Verwendung von Freemium- oder Gastkonten wird nicht unterstützt.
 
-Sie können auch die Verbreitung von Links für die über "Freigeben" freigegebenen Links zu Teams Schaltfläche hinzufügen, die in der Web-App, persönlichen App oder Registerkarte gehostet wird. Weitere Informationen finden Sie unter ["Verbreitung von Links"](~/messaging-extensions/how-to/link-unfurling.md).
+Sie können auch die Verbreitung von Links für die Links hinzufügen, die über die Schaltfläche "Für Teams freigeben" freigegeben wurden, die in der Web-App, persönlichen App oder Registerkarte gehostet werden. Weitere Informationen finden Sie unter ["Verbreitung von Links"](~/messaging-extensions/how-to/link-unfurling.md).
 
-In der folgenden Abbildung wird die Verknüpfungsausweitung über die Schaltfläche "Freigeben für Teams" angezeigt:
+In der folgenden Abbildung wird die Oberfläche für die Verbreitung von Links über die Schaltfläche "Für Teams freigeben" angezeigt:
 
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Freigabe-zu-Teams-Link-Verbreitung" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Verbreitung von Share-to-Teams-Links":::
 
 > [!NOTE]
 > Die Verbreitung von Links in der Freigabe zu Teams ist derzeit nur in der öffentlichen Entwicklervorschau verfügbar.
 
-In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "Freigeben" erstellen und in Teams für Ihre Website einbetten, Eine Websitevorschau erstellen und auf Teams für Education erweitern.
+In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "In Teams teilen" für Ihre Website erstellen und einbetten, ihre Websitevorschau erstellen und auf Teams für Education erweitern.
 
-Im folgenden Video erfahren Sie, wie Sie die Schaltfläche "Freigeben" in Teams einbetten:
+Im folgenden Video erfahren Sie, wie Sie die Schaltfläche "In Teams teilen" einbetten:
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
 
 
-## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Freigabe in Teams Schaltfläche
+## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Schaltfläche "In Teams teilen"
 
 1. Fügen Sie das `launcher.js` Skript auf Ihrer Webseite hinzu.
 
@@ -57,11 +57,11 @@ Im folgenden Video erfahren Sie, wie Sie die Schaltfläche "Freigeben" in Teams 
     </div>
     ```
 
-    Nach Abschluss dieses Vorgangs wird das Symbol für Teams Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Für Teams freigeben":
+    Nach Abschluss dieses Vorgangs wird das Teams-Symbol zu Ihrer Website hinzugefügt. Die folgende Abbildung zeigt das Symbol "Für Teams freigeben":
 
-    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Symbol &quot;Für Teams freigeben&quot;" border="true":::
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Symbol &quot;Für Teams freigeben&quot;":::
 
-1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Freigeben" Teams möchten, verwenden Sie alternativ das `data-icon-px-size` Attribut.
+1. Wenn Sie eine andere Symbolgröße für die Schaltfläche "Für Teams freigeben" wünschen, verwenden Sie alternativ das `data-icon-px-size` Attribut.
 
     ```html
     <div
@@ -105,7 +105,7 @@ So zeigen Sie die Vorschau an:
 
 In der folgenden Tabelle sind die erforderlichen Tags aufgeführt:
 
-|Value|Metatag| öffnen Graph|
+|Wert|Metatag| Open Graph|
 |----|----|----|
 |Titel|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Beschreibung|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
@@ -115,9 +115,9 @@ Sie können entweder die HTML-Standardversionen oder die Open Graph-Version verw
 
 ## <a name="share-to-teams-for-education"></a>Für Teams für Education freigeben
 
-Für Lehrer, die die Schaltfläche "Freigeben zum Teams" verwenden, gibt es eine zusätzliche Option`Create an Assignment`, mit der Sie schnell eine Aufgabe im ausgewählten Team basierend auf dem freigegebenen Link erstellen können. In der folgenden Abbildung wird "Freigeben für Teams für Bildungseinrichtungen" angezeigt:
+Für Lehrer, die die Schaltfläche "In Teams teilen" verwenden, gibt es eine zusätzliche Option `Create an Assignment` , mit der Sie schnell eine Aufgabe im ausgewählten Team basierend auf dem freigegebenen Link erstellen können. Die folgende Abbildung zeigt "In Teams für Bildungseinrichtungen freigeben":
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Für Teams Popupschulung freigeben":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Für Teams-Popupschulung freigeben":::
 
 ## <a name="full-launcherjs-definition"></a>Vollständige launcher.js Definition
 
@@ -125,7 +125,7 @@ Für Lehrer, die die Schaltfläche "Freigeben zum Teams" verwenden, gibt es eine
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | n/v | Der Href des freizugebenden Inhalts. |
 | Vorschau | `data-preview` | Boolescher Wert (als Zeichenfolge) | `true` | Gibt an, ob eine Vorschau des freizugebenden Inhalts angezeigt werden soll. |
-| iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe der zu Teams Schaltfläche "Freigeben" in Pixeln, die gerendert werden soll. |
+| iconPxSize | `data-icon-px-size` | Zahl (als Zeichenfolge) | `32` | Die Größe in Pixeln der Schaltfläche "In Teams teilen", die gerendert werden soll. |
 | msgText | `data-msg-text` | string | n/v | Standardtext, der vor dem Link im Feld zum Verfassen von Nachrichten eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200 Zeichen. |
 | assignInstr | `data-assign-instr` | string | n/v | Standardtext, der in das Feld "Anweisungen" eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 200 Zeichen. |
 | assignTitle | `data-assign-title` | string | n/v | Standardtext, der in das Feld "Titel" für Zuordnungen eingefügt werden soll. Die maximale Anzahl von Zeichen beträgt 50 Zeichen. |
@@ -140,7 +140,7 @@ Derzeit werden alle Freigabeschaltflächen auf der Seite gerendert. Wenn ein opt
 
 ### <a name="set-default-form-values"></a>Festlegen von Standardformularwerten
 
-Sie können festlegen, dass Standardwerte für die folgenden Felder im Formular "Freigeben" auf Teams festgelegt werden:
+Sie können die Standardwerte für die folgenden Felder im Formular "Für Teams freigeben" festlegen:
 
 * Sagen Sie etwas dazu: `msgText`
 * Aufgabenanweisungen: `assignInstr`

@@ -3,14 +3,14 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App mit Symbolen zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: d0315f641d345faf58429729d01e187899a4790f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123990"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558562"
 ---
-# <a name="create-a-microsoft-teams-app-package"></a>Erstellen eines Microsoft Teams-App-Pakets
+# <a name="create-teams-app-package"></a>Teams-App-Paket erstellen
 
 Sie benötigen ein App-Paket, ganz gleich, wie Sie vorhaben, Ihre Microsoft Teams-App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
@@ -21,7 +21,7 @@ Sie benötigen ein App-Paket, ganz gleich, wie Sie vorhaben, Ihre Microsoft Team
 
 Wenn ein Benutzer Ihre App in Teams installiert, wird ein App-Paket installiert, das eine einzige Konfigurationsdatei (auch als App-Manifest bezeichnet) und die Symbole Ihrer App enthält. Die Logik und der Datenspeicher der App werden an anderer Stelle gehostet, z. B. während der Entwicklung auf „localhost“ und unter Azure Web Services. Teams greift über HTTPS auf diese Ressourcen zu.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Abbildung des App-Hostings der Teams-App" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Abbildung des App-Hostings der Teams-App":::
 
 ## <a name="app-manifest"></a>App-Manifest
 
@@ -44,7 +44,7 @@ Die Farbversion Ihres Symbols wird in den meisten Teams-Szenarien angezeigt und 
 
 In Microsoft Teams wird Ihr Symbol in verschiedenen Szenarien automatisch auf ein Quadrat mit abgerundeten Ecken und in Bot-Szenarien auf eine sechseckige Form zugeschnitten. Damit beim Zuschneiden keine Details verloren gehen, fügen Sie rund um das Symbol einen Abstand von 48 Pixel hinzu.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Leitfaden für die Gestaltung von Microsoft Teams-Farbsymbolen." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Leitfaden für die Gestaltung von Microsoft Teams-Farbsymbolen.":::
 
 ### <a name="outline-icon"></a>Kontursymbol
 
@@ -55,13 +55,13 @@ Ein Kontursymbol wird in zwei Szenarien angezeigt:
 
 Das Symbol muss 32 x 32 Pixel groß sein. Es kann weiß mit transparentem Hintergrund oder transparent mit weißem Hintergrund sein (es sind keine anderen Farben zulässig). Das Kontursymbol sollte keinen zusätzlichen Abstand um das Symbol aufweisen.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Leitfaden für die Gestaltung von Microsoft Teams-Kontursymbolen." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Leitfaden für die Gestaltung von Microsoft Teams-Kontursymbolen.":::
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole gestalten müssen." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole gestalten müssen.":::
 
 #### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Richtig: Befolgen Sie die Vorgaben für Kontursymbole
 
@@ -69,7 +69,7 @@ Die RGB-Werte von Weiß, das in Ihrem Symbol verwendet wird, müssen sein: Rot: 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole nicht gestalten sollten." border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Abbildung, die zeigt, wie Sie Ihre App-Symbole nicht gestalten sollten.":::
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Zu vermeiden: Kreisförmig oder zu einem Quadrat mit abgerundeten Ecken zuschneiden
 
@@ -88,15 +88,15 @@ Hier sehen Sie, wie App-Symbole in verschiedenen Microsoft Teams-Funktionen und 
 
 #### <a name="personal-app"></a>Persönliche App
 
-:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol in einer persönlichen App aussieht." border="false":::
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol in einer persönlichen App aussieht.":::
 
 #### <a name="bot-channel"></a>Bot (Kanal)
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol in einem Bot innerhalb eines Kanals aussieht." border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Beispiel, das zeigt, wie ein App-Symbol in einem Bot innerhalb eines Kanals aussieht.":::
 
 #### <a name="message-extension"></a>Nachrichtenerweiterung
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="Alternativer Text" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="Alternativer Text":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

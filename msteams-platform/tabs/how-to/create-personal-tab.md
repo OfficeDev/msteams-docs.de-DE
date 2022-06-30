@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189468"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558394"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -58,7 +58,7 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 1. Geben Sie Ihre Werte für eine Reihe von Fragen an, die vom Microsoft Teams App-Generator gestellt werden, um Ihre `manifest.json`-Datei zu aktualisieren.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams-Generator" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams-Generator":::
 
     <details>
     <summary><b>Reihe von Fragen zum Aktualisieren der Manifest.json-Datei</b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. Geben Sie `http://localhost:3007/<yourDefaultAppNameTab>/` in Ihren Browser ein, um die Startseite Ihrer Anwendung anzuzeigen.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte":::
 
 1. Durchsuchen Sie `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, um Ihre persönliche Registerkarte anzuzeigen.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Standard HTML-Registerkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Standard HTML-Registerkarte":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels zu Ihrer Registerkarte
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner aus und dann **Öffnen**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte":::
 
 1. Wählen Sie **Hinzufügen** im Dialogfeld aus. Ihre Registerkarte wird in Teams hochgeladen.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Persönliche Registerkarte hochgeladen" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Persönliche Registerkarte hochgeladen":::
 
 1. Wählen Sie im linken Bereich von Teams die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, und wählen Sie dann Ihre hochgeladene App aus, um Ihre persönliche Registerkarte anzuzeigen.
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie **Hinzufügen** aus, um die Registerkarte in Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Standardregisterkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Standardregisterkarte":::
 
    Jetzt haben Sie Ihre persönliche Registerkarte erfolgreich erstellt und in Teams hinzugefügt.
   
@@ -476,7 +476,7 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
-#### <a name="appmanifest-folder"></a>AppManifest-Ordner
+#### <a name="appmanifest-folder"></a>Ordner „AppManifest“
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Wählen Sie **Hinzufügen** aus, um die Registerkarte in Teams zu laden. Ihre Registerkarte ist jetzt in Teams verfügbar.
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Registerkarte „Persönlich“" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Registerkarte „Persönlich“":::
   
    Jetzt haben Sie Ihre persönliche Registerkarte erfolgreich erstellt und in Teams hinzugefügt.
 

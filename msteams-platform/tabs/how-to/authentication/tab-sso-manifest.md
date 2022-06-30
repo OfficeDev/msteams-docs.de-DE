@@ -4,12 +4,12 @@ description: Beschreibt das Aktualisieren des Manifests zum Aktivieren von SSO f
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503480"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558737"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Updatemanifest für SSO und Vorschau-App
 
@@ -24,7 +24,7 @@ Sie haben Ihre Registerkarten-App in Azure AD registriert und eine App-ID abgeru
 
 Konfigurieren Sie die `webApplicationInfo` Eigenschaft in der Manifestdatei der Teams-App. Diese Eigenschaft ermöglicht SSO für Ihre App, damit App-Benutzer nahtlos auf Ihre Registerkarten-App zugreifen können.
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Konfiguration des Teams-App-Manifests" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Konfiguration des Teams-App-Manifests":::
 
 `webApplicationInfo` verfügt über zwei Elemente und `id` `resource`.
 
@@ -138,7 +138,7 @@ Weitere Informationen finden Sie [unter webApplicationInfo](../../../resources/s
 
 Sie haben die Registerkarten-App so konfiguriert, dass SSO in Azure AD, im App-Code und in der Teams-Manifestdatei aktiviert wird. Sie können jetzt Ihre Registerkarten-App in Teams querladen und in der Teams-Umgebung in der Vorschau anzeigen.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO-App" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO-App":::
 
 So zeigen Sie eine Vorschau Ihrer Registerkarten-App in Teams an:
 
@@ -160,17 +160,17 @@ So zeigen Sie eine Vorschau Ihrer Registerkarten-App in Teams an:
 
 1. Wählen Sie **Weiter**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Dialogfeld &quot;Teams&quot;, in dem über zusätzliche Berechtigungen informiert wird" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Dialogfeld &quot;Teams&quot;, in dem über zusätzliche Berechtigungen informiert wird":::
 
     Das Azure AD-Zustimmungsdialogfeld wird angezeigt.
 
 1. Wählen Sie **"Annehmen** " aus, um die Zustimmung für Open-ID-Bereiche zu erteilen.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD-Zustimmungsdialogfeld" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD-Zustimmungsdialogfeld":::
 
     Teams öffnet die Registerkarten-App, und Sie können sie verwenden.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Beispiel für die Teams-Registerkarten-App mit aktiviertem SSO" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Beispiel für die Teams-Registerkarten-App mit aktiviertem SSO":::
 
     Herzlichen Glückwunsch! Sie haben SSO für Ihre Registerkarten-App aktiviert.
 

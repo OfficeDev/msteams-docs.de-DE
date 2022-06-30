@@ -5,12 +5,12 @@ description: 'Fragen, die Sie bei der Planung Ihrer App berücksichtigen sollten
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123111"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558128"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -129,7 +129,7 @@ Vorschlag: Optionen, mit denen das beste Vermarktungsmodell ermittelt werden kan
 
 Teams hostet Ihre App nicht. Wenn ein Benutzer Ihre App in Teams installiert, wird ein App-Paket installiert, das eine einzige Konfigurationsdatei (auch als App-Manifest bezeichnet) und die Symbole Ihrer App enthält. Die Logik und der Datenspeicher der App werden an anderer Stelle gehostet, z. B. während der Entwicklung auf „localhost“ und unter Azure Web Services. Teams greift über HTTPS auf diese Ressourcen zu.
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Abbildung des App-Hostings der Teams-App" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Abbildung des App-Hostings der Teams-App":::
 
 ## <a name="plan-beyond-app-building"></a>Über die App-Erstellung hinaus planen
 

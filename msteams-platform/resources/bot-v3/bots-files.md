@@ -5,12 +5,12 @@ keywords: Senden und Empfangen von Teams-Bots-Dateien
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1bc04d2dfde200917c9faeb9fcb1c91b145463de
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503585"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558289"
 ---
 # <a name="send-and-receive-files-using-bots"></a>Senden und Empfangen von Dateien mithilfe von Bots
 
@@ -89,7 +89,7 @@ Das Hochladen einer Datei für einen Benutzer umfasst die folgenden Schritte:
 
 Diese Desktopnachricht enthält ein einfaches Anlageobjekt, in dem der Benutzer um die Berechtigung zum Hochladen der Datei gebeten wird:
 
-:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot der Zustimmungskarte, die die Benutzerberechtigung zum Hochladen der Datei anfordert" border="true":::
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Screenshot der Zustimmungskarte, die die Benutzerberechtigung zum Hochladen der Datei anfordert":::
 
 Die mobile Nachricht enthält ein Anlageobjekt, das die Benutzerberechtigung zum Hochladen der Datei anfordert:
 

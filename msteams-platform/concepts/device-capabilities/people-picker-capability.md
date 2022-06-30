@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie das JavaScript-Client-SDK v
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130445"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557729"
 ---
 # <a name="integrate-people-picker"></a>Integration der Personenauswahl
 
@@ -53,7 +53,7 @@ Die Personenauswahl ermöglicht dem Benutzer das Suchen und Hinzufügen von Pers
 1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
 1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Auswahl auf Mobilgerät" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Auswahl auf Mobilgerät":::
 
 # <a name="desktop"></a>[Desktop](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ Die Personenauswahl für Web oder Desktop wird in einem modalen Fenster über Ih
 1. Geben Sie den Namen der erforderlichen Person ein. Eine Liste mit Namensvorschlägen wird angezeigt.
 1. Wählen Sie den Namen der erforderlichen Person aus der Liste aus.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Personenauswahl nach Name auf Desktop" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Personenauswahl nach Name auf Desktop":::
 
 ---
 

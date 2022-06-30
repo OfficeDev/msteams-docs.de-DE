@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123948"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558751"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Entwerfen Ihrer Microsoft Teams-Nachrichtenerweiterung
 
@@ -35,11 +35,11 @@ Die folgenden Beispiele zeigen, wie Sie eine Nachrichtenerweiterung in einem Kan
 
 ### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung in der Nähe des Felds „Verfassen“ in einem Kanal auf Mobilgeräten hinzufügen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung in der Nähe des Felds „Verfassen“ in einem Kanal auf Mobilgeräten hinzufügen.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung in der Nähe des Felds „Verfassen“ in einem Kanal hinzufügen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung in der Nähe des Felds „Verfassen“ in einem Kanal hinzufügen.":::
 
 ## <a name="set-up-a-message-extension"></a>Einrichten einer Nachrichtenerweiterung
 
@@ -49,11 +49,11 @@ Aus Gründen der Konsistenz zwischen Teams-Apps können Sie den Anmeldebildschir
 
 ### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Das Beispiel zeigt den Einrichtungsbildschirm der Nachrichtenerweiterung mit einer Anmeldeschaltfläche auf dem Handy." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Das Beispiel zeigt den Einrichtungsbildschirm der Nachrichtenerweiterung mit einer Anmeldeschaltfläche auf dem Handy.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Das Beispiel zeigt den Einrichtungsbildschirm für Nachrichtenerweiterungen mit einer Anmeldeschaltfläche." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Das Beispiel zeigt den Einrichtungsbildschirm für Nachrichtenerweiterungen mit einer Anmeldeschaltfläche.":::
 
 ## <a name="types-of-message-extensions"></a>Arten von Nachrichtenerweiterungen
 
@@ -65,17 +65,17 @@ Mit Suchbefehlen können Personen Ihre Nachrichtenerweiterung nutzen, um schnell
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Nachrichtenerweiterung, die über das Erstellungsfeld auf dem Handy gestartet wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Nachrichtenerweiterung, die über das Erstellungsfeld auf dem Handy gestartet wird.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Nachrichtenerweiterung, die über das Erstellungsfeld gestartet wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Das Beispiel zeigt eine suchbasierte Nachrichtenerweiterung, die über das Erstellungsfeld gestartet wird.":::
 
 #### <a name="compose-box-layout-options"></a>Layoutoptionen für das "Verfassen"-Feld 
 
 Sie haben einige Optionen für die Anzeige der Suchergebnisse von Nachrichtenerweiterungen, darunter [Listen- und Gitteransichten](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrationen mit Layoutoptionen für Suchergebnisse der Nachrichtenerweiterung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrationen mit Layoutoptionen für Suchergebnisse der Nachrichtenerweiterung.":::
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
@@ -93,11 +93,11 @@ Nach dem Hinzufügen können Benutzer Ihre Nachrichtenerweiterung öffnen, indem
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung über das Feld „Verfassen“ auf Mobilgeräten öffnen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung über das Feld „Verfassen“ auf Mobilgeräten öffnen.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie eine Nachrichtenerweiterung über das Feld „Verfassen“ geöffnet wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Das Beispiel zeigt, wie eine Nachrichtenerweiterung über das Feld „Verfassen“ geöffnet wird.":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>Aus einer Chatnachricht oder einem Kanalbeitrag
 
@@ -105,11 +105,11 @@ Nach dem Hinzufügen können Benutzer das Symbol **Weitere** :::image type="icon
 
 #### <a name="chat-message"></a>Chatnachricht
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Das Beispiel zeigt, wie eine Nachrichtenerweiterung aus einer Chatnachricht geöffnet wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Das Beispiel zeigt, wie eine Nachrichtenerweiterung aus einer Chatnachricht geöffnet wird.":::
 
 #### <a name="channel-post"></a>Kanalbeitrag
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung über einen Kanalbeitrag auf mobilen Geräten öffnen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Das Beispiel zeigt, wie Sie eine Nachrichtenerweiterung über einen Kanalbeitrag auf mobilen Geräten öffnen.":::
 
 ## <a name="use-a-message-extension"></a>Verwenden einer Nachrichtenerweiterung
 
@@ -121,31 +121,31 @@ In den folgenden Szenarien werden die wichtigsten Verwendungsmöglichkeiten von 
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der auf einem Mobilgerät über das &quot;Verfassen&quot;-Feld nach Inhalten sucht, die eingefügt werden sollen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der auf einem Mobilgerät über das &quot;Verfassen&quot;-Feld nach Inhalten sucht, die eingefügt werden sollen.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der nach Inhalten sucht, die aus dem &quot;Verfassen&quot;-Feld eingefügt werden sollen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der nach Inhalten sucht, die aus dem &quot;Verfassen&quot;-Feld eingefügt werden sollen.":::
 
 **2. Inhalt einfügen**. Nach der Veröffentlichung können andere Personen auf den Inhalt antworten oder diesen auswählen, um weitere Informationen in Ihrer App anzuzeigen.
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät Inhalte in einer Kanalunterhaltung postet." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät Inhalte in einer Kanalunterhaltung postet.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer Inhalte in einer Kanalunterhaltung postet." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Das Beispiel zeigt, wie ein Benutzer Inhalte in einer Kanalunterhaltung postet.":::
 
 ### <a name="take-action-on-a-message"></a>Aktionen für eine Nachricht ausführen
 
 **1. Wählen Sie eine Nachrichtenerweiterung** aus. Ihre App kann einen oder mehrere Aktionsbefehle enthalten.
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Aktionsbefehl für die Nachrichtenerweiterung auswählt." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Aktionsbefehl für die Nachrichtenerweiterung auswählt.":::
 
 **2. Führen Sie die Aktion aus**. Ihre App kann alle Inhalte oder Daten empfangen und verarbeiten, die von der Nachrichtenaktion gesendet werden. Benutzer führen die Aktion in Ihrer App aus, während sie in ihrer Unterhaltung bleiben.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Beispiel für das Ausführen von Aktionen für eine Nachricht." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Beispiel für das Ausführen von Aktionen für eine Nachricht.":::
 
 ### <a name="preview-links"></a>Vorschaulinks
 
@@ -155,21 +155,21 @@ Mit Nachrichtenerweiterungen können Sie auch Rich-Links von einer erkannten URL
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät einen Link in das &quot;Verfassen&quot;-Feld eingibt." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer auf einem Mobilgerät einen Link in das &quot;Verfassen&quot;-Feld eingibt.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Link in das &quot;Verfassen&quot;-Feld eingibt." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Link in das &quot;Verfassen&quot;-Feld eingibt.":::
 
 **2. Inhalt einfügen**. Wenn Ihre Anwendung die URL im Erfassungsfeld erkennt, wird der Link als Karte dargestellt, die eine umfassende Vorschau des Webinhalts bietet. (Weitere Informationen finden Sie in den [Designrichtlinien für adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md)).
 
 #### <a name="mobile"></a>Mobil
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL auf einem Mobilgerät umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL auf einem Mobilgerät umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Das Beispiel zeigt, wie die URL umfangreiche Inhalte in das &quot;Verfassen&quot;-Feld einschließt, da sie von Ihrer App erkannt wird.":::
 
 ## <a name="manage-a-message-extension"></a>Verwalten einer Nachrichtenerweiterung
 
@@ -183,7 +183,7 @@ Die folgenden Beispiele zeigen eine Nachrichtenerweiterung, die über das Feld �
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration der UI-Anatomie einer Nachrichtenerweiterung im Erstellungsfeld auf einem Mobilgerät." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration der UI-Anatomie einer Nachrichtenerweiterung im Erstellungsfeld auf einem Mobilgerät.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -196,7 +196,7 @@ Die folgenden Beispiele zeigen eine Nachrichtenerweiterung, die über das Feld �
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Abbildung, die die UI-Anatomie einer Nachrichtenerweiterung im Feld „Verfassen“ zeigt." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Abbildung, die die UI-Anatomie einer Nachrichtenerweiterung im Feld „Verfassen“ zeigt.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -211,7 +211,7 @@ Die folgenden Beispiele zeigen eine Nachrichtenerweiterung, die über das Feld �
 
 ### <a name="message-extension-management-menu"></a>Menü „Verwalten von Nachrichtenerweiterungen“
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Abbildung der UI-Struktur eines Menüs für die Verwaltung von Nachrichtenerweiterungen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Abbildung der UI-Struktur eines Menüs für die Verwaltung von Nachrichtenerweiterungen.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -226,7 +226,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel für Setup und allgemeine Nutzung." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel für Setup und allgemeine Nutzung.":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Was Sie tun sollten: Integration mit einmaligem Anmelden
 
@@ -234,7 +234,7 @@ SSO macht den Anmeldeprozess einfacher, schneller und sicherer. Wenn sich ein Be
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Beispiel für die Integration mit einmaligem Anmelden." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Beispiel für die Integration mit einmaligem Anmelden.":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Was Sie nicht tun sollten: Benutzer aus der Unterhaltung entfernen
 
@@ -251,7 +251,7 @@ Nachrichtenerweiterungen sind nicht immer leicht zu finden. Fügen Sie Screensho
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für Vorlagen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für Vorlagen.":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Was Sie tun sollten: Lassen Sie Teams nach Möglichkeit einen Teil der Entwurfsarbeit erledigen
 
@@ -259,7 +259,7 @@ Wenn es für Ihre Anwendungsfälle sinnvoll ist, sollten Sie eine suchbasierte N
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für die Verarbeitung von Entwurfsarbeiten." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für die Verarbeitung von Entwurfsarbeiten.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Was Sie nicht tun sollten: Einbetten der gesamten App in ein Aufgabenmodul
 
@@ -272,7 +272,7 @@ Wenn Ihre Nachrichtenerweiterung Aktionsbefehle erfordert, halten Sie das Aufgab
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Beispiel für Design." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Beispiel für Design.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Was Sie tun sollten: Teams-Farbtoken nutzen
 
@@ -280,7 +280,7 @@ Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen a
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Beispiel für Farbtoken." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Beispiel für Farbtoken.":::
 
 #### <a name="dont-hard-code-color-values"></a>Was Sie nicht tun sollten: Hartcodieren von Farbwerten
 
@@ -293,7 +293,7 @@ Wenn Sie keine Teams-Farbtoken verwenden, sind Ihre Designs weniger skalierbar u
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Beispiel für Aktionen." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Beispiel für Aktionen.":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Was Sie tun sollten: Aktionsbefehle einschließen, die im Kontext sinnvoll sind
 
@@ -301,7 +301,7 @@ Nachrichtenaktionen sollten sich auf das beziehen, was ein Benutzer sieht. Geben
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Beispiel für Aktionsbefehle." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Beispiel für Aktionsbefehle.":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>Was Sie nicht tun sollten: Aktionsbefehle einschließen, die nicht kontextbezogen sind
 

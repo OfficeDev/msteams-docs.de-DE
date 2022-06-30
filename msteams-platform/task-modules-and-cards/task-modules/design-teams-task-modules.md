@@ -5,18 +5,18 @@ description: In diesem Modul erfahren Sie, wie Sie Aufgabenmodule für Ihre Team
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143018"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558114"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
 Sie können modale Popup-Erfahrungen in Ihrer Teams-App mit Aufgabenmodulen erstellen. Verwenden Sie diese Funktion, um Rich-Media und Informationen anzuzeigen, oder eine komplexe Aufgabe abzuschließen.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Beispiel zeigt ein Aufgabenmodul an." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Beispiel zeigt ein Aufgabenmodul an.":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
@@ -43,7 +43,7 @@ Sie können auch mit dem Framework für [Adaptive Karten](../../task-modules-and
 
 ### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Abbildung zeigt die Benutzeroberflächenanatomie eines Aufgabenmoduls auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Abbildung zeigt die Benutzeroberflächenanatomie eines Aufgabenmoduls auf Mobilgeräten.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -55,7 +55,7 @@ Sie können auch mit dem Framework für [Adaptive Karten](../../task-modules-and
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung zeigt die Benutzeroberflächenanatomie eines Aufgabenmoduls." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Abbildung zeigt die Benutzeroberflächenanatomie eines Aufgabenmoduls.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -82,11 +82,11 @@ Listen funktionieren gut in einem Aufgabenmodul, da sie einfach zu durchsuchen s
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Beispielliste in einem Aufgabenmodul auf einem Mobilgerät." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Beispielliste in einem Aufgabenmodul auf einem Mobilgerät.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Beispielliste in einem Aufgabenmodul.":::
 
 ### <a name="form"></a>Formular
 
@@ -94,11 +94,11 @@ Aufgabenmodule eignen sich hervorragend zum Anzeigen von Formularen mit sequenzi
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Beispielformular in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Beispielformular in einem Aufgabenmodul auf Mobilgeräten.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Beispielformular in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Beispielformular in einem Aufgabenmodul.":::
 
 ### <a name="sign-in"></a>Anmelden
 
@@ -106,11 +106,11 @@ Erstellen Sie einen fokussierten Anmelde- oder Registrierungsfluss mit einer Rei
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul auf Mobilgeräten.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Beispiel für die Anmeldeerfahrung in einem Aufgabenmodul.":::
 
 ### <a name="media"></a>Medien
 
@@ -118,11 +118,11 @@ Einbetten von Medieninhalten in ein Aufgabenmodul für eine fokussierte Anzeigee
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul auf Mobilgeräten.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Beispiel für Medieninhalte in einem Aufgabenmodul.":::
 
 ### <a name="empty-state"></a>Leerer Zustand
 
@@ -130,11 +130,11 @@ Wird für Begrüßungs-, Fehler- und Erfolgsmeldungen verwendet.
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Beispiel für leeren Zustand in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Beispiel für leeren Zustand in einem Aufgabenmodul auf Mobilgeräten.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel für leeren Zustand in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Beispiel für leeren Zustand in einem Aufgabenmodul.":::
 
 ### <a name="image-gallery"></a>Bildergalerie
 
@@ -142,11 +142,11 @@ Einbetten eines Katalogkarussells in ein iFrame (Desktop) oder eine WebView (Mob
 
 ##### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Beispiel eines Bildkatalogs in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Beispiel eines Bildkatalogs in einem Aufgabenmodul auf Mobilgeräten.":::
 
 ##### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispiel eines Bildkatalogs in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Beispiel eines Bildkatalogs in einem Aufgabenmodul.":::
 
 ### <a name="poll"></a>Umfrage
 
@@ -154,11 +154,11 @@ Dieses Beispiel zeigt Ergebnisse einer Umfrage, die von einer adaptiven Karte ge
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul auf Mobilgeräten.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Beispielumfrage in einem Aufgabenmodul.":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -168,7 +168,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (ein Aufgabenmodul nach dem anderen)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (ein Aufgabenmodul nach dem anderen).":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Tun: Verwenden Sie jeweils ein Aufgabenmodul nach dem anderen.
 
@@ -176,7 +176,7 @@ Das Ziel besteht darin, dass sich der Benutzer auf das Erledigen einer Aufgabe k
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (ein Dialogfeld über einem Aufgabenmodul einblenden)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (ein Dialogfeld über einem Aufgabenmodul einblenden).":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Nicht tun: Einblenden eines Dialogfelds über einem Aufgabenmodul
 
@@ -189,7 +189,7 @@ Dies führt zu einer unscharfen, verwirrenden Benutzererfahrung.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (sicherstellen, dass die Inhalte reaktionsfähig sind)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (sicherstellen, dass die Inhalte reaktionsfähig sind).":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Tun: Sicherstellen, dass die Inhalte reaktionsfähig sind
 
@@ -197,7 +197,7 @@ Während adaptive Karten, die in einem Aufgabenmodul gehostet werden, gut auf mo
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (verwenden Sie keine horizontalen Bildlaufleisten)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (verwenden Sie keine horizontalen Bildlaufleisten).":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>Nicht tun: Horizontale Bildlaufleisten verwenden
 
@@ -210,7 +210,7 @@ Es ist eine bewährte Methode, Inhalte fokussiert und nicht zu lang zu halten. W
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (halten Sie es kurz)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (halten Sie es kurz).":::
 
 #### <a name="do-keep-it-short"></a>Tun: Halten Sie Ihren Beitrag kurz.
 
@@ -218,7 +218,7 @@ Sie können ganz einfach einen Assistenten mit mehreren Schritten erstellen, abe
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (keine langen Interaktionen)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (keine langen Interaktionen).":::
 
 #### <a name="dont-have-long-interactions"></a>Nicht tun: Lange Interaktionen erstellen
 
@@ -231,7 +231,7 @@ Versuchen Sie, Ihre Interaktionen kurz zu halten und auf den Punkt zu bringen.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (Inline-Fehlermeldungen verwenden)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (Inline-Fehlermeldungen verwenden).":::
 
 #### <a name="do-use-inline-error-messages"></a>Tun: Verwenden von Inline-Fehlermeldungen
 
@@ -239,7 +239,7 @@ Anleitungen zur Inline-Fehlerbehandlung finden Sie in den Formularen zur Benutze
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (Fehlermeldungen in Dialogfelder einfügen)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Beispiel zeigt eine bewährte Methode für ein Aufgabenmodul (Fehlermeldungen in Dialogfelder einfügen).":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>Nicht tun: Fehlermeldungen in Dialogfelder einfügen
 

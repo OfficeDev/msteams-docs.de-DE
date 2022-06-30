@@ -4,12 +4,12 @@ description: Beschreibt die Codekonfiguration zum Aktivieren von SSO für Regist
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888001"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558730"
 ---
 # <a name="add-code-to-enable-sso"></a>Hinzufügen von Code zum Aktivieren von SSO
 
@@ -20,7 +20,7 @@ Bevor Sie Code zum Aktivieren von SSO hinzufügen, stellen Sie sicher, dass Sie 
 
 Sie müssen den clientseitigen Code Ihrer Registerkarten-App konfigurieren, um ein Zugriffstoken von Azure AD abzurufen. Das Zugriffstoken wird im Namen der Registerkarten-App ausgegeben. Wenn Ihre Registerkarten-App zusätzliche Microsoft Graph-Berechtigungen erfordert, müssen Sie das Zugriffstoken an die serverseitige Seite übergeben und gegen das Microsoft Graph-Token austauschen.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="Konfigurieren von Code für die Behandlung von Zugriffstoken" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="Konfigurieren von Code für die Behandlung von Zugriffstoken":::
 
 In diesem Abschnitt werden folgende Themen behandelt:
 

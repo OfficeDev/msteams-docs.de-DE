@@ -4,12 +4,12 @@ description: Beschreibt das Erstellen eines geheimen Clientschlüssels.
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 79116a0da845cd143de695424a904cf5b5968a15
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 77d1c4e43c9bdfb9d2cb9e3e97ee3a26b8b0fa01
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888307"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558849"
 ---
 # <a name="create-client-secret"></a>Erstellen eines geheimen Clientschlüssels
 
@@ -23,7 +23,7 @@ Ein geheimer Clientschlüssel ist eine Zeichenfolge, mit der die Anwendung ihre 
 
    Die Seite **"Geheimen Clientschlüssel hinzufügen** " wird angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Seite &quot;Geheimen Clientschlüssel hinzufügen&quot;" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Seite &quot;Geheimen Clientschlüssel hinzufügen&quot;":::
 
 3. Geben Sie die Beschreibung ein.
 4. Wählen Sie die Gültigkeitsdauer für den geheimen Schlüssel aus.

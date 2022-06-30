@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795147"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558828"
 ---
 # <a name="explore-teams-platform-features"></a>Erkunden der Features der Teams-Plattform
 
 Mit Teams können Sie Ihre App in einer funktionsreichen Umgebung erstellen. Wenn Sie Teams als Plattform zum Erstellen von Apps verwenden, können Sie die Teams-Funktionen für Ihre Desktop- und mobilen App-Lösungen erweitern. Wählen Sie die besten Features für Ihre App aus.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Konzeptionelle Darstellung von Teams als Plattform" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Konzeptionelle Darstellung von Teams als Plattform":::
 
 ## <a name="teams-app-features"></a>Features der Teams-App
 

@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Ihre App schneller mit standardisierten UI-Ko
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c4a8b0b626092e4980ccac95f98148829dc06ccd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484821"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558723"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Entwerfen Ihrer Microsoft Teams-App mit Benutzeroberflächenvorlagen
 
@@ -53,12 +53,12 @@ In Teams zeigt ein Kalender an, plant und verwaltet ein Benutzer bevorstehende u
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
 * Planen von Besprechungen und Ereignissen
-* Erhalten Sie Erinnerungen an bevorstehende Besprechungen und Ereignisse.
+* Abrufen von Erinnerungen an bevorstehende Besprechungen und Ereignisse
 * Anzeigen von Zeitplänen
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Das Beispiel zeigt eine Kalender-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Das Beispiel zeigt eine Kalender-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="dashboard"></a>Dashboard
 
@@ -68,15 +68,15 @@ Ein Dashboard zeigt verschiedene Arten von Inhalten an einem zentralen Ort an (z
 
 * Analysieren von Daten
 * Berichtsmetriken
-* Organisieren Sie verschiedene Informationen an einem Ort.
+* Organisieren verschiedener Informationen an einem Ort
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Beispiel zeigt eine Dashboard-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="data-visualization"></a>Datenvisualisierung
 
@@ -84,16 +84,16 @@ Sie können verschiedene Kartengrößen (single, double und full) verwenden, um 
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Zeigen Sie komplexe Informationen an.
-* Erstellen Sie ein Dashboard.
+* Anzeigen komplexer Informationen
+* Erstellen eines Dashboards
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Das Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Das Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Das Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Das Beispiel zeigt eine Datenvisualisierungs-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="empty-state"></a>Leerer Zustand
 
@@ -102,17 +102,17 @@ Die leere Statusvorlage kann für viele Szenarien verwendet werden, einschließl
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
 * Anmelden
-* Willkommensnachrichten und Erste-Ausführung-Erfahrungen.
+* Willkommensnachrichten und Erste-Ausführung-Erfahrungen
 * Erfolgsmeldungen
 * Fehlermeldungen
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Das Beispiel zeigt eine Leere Zustands-UI-Vorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Das Beispiel zeigt eine Leere Zustands-UI-Vorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Das Beispiel zeigt eine Leere Zustands-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Das Beispiel zeigt eine Leere Zustands-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="filter"></a>Filter
 
@@ -127,7 +127,7 @@ Organisieren von Inhalten in:
 * Dashboards
 * Datenvisualisierung
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Beispiel zeigt eine Filtervorlage." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Beispiel zeigt eine Filtervorlage.":::
 
 ## <a name="form"></a>Formular
 
@@ -140,13 +140,13 @@ Formulare werden verwendet, um Benutzereingaben auf strukturierte Weise zu samme
 * Einstellungen
 * Benutzereingabesammlung
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Das Beispiel zeigt eine Formular-UI-Vorlage auf mobilen Geräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Das Beispiel zeigt eine Formular-UI-Vorlage auf mobilen Geräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Das Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Das Beispiel zeigt eine Formular-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="list"></a>Liste
 
@@ -157,13 +157,13 @@ Sie können eine Liste verwenden, um verwandte Elemente in einem scannbaren Form
 * Anzeigen von Daten
 * Kontextbezogene Aktionen für App-Inhalte
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Beispiel zeigt eine Listen-UI-Vorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Das Beispiel zeigt eine Listen-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Das Beispiel zeigt eine Listen-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="sign-in"></a>Anmelden
 
@@ -173,13 +173,13 @@ Sie können App-Anmeldeflüsse für verschiedene Teams-Kontexte und Identitätsa
 
 * Authentifizieren von Benutzern
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Das Beispiel zeigt eine Anmelde-UI-Vorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Das Beispiel zeigt eine Anmelde-UI-Vorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Das Beispiel zeigt eine Anmelde-UI-Vorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Das Beispiel zeigt eine Anmelde-UI-Vorlage auf dem Desktop.":::
 
 ## <a name="settings"></a>Einstellungen
 
@@ -189,7 +189,7 @@ Auf den Einstellungsbildschirmen können Benutzer ihre Einstellungen mit Ihrer A
 
 * Verwalten von App-Features
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Das Beispiel zeigt eine Einstellungsvorlage." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Das Beispiel zeigt eine Einstellungsvorlage.":::
 
 ## <a name="task-board"></a>Task Board
 
@@ -201,13 +201,13 @@ Ein Task Board, manchmal auch als Kanban Board oder Swim Lanes bezeichnet, ist e
 * Brainstorming. Hinzufügen von Ideen in verschiedenen Kategorien.
 * Sortierübungen. Organisieren aller Arten von Informationen in Buckets.
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Das Beispiel zeigt eine Vorlage für die Task board-UI auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Das Beispiel zeigt eine Vorlage für die Task board-UI auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Das Beispiel zeigt eine Vorlage für die Task board-UI auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Das Beispiel zeigt eine Vorlage für die Task board-UI auf dem Desktop.":::
 
 ## <a name="wizard"></a>Assistent
 
@@ -219,13 +219,13 @@ Ein Assistent führt einen Benutzer durch mehrere Bildschirme, um eine Aufgabe a
 * Onboarding
 * Erste Ausführungserfahrungen
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Das Beispiel zeigt eine Benutzeroberflächenvorlage des Assistenten auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Das Beispiel zeigt eine Benutzeroberflächenvorlage des Assistenten auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Das Beispiel zeigt eine Benutzeroberflächenvorlage des Assistenten auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Das Beispiel zeigt eine Benutzeroberflächenvorlage des Assistenten auf dem Desktop.":::
 
 ## <a name="see-also"></a>Siehe auch
 

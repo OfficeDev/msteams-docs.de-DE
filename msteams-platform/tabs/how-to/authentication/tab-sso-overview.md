@@ -4,12 +4,12 @@ description: Übersicht über die SSO-Authentifizierung in Teams und deren Verwe
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) SSO-Zugriffstoken-App-Manifest
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503767"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557722"
 ---
 # <a name="enable-sso-for-tab-app"></a>Aktivieren von SSO für die Registerkarten-App
 
@@ -27,7 +27,7 @@ Hier erfahren Sie, was Sie in diesem Abschnitt lernen:
 
 App-Benutzer melden sich bei Teams entweder mit einem persönlichen Microsoft-Konto oder einem Microsoft 365-Konto an. Sie können dies nutzen und SSO verwenden, um die App-Benutzer zu authentifizieren und zu autorisieren.
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="SSO-Benutzererfahrung in einer Teams-Registerkarten-App" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="SSO-Benutzererfahrung in einer Teams-Registerkarten-App":::
 
 - Teams authentifiziert und speichert die Identität des App-Benutzers.
 - Ihre Registerkarten-App verwendet die gespeicherte Identität des App-Benutzers, der bereits von Teams überprüft wurde.
@@ -60,7 +60,7 @@ Erzielen Sie SSO in einer Registerkarten-App, indem Sie ein Zugriffstoken für d
 
 Die folgende Abbildung zeigt, wie SSO funktioniert, wenn ein Benutzer einer Teams-App versucht, auf die Registerkarten-App zuzugreifen:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="SSO-Diagramm für einmaliges Anmelden mit Registerkarten" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="SSO-Diagramm für einmaliges Anmelden mit Registerkarten" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | Interaktion | Was ist los |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ In diesem Abschnitt werden die Aufgaben beschrieben, die bei der Implementierung
 
 So aktivieren Sie SSO für eine Registerkarten-App:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Schritte zum Aktivieren von SSO für die Registerkarte" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Schritte zum Aktivieren von SSO für die Registerkarte" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Registrieren Sie sich bei Azure AD**: Erstellen Sie eine Azure AD-App, um eine App-ID und einen Anwendungs-ID-URI zu generieren. Zum Generieren von Zugriffstoken konfigurieren Sie Bereiche und autorisieren vertrauenswürdige Clientanwendungen.
 2. **Aktualisierungscode**: Fügen Sie den Code zum Behandeln des Zugriffstokens hinzu, rufen `getAuthToken()` Sie auf, wenn ein App-Benutzer auf Ihre Registerkarten-App zugreift, senden Sie dieses Token an den Servercode Ihrer App im Autorisierungsheader, und überprüfen Sie das Zugriffstoken, wenn es empfangen wird.

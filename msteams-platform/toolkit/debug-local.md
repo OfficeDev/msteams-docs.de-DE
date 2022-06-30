@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 3b6d9ee830fcf1cb50e02138cf3b9b8ca952225f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142227"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557883"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -70,29 +70,29 @@ Führen Sie die folgenden Schritte aus, um nach dem Erstellen einer neuen App mi
 
 1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browseroption" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browseroption":::
 
 1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debugging starten" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debugging starten":::
 
 3. Wählen Sie **Anmelden** bei Ihrem Microsoft 365-Konto aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Anmelden" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Anmelden":::
 
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Microsoft 365-Entwicklerprogramm zu erfahren. Ihr Standardwebbrowser wird geöffnet, damit Sie sich mit Ihren Anmeldeinformationen bei Ihrem Microsoft 365-Konto anmelden können.
 
 4. Wählen Sie **Installieren** aus, um das Entwicklungszertifikat für localhost zu installieren.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Zertifikat" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Zertifikat":::
 
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Entwicklungszertifikat zu erfahren.
 
 5. Wählen Sie **Ja** aus, wenn das folgende Dialogfeld angezeigt wird:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Zertifizierungsstelle" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Zertifizierungsstelle":::
 
 Das Toolkit startet entsprechend Ihrer Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.  
 
@@ -100,29 +100,29 @@ Das Toolkit startet entsprechend Ihrer Auswahl eine neue Edge- oder Chrome-Brows
 
 1. Wählen Sie **Edge debuggen** oder **Chrome debuggen** aus der **Ausführen und Debuggen** in der Aktivitätsleiste aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browserlisten" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browserlisten":::
 
 1. Wählen Sie **Debuggen starten (F5)** oder  **Ausführen** aus, um Ihre Teams-App im Debugmodus auszuführen.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debuggen Ihrer App" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debuggen Ihrer App":::
 
 3. Wählen Sie **Anmelden** bei Ihrem Microsoft 365-Konto aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Anmelden beim M365-Konto" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Anmelden beim M365-Konto":::
 
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Microsoft 365-Entwicklerprogramm zu erfahren. Ihr Standardwebbrowser wird geöffnet, damit Sie sich mit Ihren Anmeldeinformationen bei Ihrem Microsoft 365-Konto anmelden können.
 
 4. Wählen Sie **Installieren** aus, um das Entwicklungszertifikat für localhost zu installieren.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Zertifikat" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Zertifikat":::
 
    > [!TIP]
    > Sie können **Weitere Informationen** auswählen, um mehr über das Entwicklungszertifikat zu erfahren.
 
 5. Geben Sie Ihren **Benutzernamen** und **Kennwort** ein, und wählen Sie dann im folgenden Dialogfeld **Updateeinstellungen** aus:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Mac-Anmeldung" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Mac-Anmeldung":::
 
 Das Toolkit startet je nach Auswahl eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
 
@@ -179,7 +179,7 @@ In der folgenden Tabelle sind die Debugkonfigurationsnamen und -typen für das P
 
 Die Konfiguration **Front-End anfügen** oder **Bot starten** startet eine neue Edge- oder Chrome-Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients. Nachdem der Teams-Client geladen wurde, lädt Teams die Teams-App quer, die von der in den Startkonfigurationen [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) definierte URL für den Querladevorgang gesteuert wird. Wenn der Teams-Client im Webbrowser geladen wird, wählen Sie **Hinzufügen** aus, oder wählen Sie einen aus der Dropdownliste gemäß Ihren Anforderungen aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Lokales Debuggen" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Lokales Debuggen":::
 
    Ihre App wird Teams hinzugefügt!
 

@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1737c55598d5963a77317a0b37869275f96a902d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6665884f4606e90c82ba0c5806641f84beded0e
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503753"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557743"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Erstellen einer neuen Teams-App mit dem Teams-Toolkit 
 
@@ -23,7 +23,7 @@ Um eine neue Teams-App mithilfe des Teams-Toolkits zu erstellen, können Sie ein
 ## <a name="create-a-new-teams-app"></a>Erstellen einer neuen Teams-App
 
 1. Öffnen Sie Visual Studio Code.
-1. Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: in der Visual Studio Code-Randleiste aus.
+1. Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: in der Visual Studio Code-Randleiste aus.
 1. Wählen Sie **Neue Microsoft Teams-App erstellen** aus.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams Toolkit-Randleiste":::

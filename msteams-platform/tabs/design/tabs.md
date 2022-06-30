@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144334"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558324"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Sie Ihre Registerkarte für Microsoft Teams
 
@@ -35,13 +35,13 @@ Sie können eine Registerkarte aus dem Teams Store (AppSource) oder in einem der
 
 Benutzer können auf Registerkarten zugreifen, indem sie die Schaltfläche **Mehr** im Kanal (Beispiel unten) oder Chat auswählen, in dem sie hinzugefügt wurden.
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Das Beispiel zeigt, wie eine mobile Registerkarte in einem Kanal hinzugefügt wird." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Das Beispiel zeigt, wie eine mobile Registerkarte in einem Kanal hinzugefügt wird.":::
 
 ### <a name="desktop"></a>Desktop
 
 Das folgende Beispiel zeigt, wie Benutzer eine Registerkarte in einem Kanal hinzufügen können.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Das Beispiel zeigt eine Registerkarte, die in einem Kanal hinzugefügt wird." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Das Beispiel zeigt eine Registerkarte, die in einem Kanal hinzugefügt wird.":::
 
 ## <a name="set-up-a-tab"></a>Eine Registerkarte einrichten:
 
@@ -49,11 +49,11 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 
 ### <a name="tab-configuration-dialog"></a>Registerkartenkonfigurationsdialogfeld
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Das Beispiel zeigt eine modale Registerkartenkonfiguration." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Das Beispiel zeigt eine modale Registerkartenkonfiguration.":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>Anatomie: Dialogfeld „Registerkartenkonfiguration"
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Abbildung der UI-Anatomie einer modalen Registerkartenkonfiguration." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Abbildung der UI-Anatomie einer modalen Registerkartenkonfiguration.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -70,7 +70,7 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 
 Sie können einen Schritt hinzufügen, in dem sich Benutzer zuerst mit ihren Microsoft-Anmeldeinformationen anmelden müssen. Diese Authentifizierungsmethode wird als Einmaliges Anmelden (Single Sign-On, SSO) bezeichnet.
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Das Beispiel zeigt einen Bildschirm für die Registerkartenauthentifizierung." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Das Beispiel zeigt einen Bildschirm für die Registerkartenauthentifizierung.":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>Entwerfen eines Registerkartensetups mit Benutzeroberflächenvorlagen
 
@@ -86,17 +86,17 @@ Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie 
 
 ### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte mit einem Task Board." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte mit einem Task Board.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Das Beispiel zeigt eine Registerkarte mit einem Task Board." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Das Beispiel zeigt eine Registerkarte mit einem Task Board.":::
 
 ### <a name="anatomy-tab"></a>Anatomie: Registerkarte
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie einer Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie einer Registerkarte.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -106,7 +106,7 @@ Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie 
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Diese Abbildung zeigt die Benutzeroberflächenanatomie einer Registerkarte." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Diese Abbildung zeigt die Benutzeroberflächenanatomie einer Registerkarte.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -136,11 +136,11 @@ Benutzer können automatisch Beiträge in einem Kanal oder Chat veröffentlichen
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte, die in einem Kanalthread diskutiert wird." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte, die in einem Kanalthread diskutiert wird.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Das Beispiel zeigt eine Registerkarte, die in einem Kanalthread diskutiert wird." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Das Beispiel zeigt eine Registerkarte, die in einem Kanalthread diskutiert wird.":::
 
 ### <a name="tab-chat"></a>Registerkartenchat
 
@@ -148,11 +148,11 @@ Benutzer können eine Unterhaltung neben dem angezeigten Registerkarteninhalt f�
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte mit einem Kontextchatbereich." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Das Beispiel zeigt eine mobile Registerkarte mit einem Kontextchatbereich.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Das Beispiel zeigt eine Registerkarte mit geöffneten Chats auf der rechten Seite." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Das Beispiel zeigt eine Registerkarte mit geöffneten Chats auf der rechten Seite.":::
 
 ### <a name="permissions-and-role-based-views"></a>Berechtigungen und rollenbasierte Ansichten
 
@@ -166,7 +166,7 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 
 #### <a name="mobile"></a>Mobilgeräte
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie eines mobilen Registerkartenmenüs." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie eines mobilen Registerkartenmenüs.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -178,7 +178,7 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie eines Registerkartenmenüs." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Abbildung der Benutzeroberflächenanatomie eines Registerkartenmenüs.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -203,7 +203,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Die Abbildung zeigt, was mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Die Abbildung zeigt, was mit dem Design der Registerkartennavigation zu tun ist.":::
 
 #### <a name="do-facilitate-conversation"></a>Was Sie tun sollten: Unterhaltung vereinfachen
 
@@ -211,7 +211,7 @@ Einschließen von Inhalten und Komponenten, über die Personen sprechen können.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Das Beispiel zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Das Beispiel zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist.":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Was Sie nicht tun sollten: Behandeln Sie Ihre Registerkarte wie jede andere Webseite
 
@@ -224,7 +224,7 @@ Eine Registerkarte ist keine Webseite, die jemand einmal anzeigen kann. Auf eine
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Beispiel, das zeigt, was mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Beispiel, das zeigt, was mit dem Design der Registerkartennavigation zu tun ist.":::
 
 #### <a name="do-limit-tasks-and-data"></a>Was Sie tun sollten: Einschränken von Aufgaben und Daten
 
@@ -232,7 +232,7 @@ Registerkarten funktionieren am besten, wenn sie bestimmte Anforderungen erfüll
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Design der Registerkartennavigation zu tun ist.":::
 
 #### <a name="dont-embed-your-entire-app"></a>Was Sie nicht tun sollten: Gesamte App einbetten
 
@@ -245,7 +245,7 @@ Die Verwendung einer Registerkarte zum Anzeigen einer gesamten App mit mehrstufi
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Abbildung, die zeigt, was mit dem Registerkarteneinrichtungsdesign zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Abbildung, die zeigt, was mit dem Registerkarteneinrichtungsdesign zu tun ist.":::
 
 #### <a name="do-keep-it-simple"></a>Was Sie tun sollten: Halten Sie es einfach
 
@@ -253,7 +253,7 @@ Wenn Ihre App eine Authentifizierung erfordert, versuchen Sie, das einmalige Anm
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Registerkarteneinrichtungsdesign zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Abbildung, die zeigt, was nicht mit dem Registerkarteneinrichtungsdesign zu tun ist.":::
 
 #### <a name="dont-have-too-many-steps"></a>Was Sie nicht tun sollten: Zu viele Schritte ausführen
 
@@ -266,7 +266,7 @@ Entfernen Sie alle unnötigen Schritte zum Hinzufügen einer Registerkarte.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Abbildung, die zeigt, was mit Registerkartendesigns zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Abbildung, die zeigt, was mit Registerkartendesigns zu tun ist.":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Was Sie tun sollten: Teams-Farbtoken nutzen
 
@@ -274,7 +274,7 @@ Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen a
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Abbildung, die zeigt, was nicht mit Registerkartendesigns zu tun ist." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Abbildung, die zeigt, was nicht mit Registerkartendesigns zu tun ist.":::
 
 #### <a name="dont-hard-code-color-values"></a>Was Sie nicht tun sollten: Hartcodieren von Farbwerten
 

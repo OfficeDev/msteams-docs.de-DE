@@ -1,15 +1,15 @@
 ---
-title: Konfigurieren der Administratorzustimmung
-description: Beschreibt das Konfigurieren der Administratorzustimmung
+title: Konfigurieren Admin Zustimmung
+description: Beschreibt das Konfigurieren Admin Zustimmung
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: dd954ef1ede05b6025b12512dfcee03044223642
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 4d072bba0e4900aecec63e06cb63f4ac2311d91a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888310"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557750"
 ---
 # <a name="configure-admin-consent"></a>Konfigurieren der Administratorzustimmung
 
@@ -19,43 +19,43 @@ Sie können den App-Bereich für eine verfügbar gemachte API definieren und bes
 
 1. Wählen Sie im linken Bereich "**API** **verwalten** > " aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Verfügbarmachen einer API-Menüoption." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Verfügbarmachen einer API-Menüoption.":::
 
     Die Seite **"API verfügbar machen** " wird angezeigt.
 
 1. Wählen Sie **"Festlegen** " aus, um den App-ID-URI zu generieren.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="App-ID-URI festlegen" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="App-ID-URI festlegen":::
 
     Der Abschnitt zum Festlegen des App-ID-URI wird angezeigt.
 
 1. Geben Sie den App-ID-URI ein, und wählen Sie " **Speichern"** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App-ID-URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App-ID-URI":::
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der App-ID-URI aktualisiert wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App-ID-URI-Nachricht" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App-ID-URI-Nachricht":::
 
     Der App-ID-URI wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App-ID-URI aktualisiert" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App-ID-URI aktualisiert":::
 
 ## <a name="to-configure-api-scope"></a>So konfigurieren Sie den API-Bereich
 
 1. Wählen Sie in den **in diesem API-Abschnitt definierten Bereichen** den **Bereich aus, und fügen Sie einen Bereich hinzu**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Bereich auswählen" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Bereich auswählen":::
 
     Die Seite **"Bereich hinzufügen** " wird angezeigt.
 
 1. Geben Sie die App-Details für Ihren App-Bereich ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Hinzufügen von Bereichsdetails" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Hinzufügen von Bereichsdetails":::
 
     1. Geben Sie den Bereichsnamen ein. Dieses Feld ist erforderlich.
     1. Wählen Sie **Administratoren und Benutzer** aus, um die Benutzer zu konfigurieren, die der Verwendung der Anmeldeinformationen des Benutzers zustimmen können. Die Standardoption ist **nur "Administratoren**".
-    1. Geben Sie den **Anzeigenamen der Administratorzustimmung ein**. Dieses Feld ist erforderlich.
+    1. Geben Sie den **Anzeigenamen der Admin Zustimmung ein**. Dieses Feld ist erforderlich.
     1. Geben Sie die Beschreibung für die Administratorzustimmung ein. Dieses Feld ist erforderlich.
     1. Geben Sie den **Anzeigenamen der Benutzerzustimmung ein**.
     1. Geben Sie die Beschreibung für die Beschreibung der Benutzer-Zustimmung ein.
@@ -64,23 +64,23 @@ Sie können den App-Bereich für eine verfügbar gemachte API definieren und bes
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Bereich hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Bereich hinzugefügte Nachricht" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Bereich hinzugefügte Nachricht":::
 
     Der App-ID-URI wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Bereich hinzugefügt und angezeigt" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Bereich hinzugefügt und angezeigt":::
 
 ## <a name="to-configure-authorized-client-application"></a>So konfigurieren Sie eine autorisierte Clientanwendung
 
 1. Navigieren Sie durch die Seite **"API verfügbar machen** " zum Abschnitt **"Autorisierte Clientanwendung** ", und wählen Sie **"+Clientanwendung hinzufügen"** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendung" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendung":::
 
     Die Seite **"Clientanwendung hinzufügen** " wird angezeigt.
 
 1. Geben Sie die Details zum Hinzufügen einer Clientanwendung ein. In diesem Abschnitt fügen Sie zwei Clientanwendungen hinzu.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Hinzufügen einer Clientanwendung" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Hinzufügen einer Clientanwendung":::
 
     1. Geben Sie **1fec8e78-bce4-4aaf-ab1b-5451cc387264** als Client-ID für mobile Teams- oder Desktopanwendung ein.
     1. Wählen Sie die App-ID aus, die Sie für Ihre App für die **autorisierten Bereiche** erstellt haben.
@@ -88,7 +88,7 @@ Sie können den App-Bereich für eine verfügbar gemachte API definieren und bes
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass die Client-App hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht mit hinzugefügter Clientanwendung" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht mit hinzugefügter Clientanwendung":::
 
     Die Client-App-IDs werden auf der Seite angezeigt.
 
@@ -100,8 +100,8 @@ Sie können den App-Bereich für eine verfügbar gemachte API definieren und bes
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass die Client-App hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht zur Hinzugefügten Clientanwendung für Web-App" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht zur Hinzugefügten Clientanwendung für Web-App":::
 
     Die Client-App-IDs werden auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Hinzugefügte und angezeigte Client-App" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Hinzugefügte und angezeigte Client-App":::

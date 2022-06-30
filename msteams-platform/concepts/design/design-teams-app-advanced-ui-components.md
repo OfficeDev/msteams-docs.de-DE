@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die Teams-UI-Komponenten, z. B. Breadcrumbs
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485723"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558842"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit erweiterten UI-Komponenten
 
@@ -32,13 +32,13 @@ Breadcrumbs sind eine Navigationshilfe, die die Hierarchie Ihrer App vermittelt.
 * Kommunikationshierarchie
 * Navigation
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Das Beispiel zeigt eine Breadcrumb-Vorlage auf Mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Das Beispiel zeigt eine Breadcrumb-Vorlage auf Mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Das Beispiel zeigt eine Breadcrumbvorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Das Beispiel zeigt eine Breadcrumbvorlage auf dem Desktop.":::
 
 ## <a name="left-nav"></a>Linker Navigationsbereich
 
@@ -49,13 +49,13 @@ Verwenden Sie die linke Navigationsleiste, um mehrere Seiten auf Ihrer Teams-Reg
 * Durchsuchen Sie mehrere Seiten auf einer Teams-Registerkarte.
 * Unterteilen Sie komplexe Apps in mehrere Seiten.
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Das Beispiel zeigt eine linke Navigationsvorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Das Beispiel zeigt eine linke Navigationsvorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Das Beispiel zeigt eine Linksnavigationsvorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Das Beispiel zeigt eine Linksnavigationsvorlage auf dem Desktop.":::
 
 ## <a name="notification-bar"></a>Benachrichtigungsleiste
 
@@ -65,17 +65,17 @@ Sie können eine Benachrichtigungsleiste mithilfe der Fluent [UI-Warnungskompone
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Kritische Meldungen, Fehler und Warnungen.
+* Kritische Meldungen, Fehler und Warnungen
 * Erfolgsmeldungen
 * Informations- oder Werbenachrichten
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Beispiel zeigt die Benutzeroberflächenvorlage der Benachrichtigungsleiste auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Beispiel zeigt die Benutzeroberflächenvorlage der Benachrichtigungsleiste auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Das Beispiel zeigt Ui-Vorlagen für die Benachrichtigungsleiste auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Das Beispiel zeigt Ui-Vorlagen für die Benachrichtigungsleiste auf dem Desktop.":::
 
 ## <a name="stage-view"></a>Phasenansicht
 
@@ -85,18 +85,18 @@ Erfahren Sie, wie Sie die [Phasenansicht](~/tabs/tabs-link-unfurling.md) impleme
 
 ### <a name="top-use-cases"></a>Die häufigsten Anwendungsfälle
 
-* Anzeigen von Inhalten auf einer großen Oberfläche in Teams anstelle einer anderen App oder eines anderen Browsers.
+* Anzeigen von Inhalten auf einer großen Oberfläche in Teams anstelle einer anderen App oder eines anderen Browsers
 * Spotlight-Medien oder andere umfangreiche Inhalte
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
 Ihre App kann eine Phase über eine adaptive Karte, einen freigegebenen Link oder visuelle Komponenten (z. B. ein Diagramm) starten.
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Das Beispiel zeigt eine Phasenvorlage auf mobilen Geräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Das Beispiel zeigt eine Phasenvorlage auf mobilen Geräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Das Beispiel zeigt eine Phasenvorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Das Beispiel zeigt eine Phasenvorlage auf dem Desktop.":::
 
 ## <a name="toolbar"></a>Symbolleiste
 
@@ -108,10 +108,10 @@ Eine Symbolleiste ist ein Container zum Gruppieren einer Gruppe von Steuerelemen
 * Kontextbezogener Filter und Suche.
 * Navigation und Breadcrumbs.
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Das Beispiel zeigt eine Symbolleistenvorlage auf mobilgeräten." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Das Beispiel zeigt eine Symbolleistenvorlage auf mobilgeräten.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Das Beispiel zeigt eine Symbolleistenvorlage auf dem Desktop." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Das Beispiel zeigt eine Symbolleistenvorlage auf dem Desktop.":::

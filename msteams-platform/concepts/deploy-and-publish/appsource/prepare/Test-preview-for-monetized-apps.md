@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie SaaS-Vorschauangebote für die Teams-App erst
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123703"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558744"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Testvorschau für monetarisierte Apps
 
@@ -26,11 +26,11 @@ Sie können die Vorschauangebots-ID über den **AppSource-Vorschaulink** im Part
 1. Fügen Sie eine [Vorschauzielgruppe](/azure/marketplace/create-new-saas-offer-preview) für Ihr SaaS-Angebot hinzu.
 1. Wählen Sie den **AppSource-Vorschaulink** unter **Go Live** aus, um die Vorschauangebots-ID in der Adressleiste des Browsers mit dem Format *publisherId.offerId-preview* zu finden.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="Vorschauangebots-ID" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="Vorschauangebots-ID" :::
 
 1. Kopieren Sie die Vorschauangebots-ID aus der Browseradressleiste.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Vorschauangebots-ID" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Vorschauangebots-ID" :::
 
     > [!NOTE]
     > Im Gegensatz zu einer öffentlichen Angebots-ID kann die Vorschauangebots-ID mit dem Suffix *-preview* erkannt werden. Beispiel: **publisherId.offerId-preview**.
@@ -68,7 +68,7 @@ Nachdem Sie Ihre App mit der Vorschauangebots-ID konfiguriert haben, erstellen S
 
 Wenn das Vorschauangebot im App-Manifest angegeben ist und die Vorschauzielgruppe im Partner Center für das Angebot definiert ist, wird dem Benutzer die Schaltfläche **Abonnement kaufen** angezeigt.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Abonnement kaufen" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Abonnement kaufen":::
 
 ### <a name="error-scenarios"></a>Fehlerszenarien
 
@@ -76,13 +76,13 @@ Wenn das Vorschauangebot im App-Manifest angegeben ist und die Vorschauzielgrupp
 
   Es wurden keine Pläne mit **-preview** gefunden. Stellen Sie sicher, dass Sie sich in der Vorschauzielgruppe befinden.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Keine Vorschauzielgruppe" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Keine Vorschauzielgruppe" :::
 
 * Wenn es sich bei der im App-Manifest angegebenen Angebots-ID nicht um ein Vorschauangebot handelt, zeigt die App dem Benutzer die folgende Warnmeldung an, und das Querladen ist deaktiviert:
   
   Dies ist kein Vorschauangebot. Achten Sie darauf, die **-preview** an die Angebots-ID anzufügen.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" :::
 
 ## <a name="see-also"></a>Siehe auch
 

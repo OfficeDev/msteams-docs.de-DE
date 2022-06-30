@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485327"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558429"
 ---
 # <a name="teams-app-that-fits"></a>Eine Teams-App, die passt
 
@@ -27,7 +27,7 @@ Organisationen verwenden sie, um mit ihren Kunden zu kommunizieren, Dienste bere
 
 Sehen wir uns einige Bereiche an, in denen eine App bei der Erfüllung geschäftlicher Anforderungen hilft.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Warum sollten Sie Microsoft Teams-Apps erstellen?" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Warum sollten Sie Microsoft Teams-Apps erstellen?":::
 
 | **Entwicklungsoptionen** | **Geschäftsmöglichkeiten** |
 | --- | --- |
@@ -53,7 +53,7 @@ Hier sind die Gründe, warum sich Microsoft Teams hervorragend für Ihre App-Anf
 
     Teams ist eine soziale Plattform; benutzerdefinierte, auf soziale Netzwerke ausgerichtete Apps ermutigen Ihr Team dazu, Ihre Unternehmenskultur für die Bereiche der Zusammenarbeit zu übernehmen. Verwenden Sie Apps, um Umfragen zu senden, Feedback miteinander zu teilen, Verbindungen herzustellen und zu kommunizieren.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Microsoft Teams-App zur Förderung des Teamgeistes" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Microsoft Teams-App zur Förderung des Teamgeistes":::
 
 - **Allgemeine Geschäftsprozesse**
 
@@ -61,7 +61,7 @@ Hier sind die Gründe, warum sich Microsoft Teams hervorragend für Ihre App-Anf
 
     Zusätzlich zur Automatisierung sich wiederholender Abläufe können Sie Apps auch zum Lösen von Kommunikationsprobleme einsetzen. Ein Chat-Bot ist ein einfacher Ersatz für E-Mails und Telefonanrufe an IT- oder Personalabteilungen.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Microsoft Teams-App zur internen Verwendung" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Microsoft Teams-App zur internen Verwendung":::
 
 - **Vorteile des Microsoft Teams Store**
 
@@ -71,7 +71,7 @@ Hier sind die Gründe, warum sich Microsoft Teams hervorragend für Ihre App-Anf
 
     Wenn Sie bereits eine Web-App, eine SharePoint-Site (oder SPFx-Erweiterung), eine PowerApp oder eine andere webbasierte Anwendung besitzen, kann es durchaus sinnvoll sein, einige oder alle Funktionen dieser App in Microsoft Teams zu aktivieren. Das Erweitern vorhandener Apps und das Portieren interaktiver Funktionen nach Microsoft Teams trägt dazu bei, die Benutzerbasis und das Benutzerengagement für Ihre App zu steigern.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint-Site als Registerkarte nach Microsoft Teams portiert" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint-Site als Registerkarte nach Microsoft Teams portiert":::
 
 - **Persönliche Apps mit Registerkarten und Bots**
 

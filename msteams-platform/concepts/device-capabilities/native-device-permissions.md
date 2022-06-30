@@ -3,12 +3,12 @@ title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die eine Zustimmung des Benutzers erfordern, z. B. QR-, Barcode-, Bild-, Audio- und Videofunktionen scannen
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484488"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557715"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Teams-App
 
@@ -26,10 +26,10 @@ Sie müssen die Geräteberechtigungen anfordern, um auf systemeigene Gerätefunk
 Durch den Zugriff auf die Gerätefunktionen können Sie eine umfassendere Umgebung auf der Teams-Plattform erstellen, z. B.:
 
 * Erfassen und Anzeigen von Bildern
-* Scannen Sie QR oder Barcode.
-* Zeichnen Sie kurze Videos auf, und teilen Sie sie.
-* Zeichnen Sie Audionotizen auf, und speichern Sie sie zur späteren Verwendung.
-* Verwenden Sie die Standortinformationen des Benutzers, um relevante Informationen anzuzeigen.
+* Scannen von QR oder Barcode
+* Aufzeichnen und Teilen von kurzen Videos
+* Aufzeichnen von Audionotizen und Speichern zur späteren Verwendung
+* Verwenden der Standortinformationen des Benutzers zum Anzeigen relevanter Informationen
 
 > [!NOTE]
 >
@@ -57,7 +57,7 @@ Ein Benutzer kann Geräteberechtigungen in den Teams-Einstellungen verwalten, in
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Berechtigungen." border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Berechtigungen.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -68,7 +68,7 @@ Ein Benutzer kann Geräteberechtigungen in den Teams-Einstellungen verwalten, in
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Geräteberechtigung." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Geräteberechtigung.":::
 
 ---
 
@@ -127,7 +127,7 @@ Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Aufforderung zur Zus
 > * Unterstützung für `camera`, `gallery`und `microphone` wird über [**die selectMedia-API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) aktiviert. Verwenden Sie [**die captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) für eine einzelne Bildaufnahme.
 > * Die Unterstützung für `location` wird über [**die getLocation-API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) aktiviert. Sie müssen dies `getLocation API` für den Standort verwenden, da die HTML5-Geolocation-API auf dem Teams-Desktop derzeit nicht vollständig unterstützt wird.
 
-Beispiel:
+Zum Beispiel:
 
 * Um den Benutzer auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
 
@@ -229,13 +229,13 @@ Beispiel:
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile Standortberechtigung." border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile Standortberechtigung.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Geräteberechtigung auf dem Desktop." border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Geräteberechtigung auf dem Desktop.":::
 
 ---
 

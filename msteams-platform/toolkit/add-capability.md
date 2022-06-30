@@ -1,21 +1,21 @@
 ---
 title: Hinzufügen von Funktionen zu Ihren Teams-Apps
 author: MuyangAmigo
-description: In diesem Modul erfahren Sie, wie Sie Funktionen des Teams Toolkits, Vorteile, Einschränkungen und Funktionen hinzufügen.
+description: In diesem Modul erfahren Sie, wie Sie Funktionen des Teams-Toolkits, Vorteile, Einschränkungen und Funktionen hinzufügen.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 413a42ce1f5eaa476faaf1bbfc97a987adcb6f65
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142962"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557988"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
-Das Hinzufügen von Funktionen in Teams Toolkit hilft Ihnen, Ihrer vorhandenen Teams-App zusätzliche Funktionen hinzuzufügen. In der folgenden Tabelle sind die Teams App-Funktionen aufgeführt:
+Das Hinzufügen von Funktionen im Teams-Toolkit hilft Ihnen, Ihrer vorhandenen Teams-App zusätzliche Funktionen hinzuzufügen. In der folgenden Tabelle sind die Funktionen der Teams-App aufgeführt:
 
 |**Funktion**|**Beschreibung**|
 |--------|-------------|
@@ -28,7 +28,7 @@ Das Hinzufügen von Funktionen in Teams Toolkit hilft Ihnen, Ihrer vorhandenen T
 Die folgende Liste bietet Vorteile zum Hinzufügen weiterer Funktionen in TeamsFx:
 
 * Bietet Komfort.
-* Fügt Ihrer App weitere Funktionen hinzu, indem Quellcodes automatisch mit Teams Toolkit hinzugefügt werden.
+* Fügt Ihrer App weitere Funktionen hinzu, indem Quellcodes mithilfe des Teams-Toolkits automatisch hinzugefügt werden.
 
 ## <a name="limitations"></a>Einschränkungen
 
@@ -41,31 +41,31 @@ Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen
 
 **Sie können Funktionen mit den folgenden Methoden hinzufügen:**
 
-* So fügen Sie Funktionen mit Teams Toolkit in Visual Studio Code hinzu.
+* So fügen Sie Funktionen mithilfe des Teams-Toolkits in Visual Studio Code hinzu.
 * So fügen Sie Funktionen mithilfe der Befehlspalette hinzu.
 
   > [!Note]
-  > Sie müssen für jede Umgebung bereitstellen, nachdem Sie die Funktionen in Ihrer Teams App erfolgreich hinzugefügt haben.
+  > Sie müssen für jede Umgebung bereitstellen, nachdem Sie die Funktionen in Ihrer Teams-App erfolgreich hinzugefügt haben.
 
-* **So fügen Sie Funktionen mithilfe des Teams Toolkits in Visual Studio Code hinzu:**
+* **So fügen Sie Funktionen mithilfe des Teams-Toolkits in Visual Studio Code hinzu:**
 
    1. Öffnen Sie **Visual Studio Code**.
-   1. Wählen Sie im linken Bereich **Teams Toolkit** aus.
+   1. Wählen Sie im linken Bereich **das Teams-Toolkit** aus.
    1. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Eine aktualisierte" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Eine aktualisierte":::
 
 * **So fügen Sie Funktionen mithilfe der Befehlspalette hinzu:**
 
    1. Öffnen Sie **die Befehlspalette**.
-   1. Geben Sie **Teams:Features hinzufügen ein**.
+   1. Geben Sie **"Teams:Features hinzufügen"** ein.
    1. Drücken Sie **EINGABE**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="Teamfeature" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="Teamfeature":::
 
    1. Wählen Sie im Popup die Funktion aus, die Sie in Ihrem Projekt hinzufügen möchten.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Benachrichtigung" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="Benachrichtigung":::
 
 ## <a name="add-capabilities-using-teamsfx-cli"></a>Hinzufügen von Funktionen mithilfe von TeamsFx CLI
 
@@ -81,14 +81,14 @@ Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen
   |So fügen Sie einen Bot hinzu |`teamsfx add bot`|
   |So fügen Sie eine Nachrichtenerweiterung hinzu |`teamsfx add message extension`|
 
-## <a name="available-capabilities-to-add-for-different-teams-project"></a>Verfügbare Funktionen zum Hinzufügen für verschiedene Teams Projekts
+## <a name="available-capabilities-to-add-for-different-teams-project"></a>Verfügbare Funktionen zum Hinzufügen für verschiedene Teams-Projekte
 
-Sie können verschiedene Funktionen basierend auf dem Projekt hinzufügen, das Sie in Teams App erstellt haben.
+Sie können verschiedene Funktionen basierend auf dem Projekt hinzufügen, das Sie in der Teams-App erstellt haben.
 In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie in Ihrem Projekt hinzufügen können:
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|registerkarte SPFx |Keine|
+|Registerkarte "SPFx" |None|
 |SSO-aktivierte Registerkarte |SSO-aktivierte Registerkarte, Benachrichtigungs-Bot, Befehls-Bot, Bot, Nachrichtenerweiterung|
 |Benachrichtigungs-Bot |SSO-aktivierte Registerkarte, Registerkarte|
 |Befehlsbot |SSO-aktivierte Registerkarte, Registerkarte|
@@ -101,8 +101,8 @@ In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie i
 Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Botvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot`hinzugefügt. Dies schließt eine **Hello** World-Bot-Anwendungsvorlage in Ihr Projekt ein.
-* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
-* `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. Folgende Änderungen stehen zur Verfügung:
+* `launch.json` und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
+* `manifest.template.json` datei under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. Folgende Änderungen stehen zur Verfügung:
   * Die ID Ihres Bots
   * Die Bereiche Ihres Bots
   * Die Befehle, auf die die Hello World Bot-Anwendung reagieren kann
@@ -112,8 +112,8 @@ Nach dem Hinzufügen eines Bots und einer Nachrichtenerweiterung sind die Änder
 Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie folgt:
 
 * Ein Code für eine Frontend-Registerkartenvorlage wird einem Unterordner mit Pfad `yourProjectFolder/tab`hinzugefügt, der eine Anwendungsvorlage für die Registerkarte " **Hello World** " in Ihr Projekt enthält.
-* `launch.json`und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
-* `manifest.template.json`datei under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. Die Änderungen sind:
+* `launch.json` und `task.json` unter `.vscode` Ordner aktualisiert werden, die erforderliche Skripts für Visual Studio Code enthält, und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten.
+* `manifest.template.json` datei under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. Die Änderungen sind:
   * Die konfigurierbaren und statischen Registerkarten
   * Die Bereiche der Registerkarten
 * Die Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`die Bicep-Datei wird neu generiert.
@@ -121,11 +121,11 @@ Nach dem Hinzufügen der Registerkarte sind die Änderungen in Ihrem Projekt wie
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-* Befolgen Sie die schrittweise Anleitung zum Erstellen [des Befehls-Bots](../sbs-gs-commandbot.yml) in Microsoft Teams
+* Befolgen Sie die schrittweise Anleitung zum Erstellen [eines Befehlsbots](../sbs-gs-commandbot.yml) in Microsoft Teams.
 
 * Befolgen Sie die schrittweise Anleitung zum Erstellen [eines Benachrichtigungs-Bots](../sbs-gs-notificationbot.yml) in Microsoft Teams.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Bereitstellen von Cloudressourcen](provision.md)
-* [Erstellen eines neuen Teams Projekts](create-new-project.md)
+* [Erstellen eines neuen Teams-Projekts](create-new-project.md)

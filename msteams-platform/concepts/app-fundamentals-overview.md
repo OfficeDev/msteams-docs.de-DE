@@ -5,12 +5,12 @@ description: Einführung in die Elemente der Planung einer App, des Verständnis
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150687"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558716"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -28,7 +28,7 @@ In diesem Abschnitt erfahren Sie, wie Sie:
 
 Teams als Plattform bietet Ihnen Toolkits, Bibliotheken und Apps in jeder Phase der App-Entwicklung. Schauen wir uns den Lebenszyklus der App-Entwicklung an:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Abbildung zeigt die Planung Ihrer App" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Abbildung zeigt die Planung Ihrer App":::
 
 * [Vor dem Erstellen](#before-you-build)
 * [Während der Erstellung](#during-build)
@@ -53,7 +53,7 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 
 * **Verwenden von Teams als Plattform**: Die Teams-Plattform unterstützt Sie beim Erstellen einer Einzel- oder Mehrfunktions-App. Ihre Teams-App wird von den integrierten Produkten und Diensten unterstützt, die die App-Erfahrung verbessern.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung.":::
 
     Ihre Apps werden in Teams als Registerkarten, Bots, Nachrichtenerweiterungen, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
 

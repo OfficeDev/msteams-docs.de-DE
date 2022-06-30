@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503648"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558576"
 ---
 # <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
@@ -173,11 +173,11 @@ gulp build
 
 1. Geben Sie `http://localhost:3007/<yourDefaultAppNameTab>/` in Ihren Browser ein, um die Startseite Ihrer Anwendung anzuzeigen.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte":::
 
 1. Um die Registerkartenkonfigurationsseite anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Es wird Folgendes angezeigt:
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Konfigurationsseite für Registerkarten" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Konfigurationsseite für Registerkarten":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Einrichten eines sicheren Tunnels zu Ihrer Registerkarte
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner des App-Pakets und dann **Öffnen** aus.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Hochgeladene Kanalregisterkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Hochgeladene Kanalregisterkarte":::
 
 1. Wählen Sie im Dialogfeld **Hinzufügen** aus. Ihre Registerkarte wird in Microsoft Teams hochgeladen.
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. Folgen Sie den Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Ihre Kanal- oder Gruppenregisterkarte.
 1. Klicken Sie auf **Speichern**, und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Die hochgeladene Kanalregisterkarte" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Die hochgeladene Kanalregisterkarte":::
 
     Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
 
@@ -433,7 +433,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Wählen Sie **Zu Team hinzufügen** aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und klicken Sie auf **Speichern**. Ihre Registerkarte ist jetzt in Microsoft Teams verfügbar.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET hochgeladen" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET hochgeladen":::
 
     Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
 
@@ -651,7 +651,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Wählen Sie **Zu Team hinzufügen** aus, um die Registerkarte in einem Team einzurichten. Konfigurieren Sie Ihre Registerkarte, und klicken Sie auf **Speichern**. Ihre Registerkarte ist jetzt in Microsoft Teams verfügbar.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET MVC hochgeladen" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET MVC hochgeladen":::
 
     Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
 

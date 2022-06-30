@@ -3,12 +3,12 @@ title: Kartentypen
 description: In diesem Modul erfahren Sie, welche Karten und Kartenaktionen Bots in Teams zur Verfügung stehen, und erstellen Sie einen Hero, Miniaturansichten und adaptive Karten
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142626"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558583"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -131,7 +131,7 @@ Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 
 ### <a name="example-of-adaptive-card"></a>Beispiel für Adaptive Card
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Beispiel für eine Adaptive Karte" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Beispiel für eine Adaptive Karte":::
 
 Der folgende Code zeigt ein Beispiel für eine Adaptive Karte:
 

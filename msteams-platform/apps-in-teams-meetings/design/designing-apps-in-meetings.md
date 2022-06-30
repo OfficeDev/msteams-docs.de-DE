@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Besprechungserweiterungen für Ihre Apps in T
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484661"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558086"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
@@ -31,31 +31,31 @@ Benutzer können eine Besprechungserweiterung vor und während Besprechungen hin
 
 In den Besprechungsdetails können Benutzer **"Registerkarte hinzufügen+** " auswählen, um das App-Flyout zu öffnen und apps zu finden, die für Besprechungen optimiert sind.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Das Beispiel zeigt, wie Eine Besprechungserweiterung vor einer Besprechung hinzugefügt wird." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Das Beispiel zeigt, wie Eine Besprechungserweiterung vor einer Besprechung hinzugefügt wird.":::
 
 ### <a name="add-during-a-meeting"></a>Während einer Besprechung hinzufügen
 
-#### <a name="mobile"></a>Mobil
+#### <a name="mobile"></a>Mobilgerät
 
 Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer auf die App in einer Besprechung zugreifen, indem sie **"Mehr**:::image type="icon" source="../../assets/icons/teams-client-more.png":::" auswählen.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Das Beispiel zeigt, wie Sie eine Besprechungserweiterung während einer Besprechung auf mobilgeräten hinzufügen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Das Beispiel zeigt, wie Sie eine Besprechungserweiterung während einer Besprechung auf mobilgeräten hinzufügen.":::
 
 #### <a name="desktop"></a>Desktop
 
 In einer Besprechung können Benutzer **"Weitere** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Hinzufügen"** und dann die gewünschte App auswählen.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Das Beispiel zeigt, wie Sie während einer Besprechung eine Besprechungserweiterung hinzufügen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Das Beispiel zeigt, wie Sie während einer Besprechung eine Besprechungserweiterung hinzufügen.":::
 
 ## <a name="before-a-meeting"></a>Vor einer Besprechung
 
 Vor einer Besprechung ist Ihre App für Benutzer auf einer Registerkarte verfügbar. Das folgende Beispiel zeigt einen Entwurf einer Umfragefrage, die während der Besprechung beantwortet wird.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Inhalte in den Besprechungsdetails vor einem Anruf anzeigen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Inhalte in den Besprechungsdetails vor einem Anruf anzeigen.":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>Anatomie: Registerkarte "Besprechung" (vor und nach Besprechungen)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie einer Besprechungsregisterkarte vor und nach einer Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie einer Besprechungsregisterkarte vor und nach einer Besprechung.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -86,17 +86,17 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 * Erstellen Sie eine Umfrage, eine Umfrage oder ein Aufgabenelement für die Besprechungsteilnehmer.
 * Zeigen Sie für die Besprechung relevante Notizen an. Beispielsweise Informationen zu einem Vertriebsleiter.
 
-#### <a name="mobile"></a>Mobil
+#### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung auf mobilgeräten präsentieren können." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung auf mobilgeräten präsentieren können.":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung präsentieren können." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung präsentieren können.":::
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomie: Registerkarte "In Besprechung"
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie einer Registerkarte in einer Besprechung." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie einer Registerkarte in einer Besprechung.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -111,7 +111,7 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 
 Optimieren Sie Ihre Registerkarte in der Besprechung so, dass sie edge-to-edge innerhalb des iFrame-Bereichs von 280 Pixeln passt. Es gibt 20 Pixel Abstand auf der linken und rechten Seite des iFrames und zwischen der Registerkartenüberschrift. Der iframe ist vollständig beschnitten am unteren Rand der Registerkarte.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="Das Beispiel zeigt die Abmessungen des Tababstands in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="Das Beispiel zeigt die Abmessungen des Tababstands in der Besprechung.":::
 
 ### <a name="scrolling"></a>Scrollen
 
@@ -121,13 +121,13 @@ Beachten Sie Folgendes, wenn Sie das Scrollen zulassen:
 * Benutzern sollte nur der Inhalt angezeigt werden, zu dem sie gescrollt haben (nichts darüber oder darunter).
 * Die Bildlaufleiste ist Teil des iframe-Inhalts.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Das Beispiel zeigt, wie die Registerkarte in der Besprechung scrollt." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Das Beispiel zeigt, wie die Registerkarte in der Besprechung scrollt.":::
 
 ### <a name="navigation"></a>Navigation
 
 Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern die Navigation zu einer sekundären Ebene zu ermöglichen. Benutzer müssen zur vorherigen Ebene zurückkehren können.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Das Beispiel zeigt die Navigation in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Das Beispiel zeigt die Navigation in der Besprechung.":::
 
 ## <a name="use-an-in-meeting-dialog"></a>Verwenden eines Besprechungsdialogfelds
 
@@ -142,17 +142,17 @@ In-Besprechungsdialogfelder werden von einem Benutzer (z. B. dem Besprechungsorg
 * Genehmigungen übermitteln.
 * Abrufen von Erinnerungen.
 
-### <a name="mobile"></a>Mobil
+### <a name="mobile"></a>Mobilgerät
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Das Beispiel zeigt, wie Sie ein Dialogfeld in einer Besprechung auf mobilgeräten verwenden können." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Das Beispiel zeigt, wie Sie ein Dialogfeld in einer Besprechung auf mobilgeräten verwenden können.":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Beispiel zeigt, wie Sie ein besprechungsinternes Dialogfeld verwenden können." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Beispiel zeigt, wie Sie ein besprechungsinternes Dialogfeld verwenden können.":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie: Dialogfeld "In Besprechung"
 
-:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogfelds." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogfelds.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -161,7 +161,7 @@ In-Besprechungsdialogfelder werden von einem Benutzer (z. B. dem Besprechungsorg
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie: Kopfzeile des Dialogfelds "In Besprechung"
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogkopfs." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="Das Beispiel zeigt die strukturelle Anatomie eines Besprechungsdialogkopfs.":::
 
 Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante mit dem Avatar, um zu verstärken, dass das Dialogfeld von einer Person stammt.
 
@@ -180,7 +180,7 @@ In Besprechungsdialogfeldern kann die Größe variieren, um unterschiedliche Sze
 * **Breite**: Sie können die Breite des iFrames des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben.
 * **Höhe**: Sie können die Höhe des iFrames des Dialogfelds an einer beliebigen Stelle innerhalb des unterstützten Größenbereichs angeben. Sie können Benutzern auch erlauben, vertikal zu scrollen, wenn der App-Inhalt die maximale Höhe überschreitet.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Das Beispiel zeigt das Dialogfeld in der Besprechung. Breite: Min--280 Pixel (248 Pixel iFrame). Max. 460 Pixel (428 Pixel iFrame). Höhe: 300 Pixel (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Das Beispiel zeigt das Dialogfeld in der Besprechung. Breite: Min--280 Pixel (248 Pixel iFrame). Max. 460 Pixel (428 Pixel iFrame). Höhe: 300 Pixel (iframe).":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Verwenden der freigegebenen Besprechungsphase
 
@@ -209,9 +209,9 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Beispiel zeigt ein Dashboard, das in der freigegebenen Besprechungsphase überprüft wird." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Beispiel zeigt ein Dashboard, das in der freigegebenen Besprechungsphase überprüft wird.":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Das Beispiel zeigt eine Dashboardkomponente, die in der freigegebenen Besprechungsphase überprüft wird." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Das Beispiel zeigt eine Dashboardkomponente, die in der freigegebenen Besprechungsphase überprüft wird.":::
 
    :::column-end:::
 :::row-end:::
@@ -224,7 +224,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Das Beispiel zeigt ein Whiteboard auf der freigegebenen Besprechungsphase." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Das Beispiel zeigt ein Whiteboard auf der freigegebenen Besprechungsphase.":::
 
    :::column-end:::
 :::row-end:::
@@ -237,14 +237,14 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Das Beispiel zeigt eine Prüfung auf der freigegebenen Besprechungsphase." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Das Beispiel zeigt eine Prüfung auf der freigegebenen Besprechungsphase.":::
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomie: Teilen aller App-Inhalte für eine Besprechung
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn alle App-Inhalte freigegeben werden." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn alle App-Inhalte freigegeben werden.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -256,7 +256,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomie: Freigeben bestimmter App-Inhalte für eine Besprechung
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn nur bestimmte App-Inhalte freigegeben werden." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Die Abbildung zeigt die Design-Anatomie der freigegebenen Besprechungsphase, wenn nur bestimmte App-Inhalte freigegeben werden.":::
 
 |Leistungsindikator|Beschreibung|
 |----------|-----------|
@@ -277,19 +277,19 @@ Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Statu
 
 Wenn der Seitenbereich nicht geöffnet ist, beträgt die Besprechungsphase standardmäßig 994 x 678 Pixel und kann mindestens 792 x 382 Pixel betragen.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Abbildung der Reaktionsfähigkeit der freigegebenen Besprechungsphase mit geschlossenem Seitenbereich." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Abbildung der Reaktionsfähigkeit der freigegebenen Besprechungsphase mit geschlossenem Seitenbereich.":::
 
 #### <a name="meeting-stage-with-side-panel"></a>Besprechungsphase (mit Seitenbereich)
 
 Wenn der Seitenbereich geöffnet ist, beträgt die Besprechungsphase standardmäßig 918 x 540 Pixel und kann mindestens 472 x 382 Pixel betragen.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Abbildung der Reaktionsfähigkeit der freigegebenen Besprechungsphase mit geöffnetem Seitenbereich." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Abbildung der Reaktionsfähigkeit der freigegebenen Besprechungsphase mit geöffnetem Seitenbereich.":::
 
 ## <a name="after-a-meeting"></a>Nach einer Besprechung
 
 Sie können zu einer Besprechung zurückkehren, nachdem sie beendet wurde, und App-Inhalte anzeigen. In diesem Beispiel kann sich der Besprechungsorganisator die Umfrageergebnisse auf der Registerkarte **"Contoso** " ansehen. (Hinweis: Aus Entwurfssicht gibt es keinen Unterschied zwischen der Registerkartenoberfläche vor und nach der Besprechung.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispielabbildung zeigt eine Registerkarte nach der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Die Beispielabbildung zeigt eine Registerkarte nach der Besprechung.":::
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -299,7 +299,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Beispiel, das zeigt, wie die Anzahl der Interaktionen eingeschränkt wird." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Beispiel, das zeigt, wie die Anzahl der Interaktionen eingeschränkt wird.":::
 
 #### <a name="do-limit-the-number-of-interactions"></a>Do: Limit the number of interactions
 
@@ -307,7 +307,7 @@ Entfernen Sie bei Besprechungsdialogfeldern unnötige Inhalte, die Benutzern nic
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Beispiel, das zeigt, wie sie keine unnötigen Elemente einführen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Beispiel, das zeigt, wie sie keine unnötigen Elemente einführen.":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>Don't: Einführung unnötiger Elemente
 
@@ -318,7 +318,7 @@ Ein einzelnes Dialogfeld in der Besprechung mit mehreren Interaktionen kann von 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Beispiel, das zeigt, wie eine fokussierte Umgebung erstellt wird." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Beispiel, das zeigt, wie eine fokussierte Umgebung erstellt wird.":::
 
 #### <a name="do-create-a-focused-environment"></a>Do: Erstellen einer fokussierten Umgebung
 
@@ -326,7 +326,7 @@ Wir empfehlen, die App-Erfahrung nur auf die Besprechungsphase zu beschränken. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Beispiel, das zeigt, wie konkurrierende Oberflächen während Besprechungen nicht einbezogen werden." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Beispiel, das zeigt, wie konkurrierende Oberflächen während Besprechungen nicht einbezogen werden.":::
 
 #### <a name="dont-include-competing-surfaces"></a>Nicht verwenden: Konkurrierende Oberflächen einschließen
 
@@ -339,7 +339,7 @@ Ihre App sollte die Benutzer nur bitten, sich auf eine einzelne Oberfläche zu k
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Beispiel, das zeigt, wie Sie ein einspaltiges Dialogfeldlayout verwenden sollten." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Beispiel, das zeigt, wie Sie ein einspaltiges Dialogfeldlayout verwenden sollten.":::
 
 #### <a name="do-use-a-one-column-dialog"></a>Do: Use a one-column dialog
 
@@ -347,7 +347,7 @@ Da sich die Dialogfelder im Zentrum der Besprechungsphase befinden, sollte die A
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Beispiel, das zeigt, dass Sie den Platz einer Besprechungserweiterung nicht überladen sollten." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Beispiel, das zeigt, dass Sie den Platz einer Besprechungserweiterung nicht überladen sollten.":::
 
 #### <a name="dont-clutter-the-space"></a>Don't: Clutter the space
 
@@ -358,7 +358,7 @@ Dichte oder überstrukturierte Inhalte können ablenkend und überwältigend sei
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Beispiel für ein einspaltiges Registerkartenlayout." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Beispiel für ein einspaltiges Registerkartenlayout.":::
 
 #### <a name="do-use-a-one-column-tab"></a>Do: Verwenden einer einspaltigen Registerkarte
 
@@ -366,7 +366,7 @@ Angesichts der schmalen Beschaffenheit der Registerkarte in der Besprechung wird
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Beispiel für eine Registerkarte mit mehreren Spalten." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Beispiel für eine Registerkarte mit mehreren Spalten.":::
 
 #### <a name="dont-use-multiple-columns"></a>Nicht empfohlen: Verwenden mehrerer Spalten
 
@@ -379,7 +379,7 @@ Aufgrund des begrenzten Platzes auf der Registerkarte "Besprechung" werden Layou
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechtsbündig ausgerichtet werden." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Beispiel, das zeigt, wie primäre Steuerelemente rechtsbündig ausgerichtet werden.":::
 
 #### <a name="do-right-align-the-primary-action"></a>Do: Right align the primary action
 
@@ -387,7 +387,7 @@ Wir empfehlen, die visuell schwerste Aktion an der richtigen Position zu positio
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Beispiel, das zeigt, wie Sie primäre Steuerelemente nicht linksbündig ausrichten sollten." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Beispiel, das zeigt, wie Sie primäre Steuerelemente nicht linksbündig ausrichten sollten.":::
 
 #### <a name="dont-left-or-center-align-actions"></a>Nicht empfohlen: Linksbündige oder zentrierte Ausrichtungsaktionen
 
@@ -401,9 +401,9 @@ Dies weicht vom standardmäßigen Teams-Muster für die Platzierung von Steuerel
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Beispiel für vertikalen Bildlauf auf einer Registerkarte in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Beispiel für vertikalen Bildlauf auf einer Registerkarte in der Besprechung.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Beispiel für vertikalen Bildlauf in der freigegebenen Besprechungsphase." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Beispiel für vertikalen Bildlauf in der freigegebenen Besprechungsphase.":::
 
 #### <a name="do-scroll-vertically"></a>Do: Scrollen vertikal
 
@@ -412,9 +412,9 @@ Benutzer erwarten einen vertikalen Bildlauf in Teams (und an anderer Stelle). Di
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Beispiel für einen horizontalen Bildlauf auf einer Registerkarte in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Beispiel für einen horizontalen Bildlauf auf einer Registerkarte in der Besprechung.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Beispiel für horizontalen Bildlauf in der freigegebenen Besprechungsphase." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Beispiel für horizontalen Bildlauf in der freigegebenen Besprechungsphase.":::
 
 #### <a name="dont-scroll-horizontally"></a>Nicht empfohlen: Horizontaler Bildlauf
 
@@ -427,7 +427,7 @@ Horizontales Scrollen ist in Teams (einschließlich der Besprechungsumgebung) ke
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Beispiel für ein komplexes Szenario auf einer Registerkarte in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Beispiel für ein komplexes Szenario auf einer Registerkarte in der Besprechung.":::
 
 #### <a name="do-surface-complex-scenarios-in-the-in-meeting-tab"></a>Do: Surface complex scenarios in the in-meeting tab
 
@@ -435,7 +435,7 @@ Wenn Ihre App mehrere Aufgaben enthält, wird dringend empfohlen, eine Besprechu
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Beispiel für komplexe Szenarien in einem Dialogfeld in einer Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Beispiel für komplexe Szenarien in einem Dialogfeld in einer Besprechung.":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>Nicht empfohlen: Gestalten Von Besprechungsdialogfeldern zu komplex
 
@@ -449,9 +449,9 @@ In Besprechungsdialogfeldern sind für kurze Interaktionen vorgesehen.
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Beispiel für eine Besprechungserweiterung mit dem dunklen Design." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Beispiel für eine Besprechungserweiterung mit dem dunklen Design.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Ein weiteres Beispiel, das die Besprechungserweiterung mit dem dunklen Design zeigt." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Ein weiteres Beispiel, das die Besprechungserweiterung mit dem dunklen Design zeigt.":::
 
 #### <a name="do-focus-on-dark-theme"></a>Do: Fokus auf dunkles Design
 
@@ -460,9 +460,9 @@ Teams-Besprechungen sind für dunkle Designs optimiert, um visuelle und kognitiv
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Beispiel für eine Besprechungserweiterung mit Farben, die nicht mit dem Besprechungsdesign übereinstimmen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Beispiel für eine Besprechungserweiterung mit Farben, die nicht mit dem Besprechungsdesign übereinstimmen.":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Ein weiteres Beispiel, das eine Besprechungserweiterung mit Farben zeigt, die nicht mit dem Besprechungsdesign übereinstimmen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Ein weiteres Beispiel, das eine Besprechungserweiterung mit Farben zeigt, die nicht mit dem Besprechungsdesign übereinstimmen.":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>Nicht: Verwenden Sie unbekannte Farben
 
@@ -475,7 +475,7 @@ Farben, die mit der Besprechungsumgebung kollidieren, können ablenken und in Te
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Beispiel für eine Besprechungserweiterung mit einer Zurück-Schaltfläche." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Beispiel für eine Besprechungserweiterung mit einer Zurück-Schaltfläche.":::
 
 #### <a name="do-have-a-back-button"></a>Do: Have a Back button
 
@@ -483,7 +483,7 @@ Wenn auf einer Registerkarte in der Besprechung mehrere Navigationsebenen vorhan
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Beispiel für eine Besprechungserweiterung mit zwei Schaltflächen zum Schließen." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Beispiel für eine Besprechungserweiterung mit zwei Schaltflächen zum Schließen.":::
 
 #### <a name="dont-include-another-dismiss-button"></a>Don't: Include another dismiss button
 
@@ -496,7 +496,7 @@ Das Bereitstellen einer Option zum Schließen von Registerkarteninhalten in Besp
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel mit Modaldaten (oder Aufgabenmodulen) auf einer Registerkarte in der Besprechung." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Beispiel mit Modaldaten (oder Aufgabenmodulen) auf einer Registerkarte in der Besprechung.":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Achtung: Vermeiden von Modalien auf der Registerkarte "Besprechung"
 
@@ -509,7 +509,7 @@ Modale Elemente (auch als Aufgabenmodule bezeichnet) auf der bereits schmalen Re
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Beispiel, das zeigt, wie die Größe einer Besprechungserweiterung ordnungsgemäß geändert wird." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Beispiel, das zeigt, wie die Größe einer Besprechungserweiterung ordnungsgemäß geändert wird.":::
 
 #### <a name="do-resize-and-scale-your-app-responsively"></a>Do: Ändern der Größe und Skalierung Ihrer App
 
@@ -517,7 +517,7 @@ App-Inhalte sollten in kleineren Fenstern dynamisch angepasst und verkleinert we
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Beispiel, das zeigt, wie die Größe einer Besprechungserweiterung nicht ordnungsgemäß geändert wird." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Beispiel, das zeigt, wie die Größe einer Besprechungserweiterung nicht ordnungsgemäß geändert wird.":::
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>Don't: Crop or clip primary UI components
 

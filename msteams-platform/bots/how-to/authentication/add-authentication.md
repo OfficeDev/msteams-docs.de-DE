@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einem Bot in Teams mitHilfe von Azure Active 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 297307657905a1492abc68fde7d69cfbc0702497
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484971"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558856"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -141,7 +141,7 @@ So fügen Sie den Microsoft Teams-Kanal hinzu:
 
 1. Öffnen Sie Ihren Bot, der im Abschnitt **Zuletzt verwendete Ressourcen** aufgeführt ist.
 
-1. Wählen Sie im linken Bereich **Kanäle** und dann **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false"::: aus.
+1. Wählen Sie im linken Bereich **Kanäle** und dann **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png"::: aus.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Kanal Teams":::
 
@@ -636,7 +636,7 @@ Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
+| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
 
 ## <a name="see-also"></a>Siehe auch
 

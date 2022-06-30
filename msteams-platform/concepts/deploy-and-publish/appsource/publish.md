@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189929"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485734"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -120,7 +120,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
         1. Einrichtungsanweisungen, wenn Ihre App eine weitere Konfiguration für den Zugriff auf die App-Funktionalität erfordert. Wenn Ihre App eine komplexe Konfiguration erfordert, können Sie alternativ auch einen [bereitgestellten Demomandanten](/office/developer-program/microsoft-365-developer-program-get-started) mit Administratorzugriff bereitstellen, damit unsere Validierungssteuerelemente die Konfigurationsschritte überspringen können.
 
-        1. Link zu einem Demovideo zum Aufzeichnen des Schlüsselbenutzerflows für Ihre App. Dies wird dringend empfohlen.
+        1. Link zu einem Demovideo, das den Key-User-Flow für Ihre App demonstriert. Dies wird dringend empfohlen.
 
 * **Nach der App-Übermittlung**
 

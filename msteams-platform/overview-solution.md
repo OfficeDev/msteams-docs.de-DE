@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190117"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558674"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
@@ -32,19 +32,19 @@ Sortieren und Zuordnen von Anforderungen zu Teams-Features:
 | Anforderungen der Nutzer-App | Prognose überprüfen | Benachrichtigung vor der Reise | Registrierter Nutzer |
 | --- |:---:|:---:|:---:|
 | **Funktionalität** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph, Wetter-API |
+| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph, Wetter-API |
 | **Scope** | &nbsp; | Persönliche App | &nbsp; |
 | **Integrationspunkt** | &nbsp; | Chat | &nbsp; |
 
 **Teams-App-Lösung**: Eine *persönliche Chat-Bot*-App von Teams, die Prognosen prüft und *registrierten Nutzern* vor ihrem Reisedatum *eine Prognose-Benachrichtigung sendet*.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Ein Entwickler in einem Reisebüro erstellt einen Bot für Teams, der Wettervorhersagen an Kunden sendet, damit sie ihre Reisedaten im Voraus planen können" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Ein Entwickler in einem Reisebüro erstellt einen Bot für Teams, der Wettervorhersagen an Kunden sendet, damit sie ihre Reisedaten im Voraus planen können":::
 
 Teams bietet diese und viele weitere Funktionen, um Ihren Benutzern eine funktionsreiche App-Lösung zu bieten. So entwickeln Sie diese App:
 
 1. Erstellen Sie eine persönliche Chatbot-App.
 1. Integrieren Sie eine externe Wettervorhersage-API, um eine Verbindung herzustellen und eine Vorhersage für ein bestimmtes Datum und einen bestimmten Standort abzufragen.
-1. Integration mit :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph für registrierte Benutzer.
+1. Integration mit :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph für registrierte Benutzer.
 1. Überprüfen und senden Sie Prognosedetails basierend auf dem Reisedatum und dem Reisestandort des Nutzers.
 
 ## <a name="choose-what-suits-you"></a>Wählen Sie aus, was zu Ihnen passt
@@ -53,7 +53,7 @@ Sie können eine Teams-App gemäß den Anforderungen Ihrer App erstellen. Wähle
 
 Eine Teams-App bietet Ihnen die Flexibilität, Ihre Buildumgebung auszuwählen. Sie enthält Tools, Framework und Sprachen für die App-Entwicklung.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Unternehmen benötigt App" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Unternehmen benötigt App":::
 
 Erstellen Sie Ihre Teams-App in der Umgebung, die ihren speziellen Anforderungen entspricht. Sie können sogar eine Kombination auswählen.
 
@@ -65,14 +65,14 @@ Eine Teams-App bietet Ihren Nutzern die Vorteile eines Arbeitsbereichs für die 
 
 Als Plattform zum Erstellen von Apps bietet Teams die gesamte Palette von Apps und Toolkits. Die Teams-Plattform unterstützt Sie in jeder Phase von der Planung Ihrer App bis zur Vermarktung.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Beschreiben eines Lebenszyklus der Teams-App-Entwicklung. Planen, Entwerfen, Erstellen, Erweitern, Testen, Bereitstellen, Vermarkten. Details werden unten in einer Aufzählung angezeigt." border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Beschreiben eines Lebenszyklus der Teams-App-Entwicklung. Planen, Entwerfen, Erstellen, Erweitern, Testen, Bereitstellen, Vermarkten. Details werden unten in einer Aufzählung angezeigt.":::
 
 Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie verschiedene Tools und Dienste nutzen. Ein Beispiel für einen Entwicklungsablauf kann sein:
 
 1. Planen Sie Ihr Projekt und ermitteln Sie die Anforderung.
 1. Entwerfen Sie die App. Verwenden Sie Teams UI Kit und UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
 1. Erstellen Sie die App mit JavaScript mithilfe des Teams-Toolkits.
-1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph hinzufügen.
+1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
 1. Stellen Sie die App in Azure bereit.
 1. Verwalten und Veröffentlichen der Apps im Store mit dem Developer Portal. Monetarisieren Sie Ihre App mit Optionen wie SaaS-Angeboten, In-App-Käufen uvm.

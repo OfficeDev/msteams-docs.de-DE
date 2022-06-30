@@ -5,12 +5,12 @@ description: Beginnen Sie mit diesem Lernpfad mit Unterhaltungsbots in Microsoft
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503760"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558317"
 ---
 # <a name="build-bots-for-teams"></a>Erstellen von Bots für Teams
 
@@ -33,7 +33,7 @@ Unterhaltungsbots sind unglaublich flexibel. Bots können einige Basisbefehle ve
 
 Verwenden Sie die richtige Mischung aus Karten, Text und Aufgabenmodulen, um einen nützlichen Bot zu erstellen. Das folgende Bild zeigt einen Benutzer, der sich in einem 1:1-Chat mit einem Bot über Text und interaktive Karten unterhält.
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Beispiel eines FAQ-Bots" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Beispiel eines FAQ-Bots":::
 
 Jede Interaktion zwischen dem Benutzer und dem Bot wird als eine Aktivität dargestellt. Wenn ein Bot eine Aktivität empfängt, übergibt er diese an seine Aktivitätshandler. Weitere Informationen finden Sie unter [Bot-Aktivitätshandler](~/bots/bot-basics.md).
 

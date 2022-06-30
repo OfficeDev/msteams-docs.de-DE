@@ -1,20 +1,20 @@
 ---
 title: Integrieren von Medienfunktionen
 author: Rajeshwari-v
-description: Erfahren Sie, wie Sie Teams JavaScript-Client-SDK verwenden, um Medienfunktionen mithilfe von Codebeispielen zu ermöglichen, und erfahren Sie außerdem, wie Sie die Vorteile der Integration von Medienfunktionen nutzen können.
+description: Erfahren Sie, wie Sie das JavaScript-Client-SDK von Teams verwenden, um Medienfunktionen anhand von Codebeispielen zu aktivieren, und erfahren Sie auch, wie Sie die Vorteile der Integration von Medienfunktionen nutzen können.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190237"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558709"
 ---
 # <a name="integrate-media-capabilities"></a>Integrieren von Medienfunktionen
 
-Sie können systemeigene Gerätefunktionen wie Kamera und Mikrofon in Ihre Teams-App integrieren. Für die Integration können Sie [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das die erforderlichen Tools für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md) eines Benutzers für Ihre App bereitstellt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie Kamera und Mikrofon in die Teams Plattform in Ihrer Microsoft Teams-App zu integrieren und eine umfassendere Erfahrung zu schaffen. Die Medienfunktion ist für Teams Webclient, Desktop und Mobil verfügbar. Um Medienfunktionen zu integrieren, müssen Sie die App-Manifestdatei aktualisieren und die Medienfunktions-APIs aufrufen.
+Sie können systemeigene Gerätefunktionen wie Kamera und Mikrofon in Ihre Teams-App integrieren. Für die Integration können Sie [das JavaScript-Client-SDK von Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das die erforderlichen Tools für Ihre App für den Zugriff auf [die Geräteberechtigungen](native-device-permissions.md) eines Benutzers bereitstellt. Verwenden Sie geeignete Medienfunktions-APIs, um die Gerätefunktionen wie Kamera und Mikrofon in die Teams-Plattform in Ihrer Microsoft Teams-App zu integrieren und eine umfassendere Erfahrung zu schaffen. Die Medienfunktion ist für Teams-Webclient, -Desktop und mobile Geräte verfügbar. Um Medienfunktionen zu integrieren, müssen Sie die App-Manifestdatei aktualisieren und die Medienfunktions-APIs aufrufen.
 
 Für eine effektive Integration benötigen Sie ein gutes Verständnis von [Codeausschnitten](#code-snippets) für den Aufruf der jeweiligen APIs, welche die Nutzung systemeigener Medienfunktionen ermöglichen. Es ist wichtig, sich mit den [API-Antwortfehlern](#error-handling) vertraut zu machen, um die Fehler in Ihrer Microsoft Teams-App zu behandeln.
 
@@ -22,7 +22,7 @@ Für eine effektive Integration benötigen Sie ein gutes Verständnis von [Codea
 
 Der Hauptvorteil der Integration von Gerätefunktionen in Ihre Microsoft Teams-Apps besteht in der Nutzung systemeigener Microsoft Teams-Steuerelemente, um eine umfassende und immersive Benutzererfahrung zu schaffen. Die folgenden Szenarien zeigen die Vorteile der Medienfunktionen:
 
-* Ermöglichen Sie es dem Benutzer, die groben Modelle, die auf einem physischen Whiteboard gezeichnet werden, über das Mobiltelefon zu erfassen und die erfassten Bilder als Umfrageoptionen in Teams Gruppenchats zu verwenden.
+* Ermöglichen Sie es dem Benutzer, die groben Modelle, die auf einem physischen Whiteboard gezeichnet werden, über das Mobiltelefon zu erfassen und die erfassten Bilder als Umfrageoptionen im Teams-Gruppenchat zu verwenden.
 
 * Zulassen, dass der Benutzer Eine Audionachricht aufzeichnet und an ein Vorfallticket anfügen kann.
 
@@ -75,21 +75,21 @@ Die folgende Tabelle enthält eine Reihe von APIs zum Aktivieren der Medienfunkt
 
 Die folgende Abbildung zeigt die Web-App-Erfahrung der `selectMedia` API für die Bildfunktion:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Die Abbildung zeigt die Bildfunktion für mobile Geräte." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Die Abbildung zeigt die Bildfunktion für mobile Geräte.":::
 
 > [!NOTE]
 >
-> Auf Geräten mit Android Version unter 7 startet die `selectMedia` API die systemeigene Android Kameraerfahrung anstelle der systemeigenen Teams Kameraerfahrung.
+> Auf Geräten mit Android-Version unter 7 startet die `selectMedia` API die systemeigene Android-Kameraumgebung anstelle der nativen Teams-Kameraerfahrung.
 
 Die folgende Abbildung zeigt die Web-App-Erfahrung der `selectMedia` API für die Mikrofonfunktion:
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Die Abbildung zeigt die Mikrofonfunktion für mobile Geräte." border="true":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Die Abbildung zeigt die Mikrofonfunktion für mobile Geräte.":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 Die folgende Abbildung zeigt die Web-App-Erfahrung der `selectMedia` API für die Bildfunktion:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Die Abbildung zeigt die Medienfunktion für den Desktop." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Die Abbildung zeigt die Medienfunktion für den Desktop.":::
 
 ---
 

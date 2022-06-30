@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073300"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558058"
 ---
 # <a name="in-app-purchases"></a>In-App-Käufe
 
@@ -87,21 +87,21 @@ Im folgenden Beispiel zeigt, wie Benutzer Abonnementpläne für eine fiktive Tea
 
 1. Wählen Sie im Dialogfeld „App-Details“ die Option **Abonnement kaufen** oder **Für mich hinzufügen** aus.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Kaufen des Abonnements für die ausgewählte App." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Kaufen des Abonnements für die ausgewählte App.":::
 
 1. **Für mich hinzufügen** stellt eine kostenlose Testversion der App zur Verfügung und bietet später ein **Upgrade** auf eine kostenpflichtige Version an.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgraden auf das Abonnement für die ausgewählte App." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgraden auf das Abonnement für die ausgewählte App." lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. Wählen Sie im Dialogfeld **Abonnementplan auswählen** den Plan und dann **Kasse** aus.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Auswählen des entsprechenden Abonnementplans." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Auswählen des entsprechenden Abonnementplans." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. Schließen Sie die Transaktion ab, und wählen Sie **Jetzt konfigurieren** aus, um Ihr Abonnement einzurichten.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Einrichten des Abonnements." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Einrichten des Abonnements." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Zielseite des Abonnements." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Zielseite des Abonnements." lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>Nächster Schritt
 

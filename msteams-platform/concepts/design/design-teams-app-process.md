@@ -5,18 +5,18 @@ description: Erfahren Sie, wie und wann Sie Microsoft-Tools und -Ressourcen verw
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b9b23fc2a849df6528af224e7289bced10f9e096
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144376"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557848"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Entwurfsprozess für Microsoft Teams-Apps
 
 Es gibt mehrere Tools und Ressourcen zum Entwerfen Ihrer Microsoft Teams-App. In den folgenden Schritten wird beschrieben, wann und wie Sie diese während des Entwurfsprozesses verwenden können. (Einige Schritte zählen technisch gesehen möglicherweise nicht zum Entwurfsprozess, werden jedoch als zusätzlicher Kontext aufgeführt.)
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagramm mit einem Beispiel für den Teams-App-Entwurfsprozess" border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagramm mit einem Beispiel für den Teams-App-Entwurfsprozess":::
 
 ## <a name="plan-your-app"></a>Planen Ihrer App
 

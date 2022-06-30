@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie benutzerdefinierte Registerka
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503893"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558142"
 ---
 # <a name="build-tabs-for-teams"></a>Erstellen von Registerkarten für Teams
 
@@ -25,11 +25,11 @@ Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet 
 
 Die folgende Abbildung zeigt persönliche Registerkarten:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Registerkarte „Persönlich“" lightbox="../assets/images/tabs/personaltab.png" border="true":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Registerkarte „Persönlich“" lightbox="../assets/images/tabs/personaltab.png":::
 
 Die folgende Abbildung zeigt die Contoso-Kanalregisterkarten:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Kanal- oder Gruppenregisterkarten" lightbox="../assets/images/tabs/tabs.png" border="true":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="Kanal- oder Gruppenregisterkarten" lightbox="../assets/images/tabs/tabs.png":::
 
 Es gibt einige Voraussetzungen, die Sie erfüllen müssen, bevor Sie mit Registerkarten arbeiten.
 

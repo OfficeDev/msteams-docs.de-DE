@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 2d1889de8cc5c36cde708f4d4628f6f61768e3f4
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485643"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557876"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Hinzufügen von Cloudressourcen zur Teams-App
 
@@ -44,7 +44,7 @@ Wenn Sie ein SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie ke
    1. Wählen Sie im linken Bereich **das Teams-Toolkit** aus.
    1. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Feature hinzufügen" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="Feature hinzufügen":::
 
 * **So fügen Sie Cloudressourcen mithilfe der Befehlspalette hinzu:**
 
@@ -52,11 +52,11 @@ Wenn Sie ein SPFx-basiertes Registerkartenprojekt erstellt haben, können Sie ke
    1. Geben Sie **"Teams:Features hinzufügen"** ein.
    1. Drücken Sie **EINGABE**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Cloud" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="Cloud":::
 
    1. Wählen Sie im Popup die Cloudressourcen aus, die In Ihrem Projekt hinzugefügt werden sollen.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="Finale" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="Finale":::
 
 ## <a name="add-cloud-resources-using-teamsfx-cli"></a>Hinzufügen von Cloudressourcen mithilfe von TeamsFx CLI
 

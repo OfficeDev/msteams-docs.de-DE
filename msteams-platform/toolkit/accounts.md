@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142213"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558016"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Vorbereiten von Konten zum Erstellen von Teams-Apps
 
@@ -77,7 +77,7 @@ Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure
     3. Wählen Sie **Konten** aus, und melden Sie sich bei Ihrem Microsoft 365 Konto an.
     4. Überprüfen Sie, ob Sie die Option **Querladen aktiviert** anzeigen können, wie in der folgenden Abbildung dargestellt:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Querladen aktivieren" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Querladen aktivieren":::
 
 * **Überprüfen der Berechtigung zum Querladen mithilfe von Teams Client**
 
@@ -85,11 +85,11 @@ Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure
     2. Wählen Sie **Apps** im linken Bereich aus.
     3. Wählen Sie **In App veröffentlichen** aus.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Einer App veröffentlichen" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="Einer App veröffentlichen":::
 
     4. Überprüfen Sie, ob die Option **Hochladen einer benutzerdefinierten App** angezeigt wird, wie in der folgenden Abbildung dargestellt:
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Benutzerdefinierte App hochladen" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="Benutzerdefinierte App hochladen":::
 
         Wenn Sie die Option **Benutzerdefinierte App hochladen** nicht anzeigen können, bedeutet dies, dass Sie nicht über die erforderliche Berechtigung zum Querladen verfügen.
 
@@ -107,7 +107,7 @@ Wenn Sie Ihre anwendungsbezogenen Ressourcen hosten oder auf Ressourcen in Azure
 
   2. Wählen Sie **Alle anzeigen** > **Teams** aus.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="Alle anzeigen" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="Alle anzeigen":::
 
      > [!Note]
      > Es kann **bis zu 24 Stunden dauern,** bis die Option **Teams** angezeigt wird. Sie können [Ihre benutzerdefinierte App zu Test- und Validierungszwecken in eine Teams-Umgebung](/microsoftteams/upload-custom-apps) hochladen.

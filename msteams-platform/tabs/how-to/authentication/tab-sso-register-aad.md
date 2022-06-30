@@ -4,12 +4,12 @@ description: Beschreibt das Registrieren Ihrer Registerkarten-App bei Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken-SSO-Mandantenbereich
-ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503522"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558597"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 
@@ -19,7 +19,7 @@ Azure AD bietet Zugriff auf Ihre Registerkarten-App basierend auf der Teams-Iden
 
 Um Ihre Registerkarten-App in Azure AD zu registrieren und für SSO zu aktivieren, müssen Sie App-Konfigurationen erstellen, z. B. App-ID generieren, API-Bereich definieren und Client-IDs für vertrauenswürdige Anwendungen vorab autorisieren.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Konfigurieren von Azure AD zum Senden des Zugriffstokens an die Teams-Client-App" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Konfigurieren von Azure AD zum Senden des Zugriffstokens an die Teams-Client-App":::
 
 Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-)API mithilfe von Bereichen (Berechtigungen) verfügbar. Konfigurieren Sie eine Vertrauensstellung zwischen der verfügbar gemachten API in Azure AD und Ihrer App. Auf diese Weise kann der Teams-Client ein Zugriffstoken im Namen Ihrer Anwendung und des angemeldeten Benutzers abrufen. Sie können Client-IDs für die vertrauenswürdigen mobilen, Desktop- und Webanwendungen hinzufügen, die Sie vorab autorisieren möchten.
 
@@ -62,19 +62,19 @@ Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie den Mandanten 
 
 2. Wählen Sie das **Symbol App-Registrierungen** aus.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD-Portalseite." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD-Portalseite.":::
 
    Die **seite App-Registrierungen** wird angezeigt.
 
 3. Wählen Sie **+Symbol "Neue Registrierung** " aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Neue Registrierungsseite im Azure AD-Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Neue Registrierungsseite im Azure AD-Portal.":::
 
     Die Seite **Anwendung registrieren** wird angezeigt.
 
 4. Geben Sie den Namen Ihrer App ein, die dem App-Benutzer angezeigt werden soll. Sie können diesen Namen zu einem späteren Zeitpunkt ändern, wenn Sie möchten.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Seite &quot;App-Registrierung&quot; im Azure AD-Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Seite &quot;App-Registrierung&quot; im Azure AD-Portal.":::
 
 5. Wählen Sie den Typ des Benutzerkontos aus, das auf Ihre App zugreifen kann. Sie können zwischen einzel- oder mehrinstanzenfähigen Optionen oder einem privaten Microsoft-Konto wählen.
 
@@ -96,11 +96,11 @@ Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie den Mandanten 
 7. Wählen Sie **Registrieren** aus.
     Im Browser wird eine Meldung angezeigt, die besagt, dass die App erstellt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registrieren Sie die App im Azure AD-Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registrieren Sie die App im Azure AD-Portal.":::
 
     Die Seite mit App-ID und anderen Konfigurationen wird angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="Die App-Registrierung ist erfolgreich." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="Die App-Registrierung ist erfolgreich.":::
 
 8. Notieren und speichern Sie die App-ID aus der **Anwendungs-ID (Client-ID**). Sie benötigen es später zum Aktualisieren des Teams-App-Manifests.
 
@@ -120,19 +120,19 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
 1. Wählen Sie im linken Bereich "**API** **verwalten** > " aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Verfügbarmachen einer API-Menüoption." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Verfügbarmachen einer API-Menüoption.":::
 
     Die Seite **"API verfügbar machen** " wird angezeigt.
 
 1. Wählen Sie **"Festlegen"** aus, um den Anwendungs-ID-URI in Form von `api://{AppID}`zu generieren.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="App-ID-URI festlegen" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="App-ID-URI festlegen":::
 
     Der Abschnitt zum Festlegen des Anwendungs-ID-URI wird angezeigt.
 
 1. Geben Sie den Anwendungs-ID-URI in dem hier erläuterten Format ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Anwendungs-ID-URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Anwendungs-ID-URI":::
 
     - Der **Anwendungs-ID-URI** ist im Format mit app-ID (GUID) vorgefüllt `api://{AppID}`.
     - Das URI-Format der Anwendungs-ID sollte folgendes sein: `api://fully-qualified-domain-name.com/{AppID}`.
@@ -163,11 +163,11 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Anwendungs-ID-URI aktualisiert wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Anwendungs-ID-URI-Nachricht" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Anwendungs-ID-URI-Nachricht":::
 
     Der Anwendungs-ID-URI wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Anwendungs-ID-URI aktualisiert" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Anwendungs-ID-URI aktualisiert":::
 
 1. Notieren und speichern Sie den Anwendungs-ID-URI. Sie benötigen es später zum Aktualisieren des Teams-App-Manifests.
 
@@ -175,13 +175,13 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
 1. Wählen Sie in den **in diesem API-Abschnitt definierten Bereichen** den **Bereich aus, und fügen Sie einen Bereich hinzu**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Bereich auswählen" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Bereich auswählen":::
 
     Die Seite **"Bereich hinzufügen** " wird angezeigt.
 
 1. Geben Sie die Details zum Konfigurieren des Bereichs ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Hinzufügen von Bereichsdetails" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Hinzufügen von Bereichsdetails":::
 
     1. Geben Sie den Bereichsnamen ein. Dieses Feld ist erforderlich.
     2. Wählen Sie den Benutzer aus, der die Zustimmung für diesen Bereich erteilen kann. Die Standardoption ist **nur "Administratoren**".
@@ -194,23 +194,23 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Bereich hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Bereich hinzugefügte Nachricht" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Bereich hinzugefügte Nachricht":::
 
     Der von Ihnen definierte neue Bereich wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Bereich hinzugefügt und angezeigt" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Bereich hinzugefügt und angezeigt":::
 
 ### <a name="to-configure-authorized-client-application"></a>So konfigurieren Sie eine autorisierte Clientanwendung
 
 1. Navigieren Sie durch die Seite **"API verfügbar machen** " zum Abschnitt **"Autorisierte Clientanwendung** ", und wählen Sie **"+Clientanwendung hinzufügen"** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendung" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendung":::
 
     Die Seite **"Clientanwendung hinzufügen** " wird angezeigt.
 
 1. Geben Sie die entsprechende Client-ID für den Teams-Client für die Anwendungen ein, die Sie für die Webanwendung Ihrer App autorisieren möchten.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Hinzufügen einer Clientanwendung" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Hinzufügen einer Clientanwendung":::
 
     > [!NOTE]
     >
@@ -230,11 +230,11 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass die autorisierte Client-App hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht mit hinzugefügter Clientanwendung" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht mit hinzugefügter Clientanwendung":::
 
     Die Client-ID wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Hinzugefügte und angezeigte Client-App" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Hinzugefügte und angezeigte Client-App":::
 
 > [!NOTE]
 > Sie können mehrere Clientanwendungen autorisieren. Wiederholen Sie die Schritte dieses Verfahrens zum Konfigurieren einer anderen autorisierten Clientanwendung.
@@ -247,13 +247,13 @@ Sie müssen die Zugriffstokenversion definieren, die für Ihre App akzeptabel is
 
 1. Wählen Sie im linken Bereich "**Manifest** **verwalten** > " aus.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD-Portalmanifest" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD-Portalmanifest":::
 
     Das Azure AD-Anwendungsmanifest wird angezeigt.
 
 1. Geben Sie **2** als Wert für die `accessTokenAcceptedVersion` Eigenschaft ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Wert für die Version des akzeptierten Zugriffstokens" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Wert für die Version des akzeptierten Zugriffstokens":::
 
 1. Wählen Sie **Speichern** aus.
 

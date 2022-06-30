@@ -4,12 +4,12 @@ description: In diesem Artikel erhalten Sie Antworten auf einige häufig gestell
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143102"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558296"
 ---
 # <a name="moodle-faq"></a>Häufig gestellte Fragen zu Moodle
 
@@ -53,9 +53,9 @@ Verwenden Sie die Option **Einschränkung der Benutzererstellung**, um die Benut
 
 Die folgende Abbildung zeigt Optionen für Einschränkungen bei der Benutzererstellung:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD":::
 
 <br>
 
@@ -71,11 +71,11 @@ Standardmäßig können nur Moodle-Administratoren die Synchronisierung konfigur
 
 Die folgende Abbildung zeigt die Option **Konfigurieren der Kurssynchronisierung im Kurs zulassen**:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="Admin" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="Admin":::
 
 Die folgende Abbildung zeigt die Synchronisierung von Kursen:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="Synchronisierung" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="Synchronisierung":::
 
 <br>
 
@@ -123,11 +123,11 @@ Benutzer, die sich zu Beginn nicht anmelden konnten, müssen das Problem melden 
 
 Die folgende Abbildung zeigt die Fehlermeldung, die beim Anmelden des Benutzers mithilfe seiner Microsoft 365 Anmeldeinformationen empfangen wurde:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Problem melden" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="Problem melden":::
 
 Die folgende Abbildung zeigt den Fehler im Azure-Portal:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure-Portal" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure-Portal":::
 
 Wenn der **Geheime Clientschlüssel** abgelaufen ist, muss der Benutzer einen neuen **Geheimen Clientschlüssel** generieren und die auf der Seite gefundene Konfiguration aktualisieren. Benutzer können sich erneut anmelden, nachdem der **Geheime Clientschlüssel** aktualisiert wurde. Die erneute Bereitstellung kann bis zu 24 Stunden dauern.
 
@@ -143,7 +143,7 @@ Administratoren können die einem Kurs zugeordnete Teams-Instanz über die Seite
 
 Die folgende Abbildung zeigt die Teams-Instanz:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="Teams-Instanz" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="Teams-Instanz":::
 
 <br>
 
@@ -160,7 +160,7 @@ Der Benutzer kann mit einem Atto Teams-Besprechungsproblem konfrontiert werden, 
 
 Die folgenden Abbildungen zeigen das Symbol "Symbolleiste" nach der Anpassung der Symbolleistenkonfiguration:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="Symbolleiste" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="Symbolleiste":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="Links-Symbol":::
 
