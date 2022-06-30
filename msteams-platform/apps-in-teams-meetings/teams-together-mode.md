@@ -3,12 +3,12 @@ title: Benutzerdefinierte Zusammen-Modus-Szenen
 description: Arbeiten mit benutzerdefinierte Zusammen-Modus-Szenen
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150645"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484775"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -22,7 +22,7 @@ In benutzerdefinierte Zusammen-Modus-Szenen ist die Szene ein Artefakt. Die Szen
 
 Der folgende Prozess bietet einen Überblick über das Erstellen einer Nur-Szenen-App:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szenen-App erstellen" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Nur-Szenen-App erstellen":::
 
 Eine reine Szenen-App ist immer noch eine App in Teams. Das Scene Studio verarbeitet die Erstellung des App-Pakets im Hintergrund. Mehrere Szenen in einem einzelnen App-Paket werden den Benutzern als flache Liste angezeigt.
 
@@ -83,7 +83,7 @@ Führen Sie die folgenden Schritte aus, um eine Szene mithilfe des Szenenstudios
 
 1. Wählen Sie **Bilder hinzufügen** aus, um das Bild der Umgebung hinzuzufügen:
 
-    ![Hinzufügen von Bildern zur Umgebung](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Bilder in die Umgebung einfügen.":::
 
     >[!NOTE]
     >Sie können die [SampleSxia.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) und [SampleApp.zip-](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) Dateien mit den Bildern herunterladen.
@@ -104,7 +104,7 @@ Führen Sie die folgenden Schritte aus, um eine Szene mithilfe des Szenenstudios
 
 1. Wählen Sie die Rolle **Besprechungsorganisator** oder **Referent** für den Teilnehmer aus. In einer Besprechung muss einem Teilnehmer die Rolle eines Besprechungsorganisators zugewiesen werden:
 
-    ![Platz zuweisen](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Weisen Sie dem Teilnehmer einen Platz zu.":::
 
 1. Wählen Sie **Speichern** und **In Teams anzeigen** aus, um Ihre Szene schnell in Teams zu testen.
 

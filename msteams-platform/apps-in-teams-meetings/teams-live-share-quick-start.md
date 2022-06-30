@@ -4,18 +4,18 @@ description: In diesem Modul erfahren Sie, wie Sie das Dice Roller-Beispiel schn
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668263"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484586"
 ---
 ---
 
 # <a name="quick-start-guide"></a>Schnellstarthandbuch
 
-Erste Schritte mit Live Share SDK anhand des Dice Roller-Beispiels. Dieser Einstieg ist eine Weiterentwicklung des [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) und wurde entwickelt, um schnell ein auf dem Live Share SDK basierendes [Dice Roller-Beispiel](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) auf dem Localhost Ihres Computers auszuführen.
+Der Einstieg in das Live Share SDK mit dem Dice Roller-Beispiel ist eine Weiterentwicklung des [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) und wurde entwickelt, um schnell ein auf dem Live Share SDK basierendes [Dice Roller-Beispiel](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) auf dem lokalen Host Ihres Computers auszuführen.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller-Beispiel":::
 
