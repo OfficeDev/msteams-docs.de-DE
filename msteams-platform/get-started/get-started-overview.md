@@ -3,12 +3,12 @@ title: Erste Schritte – Übersicht
 description: In diesem Modul erfahren Sie, wie Sie mit der Microsoft Teams-Entwicklerdokumentation beginnen, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143158"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558702"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -50,7 +50,7 @@ Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprach
 > [!div class="nextstepaction"]
 > [Erstellen einer Registerkarten-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Erstellen einer Bot-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-bot.yml)
+> [Erstellen einer Bot-App in Teams mit JavaScript](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [Erstellen einer Nachrichtenerweiterungs-App in Teams mit JavaScript, mithilfe von React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]

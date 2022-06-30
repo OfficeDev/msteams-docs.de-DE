@@ -5,22 +5,41 @@ description: In diesem Artikel erfahren Sie, wie Apps in Microsoft Teams-Besprec
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 07008b23ad9f5df32c61b417ab7f49be6dbfe6e9
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484551"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561599"
 ---
-# <a name="apps-for-teams-meetings"></a>Apps für Teams-Besprechungen
+# <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
 Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, während der Besprechung und nach der Besprechung, abhängig vom Status des Teilnehmers.
 
-Die Benutzer können während Besprechungen über den Registerkartenkatalog aus ihrem Kalender auf Apps zugreifen, z. B.:
+> [!Note]
+>
+> Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-* Provisorische Bereitstellung eines Kanban-Boards
-* Starten eines Dialogfelds mit Aktionen in der Besprechung
-* Erstellen einer Umfrage nach der Besprechung
+Teams unterstützt den Zugriff auf Apps während der Besprechung für die folgenden Besprechungstypen:
+
+* [**Geplante Besprechungen**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Besprechungen, die über den Teams-Kalender geplant sind.
+* [**Einzelanrufe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Anrufe, die in einem Einzelchat initiiert wurden.
+* [**Gruppenanrufe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Anrufe, die im Gruppenchat initiiert wurden.
+* [**Sofortbesprechungen: Besprechungen**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5), die über die Schaltfläche " **Jetzt besprechen** " im Teams-Kalender initiiert wurden.
+
+Benutzer können der Besprechung Apps hinzufügen, indem sie die **+** Option aus ihrem Teams-Besprechungsfenster verwenden.
+
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Hinzufügen einer App in einer Besprechung" border="true":::
+
+Besuchen Sie den [Teams-Store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) , und erkunden Sie Apps, die speziell für Besprechungen entwickelt wurden.
+
+> [!Note]
+>
+> * Derzeit wird das Hinzufügen einer App auf Mobilgeräten nicht unterstützt. Ein Benutzer kann die App jedoch anzeigen und die App von mobilgeräten aus für die Stufe freigeben.
+>
+> * Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
+>
+> * Derzeit werden App-Oberflächen in Teams-Kanalbesprechungen (sowohl geplante Besprechungen als auch Sofortbesprechungen) nicht unterstützt.
 
 Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichkeiten der Besprechungs-App:
 

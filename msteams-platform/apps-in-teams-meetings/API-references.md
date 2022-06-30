@@ -1,16 +1,16 @@
 ---
 title: API-Referenzen für Besprechungs-Apps
 author: surbhigupta
-description: Erfahren Sie, wie Sie die Besprechungs-Apps-API-Verweise mit Beispielen und Codebeispielen Teams Benutzerrollen-API-Benutzerkontextbenachrichtigungs-Signalabfrage für Apps-Besprechungen identifizieren.
+description: Erfahren Sie, wie Sie die API-Verweise auf Besprechungs-Apps mit Beispielen und Codebeispielen identifizieren, Teams-Apps Besprechungen Benutzerrollen-API Benutzerkontext-Benachrichtigungssignalabfrage.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189441"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561609"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -27,7 +27,7 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 
 |Methode| Beschreibung| Quelle|
 |---|---|----|
-|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Microsoft Teams Registerkarte anzuzeigen.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Microsoft Teams-Registerkarte anzuzeigen.| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Teilnehmer abrufen**](#get-participant-api)| Rufen Sie Teilnehmerinformationen nach Meeting-ID und Teilnehmer-ID ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -125,6 +125,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
@@ -135,7 +136,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Eigenschaftenname | Zweck |
 |---|---|
 | **user.id** | ID des Benutzers. |
-| **user.aadObjectId** | Azure Active Directory Objekt-ID des Benutzers. |
+| **user.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers. |
 | **user.name** | Der Name des Benutzers. |
 | **user.givenName** | Vorname des Benutzers.|
 | **user.surname** | Nachname des Benutzers. |
@@ -235,7 +236,7 @@ POST /v3/conversations/{conversationId}/activities
 
 | Eigenschaftenname | Zweck |
 |---|---|
-| **type** | Aktivitätstyp. |
+| **Typ** | Aktivitätstyp. |
 | **text** | Der Textinhalt der Nachricht. |
 | **summary** | Der Zusammenfassungstext der Nachricht. |
 | **channelData.notification.alertInMeeting** | Boolescher Wert, der angibt, ob dem Benutzer während einer Besprechung eine Benachrichtigung angezeigt werden soll. |
@@ -346,7 +347,10 @@ Verwenden Sie das folgende Beispiel, um die `webApplicationInfo` Eigenschaft Ihr
 </details>
 
 > [!NOTE]
-> Der Bot kann Meeting-Start- oder -Endereignisse automatisch von allen Meetings empfangen, die in allen Kanälen erstellt wurden, indem er zum `ChannelMeeting.ReadBasic.Group` Manifest die RSC-Berechtigung hinzufügt.
+>
+> * Der Bot kann Meeting-Start- oder -Endereignisse automatisch von allen Meetings empfangen, die in allen Kanälen erstellt wurden, indem er zum `ChannelMeeting.ReadBasic.Group` Manifest die RSC-Berechtigung hinzufügt.
+>
+> * Für einen Einzelanruf `organizer` ist der Initiator des Chats und für Gruppenanrufe `organizer` der Anrufinitiator.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -367,7 +371,11 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-Nicht verfügbar
+```javascript
+
+Not available
+
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -377,29 +385,108 @@ GET /v1/meetings/{meetingId}
 
 Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
+* **Geplante Besprechungen:**
+
+    ```json
+
+    {
+       "details":  { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "Scheduled" 
+         },
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+             }, 
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    } 
+    ```
+
+* **Einzelanrufe:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "OneToOneCall"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer  ": {
+             "id": "<organizer user ID>",
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
     }
-} 
-```
+    
+    ```
+
+* **Gruppenanrufe:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "GroupCall",
+             "joinUrl": "https://teams.microsoft.com/l/xx"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer": {
+             "id": "<organizer user ID>",
+             "objectId": "<organizer object ID>",
+             "aadObjectId": "<AAD object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    }
+    
+    ```
+
+* **Sofortbesprechungen:**
+
+    ```json
+    { 
+       "details": { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "MeetNow" 
+         }, 
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+         },
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>", 
+             "tenantId": "<Tenant ID>" ,
+             "objectId": "<organizer object ID>"
+         }
+    }
+    
+    ```
 
 ---
 
@@ -411,13 +498,13 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
 | **details.title** | Der Titel der Besprechung. |
-| **details.type** | Der Typ der Besprechung – z. B. Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | Der Besprechungstyp – z. B. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
 | **conversation.conversationType** | Der Unterhaltungstyp. |
 | **conversation.id** | Die Besprechungschat-ID. |
 | **organizer.id** | Die Benutzer-ID des Organisators. |
-| **organizer.aadObjectId** | Die Azure Active Directory Objekt-ID des Organisators. |
-| **organizer.tenantId** | Die Azure Active Directory Mandanten-ID des Organisators. |
+| **organizer.aadObjectId** | Die Azure Active Directory-Objekt-ID des Organisators. |
+| **organizer.tenantId** | Die Azure Active Directory-Mandanten-ID des Organisators. |
 
 Im Falle eines Besprechungsserientyps:
 
@@ -427,11 +514,11 @@ Im Falle eines Besprechungsserientyps:
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
-Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Teams Kommunikationszugriff für Cart-Untertitel (Real-Time Translation) verfügbar, von Menschen eingegebene Untertitel. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Teams Besprechung angezeigt, wenn sie Untertitel aktiviert haben.
+Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Den Zugriff auf Echtzeitübersetzungen (REAL-Time Translation, CART) verfügbar, von Menschen eingegebene Untertitel. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Teams-Besprechung angezeigt, wenn sie Untertitel aktiviert haben.
 
 ### <a name="cart-url"></a>CART-URL
 
-Sie können die CART-URL für den POST-Endpunkt von der Seite "**Besprechungsoptionen"** in einer Teams Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
+Sie können die CART-URL für den POST-Endpunkt von der Seite **"Besprechungsoptionen"** in einer Teams-Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
 
 #### <a name="query-parameter"></a>Abfrageparameter
 
@@ -540,7 +627,7 @@ Die folgende Tabelle enthält die Antwortcodes:
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Rufen Sie die App-Content-Stage-Sharing-Status-API ab
 
-Mithilfe `getAppContentStageSharingState` der API können Sie Informationen zur Freigabe von Apps auf der Besprechungsphase sowohl für mobilgeräte als auch für Desktops abrufen.
+Die `getAppContentStageSharingState` API ermöglicht es Ihnen, Informationen über das Teilen von Apps auf der Meeting-Bühne abzurufen.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -618,6 +705,9 @@ Die folgende Tabelle enthält die Antwortcodes:
 | **1000** | Die App verfügt nicht über Berechtigungen, um die Freigabe für die Phase zuzulassen.|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>Holen Sie sich die API für Team-Meeting-Events in Echtzeit
+
+> [!NOTE]
+> Teams-Besprechungsereignisse in Echtzeit werden nur für geplante Besprechungen unterstützt.
 
 Der Benutzer kann Meeting-Ereignisse in Echtzeit empfangen. Sobald eine App mit einem Meeting verknüpft ist, werden die tatsächliche Start- und Endzeit des Meetings mit dem Bot geteilt. Die tatsächliche Start- und Endzeit eines Meetings unterscheidet sich von der geplanten Start- und Endzeit. Die Besprechungsdetails-API stellt die geplante Start- und Endzeit bereit. Das Ereignis gibt die tatsächliche Start- und Endzeit an.
 
@@ -811,7 +901,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | Eigenschaftenname | Zweck |
 |---|---|
 | **name** | Der Name des Benutzers.|
-| **type** | Aktivitätstyp. |
+| **Typ** | Aktivitätstyp. |
 | **Timestamp** | Lokales Datum und Uhrzeit der Nachricht, ausgedrückt im ISO-8601-Format. |
 | **id** | ID für die Aktivität. |
 | **channelId** | Kanal, dem diese Aktivität zugeordnet ist. |
@@ -819,7 +909,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **from.id** | ID des Benutzers, der die Anforderung gesendet hat. |
 | **from.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
-| **conversation.tenantId** | Azure Active Directory Mandanten-ID der Unterhaltung oder Besprechung. |
+| **conversation.tenantId** | Azure Active Directory-Mandanten-ID der Unterhaltung oder Besprechung. |
 | **conversation.id** | Die Besprechungschat-ID. |
 | **recipient.id** | DIE ID des Benutzers, der die Anforderung empfängt. |
 | **recipient.name** | Der Name des Benutzers, der die Anforderung empfängt. |
@@ -841,10 +931,10 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Teams Beispiel für die Besprechungserweiterung zum Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bubble-Bot für Besprechungsinhalte | Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| BesprechungsmeetingSidePanel | Teams Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Registerkarte „Details“ im Meeting | Teams Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Erweiterbarkeit von Besprechungen | Teams-Besprechungserweiterungsbeispiel für das Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bubble-Bot für Besprechungsinhalte | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit Einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| BesprechungsmeetingSidePanel | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Registerkarte „Details“ im Meeting | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Beispiel für Meeting-Ereignisse|Beispiel-App zum Anzeigen von Teams-Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Beispiel für die Rekrutierung von Meetings|Beispiel-App, um die Meeting-Erfahrung für das Rekrutierungsszenario zu zeigen.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App-Installation mit QR-Code|Beispiel-App, die den QR-Code generiert und die App mithilfe des QR-Codes installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|

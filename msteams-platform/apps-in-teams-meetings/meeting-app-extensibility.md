@@ -4,12 +4,12 @@ author: surbhigupta
 description: Erfahren Sie mehr über den Lebenszyklus von Teams-Besprechungen und die Besprechungserfahrung von Benutzern auf Desktops und mobilen Geräten, Benutzertypen, integrieren Bots und Nachrichtenerweiterungen in den Besprechungslebenszyklus.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a75340e375bdc4eabd386f09b19110312de16538
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4c53567530f0d9d418a6b273200f921517341e7f
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484576"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561623"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -26,7 +26,10 @@ In diesem Artikel werden die Informationen zum Lebenszyklus von Besprechungen un
 Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: vor der Besprechung, in der Besprechung und nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren.
 
 > [!NOTE]
-> Besprechungserweiterungen wie Bots, Karten, Nachrichtenerweiterungen und Nachrichtenaktionen werden im Webclient unterstützt. Gehostete Benutzeroberflächen wie Registerkarten, Inhaltsblasen und Freigabe für Die Stufe werden derzeit jedoch nicht vollständig unterstützt.
+>
+> * Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> * Besprechungserweiterungen wie Bots, Karten, Nachrichtenerweiterungen und Nachrichtenaktionen werden im Webclient unterstützt. Gehostete Benutzeroberflächen wie Registerkarten, Inhaltsblasen und Freigabe für Die Stufe werden derzeit jedoch nicht vollständig unterstützt.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Integrieren von Registerkarten in den Besprechungslebenszyklus
 
@@ -37,7 +40,6 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 
 > [!NOTE]
 >
-> * Die privaten geplanten Besprechungen unterstützen nur Apps.
 > * Die Option "App hinzufügen" für die Registerkarten-App der Teams-Besprechungserweiterung wird im Teams-Webclient nicht unterstützt.
 
 #### <a name="pre-meeting-app-experience"></a>Pre-Meeting-App-Umgebung
@@ -75,6 +77,8 @@ Nachdem Sie die Registerkarten zu einer vorhandenen Besprechung auf mobilgeräte
 Über die In-Meeting-App-Umgebung können Sie während der Besprechung mithilfe von Apps und dem Dialogfeld die Teilnehmer einbeziehen. Die Besprechungs-Apps werden auf der Symbolleiste des Besprechungsfensters als Registerkarten in der Besprechung gehostet. Im Dialogfeld in der Besprechung können Aktionen erfordernde Inhalte für Besprechungsteilnehmer angezeigt werden. Weitere Informationen finden Sie unter [Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen](enable-and-configure-your-app-for-teams-meetings.md).
 
 Für mobile Apps sind Besprechungs-Apps über **Apps** > Auslassungszeichen &#x25CF;&#x25CF;&#x25CF; in der Besprechung verfügbar. Wählen Sie **"Apps** " aus, um alle in der Besprechung verfügbaren Apps anzuzeigen.
+
+Für Desktops können Sie Apps während einer Besprechung mithilfe **der Option "App** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: hinzufügen" aus dem Besprechungsfenster hinzufügen.
 
 So verwenden Sie Registerkarten während einer Besprechung:
 
@@ -183,7 +187,7 @@ Nachdem Sie Ihre App basierend auf Teilnehmerrollen in einer Besprechung erstell
 
 ## <a name="user-types-in-a-meeting"></a>Benutzertypen in einer Besprechung
 
-Benutzertypen, z. B. Organisator, Referent oder Teilnehmer an einer Besprechung, können eine der [Teilnehmerrollen in einer Besprechung](#participant-roles-in-a-meeting) ausführen.
+Benutzertypen wie Mandanten-, Gast-, Verbund- oder externe Benutzer in einer Besprechung können eine der [Teilnehmerrollen in einer Besprechung](#participant-roles-in-a-meeting) ausführen.
 
 > [!NOTE]
 > Der Benutzertyp ist nicht in der **getParticipantRole-API** enthalten.
@@ -205,15 +209,20 @@ In der folgenden Liste werden die verschiedenen Benutzertypen zusammen mit ihrer
     > [!NOTE]
     > Anonyme Benutzer erben die globale Standard-App-Berechtigungsrichtlinie auf Benutzerebene. Weitere Informationen finden Sie [unter "Apps verwalten](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)".
 
-Ein Gast oder anonymer Benutzer kann keine Apps hinzufügen, entfernen oder deinstallieren.
-
-Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf die jeder Benutzer zugreifen kann:
+Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf die jeder Benutzer in geplanten Besprechungen zugreifen kann:
 
 | Benutzertyp | Registerkarten | Bots | Nachrichtenerweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Nicht verfügbar |
 | Gast, Teil des Mandanten Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Verfügbar | Kann nur auf dem Teams-Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
-| Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Kann die App nur auf dem Teams-Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren. |
+| Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist in geplanten Besprechungen zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Kann die App nur auf dem Teams-Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren. |
+
+> [!NOTE]
+>
+> Das Verhalten der verschiedenen Benutzertypen für Apps in Anrufen ist mit dem Verhalten in geplanten Besprechungen identisch, mit Ausnahme der folgenden:
+>
+> * Verbundbenutzer können in Anrufen nicht mit Registerkarten-Apps interagieren.
+> * Wenn Verbundbenutzer einem vorhandenen Anruf mit Mandanten- oder Gastbenutzern hinzugefügt werden, verlieren alle Teilnehmer die Möglichkeit, Apps hinzuzufügen, zu aktualisieren oder zu entfernen. Allerdings können nur die vorhandenen Mandanten- oder Gastbenutzer weiterhin mit den Apps interagieren, die hinzugefügt wurden, bevor Verbundbenutzer zum Anruf eingeladen werden.
 
 ## <a name="next-step"></a>Nächster Schritt
 
