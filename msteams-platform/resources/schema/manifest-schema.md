@@ -3,14 +3,14 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189351"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503732"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>Referenz: Manifestschema für Microsoft Teams
+# <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
 Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Ihr App-Manifest muss dem Schema entsprechen, das auf [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json)gehostet wird. Frühere Versionen 1.0, 1.1,...,1.12 und die aktuelle Version 1.13 (siehe Hinweis unten) werden jeweils unterstützt (mit "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in den einzelnen Versionen vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
@@ -459,7 +459,7 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
@@ -497,11 +497,11 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔️|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
 |`scopes`|Array von Enumerationen|3|✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
 |`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
-|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
-|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
+|`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
