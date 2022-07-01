@@ -297,7 +297,7 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Linkausweitung hinzufügen
       href: messaging-extensions/how-to/link-unfurling.md
-- name: Erstellen von Apps für Microsoft Teams-Besprechungen
+- name: Erstellen von Apps für Teams-Besprechungen und -Anrufe
   items:
     - name: Übersicht
       href: apps-in-teams-meetings/teams-apps-in-meetings.md

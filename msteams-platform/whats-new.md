@@ -3,18 +3,18 @@ title: Neuerungen für Entwickler in Teams
 description: In diesem Lernpfad erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen für diese Features in Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130466"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561616"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
 Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (GA) und in der Entwicklervorschau verfügbar sind. Sie können jetzt die neuesten Updates für die Teams-Plattform erhalten, indem Sie den RSS-Feed [![Download-Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds](#get-latest-updates).
 
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
 
 | Datum | Feature | Hier finden Sie es |
 | --- | --- | --- |
@@ -266,6 +266,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+| 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Aktualisieren Sie Konversations- und Installationsereignisse in Ihrem Teams-Bot |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
