@@ -3,12 +3,12 @@ title: Kontext für Ihre Registerkarte erhalten
 description: In diesem Modul erfahren Sie, wie Sie Benutzerkontext zu Ihren Registerkarten, Benutzerkontext und Access-Kontextinformationen abrufen.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142311"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658920"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -27,7 +27,7 @@ Kontext über den Benutzer, das Team oder das Unternehmen kann besonders hilfrei
 * Sie erstellen oder ordnen Ressourcen in Ihrer App dem angegebenen Benutzer oder Team zu.
 * Sie initiieren einen Authentifizierungsfluss von Microsoft Azure Active Directory (Azure AD) oder einem anderen Identitätsanbieter, und Sie müssen den Benutzer nicht erneut zum Eingeben seines Benutzernamens auffordern.
 
-Weitere Informationen finden Sie [unter Authentifizieren eines Benutzers in Ihrem Microsoft Teams](~/concepts/authentication/authentication.md).
+Weitere Informationen finden Sie [unter Authentifizieren eines Benutzers in Ihren Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Obwohl diese Benutzerinformationen zu einer reibungslosen Benutzererfahrung beitragen können, dürfen Sie sie nicht als Identitätsnachweis verwenden.  Beispielsweise kann ein Angreifer Ihre Seite in einen Browser laden und schädliche Informationen oder Anforderungen rendern.
@@ -37,7 +37,7 @@ Weitere Informationen finden Sie [unter Authentifizieren eines Benutzers in Ihre
 Sie können auf zwei Arten auf Kontextinformationen zugreifen:
 
 * Fügen Sie URL-Platzhalterwerte ein.
-* Verwenden Sie das [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client).
+* Verwenden Sie das [JavaScript-Client-SDK für Microsoft Teams](/javascript/api/overview/msteams-client).
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Abrufen des Kontexts durch Einfügen von URL-Platzhalterwerten
 
@@ -61,15 +61,15 @@ Beispielsweise legen Sie in Ihrem Registerkartenmanifest das `configURL` Attribu
 * Der Benutzername ist **user@example.com**.
 * Die Mandanten-ID ihres Unternehmens ist **e2653c-usw**.
 * Sie sind Mitglied der Gruppe Office 365 mit der ID **00209384 usw**.
-* Der Benutzer hat sein Teams Design auf **dunkel** festgelegt.
+* Der Benutzer hat sein Teams-Design auf **dunkel** festgelegt.
 
 Wenn sie die Registerkarte konfigurieren, ruft Teams die folgende URL auf:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der Microsoft Teams JavaScript-Bibliothek
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der JavaScript-Bibliothek von Microsoft Teams
 
-git-issue-clarify-the-full-set-of-values-any-context-object-property-can-take You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
 
 Der folgende Code enthält ein Beispiel für eine Kontextvariable:
 
@@ -114,7 +114,7 @@ Der folgende Code enthält ein Beispiel für eine Kontextvariable:
 }
 ```
 
-Sie können die oben aufgeführten Informationen auch mithilfe des [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) abrufen, indem Sie die `app.getContext()` Funktion aufrufen. Weitere Informationen finden Sie in den Eigenschaften der [Kontextschnittstelle](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
+Sie können die oben aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDK für Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie die `app.getContext()` Funktion aufrufen. Weitere Informationen finden Sie in den Eigenschaften der [Kontextschnittstelle](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true).
 
 
 ## <a name="retrieve-context-in-private-channels"></a>Abrufen des Kontexts in privaten Kanälen
@@ -127,8 +127,8 @@ Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem priv
 * `teamId`: Auf die threadId des privaten Kanals festgelegt
 * `teamName`: Auf den Namen des privaten Kanals festgelegt
 * `teamSiteUrl`: Festlegen auf die URL einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal
-* `teamSitePath`: Auf den Pfad einer eindeutigen, eindeutigen SharePoint Website für den privaten Kanal festgelegt
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint Websitedomäne für den privaten Kanal festgelegt
+* `teamSitePath`: Auf den Pfad einer eindeutigen, eindeutigen SharePoint-Website für den privaten Kanal festgelegt
+* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den privaten Kanal festgelegt
 
 Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Private` , um zu bestimmen, ob ihre Seite in einem privaten Kanal geladen ist und entsprechend reagieren kann.
 
@@ -144,9 +144,9 @@ Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem frei
 * `groupId`: Nicht definiert für freigegebene Kanäle.
 * `teamId`: Auf das `threadId` Team festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird er auf das `teamId` Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
 * `teamName`: Auf den Namen des Teams festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird er auf das `teamName` Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
-* `teamSiteUrl`: Legen Sie die URL einer eindeutigen, eindeutigen SharePoint Website für den freigegebenen Kanal fest.
-* `teamSitePath`: Legen Sie den Pfad einer eindeutigen, eindeutigen SharePoint Website für den freigegebenen Kanal fest.
-* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint Websitedomäne für den freigegebenen Kanal festgelegt.
+* `teamSiteUrl`: Legen Sie die URL einer eindeutigen, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
+* `teamSitePath`: Legen Sie den Pfad einer eindeutigen, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
+* `teamSiteDomain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den freigegebenen Kanal festgelegt.
 
 Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene Kanäle zur Verfügung:
 
@@ -156,7 +156,7 @@ Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene 
 Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
 
 > [!NOTE]
-> Jedes Mal, wenn ein Benutzer den Teams Desktop- oder Webclient neu startet oder neu lädt, wird eine neue SessionID erstellt, die von Teams Sitzung nachverfolgt wird. Wenn ein Benutzer die Teams-Apps beendet und in Teams Plattform neu lädt, wird eine neue App-SessionID erstellt, die von der App-Sitzung nachverfolgt wird.
+> Jedes Mal, wenn ein Benutzer den Teams-Desktop- oder Webclient neu startet oder neu lädt, wird eine neue SessionID erstellt, die von der Teams-Sitzung nachverfolgt wird. Wenn ein Benutzer die Teams-Apps verlässt und in der Teams-Plattform neu lädt, wird eine neue App-SessionID erstellt, die von der App-Sitzung nachverfolgt wird.
 
 ## <a name="handle-theme-change"></a>Behandeln von Designänderungen
 
