@@ -3,12 +3,12 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App mit Symbolen zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d686b30a9a5a00fd73c72dd6212ed95d935ea501
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558562"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659019"
 ---
 # <a name="create-teams-app-package"></a>Teams-App-Paket erstellen
 
@@ -19,7 +19,7 @@ Sie benötigen ein App-Paket, ganz gleich, wie Sie vorhaben, Ihre Microsoft Team
 
 ## <a name="teams-doesnt-host-your-app"></a>Teams hostet Ihre App nicht
 
-Wenn ein Benutzer Ihre App in Teams installiert, wird ein App-Paket installiert, das eine einzige Konfigurationsdatei (auch als App-Manifest bezeichnet) und die Symbole Ihrer App enthält. Die Logik und der Datenspeicher der App werden an anderer Stelle gehostet, z. B. während der Entwicklung auf „localhost“ und unter Azure Web Services. Teams greift über HTTPS auf diese Ressourcen zu.
+Wenn ein Benutzer Ihre App in Teams installiert, wird ein App-Paket installiert, das die einzige Konfigurationsdatei (auch als App-Manifest bezeichnet) und die Symbole Ihrer App enthält. Die Logik und der Datenspeicher der App werden an anderer Stelle gehostet, z. B. während der Entwicklung auf „localhost“ und unter Azure Web Services. Teams greift über HTTPS auf diese Ressourcen zu.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Abbildung des App-Hostings der Teams-App":::
 

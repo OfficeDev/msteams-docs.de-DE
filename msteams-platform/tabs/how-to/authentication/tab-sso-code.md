@@ -2,21 +2,21 @@
 title: Codekonfiguration zum Aktivieren von SSO für Registerkarten
 description: Beschreibt die Codekonfiguration zum Aktivieren von SSO für Registerkarten
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
+ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558730"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658939"
 ---
 # <a name="add-code-to-enable-sso"></a>Hinzufügen von Code zum Aktivieren von SSO
 
 Bevor Sie Code zum Aktivieren von SSO hinzufügen, stellen Sie sicher, dass Sie Ihre App bei Azure AD registriert haben.
 
 > [!div class="nextstepaction"]
-> [Registrieren bei Azure AD](tab-sso-register-aad.md)
+> [Bei Azure AD registrieren](tab-sso-register-aad.md)
 
 Sie müssen den clientseitigen Code Ihrer Registerkarten-App konfigurieren, um ein Zugriffstoken von Azure AD abzurufen. Das Zugriffstoken wird im Namen der Registerkarten-App ausgegeben. Wenn Ihre Registerkarten-App zusätzliche Microsoft Graph-Berechtigungen erfordert, müssen Sie das Zugriffstoken an die serverseitige Seite übergeben und gegen das Microsoft Graph-Token austauschen.
 
@@ -30,7 +30,7 @@ In diesem Abschnitt werden folgende Themen behandelt:
 
 ## <a name="add-client-side-code"></a>Hinzufügen des clientseitigen Codes
 
-Um App-Zugriff für den aktuellen App-Benutzer zu erhalten, muss Ihr clientseitiger Code Teams aufrufen, um ein Zugriffstoken abzurufen. Sie müssen clientseitigen Code aktualisieren `getAuthToken()` , um den Überprüfungsprozess zu initiieren.
+Um App-Zugriff für den aktuellen App-Benutzer zu erhalten, muss Ihr clientseitiger Code Teams aufrufen, um ein Zugriffstoken abzurufen. Sie müssen den clientseitigen Code zur Verwendung von `getAuthToken()` aktualisieren, um den Überprüfungsprozess zu initiieren.
 
 <br>
 <details>
@@ -38,26 +38,26 @@ Um App-Zugriff für den aktuellen App-Benutzer zu erhalten, muss Ihr clientseiti
 <br>
 `getAuthToken()` ist eine Methode im Microsoft Teams JavaScript SDK. Es fordert ein Azure AD-Zugriffstoken an, das im Auftrag der App ausgestellt wird. Das Token wird aus dem Cache abgerufen, wenn es nicht abgelaufen ist. Wenn es abgelaufen ist, wird eine Anforderung an Azure AD gesendet, um ein neues Zugriffstoken abzurufen.
 
- Weitere Informationen finden Sie [unter getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
+ Weitere Informationen finden Sie unter [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
 
-### <a name="when-to-call-getauthtoken"></a>Wann wird getAuthToken aufgerufen?
+### <a name="when-to-call-getauthtoken"></a>Zeitpunkt des Aufrufs von getAuthToken
 
-Verwenden Sie `getAuthToken()` den Zeitpunkt, zu dem Sie zugriffstoken für den aktuellen App-Benutzer benötigen:
+Verwenden Sie `getAuthToken()` zum Zeitpunkt, zu dem Sie das Zugriffstoken für den aktuellen App-Benutzer benötigen:
 
-| Wenn ein Zugriffstoken erforderlich ist... | getAuthToken()... |
+| Wenn ein Zugriffstoken erforderlich ist... | Rufen Sie getAuthToken() auf... |
 | --- | --- |
 | Wenn der App-Benutzer auf die App zugreift | Von innen `microsoftTeams.initialize()`. |
 | So verwenden Sie eine bestimmte Funktionalität der App | Wenn der App-Benutzer eine Aktion ausführt, für die eine Anmeldung erforderlich ist. |
 
 ### <a name="add-code-for-getauthtoken"></a>Hinzufügen von Code für getAuthToken
 
-Fügen Sie der Registerkarten-App JavaScript-Codeausschnitt hinzu, um:
+Fügen Sie der Registerkarten-App ein JavaScript-Codeausschnitt hinzu, um:
 
 - Aufrufen von `getAuthToken()`
-- Analysieren Sie das Zugriffstoken, oder übergeben Sie es an den serverseitigen Code.
+- Analysieren des Zugriffstokens oder Übergeben des Tokens an den serverseitigen Code.
 
-Der folgende Codeausschnitt zeigt ein Beispiel für das Aufrufen `getAuthToken()`von .
+Der folgende Codeausschnitt zeigt ein Beispiel für einen Aufruf von `getAuthToken()`.
 
 ```javascript
 microsoftTeams.initialize();
@@ -68,71 +68,71 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-Sie können Aufrufe aller `getAuthToken()` Funktionen und Handler hinzufügen, die eine Aktion initiieren, in der das Token benötigt wird.
+Sie können Aufrufe von `getAuthToken()` allen Funktionen und Handlern hinzufügen, die eine Aktion initiieren, für die das Token erforderlich ist.
 
 <br>
 <details>
 <summary>Hier ist ein Beispiel für den clientseitigen Code:</summary>
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Konfigurieren von Clientcode" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Konfigurieren eines Clientcodes" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
 
-Wenn Teams das Zugriffstoken empfängt, wird es zwischengespeichert und nach Bedarf wiederverwendet. Dieses Token kann verwendet werden, wenn `getAuthToken()` es aufgerufen wird, bis es abläuft, ohne einen weiteren Aufruf von Azure AD auszuführen.
+Wenn Teams das Zugriffstoken empfängt, wird es zwischengespeichert und nach Bedarf wiederverwendet. Dieses Token kann verwendet werden, wenn `getAuthToken()` aufgerufen wird, bis es abläuft, ohne einen weiteren Aufruf von Azure AD auszuführen.
 
 > [!IMPORTANT]
 > Als bewährte Methode für die Sicherheit des Zugriffstokens:
 >
-> - Rufen `getAuthToken()` Sie immer nur auf, wenn Sie ein Zugriffstoken benötigen.
-> - Teams speichert das Zugriffstoken für Sie zwischen. Speichern Sie sie nicht zwischen, oder speichern Sie sie nicht im Code Ihrer App.
+> - Rufen Sie `getAuthToken()` immer nur dann auf, wenn Sie ein Zugriffstoken benötigen.
+> - Teams zwischenspeichert das Zugriffstoken für Sie. Zwischenspeichern Sie sie nicht, oder speichern Sie sie nicht im Code Ihrer App.
 
 ### <a name="consent-dialog-for-getting-access-token"></a>Zustimmungsdialogfeld zum Abrufen des Zugriffstokens
 
-Wenn Sie aufrufen `getAuthToken()` und die Zustimmung des App-Benutzers für Berechtigungen auf Benutzerebene erforderlich ist, wird dem aktuell angemeldeten App-Benutzer ein Azure AD-Dialogfeld angezeigt.
+Wenn Sie `getAuthToken()` aufrufen und die Zustimmung des App-Benutzers für Berechtigungen auf Benutzerebene erforderlich ist, wird dem aktuell angemeldeten App-Benutzer ein Azure AD-Dialogfeld angezeigt.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Eingabeaufforderung für einmaliges Anmelden auf Registerkarten":::
 
 Das angezeigte Zustimmungsdialogfeld gilt für open-ID-Bereiche, die in Azure AD definiert sind. Der App-Benutzer muss seine Zustimmung nur einmal erteilen. Nach der Zustimmung kann der App-Benutzer auf Ihre Registerkarten-App für die erteilten Berechtigungen und Bereiche zugreifen und diese verwenden.
 
 > [!IMPORTANT]
-> Szenarien, in denen Keine Zustimmungsdialogfelder erforderlich sind:
+> Szenarien, in denen keine Zustimmungsdialogfelder erforderlich sind:
 >
-> - Wenn der Mandantenadministrator die Zustimmung im Namen des Mandanten erteilt hat, müssen App-Benutzer überhaupt nicht zur Zustimmung aufgefordert werden. Dies bedeutet, dass die App-Benutzer die Zustimmungsdialogfelder nicht sehen und nahtlos auf die App zugreifen können.
-> - Wenn Ihre Azure AD-App in demselben Mandanten registriert ist, von dem aus Sie eine Authentifizierung in Teams anfordern, kann der App-Benutzer nicht zur Zustimmung aufgefordert werden und erhält sofort ein Zugriffstoken. App-Benutzer stimmen diesen Berechtigungen nur zu, wenn die Azure AD-App in einem anderen Mandanten registriert ist.
+> - Wenn der Mandantenadministrator die Zustimmung im Namen des Mandanten erteilt hat, müssen App-Benutzer überhaupt nicht zur Zustimmung aufgefordert werden. Dies bedeutet, dass den App-Benutzern die Zustimmungsdialogfelder nicht angezeigt werden, und dass diese nahtlos auf die App zugreifen können.
+> - Wenn Ihre Azure AD-App in dem Mandanten registriert ist, von dem aus Sie eine Authentifizierung in Teams anfordern, kann der App-Benutzer nicht zur Zustimmung aufgefordert werden und erhält sofort ein Zugriffstoken. App-Benutzer stimmen diesen Berechtigungen zu, nur wenn die Azure AD-App in einem anderen Mandanten registriert ist.
 
-Wenn Fehler auftreten, lesen Sie [die Informationen zur Problembehandlung bei der SSO-Authentifizierung in Teams](tab-sso-troubleshooting.md).
+Wenn Fehler auftreten, finden Sie weitere Informationen unter [Problembehandlung bei der SSO-Authentifizierung in Teams](tab-sso-troubleshooting.md).
 
 ### <a name="use-the-access-token-as-an-identity-token"></a>Verwenden des Zugriffstokens als Identitätstoken
 
 Das an die Registerkarten-App zurückgegebene Token ist sowohl ein Zugriffstoken als auch ein ID-Token. Die Registerkarten-App kann das Token als Zugriffstoken verwenden, um authentifizierte HTTPS-Anforderungen an APIs auf der Serverseite zu senden.
 
-Das zurückgegebene `getAuthToken()` Zugriffstoken kann verwendet werden, um die Identität des App-Benutzers anhand der folgenden Ansprüche im Token festzulegen:
+Das von `getAuthToken()` zurückgegebene Zugriffstoken kann verwendet werden, um die Identität des App-Benutzers anhand der folgenden Ansprüche im Token festzulegen:
 
-- `name`: Der Anzeigename des App-Benutzers.
-- `preferred_username`: Die E-Mail-Adresse des App-Benutzers.
-- `oid`: Eine GUID, die die ID des App-Benutzers darstellt.
+- `name`: Der Anzeigename des Benutzers.
+- `preferred_username`: Die E-Mail-Adresse des Benutzers.
+- `oid`: Eine GUID, welche die ID des Benutzers im Microsoft-Identitätssystem darstellt.
 - `tid`: Eine GUID, die den Mandanten darstellt, bei dem sich der App-Benutzer anmeldet.
 
 Teams kann diese Informationen, die der Identität des App-Benutzers zugeordnet sind, zwischenspeichern, z. B. die Einstellungen des Benutzers.
 
 > [!NOTE]
-> Wenn Sie eine eindeutige ID erstellen müssen, um den App-Benutzer in Ihrem System darzustellen, lesen Sie ["Verwenden von Ansprüchen zum zuverlässigen Identifizieren eines Benutzers](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id)".
+> Wenn Sie eine eindeutige ID erstellen müssen, um den App-Benutzer in Ihrem System darzustellen, finden Sie weitere Informationen unter [Verwenden von Ansprüchen, um einen Benutzer zuverlässig zu identifizieren](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
 ## <a name="pass-the-access-token-to-server-side-code"></a>Übergeben des Zugriffstokens an serverseitigen Code
 
 Wenn Sie auf Web-APIs auf Ihrem Server zugreifen müssen, müssen Sie das Zugriffstoken an Ihren serverseitigen Code übergeben. Die Web-APIs müssen das Zugriffstoken decodieren, um Ansprüche für dieses Token anzuzeigen.
 
 > [!NOTE]
-> Wenn Sie keinen Benutzerprinzipalnamen (User Principal Name, UPN) im zurückgegebenen Zugriffstoken erhalten, fügen Sie es als [optionalen Anspruch](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD hinzu.
-> Weitere Informationen finden Sie [unter Zugriffstoken](/azure/active-directory/develop/access-tokens).
+> Wenn Sie den Benutzerprinzipalnamen (User Principal Name, UPN) nicht im zurückgegebenen Zugriffstoken erhalten, fügen Sie ihn als [optionalen Anspruch](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD hinzu.
+> Weitere Informationen finden Sie unter [Zugriffstoken](/azure/active-directory/develop/access-tokens).
 
-Das Zugriffstoken, das beim Erfolgsrückruf von `getAuthToken()` empfangen wurde, bietet Zugriff (für den authentifizierten App-Benutzer) auf Ihre Web-APIs. Der serverseitige Code kann das Token bei Bedarf auch nach [Identitätsinformationen](#use-the-access-token-as-an-identity-token) analysieren.
+Das beim erfolgreichen Rückruf von `getAuthToken()` empfangene Zugriffstoken ermöglicht den Zugriff (für den authentifizierten App-Benutzer) auf Ihre Web-APIs. Der serverseitige Code kann außerdem das Token bei Bedarf nach [Identitätsinformationen](#use-the-access-token-as-an-identity-token) durchsuchen.
 
-Wenn Sie das Zugriffstoken übergeben müssen, um Microsoft Graph-Daten abzurufen, lesen Sie die [Registerkarten-App erweitern mit Microsoft Graph-Berechtigungen](tab-sso-graph-api.md).
+Wenn Sie das Zugriffstoken übergeben müssen, um Microsoft Graph-Daten abzurufen, lesen Sie die [Registerkarten-App mit Microsoft Graph-Berechtigungen erweitern](tab-sso-graph-api.md).
 
-### <a name="code-for-passing-access-token-to-server-side"></a>Code zum Übergeben des Zugriffstokens an die serverseitige
+### <a name="code-for-passing-access-token-to-server-side"></a>Code für die Übergabe des Zugriffstokens an serverseitige Seiten
 
-Der folgende Code zeigt ein Beispiel für die Übergabe des Zugriffstokens an die Server-Seite. Das Token wird in einem `Authorization` Header übergeben, wenn eine Anforderung an eine serverseitige Web-API gesendet wird. In diesem Beispiel werden JSON-Daten gesendet, sodass die `POST` Methode verwendet wird. Dies `GET` reicht aus, um das Zugriffstoken zu senden, wenn Sie nicht auf den Server schreiben.
+Der folgende Code zeigt ein Beispiel für die Übergabe des Zugriffstokens an die Server-Seite. Das Token wird in einem `Authorization` Header übergeben, wenn eine Anforderung an eine serverseitige Web-API gesendet wird. In diesem Beispiel werden JSON-Daten gesendet, sodass die `POST`-Methode verwendet wird. Das `GET` reicht aus, um das Zugriffstoken zu senden, wenn Sie nicht an den Server schreiben.
 
 ```javascript
 $.ajax({
@@ -154,18 +154,18 @@ $.ajax({
 
 ### <a name="validate-the-access-token"></a>Überprüfen des Zugriffstokens
 
-Web-APIs auf Ihrem Server müssen das Zugriffstoken decodieren und überprüfen, ob es vom Client gesendet wird. Der Token ist ein JSON-Webtoken (JWT), was bedeutet, dass die Überprüfung genauso wie die Tokenüberprüfung in den meisten standardmäßigen OAuth-Flüssen erfolgt. Die Web-APIs müssen das Zugriffstoken decodieren. Optional können Sie das Zugriffstoken manuell kopieren und in ein Tool einfügen, z. B. jwt.ms.
+Web-APIs auf Ihrem Server müssen das Zugriffstoken decodieren, und bestätigen, ob es vom Client gesendet wird. Der Token ist ein JSON-Webtoken (JWT), was bedeutet, dass die Überprüfung genauso wie die Tokenüberprüfung in den meisten standardmäßigen OAuth-Flüssen erfolgt. Die Web-APIs müssen das Zugriffstoken decodieren. Optional können Sie Zugriffstoken manuell kopieren und in ein Tool einfügen, z. B. jwt.ms.
 
-Es sind eine Reihe von Bibliotheken verfügbar, die die JWT-Überprüfung verarbeiten können. Die grundlegende Überprüfung umfasst:
+Es gibt eine Reihe von Bibliotheken, welche die JWT-Überprüfung verarbeiten können. Die grundlegende Überprüfung umfasst:
 
 - Überprüfen, ob der Token wohlgeformt ist
 - Überprüfen, ob der Token von der vorgesehenen Autorität ausgestellt wurde
-- Überprüfen, ob das Token auf die Web-API ausgerichtet ist
+- Überprüfen, ob der Token auf die Web-API ausgerichtet ist
 
 Beachten Sie bei der Überprüfung des Tokens die folgenden Richtlinien:
 
 - Gültige SSO-Token werden von Azure AD ausgestellt. Der `iss`-Anspruch im Token sollte mit diesem Wert beginnen.
-- Der Parameter des `aud1` Tokens wird auf die App-ID festgelegt, die während der Azure AD-App-Registrierung generiert wird.
+- Der `aud1`-Parameter des Tokens wird auf die App-ID festgelegt, die während der Azure AD App-Registrierung generiert wird.
 - Der `scp`-Parameter des Tokens wird auf `access_as_user` festgelegt.
 
 #### <a name="example-access-token"></a>Beispielzugriffstoken
@@ -199,7 +199,7 @@ Das folgende Beispiel zeigt eine typische dekodierte Nutzlast eines Zugriffstoke
 | Beispielname | Beschreibung | C#/.NET| Node.js |
 |---------------|---------------|------|--------------|
 | Registerkarten-SSO |Microsoft Teams-Beispiel-App für Azure AD SSO-Registerkarten| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
-| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
+| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Registerkarten, Bots und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -211,6 +211,6 @@ Das folgende Beispiel zeigt eine typische dekodierte Nutzlast eines Zugriffstoke
 - [jwt.ms](https://jwt.ms/)
 - [Optionaler Active Directory-Anspruch](/azure/active-directory/develop/active-directory-optional-claims)
 - [Zugriffstoken](/azure/active-directory/develop/access-tokens)
-- [Übersicht über die Microsoft-Authentifizierungsbibliothek (MSAL)](/azure/active-directory/develop/msal-overview)
+- [Übersicht über die Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Microsoft Identity Platform-ID-Token](/azure/active-directory/develop/id-tokens)
 - [Microsoft Identity Platform – Zugriffstoken](/azure/active-directory/develop/access-tokens#validating-tokens)

@@ -1,14 +1,14 @@
 ---
-title: Neuerungen für Entwickler in Teams
-description: In diesem Lernpfad erfahren Sie mehr über die neuen Entwicklerfeatures und Verbesserungen für diese Features in Microsoft Teams.
+title: Neuerungen und Updates für Entwickler in Teams
+description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für diese Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.openlocfilehash: 52a8c9744fdc00b5e1305575f177883cb6c9ead4
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561616"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658957"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 

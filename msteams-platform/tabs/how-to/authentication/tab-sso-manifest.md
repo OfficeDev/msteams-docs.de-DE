@@ -2,43 +2,43 @@
 title: Aktualisieren des Manifests zum Aktivieren von SSO für Registerkarten
 description: Beschreibt das Aktualisieren des Manifests zum Aktivieren von SSO für Registerkarten
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Graph-API
-ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
+ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558737"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658966"
 ---
-# <a name="update-manifest-for-sso-and-preview-app"></a>Updatemanifest für SSO und Vorschau-App
+# <a name="update-manifest-for-sso-and-preview-app"></a>Aktualisieren von App-Manifest für SSO und App-Vorschau
 
 Stellen Sie vor dem Aktualisieren des Teams-App-Manifests sicher, dass Sie Code zum Aktivieren von SSO in Ihrer Registerkarten-App konfiguriert haben.
 
 > [!div class="nextstepaction"]
 > [Konfigurieren von Code](tab-sso-code.md)
 
-Sie haben Ihre Registerkarten-App in Azure AD registriert und eine App-ID abgerufen. Sie haben ihren Code auch so konfiguriert, dass er das Zugriffstoken aufruft `getAuthToken()` und verarbeitet. Jetzt müssen Sie das Teams-App-Manifest aktualisieren, um SSO für Ihre Registerkarten-App zu aktivieren. Das Teams-App-Manifest beschreibt, wie eine App in Teams integriert wird.
+Sie haben Ihre Registerkarten-App in Azure AD registriert und eine App-ID abgerufen. Sie haben Ihren Code auch so konfiguriert, dass er `getAuthToken()` aufruft und das Zugriffstoken verarbeitet. Jetzt müssen Sie das Teams-App-Manifest aktualisieren, um SSO für Ihre Registerkarten-App zu aktivieren. Das Teams App-Manifest beschreibt, wie die App in das Microsoft Teams integriert wird.
 
 ## <a name="webapplicationinfo-property"></a>webApplicationInfo-Eigenschaft
 
-Konfigurieren Sie die `webApplicationInfo` Eigenschaft in der Manifestdatei der Teams-App. Diese Eigenschaft ermöglicht SSO für Ihre App, damit App-Benutzer nahtlos auf Ihre Registerkarten-App zugreifen können.
+Konfigurieren Sie die Eigenschaft `webApplicationInfo` in der Manifestdatei der Teams-App. Diese Eigenschaft aktiviert SSO für Ihre App, damit App-Benutzer nahtlos auf Ihre Registerkarten-App zugreifen können.
 
 &nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Konfiguration des Teams-App-Manifests":::
 
-`webApplicationInfo` verfügt über zwei Elemente und `id` `resource`.
+`webApplicationInfo` verfügt über zwei Elemente: `id` und `resource`.
 
 | Element | Beschreibung |
 | --- | --- |
 | id | Geben Sie die App-ID (GUID) ein, die Sie in Azure AD erstellt haben. |
-| resource | Geben Sie den Unterdomänen-URI Ihrer App und den Anwendungs-ID-URI ein, den Sie beim Erstellen des Bereichs in Azure AD erstellt haben. Sie können es aus dem **Abschnitt "Azure AD** > **Expose an API** " kopieren. |
+| resource | Geben Sie den Unterdomänen-URI Ihrer App und den Anwendungs-ID-URI ein, den Sie beim Erstellen des Bereichs in Azure AD erstellt haben. Sie können es aus dem Abschnitt **Azure AD** > **Eine API verfügbar machen** kopieren. |
 
 > [!NOTE]
-> Verwenden Sie die Manifestversion 1.5 oder höher, um die `webApplicationInfo` Eigenschaft zu implementieren.
+> Sie müssen die Manifestversion 1.5 oder höher verwenden, um die Eigenschaft `webApplicationInfo` zu implementieren.
 
-Der Anwendungs-ID-URI, den Sie in Azure AD registriert haben, wird mit dem Umfang der API konfiguriert, die Sie verfügbar gemacht haben. Konfigurieren Sie den Unterdomänen-URI `resource` Ihrer App, um sicherzustellen, dass die Authentifizierungsanforderung, die verwendet `getAuthToken()` wird, von der Domäne stammt, die im Teams-App-Manifest angegeben ist.
+Der Anwendungs-ID-URI, den Sie in Azure AD registriert haben, wird mit dem Bereich der API konfiguriert, den Sie verfügbar gemacht haben. Konfigurieren Sie den URI der tertiären Domäne `resource` Ihrer App, um sicherzustellen, dass die Authentifizierungsanforderung mit `getAuthToken()` von der Domäne stammt, die im Teams-App-Manifest angegeben ist.
 
-Weitere Informationen finden Sie [unter webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
+Weitere Informationen finden Sie unter [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="to-configure-teams-app-manifest"></a>So konfigurieren Sie das Microsoft Teams-App-Manifest
 
@@ -48,10 +48,10 @@ Weitere Informationen finden Sie [unter webApplicationInfo](../../../resources/s
   > [!NOTE]
   >
   > - Der Manifestordner sollte sich im Stammverzeichnis des Projekts befinden. Weitere Informationen finden Sie unter [Erstellen eines Microsoft Teams-App-Pakets](../../../concepts/build-and-test/apps-package.md).
-  > - Weitere Informationen zum Erstellen einer manifest.json finden Sie unter [Referenz: Manifestschema für Microsoft Teams](../../../resources/schema/manifest-schema.md).
+  > - Weitere Informationen zum Erstellen einer manifest.json-Datei finden Sie unter [Referenz: Manifestschema für Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Öffnen der Datei "manifest.json"
-1. Fügen Sie den folgenden Codeausschnitt an die Manifestdatei an, um die neue Eigenschaft hinzuzufügen:
+1. Fügen Sie den folgenden Codeausschnitt in der Manifestdatei an, um die neue Eigenschaft hinzuzufügen:
 
     ```json
     "webApplicationInfo": {
@@ -60,12 +60,12 @@ Weitere Informationen finden Sie [unter webApplicationInfo](../../../resources/s
     }
     ```
 
-    Wo
+    Dabei gilt Folgendes:
     - {Azure AD AppId} ist die App-ID, die Sie erstellt haben, als Sie Ihre App in Azure AD registriert haben. Es ist die GUID.
     - {{Subdomain}.app ID URI} ist der Anwendungs-ID-URI, den Sie beim Erstellen des Bereichs in Azure AD registriert haben.
 
-4. Aktualisieren Sie die App-ID aus Azure AD in der **ID-Eigenschaft** .
-5. Aktualisieren Sie die Unterdomänen-URL in den folgenden Eigenschaften:
+4. Aktualisieren Sie in der Eigenschaft **id** die App-ID aus Azure AD.
+5. Aktualisieren Sie die URL der tertiären Domäne in den folgenden Eigenschaften:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
@@ -132,7 +132,7 @@ Weitere Informationen finden Sie [unter webApplicationInfo](../../../resources/s
 </details>
 
 > [!NOTE]
-> Während des Debuggens können Sie ngrok verwenden, um Ihre App in Azure AD zu testen. In diesem Fall müssen Sie die Unterdomäne in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` durch die ngrok-URL ersetzen. Sie müssen die URL aktualisieren, wenn sich Ihre ngrok-Unterdomäne ändert, z. B. api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> Während des Debuggens können Sie "ngrok" verwenden, um Ihre App in Azure AD zu testen. In diesem Fall müssen Sie die tertiäre Domäne in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` durch die ngrok-URL ersetzen. Sie müssen die URL aktualisieren, wenn sich Ihre tertiäre Domäne "ngrok" ändert, z. B. api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## <a name="sideload-and-preview-in-teams"></a>Querladen und Vorschau in Teams
 
@@ -142,29 +142,29 @@ Sie haben die Registerkarten-App so konfiguriert, dass SSO in Azure AD, im App-C
 
 So zeigen Sie eine Vorschau Ihrer Registerkarten-App in Teams an:
 
-1. Erstellen Sie ein App-Paket.
+1. App-Paket erstellen.
 
-   Das App-Paket ist eine ZIP-Datei, die die App-Manifestdatei und App-Symbole enthält.
+   Ein App-Paket ist eine ZIP-Datei, die das App-Manifest und die App-Symbole enthält.
 
 1. Öffnen Sie Teams.
 
-1. Wählen Sie **"Apps** > **verwalten" aus, um** > **eine App hochzuladen**.
+1. Wählen Sie **Apps** > **Apps verwalten** > **Apps verwalten** aus.
 
     Die Optionen zum Hochladen einer App werden angezeigt.
 
-1. Wählen Sie **"Benutzerdefinierte App hochladen** " aus, um die Registerkarten-App in Teams querzuladen.
+1. Wählen Sie **Benutzerdefinierte App hochladen** aus, um die Registerkarten-App in Teams querzuladen.
 
-1. Wählen Sie Ihre ZIP-Datei des App-Pakets und dann **"Hinzufügen"** aus.
+1. Wählen Sie die ZIP-Datei Ihres App-Pakets aus, und wählen Sie dann **Hinzufügen** aus.
 
     Die Registerkarten-App wird quergeladen, und das Dialogfeld wird angezeigt, um Sie über die zusätzlichen Berechtigungen zu informieren, die möglicherweise erforderlich sind.
 
 1. Wählen Sie **Weiter**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Dialogfeld &quot;Teams&quot;, in dem über zusätzliche Berechtigungen informiert wird":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams-Dialogfeld, in dem über zusätzliche Berechtigungen informiert wird":::
 
     Das Azure AD-Zustimmungsdialogfeld wird angezeigt.
 
-1. Wählen Sie **"Annehmen** " aus, um die Zustimmung für Open-ID-Bereiche zu erteilen.
+1. Wählen Sie **Annehmen** aus, um die Zustimmung für Open-ID-Bereiche zu erteilen.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD-Zustimmungsdialogfeld":::
 

@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558121"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659032"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
-Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass Ihre App den Einreichungsprozess im Microsoft Teams Store besteht. Die Teams-spezifischen Richtlinien ergänzen die Zertifizierungsrichtlinien für den [kommerziellen Microsoft-Marketplace](/legal/marketplace/certification-policies) und werden regelmäßig aktualisiert, um neue Funktionen, Benutzerfeedback und Änderungen der Geschäftsregeln zu berücksichtigen.
+Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass Ihre App den Einreichungsprozess im Microsoft Teams Store besteht. Die Teams-spezifischen Richtlinien ergänzen die Zertifizierungsrichtlinien für den [kommerziellen Microsoft-Marketplace](/legal/marketplace/certification-policies#1140-teams) und werden regelmäßig aktualisiert, um neue Funktionen, Benutzerfeedback und Änderungen der Geschäftsregeln zu berücksichtigen.
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ Wenn Ihre App Benutzer mit einem externen Dienst authentifiziert, befolgen Sie d
   * Apps, die eine einmalige Einrichtung durch den Tenant-Administrator erfordern, müssen darauf hinweisen, dass der Tenant-Administrator die App konfigurieren muss (bevor ein anderer Tenant-Benutzer die App installieren und nutzen kann).  
   Die Abhängigkeit muss im App-Manifest, in der AppSource-Langbeschreibung, an allen Berührungspunkten beim ersten Start (Bot-Begrüßungsnachricht, Registerkarten-Einrichtung oder Konfigurationsseite), im Hilfetext, der als Teil der Bot-Antwort für notwendig erachtet wird, in der Compose-Erweiterung oder im statischen Registerkarteninhalt angegeben werden.
   
-* **Erfahrungen beim Teilen von Inhalten**: Apps, die eine Authentifizierung bei einem externen Dienst erfordern, um Inhalte in Teams-Kanälen freizugeben, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie Inhalte getrennt oder freigegeben werden, wenn diese Funktion vom externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Fähigkeit zur Aufhebung der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
+* **Erfahrungen beim Teilen von Inhalten**: Apps, die für die Freigabe von Inhalten in Teams-Kanälen eine Authentifizierung bei einem externen Dienst erfordern, müssen in der Hilfedokumentation (oder ähnlichen Ressourcen) klar angeben, wie die Verbindung zu Inhalten getrennt oder die Freigabe aufgehoben werden kann, wenn diese Funktion für den externen Dienst unterstützt wird. Dies bedeutet nicht, dass die Möglichkeit zum Aufheben der Freigabe von Inhalten in Ihrer Teams-App vorhanden sein muss.
 
 </details>
 

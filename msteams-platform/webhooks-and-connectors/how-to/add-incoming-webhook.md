@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehend
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 5c826e3f8b041f1ef136fc8e7941c74ac35e7773
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503494"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659025"
 ---
 # <a name="create-incoming-webhooks"></a>Erstellen eingehender Webhooks
 
@@ -106,3 +106,4 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 * [Nachrichten erstellen und senden](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Von Web-Apps für Teams freigeben](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrieren von Web-Apps](~/samples/integrate-web-apps-overview.md)
+* [Sicherer Zugriff und Daten in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app)
