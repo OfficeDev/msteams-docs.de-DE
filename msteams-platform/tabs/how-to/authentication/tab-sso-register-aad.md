@@ -1,130 +1,130 @@
 ---
-title: Registrieren Ihrer Registerkarten-App bei Azure AD
-description: Beschreibt das Registrieren Ihrer Registerkarten-App bei Azure AD
+title: Registrieren Ihrer Registerkartenapp bei Azure AD
+description: Beschreibt das Registrieren Ihrer Registerkartenapp bei Azure AD
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken-SSO-Mandantenbereich
-ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams Authentifizierung Registerkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken SSO Mandantenbereich
+ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558597"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658999"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 
-Azure AD bietet Zugriff auf Ihre Registerkarten-App basierend auf der Teams-Identität des App-Benutzers. Sie müssen Ihre Registerkarten-App bei Azure AD registrieren, damit der App-Benutzer, der sich bei Teams angemeldet hat, Zugriff auf Ihre Registerkarten-App erhalten kann.
+Azure AD ermöglicht den Zugriff auf Ihre Registerkartenapp basierend auf der Teams-Identität des App-Benutzers. Sie müssen Ihre Registerkartenapp bei Azure AD registrieren, damit der App-Benutzer, der sich bei Teams angemeldet hat, Zugriff auf Ihre Registerkartenapp erhalten kann.
 
-## <a name="enabling-sso-on-azure-ad"></a>Aktivieren von SSO in Azure AD
+## <a name="enabling-sso-on-azure-ad"></a>Aktivieren von SSO auf Azure AD
 
-Um Ihre Registerkarten-App in Azure AD zu registrieren und für SSO zu aktivieren, müssen Sie App-Konfigurationen erstellen, z. B. App-ID generieren, API-Bereich definieren und Client-IDs für vertrauenswürdige Anwendungen vorab autorisieren.
+Um Ihre Registerkartenapp in Azure AD zu registrieren und für SSO zu aktivieren, müssen Sie App-Konfigurationen vornehmen, z. B. die App-ID generieren, den API-Bereich definieren und Client-IDs für vertrauenswürdige Anwendungen vorab autorisieren.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Konfigurieren von Azure AD zum Senden des Zugriffstokens an die Teams-Client-App":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Konfigurieren von Azure AD, um Zugriffstoken an die Teams-Client-App zu senden":::
 
-Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-)API mithilfe von Bereichen (Berechtigungen) verfügbar. Konfigurieren Sie eine Vertrauensstellung zwischen der verfügbar gemachten API in Azure AD und Ihrer App. Auf diese Weise kann der Teams-Client ein Zugriffstoken im Namen Ihrer Anwendung und des angemeldeten Benutzers abrufen. Sie können Client-IDs für die vertrauenswürdigen mobilen, Desktop- und Webanwendungen hinzufügen, die Sie vorab autorisieren möchten.
+Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-) API mithilfe von Bereichen (Berechtigungen) verfügbar. Konfigurieren Sie eine Vertrauensstellung zwischen der verfügbar gemachten API auf Azure AD und Ihrer App. Dadurch kann der Teams-Client ein Zugriffstoken im Namen Ihrer Anwendung und des angemeldeten Benutzers abrufen. Sie können Client-IDs für die vertrauenswürdigen mobilen, Desktop- und Webanwendungen hinzufügen, die Sie vorab autorisieren möchten.
 
-Möglicherweise müssen Sie auch zusätzliche Details konfigurieren, z. B. die Authentifizierung von App-Benutzern auf der Plattform oder auf dem Gerät, auf das Sie Ihre Registerkarten-App ausrichten möchten.
+Möglicherweise müssen Sie auch zusätzliche Details konfigurieren, z. B. die Authentifizierung von App-Benutzern auf der Plattform oder auf dem Gerät, auf das Sie Ihre Registerkartenapp ausrichten möchten.
 
-Graph-API Berechtigungen auf Benutzerebene werden unterstützt, d. h. E-Mail, Profil, offline_access und OpenId. Wenn Sie Zugriff auf zusätzliche Graph-Bereiche benötigen, z `User.Read` . B. oder `Mail.Read`, lesen [Sie "Abrufen eines Zugriffstokens mit Graph-Berechtigungen](tab-sso-graph-api.md)".
+Es werden Graph API-Berechtigungen auf Benutzerebene unterstützt, d. h. E-Mail, Profil, Offline_Access und OpenId. Wenn Sie Zugriff auf zusätzliche Graph-Bereiche benötigen, z. B. `User.Read` oder `Mail.Read`, finden Sie weitere Informationen unter [Abrufen eines Zugriffstokens mit Graph-Berechtigungen](tab-sso-graph-api.md).
 
-Die Azure AD-Konfiguration ermöglicht SSO für Ihre Registerkarten-App in Teams. Sie antwortet mit einem Zugriffstoken zum Überprüfen des App-Benutzers.
+Die Azure AD-Konfiguration aktiviert SSO für Ihre Registerkartenapp in Teams. Sie antwortet mit einem Zugriffstoken zum Überprüfen des App-Benutzers.
 
 > [!NOTE]
 > Das Microsoft Teams-Toolkit registriert die Azure AD-Anwendung in einem SSO-Projekt.
 
-### <a name="before-you-register-with-azure-ad"></a>Vor der Registrierung bei Azure AD
+### <a name="before-you-register-with-azure-ad"></a>Bevor Sie sich mit Azure AD registrieren
 
-Es ist hilfreich, wenn Sie sich vorab über die Konfiguration für die Registrierung Ihrer App in Azure AD informieren. Stellen Sie sicher, dass Sie die folgenden Details vor der Registrierung Ihrer App konfiguriert haben:
+Es ist hilfreich, wenn Sie sich zuerst über die Konfiguration für die Registrierung Ihrer App auf Azure AD informieren. Stellen Sie sicher, dass Sie sich darauf vorbereitet haben, die folgenden Details zu konfigurieren, bevor Sie Ihre App registrieren:
 
-- **Optionen für einen oder mehrere Mandanten**: Wird Ihre Anwendung nur im Microsoft 365-Mandanten verwendet, in dem sie registriert ist, oder wird sie von vielen Microsoft 365-Mandanten verwendet? Anwendungen, die für ein Unternehmen geschrieben wurden, sind in der Regel ein mandant. Anwendungen, die von einem unabhängigen Softwareanbieter geschrieben und von vielen Kunden verwendet werden, müssen mehrere Mandanten sein, damit der Mandant jedes Kunden auf die Anwendung zugreifen kann.
-- **Anwendungs-ID-URI**: Es ist ein global eindeutiger URI, der die Web-API identifiziert, die Sie für den Zugriff Ihrer App über Bereiche verfügbar machen. Er wird auch als Bezeichner-URI bezeichnet. Der Anwendungs-ID-URI enthält die App-ID und die Unterdomäne, in der Ihre App gehostet wird. Der Domänenname Ihrer Anwendung und der Domänenname, den Sie für Ihre Azure AD-Anwendung registrieren, sollten identisch sein. Derzeit werden mehrere Domänen pro App nicht unterstützt.
-- **Bereich**: Es ist die Berechtigung, die einem autorisierten App-Benutzer oder Ihrer App für den Zugriff auf eine ressource gewährt werden kann, die von der API verfügbar gemacht wird.
+- **Einzel- oder Mehrmandanten-Optionen**: Wird Ihre Anwendung nur in dem Microsoft 365-Mandanten verwendet, in dem sie registriert ist, oder werden viele Microsoft 365-Mandanten sie verwenden? Anwendungen, die für ein Unternehmen geschrieben wurden, sind in der Regel für Einzelmandanten ausgerichtet. Anwendungen, die von einem unabhängigen Softwarehersteller geschrieben und von vielen Kunden verwendet werden, müssen mehrmandantenfähig sein, damit der Mandant jedes Kunden auf die Anwendung zugreifen kann.
+- **Anwendungs-ID-URI**: Es handelt sich um einen global eindeutigen URI, der die Web-API identifiziert, die Sie für den Zugriff Ihrer App über Bereiche verfügbar machen. Er wird auch als Bezeichner-URI bezeichnet. Der Anwendungs-ID-URI enthält die App-ID und die tertiäre Domäne, in der Ihre App gehostet wird. Der Domänenname Ihrer Anwendung und der Domänenname, den Sie für Ihre Azure AD-Anwendung registrieren, sollten identisch sein. Derzeit werden mehrere Domänen pro App nicht unterstützt.
+- **Bereich**: Dies ist die Berechtigung, die einem autorisierten App-Benutzer oder Ihrer App für den Zugriff auf eine Ressource erteilt werden kann, die von der API verfügbar gemacht wird.
 
 > [!NOTE]
 >
-> - **BRANCHENANWENDUNGEN**: Ihre Organisation kann Branchenanwendungen über den Microsoft Store verfügbar machen. Diese Apps sind für Ihre Organisation benutzerdefiniert. Sie sind intern oder spezifisch innerhalb Ihrer Organisation oder Ihres Unternehmens.
+> - **LOB-Anwendungen**: Ihre Organisation kann Branchenanwendungen über den Microsoft Store verfügbar machen. Diese Apps sind für Ihre Organisation angepasst. Sie sind intern oder spezifisch innerhalb Ihrer Organisation oder Ihres Geschäfts.
 > - **Kundeneigene Apps**: SSO wird auch für kundeneigene Apps innerhalb der Azure AD B2C-Mandanten unterstützt.
 
 So erstellen und konfigurieren Sie Ihre App in Azure AD zum Aktivieren von SSO:
 
-- [Registrieren und Konfigurieren der Azure AD-App.](#create-an-app-registration-in-azure-ad)
-- [Konfigurieren Des Gültigkeitsbereichs für Zugriffstoken.](#configure-scope-for-access-token)
-- [Konfigurieren der Zugriffstokenversion.](#configure-access-token-version)
+- [Registrieren und Konfigurieren Sie die Azure AD-App.](#create-an-app-registration-in-azure-ad)
+- [Konfigurieren Sie den Bereich für das Zugriffstoken.](#configure-scope-for-access-token)
+- [Konfigurieren Sie die Version des Zugriffstokens.](#configure-access-token-version)
 
 ## <a name="create-an-app-registration-in-azure-ad"></a>Erstellen einer App-Registrierung in Azure AD
 
-Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie den Mandanten und die App-Plattform. Sie generieren eine neue App-ID, die später in Ihrer Teams-App-Manifestdatei aktualisiert wird.
+Registrieren Sie eine neue App in Azure AD, und konfigurieren Sie die Plattform für den Mandanten und die App. Sie werden eine neue App-ID generieren, die später in Ihrer Teams-App-Manifestdatei aktualisiert wird.
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>So registrieren Sie eine neue App in Azure AD
 
-1. Öffnen Sie die [Azure-Portal](https://ms.portal.azure.com/) in Ihrem Webbrowser.
-   Die Seite Microsoft Azure AD Portal wird geöffnet.
+1. Öffnen Sie das [Azure-Portal](https://ms.portal.azure.com/) in Ihrem Webbrowser.
+   Die Seite „Microsoft Azure AD-Portal“ wird geöffnet.
 
-2. Wählen Sie das **Symbol App-Registrierungen** aus.
+2. Wählen Sie das Symbol **App-Registrierungen** aus.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD-Portalseite.":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Seite „Azure AD-Portal“.":::
 
-   Die **seite App-Registrierungen** wird angezeigt.
+   Die Seite **App-Registrierungen** wird angezeigt.
 
-3. Wählen Sie **+Symbol "Neue Registrierung** " aus.
+3. Wählen Sie das Symbol **+ Neue Registrierung** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Neue Registrierungsseite im Azure AD-Portal.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Seite „Neue Registrierung“ im Azure AD Portal.":::
 
     Die Seite **Anwendung registrieren** wird angezeigt.
 
 4. Geben Sie den Namen Ihrer App ein, die dem App-Benutzer angezeigt werden soll. Sie können diesen Namen zu einem späteren Zeitpunkt ändern, wenn Sie möchten.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Seite &quot;App-Registrierung&quot; im Azure AD-Portal.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Seite „App-Registrierung“ im Azure AD Portal.":::
 
-5. Wählen Sie den Typ des Benutzerkontos aus, das auf Ihre App zugreifen kann. Sie können zwischen einzel- oder mehrinstanzenfähigen Optionen oder einem privaten Microsoft-Konto wählen.
+5. Wählen Sie den Typ des Benutzerkontos aus, das auf Ihre App zugreifen kann. Sie können zwischen Einzel- oder Mehrmandanten-Optionen oder einem privatem Microsoft-Konto auswählen.
 
     <details>
-    <summary><b>Optionen für unterstützte Kontotypen</b></summary>
+    <summary><b>Options für unterstützte Kontotypen</b></summary>
 
-    | Option | Wählen Sie diese Option aus, um... |
+    | Option | Wählen Sie dies aus, um... |
     | --- | --- |
-    | Nur Konten in diesem Organisationsverzeichnis (nur Microsoft – einzelner Mandant) | Erstellen Sie eine Anwendung, die nur von Benutzern (oder Gästen) in Ihrem Mandanten verwendet werden kann. <br> Diese App wird häufig als Branchenanwendung bezeichnet und ist eine Einzelmandantenanwendung im Microsoft Identity Platform. |
-    | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – Mehrere Mandanten) | Ermöglichen Sie Benutzern in jedem Azure AD-Mandanten die Verwendung Ihrer Anwendung. Diese Option ist geeignet, wenn Sie z. B. eine SaaS-Anwendung erstellen und sie mehreren Organisationen zur Verfügung stellen möchten. <br> Dieser App-Typ wird im Microsoft Identity Platform als mehrinstanzenfähige Anwendung bezeichnet.|
-    | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – mehrere Mandanten) und persönliche Microsoft-Konten | Richten Sie sich an die breiteste Gruppe von Kunden. <br> Wenn Sie diese Option auswählen, registrieren Sie eine mehrinstanzenfähige Anwendung, die Auch App-Benutzer unterstützen kann, die über persönliche Microsoft-Konten verfügen. |
+    | Nur Konten in diesem Organisationsverzeichnis (Nur Microsoft – Einzelmandant) | Erstellen Sie eine Anwendung, die nur von Benutzern (oder Gästen) in Ihrem Mandanten verwendet werden kann. <br> Diese App wird häufig als Branchenanwendung (Line Of Business, LOB) bezeichnet und ist eine Einzelmandantenanwendung auf der Microsoft Identity-Plattform. |
+    | Konten in einem beliebigen Organisationsverzeichnis (beliebiges Azure AD-Verzeichnis – mehrmandantenfähig) | Ermöglichen Sie Benutzern in einem beliebigen Azure AD-Mandanten die Verwendung Ihrer Anwendung. Diese Option ist geeignet, wenn Sie z. B. eine SaaS-Anwendung erstellen und sie mehreren Organisationen zur Verfügung stellen möchten. <br> Dieser App-Typ wird in der Microsoft Identity-Plattform als mehrmandantenfähige Anwendung bezeichnet.|
+    | Konten in allen Organisationsverzeichnissen (beliebiges Azure AD-Verzeichnis – mehrmandantenfähig) und persönliche Microsoft-Konten | Sprechen Sie die breiteste Kundengruppe an. <br> Wenn Sie diese Option auswählen, registrieren Sie eine mehrmandantenfähige Anwendung, die App-Benutzer unterstützen kann, die auch über persönliche Microsoft-Konten verfügen. |
     | Nur persönliche Microsoft-Konten | Erstellen Sie eine Anwendung nur für Benutzer, die über persönliche Microsoft-Konten verfügen. |
 
     </details>
 
     > [!NOTE]
-    > Sie müssen keinen **Umleitungs-URI** eingeben, um SSO für eine Registerkarten-App zu aktivieren.
+    > Sie müssen keine **Umleitungs-URI** eingeben, um SSO für eine Registerkartenapp zu aktivieren.
 
 7. Wählen Sie **Registrieren** aus.
-    Im Browser wird eine Meldung angezeigt, die besagt, dass die App erstellt wurde.
+    Im Browser wird eine Nachricht angezeigt, die besagt, dass die App erstellt wurde.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Registrieren Sie die App im Azure AD-Portal.":::
 
-    Die Seite mit App-ID und anderen Konfigurationen wird angezeigt.
+    Die Seite mit der App-ID und anderen Konfigurationen wird angezeigt.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="Die App-Registrierung ist erfolgreich.":::
 
-8. Notieren und speichern Sie die App-ID aus der **Anwendungs-ID (Client-ID**). Sie benötigen es später zum Aktualisieren des Teams-App-Manifests.
+8. Notieren und speichern Sie die App-ID von **Anwendungs-ID (Client)**. Sie benötigen diesen später zum Aktualisieren des Teams-App-Manifests.
 
-    Ihre App ist in Azure AD registriert. Sie sollten jetzt über die App-ID für Ihre Registerkarten-App verfügen.
+    Ihre App ist in Azure AD registriert. Sie sollten nun über eine App-ID für Ihre Registerkartenapp verfügen.
 
-## <a name="configure-scope-for-access-token"></a>Konfigurieren des Bereichs für Zugriffstoken
+## <a name="configure-scope-for-access-token"></a>Konfigurieren des Bereichs für das Zugriffstoken
 
-Nachdem Sie eine neue App-Registrierung erstellt haben, konfigurieren Sie Bereichsoptionen (Berechtigung) für das Senden von Zugriffstoken an den Teams-Client und autorisieren vertrauenswürdige Clientanwendungen, um SSO zu aktivieren.
+Nachdem Sie eine neue App-Registrierung erstellt haben, konfigurieren Sie Bereichsoptionen (Berechtigungen) zum Senden von Zugriffstoken an den Teams-Client und zum Autorisieren vertrauenswürdiger Clientanwendungen, um SSO zu aktivieren.
 
 Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu autorisieren, benötigen Sie Folgendes:
 
-- [So machen Sie eine API verfügbar](#to-expose-an-api): Konfigurieren von Bereichsoptionen (Berechtigungsoptionen) für Ihre App. Sie machen eine Web-API verfügbar und konfigurieren den Anwendungs-ID-URI.
-- [So konfigurieren Sie den API-Bereich](#to-configure-api-scope): Definieren des Bereichs für die API und der Benutzer, die für einen Bereich zustimmen können. Sie können nur Administratoren die Zustimmung für Berechtigungen mit höheren Rechten erteilen lassen.
-- [So konfigurieren Sie eine autorisierte Clientanwendung](#to-configure-authorized-client-application): Erstellen Sie autorisierte Client-IDs für Anwendungen, die Sie vorab autorisieren möchten. Dadurch kann der App-Benutzer auf die von Ihnen konfigurierten App-Bereiche (Berechtigungen) zugreifen, ohne dass eine weitere Zustimmung erforderlich ist. Autorisieren Sie nur die Clientanwendungen, denen Sie vertrauen, da Ihre App-Benutzer nicht die Möglichkeit haben, die Zustimmung abzulehnen.
+- [Um eine API verfügbar zu machen](#to-expose-an-api): Konfigurieren Sie Bereichsoptionen (Berechtigungen) für Ihre App. Sie machen eine Web-API verfügbar und konfigurieren den Anwendungs-ID-URI.
+- [Um den API-Bereich zu konfigurieren](#to-configure-api-scope): Definieren Sie den Bereich für die API und die Benutzer, die einem Bereich zustimmen können. Sie können festlegen, dass nur Admins die Zustimmung für höher privilegierte Berechtigungen erteilen.
+- [Um autorisierte Clientanwendung zu konfigurieren](#to-configure-authorized-client-application): Erstellen Sie autorisierte Client-IDs für Anwendungen, die Sie vorab autorisieren möchten. Dadurch kann der App-Benutzer auf die von Ihnen konfigurierten App-Bereiche (Berechtigungen) zugreifen, ohne dass eine weitere Zustimmung erforderlich ist. Autorisieren Sie nur diejenigen Clientanwendungen, denen Sie vertrauen, da Ihre App-Benutzer nicht die Möglichkeit haben, die Zustimmung abzulehnen.
 
-### <a name="to-expose-an-api"></a>So machen Sie eine API verfügbar
+### <a name="to-expose-an-api"></a>Verfügbar machen einer API
 
-1. Wählen Sie im linken Bereich "**API** **verwalten** > " aus.
+1. Wählen Sie im linken Bereich **Verwalten** > **Eine API verfügbar machen** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Verfügbarmachen einer API-Menüoption.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Menüoption „API verfügbar machen“.":::
 
-    Die Seite **"API verfügbar machen** " wird angezeigt.
+    Die Seite **API verfügbar machen** wird angezeigt.
 
-1. Wählen Sie **"Festlegen"** aus, um den Anwendungs-ID-URI in Form von `api://{AppID}`zu generieren.
+1. Wählen Sie **Festlegen** aus, um den Anwendungs-ID-URI in Form von `api://{AppID}` zu generieren.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="App-ID-URI festlegen":::
 
@@ -134,79 +134,79 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Anwendungs-ID-URI":::
 
-    - Der **Anwendungs-ID-URI** ist im Format mit app-ID (GUID) vorgefüllt `api://{AppID}`.
-    - Das URI-Format der Anwendungs-ID sollte folgendes sein: `api://fully-qualified-domain-name.com/{AppID}`.
-    - Fügen Sie die `fully-qualified-domain-name.com` Zwischen- `api://` und `{AppID}` (GUID) ein. Beispiel: api://example.com/{AppID}.
+    - Der **Anwendungs-ID-URI** wird mit der App-ID (GUID) im Format `api://{AppID}` vorausgefüllt.
+    - Das Format des Anwendungs-ID-URI sollte wie folgt lauten: `api://fully-qualified-domain-name.com/{AppID}`.
+    - Fügen Sie die `fully-qualified-domain-name.com` zwischen `api://` und `{AppID}` (d. h. der GUID) ein. Beispiel: api://example.com/{AppID}.
 
-    Wo
-    - `fully-qualified-domain-name.com` ist der lesbare Domänenname, aus dem Ihre Registerkarten-App bedient wird. Der Domänenname Ihrer Anwendung und der Domänenname, den Sie für Ihre Azure AD-Anwendung registrieren, sollten identisch sein.
+    Dabei gilt Folgendes:
+    - `fully-qualified-domain-name.com` ist der lesbare Domänenname, über den Ihre Registerkartenapp bereitgestellt wird. Der Domänenname Ihrer Anwendung und der Domänenname, den Sie für Ihre Azure AD-Anwendung registrieren, sollten identisch sein.
 
-      Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, sobald sich Ihre ngrok-Unterdomäne ändert.
-    - `AppID` ist die App-ID (GUID), die bei der Registrierung der App generiert wurde. Sie können es im Abschnitt **"Übersicht** " anzeigen.
+      Wenn Sie einen Tunneldienst wie ngrok verwenden, müssen Sie diesen Wert aktualisieren, wenn sich Ihre tertiäre ngrok-Domäne ändert.
+    - `AppID` ist die App-ID (GUID), die generiert wurde, als Sie Ihre App registriert haben. Sie können sie im Abschnitt **Übersicht** anzeigen.
 
     > [!IMPORTANT]
     >
-    > - **Anwendungs-ID-URI für Apps mit mehreren Funktionen**: Wenn Sie eine App mit einem Bot, einer Messaging-Erweiterung und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/BotId-{YourClientId}`"BotID" als Bot-App-ID ein.
+    > - **Anwendungs-ID-URI für eine App mit mehreren Funktionen**: Wenn Sie eine App mit einem Bot, einer Messaging-Erweiterung und einer Registerkarte erstellen, geben Sie den Anwendungs-ID-URI als `api://fully-qualified-domain-name.com/BotId-{YourClientId}` ein, wobei die BotID Ihre Bot-App-ID ist.
     >
-    > - **Format für Domänennamen**: Verwenden Sie Kleinbuchstaben für Domänennamen. Verwenden Sie keine Großbuchstaben.
+    > - **Format für Domänennamen**: Verwenden Sie Kleinbuchstaben als Domänennamen. Verwenden Sie keine Großbuchstaben.
     >
-    >   So erstellen Sie beispielsweise einen App-Dienst oder eine Web-App mit dem Ressourcennamen "demoapplication":
+    >   Um beispielsweise einen App-Dienst oder eine Web-App mit dem Ressourcennamen „demoapplication“ zu erstellen:
     >
-    >   | Wenn der verwendete Basisressourcenname | DIE URL wird... | Format wird unterstützt am... |
+    >   | Wenn der verwendete Basisressourcenname wie folgt lautet | Die URL wird folgende sein... | Format wird unterstützt auf... |
     >   | --- | --- | --- |
-    >   | *Demoapplication* | **<https://demoapplication.example.net>** | Alle Plattformen.|
-    >   | *Demoapplication* | **<https://DemoApplication.example.net>** | Nur Desktop, Web und iOS. Es wird in Android nicht unterstützt. |
+    >   | *demoapplication* | **<https://demoapplication.example.net>** | Alle Plattformen.|
+    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Nur Desktop, Web und iOS. Sie wird auf Android nicht unterstützt. |
     >
-    >    Verwenden Sie die *Demoanwendung* der Kleinbuchstabenoption als Basisressourcennamen.
+    >    Verwenden Sie die Kleinbuchstabenoption *demoapplication* als Basisressourcennamen.
 
 1. Wählen Sie **Speichern**.
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Anwendungs-ID-URI aktualisiert wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Anwendungs-ID-URI-Nachricht":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Anwendungs-ID-URI-Meldung":::
 
     Der Anwendungs-ID-URI wird auf der Seite angezeigt.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Anwendungs-ID-URI aktualisiert":::
 
-1. Notieren und speichern Sie den Anwendungs-ID-URI. Sie benötigen es später zum Aktualisieren des Teams-App-Manifests.
+1. Notieren und speichern Sie den Anwendungs-ID-URI. Sie benötigen diesen später zum Aktualisieren des Teams-App-Manifests.
 
 ### <a name="to-configure-api-scope"></a>So konfigurieren Sie den API-Bereich
 
-1. Wählen Sie in den **in diesem API-Abschnitt definierten Bereichen** den **Bereich aus, und fügen Sie einen Bereich hinzu**.
+1. Wählen Sie **+ Bereich hinzufügen** im Abschnitt **Bereiche, die von dieser API definiert werden** aus.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Bereich auswählen":::
 
-    Die Seite **"Bereich hinzufügen** " wird angezeigt.
+    Die Seite **Einen Bereich hinzufügen** wird angezeigt.
 
 1. Geben Sie die Details zum Konfigurieren des Bereichs ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Hinzufügen von Bereichsdetails":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Bereichsdetails hinzufügen":::
 
     1. Geben Sie den Bereichsnamen ein. Dieses Feld ist erforderlich.
-    2. Wählen Sie den Benutzer aus, der die Zustimmung für diesen Bereich erteilen kann. Die Standardoption ist **nur "Administratoren**".
-    3. Geben Sie den **Anzeigenamen der Admin Zustimmung ein**. Dieses Feld ist erforderlich.
-    4. Geben Sie die Beschreibung für die Administratorzustimmung ein. Dieses Feld ist erforderlich.
-    5. Geben Sie den **Anzeigenamen der Benutzerzustimmung ein**.
-    6. Geben Sie die Beschreibung für die Beschreibung der Benutzer-Zustimmung ein.
-    7. Wählen Sie die Option **"Aktiviert** " für den Status aus.
+    2. Wählen Sie den Benutzer aus, der die Zustimmung für diesen Bereich erteilen kann. Die Standardoption ist **Nur Administratoren**.
+    3. Geben Sie den **Anzeigename der Administratoreinwilligung** ein. Dieses Feld ist erforderlich.
+    4. Geben Sie die Beschreibung für die Administratoreinwilligung ein. Dieses Feld ist erforderlich.
+    5. Geben Sie den **Anzeigename der Benutzereinwilligung** ein.
+    6. Geben Sie die Beschreibung für die Benutzereinwilligung ein.
+    7. Wählen Sie die Option **Aktiviert** für den Status aus.
     8. Klicken Sie auf **Bereich hinzufügen**.
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass der Bereich hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Bereich hinzugefügte Nachricht":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Nachricht „Bereich hinzugefügt“":::
 
     Der von Ihnen definierte neue Bereich wird auf der Seite angezeigt.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Bereich hinzugefügt und angezeigt":::
 
-### <a name="to-configure-authorized-client-application"></a>So konfigurieren Sie eine autorisierte Clientanwendung
+### <a name="to-configure-authorized-client-application"></a>Konfigurieren einer autorisierten Clientanwendung
 
-1. Navigieren Sie durch die Seite **"API verfügbar machen** " zum Abschnitt **"Autorisierte Clientanwendung** ", und wählen Sie **"+Clientanwendung hinzufügen"** aus.
+1. Navigieren Sie durch die Seite **API verfügbar machen** zum Abschnitt **Autorisierte Clientanwendung**, und wählen Sie **+ Clientanwendung hinzufügen** aus.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendung":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Autorisierte Clientanwendungen":::
 
-    Die Seite **"Clientanwendung hinzufügen** " wird angezeigt.
+    Die Seite **Ein Clientanwendung hinzufügen** wird angezeigt.
 
 1. Geben Sie die entsprechende Client-ID für den Teams-Client für die Anwendungen ein, die Sie für die Webanwendung Ihrer App autorisieren möchten.
 
@@ -214,64 +214,64 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     > [!NOTE]
     >
-    > - Die Client-IDs für mobile Teams-, Desktop- und Webanwendungen sind die eigentlichen IDs, die Sie hinzufügen sollten.
-    > - Für eine Teams-Registerkarten-App benötigen Sie entweder Web oder SPA, da Sie keine Mobile- oder Desktopclientanwendung in Teams haben können.
+    > - Die Client-IDs für mobile Teams-, Desktop- und Webanwendungen sind die tatsächlichen IDs, die Sie hinzufügen sollten.
+    > - Für eine Teams-Registerkartenapp benötigen Sie entweder Web oder SPA, da Sie keine mobile oder Desktop-Clientanwendung in Teams haben können.
 
     1. Wählen Sie eine der folgenden Client-IDs aus:
 
-       | Client-ID verwenden | Zur Autorisierung... |
+       | Client-ID verwenden | Zum Autorisieren... |
        | --- | --- |
-       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Mobile Teams- oder Desktopanwendung |
+       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | mobile Teams- oder Desktopanwendung |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams-Webanwendung |
 
-    1. Wählen Sie den Anwendungs-ID-URI aus, den Sie für Ihre App in **autorisierten Bereichen** erstellt haben, um den Bereich der von Ihnen verfügbar gemachten Web-API hinzuzufügen.
+    1. Wählen Sie den Anwendungs-ID-URI aus, den Sie für Ihre App in **Autorisierte Bereiche** erstellt haben, um den Bereich der Web-API hinzuzufügen, die Sie verfügbar gemacht haben.
 
     1. Wählen Sie **Anwendung hinzufügen** aus.
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass die autorisierte Client-App hinzugefügt wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht mit hinzugefügter Clientanwendung":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Nachricht „Clientanwendung hinzugefügt“":::
 
     Die Client-ID wird auf der Seite angezeigt.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Hinzugefügte und angezeigte Client-App":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client-App hinzugefügt und angezeigt":::
 
 > [!NOTE]
-> Sie können mehrere Clientanwendungen autorisieren. Wiederholen Sie die Schritte dieses Verfahrens zum Konfigurieren einer anderen autorisierten Clientanwendung.
+> Sie können mehr als eine Clientanwendung autorisieren. Wiederholen Sie die Schritte dieses Verfahrens zum Konfigurieren einer anderen autorisierten Clientanwendung.
 
 ## <a name="configure-access-token-version"></a>Konfigurieren der Zugriffstokenversion
 
 Sie müssen die Zugriffstokenversion definieren, die für Ihre App akzeptabel ist. Diese Konfiguration erfolgt im Azure AD-Anwendungsmanifest.
 
-### <a name="to-define-the-access-token-version"></a>So definieren Sie die Zugriffstokenversion
+### <a name="to-define-the-access-token-version"></a>Definieren der Zugriffstokenversion
 
-1. Wählen Sie im linken Bereich "**Manifest** **verwalten** > " aus.
+1. Wählen Sie im linken Bereich **Verwalten** > **Manifest** aus.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD-Portalmanifest":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD-Portal – Manifest":::
 
     Das Azure AD-Anwendungsmanifest wird angezeigt.
 
-1. Geben Sie **2** als Wert für die `accessTokenAcceptedVersion` Eigenschaft ein.
+1. Geben Sie **2** als Wert für die Eigenschaft `accessTokenAcceptedVersion` ein.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Wert für die Version des akzeptierten Zugriffstokens":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Wert für akzeptierte Zugriffstokenversion":::
 
 1. Wählen Sie **Speichern** aus.
 
     Im Browser wird eine Meldung angezeigt, die besagt, dass das Manifest erfolgreich aktualisiert wurde.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest aktualisierte Nachricht":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Nachricht „Manifest aktualisiert“":::
 
-Herzlichen Glückwunsch! Sie haben die App-Konfiguration in Azure AD abgeschlossen, die erforderlich ist, um SSO für Ihre Registerkarten-App zu aktivieren.
+Herzlichen Glückwunsch! Sie haben die App-Konfiguration in Azure AD abgeschlossen, die erforderlich ist, um SSO für Ihre Registerkartenapp zu aktivieren.
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Konfigurieren von Code zum Aktivieren von SSO](tab-sso-code.md)
+> [Konfigurationscode zum Aktivieren von SSO](tab-sso-code.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Mandant in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
-- [Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich](tab-sso-graph-api.md)
-- [Schnellstart – Registrieren einer Anwendung beim Microsoft Identity Platform](/azure/active-directory/develop/quickstart-register-app)
-- [Schnellstart: Konfigurieren einer Anwendung zum Verfügbarmachen einer Web-API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
+- [Mandanten im Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Erweitern der Registerkartenapp mit Microsoft Graph-Berechtigungen und -Bereich](tab-sso-graph-api.md)
+- [Schnellstart – Registrieren einer Anwendung bei der Microsoft Identity-Plattform](/azure/active-directory/develop/quickstart-register-app)
+- [Schnellstart: Konfigurieren einer Anwendung, um eine Web-API verfügbar zu machen](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0-Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
