@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignisse Bot Kanal Nachricht Reaktion Unterhaltung
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906278"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695327"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -409,7 +409,7 @@ Ein ereignis hinzugefügtes Mitglied wird in den folgenden Szenarien an Ihren Bo
 
 1. Wenn der Bot selbst installiert und zu einer Unterhaltung hinzugefügt wird
 
-   > Im Teamkontext wird die conversation.id der Aktivität auf den `id` Kanal festgelegt, der während der App-Installation vom Benutzer ausgewählt wurde, oder auf den Kanal, von dem aus der Bot installiert wurde (derzeit in [der öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar).
+   > Im Teamkontext wird die conversation.id der Aktivität auf den `id` Kanal festgelegt, der während der App-Installation vom Benutzer ausgewählt wurde, oder auf den Kanal, in dem der Bot installiert wurde.
 
 2. Wenn ein Benutzer zu einer Unterhaltung hinzugefügt wird, in der der Bot installiert ist
 
@@ -1335,7 +1335,7 @@ In diesem Beispiel wird der `conversation.id` Von und `installationUpdate` die `
 ![Erstellen eines ausgewählten Kanals](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> Die ausgewählte Kanal-ID wird nur für `installationUpdate` *Add-Ereignisse* festgelegt, die gesendet werden, wenn eine App in einem Team installiert wird (derzeit in [der öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar).
+> Die ausgewählte Kanal-ID wird nur für `installationUpdate` *Add-Ereignisse* festgelegt, die gesendet werden, wenn eine App in einem Team installiert wird.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 

@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
-ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
+ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66680678"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695292"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -47,6 +47,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 08.07.2022| Updates zum Senden der Kanal-ID an Bots, die vom Benutzer während der App-Installation über Konversations- und Installationsupdateereignisse ausgewählt wurde |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16.06.2022 | Aktualisierte Medienfunktionen zur Unterstützung von Desktop und Mobilgeräten| Integrieren von Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | Optionales Kartenfeedback für Erfolgsmeldungen| Bots erstellen > Bot-Unterhaltungen >[Nachrichten in Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03.06.2022 | Das Modul „Authentifizierung hinzufügen“ zum Aktivieren von SSO für die Registerkarten-App mit neuer Struktur und neuen Prozeduren wurde aktualisiert. | Authentifizierung hinzufügen > Registerkarten > [Aktivieren von Single Sign-On in einer Registerkarten-App](tabs/how-to/authentication/tab-sso-overview.md) |
@@ -268,7 +269,6 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 | -------- | --------- | ------------------ |
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 06/06/2022| Aktualisieren Sie Konversations- und Installationsereignisse in Ihrem Teams-Bot |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 07.02.2022 | Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
