@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 95d30f025856b7466fd66a71b3dcbba4b4738452
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: d37acc71ade61f23bbca32257ef7b30578948bcc
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611506"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737405"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -29,7 +29,7 @@ Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
 > [!WARNING]
-> Wenn Sie App Studio verwendet haben, empfehlen wir Ihnen, das[Developer Portal](https://dev.teams.microsoft.com/)auszuprobieren, um Ihre Teams-Anwendungen zu konfigurieren, zu verteilen und zu verwalten. App Studio wird zum 30. Juni 2022 eingestellt.
+> Wenn Sie App Studio verwendet haben, empfehlen wir Ihnen, das[Developer Portal](https://dev.teams.microsoft.com/)auszuprobieren, um Ihre Teams-Anwendungen zu konfigurieren, zu verteilen und zu verwalten. App Studio wird zum 1. August 2022 eingestellt.
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 

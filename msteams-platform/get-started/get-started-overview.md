@@ -3,12 +3,12 @@ title: Erste Schritte – Übersicht
 description: In diesem Modul erfahren Sie, wie Sie mit der Microsoft Teams-Entwicklerdokumentation beginnen, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: a7acb1b69d33a77c9ea35adfddcd76d4c83d8c62
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558702"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737398"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -41,7 +41,7 @@ Wählen Sie je nach gewünschten Funktionen für Ihre App einen geeigneten Satz 
 Wenn Sie bereits mit dem Yeoman-Workflow vertraut sind, bevorzugen Sie möglicherweise die Verwendung von [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) zum Erstellen Ihrer Apps.
 
 > [!WARNING]
-> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.<br> App Studio wird per 30. Juni 2022 eingestellt.
+> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.<br> App Studio wird zum 1. August 2022 eingestellt.
 
 ## <a name="build-your-first-teams-app"></a>Erstellen Ihrer ersten Teams-App
 
