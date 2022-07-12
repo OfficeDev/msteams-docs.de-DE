@@ -5,14 +5,14 @@ description: In diesem Modul erfahren Sie, wie Sie ein Befehlsmenü für Ihren M
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 65cf1506e6851dd6662ea4637cfb53179532798a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503508"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737419"
 ---
-# <a name="create-a-commands-menu"></a>Erstellen eines Befehlsmenüs
+# <a name="create-a-commands-menu"></a>Ein Befehlsmenü erstellen
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -41,7 +41,7 @@ Eine Voraussetzung zum Erstellen eines Befehlsmenüs für Ihren Bot besteht dari
 1. Öffnen Sie Teams, und wählen Sie im linken Bereich **Apps** aus. Suchen Sie auf der Seite **Apps** nach **App Studio**, und wählen Sie **Öffnen** aus.
 
    > [!WARNING]
-   > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 30. Juni 2022 eingestellt.
+   > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 01. August 2022 veraltet sein.
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 

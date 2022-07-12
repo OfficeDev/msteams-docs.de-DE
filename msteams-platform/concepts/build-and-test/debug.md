@@ -3,12 +3,12 @@ title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
 description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen von Microsoft Teams-Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503886"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737391"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Auswählen eines Testsetups und Debuggen Ihrer Teams-App
 
@@ -63,7 +63,7 @@ Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie de
 
 > [!WARNING]
 >
-> * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 30. Juni 2022 eingestellt.
+> * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 01. August 2022 veraltet sein.
 
 ## <a name="cloud-hosted"></a>In der Cloud gehostet
 
@@ -86,4 +86,4 @@ Um Ihre Erfahrung in Teams zu laden und auszuführen, müssen Sie ein Paket erst
 
 ## <a name="see-also"></a>Siehe auch
 
-[Testen und Debuggen Des Bots lokal mit IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+[Testen und debuggen Sie Ihren Bot lokal mit der IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

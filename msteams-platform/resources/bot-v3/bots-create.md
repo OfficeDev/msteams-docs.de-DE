@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie bots mithilfe der Microsoft B
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485286"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737412"
 ---
 # <a name="create-a-bot"></a>Erstellen eines Bots
 
@@ -25,7 +25,7 @@ Weitere Informationen finden Sie in der [Bot Framework-Dokumentation](/azure/bot
 
 1. Erstellen Sie den Bot mit Bot [Framework](https://dev.botframework.com/bots/new). **Achten Sie darauf, dass Sie Microsoft Teams nach der Erstellung Ihres Bots aus der Liste der empfohlenen Kanäle als Kanal hinzufügen.** Sie können eine von Ihnen generierte Microsoft-App-ID wiederverwenden, wenn Sie Ihr App-Paket/-Manifest bereits erstellt haben.
 
-   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Bot Framework-Registrierungsseite":::
+   ![Bot Framework-Registrierungsseite](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
 > Wenn Sie Ihren Bot nicht in Azure erstellen möchten, **müssen** Sie diesen Link verwenden, um einen neuen Bot zu erstellen: [Bot Framework](https://dev.botframework.com/bots/new). Wenn Sie stattdessen im Bot Framework-Portal auf " **Bot** erstellen" klicken, [erstellen Sie Ihren Bot stattdessen in Microsoft Azure](#bots-and-microsoft-azure) .
