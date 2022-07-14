@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>Bereitstellen Ihrer App in Azure
 
 Die Bereitstellung besteht aus zwei Schritten.  Zunächst werden erforderliche Cloudressourcen erstellt (auch als Bereitstellung bezeichnet). Anschließend wird der Code Ihrer App in die erstellten Cloudressourcen kopiert. In diesem Lernprogramm stellen Sie die Registerkarten-App bereit.
-<br> 
+<br>
 <br>
 <details>
 <summary>Was ist der Unterschied zwischen Bereitstellung und Bereitstellung?</summary>
@@ -33,7 +33,7 @@ Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/image
 
    Der Bereitstellungsprozess erstellt Ressourcen in der Azure-Cloud. Es kann einige Zeit dauern. Sie können den Fortschritt überwachen, indem Sie die Dialogfelder in der unteren rechten Ecke ansehen. Nach ein paar Minuten wird der folgende Hinweis angezeigt:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;.":::
 
     Wenn Sie möchten, können Sie die bereitgestellten Ressourcen anzeigen. Für dieses Lernprogramm müssen Sie keine Ressourcen anzeigen.
 

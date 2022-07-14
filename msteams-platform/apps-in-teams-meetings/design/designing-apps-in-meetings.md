@@ -5,23 +5,23 @@ description: Erfahren Sie, wie Sie Besprechungserweiterungen für Ihre Apps in T
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558086"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792837"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. personen, während einer Besprechung eine Umfrage abzuschließen oder eine schnelle Erinnerung zu senden, die den Ablauf der Besprechung nicht unterbricht.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
 Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
@@ -35,7 +35,7 @@ In den Besprechungsdetails können Benutzer **"Registerkarte hinzufügen+** " au
 
 ### <a name="add-during-a-meeting"></a>Während einer Besprechung hinzufügen
 
-#### <a name="mobile"></a>Mobilgerät
+#### <a name="mobile"></a>Mobilgeräte
 
 Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer auf die App in einer Besprechung zugreifen, indem sie **"Mehr**:::image type="icon" source="../../assets/icons/teams-client-more.png":::" auswählen.
 
@@ -86,7 +86,7 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 * Erstellen Sie eine Umfrage, eine Umfrage oder ein Aufgabenelement für die Besprechungsteilnehmer.
 * Zeigen Sie für die Besprechung relevante Notizen an. Beispielsweise Informationen zu einem Vertriebsleiter.
 
-#### <a name="mobile"></a>Mobilgerät
+#### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung auf mobilgeräten präsentieren können.":::
 
@@ -142,7 +142,7 @@ In-Besprechungsdialogfelder werden von einem Benutzer (z. B. dem Besprechungsorg
 * Genehmigungen übermitteln.
 * Abrufen von Erinnerungen.
 
-### <a name="mobile"></a>Mobilgerät
+### <a name="mobile"></a>Mobilgeräte
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Das Beispiel zeigt, wie Sie ein Dialogfeld in einer Besprechung auf mobilgeräten verwenden können.":::
 
@@ -358,7 +358,7 @@ Dichte oder überstrukturierte Inhalte können ablenkend und überwältigend sei
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Beispiel für ein einspaltiges Registerkartenlayout.":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Beispiel für ein einspaltiges Registerkartenlayout.":::
 
 #### <a name="do-use-a-one-column-tab"></a>Do: Verwenden einer einspaltigen Registerkarte
 

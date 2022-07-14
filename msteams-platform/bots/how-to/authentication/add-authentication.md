@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einem Bot in Teams mitHilfe von Azure Active 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558856"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792970"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -123,7 +123,7 @@ So erstellen Sie den geheimen Clientschlüssel:
 
 1. Wählen Sie im Abschnitt **Geheime Clientschlüssel** die Option **Neuer geheimer Clientschlüssel** aus. Das Fenster **Geheimen Clientschlüssel hinzufügen** wird angezeigt.
 
-    ![Neuer geheimer Clientschlüssel](~/assets/images/adaptive-cards/new-client-secret.png)
+    ![Neuer geheimer Clientschlüssel](~/assets/images/meetings-side-panel/newclientsecret.png)
 
 1. Geben Sie **Beschreibung** ein, und wählen Sie **Hinzufügen** aus.
 
@@ -143,7 +143,7 @@ So fügen Sie den Microsoft Teams-Kanal hinzu:
 
 1. Wählen Sie im linken Bereich **Kanäle** und dann **Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png"::: aus.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Kanal Teams":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Auswählen von Teams in Kanälen":::
 
 1. Aktivieren Sie das Kontrollkästchen, um die Nutzungsbedingungen zu akzeptieren, und wählen Sie **Zustimmen** aus.</br>
 
@@ -635,8 +635,8 @@ Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
+| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Registerkarten, Bots und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
 
 ## <a name="see-also"></a>Siehe auch
 

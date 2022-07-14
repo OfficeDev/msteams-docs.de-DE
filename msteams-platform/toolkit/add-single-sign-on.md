@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485608"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792830"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Hinzufügen des einmaligen Anmeldens zur Teams-App
 
@@ -33,7 +33,7 @@ Das Teams-Toolkit hilft Ihnen beim Hinzufügen von SSO zu den folgenden Teams-Fu
 Die folgenden Schritte helfen Ihnen beim Hinzufügen von SSO mithilfe des Teams-Toolkits in Visual Studio Code
 
 1. Öffnen Sie **Visual Studio Code.**
-2. Wählen Sie "Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso Add sidebar"::: " in der linken Navigationsleiste aus.
+2. Wählen Sie "Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso Add sidebar"::: " in der linken Navigationsleiste aus.
 3. Wählen Sie unter **"ENTWICKLUNG****" die Option "Features hinzufügen"** aus.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso Features hinzufügen":::
@@ -55,7 +55,7 @@ Sie können den Befehl in Ihrem **Projektstammverzeichnis** ausführen`teamsfx a
 
 In der folgenden Tabelle sind die Änderungen aufgeführt, die das Teams-Toolkit an Ihrem Projekt vornimmt:
 
-   |**Type**|**Datei**|**Zweck**|
+   |**Typ**|**Datei**|**Zweck**|
    |--------|--------|-----------|
    |Erstellen|`aad.template.json` Unter `template/appPackage`|Das Azure AD-Anwendungsmanifest stellt Ihre Azure AD-App dar. `template/appPackage` hilft beim Registrieren einer Azure AD-App während der lokalen Debug- oder Bereitstellungsphase.|
    |Ändern|`manifest.template.json` Unter `template/appPackage`|Ein `webApplicationInfo` Objekt wird ihrer Manifestvorlage der Teams-App hinzugefügt. Teams erfordert dieses Feld, um SSO zu aktivieren. Die Änderung wird wirksam, wenn Sie das lokale Debuggen oder bereitstellen auslösen.|
