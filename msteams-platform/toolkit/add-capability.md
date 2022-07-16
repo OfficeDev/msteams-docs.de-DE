@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557988"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830792"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
@@ -61,7 +61,7 @@ Die folgende Liste enthält Einschränkungen zum Hinzufügen weiterer Funktionen
    1. Geben Sie **"Teams:Features hinzufügen"** ein.
    1. Drücken Sie **EINGABE**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="Teamfeature":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="So fügen Sie Funktionen mithilfe der Befehlspalette hinzu.":::
 
    1. Wählen Sie im Popup die Funktion aus, die Sie in Ihrem Projekt hinzufügen möchten.
 
@@ -88,7 +88,7 @@ In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt, die Sie i
 
 |Vorhandene Funktionen|Weitere unterstützte Funktionen|
 |--------------------|--------------------|
-|Registerkarte "SPFx" |None|
+|Registerkarte "SPFx" |Keine|
 |SSO-aktivierte Registerkarte |SSO-aktivierte Registerkarte, Benachrichtigungs-Bot, Befehls-Bot, Bot, Nachrichtenerweiterung|
 |Benachrichtigungs-Bot |SSO-aktivierte Registerkarte, Registerkarte|
 |Befehlsbot |SSO-aktivierte Registerkarte, Registerkarte|

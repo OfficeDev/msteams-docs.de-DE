@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695292"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830806"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -269,15 +269,11 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 | -------- | --------- | ------------------ |
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-|24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK |  Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
+|24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK | Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-| 07.02.2022 | Tools und SDKs |Teams-Toolkit für Visual Studio Code > </br> • Hinzufügen von Funktionen zur Teams-App> [Fügen Sie Funktionen für Ihre Teams-Apps hinzu](toolkit/add-capability.md) </br> • Hinzufügen von Cloudressourcen zur Teams-App> [Fügen Sie Cloudressourcen für Ihre Teams-App hinzu](toolkit/add-resource.md) |
-| 03.02.2022 | App-Manifestversion 1.12 eingeführt | • App-Manifest > [App-Manifestschema](resources/schema/manifest-schema.md) </br> • App-Manifest > Public Developer Preview > [Manifest-Schema](resources/schema/manifest-schema-dev-preview.md) |
-|17.01.2022 | Personenauswahl in Adaptiven Karten für Mobilgeräte  | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
-|10.01.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code | Tools und SDKs > Teams Toolkit for Visual Studio Code > [Grundlagen des Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
-| 24.12.2021 | Schrittweise Anleitung zum Erteilen von Berechtigungen für Registerkartengeräte eingeführt | App-Grundlagen > Gerätefunktionen > [Schritt-für-Schritt-Anleitung zum Erteilen von Berechtigungen für Tab-Geräte](sbs-tab-device-permissions.yml) |
-| 15.11.2021 | Persönliche Registerkarten und Nachrichtenerweiterungen werden in Outlook und Office ausgeführt. | [Erweitern von Teams-Apps auf Microsoft 365](~/m365-apps/overview.md) |
-| 28.10.2021 |Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > Nachrichten in Bot-Unterhaltungen > [Empfangen aller Nachrichten mit RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für Entwickler-Vorschau](~/resources/schema/manifest-schema-dev-preview.md) |
+| 03.02.2022 | App-Manifestversion 1.13 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
+| 17.01.2022 | Personenauswahl in Adaptiven Karten für Mobilgeräte | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
+| 28.10.2021 |Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 16.06.2021 | Ressourcenspezifische Zustimmung für Chats | • Verwenden von Teams-Daten mit Microsoft Graph > [Ressourcenspezifische Zustimmung](graph-api/rsc/resource-specific-consent.md) </br> • Testen Ihrer App > Microsoft Graph > [Testen ressourcenspezifischer Genehmigungen in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 Weitere Informationen finden Sie unter [Öffentliche Entwickler-Vorschau für Teams](~/resources/dev-preview/developer-preview-intro.md).

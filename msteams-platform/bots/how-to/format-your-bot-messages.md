@@ -1,20 +1,20 @@
 ---
 title: Formatieren von Bot-Nachrichten
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangreiche Formatierung hinzufügen, z. B. durchgestrichene, sortierte und ungeordnete Liste, Link, Bildlink und mehr.
+description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangreiche Formatierungen und Formatvorlagen hinzufügen, z. B. durchgestrichene, sortierte und ungeordnete Liste, Link, Bildlink und mehr.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150787"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830799"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
-Mithilfe der Nachrichtenformatierung können Sie das Beste der Bot-Nachrichten hervorheben. Sie können Ihre Bot-Nachrichten so formatieren, dass sie funktionsreiche Karten enthalten, d. h. Anlagen, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten.
+Mithilfe der Nachrichtenformatierung können Sie das Beste der Bot-Nachrichten hervorheben. Sie können Ihre Bot-Nachrichten so formatieren, dass sie Rich-Karten als Anlagen enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten.
 
 ## <a name="format-text-content"></a>Formatieren von Textinhalten
 
@@ -34,9 +34,9 @@ Derzeit gelten die folgenden Einschränkungen für die Formatierung:
 
 * Nur-Text-Nachrichten unterstützen keine Tabellenformatierung.
 * Funktionsreiche Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften.
-* Funktionsreiche Karten unterstützen keine Markdown- oder Tabellenformatierung.
+* Rich-Karten unterstützen keine Markdown- oder Tabellenformatierung.
 
-Stellen Sie nach dem Formatieren von Textinhalten sicher, dass die Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden.
+Nachdem Sie Textinhalte formatiert haben, stellen Sie sicher, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden.
 
 ## <a name="cross-platform-support"></a>Plattformübergreifender Support
 
@@ -54,7 +54,7 @@ Einige Formatvorlagen werden derzeit nicht auf allen Plattformen unterstützt. D
 | Vorformatierter Text         | ✔️ | ✔️ |
 | Blockzitat                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
-| Bildverknüpfung                | ✔️ | ❌ |
+| Bildverknüpfung                | ❌ | ❌ |
 
 Stellen Sie nach Überprüfung des plattformübergreifenden Supports sicher, dass auch die Unterstützung einzelner Plattformen verfügbar ist.
 
@@ -78,7 +78,7 @@ Die folgende Tabelle enthält eine Liste der Formatvorlagen, die unter Desktop, 
 | Vorformatierter Text         | ✔️ | ✔️ | ✔️ |
 | Blockzitat                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Bildverknüpfung                | ✔️ | ✔️ | ✔️ |
+| Bildverknüpfung                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>Karten
 
