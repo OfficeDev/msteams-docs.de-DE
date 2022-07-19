@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: Erfahren Sie, wie Sie Deep Links erstellen und wie Sie sie in Ihren Microsoft Teams-Apps mit Registerkarten verwenden und darin navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 2927a963387ccd2bab5401f15f3a3f21cbc714dc
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658930"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841961"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -210,9 +210,27 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 > [!NOTE]
 > Um den Planungsdialog in Teams zu öffnen, müssen Entwickler weiterhin die ursprüngliche Deep-Link-URL-basierte Methode verwenden, da Teams die Kalenderfunktion noch nicht unterstützt.
 
-Weitere Informationen zum Arbeiten mit dem Kalender finden Sie im [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)-Namespace in der API-Referenzdokumentation.
+Weitere Informationen zum Arbeiten mit dem Kalender finden Sie in der API-Referenzdokumentation unter [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)-Namespace.
 
-### <a name="tabteams-js-v1"></a>tab/Teams JS v1
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -220,6 +238,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 ```
 
 ---
+
+Alternativ können Sie Deep-Links zu dem in Teams integrierten Planungsdialogfeld erstellen.
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines Deeplinks zum Planungsdialogfeld
 

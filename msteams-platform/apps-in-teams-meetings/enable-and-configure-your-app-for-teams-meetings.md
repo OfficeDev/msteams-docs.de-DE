@@ -3,13 +3,15 @@ title: Aktivieren und Konfigurieren Ihrer Apps für Teams-Besprechungen
 author: surbhigupta
 description: Erfahren Sie, wie Sie Ihre Apps für Teams-Besprechungen und verschiedene Besprechungsszenarien aktivieren und konfigurieren, das App-Manifest aktualisieren, Features konfigurieren und vieles mehr.
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557736"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841897"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -126,9 +128,9 @@ Während einer Besprechung können Sie die `meetingSidePanel` oder die besprechu
 
 #### <a name="meeting-sidepanel"></a>Besprechungsseitenbereich
 
-Mit dem `meetingSidePanel` können Sie Erfahrungen in einer Besprechung anpassen, die es Organisatoren und Referenten ermöglichen, einen unterschiedlichen Satz von Ansichten und Aktionen zu haben. In Ihrem App-Manifest müssen Sie dem Kontextarray `meetingSidePanel` hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer besprechungsinterne Registerkarte mit einer Breite von 320 Pixel gerendert. Weitere Informationen finden Sie unter [FrameContext-Schnittstelle](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+Mit dem `meetingSidePanel` können Sie Erfahrungen in einer Besprechung anpassen, die es Organisatoren und Referenten ermöglichen, einen unterschiedlichen Satz von Ansichten und Aktionen zu haben. In Ihrem App-Manifest müssen Sie dem Kontextarray `meetingSidePanel` hinzufügen. In der Besprechung und in allen Szenarien wird die App auf einer besprechungsinterne Registerkarte mit einer Breite von 320 Pixel gerendert. Weitere Informationen finden Sie unter [FrameInfo-Schnittstelle](/javascript/api/@microsoft/teams-js/frameinfo) (vor TeamsJS v.2.0.0 bekannt als `FrameContext`).
 
-Informationen zur Verwendung der `userContext`-API zum Weiterleiten von Anforderungen finden Sie unter [Teams-SDK](../tabs/how-to/access-teams-context.md#user-context). Weitere Informationen finden Sie unter [Teams-Authentifizierungsablauf für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungsablauf für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können OAuth 2.0 also direkt verwenden. Weitere Informationen finden Sie unter [Microsoft-Identitätsplattform und OAuth 2.0-Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Sie können den [Kontext des Benutzers verwenden, um Anforderungen weiterzuleiten](../tabs/how-to/access-teams-context.md#user-context). Weitere Informationen finden Sie unter [Teams-Authentifizierungsablauf für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md). Der Authentifizierungsablauf für Registerkarten ähnelt dem Authentifizierungsfluss für Websites. Registerkarten können OAuth 2.0 direkt verwenden. Weitere Informationen finden Sie unter [Microsoft-Identitätsplattform und OAuth 2.0-Autorisierungscodefluss](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 Die Nachrichtenerweiterung funktioniert erwartungsgemäß, wenn sich ein Benutzer in einer besprechungsinternen Ansicht befindet. Der Benutzer kann Erweiterungskarten zum Verfassen von Nachrichten posten. AppName in der Besprechung ist eine QuickInfo, die den App-Namen in der besprechungsinternen U-Leiste angibt.
 
