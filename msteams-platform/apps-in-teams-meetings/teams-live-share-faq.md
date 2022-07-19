@@ -1,15 +1,17 @@
 ---
 title: Live Share – FAQ
+author: surbhigupta
 description: In diesem Modul erfahren Sie mehr über häufig gestellte Fragen zu Live Share.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 0c51d88ba08dea50e23b0b8eb451f84557f1f867
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.date: 04/07/2022
+ms.openlocfilehash: d29318397e388faca93695040914493ecae369a5
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189297"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841870"
 ---
 ---
 

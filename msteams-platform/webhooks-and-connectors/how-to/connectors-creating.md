@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie mit Office 365 Connectors beg
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485346"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841639"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
@@ -19,9 +19,10 @@ Mit Microsoft Teams Apps können Sie Ihren bestehenden Office 365 Connector hinz
 Im folgenden Video erfahren Sie, wie Sie eine Office 365 Connectors erstellen:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="add-a-connector-to-teams-app"></a>Hinzufügen eines Connectors zur Teams-App
 
@@ -51,20 +52,23 @@ Sie können Ihre vorhandene Webkonfigurationserfahrung wiederverwenden oder eine
 
 So integrieren Sie die Konfigurationserfahrung:
 
-1. Initialisieren Sie das SDK durch Aufrufen von `microsoftTeams.initialize()`.
-1. Rufen Sie `microsoftTeams.settings.setValidityState(true)` auf, um **Speichern** zu aktivieren.
+> [!NOTE]
+> Ab Teams JavaScript Client SDK (TeamsJS) v.2.0.0 sind APIs im *Einstellungsnamespace* zugunsten gleichwertiger APIs im *Seitennamespace* veraltet, einschließlich `pages.getConfig()` und anderer APIs im `pages.config` Unternamespace. Weitere Informationen finden Sie [unter Neuigkeiten in TeamsJS Version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+
+1. Initialisieren Sie das SDK durch Aufrufen von `app.initialize()`.
+1. Rufen Sie `pages.config.setValidityState(true)` auf, um **Speichern** zu aktivieren.
 
     > [!NOTE]
-    > Sie müssen `microsoftTeams.settings.setValidityState(true)` als Antwort auf die Benutzerauswahl oder Feldaktualisierung aufrufen.
+    > Sie müssen `microsoftTeams.pages.config.setValidityState(true)` als Antwort auf die Benutzerauswahl oder Feldaktualisierung aufrufen.
 
-1. Registrieren Sie den `microsoftTeams.settings.registerOnSaveHandler()`-Ereignishandler, der aufgerufen wird, wenn der Benutzer auf **Speichern** klickt.
-1. Aufruf`microsoftTeams.settings.setSettings()`, um die Einstellungen des Connectors zu speichern. Die gespeicherten Einstellungen werden auch im Konfigurationsdialog angezeigt, wenn der Benutzer versucht, eine bestehende Konfiguration für Ihren Connector zu aktualisieren.
-1. Rufen Sie `microsoftTeams.settings.getSettings()` auf, um Webhookeigenschaften abzurufen, einschließlich der URL.
+1. Registrieren Sie den `microsoftTeams.pages.config.registerOnSaveHandler()`-Ereignishandler, der aufgerufen wird, wenn der Benutzer auf **Speichern** klickt.
+1. Aufruf`microsoftTeams.pages.config.setConfig()`, um die Einstellungen des Connectors zu speichern. Die gespeicherten Einstellungen werden auch im Konfigurationsdialog angezeigt, wenn der Benutzer versucht, eine bestehende Konfiguration für Ihren Connector zu aktualisieren.
+1. Rufen Sie `microsoftTeams.pages.getConfig()` auf, um Webhookeigenschaften abzurufen, einschließlich der URL.
 
     > [!NOTE]
-    > Im Falle einer Neukonfiguration müssen Sie `microsoftTeams.settings.getSettings()` aufrufen, wenn Ihre Seite zum ersten Mal geladen wird.
+    > Im Falle einer Neukonfiguration müssen Sie `microsoftTeams.pages.getConfig()` aufrufen, wenn Ihre Seite zum ersten Mal geladen wird.
 
-1. Registrieren Sie den `microsoftTeams.settings.registerOnRemoveHandler()`-Ereignishandler, der aufgerufen wird, wenn der Benutzer den Connector entfernt.
+1. Registrieren Sie den `microsoftTeams.pages.config.registerOnRemoveHandler()`-Ereignishandler, der aufgerufen wird, wenn der Benutzer den Connector entfernt.
 
 Dieses Ereignis gibt Ihrem Dienst die Möglichkeit, Bereinigungsaktionen durchzuführen.
 
@@ -83,17 +87,18 @@ Der folgende Code stellt ein Beispiel-HTML bereit, um eine Connector-Konfigurati
     </section>
 </div>
 
-<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="text/javascript">
-
+<script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        
         function onClick() {
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
         }
 
-        microsoftTeams.initialize();
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+        await app.initialize();
+        pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
             var eventType = '';
@@ -103,22 +108,22 @@ Der folgende Code stellt ein Beispiel-HTML bereit, um eine Connector-Konfigurati
                 eventType = radios[1].value;
             }
 
-            microsoftTeams.settings.setSettings({
-                 entityId: eventType,
+            await pages.config.setConfig({
+                entityId: eventType,
                 contentUrl: "https://YourSite/Connector/Setup",
                 removeUrl:"https://YourSite/Connector/Setup",
-                 configName: eventType
+                configName: eventType
                 });
 
-            microsoftTeams.settings.getSettings(function (settings) {
-                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+            pages.getConfig().then(async (config) {
+                // We get the Webhook URL from config.webhookUrl which needs to be saved. 
                 // This can be used later to send notification.
             });
 
             saveEvent.notifySuccess();
         });
 
-        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+        pages.config.registerOnRemoveHandler(function (removeEvent) {
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -128,46 +133,46 @@ Der folgende Code stellt ein Beispiel-HTML bereit, um eine Connector-Konfigurati
 Wenn Sie die Anmeldung in Ihre eingebettete Seite integrieren möchten, um den Benutzer beim Laden der Seite zu authentifizieren, finden Sie weitere Informationen unter [Authentifizierungsablauf für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 > [!NOTE]
-> Aus Gründen der clientübergreifenden Kompatibilität muss Ihr Code `microsoftTeams.authentication.registerAuthenticationHandlers()` mit der URL aufrufen und den Rückrufmethoden für Erfolg oder Fehler aufrufen, bevor `authenticate()` aufgerufen wird.
+> Vor TeamsJS v.2.0.0 muss Ihr Code aus clientübergreifenden Kompatibilitätsgründen mit der URL und erfolg- oder fehlerbasierten Rückrufmethoden `authenticate()` aufrufen`microsoftTeams.authentication.registerAuthenticationHandlers()`. Ab TeamsJS v.2.0.0 wurde *registerAuthenticationHandlers zugunsten des direkten Aufrufens* von [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) mit den erforderlichen Authentifizierungsparametern veraltet.
 
-#### <a name="getsettings-response-properties"></a>Eigenschaften der `GetSettings`-Antwort
+#### <a name="getconfig-response-properties"></a>Eigenschaften der `getConfig`-Antwort
 
 >[!NOTE]
->Die vom `getSettings`-Aufruf zurückgegebenen Parameter unterscheiden sich, wenn Sie diese Methode von einer Registerkarte aus aufrufen, von den in den [js-Einstellungen](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings) dokumentierten Parametern.
+>Die vom `getConfig` Aufruf zurückgegebenen Parameter unterscheiden sich, wenn Sie diese Methode von einer Registerkarte aus aufrufen, und unterscheiden sich von den in der [Referenz](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig) dokumentierten Parametern.
 
-Die folgende Tabelle enthält die Parameter und die Details zu `GetSetting`-Antworteigenschaften:
+Die folgende Tabelle enthält die Parameter und die Details zu `getConfig`-Antworteigenschaften:
 
 | Parameter   | Details |
 |-------------|---------|
-| `entityId`       | Die Entitäts-ID, wie durch Ihren Code beim Aufrufen von `setSettings()` festgelegt. |
-| `configName`  | Der Konfigurationsname, wie durch Ihren Code beim Aufrufen von `setSettings()` festgelegt. |
-| `contentUrl` | Die URL der Konfigurationsseite, wie durch Ihren Code beim Aufruf von `setSettings()` festgelegt. |
+| `entityId`       | Die Entitäts-ID, wie durch Ihren Code beim Aufrufen von `setConfig()` festgelegt. |
+| `configName`  | Der Konfigurationsname, wie durch Ihren Code beim Aufrufen von `setConfig()` festgelegt. |
+| `contentUrl` | Die URL der Konfigurationsseite, wie durch Ihren Code beim Aufruf von `setConfig()` festgelegt. |
 | `webhookUrl` | Die für den Connector erstellte Webhook-URL. Verwenden Sie die Webhook-URL zum POSTEN von strukturiertem JSON, um Karten an den Kanal zu senden. Die `webhookUrl` wird nur zurückgegeben, wenn die Anwendung erfolgreich Daten zurückgibt. |
 | `appType` | Die zurückgegebenen Werte können dem `mail``groups``teams` Office 365 Mail, Office 365 Groups oder Teams entsprechen. |
 | `userObjectId` | Die eindeutige ID, die dem Office 365-Benutzer entspricht, der die Einrichtung des Connectors initiiert hat. Sie sollte gesichert werden. Dieser Wert kann verwendet werden, um den Benutzer in Office 365 zuzuordnen, der die Konfiguration in Ihrem Dienst eingerichtet hat. |
 
 #### <a name="handle-edits"></a>Behandeln von Bearbeitungen
 
-Ihr Code muss Benutzer verarbeiten, die zurückkehren, um eine vorhandene Connectorkonfiguration zu bearbeiten. Rufen Sie `microsoftTeams.settings.setSettings()` dazu bei der Erstkonfiguration mit folgenden Parametern auf:
+Ihr Code muss Benutzer verarbeiten, die zurückkehren, um eine vorhandene Connectorkonfiguration zu bearbeiten. Rufen Sie `microsoftTeams.pages.config.setConfig()` dazu bei der Erstkonfiguration mit folgenden Parametern auf:
 
 * `entityId` ist die benutzerdefinierte ID, die angibt, was der Benutzer konfiguriert hat und wird von Ihrem Dienst verstanden.
 * `configName` ist ein Name, den der Konfigurationscode abrufen kann.
 * `contentUrl` ist eine benutzerdefinierte URL, die geladen wird, wenn ein Benutzer eine vorhandene Connectorkonfiguration bearbeitet.
 
-Dieser Aufruf wird im Rahmen des Speicherereignishandlers ausgeführt. Wenn die `contentUrl` geladen wird, muss Ihr Code `getSettings()` aufrufen, um Einstellungen oder Formulare in der Benutzeroberfläche der Konfiguration vorab auszufüllen.
+Dieser Aufruf wird im Rahmen des Speicherereignishandlers ausgeführt. Wenn die `contentUrl` geladen wird, muss Ihr Code `getConfig()` aufrufen, um Einstellungen oder Formulare in der Benutzeroberfläche der Konfiguration vorab auszufüllen.
 
 #### <a name="handle-removals"></a>Behandeln von Entfernungen
 
-Sie können einen Ereignishandler ausführen, wenn der Benutzer eine vorhandene Konnektorkonfiguration entfernt. Sie registrieren diesen Handler, indem Sie `microsoftTeams.settings.registerOnRemoveHandler()` aufrufen. Dieser Handler wird zum Ausführen von Bereinigungsvorgängen verwendet, z. B. zum Entfernen von Einträgen aus einer Datenbank.
+Sie können einen Ereignishandler ausführen, wenn der Benutzer eine vorhandene Konnektorkonfiguration entfernt. Sie registrieren diesen Handler, indem Sie `microsoftTeams.pages.config.registerOnRemoveHandler()` aufrufen. Dieser Handler wird zum Ausführen von Bereinigungsvorgängen verwendet, z. B. zum Entfernen von Einträgen aus einer Datenbank.
 
 ### <a name="include-the-connector-in-your-manifest"></a>Einschließen des Connectors in Ihr Manifest
 
-Laden Sie das automatisch generierte `Teams app manifest` vom Portal herunter. Führen Sie die folgenden Schritte aus, bevor Sie die App testen oder veröffentlichen:
+Laden Sie das automatisch generierte *Manifest der Teams-App* aus dem Entwicklerportal herunter (<https://dev.teams.microsoft.com>). Führen Sie die folgenden Schritte aus, bevor Sie die App testen oder veröffentlichen:
 
 1. [Zwei Symbole einschließen](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Ändern Sie den `icons`-Teil des Manifests so, dass er die Dateinamen der Symbole anstelle von URLs enthält.
 
-Die folgende manifest.json-Datei enthält die Elemente, die zum Testen und Einreichen der App erforderlich sind:
+Die folgende Datei *manifest.json* enthält die Elemente, die zum Testen und Übermitteln der App erforderlich sind:
 
 > [!NOTE]
 > Ersetzen Sie `id` und `connectorId` im folgenden Beispiel durch die GUID des Connectors.
@@ -231,7 +236,7 @@ Befolgen Sie die [schrittweise Anleitung](../../sbs-teams-connectors.yml) zum Er
 
 1. [Richten Sie einen eingehenden Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) direkt für Ihr Team ein.
 
-1. Fügen Sie eine [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) hinzu, und veröffentlichen Sie Ihren eingehenden Webhook in einem Office 365-Connector.
+1. Fügen Sie eine [Konfigurationsseite](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) hinzu, und veröffentlichen Sie Ihren eingehenden Webhook in einem Office 365 Connector.
 
 1. Verpacken und veröffentlichen Sie Ihren Connector als Teil Ihrer [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md)-Übermittlung.
 

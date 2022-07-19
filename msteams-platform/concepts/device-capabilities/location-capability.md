@@ -5,18 +5,20 @@ description: Erfahren Sie, wie Sie das Teams JavaScript-Client-SDK verwenden, um
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 8290e78e9ea1baf87ce89642cd4f4f51b5f3c63d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189865"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842017"
 ---
 # <a name="integrate-location-capabilities"></a>Integration von Standortfunktionen
 
 Sie können die Standortfunktionen nativer Geräte in Ihre Teams-App integrieren.  
 
 Sie können [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) verwenden, das die Tools bereitstellt, die Ihre App für den Zugriff auf die [nativen Gerätefunktionen](native-device-permissions.md) des Benutzers benötigt. Verwenden Sie die Standort-APIs, z. B. [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) und [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?), um die Funktionen in Ihre App zu integrieren.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Vorteile der Integration von Standortfunktionen
 
@@ -66,6 +68,40 @@ Die folgende Abbildung zeigt die Web-App-Erfahrung der Standortfunktionen:
 
 ### <a name="code-snippets"></a>Codeausschnitte
 
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+**Aufrufen der `getLocation`-API zum Abrufen des Speicherorts:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+if(location.isSupported()) {
+    const locationPromise = location.getLocation(locationProps);
+    locationPromise.
+        then((result) => {output(JSON.stringify(result));}.
+        catch((error) => {output(error);});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+**Aufrufen der `showLocation`-API zum Anzeigen des Speicherorts:**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let location = {"latitude":17,"longitude":17};
+if(location.isSupported()) {
+    const locationPromise = location.showLocation(location);
+    locationPromise.
+         then((result) => {/*Successful map display*/}).
+         catch((error) => {/*Failed map display*/});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
 **Aufrufen der `getLocation`-API zum Abrufen des Speicherorts:**
 
 ```javascript
@@ -91,6 +127,8 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
      output(result);
 });
 ```
+
+---
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 

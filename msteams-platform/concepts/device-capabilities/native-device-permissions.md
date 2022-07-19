@@ -3,12 +3,12 @@ title: Anfordern von Geräteberechtigungen für Ihre Microsoft Teams-App
 description: So aktualisieren Sie Ihr App-Manifest, um Zugriff auf systemeigene Features anzufordern, die eine Zustimmung des Benutzers erfordern, z. B. QR-, Barcode-, Bild-, Audio- und Videofunktionen scannen
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9950dc43bf4d2c5dcdda26a489a2c7b661739f6b
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557715"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841729"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Anfordern von Geräteberechtigungen für Ihre Teams-App
 
@@ -127,12 +127,12 @@ Nutzen Sie die entsprechende HTML5- oder Teams-API, um eine Aufforderung zur Zus
 > * Unterstützung für `camera`, `gallery`und `microphone` wird über [**die selectMedia-API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) aktiviert. Verwenden Sie [**die captureImage-API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) für eine einzelne Bildaufnahme.
 > * Die Unterstützung für `location` wird über [**die getLocation-API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) aktiviert. Sie müssen dies `getLocation API` für den Standort verwenden, da die HTML5-Geolocation-API auf dem Teams-Desktop derzeit nicht vollständig unterstützt wird.
 
-Zum Beispiel:
+Beispiel:
 
 * Um den Benutzer auf seine Position zuzugreifen, müssen Sie Folgendes aufrufen `getCurrentPosition()`:
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * Um den Benutzer aufzufordern, auf seine Kamera auf dem Desktop oder im Web zuzugreifen, müssen Sie Folgendes aufrufen `getUserMedia()`:
@@ -217,6 +217,17 @@ Zum Beispiel:
 
 * Um den Benutzer auf der Kartenoberfläche zum Freigeben des Standorts aufzufordern, fordert die Teams-App beim Aufrufen `getLocation()`folgende Berechtigung an:
 
+    # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -224,6 +235,10 @@ Zum Beispiel:
      });
      } 
     ```
+
+    ***
+
+Hier erfahren Sie, wie die Geräteberechtigungsaufforderungen für Benutzer auf Mobilgeräten und Desktops angezeigt werden.
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 

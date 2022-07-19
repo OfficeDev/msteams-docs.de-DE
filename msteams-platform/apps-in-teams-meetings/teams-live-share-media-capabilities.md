@@ -1,18 +1,18 @@
 ---
 title: Live Share-Medienfunktionen
+author: surbhigupta
 description: In diesem Modul erfahren Sie mehr über die Medienfunktionen von Live Share, Unterbrechungen und Wartepunkte, Audio-Ducking und das Synchronisieren von Video und Audio.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: bf9d7c071a337a56373a9c58879d23a8d2638af7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142479"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841875"
 ---
----
-
 # <a name="live-share-media-capabilities"></a>Live Share-Medienfunktionen
 
 Video und Audio sind wichtige Bestandteile der modernen Welt und des Arbeitsplatzes. Wir haben umfassendes Feedback erhalten, dass wir mehr tun können, um die Qualität, die Barrierefreiheit und den Lizenzschutz beim gemeinsamen Ansehen von Videos in Besprechungen zu verbessern.

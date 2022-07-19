@@ -1,15 +1,17 @@
 ---
 title: Live Share Übersicht
+author: surbhigupta
 description: In diesem Modul erfahren Sie, was das Microsoft Live Share SDK und seine Benutzerszenarien sind.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: 80d28acd5616fea371f3cd84354412504815ff87
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142500"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841862"
 ---
 ---
 

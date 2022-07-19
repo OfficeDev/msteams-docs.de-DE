@@ -1,18 +1,18 @@
 ---
 title: Live Share Schnellstart
+author: surbhigupta
 description: In diesem Modul erfahren Sie, wie Sie das Dice Roller-Beispiel schnell ausprobieren können.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 10bf4b3ce67322c25517d82af2d06a654a4d8668
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484586"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841785"
 ---
----
-
 # <a name="quick-start-guide"></a>Schnellstarthandbuch
 
 Der Einstieg in das Live Share SDK mit dem Dice Roller-Beispiel ist eine Weiterentwicklung des [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) und wurde entwickelt, um schnell ein auf dem Live Share SDK basierendes [Dice Roller-Beispiel](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) auf dem lokalen Host Ihres Computers auszuführen.
@@ -37,25 +37,25 @@ Installieren Sie zunächst Folgendes:
 1. Klonen Sie das [Live Share SDK-Repository](https://github.com/microsoft/live-share-sdk), um die Beispiel-App zu testen:
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. Führen Sie den folgenden Befehl aus, um zum Ordner der Dice Roller-Beispielanwendung zu wechseln:
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. Führen Sie den folgenden Befehl aus, um das Abhängigkeitspaket zu installieren:
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. Führen Sie den folgenden Befehl aus, um den Client und den lokalen Server zu starten:
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      Eine neue Browserregisterkarte öffnet eine `http://localhost:8080` URL, und das Dice Roller-Spiel wird angezeigt.

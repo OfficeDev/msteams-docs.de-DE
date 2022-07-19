@@ -1,14 +1,17 @@
 ---
 title: Benutzerdefinierte Zusammen-Modus-Szenen
+author: surbhigupta
 description: Arbeiten mit benutzerdefinierte Zusammen-Modus-Szenen
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.author: v-ypalikila
+ms.date: 04/07/2022
+ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484775"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841792"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 

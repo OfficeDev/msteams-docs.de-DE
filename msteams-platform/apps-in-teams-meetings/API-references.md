@@ -5,16 +5,17 @@ description: Erfahren Sie, wie Sie die API-Verweise auf Besprechungs-Apps mit Be
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.date: 04/07/2022
+ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561609"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841954"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
-Die Meeting-Erweiterbarkeit bietet APIs zur Verbesserung des Meeting-Erlebnisses. Mit Hilfe der aufgeführten APIs können Sie Folgendes ausführen:
+Die Besprechungserweiterung bietet APIs, um die Besprechungserfahrung zu verbessern. Mit Hilfe der aufgeführten APIs können Sie Folgendes ausführen:
 
 * Erstellen Sie Apps oder integrieren Sie vorhandene Apps in den Meeting-Lebenszyklus.
 * Verwenden Sie APIs, um Ihre App auf Meetings aufmerksam zu machen.
@@ -32,9 +33,9 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 |[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Senden Sie Untertitel in Echtzeit**](#send-real-time-captions-api)| Senden Sie Untertitel in Echtzeit an ein laufendes Meeting. | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Teilen Sie App-Inhalte auf der Bühne**](#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
-|[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**Teilen Sie App-Inhalte auf der Bühne**](#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Holen Sie sich die Benutzerkontext-API
@@ -236,7 +237,7 @@ POST /v3/conversations/{conversationId}/activities
 
 | Eigenschaftenname | Zweck |
 |---|---|
-| **Typ** | Aktivitätstyp. |
+| **type** | Aktivitätstyp. |
 | **text** | Der Textinhalt der Nachricht. |
 | **summary** | Der Zusammenfassungstext der Nachricht. |
 | **channelData.notification.alertInMeeting** | Boolescher Wert, der angibt, ob dem Benutzer während einer Besprechung eine Benachrichtigung angezeigt werden soll. |
@@ -508,9 +509,9 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 
 Im Falle eines Besprechungsserientyps:
 
-**startDate**: Gibt das Datum an, an dem mit der Anwendung des Musters begonnen werden soll. Der Wert von "startDate" muss dem Datumswert der Starteigenschaft für die Ereignisressource entsprechen. Hinweis: Das erste Vorkommen der Besprechung kann nicht an diesem Datum stattfinden, wenn es nicht in das Muster passt.
+**startDate**: Gibt das Datum an, an dem mit der Anwendung des Musters begonnen werden soll. Der Wert von "startDate" muss dem Datumswert der Starteigenschaft für die Ereignisressource entsprechen. Beachten Sie, dass das erste Vorkommen der Besprechung an diesem Datum möglicherweise nicht auftritt, wenn es nicht zum Muster passt.
 
-**endDate**: Gibt das Datum an, an dem das Anwenden des Musters beendet werden soll. Hinweis: Das letzte Vorkommen der Besprechung kann nicht an diesem Datum auftreten, wenn es nicht in das Muster passt.
+**endDate**: Gibt das Datum an, an dem das Anwenden des Musters beendet werden soll. Beachten Sie, dass das letzte Vorkommen der Besprechung an diesem Datum möglicherweise nicht auftritt, wenn es nicht zum Muster passt.
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
@@ -901,7 +902,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | Eigenschaftenname | Zweck |
 |---|---|
 | **name** | Der Name des Benutzers.|
-| **Typ** | Aktivitätstyp. |
+| **type** | Aktivitätstyp. |
 | **Timestamp** | Lokales Datum und Uhrzeit der Nachricht, ausgedrückt im ISO-8601-Format. |
 | **id** | ID für die Aktivität. |
 | **channelId** | Kanal, dem diese Aktivität zugeordnet ist. |

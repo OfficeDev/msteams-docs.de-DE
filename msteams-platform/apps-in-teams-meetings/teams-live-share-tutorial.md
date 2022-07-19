@@ -1,18 +1,18 @@
 ---
 title: Live Share Code-Lernprogramm
+author: surbhigupta
 description: In diesem Modul erfahren Sie, wie Sie mit Live Share SDK beginnen und wie Sie mit Live Share SDK ein Beispiel für Dice Roller erstellen.
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484628"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841799"
 ---
----
-
 # <a name="dice-roller-code-tutorial"></a>Dice Roller Code-Lernprogramm
 
 In der Dice Roller-Beispiel-App wird Benutzern ein Würfel mit einer Schaltfläche zum Rollen angezeigt. Wenn der Würfel rollt, verwendet das Live Share SDK das Fluid Framework, um die Daten clientsübergreifend zu synchronisieren, sodass jeder das gleiche Ergebnis sieht. Führen Sie zum Synchronisieren von Daten die folgenden Schritte in der Datei [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) aus:
@@ -359,7 +359,7 @@ Nachdem Sie Ihren Code bereitgestellt haben, können Sie [Teams Toolkit](../tool
 
 | Beispielname | Beschreibung                                                      | JavaScript                                                                           |
 | :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [Anzeigen](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

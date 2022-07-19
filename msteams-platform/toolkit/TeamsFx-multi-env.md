@@ -4,14 +4,14 @@ author: MuyangAmigo
 description: In diesem Modul erfahren Sie mehr über TeamsFX Multi-Umgebung, z. B. erstellen Sie eine neue Umgebung, wählen Sie die Zielumgebung und vieles mehr
 ms.author: nintan
 ms.localizationpriority: medium
-ms.topic: overview of multiple environment
+ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 13b9f640c57168858ee7c48a8f9dfc83b005c05a
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: c5f3878b49f3846bff717cd2358fcb122e2b658d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66793047"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841687"
 ---
 # <a name="manage-multiple-environments"></a>Verwalten mehrerer Umgebungen
 

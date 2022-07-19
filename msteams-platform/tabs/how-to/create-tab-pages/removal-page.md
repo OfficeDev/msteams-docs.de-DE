@@ -5,14 +5,14 @@ description: In diesem Modul erfahren Sie, wie Sie eine Seite zum Entfernen von 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485216"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841974"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>Seite zum Erneuten Konfigurieren und Entfernen von Registerkarten
+# <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
 Sie können die Benutzererfahrung erweitern und verbessern, indem Sie Die Entfernungs- und Änderungsoptionen in Ihrer App unterstützen. Teams ermöglicht Benutzern das Umbenennen oder Entfernen einer Kanal- oder Gruppenregisterkarte, und Sie können Benutzern erlauben, Ihre Registerkarte nach der Installation neu zu konfigurieren. Darüber hinaus bietet die Registerkartenentfernung den Benutzern nach dem Entfernen Optionen zum Löschen oder Archivieren von Inhalten.
 
@@ -36,7 +36,7 @@ Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
-Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird angezeigt, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird durch die `setConfig()` Methode (früher `setSettings()`) auf Ihrer Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Voraussetzungen der Teams-Registerkarte](../../../tabs/how-to/tab-requirements.md) entsprechen.
+Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird angezeigt, wenn die Registerkarte entfernt wird. Die URL der Entfernungsseite wird von der `setConfig()` Methode (oder `setSettings()` vor TeamsJS v.2.0.0) auf Ihrer Konfigurationsseite festgelegt. Wie bei allen Seiten in Ihrer App muss die Seite zum Entfernen den [Voraussetzungen der Teams-Registerkarte](../../../tabs/how-to/tab-requirements.md) entsprechen.
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
@@ -58,7 +58,7 @@ Sie können `getContext()` den aktuellen Kontext abrufen, in dem der Frame ausge
 
 #### <a name="include-authentication"></a>Authentifizierung einschließen
 
-Die Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Siehe [Microsoft Teams-Authentifizierungsfluss für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md). Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `manifest.json` `validDomains` Array aufgeführt sind.
+Die Authentifizierung ist erforderlich, bevor ein Benutzer den Registerkarteninhalt löschen kann. Kontextinformationen können zum Erstellen von Authentifizierungsanforderungen und Autorisierungsseiten-URLs verwendet werden. Siehe [Microsoft Teams-Authentifizierungsfluss für Registerkarten](~/tabs/how-to/authentication/auth-flow-tab.md). Stellen Sie sicher, dass alle Domänen, die auf Ihren Registerkartenseiten verwendet werden, im `validDomains` Array Ihres App-Manifests aufgeführt sind.
 
 Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 
@@ -67,8 +67,9 @@ Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

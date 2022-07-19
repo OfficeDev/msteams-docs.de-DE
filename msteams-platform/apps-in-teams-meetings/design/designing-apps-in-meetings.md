@@ -5,12 +5,13 @@ description: Erfahren Sie, wie Sie Besprechungserweiterungen für Ihre Apps in T
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792837"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842038"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
@@ -105,7 +106,7 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 |3|**Kopfzeile**: Enthält ihren App-Namen.|
 |4|**Schaltfläche "Schließen"**: Schließt die Registerkarte. Verwenden Sie immer das Symbol für das schließende Symbol oben rechts anstelle einer Aktion in der Fußzeile.|
 |5|**Benachrichtigungsleiste**: Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt und verschieben den rest des iframe-Inhalts um 20 Pixel nach unten.|
-|6 |**iframe**: Zeigt Ihre App-Inhalte an.|
+|6|**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="spacing"></a>Abstand
 

@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Unterhaltungsunterentitätsch
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485674"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841982"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -39,7 +39,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > Die **channelId** ist für Kanalregisterkarten optional. Es wird jedoch empfohlen, die Implementierung über Kanal- und statische Registerkarten hinweg beizubehalten.
 * **Titel**: Der Titel, der dem Benutzer im Chatbereich angezeigt wird.
 
-Die meisten dieser Werte können auch aus der `getContext` API abgerufen werden.
+Die meisten dieser Werte können auch aus der [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API abgerufen werden (`microsoftTeams.getContext()` in TeamsJS v1). Weitere Informationen finden Sie unter [PageInfo-Schnittstelle](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -93,7 +93,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
