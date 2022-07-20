@@ -5,16 +5,19 @@ description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangr
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830799"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895482"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
 Mithilfe der Nachrichtenformatierung können Sie das Beste der Bot-Nachrichten hervorheben. Sie können Ihre Bot-Nachrichten so formatieren, dass sie Rich-Karten als Anlagen enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten.
+
+> [!NOTE]
+> Der Grenzwert für die Größe von Botnachrichten beträgt 40 KB. Wenn der Grenzwert für die Größe der Bot-Nachricht 40 KB überschreitet, erhält der Bot einen `413` Statuscode (RequestEntityTooLarge), der den Fehlercode `MessageSizeTooBig`enthält. Der Grenzwert für die Bot-Nachrichtengröße umfasst die gesamte Nachrichtennutzlast, die als UTF-16 codiert ist, und enthält keine Base64-codierten Bilder.
 
 ## <a name="format-text-content"></a>Formatieren von Textinhalten
 
