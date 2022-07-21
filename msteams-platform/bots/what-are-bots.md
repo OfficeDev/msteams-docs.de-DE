@@ -5,21 +5,24 @@ description: Beginnen Sie mit diesem Lernpfad mit Unterhaltungsbots in Microsoft
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558317"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912261"
 ---
 # <a name="build-bots-for-teams"></a>Erstellen von Bots für Teams
 
 Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Essensreservierungen durchführen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können kurze Fragen und Antworten oder komplexe Unterhaltungen sein.
 
 > [!IMPORTANT]
-> Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD).
 >
-> Bot-Anwendungen in Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
+> * Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD).
+>
+> * Bot-Anwendungen innerhalb von Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) verfügbar, und die Registrierung des Bot-Kanals muss im Azure Government-Portal erfolgen.
+>
+> * Anwendungen in GCCH unterstützen nur bis zur Manifestversion v1.10. Bild-URLs in adaptiven Karten werden in der GCCH-Umgebung nicht unterstützt. Sie können eine Bild-URL durch Base64-codierte DataUri ersetzen.
 
 Unterhaltungs-Bots ermöglichen es Benutzern, mit Ihrem Webdienst über Text, interaktive Karten und Aufgabenmodule zu interagieren.
 
