@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841904"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919851"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -41,8 +41,7 @@ Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem
 > Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App dem [SSO-Authentifizierungsfluss (Single Sign-On, Einmaliges Anmelden) von Teams für Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md) folgen.
 
 > [!NOTE]
->
-> * Die Option "App hinzufügen" für die Registerkarten-App der Teams-Besprechungserweiterung wird im Teams-Webclient nicht unterstützt.
+> Die Option "App hinzufügen" für die Registerkarten-App der Teams-Besprechungserweiterung wird im Teams-Webclient nicht unterstützt.
 
 #### <a name="pre-meeting-app-experience"></a>Pre-Meeting-App-Umgebung
 
@@ -231,7 +230,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 > [!div class="nextstepaction"]
 > [Aktivieren und konfigurieren Sie Ihre Apps für Teams-Besprechungen](enable-and-configure-your-app-for-teams-meetings.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Siehe auch
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md):

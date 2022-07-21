@@ -5,16 +5,19 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503935"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919844"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> Wenn eine Nachrichtenaktion initiiert wird, werden Anlagendetails nicht als Teil der `turncontext` Aufrufaktivität gesendet.
 
 Aktionsbefehle ermöglichen es Ihnen, Ihren Benutzern ein modales Popup zu präsentieren, das in Teams als Aufgabenmodul bezeichnet wird. Das Aufgabenmodul sammelt Informationen oder zeigt diese an, verarbeitet die Interaktion und sendet die Informationen an Teams zurück. In diesem Dokument erfahren Sie, wie Sie Speicherorte zum Aufrufen des Aktionsbefehls auswählen, ein Aufgabenmodul erstellen, die endgültige Nachricht oder Karte senden sowie einen Aktionsbefehl mit App Studio oder manuell erstellen.
 
@@ -27,7 +30,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Im folgenden Video erfahren Sie, wie Sie Aktionsbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Auswählen von Speicherorten zum Aufrufen von Aktionsbefehlen
@@ -84,7 +87,7 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** erstellen.
 
 > [!WARNING]
- > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps zu testen. App Studio wird per 30. Juni 2022 eingestellt.
+ > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird zum 1. August 2022 eingestellt.
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 

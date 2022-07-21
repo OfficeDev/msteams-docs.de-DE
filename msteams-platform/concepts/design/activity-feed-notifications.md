@@ -5,12 +5,12 @@ description: 'Erfahren Sie, wie Sie Aktivitätsfeedbenachrichtigungen für Ihre 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558009"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919767"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Entwerfen von Aktivitätsfeedbenachrichtigungen für Ihre Microsoft Teams-App
 
@@ -37,7 +37,7 @@ Der Aktivitätsfeed ist eine Oberfläche, auf die Benutzer in Microsoft Teams au
 |3|**Titel (erste Zeile): Akteur + Grund**: *Akteur*: Name des Benutzers oder der App, der die Aktivität initiiert hat. *Grund*: Beschreibt die Aktivität.|
 |4|**Zeitstempel**: Zeigt an, wann die Aktivität stattgefunden hat.|
 |5|**Ort (zweite Zeile):** Zeigt an, wo die Aktivität in Teams stattgefunden hat.|
-|6 |**Textvorschau (dritte Zeile):** Zeigt eine abgeschnittene Zeile vom Anfang der Benachrichtigung an.|
+|6|**Textvorschau (dritte Zeile):** Zeigt eine abgeschnittene Zeile vom Anfang der Benachrichtigung an.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Arten von Aktivitätsfeed-Benachrichtigungskarten
 
@@ -73,6 +73,10 @@ Jede Aktivität generiert eine Systembenachrichtigung. Was angezeigt wird, häng
 |3|Mac|
 
 ---
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung zum Senden von Aktivitätsfeedbenachrichtigungen](../../sbs-graphactivity-feedbroadcast.yml) in Teams.
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841954"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919760"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -134,7 +134,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-| Eigenschaftenname | Zweck |
+| Eigenschaftenname | Beschreibung |
 |---|---|
 | **user.id** | ID des Benutzers. |
 | **user.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers. |
@@ -226,7 +226,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&<completionBotId>=<BOT_APP_ID>"
         }
     },
     "replyToId": "1493070356924"
@@ -235,7 +235,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-| Eigenschaftenname | Zweck |
+| Eigenschaftenname | Beschreibung |
 |---|---|
 | **type** | Aktivitätstyp. |
 | **text** | Der Textinhalt der Nachricht. |
@@ -243,6 +243,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolescher Wert, der angibt, ob dem Benutzer während einer Besprechung eine Benachrichtigung angezeigt werden soll. |
 | **channelData.notification.externalResourceUrl** | Der Wert der externen Ressourcen-URL der Benachrichtigung.|
 | **replyToId** | Die ID der übergeordneten oder Stammnachricht des Threads. |
+| **APP_ID** | Im Manifest deklarierte App-ID. |
+| **completionBotId** | Bot-App-ID |
 
 ### <a name="response-codes"></a>Antwortcodes
 
@@ -491,10 +493,10 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 
 ---
 
-| Eigenschaftenname | Zweck |
+| Eigenschaftenname | Beschreibung |
 |---|---|
 | **details.id** | Die ID der Besprechung, codiert als BASE64-Zeichenfolge. |
-| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph-API-Aufrufe verwendet wird. |
+| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph API-Aufrufe verwendet wird. |
 | **details.scheduledStartTime** | Die geplante Startzeit der Besprechung in UTC. |
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
@@ -899,7 +901,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 }
 ```
 
-| Eigenschaftenname | Zweck |
+| Eigenschaftenname | Beschreibung |
 |---|---|
 | **name** | Der Name des Benutzers.|
 | **type** | Aktivitätstyp. |
