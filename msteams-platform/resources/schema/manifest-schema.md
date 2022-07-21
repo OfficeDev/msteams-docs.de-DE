@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503732"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895496"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -460,7 +460,7 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
-|`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |Array von Enumerationen|6||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
 |`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
@@ -505,7 +505,7 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das Objekt ist ein Array (maximal zwei Elemente), wobei alle Elemente vom Typ `object` sind. Sie müssen für jeden Bereich, den Ihr Bot unterstützt, eine separate Befehlsliste definieren. Weitere Informationen finden Sie unter [Bot-Menüs](~/bots/how-to/create-a-bot-commands-menu.md).
+Eine Liste der Befehle, die Ihr Bot Benutzern empfehlen kann. Das Objekt ist ein Array (maximal zwei Elemente), wobei alle Elemente vom Typ `object` sind. Sie müssen für jeden Bereich, den Ihr Bot unterstützt, eine separate Befehlsliste definieren. Weitere Informationen finden Sie unter [Bot-Menüs](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -660,7 +660,10 @@ Gibt an, ob der Ladefortschritt angezeigt werden soll, während eine App oder Re
 Gibt an, ob eine persönliche App ohne Registerkartenkopfleiste gerendert wird (was den Vollbildmodus anzeigt). Der Standardwert ist **false**.
 
 > [!NOTE]
-> `isFullScreen` funktioniert nur für Apps, die in Ihrer Organisation veröffentlicht wurden.
+>
+> * `isFullScreen` funktioniert nur für Apps, die in Ihrer Organisation veröffentlicht wurden. Quergeladene und veröffentlichte Drittanbieter-Apps können diese Eigenschaft nicht verwenden. (Sie wird ignoriert.)
+>
+> * `isFullScreen=true` entfernt die von Teams bereitgestellte Kopfzeile und den Titel aus persönlichen Apps und Aufgabenmoduldialogfeldern.
 
 ## <a name="activities"></a>Aktivitäten
 
