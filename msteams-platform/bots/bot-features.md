@@ -5,12 +5,12 @@ description: In diesem Artikel lernen Sie Tools und SDKs zum Erstellen von Micro
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485685"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912254"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -20,7 +20,6 @@ Mit den folgenden Tools oder Funktionen können Sie einen Bot für die Verwendun
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks und Connectors](#bots-with-webhooks-and-connectors)
-* [Azure Bot-Dienst](#azure-bot-service)
 
 ## <a name="bots-with-the-microsoft-bot-framework"></a>Bots mit Microsoft Bot Framework
 
@@ -52,107 +51,6 @@ Ihr Teams-Bot besteht aus folgenden Komponenten:
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots mit Webhooks und Connectors
 
 Webhooks und Connectors verbinden Ihren Bot mit Ihren Webdiensten. Mit Webhooks und Connectors können Sie einen Bot für grundlegende Interaktionen erstellen, wie das Erstellen eines Workflows oder andere einfache Befehle. Sie sind nur in dem Team verfügbar, in dem Sie sie erstellen, und sind für einfache Prozesse vorgesehen, die für den Workflow Ihres Unternehmens spezifisch sind. Unter [Was sind Webhooks und Connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) finden Sie weitere Informationen.
-
-## <a name="azure-bot-service"></a>Azure Bot-Dienst
-
-Der Azure-Bot-Dienst bietet zusammen mit dem Bot Framework Tools zum Erstellen, Testen, Bereitstellen und Verwalten intelligenter Bots an einem zentralen Ort. Sie können Ihren Bot auch im Azure-Bot-Dienst erstellen.
-
-> [!IMPORTANT]
-> Bot-Anwendungen in Microsoft Teams sind in GCC-High über [Azure Bot Service](/azure/bot-service/channel-connect-teams) verfügbar.
-
-> [!NOTE]
->
-> * Bots in GCCH unterstützen nur bis zur Manifestversion v1.10.
-> * Bild-URLs in adaptiven Karten werden in der GCCH-Umgebung nicht unterstützt. Sie können eine Bild-URL durch Base64-codierten DataUri ersetzen.
-> * Bei der Registrierung des Botkanals in Azure Government werden Web-App-Bots, App-Dienste (App-Serviceplan) und Anwendungserkenntnisse bereitgestellt, die Bereitstellung des Azure-Bot-Diensts wird jedoch nicht unterstützt (kein App-Dienst).
->   <details>
->   <summary><b>Wenn Sie nur eine Bot-Registrierung durchführen möchten</b></summary>
->
->   * Wechseln Sie zur Ressourcengruppe, und löschen Sie die nicht verwendeten Ressourcen manuell. Beispielsweise der App-Dienst, der App-Serviceplan (wenn Sie während der Bot-Registrierung erstellt haben) und die Anwendungserkenntnisse (wenn Sie ihn während der Bot-Registrierung aktivieren).
->   * Sie können az-cli auch für die Bot-Registrierung verwenden:
->
->     1. Melden Sie sich bei Azure an, und legen Sie das Abonnement fest. <br>
->           &nbsp; az cloud set –name "AzureUSGovernment" <br>
->           &nbsp; az account set –name "`subscriptionname/id`".<br>
->     1. Erstellen einer App-Registrierung  
->           &nbsp; az ad app create --display-name "`name`" <br>
->           &nbsp; --password "`password`" --available-to-other-tenants.<br>
->           Ihre App-ID würde hier erstellt.<br>
->     1. Erstellen einer Botressource <br>
->           &nbsp; az bot create –resource-group "`resource-group`"<br>
->           &nbsp; --appid "`appid`"<br>
->           &nbsp; --name "`botid`"<br>
->           &nbsp; --Art "Registrierung".<br>
->
-> </details>
-
-Für die GCCH-Umgebung müssen Sie einen Bot über [Azure Government Portal](https://portal.azure.us) registrieren.
-
-:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Government Portal":::
-<br>
-<br>
-Die folgenden Änderungen sind im Bot für GCC-High Umgebung erforderlich:
-<br>
-<br>
-<details>
-<summary><b>Konfigurationsänderungen</b></summary>
-
-Wenn die Bot-Registrierung in Azure Government Portal erfolgt, müssen Sie die Bot-Konfigurationen aktualisieren, um eine Verbindung mit Azure-Govermnet-Instanzen herzustellen. Im Folgenden finden Sie die Konfigurationsdetails:
-
-| Konfigurationsname | Value |
-|----|----|
-| ChannelService | `https://botframework.azure.us` |
-| OAuthUrl | `https://tokengcch.botframework.azure.us` |
-| ToChannelFromBotLoginUrl | `https://login.microsoftonline.us/MicrosoftServices.onmicrosoft.us` |
-| ToChannelFromBotOAuthScope | `https://api.botframework.us` |
-| ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
-| BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
-
-</details>
-<br>
-<details>
-<summary><b>Aktualisieren auf "appsettings.json" & "startup.cs"</b></summary>
-
-1. **appsettings.json aktualisieren:**
-
-    * Legen Sie `ConnectionName` auf den Namen der OAuth-Verbindungseinstellung fest, die Sie Ihrem Bot hinzugefügt haben.
-
-    * Legen Sie `MicrosoftAppId` und `MicrosoftAppPassword` auf die App-ID und den geheimen App-Schlüssel Ihres Bots fest.
-
-    Abhängig von den Zeichen in Ihrem geheimen Botschlüssel müssen Sie das Kennwort möglicherweise mit XML-ESCAPEZEICHEN versehen. Beispielsweise müssen alle kaufmännischen Und-Zeichen (&) als `&amp;`codiert werden.
-
-    ```json
-    {
-      "MicrosoftAppType": "",
-      "MicrosoftAppId": "",
-      "MicrosoftAppPassword": "",
-      "MicrosoftAppTenantId": "",
-      "ConnectionName": ""
-    }
-    ```
-
-2. **Startup.cs aktualisieren:**
-
-    Um OAuth in *nicht öffentlichen Azure-Clouds* wie der Government Cloud oder in Bots mit Datenaufbewahrung zu verwenden, müssen Sie den folgenden Code in der Datei **"Startup.cs** " hinzufügen.
-
-    ```csharp
-    string uri = "<uri-to-use>";
-    MicrosoftAppCredentials.TrustServiceUrl(uri);
-    OAuthClientConfig.OAuthEndpoint = uri;
-    ```
-
-    Dabei \<uri-to-use\> ist eine der folgenden URIs:
-
-    |**uri**|**Beschreibung**|
-    |---|---|
-    |`https://europe.api.botframework.com`|Für Public-Cloud-Bots mit Data Residency in Europa.|
-    |`https://unitedstates.api.botframework.com`|Für Public-Cloud-Bots mit Datenaufbewahrung im USA.|
-    |`https://apiGCCH.botframework.azure.us`|Für USA Government-Cloud-Bots ohne Datenaufbewahrung.|
-    |`https://api.botframework.com`|Für Public-Cloud-Bots ohne Datenaufbewahrung. Dies ist der Standard-URI und erfordert keine Änderung an **Startup.cs**.|
-
-3. Die Umleitungs-URL für die App-Registrierung von Azure sollte auf `https://tokengcch.botframework.azure.us/.auth/web/redirect`aktualisiert werden.
-
-</details>
 
 ## <a name="advantages-of-bots"></a>Vorteile von Bots
 
@@ -297,7 +195,7 @@ this.onMessage(async (context, next) => {
 |Beispielname | Beschreibung | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
