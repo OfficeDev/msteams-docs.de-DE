@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659032"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962475"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -617,7 +617,7 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* Registerkarten mit Symbolleiste in der linken Leiste müssen 20 px Abstand zum linken Navigationsbereich von Teams beibehalten. [*Obligatorischer Fix*]
+* Registerkarten mit Symbolleiste in der linken Leiste müssen einen Abstand von 20 Pixeln von der linken Team-Navigation lassen. [*Obligatorischer Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
