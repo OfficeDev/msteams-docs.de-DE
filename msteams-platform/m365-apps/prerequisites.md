@@ -1,16 +1,16 @@
 ---
 title: Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
-description: Erfahren Sie mehr über die Voraussetzungen, die zum Ausführen von Vorabversionen erforderlich sind, um Ihre Teams-Apps auf Microsoft 365 zu erweitern.
+description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen, die zum Ausführen von Vorabversionen erforderlich sind, um Ihre Teams-Apps auf Microsoft 365 zu erweitern.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: d3361cd1b96c674ed6dad61d2989f694071cc28e
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841680"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919739"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
 

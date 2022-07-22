@@ -1,24 +1,24 @@
 ---
 title: Entwerfen Ihrer App mit grundlegenden Komponenten der Fluent-Benutzeroberfläche
 author: heath-hamilton
-description: Lernen Sie die UI-Komponenten kennen, die zum Erstellen von Microsoft Teams-Apps und zum Abrufen des Teams UI Kit verwendet werden. Erfahren Sie mehr über Das Fluent Kit Breadcrumb Button Card Karussell Dropdown Coachmark Picker Pivot Tooltip
+description: Erfahren Sie, wie Sie Microsoft Teams-Apps mithilfe der Fluent-UI-Komponenten aus dem Teams UI Kit entwerfen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4f3295036315819413f262e5a224dd2231eb431d
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557757"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962440"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Entwerfen Ihrer Microsoft Teams-App mit grundlegenden Komponenten der Fluent-Benutzeroberfläche
 
-Sie können Ihre Teams-App mit den folgenden grundlegenden Fluent-UI-Komponenten von Grund auf neu erstellen. Diese Komponenten sind so flach wie möglich und können in verschiedenen Anwendungsfällen, Designs und Bildschirmgrößen verwendet werden.
+Sie können Ihre Teams-App mit den folgenden grundlegenden Fluent-UI-Komponenten von Grund auf neu entwerfen und erstellen. Diese Komponenten sind so flach wie möglich und können in verschiedenen Anwendungsfällen, Designs und Bildschirmgrößen verwendet werden.
 
 Die Abbildungen auf dieser Seite zeigen, wie Komponenten in standardmäßigen (hellen) und dunklen Designs von Teams aussehen.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
 
 Basierend auf der <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent-Benutzeroberfläche</a> enthält das Microsoft Teams UI Kit Komponenten und Muster, die speziell für die Erstellung von Teams-Apps entwickelt wurden. Im UI-Kit können Sie die hier aufgeführten Komponenten direkt in Ihr Design aufnehmen und einfügen und weitere Beispiele für die Verwendung der einzelnen Komponenten anzeigen.
 

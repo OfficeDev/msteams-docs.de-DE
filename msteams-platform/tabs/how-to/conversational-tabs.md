@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Unterhaltungsunterentitätsch
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841982"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962419"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -52,9 +52,12 @@ Die folgende Abbildung zeigt den Unterhaltungsbereich:
 Wenn der Benutzer eine Unterhaltung startet, ist es wichtig, auf den Rückruf dieses Ereignisses zu lauschen, um die **conversationId** abzurufen und zu speichern:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 Das `conversationResponse` Objekt enthält Informationen im Zusammenhang mit der Unterhaltung, die gestartet wurde. Es wird empfohlen, alle Eigenschaften dieses Antwortobjekts zur späteren Verwendung zu speichern.
@@ -81,19 +84,22 @@ Sie können die Unterhaltungsansicht manuell schließen, indem Sie die `closeCon
 microsoftTeams.conversations.closeConversation();
 ```
 
-Sie können auch auf ein Ereignis lauschen, wenn die Unterhaltungsansicht von einem Benutzer geschlossen wird.
+Sie können auch auf ein Ereignis lauschen, wenn die Benutzer in der Unterhaltungsansicht **"Schließen" (X)** auswählen.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

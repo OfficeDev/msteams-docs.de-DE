@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, was Kartentextformatierung in Microso
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144208"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962433"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 

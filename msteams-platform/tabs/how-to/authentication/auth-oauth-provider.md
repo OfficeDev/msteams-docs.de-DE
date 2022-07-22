@@ -3,12 +3,12 @@ title: Verwenden externer OAuth-Anbieter
 description: In diesem Modul erfahren Sie, wie Sie die Authentifizierung mit externen OAuth-Anbietern durchführen und sie einem externen Browser hinzufügen
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 487e9c07615f3ed23f5ca43e5c7e6e4a98b8d0eb
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 00b722b2b8fd61e3c8fd620ae7bd277da0e7a89b
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830785"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962412"
 ---
 # <a name="use-external-oauth-providers"></a>Verwenden externer OAuth-Anbieter
 
@@ -110,7 +110,7 @@ Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu exte
       ```JavaScript
       const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
-         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
+         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}')
       }
       else {
       // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web

@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie das Entfernen von Registerkartenr
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558282"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962426"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 
@@ -38,9 +38,9 @@ Nein, Sie müssen einen eigenen Abstand oder eigene Ränder links und rechts neb
 
 **Wie groß sind die Registerkartenränder, die Zuvor von Teams angewendet wurden?**
 
-* Links und rechts: 20 px
-* Oben: 16 px
-* Unten: 0 px
+* Links und rechts: 20 Pixel
+* Oben: 16 Pixel
+* Unten: 0 Pixel
 
 > [!IMPORTANT]
 >
