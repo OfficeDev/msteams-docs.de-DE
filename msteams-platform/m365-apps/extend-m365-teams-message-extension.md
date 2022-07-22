@@ -1,16 +1,16 @@
 ---
 title: Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
-description: Erfahren Sie, wie Sie die suchbasierte Teams-Nachrichtenerweiterung durch Aktualisierung des App-Manifests für die Ausführung in Outlook aktualisieren, einen Outlook-Kanal hinzufügen und eine aktualisierte App querladen.
+description: In diesem Artikel erfahren Sie, wie Sie die suchbasierte Teams-Nachrichtenerweiterung für die Ausführung in Outlook aktualisieren, indem Sie das Anwendungsmanifest aktualisieren, einen Outlook-Kanal hinzufügen und die aktualisierte Anwendung per Sideloading installieren.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190202"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919732"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
 

@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842031"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919837"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -36,6 +36,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 21.07.2022 | Schritt-für-Schritt-Anleitung zum Senden von Aktivitäts-Feed-Benachrichtigungen eingeführt | Designen Sie Ihre App > UI-Komponenten> Aktivitätsfeedbenachrichtigungen > [Aktivitätsfeedbenachrichtigungen senden](sbs-graphactivity-feedbroadcast.yml) |
 | 08.07.2022| Updates zum Senden der Kanal-ID an Bots, die vom Benutzer während der App-Installation über Konversations- und Installationsupdateereignisse ausgewählt wurde |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 16.06.2022 | Aktualisierte Medienfunktionen zur Unterstützung von Desktop und Mobilgeräten| Integrieren von Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | Optionales Kartenfeedback für Erfolgsmeldungen| Bots erstellen > Bot-Unterhaltungen >[Nachrichten in Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
