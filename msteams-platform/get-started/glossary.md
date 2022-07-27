@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737384"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035156"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -49,7 +49,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Bot aufrufen](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Ein Bot, der an Audio- oder Videoanrufen und Online-Besprechungen teilnimmt. <br> **Weitere Informationen unter**: [Chat-Bot](#c); [Besprechungsbot](#m) |
 | [Funktionalität](../toolkit/add-capability.md) | Ein Teams Feature, das Sie in Ihre App für die Interaktion mit App-Benutzern integrieren können. Eine App-Funktion wird verwendet, um Teams an Ihre App-Anforderungen anzupassen. Eine App kann über eine oder mehrere Kernfunktionen verfügen, z. B. Registerkarte, Bot und Nachrichtenerweiterung. <br>**Weitere Informationen unter**: [Gerätefunktion](#d); [Medienfunktion](#m) |
-| [Chat-Bot](../bots/how-to/conversations/conversation-basics.md) | Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. <br> **Weitere Informationen unter**: [Unterhaltungs-Bot](#c) |
+| [Chat-Bot](../bots/how-to/conversations/conversation-basics.md) | Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben für Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. <br> **Weitere Informationen unter**: [Unterhaltungs-Bot](#c) |
 | Kanal | Ein zentraler Ort, an dem ein Team Nachrichten, Tools und Dateien gemeinsam nutzen kann. Sie können einen Kanal für Teamarbeit und Kommunikation verwenden. <br>**Weitere Informationen unter**: [Unterhaltung](#c) |
 | [Geheimer Clientschlüssel](../bots/how-to/authentication/add-authentication.md) | Der geheime Clientschlüssel/das Kennwort oder ein öffentliches oder privates Schlüsselpaar, bei dem es sich um ein Zertifikat handelt. Nicht erforderlich für systemeigene Apps. <br> **Weitere Informationen unter**: [Bot](#b) |
 | [Cloudressourcen](../toolkit/add-resource.md) | Ein Dienst, der in der Cloud über das Internet verfügbar ist und von Ihrer Teams-App verwendet werden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
@@ -71,7 +71,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Gerätefunktionen](../concepts/device-capabilities/device-capabilities-overview.md) | Integrierte Geräte, z. B. Kamera, Mikrofon, Strichcodescanner, Fotogalerie auf Mobilgeräten oder Desktops. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. <br>**Weitere Informationen unter**: [Funktion](#c); [Medienfunktion](#m); [Standortfunktion](#l) |
 | [Geräteberechtigung](../concepts/device-capabilities/browser-device-permissions.md) | Eine Teams App-Einstellung, die Sie in Ihrer App konfigurieren können. Sie verwenden diese, um die Berechtigung für Ihre App anzufordern, auf eine systemeigene Gerätefunktion zuzugreifen und diese zu nutzen. Sie können Geräteberechtigungen in Team- Einstellungen verwalten. <br>**Weitere Informationen unter**: [App-Berechtigungen](#a) |
 | [Entwicklungsumgebung](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Ein Entwicklungsumgebungstyp, den das Teams Toolkit standardmäßig erstellt. Es stellt Konfigurationen der Remote- oder Cloudumgebung dar. Ein Projekt kann mehrere Remoteumgebungen aufweisen. Mit Teams Toolkit können Sie Ihrem Projekt weitere Entwicklungsumgebungen hinzufügen. <br>**Weitere Informationen unter** [Umgebung](#e); [Lokale Umgebung](#l) |
-| [DevTools](../tabs/how-to/developer-tools.md) | Die Devtools des Browsers werden verwendet, um Konsolenprotokolle anzuzeigen, Laufzeitnetzwerkanforderungen anzuzeigen oder zu ändern, Code (JavaScript) Haltepunkte hinzuzufügen und interaktives Debuggen für eine Teams App durchzuführen. Das Feature ist nur für Desktop- und Android-Clients verfügbar, nachdem die Entwicklervorschau aktiviert wurde. |
+| [DevTools](../tabs/how-to/developer-tools.md) | Die DevTools des Browsers werden verwendet, um Konsolenprotokolle anzuzeigen, Laufzeitnetzwerkanforderungen anzuzeigen oder zu ändern, Code (JavaScript) Haltepunkte hinzuzufügen und interaktives Debuggen für eine Teams App durchzuführen. Das Feature ist nur für Desktop- und Android-Clients verfügbar, nachdem die Entwicklervorschau aktiviert wurde. |
 | [Dynamische Suche](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | Ein Suchfeature für adaptive Karten, das hilfreich ist, um Daten aus großen Datasets zu suchen und auszuwählen. Es hilft beim Herausfiltern der Auswahl, wenn der Benutzer die Suchzeichenfolge eingibt. <br>**Weitere Informationen unter**: [Statische Suche](#s) |
 
 ## <a name="e"></a>E

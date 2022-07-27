@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aufgabenmodule für Ihre Team
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 07dd0457d49b167226da2fa10e91d87e6f674b6f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558114"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035268"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App
 
@@ -64,7 +64,7 @@ Sie können auch mit dem Framework für [Adaptive Karten](../../task-modules-and
 |3|**Kopfzeile**: Erstellen Sie Ihre Kopfzeilen klar und präzise. Beschreiben Sie die Aufgabe, die Benutzer ausführen sollen.
 |4|**Schaltfläche „Schließen“**: Schließt das Aufgabenmodul. Wendet keine ungespeicherten Änderungen in App-Inhalten an.|
 |5|**iFrame**: Reaktionsfähiger Bereich, der Ihre App-Inhalte hostet.|
-|6 |**Aktionen (optional)**: Schaltflächen im Zusammenhang mit Ihren App-Inhalten.|
+|6|**Aktionen (optional)**: Schaltflächen im Zusammenhang mit Ihren App-Inhalten.|
 
 ## <a name="designing-with-ui-templates"></a>Entwerfen mit Benutzeroberflächenvorlagen
 
