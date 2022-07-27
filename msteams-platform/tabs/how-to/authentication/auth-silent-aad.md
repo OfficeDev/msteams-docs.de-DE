@@ -3,14 +3,14 @@ title: Automatische Authentifizierung
 description: In diesem Modul erfahren Sie, wie Sie automatische Authentifizierung, einmaliges Anmelden und Azure AD für Registerkarten durchführen und wie es funktioniert
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503627"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035310"
 ---
-# <a name="use-silent-authentication-in-azure-ad"></a>Verwenden der automatischen Authentifizierung in Azure AD
+# <a name="use-silent-authentication-in-azure-ad"></a>Stille Authentifizierung in Azure AD verwenden
 
 > [!IMPORTANT]
 > Der Support und die Entwicklung von Microsoft für die Active Directory-Authentifizierungsbibliothek (ADAL) einschließlich der Sicherheitsfixes endet am **30. Juni 2022**. Um weiterhin Support zu erhalten, aktualisieren Sie Ihre Anwendungen so, dass microsoft Authentication Library (MSAL) verwendet wird. Siehe [Migrieren von Anwendungen zur Microsoft-Authentifizierungsbibliothek (MSAL).](/azure/active-directory/develop/msal-migration)
@@ -138,7 +138,7 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Konfigurieren von Identitätsanbietern für die Verwendung von Azure AD](../../../concepts/authentication/configure-identity-provider.md)
 * [Informationen zur Microsoft-Authentifizierungsbibliothek (MSAL)](/azure/active-directory/develop/msal-overview)

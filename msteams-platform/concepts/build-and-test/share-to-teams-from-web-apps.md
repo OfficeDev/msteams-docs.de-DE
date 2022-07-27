@@ -3,12 +3,12 @@ title: Von Web-Apps für Teams freigeben
 description: Informationen zum Hinzufügen der eingebetteten Schaltfläche "Zu Teams teilen" auf Ihrer Website mit einer Websitevorschau unter Verwendung von Codebeispielen
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558478"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035317"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
@@ -38,7 +38,6 @@ Im folgenden Video erfahren Sie, wie Sie die Schaltfläche "In Teams teilen" ein
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
-
 
 ## <a name="embed-a-share-to-teams-button"></a>Einbetten einer Schaltfläche "In Teams teilen"
 
@@ -117,7 +116,7 @@ Sie können entweder die HTML-Standardversionen oder die Open Graph-Version verw
 
 Für Lehrer, die die Schaltfläche "In Teams teilen" verwenden, gibt es eine zusätzliche Option `Create an Assignment` , mit der Sie schnell eine Aufgabe im ausgewählten Team basierend auf dem freigegebenen Link erstellen können. Die folgende Abbildung zeigt "In Teams für Bildungseinrichtungen freigeben":
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Für Teams-Popupschulung freigeben":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Freigeben für Teams-Popupschulungen":::
 
 ## <a name="full-launcherjs-definition"></a>Vollständige launcher.js Definition
 

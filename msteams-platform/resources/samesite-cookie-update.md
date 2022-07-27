@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über verschiedene Arten von Cookies, einschließ
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8f61788779d34183f7000271245e683f2750f739
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142731"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035324"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite-Cookieattribut
 
@@ -60,7 +60,7 @@ SameSite-Cookieattribute:
 ### <a name="tabs-task-modules-and-message-extensions"></a>Registerkarten, Aufgabenmodule und Nachrichtenerweiterungen
 
 * In Microsoft Teams-Registerkarten werden `<iframes>` verwendet, um Inhalte einzubetten, die in einem Kontext der obersten Ebene oder des Erstanbieters angezeigt werden.
-* Aufgabenmodule ermöglichen Ihnen das Erstellen von modalen Popup-Oberflächen in Ihrer Teams-Anwendung. Ähnlich wie bei einer Registerkarte wird innerhalb der aktuellen Seite ein modales Fenster geöffnet.
+* Aufgabenmodule ermöglichen es Ihnen, modale Popupoberflächen in Ihrer Teams-Anwendung zu erstellen. Ähnlich wie bei einer Registerkarte wird innerhalb der aktuellen Seite ein modales Fenster geöffnet.
 * Mithilfe von Nachrichtenerweiterungen können Sie vielfältige Inhalte aus externen Ressourcen in eine Chatnachricht einfügen.
 
 Cookies, die von eingebetteten Inhalten verwendet werden, werden als Drittanbieter-Cookies betrachtet, wenn die Website in einem `<iframe>` angezeigt wird. Wenn Remote-Ressourcen auf einer Seite darauf angewiesen sind, dass Cookies mit einer `<img>`-Anforderung und `<script>`-Tags, externen Schriftarten und personalisierten Inhalten gesendet werden, müssen Sie sicherstellen, dass diese für die websiteübergreifende Nutzung gekennzeichnet sind, z. B. `SameSite=None; Secure`, oder sicherstellen, dass ein Fallback vorhanden ist.

@@ -1,18 +1,18 @@
 ---
-title: Erstellen und Senden eines Aufgabenmoduls
+title: Aufgabenmodul erstellen und versenden
 author: surbhigupta
 description: In diesem Modul erfahren Sie, wie Sie die erste Aufrufaktion behandeln und mit einem Aufgabenmodul über einen Aktions-Messaging-Erweiterungsbefehl antworten.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a7ab29456605f7465dfba24cf58059fc173c883e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503340"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035184"
 ---
-# <a name="create-and-send-task-module"></a>Erstellen und Senden eines Aufgabenmoduls
+# <a name="create-and-send-task-module"></a>Aufgabenmodul erstellen und versenden
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -648,7 +648,7 @@ Antworten Sie auf die Aufrufanforderung mit einem `task`-Objekt, das ein `taskIn
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Dies kann entweder `continue` zum Darstellen eines Formulars oder `message` für ein einfaches Popup sein. |
+|`type`| Dies kann entweder `continue` das Präsentieren eines Formulars oder `message` ein einfaches Popup sein. |
 |`value`| Entweder ein `taskInfo`-Objekt für ein Formular oder ein `string`-Objekt für eine Nachricht. |
 
 Das Schema für das taskInfo-Objekt ist wie folgt:

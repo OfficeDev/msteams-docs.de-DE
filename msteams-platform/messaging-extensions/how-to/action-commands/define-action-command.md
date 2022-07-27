@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919844"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035289"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -19,7 +19,7 @@ ms.locfileid: "66919844"
 > [!NOTE]
 > Wenn eine Nachrichtenaktion initiiert wird, werden Anlagendetails nicht als Teil der `turncontext` Aufrufaktivität gesendet.
 
-Aktionsbefehle ermöglichen es Ihnen, Ihren Benutzern ein modales Popup zu präsentieren, das in Teams als Aufgabenmodul bezeichnet wird. Das Aufgabenmodul sammelt Informationen oder zeigt diese an, verarbeitet die Interaktion und sendet die Informationen an Teams zurück. In diesem Dokument erfahren Sie, wie Sie Speicherorte zum Aufrufen des Aktionsbefehls auswählen, ein Aufgabenmodul erstellen, die endgültige Nachricht oder Karte senden sowie einen Aktionsbefehl mit App Studio oder manuell erstellen.
+Aktionsbefehle ermöglichen es Ihnen, Ihren Benutzern ein modales Popup zu präsentieren, das als Aufgabenmodul in Teams bezeichnet wird. Das Aufgabenmodul sammelt Informationen oder zeigt diese an, verarbeitet die Interaktion und sendet die Informationen an Teams zurück. In diesem Dokument erfahren Sie, wie Sie Speicherorte zum Aufrufen des Aktionsbefehls auswählen, ein Aufgabenmodul erstellen, die endgültige Nachricht oder Karte senden sowie einen Aktionsbefehl mit App Studio oder manuell erstellen.
 
 Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festlegen:
 

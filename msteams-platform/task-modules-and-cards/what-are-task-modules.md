@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie modale Popupoberflächen hinz
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23d6a0f1645fefe66544c755ddb617eba9ea8f3e
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143599"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035296"
 ---
 # <a name="task-modules"></a>Aufgabenmodule
 
@@ -22,12 +22,12 @@ Mit Aufgabenmodulen können Sie modale Pop-up-Erlebnisse in Ihrer Teams-Anwendun
 
 Aufgabenmodule eignen sich zum Initiieren und Abschließen von Aufgaben oder zum Anzeigen umfangreicher Informationen, z. B. Videos oder Power Business Intelligence (BI)-Dashboards. Eine Popup-Erfahrung ist für Benutzer, die Aufgaben initiieren und ausführen, im Vergleich zu einer Registerkarte oder einer unterhaltungsbasierten Bot-Erfahrung oft natürlicher.
 
-Aufgabenmodule bauen auf Microsoft Teams Registerkarten auf. Sie sind im Wesentlichen eine Registerkarte in einem Popupfenster. Sie verwenden dasselbe SDK. Wenn Sie also eine Registerkarte erstellt haben, sind Sie bereits mit dem Erstellen eines Aufgabenmoduls vertraut.
+Aufgabenmodule bauen auf der Grundlage von Microsoft Teams-Registerkarten auf. Sie sind im Wesentlichen eine Registerkarte in einem Popupfenster. Sie verwenden dasselbe SDK. Wenn Sie also eine Registerkarte erstellt haben, sind Sie bereits mit dem Erstellen eines Aufgabenmoduls vertraut.
 
 Aufgabenmodule können auf drei Arten aufgerufen werden:
 
-* Kanal- oder persönliche Registerkarten: Mit dem Microsoft Teams Tabs SDK können Sie Aufgabenmodule über Schaltflächen, Links oder Menüs auf Ihrer Registerkarte aufrufen. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-* Bots: Verwenden von Schaltflächen auf [Karten](~/task-modules-and-cards/cards/cards-reference.md) , die von Ihrem Bot gesendet wurden. Dies ist nützlich, wenn Sie nicht verlangen, dass jeder in einem Kanal sehen kann, was Sie mit einem Bot tun. Wenn Benutzer beispielsweise auf eine Umfrage in einem Kanal antworten, ist es nicht hilfreich, einen Datensatz dieser Umfrage anzuzeigen, der erstellt wird. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen aus Teams Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* Kanal- oder persönliche Registerkarten: Mithilfe des Microsoft Teams Tabs SDK können Sie Aufgabenmodule über Schaltflächen, Links oder Menüs auf Ihrer Registerkarte aufrufen. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen auf Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Bots: Verwenden von Schaltflächen auf [Karten](~/task-modules-and-cards/cards/cards-reference.md) , die von Ihrem Bot gesendet wurden. Dies ist nützlich, wenn Sie nicht verlangen, dass jeder in einem Kanal sehen kann, was Sie mit einem Bot tun. Wenn Benutzer beispielsweise auf eine Umfrage in einem Kanal antworten, ist es nicht hilfreich, einen Datensatz dieser Umfrage anzuzeigen, der erstellt wird. Weitere Informationen finden Sie [unter Verwenden von Aufgabenmodulen aus Teams-Bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 * Außerhalb von Teams über einen Deep-Link: Sie können auch URLs erstellen, um ein Aufgabenmodul von überall aus aufzurufen. Weitere Informationen finden Sie in der [Deep Link-Syntax des Aufgabenmoduls](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Komponenten eines Aufgabenmoduls

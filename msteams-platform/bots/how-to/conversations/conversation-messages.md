@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mithilfe von Codebeispielen eine Unterhaltung
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695299"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035196"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -195,6 +195,38 @@ async def on_members_added_activity(
 > Die Nachrichtenaufteilung erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird von Microsoft Teams in separate Aktivitäten unterteilt, eine mit nur einer Textnachricht und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie als Antwort keine Nachrichten-ID, die verwendet wird, um die Nachricht proaktiv zu [aktualisieren oder zu löschen](~/bots/how-to/update-and-delete-bot-messages.md) . Es wird empfohlen, getrennte Aktivitäten zu senden, anstatt je nach Nachrichtenteilung.
 
 Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne Kanaldaten innerhalb der Nachricht. Diese Daten ermöglichen es dem Bot, in diesem Kanal ordnungsgemäß zu kommunizieren. Mit dem Bot Builder SDK können Sie die Nachrichtenstruktur ändern.
+
+## <a name="send-suggested-actions"></a>Vorgeschlagene Aktionen senden
+
+Vorgeschlagene Aktionen ermöglichen es Ihrem Bot, Schaltflächen darzustellen, die der Benutzer auswählen kann, um Eingaben bereitzustellen. Vorgeschlagene Aktionen verbessern die Benutzerfreundlichkeit, indem sie es dem Benutzer ermöglichen, eine Frage zu beantworten oder eine Auswahl mit einer Schaltfläche zu treffen, anstatt eine Antwort mit einer Tastatur einzugeben. Die Schaltflächen bleiben in den Rich-Karten für den Benutzer sichtbar und zugänglich, auch nachdem der Benutzer eine Auswahl getroffen hat, während für vorgeschlagene Aktionen keine Schaltflächen verfügbar sind. Dadurch wird verhindert, dass der Benutzer veraltete Schaltflächen in einer Unterhaltung auswährt.
+
+Wenn Sie einer Nachricht vorgeschlagene Aktionen hinzufügen möchten, legen Sie die `suggestedActions` Eigenschaft des [Activity-Objekts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) fest, um die Liste der [CardAction-Objekte](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) anzugeben, die die Schaltflächen darstellen, die dem Benutzer angezeigt werden sollen. Weitere Informationen finden Sie unter [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+Es folgt ein Beispiel für die Implementierung und Erfahrung mit vorgeschlagenen Aktionen:
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot vorgeschlagene Aktionen" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` werden nur für 1:1-Chat-Bots und textbasierte Nachrichten und nicht für adaptive Karten oder Anlagen unterstützt.
+> * Derzeit `imBack` ist der einzige unterstützte Aktionstyp, und Teams zeigt bis zu drei vorgeschlagene Aktionen an.
 
 ## <a name="teams-channel-data"></a>Teams-Kanaldaten
 
@@ -427,14 +459,14 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 
 |Beispielname | Beschreibung | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
 > [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

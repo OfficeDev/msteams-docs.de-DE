@@ -5,19 +5,19 @@ description: In diesem Modul lernen Sie Messaging-Erweiterungen und Szenarien ke
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: af67eb36d89903f22a8479e04ed22134b7741c80
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189796"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035170"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 
-Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion in Form einer reich formatierten Karte an den Teams Client zurücksenden.
+Nachrichtenerweiterungen ermöglichen den Benutzern die Interaktion mit Ihrem Webdienst über Schaltflächen und Formulare im Microsoft Teams-Client. Sie können in einem externen System über den Nachrichtenbereich „Verfassen“, das Befehlsfeld oder direkt aus einer Nachricht heraus suchen oder Aktionen starten. Sie können die Ergebnisse dieser Interaktion in Form einer reich formatierten Karte an den Teams-Client zurücksenden.
 
 > [!IMPORTANT]
-> Nachrichtenerweiterungen sind in Government Community Cloud(GCC)- und GCC-High-Umgebungen verfügbar, jedoch nicht in der DoD-Umgebung (Department of Defense).
+> Nachrichtenerweiterungen sind in Government Community Cloud (GCC) und GCC-High Umgebungen verfügbar, jedoch nicht in der DoD-Umgebung (Department of Defense).
 
 Dieses Dokument bietet einen Überblick über die Nachrichtenerweiterung, Aufgaben, die in verschiedenen Szenarien ausgeführt werden, das Arbeiten mit Nachrichtenerweiterungen, Aktions- und Suchbefehle sowie die Verbreitung von Links.
 
@@ -43,7 +43,7 @@ Eine Nachrichtenerweiterung besteht aus einem Webdienst, den Sie hosten, und ein
 > [!NOTE]
 > Obwohl Sie den Webdienst manuell erstellen können, verwenden Sie das[Bot Framework SDK](https://github.com/microsoft/botframework-sdk), um mit dem Protokoll zu arbeiten.
 
-Im App-Manifest für Teams App wird eine einzelne Nachrichtenerweiterung mit bis zu zehn verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von denen aus er aufgerufen wird. Die Aufruforte sind der Nachrichtenbereich „Verfassen“, die Befehlsleiste und die Nachricht. Beim Aufruf empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast einschließlich aller relevanten Informationen. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann.
+Im App-Manifest für Die Teams-App wird eine einzelne Nachrichtenerweiterung mit bis zu 10 verschiedenen Befehlen definiert. Jeder Befehl definiert einen Typ, z. B. Aktion oder Suche, und die Speicherorte im Client, von denen aus er aufgerufen wird. Die Aufruforte sind der Nachrichtenbereich „Verfassen“, die Befehlsleiste und die Nachricht. Beim Aufruf empfängt der Webdienst eine HTTPS-Nachricht mit einer JSON-Nutzlast einschließlich aller relevanten Informationen. Antworten Sie mit einer JSON-Nutzlast, sodass der Teams-Client die nächste zu aktivierende Interaktion kennen kann.
 
 ## <a name="types-of-message-extension-commands"></a>Typen von Befehlen für Nachrichtenerweiterungen
 
@@ -51,7 +51,7 @@ Es gibt zwei Typen von Befehlen für Nachrichtenerweiterungen: Aktionsbefehl und
 
 ### <a name="action-commands"></a>Aktionsbefehle
 
-Aktionsbefehle werden verwendet, um den Benutzern ein modales Popup zum Sammeln oder Anzeigen von Informationen präsentieren. Wenn der Benutzer das Formular übermittelt, antwortet Ihr Webdienst, indem er eine Nachricht direkt in die Unterhaltung einfügt oder eine Nachricht in den Nachrichtenbereich „Verfassen“ einfügt. Danach kann der Benutzer die Nachricht übermitteln. Sie können mehrere Formulare für komplexere Workflows miteinander verketten.
+Aktionsbefehle werden verwendet, um benutzern ein modales Popup zum Sammeln oder Anzeigen von Informationen zu präsentieren. Wenn der Benutzer das Formular übermittelt, antwortet Ihr Webdienst, indem er eine Nachricht direkt in die Unterhaltung einfügt oder eine Nachricht in den Nachrichtenbereich „Verfassen“ einfügt. Danach kann der Benutzer die Nachricht übermitteln. Sie können mehrere Formulare für komplexere Workflows miteinander verketten.
 
 Die Aktionsbefehle werden aus dem Nachrichtenbereich „Verfassen“, aus dem Befehlsfeld oder aus einer Nachricht heraus ausgelöst. Wenn der Befehl von einer Nachricht aus aufgerufen wird, enthält die ursprüngliche JSON-Nutzlast, die an Ihren Bot gesendet wird, die gesamte Nachricht, von der aus sie aufgerufen wurde. Die folgende Abbildung zeigt das Aufgabenmodul für die Nachrichtenerweiterungsaktion:
 
@@ -61,7 +61,7 @@ Die Aktionsbefehle werden aus dem Nachrichtenbereich „Verfassen“, aus dem Be
 
 Mit den Suchbefehlen können die Benutzer ein externes System nach Informationen durchsuchen, entweder manuell über ein Suchfeld oder indem sie einen Link zu einer überwachten Domäne in den Bereich zum Verfassen von Nachrichten einfügen und die Ergebnisse der Suche in eine Nachricht einfügen. Im einfachsten Suchbefehlsfluss enthält die anfängliche Aufrufnachricht die vom Benutzer übermittelte Suchzeichenfolge. Sie antworten mit einer Liste von Karten und Kartenvorschauen. Der Teams-Client rendert eine Liste der Kartenvorschauen für den Benutzer. Wenn der Benutzer eine Karte aus der Liste auswählt, wird sie in voller Größe in den Nachrichtenbereich „Verfassen“ eingefügt.
 
-Die Karten werden aus dem Nachrichtenbereich „Verfassen“ oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht durch eine Nachricht ausgelöst werden.
+Die Karten werden aus dem Nachrichtenbereich „Verfassen“ oder dem Befehlsfeld ausgelöst und nicht von einer Nachricht ausgelöst. Sie können nicht von einer Nachricht ausgelöst werden.
 Im folgenden Bild wird das Aufgabenmodul für die Nachrichtenerweiterung aus Suchbasis angezeigt:
 
 :::image type="content" source="~/assets/images/search-extension.png" alt-text="Suchbefehl für Nachrichtenerweiterung":::
@@ -71,7 +71,7 @@ Im folgenden Bild wird das Aufgabenmodul für die Nachrichtenerweiterung aus Suc
 
 ## <a name="link-unfurling"></a>Verbreiten von Links
 
-Ein Webdienst wird aufgerufen, wenn eine URL in den Nachrichtenbereich „Verfassen“ eingefügt wird. Diese Funktionalität wird als Verbreiten von Links bezeichnet. Sie können abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Nachrichtenbereich „Verfassen“ eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte „verbreiten", wodurch mehr Informationen als die standardmäßige Website-Vorschaukarte bereitgestellt werden. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Teams Client verlassen zu müssen.
+Ein Webdienst wird aufgerufen, wenn eine URL in den Nachrichtenbereich „Verfassen“ eingefügt wird. Diese Funktionalität wird als Verbreiten von Links bezeichnet. Sie können abonnieren, um einen Aufruf zu erhalten, wenn URLs, die eine bestimmte Domäne enthalten, in den Nachrichtenbereich „Verfassen“ eingefügt werden. Ihr Webdienst kann die URL in eine detaillierte Karte „verbreiten", wodurch mehr Informationen als die standardmäßige Website-Vorschaukarte bereitgestellt werden. Sie können Schaltflächen hinzufügen, damit die Benutzer sofort Maßnahmen ergreifen können, ohne den Teams-Client verlassen zu müssen.
 In den folgenden Bildern wird das Feature zum Verbreiten von Links angezeigt, wenn ein Link in die Nachrichtenerweiterung eingefügt wird:
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="Link verbreiten":::
