@@ -5,28 +5,28 @@ description: Zusammenarbeit mit freigegebenen Kanälen.
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 044a5189a626acfcb26631d7d8ee843264401dfe
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 96cd3014fa1cee38832724e1b50cf29db372d711
+ms.sourcegitcommit: d40ea0d504db66d49bbe0955f7031db1cd210056
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058291"
+ms.locfileid: "67060041"
 ---
 # <a name="shared-channels"></a>Freigegebene Kanäle
 
-Freigegebene Kanäle in Teams ermöglichen Mitgliedern eines Kanals die Zusammenarbeit mit Benutzern in anderen Teams und Organisationen. Sie können einen freigegebenen Kanal erstellen und freigeben mit:
+Freigegebene Kanäle in Microsoft Teams ermöglichen Mitgliedern eines Kanals die Zusammenarbeit mit Benutzern in anderen Teams und Organisationen. Sie können einen freigegebenen Kanal erstellen und freigeben mit:
 
 * Mitglieder eines anderen Teams innerhalb derselben Organisation.
 * Personen innerhalb derselben Organisation.
 * Einzelpersonen und andere Teams anderer Organisationen.
 
-Freigegebene Kanäle erleichtern die nahtlose Zusammenarbeit. Ermöglicht externen Benutzern außerhalb Ihrer Organisation die Zusammenarbeit mit internen Benutzern in Teams, ohne ihren Benutzerkontext zu ändern. Verbessert die Benutzerfreundlichkeit im Gegensatz zur Verwendung von Gastkonten, z. B. müssen sich die Mitglieder von Teams abmelden und sich erneut mit einem Gastkonto anmelden. Teams-Anwendungen können jetzt den leistungsstarken Platz für die Zusammenarbeit erweitern.
+Freigegebene Kanäle erleichtern die nahtlose Zusammenarbeit. Ermöglichen Sie externen Benutzern außerhalb Ihrer Organisation die Zusammenarbeit mit internen Benutzern in Teams, ohne ihren Benutzerkontext zu ändern. Verbessern Sie die Benutzerfreundlichkeit im Gegensatz zur Verwendung von Gastkonten, z. B. müssen sich die Mitglieder von Teams abmelden und sich erneut mit einem Gastkonto anmelden. Teams-Anwendungen können jetzt den leistungsstarken Platz für die Zusammenarbeit erweitern.
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Bild &quot;Freigegebener Kanal&quot;"border="true" :::
 
 ## <a name="manifest-update-in-shared-channels"></a>Manifestaktualisierung in freigegebenen Kanälen
 
-Wenn die Inhalts-UX in einen freigegebenen Kanal geladen wird, verwenden Sie die vom `getContext` Aufruf empfangenen Daten für Änderungen des freigegebenen Kanals. `getContext`aufruf veröffentlicht zwei neue Eigenschaften und `hostTeamGroupID` `hostTenantID`, die zum Abrufen der Kanalmitgliedschaft aus dem Microsoft Graph-API verwendet werden. `hostTeam` ist das Team, das den freigegebenen Kanal erstellt hat.
+Wenn die Inhalts-UX in einen freigegebenen Kanal geladen wird, verwenden Sie die vom `getContext` Aufruf empfangenen Daten für Änderungen des freigegebenen Kanals. `getContext` aufruf veröffentlicht zwei neue Eigenschaften und `hostTeamGroupID` `hostTenantID`, die zum Abrufen der Kanalmitgliedschaft mithilfe von Microsoft Graph-APIs verwendet werden. `hostTeam` ist das Team, das den freigegebenen Kanal erstellt.
 
 SupportedChannelTypes ist eine optionale Eigenschaft, die Ihre App in nicht standardmäßigen Kanälen ermöglicht. Wenn Ihre App den Teambereich unterstützt und die Eigenschaft definiert ist, aktiviert Teams Ihre App in jedem Kanaltyp entsprechend. Private und freigegebene Kanäle werden derzeit unterstützt. Weitere Informationen finden Sie unter [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
@@ -46,7 +46,7 @@ SupportedChannelTypes ist eine optionale Eigenschaft, die Ihre App in nicht stan
 
 > [!NOTE]
 >
-> * Wenn Ihre App den Teambereich unterstützt, funktioniert sie immer in Standardkanälen, unabhängig davon, welche Werte in dieser Eigenschaft definiert sind.
+> * Wenn Ihre App den Teambereich unterstützt, funktioniert sie in Standardkanälen, unabhängig davon, welche Werte in dieser Eigenschaft definiert sind.
 > * Ihre App muss möglicherweise die eindeutigen Eigenschaften der einzelnen Kanaltypen berücksichtigen, um ordnungsgemäß funktionieren zu können.
 
 Weitere Informationen zum Aktivieren Ihrer Registerkarte finden Sie unter:
@@ -104,7 +104,7 @@ Apps müssen mandantenübergreifend in Installation und Nutzung funktionieren. I
 |Regular | Azure AD-Teamgruppen-ID | Azure AD-Teamgruppen-ID |
 |Shared | Empty | Azure AD-Gruppen-ID des Hostteams |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Erstellen von Registerkarten für Teams](../../tabs/what-are-tabs.md)
 * [App-Manifestschema für Teams](../../resources/schema/manifest-schema.md)
