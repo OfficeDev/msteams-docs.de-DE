@@ -12,17 +12,21 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c4583dd5452238dd38324fa3f2b7e7b9db7ea1e8
-  ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+  ms.openlocfilehash: cd572905bdaf62ff7843a3b213798ac2783cc5b8
+  ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/21/2022
-  ms.locfileid: "66919809"
+  ms.lasthandoff: 07/28/2022
+  ms.locfileid: "67058228"
 landingContent:
-- title: 'Microsoft Build 2022 '
+- title: Entdecken Sie die neuesten
   linkLists:
   - linkListType: whats-new
     links:
+    - text: Erstellen freigegebener Kanäle
+      url: concepts/build-and-test/Shared-channels.md
+    - text: App-Manifest v1.14 eingeführt
+      url: resources/schema/manifest-schema.md
     - text: Verbesserte Zusammenarbeit mit Live Share SDK [Entwicklervorschau]
       url: apps-in-teams-meetings/teams-live-share-overview.md
     - text: Aktualisieren von Unterhaltungs- und Installationsereignissen in Ihrem Teams-Bot [Entwicklervorschau]
@@ -33,8 +37,6 @@ landingContent:
       url: tabs/how-to/using-teams-client-sdk.md
     - text: Teams-Toolkit, Version 4.0.0, für Visual Studio Code jetzt allgemein verfügbar
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: App-Manifestversion 1.13 eingeführt
-      url: resources/schema/manifest-schema.md
     - text: Bots und Nachrichtenerweiterungen für GCC und GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 - title: Erste Schritte
@@ -95,7 +97,7 @@ landingContent:
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - linkListType: whats-new
     links:
-    - text: Neuerungen
+    - text: Neuigkeiten
       url: ../msteams-platform/whats-new.md
 - title: Erstellen von App-Funktionen
   linkLists:

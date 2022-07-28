@@ -5,12 +5,12 @@ description: Einführung in die Elemente der Planung einer App, des Verständnis
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558716"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058242"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
@@ -55,7 +55,7 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Konzeptionelle Darstellung der Teams-Lösung.":::
 
-    Ihre Apps werden in Teams als Registerkarten, Bots, Nachrichtenerweiterungen, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
+    Ihre Apps werden in Teams als Tabs, Bots, Messaging Extensions, Connectors und Webhooks oder als App mit mehreren Funktionen angezeigt. Diese Funktionen werden im Hintergrund von Azure, Microsoft Graph, SharePoint und Power Apps unterstützt, mit denen Aufgaben und Prozesse automatisiert werden können.
 
     Zusammen erwecken diese Funktionen Ihre App-Lösung zum Leben.
 
@@ -66,17 +66,9 @@ Das Verstehen des Nutzers und seines Anliegens sind die ersten Indikatoren dafü
 * Integrieren Sie Ihre App in Teams und andere Apps, z. B. Microsoft 365, Microsoft Graph und vieles mehr.
 * Verwenden Sie das Developer Portal zur Konfiguration, Verwaltung und Bereitstellung Ihrer Anwendung.
 
-#### <a name="government-community-cloud"></a>Government Community Cloud
+### <a name="government-community-cloud"></a>Government Community Cloud
 
 Government Community Cloud (GCC) ist eine auf Behörden ausgerichtete Kopie der kommerziellen Umgebung. Das Verteidigungsministerium (Department of Defense, DOD) und Auftragnehmer des Bundes müssen die strengen Anforderungen an Cybersicherheit und Compliance erfüllen. Zu diesem Zweck wurde GCC-High erstellt, um die Anforderungen von DOD und Bundesauftragnehmern zu erfüllen. GCC-High ist eine Kopie der DOD-Cloud, existiert aber in einer eigenen souveränen Umgebung. Die DOD-Cloud wurde nur für das Verteidigungsministerium entwickelt.
-
-Endpunkte für Government Cloud sind:
-
-| Mandant | GCC | GCC – hoch | DOD |
-|-------------|---------|---|---|
-|Teams-Client|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Microsoft Teams-Administrator |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-High und DOD:
 
@@ -85,13 +77,14 @@ Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-H
 | Apps im Besitz von Teams wie bei intern entwickelten Apps | ✔️ Die App ist aktiviert, wenn sie über GCC verfügt. | ✔️ Die App ist aktiviert, wenn sie über GCC-High verfügt. | ✔️ Die App ist aktiviert, wenn sie über DOD verfügt. |
 | Microsoft-Apps | ✔️ Mit GCC kompatible Microsoft-Apps | ✔️ Mit GCC-High kompatible Microsoft-Apps | ✔️ Microsoft-Apps, die mit DOD kompatibel sind |
 | 3P- oder Drittanbieter-Apps | ✔️ Apps von Drittanbietern sind verfügbar. Standardmäßig deaktiviert und der Mieter-Administrator kann sie nach eigenem Ermessen aktivieren. | ❌ | ❌ |
-| Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ (****Compliancebenutzeroberfläche**_) | ✔️ (_ ***Compliancebenutzeroberfläche***) |
-| Benutzerdefinierte oder branchenspezifische Bots | ✔️ | ✔️ (****Compliancebenutzeroberfläche***) | ❌ |
-| Benutzerdefinierte Nachrichtenerweiterungen | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading von Apps | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte oder branchenspezifische Bots | ✔️ | ❌ | ❌ |
+| Benutzerdefinierte Messagingerweiterungen | ❌ | ❌ | ❌ |
 | Benutzerdefinierte Connectors | ❌ | ❌ | ❌ |
 
-****Compliancebenutzeroberfläche***: Durch die Aktivierung der Kommunikation mit Drittanbietern akzeptieren Kunden, dass diese Kommunikation vom Drittanbieter und nicht von Microsoft verarbeitet wird. Der Kunde ist allein für die Minderung von Risiken verantwortlich, die mit der Verbindung mit Bots von Drittanbietern in deren Diensten verbunden sind. Microsoft befürwortet und gibt keine ausdrücklichen oder stillschweigenden Gewährleistungen in Bezug auf die Sicherheit von Drittanbietern, denen der Kunde erlaubt, sich mit ihrem Dienst zu verbinden. Durch das Aktivieren von Bots wird Ihre Systemgrenze basierend auf dem Bot, den Sie nutzen möchten, über diesen Mandanten hinaus erweitert. Es liegt in Ihrer Verantwortung sicherzustellen, dass dadurch Ihre Complianceanforderungen erfüllt werden, einschließlich FedRAMP, DFARS, ITAR usw. Es liegt in Ihrer Verantwortung, das Risiko und die Compliance aller Endpunkte und URLs zu bewerten, mit denen Sie eine Verbindung herstellen.
+**Compliancebenutzeroberfläche**: Durch das Aktivieren der Kommunikation von Drittanbietern akzeptieren Kunden, dass diese Kommunikation über den Drittanbieter und nicht über Microsoft verarbeitet wird. Der Kunde ist allein für die Minderung von Risiken verantwortlich, die mit der Verbindung mit Bots von Drittanbietern in deren Diensten verbunden sind. Microsoft befürwortet und gibt keine ausdrücklichen oder stillschweigenden Gewährleistungen in Bezug auf die Sicherheit von Drittanbietern, denen der Kunde erlaubt, sich mit ihrem Dienst zu verbinden. Durch das Aktivieren von Bots wird Ihre Systemgrenze basierend auf dem Bot, den Sie nutzen möchten, über diesen Mandanten hinaus erweitert. Es liegt in Ihrer Verantwortung sicherzustellen, dass dadurch Ihre Complianceanforderungen erfüllt werden, einschließlich FedRAMP, DFARS, ITAR usw. Es liegt in Ihrer Verantwortung, das Risiko und die Compliance aller Endpunkte und URLs zu bewerten, mit denen Sie eine Verbindung herstellen.
 
 Mithilfe der folgenden Liste können Sie die Verfügbarkeit von GCC, GCC-High und DOD für die Features ermitteln:
 

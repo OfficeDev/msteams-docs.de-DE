@@ -3,12 +3,12 @@ title: Kontext für Ihre Registerkarte erhalten
 description: In diesem Modul erfahren Sie, wie Sie Benutzerkontext zu Ihren Registerkarten, Benutzerkontext und Access-Kontextinformationen abrufen.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 63bbc9c0e5f20e293f9230000597860e3f053274
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841722"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058116"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -17,8 +17,6 @@ Ihre Registerkarte erfordert Kontextinformationen, um relevante Inhalte anzuzeig
 * Grundlegende Informationen über den Benutzer, das Team oder das Unternehmen.
 * Gebietsschema- und Designinformationen.
 * Das `page.id` und `page.subPageId` das identifizieren, was sich auf dieser Registerkarte befindet (bekannt als `entityId` und `subEntityId` vor TeamsJS v.2.0.0).
-
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="user-context"></a>Benutzerkontext
 
@@ -41,7 +39,7 @@ Sie können auf zwei Arten auf Kontextinformationen zugreifen:
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Abrufen des Kontexts durch Einfügen von URL-Platzhalterwerten
 
-Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die relevanten Werte, wenn die tatsächliche Konfigurations- oder Inhalts-URL ermittelt wird. Die verfügbaren Platzhalter umfassen alle Felder des [Kontextobjekts](/javascript/api/@microsoft/teams-js/app.context) . Zu den allgemeinen Platzhaltern gehören die folgenden Listen:
+Verwenden Sie Platzhalter in Ihren Konfigurations-oder Inhalts-URLs. Microsoft Teams ersetzt die Platzhalter durch die relevanten Werte, wenn die tatsächliche Konfigurations- oder Inhalts-URL ermittelt wird. Die verfügbaren Platzhalter umfassen alle Felder des [Kontextobjekts](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) . Zu den allgemeinen Platzhaltern gehören die folgenden Eigenschaften:
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): Die vom Entwickler definierte eindeutige ID für die Seite, die beim ersten [Konfigurieren der Seite](~/tabs/how-to/create-tab-pages/configuration-page.md) definiert wurde. (Bekannt als `{entityId}` vor TeamsJS v.2.0.0).
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): Die vom Entwickler definierte eindeutige ID für die Unterseite, auf die dieser Inhalt verweist, der beim Generieren eines [Deep-Links](~/concepts/build-and-test/deep-links.md) für ein bestimmtes Element auf der Seite definiert wird. (Bekannt als `{subEntityId}` vor TeamsJS v.2.0.0).
@@ -70,6 +68,49 @@ Wenn Sie z. B. in Ihrem App-Manifest das Attribut "*configurationUrl*`"https://w
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Abrufen des Kontexts mithilfe der JavaScript-Bibliothek von Microsoft Teams
 
 Sie können die zuvor aufgeführten Informationen auch mithilfe des [JavaScript-Client-SDKs von Microsoft Teams](/javascript/api/overview/msteams-client) abrufen, indem Sie `microsoftTeams.getContext(function(context) { /* ... */ })` aufrufen.
+
+Der folgende Code enthält ein Beispiel für eine Kontextvariable:
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
@@ -184,6 +225,9 @@ Weitere Informationen finden Sie [unter Aktualisierungen zur *Kontextschnittstel
 
 ## <a name="retrieve-context-in-private-channels"></a>Abrufen des Kontexts in privaten Kanälen
 
+> [!NOTE]
+> Private Kanäle befinden sich derzeit nur in der Vorschau für private Entwickler.
+
 Wenn Ihre Inhaltsseite in einen privaten Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, verschleiert, um die Privatsphäre des Kanals zu schützen.
 
 Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem privaten Kanal befindet:
@@ -200,10 +244,9 @@ Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channel.m
 ## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Abrufen des Kontexts in Microsoft Teams Connect freigegebenen Kanälen
 
 > [!NOTE]
-> Derzeit befinden sich Microsoft Teams Connect freigegebenen Kanäle nur in der [Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md).
+> Derzeit befinden sich Microsoft Teams Connect freigegebenen Kanäle nur in der Entwicklervorschau.
 
 Wenn Ihre Inhaltsseite in einen Microsoft Teams Connect freigegebenen Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, aufgrund der eindeutigen Liste der Benutzer in freigegebenen Kanälen geändert.
-
 Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem freigegebenen Kanal befindet:
 
 * `team.groupId`: Nicht definiert für freigegebene Kanäle.
@@ -221,7 +264,37 @@ Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene 
 Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channel.membershipType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
 
 > [!NOTE]
-> Jedes Mal, wenn ein Benutzer den Teams-Desktop- oder Webclient neu startet oder neu lädt, wird eine neue SessionID erstellt, die von der Teams-Sitzung nachverfolgt wird. Wenn ein Benutzer die Teams-Apps verlässt und in der Teams-Plattform neu lädt, wird eine neue App-SessionID erstellt, die von der App-Sitzung nachverfolgt wird.
+> `teamSiteUrl` funktioniert auch gut für Standardkanäle.
+> Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
+
+## <a name="get-context-in-shared-channels"></a>Abrufen von Kontext in freigegebenen Kanälen
+
+Wenn die Inhalts-UX in einen freigegebenen Kanal geladen wird, verwenden Sie die vom `getContext` Aufruf empfangenen Daten für Änderungen des freigegebenen Kanals. Wenn die Registerkarte einen der folgenden Werte verwendet, müssen Sie das `channelType` Feld auffüllen, um festzustellen, ob die Registerkarte in einem freigegebenen Kanal geladen ist, und entsprechend reagieren.
+Für freigegebene Kanäle ist `null`der `groupId` Wert der Wert, da die groupId des Hostteams die tatsächliche Mitgliedschaft des freigegebenen Kanals nicht genau wiedergibt. Um dies zu beheben, werden die `hostTeamGroupID` `hostTenantID` Eigenschaften neu hinzugefügt und sind nützlich, um Microsoft Graph-API Aufrufe zum Abrufen der Mitgliedschaft zu tätigen. `hostTeam` bezieht sich auf das Team, das den freigegebenen Kanal erstellt hat. `currentTeam` bezieht sich auf Das Team, von dem der aktuelle Benutzer auf den freigegebenen Kanal zugreift.
+
+Weitere Informationen zu diesen Konzepten finden Sie unter ["Freigegebene Kanäle](~/concepts/build-and-test/shared-channels.md)".
+
+Verwenden Sie die folgenden `getContext` Eigenschaften in freigegebenen Kanälen:
+
+| Eigenschaft | Beschreibung |
+|----------|--------------|
+|`channelId`| Die Eigenschaft wird auf die SC-Kanalthread-ID festgelegt.|
+|`channelType`| Die Eigenschaft wird für freigegebene Kanäle festgelegt `sharedChannel` .|
+|`groupId`|Die Eigenschaft ist `null` für freigegebene Kanäle vorgesehen.|
+|`hostTenantId`| Die Eigenschaft wird neu hinzugefügt und beschreibt die Mandanten-ID des Hosts, die zum Vergleichen mit der Mandanten-ID-Eigenschaft des aktuellen Benutzers `tid` nützlich ist. |
+|`hostTeamGroupId`| Die Eigenschaft wird neu hinzugefügt und beschreibt die Azure AD-Gruppen-ID des Hostteams, die nützlich ist, um Microsoft Graph-API Aufrufe auszuführen, um die Mitgliedschaft im freigegebenen Kanal abzurufen. |
+|`teamId`|Die Eigenschaft wird neu hinzugefügt und auf die Thread-ID des aktuellen freigegebenen Teams festgelegt. |
+|`teamName`|Die Eigenschaft ist auf die des aktuellen freigegebenen Teams `teamName`festgelegt. |
+|`teamType`|Die Eigenschaft ist auf die des aktuellen freigegebenen Teams `teamType`festgelegt.|
+|`teamSiteUrl`|Die Eigenschaft beschreibt die des freigegebenen Kanals `channelSiteUrl`.|
+|`teamSitePath`| Die Eigenschaft beschreibt die des freigegebenen Kanals `channelSitePath`.|
+|`teamSiteDomain`| Die Eigenschaft beschreibt die des freigegebenen Kanals `channelSiteDomain`.|
+|`tenantSKU`| Die Eigenschaft beschreibt die Eigenschaften des Hostteams `tenantSKU`.|
+|`tid`|  Die Eigenschaft beschreibt die Mandanten-ID des aktuellen Benutzers.|
+|`userObjectId`|  Die Eigenschaft beschreibt die ID des aktuellen Benutzers.|
+|`userPrincipalName`| Die Eigenschaft beschreibt den UPN des aktuellen Benutzers.|
+
+Weitere Informationen zu freigegebenen Kanälen finden Sie unter ["Freigegebene Kanäle](~/concepts/build-and-test/shared-channels.md)".
 
 ## <a name="handle-theme-change"></a>Behandeln von Designänderungen
 
@@ -234,7 +307,7 @@ Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert `default
 > [!div class="nextstepaction"]
 > [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Weitere Artikel
+## <a name="see-also"></a>Weitere Informationen
 
 * [Richtlinien für den Registerkartenentwurf](../../tabs/design/tabs.md)
 * [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
