@@ -3,16 +3,16 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895496"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058214"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
-Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Ihr App-Manifest muss dem Schema entsprechen, das auf [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json)gehostet wird. Frühere Versionen 1.0, 1.1,...,1.12 und die aktuelle Version 1.13 (siehe Hinweis unten) werden jeweils unterstützt (mit "v1.x" in der URL).
+Das Microsoft Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Ihr App-Manifest muss dem Schema entsprechen, das auf [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json)gehostet wird. Frühere Versionen 1.0, 1.1,...,1.13 und die aktuelle Version 1.14 werden jeweils unterstützt (mit "v1.x" in der URL).
 Weitere Informationen zu den Änderungen, die in den einzelnen Versionen vorgenommen wurden, finden Sie im [Manifeständerungsprotokoll](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 In der folgenden Tabelle sind die TeamsJS-Version und die Versionen der App-Manifeste für die verschiedenen App-Szenarien aufgeführt:
@@ -25,8 +25,8 @@ Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -458,11 +458,11 @@ Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, d
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
+|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
-|`context` |Array von Enumerationen|6||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1 ||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -479,8 +479,8 @@ Dieses Element ist ein Array (maximal 16 Elemente), wobei alle Elemente vom Typ 
 |`contentUrl`|string||✔️|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
 |`websiteUrl`|string|||Die https://-URL, auf die verwiesen wird, wenn sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`searchUrl`|string|||Die https://-URL, auf die für die Suchabfragen eines Benutzers verwiesen wird.|
-|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
-|`context` | Array von Enumerationen| 2|| Die Gruppe von `contextItem`-Bereichen, in denen eine Registerkarte unterstützt wird.|
+|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
+|`context` | Array von Enumerationen| 2 || Die Gruppe von `contextItem`-Bereichen, in denen eine Registerkarte unterstützt wird.|
 
 > [!NOTE]
 > Die searchUrl-Funktion ist für Drittentwickler nicht verfügbar. Wenn Ihre Registerkarten kontextabhängige Informationen zum Anzeigen relevanter Inhalte oder zum Initiieren eines Authentifizierungsvorgangs benötigen, finden Sie entsprechende Informationen unter [Abrufen von Kontext für Ihre Microsoft Teams-Registerkarte](../../tabs/how-to/access-teams-context.md).
@@ -496,12 +496,12 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔️|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
-|`scopes`|Array von Enumerationen|3|✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
-|`needsChannelSelector`|Boolean|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
-|`supportsFiles`|Boolean|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
-|`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
-|`supportsVideo`|Boolean|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`scopes`|Array von Enumerationen|3 |✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
+|`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
+|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
+|`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
+|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -509,8 +509,8 @@ Eine Liste der Befehle, die Ihr Bot Benutzern empfehlen kann. Das Objekt ist ein
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`items.scopes`|Array von Enumerationen|3|✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
-|`items.commands`|Array von Objekten|10|✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.scopes`|Array von Enumerationen|3 |✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
+|`items.commands`|Array von Objekten|10  |✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -530,7 +530,7 @@ Das Objekt ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren des Connectors verwendet werden soll.|
-|`scopes`|Array von Enumerationen|1|✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
+|`scopes`|Array von Enumerationen|1 |✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
 |`connectorId`|string|64 Zeichen|✔️|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) entspricht.|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -547,9 +547,9 @@ Das Element ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `ob
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64|✔️|Die eindeutige Microsoft-App-ID für den Bot, welcher der Nachrichtenerweiterung zugeordnet ist, wie beim Bot Framework registriert. Die ID kann mit der Gesamt-App-ID übereinstimmen.|
-|`commands`|Array von Objekten|10|✔️|Array von Befehlen, die von der Nachrichtenerweiterung unterstützt werden.|
+|`commands`|Array von Objekten|10  |✔️|Array von Befehlen, die von der Nachrichtenerweiterung unterstützt werden.|
 |`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob die Konfiguration einer Nachrichtenerweiterung vom Benutzer aktualisiert werden kann. Standard: **false**.|
-|`messageHandlers`|Array von Objekten|5||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
+|`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||Der Typ des Nachrichtenhandlers. Muss `"link"` sein.|
 |`messageHandlers.value.domains`|Array aus Zeichenfolgen|||Array von Domänen, für die sich der Link-Nachrichtenhandler registrieren kann.|
 
@@ -566,7 +566,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`type`|string|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: **query**.|
 |`description`|string|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
 |`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Standard ist **false**.|
-|`context`|Array aus Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
+|`context`|Array aus Zeichenfolgen|3 ||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
 |`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Standard ist **false**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn ein Nachrichtenerweiterungsbefehl verwendet wird.|
 |`taskInfo.title`|string|64 Zeichen||Titel des ersten Dialogfelds.|
@@ -777,6 +777,17 @@ Sie können eine der folgenden Eigenschaften definieren:
 * `privacyUrl`: Die HTTPS-URL der Datenschutzerklärung des Entwicklers.
 * `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**Optional** – Array
+
+Aktiviert Ihre App in Kanälen die keine Standardkanäle sind. Wenn Ihre App einen Teambereich unterstützt und diese Eigenschaft definiert ist, aktiviert Microsoft Teams Ihre App in jedem Kanaltyp entsprechend. Derzeit werden die Kanaltypen „Privat“ und „Freigegeben“ unterstützt.
+
+> [!NOTE]
+>
+> * Wenn Ihre App einen Teambereich unterstützt, funktioniert dieser in den Standardkanälen unabhängig von den in dieser Eigenschaft definierten Werten.
+> * Ihre Anwendung kann die individuellen Eigenschaften der einzelnen Kanaltypen berücksichtigen, um ordnungsgemäß zu funktionieren. Um Ihre Registerkarte für private und freigegebene Kanäle zu aktivieren, ziehen Sie [Abrufen von Kontext in privaten Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) und [Abrufen von Kontext in freigegebenen Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels) zurate.
+
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **Optional** – Boolescher Wert
@@ -810,6 +821,7 @@ Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen f
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`scenes`|Array von Objekten| 5 Elemente||Unterstützte Besprechungsszenen.|
+|`supportsStreaming`|Boolesch|||Ein Wert, der angibt, ob eine App die Audio- und Videoinhalte der Besprechung auf einen RTMP-Endpunkt (Real-Time Meeting Protocol) streamen kann. Der Standardwert ist **false**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

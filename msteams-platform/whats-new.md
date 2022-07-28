@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035177"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058277"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -36,6 +36,9 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 28.07.2022 | Microsoft Teams-Anzeigebild und Personenkarte für Benachrichtigungen in der Besprechung hinzugefügt| Apps für Microsoft Teams-Besprechungen und -Anrufe erstellen > Apps für Besprechungen aktivieren und konfigurieren > [Benachrichtigung in Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 28.07.2022 | Erstellen von freigegebenen Kanälen in Microsoft Teams | Erstellen von Apps für Microsoft Teams-Besprechungen und -Anrufe > [Freigegebene Kanäle](concepts/build-and-test/Shared-channels.md) |
+| 28.07.2022|App-Manifest v1.14 eingeführt| App-Manifest > [App-Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 | 07/26/2022|Vorgeschlagene Aktionen für Bots| Bots erstellen > Bot-Unterhaltungen >[Nachrichten in Bot-Unterhaltungen](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 21.07.2022 | Schritt-für-Schritt-Anleitung zum Senden von Aktivitäts-Feed-Benachrichtigungen eingeführt | Designen Sie Ihre App > UI-Komponenten> Aktivitätsfeedbenachrichtigungen > [Aktivitätsfeedbenachrichtigungen senden](sbs-graphactivity-feedbroadcast.yml) |
 | 08.07.2022| Updates zum Senden der Kanal-ID an Bots, die vom Benutzer während der App-Installation über Konversations- und Installationsupdateereignisse ausgewählt wurde |  Bots erstellen > Bot-Konversationen > Konversationsereignisse in Ihrem Teams-Bot > [Konversationsereignisse in Ihrem Teams-Bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |

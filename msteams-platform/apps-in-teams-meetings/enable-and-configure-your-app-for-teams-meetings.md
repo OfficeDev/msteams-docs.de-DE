@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: e374e53b7d34837cb0de28d6586b2417f9ae4652
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841897"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058263"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -144,6 +144,33 @@ Die besprechungsinterne Benachrichtigung wird verwendet, um Teilnehmer während 
 Besprechungsinterne Benachrichtigungen dürfen kein Aufgabenmodul verwenden. Das Aufgabenmodul wird nicht in einem Besprechungschat aufgerufen. Eine externe Ressourcen-URL wird verwendet, um besprechungsinterne Benachrichtigungen anzuzeigen. Sie können die Methode `submitTask` verwenden, um Daten in einem Besprechungschat zu übermitteln.
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Beispiel zeigt, wie Sie ein besprechungsinternes Dialogfeld verwenden können.":::
+
+Sie können das Microsoft Teams-Anzeigebild und die Personenkarte des Benutzers auch zu Benachrichtigungen in Besprechungen hinzufügen, basierend auf einem `onBehalfOf`-Token mit Benutzer-MRI und dem in der Nutzlast übergebenen Anzeigenamen. Folgendes ist eine Beispielnutzlast:
+
+```json
+    {
+       "type": "message",
+       "text": "John Phillips assigned you a weekly todo",
+       "summary": "Don't forget to meet with Marketing next week",
+       "channelData": {
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        },
+       "replyToId": "1493070356924"
+    }
+```
+
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Das Beispiel zeigt, wie das Microsoft Teams-Anzeigebild und die Personenkarte in Besprechungsdialogfeldern verwendet werden." border="true":::
 
 #### <a name="shared-meeting-stage"></a>Freigegebenes Besprechungsfreigabefenster
 
