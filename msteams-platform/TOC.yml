@@ -307,6 +307,8 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: API-Referenzen für Besprechungs-Apps
       href: apps-in-teams-meetings/API-references.md
+    - name: Freigegebenen Kanal erstellen
+      href: concepts/build-and-test/Shared-channels.md
     - name: Verbesserte Zusammenarbeit mit Live Share
       items:
         - name: Übersicht
