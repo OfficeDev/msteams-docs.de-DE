@@ -3,21 +3,21 @@ title: Erstellen von Deep-Links
 description: Erfahren Sie, wie Sie Deep Links erstellen und wie Sie sie in Ihren Microsoft Teams-Apps mit Registerkarten verwenden und darin navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841961"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058221"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
 Deep-Links sind ein Navigationsinstrument, mit dem Sie Informationen und Features für Benutzer in Microsoft Teams und Microsoft Teams-Apps verlinken können. Das Erstellen von Deep-Links kann u.a. in den folgenden Szenarien nützlich sein:
 
 * Navigieren des Benutzers zum Inhalt auf einer der Registerkarten Ihrer App. Ihre App kann beispielsweise über einen Bot verfügen, der Nachrichten sendet, welche den Benutzer in Bezug auf eine wichtige Aktivität benachrichtigen. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deeplink zur Registerkarte, sodass der Benutzer weitere Details zur Aktivität anzeigen kann.
-* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem die Deep-Links vorab mit den erforderlichen Parametern versehen werden. Dadurch müssen Benutzer die Informationen nicht manuell eingeben.
+* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem die Deep-Links vorab mit den erforderlichen Parametern versehen werden. Benutzer müssen die Informationen nicht manuell eingeben.
 
-Das Microsoft Teams JavaScript-Client-SDK (TeamsJS) vereinfacht den Navigationsprozess. Für viele Szenarien, z. B. das Navigieren zu Inhalten und Informationen auf Ihrer Registerkarte oder sogar das Starten einer Chatunterhaltung, bietet das SDK stark typisierte APIs, die eine bessere Benutzererfahrung ermöglichen und die Verwendung von Deep-Links ersetzen können. Diese APIs werden für Microsoft Teams-Apps empfohlen, die u. U. auf anderen Hosts ausgeführt werden (Outlook, Office), da sie auch eine Möglichkeit bieten, zu überprüfen, ob die verwendete Funktion von diesem Host unterstützt wird. In den folgenden Abschnitten finden Sie Informationen zur Erstellung von Deep-Links sowie zu den Änderungen in Szenarien, in denen dies erforderlich war, nach der Veröffentlichung von TeamsJS V2.
+Das Microsoft Teams JavaScript-Client-SDK (TeamsJS) vereinfacht den Navigationsprozess. Für viele Szenarien, z. B. das Navigieren zu Inhalten und Informationen auf Ihrer Registerkarte oder sogar das Starten einer Chatunterhaltung, bietet das SDK typisierte APIs, die eine bessere Benutzererfahrung ermöglichen und die Verwendung von Deep-Links ersetzen können. Diese APIs werden für Microsoft Teams-Apps empfohlen, die u. U. auf anderen Hosts ausgeführt werden (Outlook, Office), da sie auch eine Möglichkeit bieten, zu überprüfen, ob die verwendete Funktion von diesem Host unterstützt wird. In den folgenden Abschnitten finden Sie Informationen zur Erstellung von Deep-Links sowie zu den Änderungen in Szenarien, in denen dies erforderlich war, nach der Veröffentlichung von TeamsJS V2.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -51,7 +51,7 @@ Sie können Deep-Links zu Entitäten in Microsoft Teams-Apps erstellen. Diese Me
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Um dies zu implementieren, fügen Sie jedem Element eine Aktion **Link kopieren** auf die Art und Weise hinzu, wie es Ihrer Benutzeroberfläche am ehesten entspricht. Wenn der Benutzer diese Aktion ausführt, wird [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) aufgerufen, um ein Dialogfeld mit einem Link anzuzeigen, den der Benutzer in die Zwischenablage kopieren kann. Bei diesem Aufruf wird auch eine ID für Ihr Element übermittelt, die Sie im [Kontext](~/tabs/how-to/access-teams-context.md) zurückerhalten, wenn dem Link gefolgt wird und Ihre Registerkarte neu geladen wird.
+Um dies zu implementieren, fügen Sie jedem Element eine Aktion **Link kopieren** auf die Art und Weise hinzu, wie es Ihrer Benutzeroberfläche am ehesten entspricht. Wenn der Benutzer diese Aktion ausführt, wird [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) aufgerufen, um ein Dialogfeld mit einem Link anzuzeigen, den der Benutzer in die Zwischenablage kopieren kann. Wenn Sie diesen Aufruf ausführen, übergeben Sie eine ID für Ihr Element. Sie erhalten sie wieder im [Kontext](~/tabs/how-to/access-teams-context.md), wenn dem Link gefolgt und Ihre Registerkarte neu geladen wird.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -91,7 +91,7 @@ Alternativ können Sie Deeplinks auch programmgesteuert unter Verwendung des sp�
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Verwenden eines Deeplinks von einer Registerkarte
 
-Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und bietet einen Mechanismus über die Teams JavaScript-Bibliothek zum Abrufen der Unterseiten-ID, sofern diese vorhanden ist.
+Beim Navigieren zu einem Deep-Link navigiert Microsoft Teams einfach zur Registerkarte und bietet über die Microsoft Teams-JavaScript-Bibliothek einen Mechanismus zum Abrufen der Unterseiten-ID, sofern diese vorhanden ist.
 
 Der [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true)-Aufruf (`microsoftTeams.getContext()`) in TeamsJS v1) gibt eine Zusage zurück, die mit dem Kontext aufgelöst wird, der die `subPageId`-Eigenschaft (subEntityId für TeamsJS v1) enthält, wenn über einen Deep-Link zur Registerkarte navigiert wird. Weitere Informationen finden Sie unter [PageInfo-Schnittstelle](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
@@ -128,10 +128,10 @@ Die Abfrageparameter sind:
 | Parametername | Beschreibung | Beispiel |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Die ID aus dem Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md)angegeben haben.|Tasklist123|
+| `entityId`&emsp; | Die ID für das Element auf der Registerkarte, die Sie beim [Konfigurieren der Registerkarte](~/tabs/how-to/create-tab-pages/configuration-page.md) angegeben haben. Verwenden Sie beim Generieren einer URL für das Deep Linking weiterhin entityID als Parameternamen in der URL. Beim Konfigurieren der Registerkarte bezieht sich das Kontextobjekt auf die entityID als {page.id}. |Tasklist123|
 | `entityWebUrl` oder `subEntityWebUrl`&emsp; | Ein optionales Feld mit einer Fallback-URL, das verwendet werden soll, wenn der Client das Rendern der Registerkarte nicht unterstützt. | `https://tasklist.example.com/123` oder `https://tasklist.example.com/list123/task456` |
 | `entityLabel` oder `subEntityLabel`&emsp; | Eine Beschriftung für das Element auf Ihrer Registerkarte, die beim Anzeigen des Deeplinks verwendet werden soll. | Task List 123 oder Task 456 |
-| `context.subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. |Task456 |
+| `context.subEntityId`&emsp; | Eine ID für das Element auf der Registerkarte. Verwenden Sie beim Generieren einer URL für das Deep Linking weiterhin subEntityId als Parameternamen in der URL. Beim Konfigurieren der Registerkarte bezieht sich das Kontextobjekt auf die subEntityID als subPageID. |Task456 |
 | `context.channelId`&emsp; | Microsoft Teams-Kanal-ID, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md)verfügbar ist. Diese Eigenschaft ist nur in konfigurierbaren Registerkarten mit einem **Team**-Bereich verfügbar. Sie ist in statischen Registerkarten, die einen **persönlichen** Bereich haben, nicht verfügbar.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId, die auf der Registerkarte [Kontext](~/tabs/how-to/access-teams-context.md) für Gruppen- und Besprechungschats verfügbar ist | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat ist der einzige unterstützte contextType für Besprechungen. | Chat |
@@ -169,7 +169,7 @@ Die Abfrageparameter sind:
 
 ## <a name="navigation-from-your-tab"></a>Navigation über Ihre Registerkarte
 
-Sie können mithilfe von TeamsJS oder Deep-Links von Ihrer Registerkarte aus zu Inhalten in Microsoft Teams navigieren. Dies ist nützlich, wenn andere Inhalte in Microsoft Teams über Ihre Registerkarte verlinkt werden sollen, z. B. ein Kanal, eine Nachricht, eine andere Registerkarte oder sogar ein Planungsdialogfeld geöffnet werden soll. Früher war für die Navigation u. U. ein Deep-Link erforderlich, dies ist jetzt hingegen in vielen Fällen mithilfe des SDK möglich. In den folgenden Abschnitten werden beide Methoden erläutert, es wird jedoch empfohlen, wo möglich die stark typisierten Funktionen des SDK zu verwenden.
+Sie können mithilfe von TeamsJS oder Deep-Links von Ihrer Registerkarte aus zu Inhalten in Microsoft Teams navigieren. Dies ist nützlich, wenn andere Inhalte in Microsoft Teams über Ihre Registerkarte verlinkt werden sollen, z. B. ein Kanal, eine Nachricht, eine andere Registerkarte oder sogar ein Planungsdialogfeld geöffnet werden soll. Früher war für die Navigation u. U. ein Deep-Link erforderlich, dies ist jetzt hingegen in vielen Fällen mithilfe des SDK möglich. In den folgenden Abschnitten werden beide Methoden erläutert, es wird jedoch empfohlen, wo möglich die typisierten Funktionen des SDK zu verwenden.
 
 Einer der Vorteile der Verwendung von TeamsJS, insbesondere für Microsoft Teams-Apps, die eventuell auf anderen Hosts (Outlook und Office) ausgeführt werden, besteht darin, dass überprüft werden kann, ob der Host die Funktion unterstützt, die Sie verwenden möchten. Um die Unterstützung einer Funktion durch einen Host zu überprüfen, können Sie die `isSupported()`-Funktion verwenden, die dem Namespace der API zugeordnet ist. Das TeamsJS-SDK organisiert APIs in Funktionen mithilfe von Namespaces. Vor der Verwendung einer API im `pages`-Namespace können Sie beispielsweise den zurückgegebenen booleschen Wert aus `pages.isSupported()` überprüfen und die entsprechende Aktion im Kontext der App und App-Benutzeroberfläche ausführen.  
 
@@ -243,7 +243,7 @@ Alternativ können Sie Deep-Links zu dem in Teams integrierten Planungsdialogfel
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Generieren eines Deeplinks zum Planungsdialogfeld
 
-Es wird zwar empfohlen, die stark typisierten APIs von TeamsJS zu verwenden, Deep-Links zu dem in Microsoft Teams integrierten Planungsdialogfeld können aber auch manuell erstellt werden. Verwenden Sie das folgende Format für einen Deep-Link, den Sie auf einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Es wird zwar empfohlen, die typisierten APIs von TeamsJS zu verwenden, Deep-Links zu dem in Microsoft Teams integrierten Planungsdialogfeld können aber auch manuell erstellt werden. Verwenden Sie das folgende Format für einen Deep-Link, den Sie auf einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwenden können: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Beispiel: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -307,7 +307,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Die Verwendung der stark typisierten APIs wird zwar empfohlen, alternativ können Sie aber auch das folgende Format für einen manuell erstellten Deep-Link verwenden, der in einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwendet werden kann:
+Die Verwendung der typisierten APIs wird zwar empfohlen, alternativ können Sie aber auch das folgende Format für einen manuell erstellten Deep-Link verwenden, der in einer Bot-, Connector- oder Nachrichtenerweiterungskarte verwendet werden kann:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -316,7 +316,7 @@ Beispiel: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 Die Abfrageparameter sind:
 
 * `users`: Die durch Kommas getrennte Liste der Benutzer-IDs, auf der die Chat-Teilnehmer angegeben sind. Der Benutzer, der die Aktion ausführt, ist immer als Teilnehmer enthalten. Derzeit unterstützt das Feld „Benutzer-ID“ das Microsoft Azure Active Directory (Azure AD) UserPrincipalName, wie z. B. nur eine E-Mail-Adresse.
-* `topicName`: Ein optionales Feld für den Anzeigenamen des Chats, im Fall eines Chats mit drei oder mehr Benutzern. Wenn dieses Feld nicht angegeben wird, basiert der Bildschirmname des Chats auf den Namen der Teilnehmer.
+* `topicName`: Ein optionales Feld für den Anzeigenamen eines Chats mit drei oder mehr Benutzern. Wenn dieses Feld nicht angegeben wird, basiert der Bildschirmname des Chats auf den Namen der Teilnehmer.
 * `message`: Ein optionales Feld für den Nachrichtentext, den Sie in das Feld zum Verfassen des aktuellen Benutzers einfügen möchten, während sich der Chat im Entwurfszustand befindet.
 
 Um diesen Deeplink mit Ihrem Bot zu verwenden, geben Sie diesen als URL-Ziel auf der Schaltfläche Ihrer Karte an, oder tippen Sie über den Aktionstyp `openUrl` auf die Aktion.
@@ -408,7 +408,7 @@ Beispiel: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fe
 
 ### <a name="navigate-to-an-audio-or-audio-video-call"></a>Navigieren zu einem Audio- oder Audiovideoanruf
 
-Sie können nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufrufen, indem Sie den Anruftyp und die Teilnehmer angeben. Bevor der Anruf erfolgt, fordert der Microsoft Teams-Client eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern mit demselben Deep-Link-Aufruf anrufen.
+Sie können nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufrufen, indem Sie den Anruftyp und die Teilnehmer angeben. Bevor der Anruf erfolgt, fordert der Microsoft Teams-Client eine Bestätigung für den Anruf an. Bei einem Gruppenanruf können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern mit demselben Deep-Link-Aufruf anrufen.
 
 Bei einem Videoanruf fordert der Client eine Bestätigung an und aktiviert das Video des Anrufers für den Anruf. Der Empfänger des Anrufs kann über das Teams Anrufbenachrichtigungsfenster nur über Audio oder Video antworten.
 
@@ -430,7 +430,7 @@ else { /* handle case where capability isn't supported */ }
 
 #### <a name="generate-a-deep-link-to-a-call"></a>Generieren eines Deeplinks zu einem Anruf
 
-Zwar wird Verwendung der stark typisierten APIs von TeamsJS empfohlen, Sie können jedoch auch einen manuell erstellten Deep-Link verwenden, um einen Anruf zu starten.
+Zwar wird Verwendung der typisierten APIs von TeamsJS empfohlen, Sie können jedoch auch einen manuell erstellten Deep-Link verwenden, um einen Anruf zu starten.
 
 | Deep-Link | Format | Beispiel |
 |-----------|--------|---------|
