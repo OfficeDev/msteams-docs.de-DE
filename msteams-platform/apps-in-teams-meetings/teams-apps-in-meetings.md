@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058249"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232253"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
@@ -48,13 +48,11 @@ Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichk
 
 Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der Besprechungs-App, API-Verweise, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams.
 
-Verbessern Sie Ihre Besprechungserfahrung mithilfe des Features zur Besprechungserweiterung. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
-
-Um Microsoft Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Microsoft Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
-
-Passen Sie die App-Berechtigung für externe Mitglieder im freigegebenen Kanal an, wenn Ihre App wichtige Informationen freigibt. App-Berechtigungen in [freigegebenen Kanälen](../concepts/build-and-test/Shared-channels.md) folgen der App-Liste des Hostteams und der App-Richtlinie des Hostmandanten.
-
-Mit dem neuen benutzerdefinierten Feature "Zusammen-Modus-Szenen" können Benutzer an einer Besprechung mit ihrem Team an einem zentralen Ort zusammenarbeiten.
+- **Erweitern der Besprechungs-App**: Verbessern Sie Ihre Besprechungserfahrung mithilfe der Besprechungserweiterungsfunktion. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
+- **Konfigurieren von Apps für Besprechungen**: Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
+- **Anpassen mit Zusammen-Modus-Szenen**: Das neue benutzerdefinierte Feature "Zusammen-Modus-Szenen" ermöglicht Benutzern die Zusammenarbeit an einer Besprechung mit ihrem Team an einer zentralen Stelle.
+- **Anpassen der App-Berechtigung im freigegebenen Kanal: Wenn Ihre App wichtige Informationen im freigegebenen Kanal freigibt, können Sie die App-Berechtigung für externe Mitglieder anpassen. App-Berechtigungen in [freigegebenen Kanälen](../concepts/build-and-test/Shared-channels.md) folgen der App-Liste des Hostteams und der App-Richtlinie des Hostmandanten.
+- **Abrufen von Besprechungsaufzeichnungen**: Sie können in einem Szenario nach der Besprechung auf Besprechungstranskripte zugreifen und diese abrufen. Konfigurieren Sie Ihre App so, dass Transkriptionen automatisch für eine geplante Besprechung abgerufen werden, und verwenden Sie sie für Einblicke, intelligente Analysen und vieles mehr.
 
 ## <a name="next-step"></a>Nächster Schritt
 

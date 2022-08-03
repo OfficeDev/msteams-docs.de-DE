@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
+ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485734"
+ms.lasthandoff: 08/02/2022
+ms.locfileid: "67158066"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -146,7 +146,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
       1. Sie haben die `subscriptionOffer`-Details in Ihrem App-Manifest im Format `publisherId.offerId`richtig erwähnt.
 
-      1. Sie müssen sicherstellen, dass Ihr verknüpftes SaaS-Angebot für die Unterstützung von Lizenzen konzipiert ist, die auf einem benannten [pro-Benutzer-Modell](/azure/marketplace/create-new-saas-offer-plans) zugewiesen sind. Verknüpfte SaaS-Angebote, die andere Preismodelle wie Flatrate unterstützen, werden derzeit nicht für die Veröffentlichung im Teams Store akzeptiert.
+      1. Sie müssen sicherstellen, dass Ihr verknüpftes SaaS-Angebot für die Unterstützung von Lizenzen konzipiert ist, die auf einem [Saas Preismodell](/azure/marketplace/create-new-saas-offer-plans) zugewiesen sind.
 
       1. Fügen Sie Testanweisungen oder Einrichtungsanweisungen oder einen Link zu einem Demovideo hinzu, in dem die App-Funktionalität und die unterstützten Szenarien sowie alle zusätzlichen Informationen beschrieben werden, damit unsere Tester Ihre Workflows im SaaS-Portal leicht verstehen können.
 

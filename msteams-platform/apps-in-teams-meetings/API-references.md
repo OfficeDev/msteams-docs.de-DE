@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919760"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232260"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -37,6 +37,8 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 |[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**Abrufen eingehender Audiolautsprecher**](#get-incoming-audio-speaker) | Ermöglicht einer App, die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer abzurufen.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Umschalten eingehender Audiodaten**](#toggle-incoming-audio) | Ermöglicht einer App das Umschalten der Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Holen Sie sich die Benutzerkontext-API
 
@@ -144,8 +146,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | E-Mail-ID des Benutzers. |
 | **user.userPrincipalName** | UPN des Benutzers. |
 | **user.tenantId** | Azure Active Directory Mandanten-ID. |
-| **user.userRole** | Rolle des Benutzers, z. B. "Administrator" oder "Benutzer". |
-| **meeting.role** | Die Rolle des Teilnehmers in der Besprechung. z. B. "Organisator" oder "Referent" oder "Teilnehmer". |
+| **user.userRole** | Rolle des Benutzers. Beispiel: "Administrator" oder "Benutzer". |
+| **meeting.role** | Die Rolle des Teilnehmers in der Besprechung. Beispiel: 'Organizer' oder 'Presenter' oder 'Attendee'. |
 | **meeting.inMeeting** | Der Wert, der angibt, ob sich der Teilnehmer an der Besprechung befindet. |
 | **conversation.id** | Die Besprechungschat-ID. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
@@ -174,7 +176,7 @@ Alle Benutzer in einem Meeting erhalten die Benachrichtigungen, die über die Nu
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
-Die folgende Tabelle enthält die Abfrageparameter:
+Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
@@ -496,12 +498,12 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | Eigenschaftenname | Beschreibung |
 |---|---|
 | **details.id** | Die ID der Besprechung, codiert als BASE64-Zeichenfolge. |
-| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph API-Aufrufe verwendet wird. |
+| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph-API-Aufrufe verwendet wird. |
 | **details.scheduledStartTime** | Die geplante Startzeit der Besprechung in UTC. |
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
 | **details.title** | Der Titel der Besprechung. |
-| **details.type** | Der Besprechungstyp – z. B. GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled, Unknown. |
+| **details.type** | Der Typ der Besprechung (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled oder Unknown). |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
 | **conversation.conversationType** | Der Unterhaltungstyp. |
 | **conversation.id** | Die Besprechungschat-ID. |
@@ -634,7 +636,7 @@ Die `getAppContentStageSharingState` API ermöglicht es Ihnen, Informationen üb
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
-Die folgende Tabelle enthält die Abfrageparameter:
+Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
@@ -674,7 +676,7 @@ Die `getAppContentStageSharingCapabilities` API ermöglicht es Ihnen, die Funkti
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
-Die folgende Tabelle enthält die Abfrageparameter:
+Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
@@ -926,9 +928,87 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **Wert. Titel** | Der Betreff der Besprechung. |
 | **Wert. Id** | Die der Besprechung zugeordnete Standard-ID. |
 | **Wert. JoinUrl** | Die Teilnahme-URL der Besprechung. |
-| **Wert. Starttime** | Die Startzeit der Besprechung in UTC. |
-| **Wert. Endtime** | Die Besprechungsendzeit in UTC. |
+| **Wert. StartTime** | Die Startzeit der Besprechung in UTC. |
+| **Wert. EndTime** | Die Besprechungsendzeit in UTC. |
 | **locale**| Das Gebietsschema der vom Client festgelegten Nachricht. |
+
+## <a name="get-incoming-audio-speaker"></a>Abrufen eingehender Audiolautsprecher
+
+Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
+
+> [!NOTE]
+> Die `getIncomingClientAudioState` API für mobile Geräte ist derzeit nur in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+
+### <a name="query-parameter"></a>Abfrageparameter
+
+Die folgende Tabelle enthält den Abfrageparameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Audioabruf erfolgreich ist. Das *Ergebnis* kann entweder den Wert "true" oder "false" enthalten, wenn der Audioabruf erfolgreich ist, oder null, wenn der Audioabruf fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet. |
+
+### <a name="example"></a>Beispiel
+
+```typescript
+function getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+
+```
+
+### <a name="response-codes"></a>Antwortcodes
+
+Die folgende Tabelle enthält die Antwortcodes:
+
+|Antwortcode|Beschreibung|
+|---|---|
+| **500** | Interner Fehler. |
+| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
+
+## <a name="toggle-incoming-audio"></a>Umschalten eingehender Audiodaten
+
+Mit `toggleIncomingClientAudio` der API kann eine App die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umschalten. Die API ist über das Teams-Client-SDK verfügbar.
+
+> [!NOTE]
+> Die `toggleIncomingClientAudio` API für mobile Geräte ist derzeit nur in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+
+### <a name="query-parameter"></a>Abfrageparameter
+
+Die folgende Tabelle enthält den Abfrageparameter:
+
+|Wert|Typ|Erforderlich|Beschreibung|
+|---|---|----|---|
+|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Umschalter erfolgreich ist. Das *Ergebnis* kann entweder "true" oder "false" enthalten, wenn die Umschaltfläche erfolgreich ist, oder null, wenn die Umschaltfläche fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet. |
+
+### <a name="example"></a>Beispiel
+
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
+
+### <a name="response-code"></a>Antwortcode
+
+Die folgende Tabelle enthält die Antwortcodes:
+
+|Antwortcode|Beschreibung|
+|---|---|
+| **500** | Interner Fehler. |
+| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
 
 ## <a name="code-sample"></a>Codebeispiel
 

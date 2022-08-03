@@ -3,12 +3,12 @@ title: Von Web-Apps für Teams freigeben
 description: Informationen zum Hinzufügen der eingebetteten Schaltfläche "Zu Teams teilen" auf Ihrer Website mit einer Websitevorschau unter Verwendung von Codebeispielen
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1d7b9b6ae80b224e67f24a589fae5e6af7e7f839
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035317"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232337"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Von Web-Apps für Teams freigeben
 
@@ -28,9 +28,6 @@ Sie können auch die Verbreitung von Links für die Links hinzufügen, die über
 In der folgenden Abbildung wird die Oberfläche für die Verbreitung von Links über die Schaltfläche "Für Teams freigeben" angezeigt:
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Verbreitung von Share-to-Teams-Links":::
-
-> [!NOTE]
-> Die Verbreitung von Links in der Freigabe zu Teams ist derzeit nur in der öffentlichen Entwicklervorschau verfügbar.
 
 In diesem Artikel erfahren Sie, wie Sie eine Schaltfläche "In Teams teilen" für Ihre Website erstellen und einbetten, ihre Websitevorschau erstellen und auf Teams für Education erweitern.
 

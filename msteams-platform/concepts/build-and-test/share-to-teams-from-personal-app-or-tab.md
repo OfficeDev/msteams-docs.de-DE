@@ -1,38 +1,35 @@
 ---
 title: Für Teams über persönliche App oder Registerkarte freigeben
-description: Erfahren Sie, wie Sie die Schaltfläche "Freigeben" aktivieren, um Teams auf Ihrer persönlichen App oder Registerkarte, Einschränkungen und der Endbenutzererfahrung zu aktivieren.
+description: Erfahren Sie, wie Sie die Schaltfläche "In Teams teilen" auf Ihrer persönlichen App oder Registerkarte, Einschränkungen und der Endbenutzererfahrung aktivieren.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123934"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232197"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Für Teams über persönliche App oder Registerkarte freigeben
 
-> [!NOTE]
-> "Für Teams freigeben" ist derzeit nur in der [öffentlichen Entwicklervorschau](../../resources/dev-preview/developer-preview-intro.md) verfügbar.
-
-Mit "Freigeben für Teams" können Benutzer den Inhalt aus der persönlichen App oder Registerkarte für andere Benutzer oder Gruppen oder Kanäle innerhalb Teams freigeben. Benutzer können "Freigeben" auswählen, um Teams, um die Benutzeroberfläche für Teams in einem Popupfenster zu starten. Im Popupfenster können Benutzer andere Benutzer oder Gruppen oder Kanäle hinzufügen, um den Inhalt freizugeben.
+Mit "In Teams teilen" können Benutzer die Inhalte aus der persönlichen App oder Registerkarte für andere Benutzer oder Gruppen oder Kanäle in Teams freigeben. Benutzer können "In Teams teilen" auswählen, um die Oberfläche "Für Teams freigeben" in einem Popupfenster zu starten. Im Popupfenster können Benutzer andere Benutzer oder Gruppen oder Kanäle hinzufügen, um den Inhalt freizugeben.
 
 Die folgende Abbildung zeigt das Popupfenster "Für Teams freigeben":
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Share-to-Teams-Popup":::
 
-## <a name="enable-share-to-teams-button"></a>Schaltfläche "Freigeben für Teams aktivieren"
+## <a name="enable-share-to-teams-button"></a>Schaltfläche "Für Teams freigeben" aktivieren
 
 > [!NOTE]
-> Stellen Sie sicher, dass Sie [über Microsoft Teams JavaScript Client SDK](../../tabs/how-to/using-teams-client-sdk.md) oder [Microsoft Teams JavaScript Client SDK v2 Preview](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7`oder höher) verfügen, um "Freigeben" für Ihre persönliche App oder Registerkarte Teams zu ermöglichen.
+> Stellen Sie sicher, dass Sie über [das Microsoft Teams JavaScript Client SDK](../../tabs/how-to/using-teams-client-sdk.md) oder [Microsoft Teams JavaScript Client SDK v2 Preview](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7` oder höher) verfügen, um die Freigabe für Teams für Ihre persönliche App oder Registerkarte zu aktivieren.
 
-So aktivieren Sie "Freigeben" für Teams:
+So aktivieren Sie die Freigabe für Teams:
 
-1. Erstellen Sie eine persönliche App oder Registerkarte mit **Teams Javascript Client SDK**.
+1. Erstellen Sie eine persönliche App oder Registerkarte mit **dem Teams Javascript Client SDK**.
 
-2. Erstellen Sie eine Schaltfläche "**Freigeben für Teams**".
+2. Erstellen Sie eine Schaltfläche " **In Teams teilen** ".
 
-3. Rufen `microsoftTeams.sharing.shareWebContent` Sie auf der Schaltfläche "Freigeben für Teams" eine Inhaltsnutzlast auf.
+3. Rufen `microsoftTeams.sharing.shareWebContent` Sie auf der Schaltfläche "In Teams freigeben" eine Inhaltsnutzlast auf.
 
 Im folgenden Beispiel wird erläutert, wie Sie eine Inhaltsnutzlast erstellen:
 
@@ -85,16 +82,16 @@ Die folgende Tabelle enthält die Antwortcodes:
 
 ## <a name="limitations"></a>Einschränkungen
 
-Die Einschränkungen zum Hinzufügen von "Freigeben" zu Teams Schaltfläche:
+Die Einschränkungen beim Hinzufügen der Schaltfläche "Teilen" zu Teams:
 
-* Die Schaltfläche "Für Teams freigeben" kann in einer App gehostet oder eingebettet werden, die innerhalb Teams ausgeführt wird.
-* Sie können der App, die mit **Teams Javascript Client SDK** erstellt wurde, die Schaltfläche "Freigeben" zu Teams hinzufügen.
+* Die Schaltfläche "In Teams teilen" kann in einer App gehostet oder eingebettet werden, die in Teams ausgeführt wird.
+* Sie können der App, die mithilfe des **Javascript Client SDK von Teams** erstellt wurde, die Schaltfläche "Zu Teams freigeben" hinzufügen.
 
-## <a name="end-user-share-to-teams-experience"></a>Endbenutzerfreigabe für Teams
+## <a name="end-user-share-to-teams-experience"></a>Endbenutzererfahrung "Für Teams freigeben"
 
 Nachdem Sie die Schaltfläche "Für Teams freigeben" auf der persönlichen App oder Registerkarte aktiviert haben, können Sie den Inhalt freigeben. Führen Sie die folgenden Schritte aus, um auf den Zugriff zuzugreifen:
 
-1. Öffnen Sie eine persönliche App oder Registerkarte, und wählen Sie **"Freigeben" aus, um Teams**.
+1. Öffnen Sie eine persönliche App oder Registerkarte, und wählen Sie **"In Teams freigeben"** aus.
 
     :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="Share-to-Teams-Schaltfläche":::
 
