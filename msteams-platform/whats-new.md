@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02d89b8933f09e298c158afe835f5aacce137365
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178625"
+ms.locfileid: "67232281"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -36,6 +36,9 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 03.08.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+| 03.08.2022 | Feature zum Abrufen von Besprechungstranskripten im Postbesprechungsszenario hinzugefügt. | Erstellen von Apps für Teams-Besprechungen und -Anrufe > Abrufen von Besprechungstranskripten mithilfe von Graph-APIs > [Übersicht](graph-api/meeting-transcripts/overview-transcripts.md) |
+| 03.08.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 28.07.2022 | Microsoft Teams-Anzeigebild und Personenkarte für Benachrichtigungen in der Besprechung hinzugefügt| Apps für Microsoft Teams-Besprechungen und -Anrufe erstellen > Apps für Besprechungen aktivieren und konfigurieren > [Benachrichtigung in Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 28.07.2022 | Erstellen von freigegebenen Kanälen in Microsoft Teams | Erstellen von Apps für Microsoft Teams-Besprechungen und -Anrufe > [Freigegebene Kanäle](concepts/build-and-test/Shared-channels.md) |
 | 28.07.2022|App-Manifest v1.14 eingeführt| App-Manifest > [App-Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -261,11 +264,10 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-|02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
+| 03.08.2022 | APIs zum Stummschalten und Aufheben der Stummschaltung für Apps in der Teams-Besprechungsphase | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [API-Referenzen für Besprechungs-Apps](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
+| 02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-| 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK | Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
-| 06.04.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03.02.2022 | App-Manifestversion 1.13 eingeführt | App-Manifest > Öffentliche Entwicklervorschau > [Manifestschema](resources/schema/manifest-schema-dev-preview.md) |
 | 17.01.2022 | Personenauswahl in Adaptiven Karten für Mobilgeräte | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 | 28.10.2021 |Bots können aktiviert werden, um alle Kanalnachrichten mit ressourcenspezifischer Zustimmung (RESOURCE-Specific Consent, RSC) zu empfangen. | • Erstellen von Bots > Bot-Unterhaltungen > [Übersicht über Bot-Unterhaltungen](~/bots/how-to/conversations/conversation-basics.md) </br> • Erstellen von Bots > Bot-Unterhaltungen > [Kanal- und Gruppenunterhaltungen](~/bots/how-to/conversations/channel-and-group-conversations.md) |

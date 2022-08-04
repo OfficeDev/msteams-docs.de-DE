@@ -138,10 +138,14 @@
       href: toolkit/visual-studio-overview.md
     - name: Yeoman-Generator für Microsoft Teams (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: Entwicklerportal
+    - name: Entwicklerportal für Teams
       items:
-        - name: Entwicklerportal für Teams
+        - name: Übersicht
           href: concepts/build-and-test/teams-developer-portal.md
+        - name: Verwalten Ihrer Apps im Entwicklerportal
+          href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
+        - name: Analysieren der Nutzung Ihrer Apps im Entwicklerportal
+          href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
         - name: App-Studio
           href: concepts/build-and-test/app-studio-overview.md
     - name: Microsoft Teams JavaScript-Client-SDK
@@ -309,6 +313,14 @@
       href: apps-in-teams-meetings/API-references.md
     - name: Freigegebenen Kanal erstellen
       href: concepts/build-and-test/Shared-channels.md
+    - name: Abrufen von Besprechungstranskripten mithilfe von Graph-APIs
+      items:
+        - name: Übersicht
+          href: graph-api/meeting-transcripts/overview-transcripts.md
+        - name: Besprechungs-ID und Organisator-ID abrufen
+          href: graph-api/meeting-transcripts/fetch-id.md
+        - name: Transkripte abrufen
+          href: /graph/api/resources/calltranscript
     - name: Verbesserte Zusammenarbeit mit Live Share
       items:
         - name: Übersicht
