@@ -561,6 +561,44 @@
           href: samples/teams-low-code-solutions.md
         - name: Hinzufügen eines Power Virtual Agent-Chatbots
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: Steuerelemente für die Zusammenarbeit
+      items:
+        - name: Übersicht
+          href: samples/collaboration-control.md
+        - name: Installieren von Steuerelementen für die Zusammenarbeit
+          href: samples/install-collaboration-control.md
+        - name: Erstellen einer App mit Steuerelementen für die Zusammenarbeit
+          href: samples/app-with-collaboration-controls.md
+        - name: Bereitstellen einer App mit Steuerelementen für die Zusammenarbeit in Microsoft Teams
+          href: samples/deploy-collaboration-control-in-teams.md
+        - name: Optionale Konfigurationen für die App mit Steuerelementen für die Zusammenarbeit
+          items:
+            - name: Power Automate
+              href: samples/collaboration-control-power-automate.md
+            - name: Konfigurieren von Aufgaben für externe Clients
+              href: samples/configure-tasks.md
+            - name: 'Virtuelle Tabellen für Aufgaben, Besprechungen und Dateien'
+              items:
+                - name: Übersicht
+                  href: samples/virtual-tables-for-tasks.md
+                - name: Web-API für virtuelle Tabellen
+                  href: samples/virtual-tables-api.md
+                - name: Entitätsverweis für virtuelle Tabellen
+                  href: samples/virtual-table-entity-references.md
+        - name: Steuerelemente für die Zusammenarbeit und Einstellungs-API
+          items:
+            - name: Übersicht
+              href: samples/collaboration-api-reference.md
+            - name: Zusammenarbeit – Benutzerdefinierte APIs
+              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+            - name: Zusammenarbeit – Standard-OData-APIs
+              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+            - name: Einstellungen – Benutzerdefinierte APIs
+              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+            - name: Einstellungen – Standard-OData-APIs
+              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+        - name: Einschränkungen für Steuerelemente für die Zusammenarbeit
+          href: samples/collaboration-controls-limitations.md
     - name: App-Vorlagen für Microsoft Teams
       href: samples/app-templates.md
     - name: Produktionsfertige Shifts-Connectors

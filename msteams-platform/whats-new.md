@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 02d89b8933f09e298c158afe835f5aacce137365
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058277"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178625"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -261,6 +261,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+|02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 16.06.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten| Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |24.05.2022| Verbesserte Zusammenarbeit mit Live Share SDK | Erstellen von Apps für Teams-Besprechungen > Verbesserte Zusammenarbeit mit Live Share > [Übersicht](apps-in-teams-meetings/teams-live-share-overview.md) |
