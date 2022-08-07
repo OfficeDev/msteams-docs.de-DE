@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie bots mithilfe der Microsoft B
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737412"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264169"
 ---
 # <a name="create-a-bot"></a>Erstellen eines Bots
 
@@ -52,7 +52,7 @@ Weitere Informationen finden Sie in der [Bot Framework-Dokumentation](/azure/bot
 
 > [!WARNING]
 >
->* Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio wird bis zum 01. August 2022 veraltet sein.
+>* Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio ist ab dem 01. August 2022 veraltet.
 
 ## <a name="see-also"></a>Siehe auch
 
