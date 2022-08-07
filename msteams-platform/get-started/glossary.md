@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 06bc6ae199700e56d31b967a2516845e013a6329
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035156"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264148"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -26,7 +26,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [App-Paket](../concepts/build-and-test/apps-package.md) | Ein Teams-App-Paket ist eine ZIP-Datei, die die App-Manifestdatei, das Farbsymbol und das Gliederungssymbol enthält. |
 | [App-Berechtigung](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Eine Option in einer Teams-App zum Aktivieren von Geräteberechtigungen. Sie ist nur verfügbar, wenn die Manifestdatei der App deklariert, dass die App Geräteberechtigungen benötigt. <br> **Weitere Informationen unter**: Geräteberechtigungen |
 | [App-Bereich](../concepts/design/app-structure.md) | Ein Bereich in Teams, in dem Personen Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, darunter Privat, Kanäle, Chats und Besprechungen. Eine Teams-App kann bereichsübergreifend vorhanden sein. |
-| [App-Studio](../concepts/build-and-test/app-studio-overview.md) | Eine App zum Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps. Sie wurde nun zum Entwicklerportal weiterentwickelt. <br> > Wenn Sie App Studio verwendet haben, empfehlen wir Ihnen, das Entwicklerportal auszuprobieren, um Ihre Teams-Apps zu konfigurieren, zu verteilen und zu verwalten. App Studio wird zum 1. August 2022 eingestellt. <br> **Weitere Informationen unter**: [Entwicklerportal](#d) |
+| [App-Studio](../concepts/build-and-test/app-studio-overview.md) | Eine App zum Erstellen oder Integrieren Ihrer eigenen Microsoft Teams-Apps. Sie wurde nun zum Entwicklerportal weiterentwickelt. <br> > Wenn Sie App Studio verwendet haben, empfehlen wir Ihnen, das Entwicklerportal auszuprobieren, um Ihre Teams-Apps zu konfigurieren, zu verteilen und zu verwalten. App Studio ist ab dem 01. August 2022 veraltet. <br> **Weitere Informationen unter**: [Entwicklerportal](#d) |
 | Anwendungsleiste | Eine Anwendungsleiste, die sich auf der unteren Leiste einer mobilen Teams-App befindet. Sie sammelt alle Apps, die geöffnet sind, aber derzeit nicht verwendet werden oder deaktiviert sind. <br>**Weitere Informationen unter**: [Teams Mobile](#t) |
 | [Azure-Ressource](../toolkit/provision.md) | Ein über Azure verfügbarer Dienst, den Ihre Teams-App für die Azure-Bereitstellung verwenden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Der cloudbasierte Identitäts- und Zugriffsverwaltungsdienst von Microsoft. Er hilft authentifizierten Benutzern beim Zugriff auf interne und externe Azure-Ressourcen. |
