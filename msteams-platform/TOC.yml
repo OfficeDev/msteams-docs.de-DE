@@ -141,9 +141,9 @@
         - name: Debuggen Sie Ihre Teams-App
           href: toolkit/debug-teams-app-visual-studio.md
         - name: Bereitstellen von Cloudressourcen
-          href: toolkit/provision VS.md
+          href: toolkit/Provision cloud resources using Visual Studio.md
         - name: Bereitstellen der Teams-App in der Cloud
-          href: toolkit/deploy to the cloud for VS.md
+          href: toolkit/Deploy Teams app to the cloud using Visual Studio.md
         - name: Teams-App-Manifest bearbeiten
           href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams-Toolkit-CLI
