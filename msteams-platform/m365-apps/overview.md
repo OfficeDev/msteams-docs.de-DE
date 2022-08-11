@@ -1,16 +1,16 @@
 ---
 title: Erweitern Sie Teams-Apps auf Microsoft 365 (Vorschau)
-description: In diesem Modul erfahren Sie, wie Sie Ihre Teams-App-Erfahrungen in anderen bereichen mit hoher Nutzung von Microsoft 365 erstellen und aktualisieren.
+description: In diesem Artikel erfahren Sie, wie Sie Ihre Teams-App-Erfahrungen erstellen, aktualisieren und erweitern und Apps erstellen, die in anderen bereichen mit hoher Nutzung von Microsoft 365 verwendet werden.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ec724b99e69cf496d25984d8dc800040d5817882
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919830"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288213"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Erweitern von Teams-Apps auf Microsoft 365
 
