@@ -1,21 +1,21 @@
 ---
 title: Kanal- und Gruppenchatunterhaltungen mit Bots
-description: Lernen Sie in diesem Modul das End-to-End-Szenario einer Unterhaltung mit einem Bot in einem Kanal in Microsoft Teams
+description: Lernen Sie in diesem Modul das End-to-End-Szenario einer Unterhaltung mit einem Bot in einem Kanal in Microsoft Teams kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ab11ad4a11769daa236e6fe10e1ef30782b2cda0
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190177"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312184"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Kanal und Gruppenchatunterhaltungen mit einem Microsoft Teams-Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams ermöglicht Es Benutzern, Bots in ihre Kanal- oder Gruppenchatunterhaltungen zu bringen. Durch Hinzufügen eines Bots zu einem Team oder Chat können alle Benutzer der Unterhaltung die Bot-Funktionalität direkt in der Unterhaltung nutzen. Sie können auch auf Teams spezifische Funktionalität innerhalb Ihres Bots zugreifen, z. B. das Abfragen von Teaminformationen und @mentioning Benutzern.
+Mit Microsoft Teams können Benutzer Bots in ihre Kanal- oder Gruppenchatunterhaltungen integrieren. Durch Hinzufügen eines Bots zu einem Team oder Chat können alle Benutzer der Unterhaltung die Bot-Funktionalität direkt in der Unterhaltung nutzen. Sie können auch auf Teams-spezifische Funktionen innerhalb Ihres Bots zugreifen, z. B. das Abfragen von Teaminformationen und @mentioning Benutzern.
 
 Der Chat in Kanälen und Gruppenchats unterscheidet sich vom persönlichen Chat dadurch, dass der Benutzer den Bot @mention muss. Wenn ein Bot in mehreren Bereichen verwendet wird, z. B. persönlich, Gruppenchat oder Kanal, müssen Sie erkennen, aus welchem Bereich die Bot-Nachrichten stammen, und sie entsprechend verarbeiten.
 
@@ -25,9 +25,9 @@ Bots, die einem Team hinzugefügt wurden, werden ein weiteres Teammitglied und k
 
 Ein Bot in einer Gruppe oder einem Kanal sollte Informationen bereitstellen, die für alle Mitglieder relevant und geeignet sind. Während Ihr Bot sicherlich alle informationen bereitstellen kann, die für die Erfahrung relevant sind, denken Sie daran, dass Unterhaltungen damit für jeden sichtbar sind. Daher sollte ein großartiger Bot in einer Gruppe oder einem Kanal allen Benutzern einen Mehrwert verleihen und sicherlich nicht versehentlich Informationen freigeben, die besser für eine 1:1-Unterhaltung geeignet sind.
 
-Ihr Bot ist, wie er ist, möglicherweise in allen Bereichen vollständig relevant, ohne dass mehr Arbeit erforderlich ist. In Teams wird nicht erwartet, dass Ihr Bot in allen Bereichen funktioniert, aber Sie sollten sicherstellen, dass Ihr Bot den Benutzerwert in den bereichen bereitstellt, die Sie unterstützen möchten. Weitere Informationen zu Bereichen finden Sie [unter Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Ihr Bot ist, wie er ist, möglicherweise in allen Bereichen vollständig relevant, ohne dass mehr Arbeit erforderlich ist. In Teams wird nicht davon ausgegangen, dass Ihr Bot in allen Bereichen funktioniert, aber Sie sollten sicherstellen, dass Ihr Bot den Benutzerwert in den bereichen bereitstellt, die Sie unterstützen möchten. Weitere Informationen zu Bereichen finden Sie [unter "Apps in Microsoft Teams"](~/concepts/build-and-test/teams-developer-portal.md).
 
-Die Entwicklung eines Bots, der in Gruppen oder Kanälen funktioniert, verwendet viele der gleichen Funktionen wie persönliche Unterhaltungen. Zusätzliche Ereignisse und Daten in der Nutzlast stellen Teams Gruppen- und Kanalinformationen bereit. Diese Unterschiede sowie wichtige Unterschiede in der gemeinsamen Funktionalität werden in den folgenden Abschnitten beschrieben.
+Die Entwicklung eines Bots, der in Gruppen oder Kanälen funktioniert, verwendet viele der gleichen Funktionen wie persönliche Unterhaltungen. Zusätzliche Ereignisse und Daten in der Nutzlast stellen Teams-Gruppen- und Kanalinformationen bereit. Diese Unterschiede sowie wichtige Unterschiede in der gemeinsamen Funktionalität werden in den folgenden Abschnitten beschrieben.
 
 ### <a name="creating-messages"></a>Erstellen von Nachrichten
 
@@ -37,7 +37,7 @@ Weitere Informationen zu Bots, die Nachrichten in Kanälen erstellen, finden Sie
 
 Für einen Bot in einer Gruppe oder einem Kanal erhält Ihr Bot zusätzlich zum [regulären Nachrichtenschema](https://docs.botframework.com/core-concepts/reference/#activity) auch die folgenden Eigenschaften:
 
-* `channelData`Siehe [Teams Kanaldaten](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Enthält in einem Gruppenchat spezifische Informationen zu diesem Chat.
+* `channelData` Siehe [Teams-Kanaldaten](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Enthält in einem Gruppenchat spezifische Informationen zu diesem Chat.
 * `conversation.id` Die Antwortketten-ID, die aus der Kanal-ID und der ID der ersten Nachricht in der Antwortkette besteht.
 * `conversation.isGroup` Gilt `true` für Bot-Nachrichten in Kanälen oder Gruppenchats.
 * `conversation.conversationType` Entweder `groupChat` oder `channel`.
@@ -53,13 +53,13 @@ In einem Kanal wird das Antworten auf eine Nachricht als Antwort auf die initiie
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>Bewährte Methode: Willkommensnachrichten in Teams
 
-Wenn Ihr Bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, ist es hilfreich, allen Benutzern eine Willkommensnachricht zu senden, in der der Bot vorgestellt wird. Die Willkommensnachricht sollte eine Beschreibung der Funktionen und Benutzervorteile des Bots enthalten. Im Idealfall sollte die Nachricht auch Befehle für die Interaktion des Benutzers mit der App enthalten. Stellen Sie zu diesem Zweck sicher, dass Ihr Bot auf die `conversationUpdate` Nachricht mit dem `teamsAddMembers` eventType im `channelData` Objekt antwortet. Stellen Sie sicher, dass es sich bei der `memberAdded` ID um die App-ID des Bots selbst handelt, da dasselbe Ereignis gesendet wird, wenn ein Benutzer zu einem Team hinzugefügt wird. Weitere Informationen finden Sie unter [Teammitglied oder Bot-Ergänzung](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) für weitere Details.
+Wenn Ihr Bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, ist es hilfreich, allen Benutzern eine Willkommensnachricht zu senden, in der der Bot vorgestellt wird. Die Willkommensnachricht sollte eine Beschreibung der Funktionen und Benutzervorteile des Bots enthalten. Im Idealfall sollte die Nachricht auch Befehle für die Interaktion des Benutzers mit der App enthalten. Stellen Sie zu diesem Zweck sicher, dass Ihr Bot auf die `conversationUpdate` Nachricht mit dem `teamsAddMembers` eventType im `channelData` Objekt antwortet. Stellen Sie sicher, dass es sich bei der `memberAdded` ID um die App-ID des Bots selbst handelt, da dasselbe Ereignis gesendet wird, wenn ein Benutzer zu einem Team hinzugefügt wird. Weitere Informationen finden Sie unter [Hinzufügen von Teammitgliedern oder Bots](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 Möglicherweise möchten Sie auch eine persönliche Nachricht an jedes Mitglied des Teams senden, wenn der Bot hinzugefügt wird. Dazu können Sie [die Teamliste abrufen](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) und jedem Benutzer eine [direkte Nachricht](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) senden.
 
 Wir empfehlen, dass Ihr Bot in den folgenden Situationen *keine* Willkommensnachricht sendet:
 
-* Das Team ist groß (offensichtlich subjektiv, zum Beispiel mehr als 100 Mitglieder). Ihr Bot kann als "Spammy" angesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten, es sei denn, Sie kommunizieren das Wertversprechen Ihres Bots eindeutig an alle Personen, die die Willkommensnachricht sehen.
+* Das Team ist groß (offensichtlich subjektiv, z. B. mehr als 100 Mitglieder). Ihr Bot kann als "Spammy" angesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten, es sei denn, Sie kommunizieren das Wertversprechen Ihres Bots eindeutig an alle Personen, die die Willkommensnachricht sehen.
 * Ihr Bot wird zuerst in einer Gruppe oder einem Kanal erwähnt, anstatt zuerst zu einem Team hinzugefügt zu werden.
 * Eine Gruppe oder ein Kanal wird umbenannt.
 * Ein Teammitglied wird einer Gruppe oder einem Kanal hinzugefügt.
@@ -91,7 +91,7 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Sie können auch die Teams Erweiterungsfunktion `GetTextWithoutMentions`verwenden, die alle Erwähnungen, einschließlich des Bots, entfernt.
+> Sie können auch die Teams-Erweiterungsfunktion `GetTextWithoutMentions`verwenden, die alle Erwähnungen, einschließlich des Bots, entfernt.
 
 #### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js Beispielcode: Suchen nach und Entfernen @bot Erwähnung
 
@@ -107,7 +107,7 @@ if (message.entities) {
 }
 ```
 
-Sie können auch die Teams Erweiterungsfunktion `getTextWithoutMentions`verwenden, die alle Erwähnungen, einschließlich des Bots, entfernt.
+Sie können auch die Teams-Erweiterungsfunktion `getTextWithoutMentions`verwenden, die alle Erwähnungen, einschließlich des Bots, entfernt.
 
 ### <a name="constructing-mentions"></a>Erstellen von Erwähnungen
 
@@ -118,7 +118,7 @@ Ihr Bot kann andere Benutzer in Nachrichten erwähnen, die in Kanälen gepostet 
 
 #### <a name="net-example"></a>.NET-Beispiel
 
-In diesem Beispiel wird das Paket ["Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" verwendet.
+In diesem Beispiel wird das [NuGet-Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) " verwendet.
 
 ```csharp
 // Create reply activity
@@ -194,7 +194,7 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>Zugreifen auf groupChat oder Kanalbereich
 
-Ihr Bot kann mehr tun, als Nachrichten in Gruppen und Teams zu senden und zu empfangen. Sie kann beispielsweise auch die Liste der Mitglieder, einschließlich ihrer Profilinformationen, sowie die Liste der Kanäle abrufen. Weitere Informationen finden Sie unter ["Kontext für Ihren Microsoft Teams Bot abrufen](~/resources/bot-v3/bots-context.md)".
+Ihr Bot kann mehr tun, als Nachrichten in Gruppen und Teams zu senden und zu empfangen. Sie kann beispielsweise auch die Liste der Mitglieder, einschließlich ihrer Profilinformationen, und die Liste der Kanäle abrufen. Weitere Informationen finden Sie unter ["Kontext für Ihren Microsoft Teams-Bot abrufen"](~/resources/bot-v3/bots-context.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,28 +1,28 @@
 ---
 title: Testen und Debuggen Ihres Bots lokal
 author: surbhigupta
-description: Erfahren Sie mehr über das Testen und Debuggen Ihres Bots lokal mit einer IDE in der Teams-Umgebung durch Querladen und mehr
+description: Erfahren Sie mehr über das Testen und Debuggen Ihres Bots lokal mit einer IDE in der Teams-Umgebung durch Querladen und vieles mehr.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c2b68279000da27aa055e591bcccc0a91e7f3769
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503718"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312205"
 ---
-# <a name="test-and-debug-your-bot-locally-with-ide"></a>Testen und Debuggen Des Bots lokal mit IDE
+# <a name="test-and-debug-your-bot-locally-with-ide"></a>Testen und debuggen Sie Ihren Bot lokal mit der IDE
 
 Beim Testen Ihres Bots müssen Sie sowohl den Kontext berücksichtigen, in dem Ihr Bot ausgeführt werden soll, als auch alle Funktionen, die Sie möglicherweise zu Ihrem Bot hinzugefügt haben, die für Microsoft Teams spezifische Daten erfordern. Stellen Sie sicher, dass die Methode, die Sie zum Testen Ihres Bots ausgewählt haben, seiner Funktionalität entspricht.
 
 ## <a name="test-by-uploading-to-teams"></a>Testen durch Hochladen in Microsoft Teams
 
-Die umfassendste Methode zum Testen Ihres Bots besteht darin, ein App-Paket zu erstellen und es in Microsoft Teams hochzuladen. Dies ist die einzige Methode zum Testen der vollständigen Funktionalität Ihres Bot in allen Bereichen.
+Die umfassendste Methode zum Testen Ihres Bots besteht darin, ein App-Paket zu erstellen und es in Microsoft Teams hochzuladen. Das Hochladen des App-Pakets in Teams ist die einzige Methode, um die vollständige Funktionalität ihres Bots in allen Bereichen zu testen.
 
 Es gibt zwei Methoden zum Hochladen Ihrer App:
 
-* Verwenden Sie [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+* Verwenden Sie [das Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md).
 * [Erstellen Sie ein App-Paket](~/concepts/build-and-test/apps-package.md) manuell, und [laden Sie die App](~/concepts/deploy-and-publish/apps-upload.md) hoch.
 
 > [!NOTE]
@@ -66,7 +66,7 @@ Initiieren Sie eine Unterhaltung mit Ihrem Bot mithilfe seiner ID. Wenn ein Bot 
   
       ![Abrufen der AppID für den Bot](~/assets/images/bots_appid_botframework.png)
   
-   2. Wählen Sie in Microsoft Teams im **Chatbereich** das Symbol **Chat hinzufügen** aus. Fügen Sie im Feld **An:** die Microsoft App-ID Ihres Bots ein.
+   2. Öffnen Sie Microsoft Teams, und wählen Sie im Chatbereich das Symbol " **Chat hinzufügen** " aus. Fügen Sie im Feld **An:** die Microsoft App-ID Ihres Bots ein.
   
       ![Hochladen von Bots](~/assets/images/bots_uploading.png)
 
@@ -96,7 +96,7 @@ Um zu verhindern, dass Ihr Bot Nachrichten empfängt, wechseln Sie zu Ihrem **Bo
 
 ## <a name="delete-a-bot-from-teams"></a>Löschen eines Bots aus Microsoft Teams
 
-Um Ihren Bot vollständig aus Microsoft Teams zu entfernen, wechseln Sie zu Ihrem **Bot-Dashboard**, und bearbeiten Sie den Teams-Kanal. Klicken Sie auf die Schaltfläche **Löschen** am unteren Rand der Seite. Dadurch wird verhindert, dass Benutzer Ihren Bot auffinden, hinzufügen und mit ihm interagieren. Dadurch wird der Bot nicht aus den Teams-Instanzen eines anderen Benutzers entfernt, er funktioniert jedoch auch nicht mehr für ihn.
+Um Ihren Bot vollständig aus Microsoft Teams zu entfernen, wechseln Sie zu Ihrem **Bot-Dashboard**, und bearbeiten Sie den Teams-Kanal. Klicken Sie auf die Schaltfläche **Löschen** am unteren Rand der Seite. Das Löschen eines Bots aus Teams verhindert, dass Benutzer Ihren Bot entdecken, hinzufügen und mit diesem interagieren. Durch das Löschen eines Bots aus Teams wird der Bot nicht aus den Teams-Instanzen eines anderen Benutzers entfernt, er funktioniert jedoch auch für ihn nicht mehr.
 
 ## <a name="see-also"></a>Siehe auch
 

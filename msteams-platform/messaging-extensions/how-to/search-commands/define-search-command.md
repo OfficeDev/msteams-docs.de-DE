@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachri
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503942"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312268"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -42,44 +42,54 @@ In der folgenden Abbildung werden die Aufrufspeicherorte des Suchbefehls angezei
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Hinzufügen des Suchbefehls zum App-Manifest
 
-Um den Suchbefehl zu Ihrem App-Manifest hinzuzufügen, müssen Sie ein neues `composeExtension` Objekt auf der obersten Ebene Des App-Manifest-JSON hinzufügen. Sie können den Suchbefehl entweder mithilfe von App Studio oder manuell hinzufügen.
+Um den Suchbefehl zu Ihrem App-Manifest hinzuzufügen, müssen Sie ein neues `composeExtension` Objekt auf der obersten Ebene Des App-Manifest-JSON hinzufügen. Sie können den Suchbefehl entweder mithilfe des Entwicklerportals oder manuell hinzufügen.
 
-### <a name="create-a-search-command-using-app-studio"></a>Erstellen eines Suchbefehls mit App Studio
+### <a name="create-a-search-command-using-developer-portal"></a>Erstellen eines Suchbefehls mithilfe des Entwicklerportals
 
 Die Voraussetzung zum Erstellen eines Suchbefehls ist, dass Sie bereits eine Nachrichtenerweiterung erstellt haben müssen. Informationen zum Erstellen einer Nachrichtenerweiterung finden Sie unter [Erstellen einer Nachrichtenerweiterung](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-So erstellen Sie einen Suchbefehl:
+**So erstellen Sie einen Aktionsbefehl:**
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
-1. Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
-1. Nach dem Importieren des App-Pakets wählen Sie **"Nachrichtenerweiterungen** " unter **"Funktionen"** aus. Sie erhalten ein Popupfenster zum Einrichten der Nachrichtenerweiterung.
-1. Wählen Sie im Fenster **Einrichten** aus, um die Nachrichtenerweiterung in Ihre App-Umgebung einzuschließen. Die folgende Abbildung zeigt die Seite zum Einrichten der Nachrichtenerweiterung:
+1. Öffnen Sie **das Entwicklerportal** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Apps** " aus. Wenn Sie Ihr App-Paket bereits im **Entwicklerportal** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
+1. Wählen Sie nach dem Importieren eines App-Pakets **nachrichtenerweiterungen** unter **"App-Features"** aus.
+1. Um eine Nachrichtenerweiterung zu erstellen, benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie " **Neuen Bot erstellen** " aus, geben Sie dem neuen Bot einen Namen, und wählen Sie dann " **Erstellen"** aus.
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Einrichten von Messaging-Erweiterungen":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Der Screenshot zeigt, wie Sie einen Bot im Entwicklerportal erstellen.":::
 
-1. Zum Erstellen der Nachrichtenerweiterung benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie die Option **Neuen Bot erstellen** aus, geben Sie dem neuen Bot einen Namen, und wählen Sie **Erstellen** aus. In der folgenden Abbildung wird die Boterstellung für die Nachrichtenerweiterung angezeigt:
+1. Um einen vorhandenen Bot zu verwenden, wählen **Sie einen vorhandenen Bot und** dann die vorhandenen Bots aus der Dropdownliste aus, oder geben **Sie eine Bot-ID ein** , wenn Sie bereits eine Bot-ID erstellt haben.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Erstellen eines Bots für die Messaging-Erweiterung":::
+1. Wählen Sie den Bereich der Messaging-Erweiterung und dann **"Speichern"** aus.
 
-1. Um einen vorhandenen Bot zu verwenden, wählen Sie **Vorhandenen Bot verwenden** und dann **Aus einem meiner vorhandenen Bots auswählen** aus, um die vorhandenen Bots aus der Dropdownliste auszuwählen. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus, oder wählen Sie **Mit einer anderen Bot-ID verbinden** aus, wenn Sie bereits eine Bot-ID erstellt haben. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus.
-
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Verwenden eines vorhandenen Bots für die Messaging-Erweiterung":::
-
-1. Wählen Sie im **Abschnitt "Befehl**" der Seite "Nachrichtenerweiterungen" die Option "**Hinzufügen**" aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
+1. Wählen Sie " **Befehl hinzufügen"** im Abschnitt **"Befehl** " aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
 In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichtenerweiterung angezeigt:
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Einschließen des Befehls":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Der Screenshot zeigt, wie Sie einen Befehl hinzufügen, um das Verhalten der Nachrichtenerweiterung zu definieren.":::
 
-1. Wählen Sie **"Benutzern erlauben" aus, Ihren Dienst nach Informationen abzufragen und diese in eine Nachricht einzufügen**. Die folgende Abbildung zeigt die Auswahl des Suchbefehlsparameters:
+1. Wählen Sie **"Suchen** " aus, und geben Sie **Befehls-ID**, **Befehlstitel** und **Befehlsbeschreibung** ein.
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Suchbefehlsparameterauswahl":::
+1. Geben Sie alle Parameter ein, und wählen Sie den Typ der Eingabe aus der Dropdownliste aus.
 
-1. Fügen Sie eine **Befehls-ID** und einen **Titel** hinzu.
-1. Wählen Sie den Speicherort aus, an dem der Suchbefehl aufgerufen werden muss. In der folgenden Abbildung wird der Speicherort für den Aufruf des Suchbefehls angezeigt:
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Der Screenshot zeigt, wie Sie einen Parameter hinzufügen, um den Befehl für die Nachrichtenerweiterung zu definieren.":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="Suchbefehl ruft Standortauswahl auf":::
+1. Wählen Sie unter "**Vorschaulinks****" die Option "Domäne hinzufügen"** aus.
 
-1. Fügen Sie Ihren Suchparameter hinzu, und wählen Sie **"Speichern" aus**.
+1. Geben Sie eine gültige Domäne ein, und wählen Sie dann **"Hinzufügen"** aus.
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
+
+1. Wählen Sie **Speichern**.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Der Screenshot zeigt, wie Sie alle Einstellungen und Parameter für Ihre Nachrichtenerweiterung speichern.":::
+
+**So fügen Sie zusätzliche Parameter hinzu**
+
+1. Wählen Sie im Befehlsbereich die Ellipse und dann den **Parameter "Bearbeiten"** aus.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots zeigen, wie Sie zusätzliche Parameter für Ihre Nachrichtenerweiterung hinzufügen.":::
+
+1. Wählen Sie **"Parameter hinzufügen"** aus, und geben Sie alle Parameter ein.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Der Screenshot zeigt, wie Sie zusätzliche Parameter für Ihre Nachrichtenerweiterung hinzufügen."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-a-search-command-manually"></a>Manuelles Erstellen eines Suchbefehls
 

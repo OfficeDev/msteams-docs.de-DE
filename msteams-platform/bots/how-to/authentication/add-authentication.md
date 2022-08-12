@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie einem Bot in Teams mitHilfe von Azure Active 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792970"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312149"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -446,7 +446,7 @@ Der folgende Assistent wird angezeigt:
 1. Klicken Sie auf die Schaltfläche **Zum Team hinzufügen**.
 1. Wählen Sie im nächsten Fenster das Team aus, in dem Sie den Bot verwenden möchten.
 1. Wählen Sie die Schaltfläche **Bot einrichten** aus.
-1. Wählen Sie die drei Punkte (&#x25cf;&#x25cf;&#x25cf;) im linken Bereich aus. Wählen Sie dann das Symbol **App Studio** aus.
+1. Wählen Sie die drei Punkte (&#x25cf;&#x25cf;&#x25cf;) im linken Bereich aus. Wählen Sie dann das **Entwicklerportalsymbol** aus.
 1. Wählen Sie die Registerkarte **Manifest-Editor** aus. Das Symbol für den hochgeladenen Bot sollte angezeigt werden.
 1. Außerdem sollte der Bot in der Chatliste als Kontakt aufgeführt sein, über den Sie Nachrichten mit dem Bot austauschen können. 
 

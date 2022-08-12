@@ -5,18 +5,18 @@ description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503613"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312229"
 ---
 # <a name="add-link-unfurling"></a>Linkausweitung hinzufügen
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie ihrem App-Manifest mit App Studio oder manuell die Verbreitung von Links hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Enthält `invoke` die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde. Sie können mit einer Karte antworten, die der Benutzer für zusätzliche Informationen oder Aktionen ausblenden kann. Dies funktioniert als Suchbefehl mit der URL als Suchbegriff.
+In diesem Dokument erfahren Sie, wie Sie Mithilfe des Entwicklerportals oder manuell links zu Ihrem App-Manifest hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Enthält `invoke` die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde. Sie können mit einer Karte antworten, die der Benutzer für zusätzliche Informationen oder Aktionen ausblenden kann. Dies funktioniert als Suchbefehl mit der URL als Suchbegriff.
 
 > [!NOTE]
 >
@@ -34,18 +34,21 @@ Weitere Informationen zur Verbreitung von Links finden Sie im folgenden Video:
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
 
-Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array mithilfe von App Studio oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
+Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array mithilfe des Entwicklerportals oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
 
 > [!NOTE]
 > Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Die Domänen der obersten Ebene sind verboten, `*.com`z. B. . `*.org`
 
-### <a name="add-link-unfurling-using-app-studio"></a>Hinzufügen des Verbreitens von Links mit App Studio
+### <a name="add-link-unfurling-using-developer-portal"></a>Hinzufügen der Verbreitung von Links mithilfe des Entwicklerportals
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
+1. Öffnen Sie das **Entwicklerportal** über den Microsoft Teams-Client, und wählen Sie dann die Registerkarte **"Apps** " aus.
 1. Laden Sie Ihr App-Manifest.
-1. Fügen Sie auf der Seite **Nachrichtenerweiterung** die Domäne hinzu, nach der Sie im Abschnitt **Nachrichtenhandler** suchen möchten. Das folgende Bild erläutert den Prozess:
+1. Wählen Sie auf der Seite " **Messaging-Erweiterung** " unter **"App-Features**" einen vorhandenen Bot aus, oder erstellen Sie einen neuen Bot.
+1. Wählen Sie **Speichern**.
+1. Wählen Sie im Abschnitt "**Vorschaulinks**" die Option **"Domäne hinzufügen**" aus, und geben Sie dann eine gültige Domäne ein.
+1. Klicken Sie auf **Hinzufügen**. In der folgenden Abbildung wird der Prozess erläutert:
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Abschnitt „Nachrichtenhandler“ in App Studio":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot des Abschnitts &quot;Nachrichtenhandler&quot; im Entwicklerportal." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
 

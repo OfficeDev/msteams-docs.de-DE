@@ -1,17 +1,17 @@
 ---
 title: API-Referenzen für Besprechungs-Apps
 author: surbhigupta
-description: Erfahren Sie, wie Sie die API-Verweise auf Besprechungs-Apps mit Beispielen und Codebeispielen identifizieren, Teams-Apps Besprechungen Benutzerrollen-API Benutzerkontext-Benachrichtigungssignalabfrage.
+description: In diesem Artikel erfahren Sie mehr über API-Verweise auf Besprechungs-Apps, die für Teams-Clients und Bot Framework-SDK verfügbar sind, mit Beispielen, Codebeispielen und Antwortcodes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232260"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311953"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -928,8 +928,8 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **Wert. Titel** | Der Betreff der Besprechung. |
 | **Wert. Id** | Die der Besprechung zugeordnete Standard-ID. |
 | **Wert. JoinUrl** | Die Teilnahme-URL der Besprechung. |
-| **Wert. StartTime** | Die Startzeit der Besprechung in UTC. |
-| **Wert. EndTime** | Die Besprechungsendzeit in UTC. |
+| **Wert. Starttime** | Die Startzeit der Besprechung in UTC. |
+| **Wert. Endtime** | Die Besprechungsendzeit in UTC. |
 | **locale**| Das Gebietsschema der vom Client festgelegten Nachricht. |
 
 ## <a name="get-incoming-audio-speaker"></a>Abrufen eingehender Audiolautsprecher
@@ -937,7 +937,9 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
-> Die `getIncomingClientAudioState` API für mobile Geräte ist derzeit nur in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> * Die `getIncomingClientAudioState` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+> * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -977,7 +979,9 @@ Die folgende Tabelle enthält die Antwortcodes:
 Mit `toggleIncomingClientAudio` der API kann eine App die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umschalten. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
-> Die `toggleIncomingClientAudio` API für mobile Geräte ist derzeit nur in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> * Die `toggleIncomingClientAudio` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+> * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 

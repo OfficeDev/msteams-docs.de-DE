@@ -3,12 +3,12 @@ title: Erste Schritte – Übersicht
 description: In diesem Modul erfahren Sie, wie Sie mit der Microsoft Teams-Entwicklerdokumentation beginnen, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264141"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312282"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -40,9 +40,6 @@ Wählen Sie je nach gewünschten Funktionen für Ihre App einen geeigneten Satz 
 
 Wenn Sie bereits mit dem Yeoman-Workflow vertraut sind, bevorzugen Sie möglicherweise die Verwendung von [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) zum Erstellen Ihrer Apps.
 
-> [!WARNING]
-> Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen.<br> App Studio ist ab dem 01. August 2022 veraltet.
-
 ## <a name="build-your-first-teams-app"></a>Erstellen Ihrer ersten Teams-App
 
 Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprache (oder das Framework) aus, und bereiten Sie Ihre Entwicklungsumgebung vor.
@@ -69,5 +66,5 @@ Nun erstellen wir Ihre erste Teams-App. Wählen Sie jedoch zunächst Ihre Sprach
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Beispiele für Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git- und GitHub-Ressourcen](/contribute/additional-resources)
+- [Beispiele für Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git- und GitHub-Ressourcen](/contribute/additional-resources)

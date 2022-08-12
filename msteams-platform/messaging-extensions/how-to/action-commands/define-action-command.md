@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264183"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311999"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -30,7 +30,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Im folgenden Video erfahren Sie, wie Sie Aktionsbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Auswählen von Speicherorten zum Aufrufen von Aktionsbefehlen
@@ -79,71 +79,61 @@ Wenn die Nachrichtenerweiterung über das Feld zum Verfassen oder direkt aus ein
 
 Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Ebene des App-Manifest-JSON ein neues Objekt `composeExtension` hinzufügen. Dazu können Sie eine der folgenden Methoden verwenden:
 
-* [Erstellen eines Aktionsbefehls mit App Studio](#create-an-action-command-using-app-studio)
+* [Erstellen eines Aktionsbefehls mithilfe des Entwicklerportals](#create-an-action-command-using-developer-portal)
 * [Manuelles Erstellen eines Aktionsbefehls](#create-an-action-command-manually)
 
-### <a name="create-an-action-command-using-app-studio"></a>Erstellen eines Aktionsbefehls mit App Studio
+### <a name="create-an-action-command-using-developer-portal"></a>Erstellen eines Aktionsbefehls mithilfe des Entwicklerportals
 
-Sie können einen Aktionsbefehl mit **App Studio** oder **Entwicklerportal** erstellen.
-
-> [!WARNING]
- > Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal [Entwicklerportal](https://dev.teams.microsoft.com/) zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio ist ab dem 01. August 2022 veraltet.
+Sie können einen Aktionsbefehl über das **Entwicklerportal** erstellen.
 
 # <a name="app-studio"></a>[App-Studio](#tab/AS)
 
 > [!NOTE]
 > Die Voraussetzung zum Erstellen eines Aktionsbefehls ist, dass Sie bereits eine Nachrichtenerweiterung erstellt haben. Informationen zum Erstellen einer Nachrichtenerweiterung finden Sie unter [Erstellen einer Nachrichtenerweiterung](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**So erstellen Sie einen Aktionsbefehl:**
+So erstellen Sie einen Aktionsbefehl:
 
-1. Öffnen Sie **App Studio** über den Microsoft Teams-Client, und wählen Sie die Registerkarte **Manifest-Editor** aus.
-1. Wenn Sie Ihr App-Paket bereits in **App Studio** erstellt haben, wählen Sie es aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
-1. Wählen Sie nach dem Importieren eines App-Pakets unter **Funktionen** die Option **Nachrichtenerweiterungen** aus. Sie erhalten ein Popupfenster zum Einrichten der Nachrichtenerweiterung.
-1. Wählen Sie im Fenster **Einrichten** aus, um die Nachrichtenerweiterung in Ihre App-Umgebung einzuschließen. In der folgenden Abbildung wird das Fenster zum Einrichten der Nachrichtenerweiterung angezeigt:
+1. Öffnen Sie **das Entwicklerportal** im Microsoft Teams-Client, und wählen Sie die Registerkarte **"Apps** " aus. Wenn Sie Ihr App-Paket bereits im **Entwicklerportal** erstellt haben, wählen Sie aus der Liste aus. Wenn Sie kein App-Paket erstellt haben, importieren Sie ein vorhandenes.
+1. Wählen Sie nach dem Importieren eines App-Pakets **nachrichtenerweiterungen** unter **"App-Features"** aus.
+1. Um eine Nachrichtenerweiterung zu erstellen, benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie " **Neuen Bot erstellen** " aus, geben Sie dem neuen Bot einen Namen, und wählen Sie dann " **Erstellen"** aus.
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Einrichten von Messaging-Erweiterungen":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Der Screenshot zeigt, wie Sie einen Bot im Entwicklerportal erstellen.":::
 
-1. Um eine Nachrichtenerweiterung zu erstellen, benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie die Option **Neuen Bot erstellen** aus, geben Sie dem neuen Bot einen Namen, und wählen Sie **Erstellen** aus. In der folgenden Abbildung wird die Boterstellung für die Nachrichtenerweiterung angezeigt:
+1. Um einen vorhandenen Bot zu verwenden, wählen **Sie einen vorhandenen Bot** und dann die vorhandenen Bots aus der Dropdownliste aus, oder geben **Sie eine Bot-ID ein** , wenn Sie bereits eine Bot-ID erstellt haben.
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Erstellen eines Bots für die Messaging-Erweiterung":::
+1. Wählen Sie den Bereich der Messaging-Erweiterung und dann **"Speichern"** aus.
 
-1. Um einen vorhandenen Bot zu verwenden, wählen Sie **Vorhandenen Bot verwenden** und dann **Aus einem meiner vorhandenen Bots auswählen** aus, um die vorhandenen Bots aus der Dropdownliste auszuwählen. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus, oder wählen Sie **Mit einer anderen Bot-ID verbinden** aus, wenn Sie bereits eine Bot-ID erstellt haben. Geben Sie einen **Botnamen** ein, und wählen Sie **Speichern** aus.
+1. Wählen Sie " **Befehl hinzufügen"** im Abschnitt **"Befehl** " aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Verwenden eines vorhandenen Bots für die Messaging-Erweiterung":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot zeigt, wie Sie einen Befehl hinzufügen, um das Verhalten der Nachrichtenerweiterung zu definieren.":::
 
-1. Wählen Sie im Abschnitt **Befehl** der Seite mit den Nachrichtenerweiterungen die Option **Hinzufügen** aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen. In der folgenden Abbildung ist das Hinzufügen des Befehls für die Nachrichtenerweiterung zu sehen:
+1. Wählen Sie **"Aktion"** und dann "Parametertyp" aus.
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Einschließen des Befehls":::
+1. Geben Sie **Befehls-ID**, **Befehlstitel** und **Befehlsbeschreibung** ein.
 
-1. Wählen Sie **Benutzern erlauben, Aktionen in externen Diensten von Teams aus auszulösen** aus. In der folgenden Abbildung wird die Aktionsbefehlsauswahl angezeigt:
+1. Geben Sie alle Parameter ein, und wählen Sie den Typ der Eingabe aus der Dropdownliste aus.
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Auswahl des Aktionsbefehls":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Der Screenshot zeigt, wie Sie einen Parameter hinzufügen, um Den Befehl für die Nachrichtenerweiterung zu definieren.":::
 
-1. Wenn Sie einen statischen Parametersatz zum Erstellen des Aufgabenmoduls verwenden möchten, wählen Sie **Satz statischer Parameter für den Befehl definieren** aus.
+1. Wählen Sie unter "**Vorschaulinks****" die Option "Domäne hinzufügen"** aus.
 
-    In der folgenden Abbildung wird die Auswahl der statischen Parameter für den Aktionsbefehl angezeigt:
+1. Geben Sie eine gültige Domäne ein, und wählen Sie dann **"Hinzufügen"** aus.
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Auswahl statischer Parameter für den Aktionsbefehl":::
-
-    In der folgenden Abbildung wird ein Beispiel für die Einrichtung statischer Parameter angezeigt:
-
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Einrichten statischer Parameter für den Aktionsbefehl":::
-
-    In der folgenden Abbildung wird ein Beispiel für das Testen statischer Parameter angezeigt:
-
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Testen statischer Parameter für den Aktionsbefehl":::
-
-1. Um dynamische Parameter zu verwenden, wählen Sie die Option **Einen dynamischen Satz von Parametern von Ihrem Bot abrufen** aus. In der folgenden Abbildung wird die Auswahl der Parameter für den Aktionsbefehl angezeigt:
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Auswahl dynamischer Parameter für den Aktionsbefehl":::
-
-1. Fügen Sie eine **Befehls-ID** und einen **Titel** hinzu.
-1. Wählen Sie den Speicherort aus, von dem aus Sie den Aktionsbefehl aufrufen möchten. In der folgenden Abbildung wird der Speicherort zum Aufrufen des Aktionsbefehls angezeigt:
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Speicherort zum Aufrufen des Aktionsbefehls":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
 
 1. Wählen Sie **Speichern**.
-1. Um weitere Parameter hinzuzufügen, wählen Sie die Schaltfläche **Hinzufügen** im Abschnitt **Parameter** aus.
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Der Screenshot zeigt, wie Sie alle Einstellungen und Parameter für Ihre Nachrichtenerweiterung speichern.":::
+
+**So fügen Sie zusätzliche Parameter hinzu**
+
+1. Wählen Sie im Befehlsbereich die Ellipse und dann den **Parameter "Bearbeiten"** aus.
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots zeigen, wie Sie zusätzliche Parameter für Ihre Nachrichtenerweiterung hinzufügen.":::
+
+1. Wählen Sie **"Parameter hinzufügen"** aus, und geben Sie alle Parameter ein.
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Der Screenshot zeigt, wie Sie zusätzliche Parameter für Ihre Nachrichtenerweiterung hinzufügen."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-an-action-command-manually"></a>Manuelles Erstellen eines Aktionsbefehls
 
@@ -185,43 +175,54 @@ Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das
 ...
 "composeExtensions": [
   {
-    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
-    "canUpdateConfiguration": true,
+    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
+    "scopes": [
+      "personal",
+      "groupchat"
+    ],
     "commands": [
       {
-        "id": "addTodo",
-        "description": "Create a To Do item",
-        "title": "Create To Do",
+        "id": "To do",
         "type": "action",
-        "context": ["commandBox", "message", "compose"],
+        "title": "Create To do",
+        "description": "Create a To do",
+        "initialRun": true,
         "fetchTask": false,
+        "context": [
+          "commandBox",
+          "compose"
+        ],
         "parameters": [
           {
             "name": "Name",
-            "description": "To Do Title",
             "title": "Title",
+            "description": "To do Title",
             "inputType": "text"
           },
           {
             "name": "Description",
-            "description": "Description of the task",
             "title": "Description",
+            "description": "Description of the task",
             "inputType": "textarea"
           },
           {
             "name": "Date",
-            "description": "Due date for the task",
             "title": "Date",
+            "description": "Due date for the task",
             "inputType": "date"
           }
         ]
-      },
+      }
+    ],
+    "canUpdateConfiguration": true,
+    "messageHandlers": [
       {
-        "id": "reassignTodo",
-        "description": "Reassign a todo item",
-        "title": "Reassign a todo item",
-        "type": "action",
-        "fetchTask": false,
+        "type": "link",
+        "value": {
+          "domains": [
+            "yourapp.onmicrosoft.com"
+          ]
+        }
       }
     ]
   }

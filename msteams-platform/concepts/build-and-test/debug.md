@@ -3,12 +3,12 @@ title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
 description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen von Microsoft Teams-Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264134"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312191"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Auswählen eines Testsetups und Debuggen Ihrer Teams-App
 
@@ -58,12 +58,7 @@ Um ngrok in Ihrem Projekt basierend auf den von Ihnen verwendeten Funktionen zu 
 Für Bots, die im Microsoft Bot Framework registriert sind, aktualisieren Sie den Messaging-Endpunkt des Bots, um diesen neuen ngrok-Endpunkt zu verwenden. Beispiel: `https://2d1224fb.ngrok.io/api/messages`. Sie können überprüfen, ob ngrok funktioniert, indem Sie die Bot-Antwort im Testchatfenster des Bot Framework-Portals testen. Wie der Emulator ermöglicht ihnen dieser Test nicht den Zugriff auf Teams-spezifische Funktionen.
 
 > [!NOTE]
->
-> * Um den Messaging-Endpunkt für einen Bot zu aktualisieren, müssen Sie das Bot-Framework verwenden. Wählen Sie Ihren Bot in [Ihrer Liste der Bots in Bot Framework](https://dev.botframework.com/bots) aus. Sie müssen Ihren Bot nicht zu Microsoft Azure migrieren. Sie können Ihren Messaging-Endpunkt auch über [App Studio](~/concepts/build-and-test/app-studio-overview.md) aktualisieren.
-
-> [!WARNING]
->
-> * Wenn Sie App Studio verwendet haben, empfehlen wir, das Entwicklerportal zum Konfigurieren, Verteilen und Verwalten Ihrer Teams-Apps zu testen. App Studio ist ab dem 01. August 2022 veraltet.
+> Um den Messaging-Endpunkt für einen Bot zu aktualisieren, müssen Sie das Bot-Framework verwenden. Wählen Sie Ihren Bot in [Ihrer Liste der Bots in Bot Framework](https://dev.botframework.com/bots) aus. Sie müssen Ihren Bot nicht zu Microsoft Azure migrieren. Sie können Ihren Messaging-Endpunkt auch über das [Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md) aktualisieren.
 
 ## <a name="cloud-hosted"></a>In der Cloud gehostet
 
@@ -87,3 +82,5 @@ Um Ihre Erfahrung in Teams zu laden und auszuführen, müssen Sie ein Paket erst
 ## <a name="see-also"></a>Siehe auch
 
 [Testen und debuggen Sie Ihren Bot lokal mit der IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[Entwicklertools für Microsoft Teams-Registerkarten](../../tabs/how-to/developer-tools.md)
