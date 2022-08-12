@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232281"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312240"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -36,6 +36,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
+| 09.08.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio 2022 eingeführt | Tools und SDKs > Teams Toolkit für Visual Studio > [Überblick über das Teams-Toolkit für Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03.08.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03.08.2022 | Feature zum Abrufen von Besprechungstranskripten im Postbesprechungsszenario hinzugefügt. | Erstellen von Apps für Teams-Besprechungen und -Anrufe > Abrufen von Besprechungstranskripten mithilfe von Graph-APIs > [Übersicht](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03.08.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
@@ -227,7 +228,6 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
 | 12.11.2018 | Registerkarten im Gruppenchat sind jetzt in der veröffentlichten Version von Teams verfügbar. Im Rahmen dieser Arbeit wurde der Abschnitt „Registerkarten“ aus Gründen der Übersichtlichkeit überarbeitet.| [Konfigurierbare Registerkarten](~/concepts/tabs/tabs-configurable.md) |
-| 11.11.2018 | Die ersten Schritte für Node JS und .NET/C# wurden aktualisiert, um App Studio in Teams zu verwenden, und ein neuer Abschnitt zum Hosten von Node-basierten Teams-Apps in Azure wurde hinzugefügt. | [Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET und App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Erste Schritte auf der Microsoft Teams-Plattform mit Node JS und App Studio](~/get-started/get-started-nodejs-app-studio.md), [Hosten Ihrer Node Teams-App in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 09.11.2018 | Sie können jetzt Deep-Links zu privaten Chats zwischen Benutzern erstellen. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 08.11.2018 | SharePoint Framework 1.7 wurde ausgeliefert und mit ihm eine neue Funktion zur Verwendung der Registerkarte Microsoft Teams als SharePoint Framework Webpart. | [Registerkarten in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 05.11.2018 | Das **Aufgabenmodul** -Feature wurde veröffentlicht. Ein Aufgabenmodul ermöglicht es Ihnen, modale Popup-Fenster in Ihrer Teams-Anwendung zu erstellen, sowohl von Bots als auch von Registerkarten aus. Innerhalb des Popups können Sie Ihren eigenen benutzerdefinierten HTML-/JavaScript-Code ausführen, ein `<iframe>`-basiertes Widget anzeigen, z. B. ein YouTube- oder Microsoft Stream-Video, oder eine [adaptive Karte](/adaptive-cards/)anzeigen. | [Aufgabenmodul – Übersicht](~/concepts/task-modules/task-modules-overview.md), [Aufgabenmodul auf Registerkarten](~/concepts/task-modules/task-modules-tabs.md),  [Aufgabenmodul in Bots](~/concepts/task-modules/task-modules-bots.md) |
@@ -251,7 +251,6 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | 02.04.2018 | Verwenden von Bots zum Senden von Benachrichtigungen für Ihre App. |[Reine Benachrichtigungsbots](~/concepts/bots/bots-notification-only.md)|
 | 27.03.2018 | Erweiterte Dokumentation für proaktives Messaging. |[Beginn einer Unterhaltung](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 15.03.2018 | Umgestaltete Dokumentation für Karten. |[Karten](~/concepts/cards/cards.md), [Kartenaktionen](~/concepts/cards/cards-actions.md), [Kartenformatierung](~/concepts/cards/cards-format.md), [Kartenreferenz](~/concepts/cards/cards-reference.md)|
-| 03.03.2018 | Dokumentation für Teams App Studio hinzugefügt. |[Schnelles Entwickeln von Apps mit Teams App Studio](~/get-started/get-started-app-studio.md) [mithilfe der Steuerelement-Bibliothek in App Studio](~/get-started/app-studio-component-library.md)|
 | 27.02.2018 | Beispielcode zum Veranschaulichen der AsTeamsChannelAccounts()-Methode hinzugefügt. |[Kontext für Ihren Bot erhalten](~/concepts/bots/bots-context.md)|
 | 05.02.2018 | Themen für die ersten Schritte mit C# hinzugefügt. |[Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 |

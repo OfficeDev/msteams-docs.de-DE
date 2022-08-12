@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, wie Sie adaptive Karten für Ihre Tea
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558156"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312085"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Entwerfen adaptiver Karten für Ihre Microsoft Teams-App
 
@@ -204,11 +204,11 @@ Dient [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) zum Format
 
 **Do**: Auf diesem Bildschirm befinden sich am unteren Rand der Karte zwei Spalten. Die Breite der Eingabekomponente wird auf `stretch` festgelegt, während die die Breite der Schaltfläche **Auswählen** auf `auto` festgelegt ist. Dadurch wird sichergestellt, dass die Schaltfläche vollständig angezeigt wird.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Abbildung zeigt, wie die Spaltenbreite in adaptiven Karten festgelegt wird.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="Der Screenshot zeigt, wie die Spaltenbreite für adaptive Karten festgelegt wird.":::
 
 **Don‘t**: Auf diesem Bildschirm haben beide Spalten `width` auf `auto` festgelegt. Dadurch wird die Schaltfläche **Auswählen** auf der rechten Seite im Vergleich zur Eingabe leicht abgeschnitten.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Abbildung zeigt, wie die Spaltenbreite in adaptiven Karten nicht festgelegt wird.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="Der Screenshot zeigt, wie die Spaltenbreite in adaptiven Karten nicht festgelegt wird.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -388,11 +388,11 @@ Hier ist der Code für die Implementierung des Entwurfsbeispiels, dem Sie folgen
 
 **Do**: Layouts werden auf Mobilgeräten mit weniger Spalten in der Regel besser angezeigt.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="Abbildung zeigt die richtige Spaltenmenge in adaptiven Karten.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="Der Screenshot zeigt die richtige Anzahl von Spalten in adaptiven Karten.":::
 
 **Don't**: Die Verwendung zu vieler Spalten kann Ihre Karteninhalte auf Mobilgeräten überladen.
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="Abbildung zeigt, wie sich zu viele Spalten negativ auf das Layout der adaptiven Karten auswirken können.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="Der Screenshot zeigt, wie sich zu viele Spalten negativ auf das Layout der adaptiven Karte auswirken können.":::
 
 #### <a name="example-fixed-width-has-its-place"></a>Beispiel: Feste Breite hat ihre Position
 
@@ -400,7 +400,7 @@ Hier ist der Code für die Implementierung des Entwurfsbeispiels, dem Sie folgen
 
 Wenn sich die Größe von etwas, das Sie anzeigen, nicht ändern muss, legen Sie die Spalten auf eine bestimmte Pixelbreite fest. Dieses Beispiel zeigt die linke Spalte mit einer Größe von 50 Pixeln, während sich die Beschreibungen neben den Miniaturbildern über die Länge der Karte erstrecken.
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Abbildung zeigt, wie die Spaltenbreite in adaptiven Karten festgelegt wird.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="Der Screenshot zeigt, wie die Spaltenbreite in adaptiven Karten festgelegt wird.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -548,17 +548,17 @@ Hier ist der Code für die Implementierung des Entwurfsbeispiels.
 
 Unabhängig davon, ob Sie [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) oder [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) verwenden, legen Sie die `wrap`-Eigenschaft auf `true` fest, damit Ihr Kartentext auf Mobilgeräten nicht abgeschnitten wird.
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>Beispiel: Sicherstellen, dass Text nicht abgeschnitten wird
+#### <a name="example-making-sure-text-dont-truncate"></a>Beispiel: Sicherstellen, dass Text nicht abgeschnitten wird
 
 # <a name="design"></a>[Entwerfen](#tab/design)
 
 **Do**: Auf diesem Bildschirm ist auf der Karte eine `wrap`-Eigenschaft auf `true` festgelegt. Dadurch kann der Text an eine beliebige Bildschirmgröße angepasst werden.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="Abbildung zeigt, wie Text in adaptiven Karten umbrochen wird.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="Der Screenshot zeigt, wie Text in adaptiven Karten umgebrochen wird.":::
 
 **Don‘t**: Auf diesem Bildschirm verwendet die Karte nicht die `wrap`-Eigenschaft, sodass der Text auf dem Bildschirm eines Mobilgeräts abgeschnitten wird.
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="Abbildung zeigt, was passieren kann, wenn Sie Text nicht in adaptiven Karten umbrechen.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="Der Screenshot zeigt, was passieren kann, wenn Sie Text in adaptiven Karten nicht umbrechen.":::
 
 # <a name="code"></a>[Code](#tab/code)
 
@@ -655,7 +655,7 @@ Befolgen Sie diese Richtlinien, wenn Sie Bilder in Ihre Karten einschließen.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Bewährte Methode: Eine adaptive Karte sollte nur eine kleine Gruppe von Aktionen enthalten.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Der Screenshot zeigt bewährte Methoden, wie Sie nur einen kleinen Satz von Aktionen auf einer adaptiven Karte einschließen sollten.":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Was Sie tun sollten: bis zu sechs primäre Aktionen verwenden
 
@@ -663,7 +663,7 @@ Adaptive Karten unterstützen zwar bis zu sechs primäre Aktionen, auf den meist
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Bewährte Methode: Benutzer sollten nicht mit zu vielen Aktionen auf einer adaptiven Karte überfordert werden.":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Der Screenshot zeigt bewährte Methoden, wie Benutzer nicht mit zu vielen Aktionen auf einer adaptiven Karte überfordert werden.":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>Was Sie nicht tun sollten: mehr als sechs primäre Aktionen verwenden
 
@@ -674,7 +674,7 @@ Adaptive Karten sollten schnelle, handlungsrelevante Inhalte präsentieren. Zu v
 
 ### <a name="frequency"></a>Häufigkeit
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Bewährte Methode bezüglich der Häufigkeit adaptiver Karten.":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Der Screenshot zeigt bewährte Methoden zur Häufigkeit adaptiver Karten.":::
 
 #### <a name="do-be-concise"></a>Was Sie tun sollten: Präzise sein
 

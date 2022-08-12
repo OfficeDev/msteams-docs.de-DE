@@ -3,12 +3,12 @@ title: Öffentliche Entwicklervorschau für Microsoft Teams
 description: In diesem Artikel lernen Sie die Features kennen, die in der öffentlichen Entwicklervorschau von Microsoft Teams und im Entwicklervorschau-App-Manifest enthalten sind.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503914"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312198"
 ---
 # <a name="public-developer-preview-for-teams"></a>Öffentliche Entwicklervorschau für Teams
 
@@ -19,9 +19,9 @@ Developer Preview ist ein öffentliches Programm für Entwickler, das frühzeiti
 
 ## <a name="developer-preview-app-manifest"></a>Entwicklervorschau-App-Manifest
 
-Viele in der Entwicklervorschau aktivierte Features erfordern Änderungen an der JSON-Datei Ihres App-Manifests. Dazu müssen Sie das [Manifestschema der Entwicklervorschau](~/resources/schema/manifest-schema-dev-preview.md) verwenden. Wenn Sie dieses Schema verwenden, können Sie weder [App Studio](~/concepts/build-and-test/app-studio-overview.md) verwenden, um diese Änderungen vorzunehmen, noch können Sie es verwenden, um Ihre App zu Testzwecken hochzuladen. Um Ihre App hochzuladen, wählen Sie das `More apps`-Symbol in der App-Leiste aus und wählen Sie dann die `Upload a custom app link` aus. Mit dieser Methode können Sie nur eine gezippte Version Ihres App-Pakets hochladen.
+Viele in der Entwicklervorschau aktivierte Features erfordern Änderungen an der JSON-Datei Ihres App-Manifests. Dazu müssen Sie das [Manifestschema der Entwicklervorschau](~/resources/schema/manifest-schema-dev-preview.md) verwenden. Wenn Sie dieses Schema verwenden, können Sie weder das [Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md) verwenden, um diese Änderungen vorzunehmen, noch können Sie es verwenden, um Ihre App zu Testzwecken hochzuladen. Um Ihre App hochzuladen, wählen Sie das `More apps`-Symbol in der App-Leiste aus und wählen Sie dann die `Upload a custom app link` aus. Mit dieser Methode können Sie nur eine gezippte Version Ihres App-Pakets hochladen.
 
-Möglicherweise ist es hilfreich, App Studio zum Erstellen der Nicht-Entwicklervorschauteile Ihres App-Pakets zu verwenden, dieses Paket dann zu exportieren und die `manifest.json`-Datei manuell zu bearbeiten, um die Entwicklervorschaufeatures hinzuzufügen, die Sie verwenden möchten. Sobald Sie der `manifest.json` Datei Funktionen für die Entwicklervorschau hinzugefügt haben, können Sie das Paket nicht mehr in App Studio importieren.
+Möglicherweise ist es hilfreich, das Entwicklerportal zum Erstellen der Nicht-Entwicklervorschauteile Ihres App-Pakets zu verwenden, dieses Paket dann zu exportieren und die `manifest.json`-Datei manuell zu bearbeiten, um die Entwicklervorschaufeatures hinzuzufügen, die Sie verwenden möchten. Sobald Sie der `manifest.json`-Datei Funktionen für die Entwicklervorschau hinzugefügt haben, können Sie das Paket nicht mehr ins Entwicklerportal für Teams importieren.
 
 ## <a name="enable-developer-preview"></a>Entwicklervorschau aktivieren
 

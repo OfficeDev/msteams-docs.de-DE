@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841792"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311967"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Benutzerdefinierte Zusammen-Modus-Szenen
 
@@ -37,7 +37,7 @@ Eine reine Szenen-App ist immer noch eine App in Teams. Das Scene Studio verarbe
 Sie müssen über grundlegende Kenntnisse der folgenden Punkte verfügen, um benutzerdefinierte Szenen im Zusammen-Modus verwenden zu können:
 
 * Definieren von Szenen und Plätzen in einer Szene.
-* Besitzen Sie ein Microsoft-Entwicklerkonto und machen Sie sich mit dem Teams [Entwicklerportal](../concepts/build-and-test/teams-developer-portal.md) und App Studio vertraut.
+* Über ein Microsoft-Entwicklerkonto verfügen und mit dem Teams [Entwicklerportal](../concepts/build-and-test/teams-developer-portal.md) vertraut sein.
 * Machen Sie sich mit dem [Konzept des Querladens von Apps](../concepts/deploy-and-publish/apps-upload.md) vertraut.
 * Stellen Sie sicher, dass der Administrator die Berechtigung zum [**Hochladen einer benutzerdefinierten App**](../concepts/deploy-and-publish/apps-upload.md) erteilt hat, und wählen Sie alle Filter als Teil der App-Setup- bzw. Besprechungsrichtlinien aus.
 
@@ -53,7 +53,7 @@ Berücksichtigen Sie die folgenden Vorgehensweisen für die Erstellung von Szene
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Erstellen einer Szene mithilfe des Scene Studio
 
-Microsoft verfügt über ein Scene Studio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor – Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes) verfügbar. Dieses Dokument bezieht sich auf Scene Studio im Entwicklerportal von Teams. Die Schnittstelle und die Funktionen sind im App Studio Scene Designer identisch.
+Microsoft verfügt über ein Scene Studio, mit dem Sie Szenen erstellen können. Es ist im [Szenen-Editor – Teams Entwicklerportal](https://dev.teams.microsoft.com/scenes) verfügbar. Dieses Dokument bezieht sich auf Scene Studio im Entwicklerportal von Teams.
 
 Eine Szene im Kontext des Scene Studio ist ein Artefakt, das die folgenden Elemente enthält:
 

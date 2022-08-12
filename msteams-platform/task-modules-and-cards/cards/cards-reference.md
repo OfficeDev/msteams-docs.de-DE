@@ -3,12 +3,12 @@ title: Kartentypen
 description: In diesem Modul erfahren Sie, welche Karten und Kartenaktionen Bots in Teams zur Verfügung stehen, und erstellen Sie einen Hero, Miniaturansichten und adaptive Karten
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558583"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311960"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -18,7 +18,7 @@ Bevor Sie die verschiedenen Kartentypen identifizieren, sollten Sie wissen, wie 
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Erstellen einer Hero-, Miniaturansichts- oder Adaptiven Karte
 
-So erstellen Sie eine Hero-, Miniaturansichts- oder adaptive Karte in App Studio:
+So erstellen Sie eine Hero-Karte, Miniaturansichtskarte oder adaptive Karte aus dem Entwicklerportal für Teams:
 
 1. Wechseln Sie zum [Entwicklerportal für Teams](https://dev.teams.microsoft.com/home).
 1. Wählen Sie **Adaptive Karten entwerfen und erstellen** aus.

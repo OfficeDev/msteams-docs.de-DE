@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: b5197a7fcb3a3309cfec003d8b4c2fc937e59035
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264162"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312247"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -19,7 +19,7 @@ Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt könn
 Sehen Sie sich das folgende Video an, um mehr über die Veröffentlichung Ihrer Anwendung im Microsoft Teams App Store zu erfahren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)einreichen, sollten Sie Folgendes tun.
@@ -28,12 +28,9 @@ Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-
 
 Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Sie Ihr App-Paket überprüfen, um Probleme während des Übermittlungsprozesses zu vermeiden.
 
-> [!WARNING]
-> Wenn Sie App Studio verwendet haben, empfehlen wir Ihnen, das[Developer Portal](https://dev.teams.microsoft.com/)auszuprobieren, um Ihre Teams-Anwendungen zu konfigurieren, zu verteilen und zu verwalten. App Studio ist ab dem 01. August 2022 veraltet.
-
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
-1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch in [App Studio](../../../build-and-test/app-studio-overview.md) verfügbar.)
+1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch im [Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md) verfügbar.
 1. Laden Sie Ihr App-Paket hoch, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste**, und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
 1. [Beheben Sie Fehler mit Ihren Konfigurationen ](~/resources/schema/manifest-schema.md) oder Ihrer App ganz allgemein. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern, oder wenn Sie nicht alle Kriterien in der Prüfliste erfüllt haben.
