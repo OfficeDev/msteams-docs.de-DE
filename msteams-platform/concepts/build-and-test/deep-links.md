@@ -1,14 +1,14 @@
 ---
 title: Erstellen von Deep-Links
-description: Erfahren Sie, wie Sie Deep Links erstellen und wie Sie sie in Ihren Microsoft Teams-Apps mit Registerkarten verwenden und darin navigieren.
+description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
+ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058221"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "67302465"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -387,7 +387,10 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ### <a name="deep-linking-to-an-app"></a>Deeplinks zu einer App
 
 Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld angezeigt, um die App zu installieren.
-  
+
+> [!NOTE]
+> Derzeit werden Deeplinks zu einer App auf der mobilen Plattform nicht unterstützt.
+
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deeplink-Verknüpfung für SharePoint-Framework-Registerkarten
 
 Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
