@@ -1,16 +1,16 @@
 ---
 title: Einschließen eines SaaS-Angebots mit Ihrer App
-description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App mit Abonnementplänen monetarisieren und Ihrer Microsoft Teams-App ein SaaS-Angebot hinzufügen.
+description: In diesem Artikel erfahren Sie, wie Sie Ihre Microsoft Teams-App mit einem abonnementbasierten Preismodell monetarisieren und ein SaaS-Angebot in Ihre Microsoft Teams-App einschließen.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 872008353850fd2d8b569b4f345152fba895cffb
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
+ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158073"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288185"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Binden Sie ein SaaS-Angebot in Ihre Teams-App ein
 
