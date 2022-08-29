@@ -1,16 +1,16 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie Näheres über die Vorschaugenerierung für Links, das Öffnen der Bühnenansicht und das Anheften einer Registerkarte mit der Microsoft Teams-App. Erfahren Sie mehr über die Bühnenansicht und deren Aufruf mithilfe einer adaptiven Karte anhand von Codebeispielen und Beispielen.
+description: Erfahren Sie mehr über die Phasenansicht, eine Vollbild-UI-Komponente, die aufgerufen wird, um Ihre Webinhalte anzuzeigen. Die Verbreitung von Links wird verwendet, um URLs mithilfe adaptiver Karten in eine Registerkarte umzuwandeln.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.localizationpriority: high
+ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841989"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450450"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 

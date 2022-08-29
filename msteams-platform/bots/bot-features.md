@@ -1,16 +1,16 @@
 ---
 title: Tools und SDKs
 author: surbhigupta
-description: In diesem Artikel lernen Sie Tools und SDKs zum Erstellen von Microsoft Teams-Bots und -Bots mit dem Microsoft Bot Framework kennen.
+description: In diesem Artikel erfahren Sie mehr über Tools und Bot Framework-SDKs (C#, Python, Java, JavaScript) für Microsoft Teams-Bots und die Vor- und Nachteile.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
+ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912254"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321187"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
@@ -195,7 +195,7 @@ this.onMessage(async (context, next) => {
 |Beispielname | Beschreibung | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Bot-Beispiele | Gruppe von Bot-Beispielen | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>Nächster Schritt
 

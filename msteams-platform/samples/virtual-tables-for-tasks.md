@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über virtuelle Tabellen für Auf
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 58572dc51164d18dcfcbf44012543bd5400c3921
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
+ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178973"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67314595"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Virtuelle Tabellen für Aufgaben, Besprechungen, Dateien
 
@@ -54,7 +54,7 @@ Um diesem Artikel zu folgen, benötigen Sie Folgendes:
 
 Das in diesem Leitfaden beschriebene Szenario verwendet die virtuellen Tabellen "Planner Plan" und "Task". Das beschriebene Szenario ist das gleiche, das vom Steuerelement für die Zusammenarbeit von Aufgaben verwendet wird. Aus Benutzersicht zeigt das Szenario, wie ein Planner-Plan und mehrere Aufgaben erstellt und einem bestimmten Geschäftsdatensatz zugeordnet werden. In diesem Szenario wird gezeigt, wie Sie die dem Geschäftsdatensatz zugeordneten Aufgaben abrufen und wie Sie eine bestimmte Planner-Aufgabe lesen, aktualisieren und löschen.
 
-Im folgenden Sequenzdiagramm wird die Interaktion zwischen dem Client erläutert, z. B. das Steuerelement für die Aufgabenzusammenarbeit, die [Zusammenarbeits-API](~/samples/collaboration-api-reference.md) und die virtuellen Tabellen "Plan für Planner" und "Aufgaben".
+Im folgenden Sequenzdiagramm wird die Interaktion zwischen dem Client erläutert, z. B. das Steuerelement für die Aufgabenzusammenarbeit, die [Zusammenarbeits-API](/rest/api/industry/collaboration-controls/) und die virtuellen Tabellen "Plan für Planner" und "Aufgaben".
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequenzdiagramm für virtuelle Tabellen":::
 
@@ -584,7 +584,7 @@ Die `plannerTaskId` Eigenschaft ist einer Planner-Aufgabe zugeordnet, die mithil
 
 ---
 
-Um dieses Problem zu beheben, müssen Sie die Fehlermeldung in der Antwort überprüfen, und wenn sie auf die oben gezeigte Nachricht festgelegt ist, bedeutet dies, dass der virtuelle Datensatz nicht zugeordnet ist. Um eine Zuordnung für diesen Datensatz zu erstellen, müssen Sie ["Zuordnungszusammenarbeitszuordnung – REST-API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map)" aufrufen.
+Um dieses Problem zu beheben, müssen Sie die Fehlermeldung in der Antwort überprüfen, und wenn sie auf die oben gezeigte Nachricht festgelegt ist, bedeutet dies, dass der virtuelle Datensatz nicht zugeordnet ist. Um eine Zuordnung für diesen Datensatz zu erstellen, müssen Sie ["Zuordnungszusammenarbeitszuordnung – REST-API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map)" aufrufen.
 
 ### <a name="attempt-to-read-a-virtual-record-and-the-graph-resource-has-been-deleted"></a>Versuch, einen virtuellen Datensatz zu lesen, und die Graph-Ressource wurde gelöscht
 

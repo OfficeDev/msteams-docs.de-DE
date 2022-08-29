@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: e374e53b7d34837cb0de28d6586b2417f9ae4652
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
+ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058263"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67418850"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -23,7 +23,7 @@ Mit Apps für Teams-Besprechungen können Sie die Funktionen Ihrer Apps über de
 
 * Erfahren Sie, wie Sie Teams-Apps entwickeln. Weitere Informationen zum Entwickeln von Teams-Apps finden Sie unter [Teams-App-Entwicklung](../overview.md).
 
-* Verwenden Sie Ihre App, die konfigurierbare Registerkarten im Gruppenchatbereich unterstützt. Weitere Informationen finden Sie unter [Gruppenchatbereich](../resources/schema/manifest-schema.md#configurabletabs) und [Erstellen einer Gruppenregisterkarte](../build-your-first-app/build-channel-tab.md).
+* Verwenden Sie Ihre App, die `groupchat` konfigurierbare Registerkarten im Bereich unterstützt. Weitere Informationen finden Sie unter [Gruppenchatbereich](../resources/schema/manifest-schema.md#configurabletabs) und [Erstellen einer Gruppenregisterkarte](../build-your-first-app/build-channel-tab.md).
 
 * Halten Sie sich an die allgemeinen [Entwurfsrichtlinien für Teams-Registerkarten](../tabs/design/tabs.md) für Szenarien vor und nach der Besprechung. Informationen über Erfahrungen während Besprechungen finden Sie in den Entwurfsrichtlinien für [besprechungsinterne Registerkarten](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) und [besprechungsinternes Design](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
@@ -81,7 +81,7 @@ Unterstützen Sie den Bereich `groupchat`, um Ihre App in Chats vor und nach der
 | **meetingChatTab** | Eine Registerkarte in der Kopfzeile eines Gruppenchats zwischen einer Gruppe von Benutzern für eine geplante Besprechung. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf Mobilgeräten funktionieren. |
 | **meetingDetailsTab** | Eine Registerkarte in der Kopfzeile der Ansicht der Besprechungsdetails des Kalenders. Sie können entweder **meetingChatTab** oder **meetingDetailsTab** angeben, um sicherzustellen, dass die Apps auf Mobilgeräten funktionieren. |
 | **meetingSidePanel** | Ein besprechungsinterner Bereich, der über die einheitliche Leiste (U-Leiste) geöffnet wird. |
-| **meetingStage** | Eine App aus dem `meetingSidePanel` kann im Freigabefenster angezeigt werden. Sie können diese App weder auf mobilen noch auf Microsoft Teams-Raum-Clients verwenden. |
+| **meetingStage** | Eine App aus dem `meetingSidePanel` kann im Freigabefenster angezeigt werden. Sie können diese App nicht auf Teams-Raumclients verwenden. |
 
 Nachdem Sie Ihre App für Teams-Besprechungen aktiviert haben, müssen Sie Ihre App vor einer Besprechung, während einer Besprechung und nach einer Besprechung konfigurieren.
 
@@ -100,9 +100,9 @@ Vor einer Besprechung können Benutzer Registerkarten, Bots und Nachrichtenerwei
 So fügen Sie einer Besprechung eine Registerkarte hinzu:
 
 1. Wählen Sie in Ihrem Kalender eine Besprechung aus, der Sie eine Registerkarte hinzufügen möchten.
-1. Wählen Sie die Registerkarte **Details** aus, und wählen Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. Wählen Sie die Registerkarte " **Details** " und dann :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="&quot;Der Screenshot beschreibt, wie Sie das Plusschaltflächensymbol auf der Registerkarte &quot;Details&quot; verwenden, um die App als Registerkarte zu installieren":::.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="Der Screenshot beschreibt, wie Sie die App als Registerkarte auf der Registerkarte &quot;Vorbesprechung&quot; in der Teams-Besprechung installieren.":::
 
 1. Wählen Sie im angezeigten Registerkartenkatalog die App aus, die Sie hinzufügen möchten, und führen Sie die erforderlichen Schritte aus. Die App wird als Registerkarte installiert.
 
@@ -143,7 +143,7 @@ Die besprechungsinterne Benachrichtigung wird verwendet, um Teilnehmer während 
 
 Besprechungsinterne Benachrichtigungen dürfen kein Aufgabenmodul verwenden. Das Aufgabenmodul wird nicht in einem Besprechungschat aufgerufen. Eine externe Ressourcen-URL wird verwendet, um besprechungsinterne Benachrichtigungen anzuzeigen. Sie können die Methode `submitTask` verwenden, um Daten in einem Besprechungschat zu übermitteln.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Beispiel zeigt, wie Sie ein besprechungsinternes Dialogfeld verwenden können.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Der Screenshot ist ein Beispiel, das zeigt, wie Sie ein Dialogfeld in der Besprechung verwenden können.":::
 
 Sie können das Microsoft Teams-Anzeigebild und die Personenkarte des Benutzers auch zu Benachrichtigungen in Besprechungen hinzufügen, basierend auf einem `onBehalfOf`-Token mit Benutzer-MRI und dem in der Nutzlast übergebenen Anzeigenamen. Folgendes ist eine Beispielnutzlast:
 
@@ -183,7 +183,18 @@ Das geteilte Freigabefenster ermöglicht Besprechungsteilnehmern die Interaktion
 
 Teilnehmer können die gesamte App mithilfe der Schaltfläche „Freigabe für Freigabefenster“ im App-Seitenbereich für das gemeinschaftliche Freigabefenster freigeben.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+> [!NOTE]
+> Das Freigeben der gesamten App für die Besprechungsphase auf mobilgeräten ist derzeit nur in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+
+# <a name="desktop"></a>[Desktop](#tab/Desktop)
+
+:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="Der Screenshot beschreibt, wie Sie die gesamte App für die Besprechungsphase für die Zusammenarbeit auf dem Desktop freigeben.":::
+
+# <a name="mobile"></a>[Mobil](#tab/mobile)
+
+:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="Der Screenshot beschreibt, wie Sie die gesamte App für die Besprechungsphase für die Zusammenarbeit auf mobilen Geräten freigeben.":::
+
+---
 
 Um die gesamte App für das Freigabefenster freizugeben, müssen Sie im App-Manifest `meetingStage` und `meetingSidePanel` als Framekontexte konfigurieren. Beispiel:
 
@@ -209,14 +220,14 @@ Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manife
 
 Teilnehmer können bestimmte Teile der App für das gemeinschaftliche Freigabefenster freigeben, indem sie das Freigabefenster zum Bereitstellen von APIs verwenden. Die APIs sind im Teams-Client-SDK verfügbar und werden über den App-Seitenbereich aufgerufen.
 
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="Der Screenshot beschreibt, wie Sie einen bestimmten Teil der App für die Besprechungsphase in der Teams-Besprechung freigeben.":::
 
 Um bestimmte Teile der App für das Freigabefenster freizugeben, müssen Sie die zugehörigen APIs in der Teams-Client-SDK-Bibliothek aufrufen. Weitere Informationen finden Sie unter [API-Referenz](API-references.md).
 
 > [!NOTE]
 >
 > * Verwenden Sie die Teams-Manifestversion 1.12 oder höher, um bestimmte Teile der App für das Freigabefenster freizugeben.
-> * Das Freigeben bestimmter Teile der App für das Freigabefenster wird nur für Teams-Desktopclients unterstützt.
+> * Derzeit können Sie bestimmte Teile der App nur auf Teams-Desktopclients für die Besprechungsphase freigeben.
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
@@ -233,7 +244,7 @@ Die Konfigurationen für nach und [vor Besprechungen](#before-a-meeting) sind id
 ## <a name="step-by-step-guides"></a>Schritt-für-Schritt-Anleitungen
 
 * Befolgen Sie die [Schritt-für-Schritt-Anleitung](../sbs-meeting-token-generator.yml), um in Ihrer Teams-Besprechung Besprechungstoken zu generieren.
-* Befolgen Sie die [Schritt-für-Schritt-Anleitung](../sbs-meetings-sidepanel.yml), um in Ihrer Teams-Besprechung einen Besprechungsseitenbereich zu generieren.
+* Befolgen Sie die [schrittweise Anleitung zum Generieren von SidePanel-Besprechungen in Ihrer Teams-Besprechung](../sbs-meetings-sidepanel.yml) .
 * Befolgen Sie die [Schritt-für-Schritt-Anleitung](../sbs-meetings-stage-view.yml), um in Ihrer Teams-Besprechung die Freigabefensteransicht freizugeben.
 * Befolgen Sie die [Schritt-für-Schritt-Anleitung](../sbs-meeting-content-bubble.yml), um in Ihrer Teams-Besprechung eine Besprechungsinhaltsblase zu generieren.
 

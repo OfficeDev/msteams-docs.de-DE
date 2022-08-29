@@ -1,21 +1,21 @@
 ---
 title: Grundlagen zu Unterhaltungen
-description: In diesem Modul lernen Sie Bot-Unterhaltungen in einem Kanal, persönlichen Chat und einer Gruppenchatumgebung in Teams kennen.
+description: In diesem Modul erfahren Sie mehr über den Bot-Unterhaltungstyp in einem Kanal, persönlichen Chat und gruppenchatbezogenen Bereichen in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 682555cadaeca5f50a942de98b2dcdd85ce0f6b2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23a72486ffb76d207eeabbef23b5ec5238234dc4
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142920"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321215"
 ---
 # <a name="conversation-basics"></a>Grundlagen zu Unterhaltungen
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Microsoft Teams Bot und einem oder mehreren Benutzern gesendet werden. Die folgende Tabelle enthält die drei Arten von Unterhaltungen, die in Teams auch als Bereiche bezeichnet werden:
+Eine Unterhaltung ist eine Reihe von Nachrichten, die zwischen Ihrem Microsoft Teams-Bot und einem oder mehreren Benutzern gesendet werden. Die folgende Tabelle enthält die drei Arten von Unterhaltungen, die in Teams auch als Bereiche bezeichnet werden:
 
 | Unterhaltungstyp | Beschreibung |
 | ------- | ----------- |

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919851"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417507"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -38,7 +38,7 @@ Den Phasen des Besprechungslebenszyklus entsprechen in der App drei Umgebungen: 
 Registerkarten ermöglichen es Teammitgliedern, auf Dienste und Inhalte in einem bestimmten Bereich innerhalb einer Besprechung zuzugreifen. Das Team arbeitet direkt mit Registerkarten und unterhält sich über die Tools und Daten, die auf den Registerkarten verfügbar sind. In Teams-Besprechungen können Sie eine Registerkarte hinzufügen, indem Sie <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>aus, und wählen Sie die App aus, die Sie installieren möchten.
 
 > [!IMPORTANT]
-> Wenn Sie eine Registerkarte in Ihre Besprechung integriert haben, muss Ihre App dem [SSO-Authentifizierungsfluss (Single Sign-On, Einmaliges Anmelden) von Teams für Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md) folgen.
+> Wir empfehlen Ihnen, den [SSO-Authentifizierungsfluss (Single Sign-On, Einmaliges Anmelden) von Teams für Registerkarten](../tabs/how-to/authentication/tab-sso-overview.md) zu befolgen, wenn Sie eine Registerkarten-App in Ihre Besprechung integriert haben.
 
 > [!NOTE]
 > Die Option "App hinzufügen" für die Registerkarten-App der Teams-Besprechungserweiterung wird im Teams-Webclient nicht unterstützt.

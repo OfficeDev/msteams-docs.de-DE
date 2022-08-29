@@ -1,16 +1,16 @@
 ---
 title: Änderungen am Registerkartenrand
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie das Entfernen von Registerkartenrändern die App-Erstellung verbessert.
+description: Erfahren Sie, wie Sie Ränder um Registerkarten in Microsoft Teams mit dem UI-Kit entfernen. Kennen Sie den zusätzlichen Abstandseffekt, die Randgröße für links, rechts, oben und unten.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962426"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450443"
 ---
 # <a name="tab-margin-changes"></a>Änderungen am Registerkartenrand
 

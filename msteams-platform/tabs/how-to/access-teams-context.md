@@ -1,14 +1,14 @@
 ---
 title: Kontext für Ihre Registerkarte erhalten
-description: In diesem Modul erfahren Sie, wie Sie Benutzerkontext zu Ihren Registerkarten, Benutzerkontext und Access-Kontextinformationen abrufen.
-ms.localizationpriority: medium
+description: Erfahren Sie, wie Sie kontextbezogen für Ihre Registerkarte, den Kontext von Benutzer, Team oder Unternehmen, auf Informationen zugreifen, Kontext in privaten oder freigegebenen Kanälen abrufen und Designänderungen behandeln können.
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058116"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450387"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -307,7 +307,7 @@ Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert `default
 > [!div class="nextstepaction"]
 > [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Richtlinien für den Registerkartenentwurf](../../tabs/design/tabs.md)
 * [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)

@@ -4,23 +4,24 @@ description: In diesem Artikel erfahren Sie mehr über das Entwicklerportal und 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 57274333d37edd166c9c5e7bb9484131a31af904
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232308"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417500"
 ---
 # <a name="developer-portal-for-teams"></a>Entwicklerportal für Teams
 
 Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal für Teams</a> ist das primäre Tool zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps. Mit dem Entwicklerportal können Sie mit Kollegen an Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot der Startseite des Entwicklerportals für Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Der Screenshot ist ein Beispiel, das die Startseite des Entwicklerportals für Teams zeigt.":::
 
 > [!NOTE]
 >
 > * Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC),GCC-High- oder Department of Defense (DOD)-Mandanten verfügbar.
 > * Sie können jedoch einen regulären Mandanten verwenden, um eine App im Entwicklerportal zu erstellen, die App herunterzuladen und die App mit [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) in eine nationale Cloud hochzuladen. Weitere Informationen finden Sie unter ["Nationale Cloudbereitstellungen"](/graph/deployments).
+> * Derzeit wird das Entwicklerportal in einigen Szenarien nicht im Browser geladen, wenn AdBlocker aktiviert ist. Um mit dem Entwicklerportal im Browser fortzufahren, deaktivieren Sie AdBlocker.
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
@@ -67,4 +68,4 @@ Führen Sie die Schritte zum Importieren und Verwalten Ihrer vorhandenen App im 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Einschließen eines SaaS-Angebots mit Ihrer Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

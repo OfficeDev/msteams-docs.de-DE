@@ -1,17 +1,17 @@
 ---
 title: Erstellen einer persönlichen Registerkarte
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie mithilfe von Node.js eine persönliche Registerkarte mit dem Yeoman-Generator, ASP.NET Core oder ASP.NET Core MVC für Microsoft Teams erstellen und das App-Manifest aktualisieren.
+description: Erfahren Sie, wie Sie eine persönliche Registerkarte erstellen. Wählen Sie die MVC-Umgebung Node.js, ASP.NET Core oder ASP.NET Core aus. Generieren Sie Die App, fügen Sie Inhalte hinzu, erstellen Sie ein Paket, erstellen Sie die App, und führen Sie sie aus.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: dcc000c64068cbcbd24a03da365e799e9dd1c155
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841694"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450401"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -476,7 +476,7 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
-#### <a name="appmanifest-folder"></a>AppManifest-Ordner
+#### <a name="appmanifest-folder"></a>Ordner „AppManifest“
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 

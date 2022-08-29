@@ -1,22 +1,22 @@
 ---
 title: Erstellen von Registerkarten mit adaptiven Karten
 author: KirtiPereira
-description: In diesem Modul erfahren Sie mehr über das Erstellen von Registerkarten mithilfe von Beispielen für adaptive Karten mit Code, einschließlich des Aufrufens von Aktivitäten, des Verständnisses des Aufgabenmodul-Workflows und der Authentifizierung.
+description: Erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen, bei denen das Front-End mit adaptiven Karten gerendert wird und das Back-End von einem Bot unterstützt wird. Erkunden Sie Aufrufaktivitäten und behandeln Sie Übermittlungen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558177"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450464"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
 >
-> * Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
+> Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
 
 Bei der Entwicklung einer Registerkarte mithilfe der herkömmlichen Methode können die folgenden Probleme auftreten:
 

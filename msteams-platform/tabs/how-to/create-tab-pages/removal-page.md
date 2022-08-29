@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Seite zum Entfernen von Registerkarten
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie eine Seite zum Entfernen von Registerkarten erstellen und die Neukonfiguration Ihrer Registerkarte nach der Installation aktivieren.
-ms.localizationpriority: medium
+description: Erfahren Sie, wie Sie ihre Registerkarte nach der Installation neu konfigurieren können. Erweitern Sie die Benutzerfreundlichkeit, indem Sie Die Entfernungs- und Änderungsoptionen in der Microsoft Teams-App unterstützen.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841974"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450408"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 

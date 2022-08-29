@@ -1,14 +1,14 @@
 ---
 title: Kartentypen
-description: In diesem Modul erfahren Sie, welche Karten und Kartenaktionen Bots in Teams zur Verfügung stehen, und erstellen Sie einen Hero, Miniaturansichten und adaptive Karten
+description: In diesem Modul erfahren Sie, was Karten und Kartenaktionen sind, die Bots in Teams zur Verfügung stehen, und erstellen Sie eine Hero-, Miniaturansicht und adaptive Karten.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311960"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435027"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -71,7 +71,10 @@ Sie können unterschiedliche Kartentypen basierend auf Ihren Anwendungsanforderu
 | Anmeldekarte | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> Bei adaptiven Karten in eingehenden Webhooks werden alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, vollständig unterstützt. Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)und [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * Bei adaptiven Karten in eingehenden Webhooks werden alle systemeigenen Schemaelemente adaptiver Karten, mit Ausnahme von `Action.Submit`, vollständig unterstützt. Die unterstützten Aktionen sind [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)und [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> * Die adaptive Karte unterstützt nur den O365-Connectortyp "Eingehender Webhook" und keine anderen O365-Connectortypen.
 
 ## <a name="common-properties-for-all-cards"></a>Allgemeine Eigenschaften für alle Karten
 
@@ -636,9 +639,9 @@ Bot Framework-Referenz:
 
 Die Anmeldekarte in Teams ähnelt der Anmeldekarte im Bot Framework, mit der Ausnahme, dass die Anmeldekarte in Teams nur die zwei Aktionen `signin` und `openUrl`unterstützt.
 
-Die Anmeldeaktion kann von beliebigen Karten in Teams verwendet werden, nur nicht von der Anmeldekarte. Weitere Informationen finden Sie unter [Teams-Authentifizierungsablauf für Bots](~/bots/how-to/authentication/auth-flow-bot.md).
+Die Anmeldeaktion kann von einer beliebigen Karte in Teams verwendet werden, nicht nur von der Anmeldekarte. Weitere Informationen finden Sie unter [Teams-Authentifizierungsablauf für Bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### <a name="support-for-signin-cards"></a>Unterstützung für Anmeldekarten
+### <a name="support-for-log-in-cards"></a>Unterstützung für Anmeldekarten
 
 Die folgende Tabelle enthält die Features, die Anmeldekarten unterstützen:
 

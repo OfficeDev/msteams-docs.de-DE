@@ -5,18 +5,18 @@ description: Erfahren Sie mehr über die verfügbaren Microsoft Low- und No-Code
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503312"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382937"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Erstellen von benutzerdefinierten Apps mit geringem Code für Teams
 
 Microsoft Teams ist erweiterbar und adaptiv. Dies bedeutet, dass Sie benutzerdefinierte Anwendungen für Teams erstellen können, die den unterschiedlichen Anforderungen Ihrer Benutzer entsprechen. Die benutzerdefinierten Apps mit geringem Code sparen Zeit, bieten schnelle Lösungen und erfüllen die gleiche Anforderung wie neu erstellte Apps. Dieses Dokument enthält eine Übersicht über Microsoft Power Platform, Power Virtual Agents Chatbot und virtuellen Assistenten.
 
-Low-Code-Plattformen bieten einen intuitiven Ansatz für die Softwareentwicklung mit minimalem oder gar keinem Code zum Erstellen von Anwendungen und Prozessen. Sie ermöglichen es Entwicklern ohne Erfahrung, benutzerdefinierte Apps einfach mit wenig oder ohne Codierung zu erstellen, und professionelle Entwickler können die App schnell entwickeln und bereitstellen. Diese Plattformen bestehen aus einer visuellen Schnittstelle, Connectors für Back-End-Dienste und einem integrierten App-Lebenszyklus-Verwaltungssystem zum Erstellen, Debuggen, Bereitstellen und Verwalten von Anwendungen. Microsoft Power Platform ist das innovative Gateway zum schnellen Erstellen von Teams-kompatiblen Apps mit niedrigen Codeattributen.
+Low-Code-Plattformen bieten einen intuitiven Ansatz für die Softwareentwicklung mit minimalem oder gar keinem Code zum Erstellen von Anwendungen und Prozessen. Sie ermöglichen es Entwicklern ohne Erfahrung, benutzerdefinierte Apps einfach mit wenig oder ohne Codierung zu erstellen, und professionelle Entwickler können die App schnell entwickeln und bereitstellen. Diese Plattformen bestehen aus einer visuellen Schnittstelle, Connectors für Back-End-Dienste und einem integrierten App-Lebenszyklus-Verwaltungssystem zum Erstellen, Debuggen, Bereitstellen und Verwalten von Anwendungen. Microsoft Power Platform ist das innovative Tor zur schnellen Erstellung von Teams-kompatiblen Apps mit geringen Code-Attributen.
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams und Microsoft Power Platform
 
@@ -25,7 +25,11 @@ Microsoft Power Platform kombiniert vier robuste Microsoft-Technologien wie Powe
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power Platform-Dienste":::
 
 > [!NOTE]
-> Sie dürfen mit Microsoft Power Platform erstellte Apps nicht im Teams App Store veröffentlichen. Microsoft Power Platform-Apps können nur im App Store einer Organisation veröffentlicht werden.
+>
+> - Wenn Sie Ihre Power-Apps im Teams Store für Benutzer in allen Organisationen veröffentlichen möchten, füllen Sie dieses [Formular](https://go.microsoft.com/fwlink/?linkid=2204468) aus.
+> - Wenn Sie an der Veröffentlichung einer App für eine bestimmte Organisation interessiert sind, lesen Sie Folgendes:
+>   - [Integration von Power Apps und Microsoft Teams](/power-apps/teams/overview)
+>   - [Erstellen von Apps in Microsoft Teams mithilfe von Power Apps](/power-apps/teams/create-apps-overview)
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams und Power BI
 

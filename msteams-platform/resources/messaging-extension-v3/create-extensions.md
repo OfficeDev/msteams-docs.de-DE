@@ -3,12 +3,12 @@ title: Initiieren von Aktionen mit Nachrichtenerweiterungen
 description: In diesem Modul erfahren Sie, wie Sie aktionsbasierte Nachrichtenerweiterungen erstellen, damit Benutzer externe Dienste auslösen können.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143676"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337145"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Initiieren von Aktionen mit Nachrichtenerweiterungen
 
@@ -25,6 +25,9 @@ In den folgenden Abschnitten wird dies beschrieben:
 ## <a name="action-type-message-extensions"></a>Nachrichtenerweiterungen des Aktionstyps
 
 Um Aktionen aus einer Nachrichtenerweiterung zu initiieren, legen Sie den `type` Parameter auf `action`. Nachfolgend finden Sie ein Beispiel für ein Manifest mit einer Suche und einem Befehl zum Erstellen. Eine einzelne Nachrichtenerweiterung kann bis zu 10 verschiedene Befehle haben. Dies kann sowohl mehrere Suchbefehle als auch mehrere aktionsbasierte Befehle umfassen.
+
+ > [!NOTE]
+ >`justInTimeInstall` funktioniert, wenn Sie eine App in den App-Katalog hochladen, aber beim Querladen einer App ein Fehler auftritt.
 
 ### <a name="complete-app-manifest-example"></a>Beispiel für ein vollständiges App-Manifest
 
@@ -232,7 +235,7 @@ Um Ihre Nachrichtenerweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats o
 
 ## <a name="collecting-input-from-users"></a>Sammeln von Eingaben von Benutzern
 
-Es gibt drei Möglichkeiten, Informationen von einem Endbenutzer in Teams zu sammeln.
+Es gibt drei Möglichkeiten zum Sammeln von Informationen von einem Endbenutzer in Teams.
 
 ### <a name="static-parameter-list"></a>Statische Parameterliste
 
@@ -445,8 +448,9 @@ Reagieren Sie auf die Sendeaktion, indem Sie eine Nachricht mit einer adaptiven 
 
 Um diesen Fluss zu aktivieren, sollte Ihr Aufgabenmodul wie im folgenden Beispiel antworten, das dem Benutzer die Vorschaunachricht präsentiert.
 
->[!Note]
->Der `activityPreview` Muss eine `message` Aktivität mit genau 1 adaptiver Kartenanlage enthalten.
+> [!NOTE]
+> Der `activityPreview` Muss eine `message` Aktivität mit genau 1 adaptiver Kartenanlage enthalten.
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-In diesem Beispiel wird dieser Fluss mithilfe von [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+Dieses Beispiel zeigt diesen Fluss mithilfe des [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 
 ```csharp
 public class MessagesController : ApiController

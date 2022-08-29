@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Konfigurationsseite
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie eine Konfigurationsseite erstellen, um einen Kanal- oder Gruppenchat für Einstellungen wie das Abrufen von Kontextdaten und vieles mehr zu konfigurieren.
-ms.localizationpriority: medium
+description: Konfigurationsseite erstellen, um Informationen vom Benutzer zu sammeln. Rufen Sie außerdem Kontextdaten für Microsoft Teams-Registerkarten ab, informieren Sie sich über die Authentifizierung, ändern oder entfernen Sie Registerkarten.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841701"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450380"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -174,9 +174,10 @@ Der Konfigurationsseitencode informiert Teams darüber, dass die Konfigurationsa
 
 >[!NOTE]
 >
->* Sie haben 30 Sekunden Zeit, um den Speichervorgang (den Rückruf an registerOnSaveHandler) vor dem Timeout abzuschließen. Nach dem Timeout erscheint eine allgemeine Fehlermeldung.
+>* Sie haben 30 Sekunden Zeit, um den Speichervorgang (den Rückruf `registerOnSaveHandler`an) vor dem Timeout abzuschließen. Nach dem Timeout erscheint eine allgemeine Fehlermeldung.
 >* Wenn Sie einen save-Handler mit registrieren `registerOnSaveHandler()`, muss der Callback `saveEvent.notifySuccess()` oder `saveEvent.notifyFailure()` aufrufen, um das Ergebnis der Konfiguration anzugeben.
 >* Wenn Sie keinen Speicherhandler registrieren, erfolgt der `saveEvent.notifySuccess()` Aufruf automatisch, wenn der Benutzer **Speichern auswählt**.
+>* Stellen Sie sicher, dass Sie über eindeutige `entityId`. Doppelte `entityId` Umleitungen zur ersten Instanz der Registerkarte.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Rufen Sie Kontextdaten für Ihre Registerkarteneinstellungen ab
 
@@ -292,7 +293,7 @@ Authentifizieren Sie sich, bevor Sie einem Benutzer erlauben, Ihre App zu konfig
 
 ## <a name="modify-or-remove-a-tab"></a>Ändern oder entfernen Sie eine Registerkarte
 
-Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf `true`. Es ermöglicht den Benutzern, eine Kanal- oder Gruppenregisterkarte zu ändern, neu zu konfigurieren oder umzubenennen. Informieren Sie den Benutzer über die Auswirkungen auf inhalte, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf `true`. Es ermöglicht den Benutzern, einen Kanal oder eine Gruppenregisterkarte zu ändern oder neu zu konfigurieren. Sie können Ihre Registerkarte nur über die Microsoft Teams-Benutzeroberfläche umbenennen. Informieren Sie den Benutzer über die Auswirkungen auf inhalte, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Konfiguration von Microsoft Teams `setConfig()` (früher `setSettings()`) für die Entfernungsseite:
 

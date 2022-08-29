@@ -1,15 +1,15 @@
 ---
 title: Empfangen aller Kanalnachrichten mit RSC
 author: surbhigupta12
-description: In diesem Modul erfahren Sie, wie Sie alle Kanalnachrichten mit RSC-Berechtigungen empfangen und Bots den Empfang aller Kanalnachrichten ermöglichen.
+description: Aktivieren Sie Bots, alle Kanalnachrichten zu empfangen, ohne mit RSC-Berechtigungen @mentioned zu werden. Lesen Sie im WebApplicationInfo- oder Autorisierungsabschnitt im Manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bd740c999139d9b5f98c10800646501dd55e87f5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143515"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363466"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Empfangen aller Kanalnachrichten mit RSC
 
@@ -33,8 +33,7 @@ Die RSC-Berechtigung `ChannelMessage.Read.Group` wird auf Bots erweitert. Mit Zu
 
 Damit Ihr Bot alle Kanalnachrichten empfangen kann, muss RSC im Teams-App-Manifest mit der Berechtigung `ChannelMessage.Read.Group`, die in der Eigenschaft `webApplicationInfo` angegeben ist, konfiguriert werden.
 
-![Aktualisieren des App-Manifests](~/bots/how-to/conversations/Media/appmanifest.png)
-
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Screenshot des App-Manifestupdates.":::
 
 Im Folgenden sehen Sie ein Beispiel für das Objekt `webApplicationInfo`:
 
@@ -46,12 +45,12 @@ Der folgende Code enthält ein Beispiel für das App-Manifest:
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## <a name="sideload-in-a-team"></a>Querladen in einem Team
@@ -62,29 +61,29 @@ So laden Sie in einem Team quer, um zu testen, ob alle Kanalnachrichten in einem
 1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; im linken Bereich aus. Das Dropdownmenü wird angezeigt.
 1. Wählen Sie im Dropdownmenü **Team verwalten** aus. Die Details werden angezeigt.
 
-   ![Verwalten von Apps im Team](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="Verwalten des Teams"border="true":::
+   :::image type="content" source="Media/managingteam.png" alt-text="Screenshot der Option &quot;Team verwalten&quot; in der Teams-Anwendung.":::
 
 1. Wählen Sie **Apps** aus. Es werden mehrere Apps angezeigt.
+
 1. Wählen Sie in der unteren rechten Ecke **Benutzerdefinierte App hochladen** aus.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Hochladen einer benutzerdefinierten App":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Screenshot des Hochladens einer benutzerdefinierten App-Option.":::
   
 1. Wählen Sie das App-Paket im Dialogfeld **Öffnen** aus.
+
 1. Klicken Sie auf **Öffnen**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Auswählen des App-Pakets"lightbox="Media/selectapppackage.png"border="true":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot des Dialogfelds &quot;Öffnen&quot;, um das App-Paket auszuwählen." lightbox="Media/selectapppackage.png":::
 
 1. Wählen Sie im Popupfenster der App-Details **Hinzufügen** aus, um den Bot Ihrem ausgewählten Team hinzuzufügen.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Hinzufügen des Bots"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot der Schaltfläche &quot;Hinzufügen&quot;, um einem Team einen Bot hinzuzufügen." lightbox="Media/addingbot.png":::
 
 1. Wählen Sie einen Kanal aus, und geben Sie im Kanal eine Nachricht für Ihren Bot ein.
 
     Der Bot empfängt die Nachricht, ohne @erwähnt zu werden.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot empfängt eine Nachricht"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Screenshot eines Bots, der eine Nachricht in einem Kanal empfängt." lightbox="Media/botreceivingmessage.png":::
 
 ## <a name="code-snippets"></a>Codeausschnitte
 
@@ -128,3 +127,4 @@ this.onMessage(async (context, next) => {
 * [Ressourcenspezifische Zustimmung](/microsoftteams/resource-specific-consent)
 * [Testen der ressourcenspezifischen Zustimmung](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Hochladen einer benutzerdefinierten App in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Antworten auf Nachrichten in einem Kanal auflisten](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
+ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962475"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417650"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -430,7 +430,6 @@ Beachten Sie Folgendes:
 [*Vorgeschlagene Korrektur*]
 
 * Zeigen Sie bestimmte Geräte wie Telefone oder Laptops an.
-* Zeigen Sie Chrome oder eine Benutzeroberfläche an, die nicht in Ihrer App enthalten ist.
 * Erfassen Sie beliebige Teams oder Browser-UI in Ihren Screenshots.
 * Fügen Sie Mockups hinzu, die die tatsächliche Benutzeroberfläche Ihrer App ungenau widerspiegeln, z. B. wenn Ihre App außerhalb von Teams verwendet wird.
 

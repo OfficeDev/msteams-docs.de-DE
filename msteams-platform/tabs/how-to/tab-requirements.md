@@ -1,16 +1,16 @@
 ---
 title: Voraussetzungen
 author: surbhigupta
-description: In diesem Modul lernen Sie die Anforderungen für jede Registerkarte in Microsoft Teams einhalten müssen, und tools zum Erstellen von Registerkarten.
-ms.localizationpriority: medium
+description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen zum Erstellen der persönlichen Registerkartenregisterkarte, des Kanals oder der Registerkarte "Gruppe" in Microsoft Teams. Kennen Sie die Tools, die zum Erstellen Ihrer Registerkarte erforderlich sind.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142619"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450415"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -36,7 +36,7 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, während S
 
 * Wenn Sie festlegen, dass Ihre Kanal- oder Gruppenregisterkarte auf dem mobilen Teams-Client angezeigt wird, muss die `setConfig()` Konfiguration einen Wert für die `websiteUrl` Eigenschaft aufweisen.
 
-* Microsoft Teams Registerkarte unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignierte Zertifikate verwenden.
+* Die Microsoft Teams-Registerkarte unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignierte Zertifikate verwenden.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

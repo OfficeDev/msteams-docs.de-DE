@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mithilfe des Entw
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232417"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435076"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Verwalten Ihrer Apps im Entwicklerportal
 
@@ -154,10 +154,10 @@ So fügen Sie einen Bot hinzu:
 1. Wählen Sie auf der Seite "Botverwaltung" die Option **"Neuer Bot" aus**.
 1. Geben Sie den Namen ein, und wählen Sie **"Hinzufügen"** aus.
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="Der Screenshot ist ein Beispiel, das die Tools im Entwicklerportal zeigt, mit denen Sie wichtige Features erstellen können.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="Der Screenshot ist ein Beispiel, das die Tools im Entwicklerportal zeigt, mit denen Sie wichtige Features erstellen können.":::
 
-Über das Entwicklerportal können Sie zum Bot-Framework-Portal wechseln und Ihren Bot so konfigurieren, dass er das Symbol und andere Eigenschaften aktualisiert.
+Über das Entwicklerportal können Sie zum Bot Framework-Portal wechseln und Ihren Bot so konfigurieren, dass er das Symbol und andere Eigenschaften aktualisiert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Einschließen eines SaaS-Angebots mit Ihrer Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Einschließen eines SaaS-Angebots in Ihre Microsoft Teams-App](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

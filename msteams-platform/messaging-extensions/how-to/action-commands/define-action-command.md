@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311999"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363459"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -30,7 +30,7 @@ Bevor Sie den Aktionsbefehl erstellen, müssen Sie die folgenden Faktoren festle
 Im folgenden Video erfahren Sie, wie Sie Aktionsbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Auswählen von Speicherorten zum Aufrufen von Aktionsbefehlen

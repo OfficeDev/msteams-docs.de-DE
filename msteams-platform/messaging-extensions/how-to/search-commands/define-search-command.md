@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachri
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312268"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363473"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -24,7 +24,7 @@ Mithilfe von Suchbefehlen für Nachrichtenerweiterungen können Benutzer externe
 Im folgenden Video erfahren Sie, wie Sie Suchbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Auswählen von Suchbefehlsspeicherorten
@@ -113,6 +113,7 @@ Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, 
 | `parameter.description` | Diese Eigenschaft beschreibt die Zwecke oder das Beispiel des Werts, der angegeben werden muss. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
 | `parameter.title` | Diese Eigenschaft ist ein kurzer benutzerfreundlicher Parametertitel oder eine Bezeichnung. | Ja | 1.0 |
 | `parameter.inputType` | Diese Eigenschaft wird auf den Typ der erforderlichen Eingabe festgelegt. Mögliche Werte sind `text`, `textarea`, `number`, `date`, `time`. `toggle` Der Standardwert ist auf `text`. | Nein | 1.4 |
+| `parameters.value` | Anfangswert für den Parameter. Derzeit wird der Wert nicht unterstützt. | Nein | 1,5 |
 
 #### <a name="example"></a>Beispiel
 

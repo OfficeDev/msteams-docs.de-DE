@@ -1,16 +1,16 @@
 ---
 title: Registerkarten für Unterhaltungen erstellen
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie Unterhaltungsunterentitätschats für Ihre Kanalregisterkarten erstellen und Unterhaltungen mithilfe von Codebeispielen verwalten.
+description: Erfahren Sie, wie Sie in Microsoft Teams Registerkarten für Unterhaltungen erstellen, um eine Unterhaltung zu starten, fortzusetzen, zu verbessern und zu schließen.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
-ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.localizationpriority: high
+ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962419"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450422"
 ---
 # <a name="create-conversational-tabs"></a>Registerkarten für Unterhaltungen erstellen
 
@@ -99,7 +99,7 @@ Sie können auch auf ein Ereignis lauschen, wenn die Benutzer in der Unterhaltun
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Registerkarte "Unterhaltung erstellen"| Beispiel-App für die Microsoft Teams-Registerkarte zum Demonstrieren der Registerkarte "Unterhaltung erstellen". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

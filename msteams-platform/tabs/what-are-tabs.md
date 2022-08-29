@@ -1,16 +1,16 @@
 ---
 title: Registerkarten für Microsoft Teams
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie eine benutzerdefinierte Registerkarte auf der Teams-Plattform, Registerkartenfeatures und Registerkarten-Benutzerszenarien erstellen.
+description: Erfahren Sie, wie Sie Registerkarten erstellen, webseiten, die in Microsoft Teams eingebettet sind. Erstellen Sie eine Inhaltsseite als Teil der persönlichen Registerkarte, des Kanals oder der Gruppenregisterkarte. Außerdem erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 38781b844b9aa84c39daa4cae909ec11ad197175
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058235"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450394"
 ---
 # <a name="build-tabs-for-teams"></a>Erstellen von Registerkarten für Teams
 

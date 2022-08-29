@@ -3,12 +3,12 @@ title: Aktivieren der Authentifizierung mithilfe eines OAuth-Drittanbieters
 description: In diesem Artikel erfahren Sie mehr über den Teams-Authentifizierungsablauf auf Registerkarten, OAuth-Drittanbieter, OAuth by Azure AD und Authentifizierungscodebeispiele.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 2edd52d80428e47a8586ec27de4b1595d872df8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
-ms.translationtype: HT
+ms.openlocfilehash: 33300461e16f5a8ab5e1e69f5fea775adb2359aa
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144250"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435058"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>Aktivieren der Authentifizierung mithilfe eines OAuth-Drittanbieters
 
@@ -17,6 +17,8 @@ Sie können die Authentifizierung in Ihrer Tab-App mithilfe von OAuth-Identität
 > [!NOTE]
 > Damit die Authentifizierung für Ihre Registerkarte auf mobilen Clients funktioniert, müssen Sie sicherstellen, dass Sie mindestens die Version 1.4.1 des Microsoft Teams JavaScript-SDK verwenden.  
 > Das Microsoft Teams SDK startet ein separates Fenster für den Authentifizierungsablauf. Legen Sie das `SameSite`-Attribut auf **Lax** fest. Microsoft Teams-Desktopclients oder ältere Versionen von Chrome oder Safari unterstützen `SameSite`=None nicht.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="use-oauth-idp-to-enable-authentication"></a>Verwenden von OAuth IdP zum Aktivieren der Authentifizierung
 
@@ -27,13 +29,13 @@ Den Authentifizierungsablauf für Registerkarten und Bots, bei denen Node und de
 In diesem Abschnitt wird Azure AD als Beispiel für einen OAuth-Drittanbieter zum Aktivieren der Authentifizierung in einer Registerkarten-App verwendet.
 
 > [!NOTE]
-> Bevor dem Benutzer eine **Anmeldeschaltfläche** angezeigt und die `microsoftTeams.authentication.authenticate`-API als Reaktion auf das Anklicken der Schaltfläche aufgerufen wird, muss gewartet werden, bis die SDK-Initialisierung abgeschlossen ist. Sie können einen Callback an die `microsoftTeams.initialize`-API übergeben, die aufgerufen wird, wenn die Initialisierung abgeschlossen ist.
+> Bevor dem Benutzer eine **Anmeldeschaltfläche** angezeigt und die `authentication.authenticate`-API als Reaktion auf das Anklicken der Schaltfläche aufgerufen wird, muss gewartet werden, bis die SDK-Initialisierung abgeschlossen ist. Sie können einen `.then()` Handler verketten oder `await` die `app.initialize()` Funktion abschließen.
 
 ![Darstellung der Sequenz bei der Registerkartenauthentifizierung](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. Der Benutzer interagiert mit dem Inhalt auf der Registerkartenkonfigurations- oder Inhaltsseite, in der Regel eine **Anmelde**- oder **Login**-Schaltfläche.
-2. Die Registerkarte erstellt die URL für die Authentifizierungsstartseite. Optional werden Informationen aus URL-Platzhaltern verwendet oder die Microsoft Teams Client SDK-Methode `microsoftTeams.getContext()` aufgerufen, um den Authentifizierungsablauf für den Benutzer zu optimieren. Wenn z. B. bei der Authentifizierung mit A Azure AD der Parameter `login_hint` auf die E-Mail-Adresse des Benutzers festgelegt ist, muss sich der Benutzer nicht anmelden, wenn er dies erst kürzlich getan hat. Dies liegt daran, dass Azure AD die zwischengespeicherten Anmeldeinformationen des Benutzers verwendet. Das Popupfenster wird kurz angezeigt und dann ausgeblendet.
-3. Auf der Registerkarte wird dann die `microsoftTeams.authentication.authenticate()`-Methode aufgerufen und die `successCallback`- und die `failureCallback`-Funktion registriert.
+2. Die Registerkarte erstellt die URL für die Authentifizierungsstartseite. Optional werden Informationen aus URL-Platzhaltern verwendet oder die Microsoft Teams Client SDK-Methode `app.getContext()` aufgerufen, um den Authentifizierungsablauf für den Benutzer zu optimieren. Wenn der Parameter beispielsweise bei der Authentifizierung mit Azure AD auf die `login_hint` E-Mail-Adresse des Benutzers festgelegt ist, muss sich der Benutzer nicht anmelden, wenn er dies kürzlich getan hat. Dies liegt daran, dass Azure AD die zwischengespeicherten Anmeldeinformationen des Benutzers verwendet. Das Popupfenster wird kurz angezeigt und dann ausgeblendet.
+3. Die Registerkarte ruft dann die Methode auf `authentication.authenticate()` .
 4. Microsoft Teams öffnet die Startseite in einem iFrame in einem Popupfenster. Die Startseite generiert zufällige `state`-Daten, speichert sie für die zukünftige Überprüfung und leitet sie zum `/authorize`-Endpunkt des Identitätsanbieters um, z. B. `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` für Azure AD. Ersetzen Sie `<tenant id>` durch Ihre eigene Mandanten-ID "context.tid".
 Ähnlich wie bei anderen Authentifizierungsabläufen für Anwendungen in Microsoft Teams muss sich die Startseite in einer Domäne befinden, die in der `validDomains`-Liste enthalten ist, und sich in derselben Domäne wie die Umleitungsseite nach der Anmeldung befinden.
 
@@ -42,7 +44,7 @@ In diesem Abschnitt wird Azure AD als Beispiel für einen OAuth-Drittanbieter zu
 
 5. Auf der Website des Anbieters meldet sich der Benutzer an und gewährt Zugriff auf die Registerkarte.
 6. Der Anbieter leitet den Benutzer mit einem Zugriffstoken zur OAuth-2.0-Umleitungsseite der Registerkarte weiter.
-7. Die Registerkarte überprüft, ob der zurückgegebene `state`-Wert mit jenem übereinstimmt, der zuvor gespeichert wurde, und ruft `microsoftTeams.authentication.notifySuccess()` auf, wodurch wiederum die in Schritt 3 registrierte `successCallback`-Funktion aufgerufen wird.
+7. Die Registerkarte überprüft, ob der zurückgegebene `state` Wert mit dem übereinstimmt, was zuvor gespeichert wurde, und ruft auf `authentication.notifySuccess()`, der wiederum den Erfolghandler (`.then()`) für die zusagebasierte `authenticate()` Methode aus Schritt 3 aufruft.
 8. Microsoft Teams schließt das Popupfenster.
 9. Auf der Registerkarte wird entweder die Konfigurationsbenutzeroberfläche angezeigt, oder es werden die Inhalte der Registerkarte aktualisiert oder neu geladen, je nachdem, wo der Benutzer begonnen hat.
 
@@ -51,7 +53,7 @@ In diesem Abschnitt wird Azure AD als Beispiel für einen OAuth-Drittanbieter zu
 
 ## <a name="treat-tab-context-as-hints"></a>Registerkartenkontexte als Hinweise behandeln
 
-Obwohl der Registerkartenkontext hilfreiche Informationen zum Benutzer bereitstellt, verwenden Sie diese Informationen nicht für die Authentifizierung des Benutzers. Authentifizieren Sie den Benutzer auch dann, wenn Sie die Informationen als URL-Parameter zu Ihrer Registerkarteninhalts-URL erhalten oder indem Sie die `microsoftTeams.getContext()`-Funktion im Microsoft Teams-Client-SDK aufrufen. Ein böswilliger Akteur kann Ihre URL für Registerkarteninhalte mit eigenen Parametern aufrufen. Er kann auch eine Webseite aufrufen, die sich als Microsoft Teams ausgibt, um die URL der Registerkarteninhalte in einem iFrame zu laden und seine eigenen Daten an die `getContext()`-Funktion zurückzugeben. Sie müssen die identitätsbezogenen Informationen im Registerkartenkontext als Hinweis behandeln und vor der Verwendung validieren. Lesen Sie dazu die Anmerkungen in [Von Ihrer Popupseite zur Autorisierungsseite navigieren](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+Obwohl der Registerkartenkontext hilfreiche Informationen zum Benutzer bereitstellt, verwenden Sie diese Informationen nicht für die Authentifizierung des Benutzers. Authentifizieren Sie den Benutzer auch dann, wenn Sie die Informationen als URL-Parameter zu Ihrer Registerkarteninhalts-URL erhalten oder indem Sie die `app.getContext()`-Funktion im Microsoft Teams-Client-SDK aufrufen. Ein böswilliger Akteur kann Ihre URL für Registerkarteninhalte mit eigenen Parametern aufrufen. Er kann auch eine Webseite aufrufen, die sich als Microsoft Teams ausgibt, um die URL der Registerkarteninhalte in einem iFrame zu laden und seine eigenen Daten an die `getContext()`-Funktion zurückzugeben. Sie müssen die identitätsbezogenen Informationen im Registerkartenkontext als Hinweis behandeln und vor der Verwendung validieren. Lesen Sie dazu die Anmerkungen in [Von Ihrer Popupseite zur Autorisierungsseite navigieren](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 ## <a name="code-sample"></a>Codebeispiel
 

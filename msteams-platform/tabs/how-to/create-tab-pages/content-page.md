@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Inhaltsseite
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie eine Inhaltsseite für Ihre Registerkarten- und Registerkarteninhalte und Designrichtlinien erstellen.
-ms.localizationpriority: medium
+description: Erfahren Sie mehr über Webseiten im Teams-Client und sind Teil der benutzerdefinierten Registerkarte "Persönlich", "Kanal" oder "Gruppe". Erstellen Sie die Inhaltsseite, und betten Sie sie als Webview in das Aufgabenmodul ein.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841969"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450373"
 ---
 # <a name="create-a-content-page"></a>Erstellen einer Inhaltsseite
 
@@ -33,6 +33,9 @@ Sie müssen sich darauf konzentrieren, Das Registerkartendesign übersichtlich, 
 ## <a name="integrate-your-code-with-teams"></a>Integrieren Ihres Codes in Teams
 
 Damit Ihre Seite in Teams angezeigt werden kann, müssen Sie das [JavaScript-Client-SDK von Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) einschließen und einen Aufruf einschließen, nachdem `app.initialize()` Die Seite geladen wurde.
+
+> [!NOTE]
+> Es dauert fast 24-48 Stunden, bis Inhalte oder UI-Änderungen aufgrund des Caches in der Registerkarten-App widergespiegelt werden.
 
 Der folgende Code enthält ein Beispiel für die Kommunikation Ihrer Seite und des Teams-Clients:
 

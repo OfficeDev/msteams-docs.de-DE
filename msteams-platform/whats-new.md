@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312240"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435006"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -40,6 +40,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 03.08.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03.08.2022 | Feature zum Abrufen von Besprechungstranskripten im Postbesprechungsszenario hinzugefügt. | Erstellen von Apps für Teams-Besprechungen und -Anrufe > Abrufen von Besprechungstranskripten mithilfe von Graph-APIs > [Übersicht](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03.08.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| Hinweis: Entwicklerportal ist jetzt GA und App Studio ist ab dem 01. August 2022 veraltet. | Tools und SDK > [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 28.07.2022 | Microsoft Teams-Anzeigebild und Personenkarte für Benachrichtigungen in der Besprechung hinzugefügt| Apps für Microsoft Teams-Besprechungen und -Anrufe erstellen > Apps für Besprechungen aktivieren und konfigurieren > [Benachrichtigung in Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 28.07.2022 | Erstellen von freigegebenen Kanälen in Microsoft Teams | Erstellen von Apps für Microsoft Teams-Besprechungen und -Anrufe > [Freigegebene Kanäle](concepts/build-and-test/Shared-channels.md) |
 | 28.07.2022|App-Manifest v1.14 eingeführt| App-Manifest > [App-Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -263,6 +264,7 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | Freigeben von Apps für die Teams-Besprechungsphase auf mobilen Geräten | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Aktivieren und Konfigurieren von Apps für Besprechungen](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 03.08.2022 | APIs zum Stummschalten und Aufheben der Stummschaltung für Apps in der Teams-Besprechungsphase | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [API-Referenzen für Besprechungs-Apps](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|

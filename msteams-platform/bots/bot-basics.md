@@ -1,16 +1,16 @@
 ---
 title: Bot-Aktivitätenhandler
 author: surbhigupta
-description: In diesem Artikel erfahren Sie mehr über Bot-Aktivitätshandler, Frameworks, Teams-Aktivitätshandler und Botlogik in Microsoft Teams.
+description: Erfahren Sie mehr über Microsoft Teams-Ereignisse und Aktivitätshandler für Nachrichten, Kanäle, Teams, Mitglieder, Erwähnungen, Authentifizierung, Kartenaktionen mit Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485573"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321208"
 ---
 # <a name="bot-activity-handlers"></a>Bot-Aktivitätenhandler
 

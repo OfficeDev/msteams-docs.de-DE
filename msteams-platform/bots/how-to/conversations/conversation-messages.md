@@ -1,19 +1,19 @@
 ---
 title: Meldungen in Bot-Unterhaltungen
-description: Erfahren Sie, wie Sie mithilfe von Codebeispielen eine Unterhaltung mit einem Teams-Bot und Teams-Kanaldaten führen, Benachrichtigungen an Ihre Nachricht, Bildnachrichten, adaptive Karten
+description: Erfahren Sie, wie Sie eine Nachricht, vorgeschlagene Aktionen, Benachrichtigungen, Anlagen, Bilder, adaptive Karten, Statusfehlercodeantworten für Drosselung senden.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035196"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363445"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
-Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, sendet Teams die Nachricht an Ihren Bot. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots. Ihr Bot untersucht die Nachricht, um ihren Typ zu bestimmen und entsprechend zu reagieren.
+Jede Nachricht in einer Unterhaltung ist ein `Activity` Objekt vom Typ `messageType: message`. Wenn ein Benutzer eine Nachricht sendet, sendet Microsoft Teams die Nachricht an Ihren Bot. Teams sendet ein JSON-Objekt an den Messaging-Endpunkt Ihres Bots, und Teams ermöglicht nur einen Endpunkt für Messaging. Ihr Bot untersucht die Nachricht, um ihren Typ zu bestimmen und entsprechend zu reagieren.
 
 Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einzelne REST-API, behandelt. Diese API ermöglicht Es Ihrem Bot, mit Teams und anderen Kanälen zu kommunizieren. Das Bot Builder SDK bietet die folgenden Features:
 
@@ -198,7 +198,8 @@ Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne 
 
 ## <a name="send-suggested-actions"></a>Vorgeschlagene Aktionen senden
 
-Vorgeschlagene Aktionen ermöglichen es Ihrem Bot, Schaltflächen darzustellen, die der Benutzer auswählen kann, um Eingaben bereitzustellen. Vorgeschlagene Aktionen verbessern die Benutzerfreundlichkeit, indem sie es dem Benutzer ermöglichen, eine Frage zu beantworten oder eine Auswahl mit einer Schaltfläche zu treffen, anstatt eine Antwort mit einer Tastatur einzugeben. Die Schaltflächen bleiben in den Rich-Karten für den Benutzer sichtbar und zugänglich, auch nachdem der Benutzer eine Auswahl getroffen hat, während für vorgeschlagene Aktionen keine Schaltflächen verfügbar sind. Dadurch wird verhindert, dass der Benutzer veraltete Schaltflächen in einer Unterhaltung auswährt.
+Vorgeschlagene Aktionen ermöglichen es Ihrem Bot, Schaltflächen darzustellen, die der Benutzer auswählen kann, um Eingaben bereitzustellen. Vorgeschlagene Aktionen verbessern die Benutzerfreundlichkeit, indem sie es dem Benutzer ermöglichen, eine Frage zu beantworten oder eine Auswahl mit einer Schaltfläche zu treffen, anstatt eine Antwort mit einer Tastatur einzugeben.
+Die Schaltflächen bleiben in den Rich-Karten für den Benutzer sichtbar und zugänglich, auch nachdem der Benutzer eine Auswahl getroffen hat, während für vorgeschlagene Aktionen keine Schaltflächen verfügbar sind. Dadurch wird verhindert, dass der Benutzer veraltete Schaltflächen in einer Unterhaltung auswährt.
 
 Wenn Sie einer Nachricht vorgeschlagene Aktionen hinzufügen möchten, legen Sie die `suggestedActions` Eigenschaft des [Activity-Objekts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) fest, um die Liste der [CardAction-Objekte](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) anzugeben, die die Schaltflächen darstellen, die dem Benutzer angezeigt werden sollen. Weitere Informationen finden Sie unter [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -225,6 +226,7 @@ Es folgt ein Beispiel für die Implementierung und Erfahrung mit vorgeschlagenen
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot vorgeschlagene Aktionen" border="true":::
 
 > [!NOTE]
+>
 > * `SuggestedActions` werden nur für 1:1-Chat-Bots und textbasierte Nachrichten und nicht für adaptive Karten oder Anlagen unterstützt.
 > * Derzeit `imBack` ist der einzige unterstützte Aktionstyp, und Teams zeigt bis zu drei vorgeschlagene Aktionen an.
 
@@ -366,7 +368,7 @@ Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. W
 
 Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIFs werden nicht unterstützt.
 
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Zum Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -466,7 +468,7 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 > [!div class="nextstepaction"]
 > [Bot-Befehlsmenüs](~/bots/how-to/create-a-bot-commands-menu.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Senden proaktiver Nachrichten](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

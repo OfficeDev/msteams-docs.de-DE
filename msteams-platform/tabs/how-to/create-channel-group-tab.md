@@ -1,21 +1,23 @@
 ---
 title: Erstellen einer Kanalregisterkarte
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie mit dem Yeoman-Generator für Microsoft Teams eine Kanal- und Gruppenregisterkarte erstellen, einschließlich der Überprüfung des Quellcodes mit Codebeispielen.
-ms.localizationpriority: medium
+description: Erstellen Sie einen benutzerdefinierten Kanal, eine Gruppenregisterkarte mit Node.js, ASP.NET Core ASP.NET Core MVC. App generieren, Paket erstellen, App erstellen und ausführen, geheimer Tunnel, In Teams hochladen
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841708"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450471"
 ---
 # <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
 Kanal-- oder Gruppenregisterkarten übermitteln Inhalte an Kanäle und Gruppenchats und sind eine hervorragende Möglichkeit zum Erstellen von Bereichen für die Zusammenarbeit rund um dedizierte webbasierte Inhalte.
+
+Stellen Sie sicher, dass Sie alle [Voraussetzungen](~/tabs/how-to/tab-requirements.md) zum Erstellen Ihrer Kanal- oder Gruppenregisterkarte haben.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -217,7 +219,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Die hochgeladene Kanalregisterkarte":::
 
-    Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
+    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -274,7 +276,7 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-#### <a name="wwwroot-folder"></a>Ordner "wwwroot"
+#### <a name="wwwroot-folder"></a>Webstammordner
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
@@ -440,7 +442,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET hochgeladen":::
 
-    Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
+    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -497,7 +499,7 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-#### <a name="wwwroot-folder"></a>Ordner "wwwroot"
+#### <a name="wwwroot-folder"></a>Webstammordner
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
@@ -661,7 +663,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET MVC hochgeladen":::
 
-    Jetzt haben Sie Ihre Kanal- oder Gruppenregisterkarte erfolgreich erstellt und in Microsoft Teams hinzugefügt.
+    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 

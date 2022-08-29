@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311953"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435013"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -37,8 +37,8 @@ Die folgende Tabelle enthält eine Liste der APIs, die in den Microsoft Teams Cl
 |[**Rufen Sie den Freigabestatus für App-Inhalte ab**](#get-app-content-stage-sharing-state-api)| Rufen Sie Informationen über den Freigabestatus der App in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Holen Sie sich Funktionen zum Teilen von App-Inhalten**](#get-app-content-stage-sharing-capabilities-api)| Rufen Sie die Funktionen der App zum Teilen in der Besprechungsphase ab. | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Abrufen eingehender Audiolautsprecher**](#get-incoming-audio-speaker) | Ermöglicht einer App, die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer abzurufen.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Umschalten eingehender Audiodaten**](#toggle-incoming-audio) | Ermöglicht einer App das Umschalten der Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Abrufen des Status eingehender Audiodaten**](#get-incoming-audio-state) | Ermöglicht einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer abzurufen.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Umschalten eingehender Audiodaten**](#toggle-incoming-audio) | Ermöglicht einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umzuschalten.| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Holen Sie sich die Benutzerkontext-API
 
@@ -932,15 +932,44 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **Wert. Endtime** | Die Besprechungsendzeit in UTC. |
 | **locale**| Das Gebietsschema der vom Client festgelegten Nachricht. |
 
-## <a name="get-incoming-audio-speaker"></a>Abrufen eingehender Audiolautsprecher
+## <a name="get-incoming-audio-state"></a>Abrufen des Status eingehender Audiodaten
 
-Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
+Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
 >
 > * Die `getIncomingClientAudioState` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 > * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
+### <a name="manifest"></a>Manifest
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### <a name="example"></a>Beispiel
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### <a name="query-parameter"></a>Abfrageparameter
 
 Die folgende Tabelle enthält den Abfrageparameter:
@@ -948,22 +977,7 @@ Die folgende Tabelle enthält den Abfrageparameter:
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
 |**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Audioabruf erfolgreich ist. Das *Ergebnis* kann entweder den Wert "true" oder "false" enthalten, wenn der Audioabruf erfolgreich ist, oder null, wenn der Audioabruf fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet. |
-
-### <a name="example"></a>Beispiel
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
+  
 ### <a name="response-codes"></a>Antwortcodes
 
 Die folgende Tabelle enthält die Antwortcodes:
@@ -976,34 +990,51 @@ Die folgende Tabelle enthält die Antwortcodes:
 
 ## <a name="toggle-incoming-audio"></a>Umschalten eingehender Audiodaten
 
-Mit `toggleIncomingClientAudio` der API kann eine App die Einstellung für eingehende Audiolautsprecher für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umschalten. Die API ist über das Teams-Client-SDK verfügbar.
+Mit `toggleIncomingClientAudio` der API kann eine App die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umschalten. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
 >
 > * Die `toggleIncomingClientAudio` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 > * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
+### <a name="manifest"></a>Manifest
+
+```JSON
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated"
+            }
+        ]
+    }
+}
+```
+ 
+### <a name="example"></a>Beispiel
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
 ### <a name="query-parameter"></a>Abfrageparameter
 
 Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Umschalter erfolgreich ist. Das *Ergebnis* kann entweder "true" oder "false" enthalten, wenn die Umschaltfläche erfolgreich ist, oder null, wenn die Umschaltfläche fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet. |
-
-### <a name="example"></a>Beispiel
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
-
+|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Umschalter erfolgreich ist. Das *Ergebnis* kann entweder "true" oder "false" enthalten, wenn die Umschaltfläche erfolgreich ist, oder null, wenn die Umschaltfläche fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet.
+  
 ### <a name="response-code"></a>Antwortcode
 
 Die folgende Tabelle enthält die Antwortcodes:

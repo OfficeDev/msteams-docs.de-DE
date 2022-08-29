@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 1110d195be91c73f9e0f60f15a94f2cdbdfa083b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919774"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337236"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -58,7 +58,7 @@ Verwenden Sie die Teams-Toolkit-Erweiterung für Visual Studio Code, um mit eine
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Aufgabenlisten-Beispiel (funktioniert in Microsoft Teams, Outlook und Office) im Microsoft Teams-Toolkit":::
 
 1. Wählen Sie einen Speicherort auf Ihrem lokalen Computer für den Arbeitsbereichsordner aus.
-1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben Sie `Teams: Provision in the cloud` ein, um die erforderlichen App-Ressourcen (Serviço de Aplicativo Plan, Speicherkonto, Funktions-App, verwaltete Identität) in Ihrem Azure-Konto zu erstellen.
+1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben `Teams: Provision in the cloud` Sie ein, um die erforderlichen App-Ressourcen (App Service Plan, Speicherkonto, Funktions-App, verwaltete Identität) in Ihrem Azure-Konto zu erstellen.
 1. Öffnen Sie die Befehlspalette (`Ctrl+Shift+P`) und geben Sie `Teams: Deploy to the cloud` ein, um den Beispielcode für die bereitgestellten Ressourcen in Azure einzusetzen und die App zu starten.
 
 Von hier aus können Sie die [App in Teams querladen](#sideload-your-app-in-teams) und eine Vorschau Ihrer App in Outlook und Office anzeigen. (Die App-Manifest- und TeamsJS-API-Aufrufe wurden bereits für Microsoft 365 aktualisiert.)
@@ -124,7 +124,7 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Aktualisieren der Azure AD App-Registrierung für SSO
 
-[Azure Active Directory (AD) Single Sign On (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) für persönliche Registerkarten funktioniert in Office und Outlook genauso wie in Teams. Sie müssen jedoch mehrere Clientanwendungs-IDs zur Azure AD-App-Registrierung Ihrer Registerkarten-App im *App-registraties* Portal Ihres Mandanten hinzufügen.
+[Azure Active Directory (AD) Single Sign On (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) für persönliche Registerkarten funktioniert in Office und Outlook genauso wie in Teams. Sie müssen jedoch mehrere Clientanwendungs-IDs zur Azure AD-App-Registrierung Ihrer Registerkarten-App im *App-Registrierungen* Portal Ihres Mandanten hinzufügen.
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto beim [Microsoft Azure-Portal](https://portal.azure.com) an.
 1. Öffnen Sie das Blatt **App-Registrierungen**.
@@ -244,8 +244,9 @@ Geben Sie Feedback und melden Sie Alle Probleme mit der Debugumgebung des Teams-
 | **Beispielname** | **Beschreibung** | **Node.js** |
 |---------------|--------------|--------|
 | Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mit microsoft Graph API. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Beispielstartseite (Microsoft 365) | Anzeigen der SSO-Authentifizierung und Nutzung der TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

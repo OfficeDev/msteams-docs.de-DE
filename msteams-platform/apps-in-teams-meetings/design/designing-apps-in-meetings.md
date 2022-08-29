@@ -1,28 +1,28 @@
 ---
 title: Entwerfen Der Besprechungserweiterung
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Besprechungserweiterungen für Ihre Apps in Teams-Besprechungen entwerfen. Verwenden Sie die Benutzeroberflächenvorlagen im Microsoft Teams UI Kit, um Ihre Besprechungsregisterkarte zu entwerfen.
+description: Erfahren Sie, wie Sie die Entwurfsrichtlinien implementieren und die Benutzeroberflächenvorlagen verwenden, um eine Besprechungserweiterung für Teams zu entwerfen.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842038"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338851"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
 Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. Bitten Sie z. B. personen, während einer Besprechung eine Umfrage abzuschließen oder eine schnelle Erinnerung zu senden, die den Ablauf der Besprechung nicht unterbricht.
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-Benutzeroberflächenbausatz
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams-UI-Kit
 
 Umfassendere Entwurfsrichtlinien, einschließlich Elemente, die Sie bei Bedarf abrufen und ändern können, finden Sie im Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Holen Sie sich den Microsoft Teams-Benutzeroberflächenbausatz (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Holen Sie sich das Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Hinzufügen einer Besprechungserweiterung
 
@@ -36,7 +36,7 @@ In den Besprechungsdetails können Benutzer **"Registerkarte hinzufügen+** " au
 
 ### <a name="add-during-a-meeting"></a>Während einer Besprechung hinzufügen
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 Nachdem die App hinzugefügt wurde (z. B. auf dem Desktop), können Benutzer auf die App in einer Besprechung zugreifen, indem sie **"Mehr**:::image type="icon" source="../../assets/icons/teams-client-more.png":::" auswählen.
 
@@ -87,7 +87,7 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 * Erstellen Sie eine Umfrage, eine Umfrage oder ein Aufgabenelement für die Besprechungsteilnehmer.
 * Zeigen Sie für die Besprechung relevante Notizen an. Beispielsweise Informationen zu einem Vertriebsleiter.
 
-#### <a name="mobile"></a>Mobilgeräte
+#### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Das Beispiel zeigt, wie Sie Umfrageinhalte auf einer Registerkarte in einer Besprechung auf mobilgeräten präsentieren können.":::
 
@@ -104,9 +104,9 @@ Personen können die Registerkarte "In Besprechung" verwenden, um Folgendes zu e
 |1|**App-Symbol (ausgewählt)**: transparentes App-Logo mit 16 Pixeln.|
 |2|**App-Name**|
 |3|**Kopfzeile**: Enthält ihren App-Namen.|
-|4|**Schaltfläche "Schließen"**: Schließt die Registerkarte. Verwenden Sie immer das Symbol für das schließende Symbol oben rechts anstelle einer Aktion in der Fußzeile.|
-|5|**Benachrichtigungsleiste**: Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt und verschieben den rest des iframe-Inhalts um 20 Pixel nach unten.|
-|6|**iframe**: Zeigt Ihre App-Inhalte an.|
+|4 |**Schaltfläche "Schließen"**: Schließt die Registerkarte. Verwenden Sie immer das Symbol für das schließende Symbol oben rechts anstelle einer Aktion in der Fußzeile.|
+|5 |**Benachrichtigungsleiste**: Fehlerwarnungen werden direkt unterhalb der Kopfzeile angezeigt und verschieben den rest des iframe-Inhalts um 20 Pixel nach unten.|
+|6 |**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="spacing"></a>Abstand
 
@@ -143,7 +143,7 @@ In-Besprechungsdialogfelder werden von einem Benutzer (z. B. dem Besprechungsorg
 * Genehmigungen übermitteln.
 * Abrufen von Erinnerungen.
 
-### <a name="mobile"></a>Mobilgeräte
+### <a name="mobile"></a>Mobil
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Das Beispiel zeigt, wie Sie ein Dialogfeld in einer Besprechung auf mobilgeräten verwenden können.":::
 
@@ -171,8 +171,8 @@ Es gibt zwei Kopfzeilenvarianten. Verwenden Sie nach Möglichkeit die Variante m
 |1|**Avatar**: Person, die das Dialogfeld in der Besprechung initiiert.|
 |2|**App-Symbol**|
 |3|**App-Name**|
-|4|**Schaltfläche "Schließen"**: Schließt das Dialogfeld.|
-|5|**Aktionszeichenfolge**: Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
+|4 |**Schaltfläche "Schließen"**: Schließt das Dialogfeld.|
+|5 |**Aktionszeichenfolge**: Beschreibt in der Regel, wer das Dialogfeld initiiert hat.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Reaktionsfähiges Verhalten: Dialogfelder in Besprechungen
 
@@ -252,8 +252,8 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |1|**App-Symbol**: Das hervorgehobene Symbol gibt an, dass die Registerkarte der App in der Besprechung geöffnet ist.|
 |2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Zeigt an, ob Sie Ihre App für die Verwendung der freigegebenen Besprechungsphase konfigurieren.|
 |3|**Referentenzuordnung**: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
-|4|**iframe**: Zeigt Ihre App-Inhalte an.|
-|5|**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Wird nur für den Teilnehmer angezeigt, der die Freigabe gestartet hat.|
+|4 |**iframe**: Zeigt Ihre App-Inhalte an.|
+|5 |**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Wird nur für den Teilnehmer angezeigt, der die Freigabe gestartet hat.|
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomie: Freigeben bestimmter App-Inhalte für eine Besprechung
 
@@ -264,8 +264,8 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 |1|**App-Symbol**: Das hervorgehobene Symbol gibt an, dass die Registerkarte der App in der Besprechung geöffnet ist.|
 |2|**Schaltfläche "Für Besprechung freigeben"**: Der Einstiegspunkt zum Freigeben der App für die Besprechung. Verwenden Sie für eine konsistente Benutzererfahrung immer das standardmäßige Teams-Freigabesymbol. **"Für Besprechung freigeben** " ist der empfohlene Standardtext, aber Sie können ihn auch für Ihre Anwendungsfälle anpassen. Beispiel: **Gemeinsames Wiedergeben** für eine Spiele-App oder **Gemeinsames Ansehen** für eine Video-App. Stellen Sie in beiden Fällen klar, dass die Aktion eine freigegebene, interaktive Erfahrung für alle Teilnehmer der Besprechung schafft.|
 |3|**Referentenzuordnung**: Zeigt den Namen des Teilnehmers an, der die App freigegeben hat.|
-|4|**iframe**: Zeigt Ihre App-Inhalte an.|
-|5|**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Wird nur für den Teilnehmer angezeigt, der die Freigabe gestartet hat.|
+|4 |**iframe**: Zeigt Ihre App-Inhalte an.|
+|5 |**Schaltfläche "Freigabe beenden"**: Beendet die Freigabe der App für die Besprechungsphase. Wird nur für den Teilnehmer angezeigt, der die Freigabe gestartet hat.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Reaktionsfähiges Verhalten: Freigegebene Besprechungsphase
 

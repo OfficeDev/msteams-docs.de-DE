@@ -3,26 +3,25 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302465"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452360"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
 Deep-Links sind ein Navigationsinstrument, mit dem Sie Informationen und Features für Benutzer in Microsoft Teams und Microsoft Teams-Apps verlinken können. Das Erstellen von Deep-Links kann u.a. in den folgenden Szenarien nützlich sein:
 
 * Navigieren des Benutzers zum Inhalt auf einer der Registerkarten Ihrer App. Ihre App kann beispielsweise über einen Bot verfügen, der Nachrichten sendet, welche den Benutzer in Bezug auf eine wichtige Aktivität benachrichtigen. Wenn der Benutzer auf die Benachrichtigung tippt, navigiert der Deeplink zur Registerkarte, sodass der Benutzer weitere Details zur Aktivität anzeigen kann.
-* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben, z. B. das Erstellen eines Chats oder das Planen einer Besprechung, indem die Deep-Links vorab mit den erforderlichen Parametern versehen werden. Benutzer müssen die Informationen nicht manuell eingeben.
+* Ihre App automatisiert oder vereinfacht bestimmte Benutzeraufgaben. Sie können einen Chat erstellen oder eine Besprechung planen, indem Sie die Deep-Links mit den erforderlichen Parametern vorab auffüllen. Benutzer müssen die Informationen nicht manuell eingeben.
 
-Das Microsoft Teams JavaScript-Client-SDK (TeamsJS) vereinfacht den Navigationsprozess. Für viele Szenarien, z. B. das Navigieren zu Inhalten und Informationen auf Ihrer Registerkarte oder sogar das Starten einer Chatunterhaltung, bietet das SDK typisierte APIs, die eine bessere Benutzererfahrung ermöglichen und die Verwendung von Deep-Links ersetzen können. Diese APIs werden für Microsoft Teams-Apps empfohlen, die u. U. auf anderen Hosts ausgeführt werden (Outlook, Office), da sie auch eine Möglichkeit bieten, zu überprüfen, ob die verwendete Funktion von diesem Host unterstützt wird. In den folgenden Abschnitten finden Sie Informationen zur Erstellung von Deep-Links sowie zu den Änderungen in Szenarien, in denen dies erforderlich war, nach der Veröffentlichung von TeamsJS V2.
+Das Microsoft Teams JavaScript-Client-SDK (TeamsJS) vereinfacht den Navigationsprozess. In vielen Szenarien, z. B. beim Navigieren zu Inhalten und Informationen auf Ihrer Registerkarte oder beim Starten eines Chatdialogfelds. Das SDK bietet typisierte APIs, die eine verbesserte Benutzererfahrung bieten und die Verwendung von Deep-Links ersetzen können. Diese APIs werden für Microsoft Teams-Apps empfohlen, die u. U. auf anderen Hosts ausgeführt werden (Outlook, Office), da sie auch eine Möglichkeit bieten, zu überprüfen, ob die verwendete Funktion von diesem Host unterstützt wird. In den folgenden Abschnitten finden Sie Informationen zur Erstellung von Deep-Links sowie zu den Änderungen in Szenarien, in denen dies erforderlich war, nach der Veröffentlichung von TeamsJS V2.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > Das Verhalten von Deep-Links hängt von einer Reihe von Faktoren ab. In der folgenden Liste wird das Verhalten von Deep-Links in Bezug auf Microsoft Teams-Entitäten beschrieben.
 >
 > **Registerkarte**:  
@@ -389,11 +388,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld angezeigt, um die App zu installieren.
 
 > [!NOTE]
-> Derzeit werden Deeplinks zu einer App auf der mobilen Plattform nicht unterstützt.
+> Wenn Ihre App für die mobile Plattform genehmigt wurde, können Sie deep-Links zu einer App auf mobilgeräten erstellen. Apple App Store Connect Team ID ist zusätzlich erforderlich, damit der Deep-Link unter Teams-iOS funktioniert. Weitere Informationen finden Sie unter [Aktualisieren von Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deeplink-Verknüpfung für SharePoint-Framework-Registerkarten
 
-Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Wenn ein Bot eine TextBlock-Nachricht mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn Benutzer den Link auswählen. Dies erfolgt in der Chrome und Microsoft Teams Desktop-App, die unter Linux ausgeführt wird.

@@ -3,12 +3,12 @@ title: Auswählen eines Setups zum Testen und Debuggen Ihrer App
 description: In diesem Modul lernen Sie Optionen zum Testen und Debuggen von Microsoft Teams-Apps in einer lokalen und in der Cloud gehosteten Umgebung kennen.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: b064fb4ef06576251a91a4727a84bb4519d4d352
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312191"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452353"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>Auswählen eines Testsetups und Debuggen Ihrer Teams-App
 
@@ -81,6 +81,5 @@ Um Ihre Erfahrung in Teams zu laden und auszuführen, müssen Sie ein Paket erst
 
 ## <a name="see-also"></a>Siehe auch
 
-[Testen und debuggen Sie Ihren Bot lokal mit der IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-
-[Entwicklertools für Microsoft Teams-Registerkarten](../../tabs/how-to/developer-tools.md)
+* [Testen und debuggen Sie Ihren Bot lokal mit der IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+* [Entwicklertools für Microsoft Teams-Registerkarten](../../tabs/how-to/developer-tools.md)

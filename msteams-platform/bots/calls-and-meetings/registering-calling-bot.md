@@ -3,12 +3,12 @@ title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 description: In diesem Modul erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143795"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407574"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -58,7 +58,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufru
 |Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administratorzustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Ausgehende 1:1-Anrufe aus der App initiieren (Vorschau) |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
-| Calls.InitiateGroupCall.All |Ausgehende Gruppenanrufe aus der App initiieren (Vorschau) |Ermöglicht der App, ausgehende Anrufe an mehrere Benutzer zu tätigen und Teilnehmer in Ihrer Organisation zu Besprechungen hinzufügen (ohne angemeldeten Benutzer).|Ja|
+| Calls.InitiateGroupCall.All |Initiieren Sie ausgehende 1:1- und Gruppenanrufe aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer, mehrere Benutzer, Anrufe zu tätigen und Teilnehmer zu Besprechungen in Ihrer Organisation hinzuzufügen, ohne dass ein Benutzer angemeldet ist.|Ja|
 | Calls.JoinGroupCall.All |Gruppenanrufen und Besprechungen beitreten als App (Vorschau) |Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer zu verknüpfen. Die App tritt Besprechungen in Ihrem Mandanten mit den Berechtigungen eines Verzeichnisbenutzers bei.|Ja|
 | Calls.JoinGroupCallasGuest.All |Gruppenanrufen und Besprechungen als Gast beitreten (Vorschau) |Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer anonym zu verknüpfen. Die App tritt Besprechungen in Ihrem Mandanten als Gast bei.|Ja|
 | Calls.AccessMedia.All |Auf Medienstreams in einem Anruf als App zugreifen (Vorschau) |Ermöglicht der App, direkten Zugriff auf Medienstreams in einem Anruf ohne einen angemeldeten Benutzer zu erhalten.|Ja|
