@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b5197a7fcb3a3309cfec003d8b4c2fc937e59035
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312247"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363550"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -19,7 +19,7 @@ Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt könn
 Sehen Sie sich das folgende Video an, um mehr über die Veröffentlichung Ihrer Anwendung im Microsoft Teams App Store zu erfahren:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
 <br>
 
 Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)einreichen, sollten Sie Folgendes tun.

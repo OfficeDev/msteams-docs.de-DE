@@ -1,16 +1,16 @@
 ---
 title: Gestalten Ihrer Nachrichtenerweiterung
-description: Erfahren Sie, wie Sie eine Teams-Nachrichtenerweiterung entwerfen und das Microsoft Teams-UI-Kit erhalten. Beschreibt Teams-Gestaltungsrichtlinien für Nachrichtenerweiterungen – Tipps Best Praxis
+description: Erfahren Sie, wie Sie eine Teams-Nachrichtenerweiterung entwerfen und das Microsoft Teams-UI-Kit erhalten. Beschreibt Informationen zu Teams-Entwurfsrichtlinien, die auf Tipps und bewährte Methoden zu Nachrichtenerweiterungen verweisen.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558751"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338900"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Entwerfen Ihrer Microsoft Teams-Nachrichtenerweiterung
 
@@ -57,7 +57,7 @@ Aus Gründen der Konsistenz zwischen Teams-Apps können Sie den Anmeldebildschir
 
 ## <a name="types-of-message-extensions"></a>Arten von Nachrichtenerweiterungen
 
-Nachrichtenerweiterungen können Suchbefehle, Aktionsbefehle oder beides beeinhalten. Ihre Befehle hängen von den Features Ihrer App und davon ab, wie diese in Teams-Anwendungsfälle passen.
+Nachrichtenerweiterungen können Suchbefehle, Aktionsbefehle oder beides beeinhalten. Ihre Befehle hängen von den Features Ihrer App ab und davon, wie diese in Die Teams-Anwendungsfälle passen.
 
 ### <a name="search-commands"></a>Suchbefehle
 
@@ -190,8 +190,8 @@ Die folgenden Beispiele zeigen eine Nachrichtenerweiterung, die über das Feld �
 |1|**App-Name**: Vollständiger Name Ihrer App.|
 |2|**Menüsymbol für Aktionsbefehle (optional)**: Öffnet eine Liste von Aktionsbefehlen für Ihre Nachrichtenerweiterung (sofern vorhanden).
 |3|**Suchfeld**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
-|4|**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
-|5|**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
+|4 |**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
+|5 |**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
 |6 |**App-Inhalt**: Hauptsächlich zum Anzeigen von Suchergebnissen.|
 
 #### <a name="desktop"></a>Desktop
@@ -203,8 +203,8 @@ Die folgenden Beispiele zeigen eine Nachrichtenerweiterung, die über das Feld �
 |1|**App-Logo**: Farbsymbol Ihres App-Logos.|
 |2|**App-Name**: Vollständiger Name Ihrer App.|
 |3|**Menüsymbol für Aktionsbefehle (optional)**: Öffnet eine Liste von Aktionsbefehlen für Ihre Nachrichtenerweiterung (sofern vorhanden).
-|4|**Suchfeld**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
-|5|**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
+|4 |**Suchfeld**: Ermöglicht Benutzern das Suchen von App-Inhalten, die sie einfügen möchten.|
+|5 |**Registerkartenmenü (optional)**: Stellt mehrere Inhaltskategorien bereit.|
 |6 |**Menü "Aktionsbefehle" (optional)**: Zeigt die Liste der Aktionsbefehle an (sofern angegeben).|
 |7 |**App-Inhalt**: Hauptsächlich zum Anzeigen von Suchergebnissen. Im folgenden Beispiel wird das Listenlayout verwendet (Rasterlayout ist eine weitere Option).|
 |8 |**App-Logo**: Gliederungssymbol Ihres App-Logos.|
@@ -226,7 +226,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel für Setup und allgemeine Nutzung.":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Beispiel für Setup und allgemeine Verwendung.":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Was Sie tun sollten: Integration mit einmaligem Anmelden
 
@@ -251,7 +251,7 @@ Nachrichtenerweiterungen sind nicht immer leicht zu finden. Fügen Sie Screensho
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für Vorlagen.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Beispiel für Vorlagenerstellung.":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Was Sie tun sollten: Lassen Sie Teams nach Möglichkeit einen Teil der Entwurfsarbeit erledigen
 
@@ -259,7 +259,7 @@ Wenn es für Ihre Anwendungsfälle sinnvoll ist, sollten Sie eine suchbasierte N
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für die Verarbeitung von Entwurfsarbeiten.":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Beispiel für die Behandlung von Entwurfsarbeiten.":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Was Sie nicht tun sollten: Einbetten der gesamten App in ein Aufgabenmodul
 
