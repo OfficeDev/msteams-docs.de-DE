@@ -4,12 +4,12 @@ author: laujan
 description: In diesem Modul erfahren Sie, wie Sie Office 365-Connectors verwenden und Aktionen erfordernde Nachrichten in Microsoft Teams erstellen und senden.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 6e50877f1afbebe1e132c6461fbae30445227f43
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190105"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337215"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -252,7 +252,7 @@ Die folgende Tabelle enthält die Details zu zeitbasierten Transaktionen:
 
 | Zeit in Sekunden  | Maximal zulässige Anforderungen  |
 |---|---|
-| 1   | 4  |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -289,3 +289,5 @@ Diese Begrenzungen haben den Zweck, das Spamming eines Kanals durch einen Connec
 * [Ratenbegrenzungen für Microsoft Teams-Bot-Nachrichten](~/bots/how-to/rate-limit.md)
 * [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Formatieren von Karten in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Erstellen eines Benachrichtigungsbots mit JavaScript](../../sbs-gs-notificationbot.yml)
+* [Erstellen Ihrer ersten Bot-App mit JavaScript](../../sbs-gs-bot.yml)

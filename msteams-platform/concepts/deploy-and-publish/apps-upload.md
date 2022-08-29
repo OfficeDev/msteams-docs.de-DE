@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558100"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363452"
 ---
 # <a name="upload-your-app-in-teams"></a>Hochladen Ihrer App in Teams
 
@@ -24,7 +24,9 @@ In den folgenden Szenarien können Sie Microsoft Teams-Apps querladen, ohne sie 
 > Wenn Sie Ihre App mehrmals per Sideloading laden, wird mehr als eine Instanz für Messaging-Erweiterungen angezeigt.
 
 > [!IMPORTANT]
-> Derzeit sind Querladen-Apps in Government Community Cloud (GCC) verfügbar, aber nicht für GCC-High und Department of Defense (DOD).
+>
+> * Derzeit ist das Querladen von Apps nur in Government Community Cloud (GCC) möglich und in GCC-High und Department of Defense (DOD) nicht möglich.
+> * Die App-Installation wird nur in der Teams-Desktop-App unterstützt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058214"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363438"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -358,7 +358,7 @@ Wenn sich die App-Berechtigungsanforderungen ändern, werden die Benutzer aufgef
 
 Diese Versionszeichenfolge muss dem [SemVer](http://semver.org/)-Standard entsprechen (MAJOR.MINOR.PATCH).
 
-## <a name="id"></a>id
+## <a name="id"></a>ID
 
 **Erforderlich** – Microsoft-App-ID
 
@@ -398,7 +398,7 @@ Der Name Ihrer App-Lösung, der Benutzern in der Microsoft Teams-Umgebung angeze
 
 Beschreibt Ihre App für Benutzer. Für an AppSource übermittelte Apps müssen diese Werte mit den Informationen in Ihrem AppSource-Eintrag übereinstimmen.
 
-Stellen Sie sicher, dass Ihre Beschreibung Ihre Lösung beschreibt und potenziellen Kunden hilft zu verstehen, worin ihre Funktion besteht. Sie müssen in der vollständigen Beschreibung angeben, ob ein externes Konto für die Verwendung der App erforderlich ist. Die Werte von `short` und `full` müssen unterschiedlich sein. Die Kurzbeschreibung darf nicht innerhalb der ausführlichen Beschreibung wiederholt werden und darf keinen anderen App-Namen enthalten.
+Stellen Sie sicher, dass Ihre Beschreibung Ihre Lösung beschreibt und potenziellen Kunden hilft zu verstehen, worin ihre Funktion besteht. Sie müssen in der vollständigen Beschreibung angeben, ob ein externes Konto für die Verwendung der App erforderlich ist. Die Werte von `short` und `full` müssen unterschiedlich sein. Ihre kurze Beschreibung kann in der langen Beschreibung nicht wiederholt werden und darf keinen anderen App-Namen enthalten.
 
 |Name| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|
@@ -453,16 +453,16 @@ Bei dem Wert muss es sich um einen gültigen HTML-Farbcode handeln, der mit "#" 
 
 **Optional** – Array
 
-Wird verwendet, wenn Ihre App-Lösung über Teamkanal-Registerkarten verfügt, die eine zusätzliche Konfiguration erfordern, bevor sie hinzugefügt werden. Konfigurierbare Registerkarten werden nur in den `team`- und `groupchat`-Bereichen unterstützt, und Sie können dieselben Registerkarten mehrmals konfigurieren. Sie können sie jedoch nur einmal im Manifest definieren.
+Wird verwendet, wenn Ihre App über eine Teamkanal-Registerkartenoberfläche verfügt, die zusätzliche Konfiguration erfordert, bevor sie hinzugefügt wird. Konfigurierbare Registerkarten werden nur in den `team`- und `groupchat`-Bereichen unterstützt, und Sie können dieselben Registerkarten mehrmals konfigurieren. Sie können sie jedoch nur einmal im Manifest definieren.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
-|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
-|`canUpdateConfiguration`|Boolean|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
+|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
+|`canUpdateConfiguration`|Boolescher Wert|||Der Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration nach der Erstellung vom Benutzer aktualisiert werden kann. Standard: **true**.|
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1 ||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint bereitgestellt wird. Optionen sind `sharePointFullPage` und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -479,8 +479,8 @@ Dieses Element ist ein Array (maximal 16 Elemente), wobei alle Elemente vom Typ 
 |`contentUrl`|string||✔️|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
 |`websiteUrl`|string|||Die https://-URL, auf die verwiesen wird, wenn sich ein Benutzer für die Anzeige in einem Browser entscheidet.|
 |`searchUrl`|string|||Die https://-URL, auf die für die Suchabfragen eines Benutzers verwiesen wird.|
-|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
-|`context` | Array von Enumerationen| 2 || Die Gruppe von `contextItem`-Bereichen, in denen eine Registerkarte unterstützt wird.|
+|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
+|`context` | Array von Enumerationen| 2|| Die Gruppe von `contextItem`-Bereichen, in denen eine Registerkarte unterstützt wird.|
 
 > [!NOTE]
 > Die searchUrl-Funktion ist für Drittentwickler nicht verfügbar. Wenn Ihre Registerkarten kontextabhängige Informationen zum Anzeigen relevanter Inhalte oder zum Initiieren eines Authentifizierungsvorgangs benötigen, finden Sie entsprechende Informationen unter [Abrufen von Kontext für Ihre Microsoft Teams-Registerkarte](../../tabs/how-to/access-teams-context.md).
@@ -496,11 +496,11 @@ Das Element ist ein Array (maximal ein Element &mdash; derzeit ist nur ein Bot p
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64 Zeichen|✔️|Die eindeutige Microsoft-App-ID für den Bot, wie bei Bot Framework registriert. Die ID kann mit der Gesamt-[App-ID](#id)übereinstimmen.|
-|`scopes`|Array von Enumerationen|3 |✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
+|`scopes`|Array von Enumerationen|3|✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
 |`needsChannelSelector`|Boolescher Wert|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: **`false`**|
-|`isNotificationOnly`|Boolescher Wert|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
+|`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: **`false`**|
 |`supportsFiles`|Boolescher Wert|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: **`false`**|
-|`supportsCalling`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
+|`supportsCalling`|Boolesch|||Ein Wert, der angibt, wo ein Bot Audioanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 |`supportsVideo`|Boolescher Wert|||Ein Wert, der angibt, wo ein Bot Videoanrufe unterstützt. **WICHTIG**: Dies ist derzeit eine experimentelle Eigenschaft. Experimentelle Eigenschaften sind u. U. nicht komplett und werden möglicherweise geändert, bevor sie vollständig verfügbar sind.  Die Eigenschaft wird nur zu Test- und Erforschungszwecken bereitgestellt und darf nicht in Produktionsanwendungen verwendet werden. Standard: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
@@ -509,7 +509,7 @@ Eine Liste der Befehle, die Ihr Bot Benutzern empfehlen kann. Das Objekt ist ein
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`items.scopes`|Array von Enumerationen|3 |✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
+|`items.scopes`|Array von Enumerationen|3|✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
 |`items.commands`|Array von Objekten|10  |✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -530,7 +530,7 @@ Das Objekt ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `obj
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren des Connectors verwendet werden soll.|
-|`scopes`|Array von Enumerationen|1 |✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
+|`scopes`|Array von Enumerationen|1|✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
 |`connectorId`|string|64 Zeichen|✔️|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) entspricht.|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -566,7 +566,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`type`|string|64 Zeichen||Der Befehlstyp. Entweder `query` oder `action`. Standard: **query**.|
 |`description`|string|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
 |`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt wird. Standard ist **false**.|
-|`context`|Array aus Zeichenfolgen|3 ||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
+|`context`|Array aus Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Eine beliebige Kombination aus `compose`, `commandBox`, `message`. Der Standardwert ist `["compose","commandBox"]`.|
 |`fetchTask`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden muss. Standard ist **false**.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn ein Nachrichtenerweiterungsbefehl verwendet wird.|
 |`taskInfo.title`|string|64 Zeichen||Titel des ersten Dialogfelds.|
@@ -577,7 +577,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`parameters.name`|string|64 Zeichen|✔️|Der Name des Parameters, wie er im Client angezeigt wird. Der Parametername ist in der Benutzeranforderung enthalten.|
 |`parameters.title`|string|32 Zeichen|✔️|Benutzerfreundlicher Titel für den Parameter.|
 |`parameters.description`|string|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
-|`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter. Derzeit wird der Wert nicht unterstützt.|
+|`parameters.value`|string|512 Zeichen||Anfangswert für den Parameter. Der Wert wird derzeit nicht unterstützt.|
 |`parameters.inputType`|string|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: false` angezeigt wird. Einer von `text, textarea, number, date, time, toggle, choiceset`.|
 |`parameters.choices`|Array von Objekten|10 Elemente||Die Auswahloptionen für `choiceset`. Wird nur verwendet, wenn `parameter.inputType` `choiceset` ist.|
 |`parameters.choices.title`|string|128 Zeichen|✔️|Titel der Auswahl.|
@@ -615,7 +615,7 @@ Stellt die systemeigenen Features auf dem Gerät eines Benutzers bereit, für di
 
 Eine Liste gültiger Domänen für Websites, die von der App im Microsoft Teams-Client geladen werden sollen. Domäneneinträge können Platzhalter enthalten, z. B. `*.example.com`. Die gültige Domäne entspricht genau einem Segment der Domäne. Wenn sie `a.b.example.com` entsprechen muss, verwenden Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als jener der Registerkartenkonfiguration führt, muss diese Domäne hier angegeben werden.
 
-Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die in Ihrer App unterstützt werden sollen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten. Sie dürfen jedoch accounts.google.com nicht in `validDomains[]` einschließen.
+Schließen Sie **nicht** die Domänen von Identitätsanbietern ein, die in Ihrer App unterstützt werden sollen. Um sich beispielsweise mit einer Google-ID zu authentifizieren, ist es erforderlich, zu accounts.google.com umzuleiten, sie dürfen jedoch keine accounts.google.com in `validDomains[]`einschließen.
 
 Microsoft Teams-Apps, die ihre eigenen SharePoint-URLs benötigen, um ordnungsgemäß zu funktionieren, enthalten "{teamsitedomain}" in ihrer Liste zulässiger Domänen.
 
@@ -633,13 +633,13 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|36 Zeichen|✔️|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
-|`resource`|string|2048 Zeichen|✔️|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie Einmaliges Anmelden nicht verwenden, geben Sie einen Dummyzeichenfolgenwert in dieses Feld in Ihr App-Manifest ein (z. B. <https://notapplicable>), um eine Fehlermeldung zu vermeiden. |
+|`resource`|string|2048 Zeichen|✔️|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Dummy-Zeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, <https://notapplicable> um beispielsweise eine Fehlerantwort zu vermeiden. |
 
 ## <a name="graphconnector"></a>graphConnector
 
 **Optional** – Objekt
 
-Geben Sie die Graph-Connectorkonfiguration der App an. Wenn dies vorhanden ist, muss [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
+Geben Sie die Graph-Connectorkonfiguration der App an. Wenn dies vorhanden ist, müssen [auch webApplicationInfo.id](#webapplicationinfo) angegeben werden.
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ Der `configurableProperties`-Block definiert die App-Eigenschaften, die Microsof
 
 Sie können eine der folgenden Eigenschaften definieren:
 
-* `name`: Der Anzeigename der App.
-* `shortDescription`: Die Kurzbeschreibung der App.
-* `longDescription`: Die ausführliche Beschreibung der App.
-* `smallImageUrl`: Das Kontursymbol der App.
-* `largeImageUrl`: Das Farbsymbol der App.
-* `accentColor`: Die zu verwendende Farbe und ein Hintergrund für Kontursymbole.
-* `developerUrl`: Die HTTPS-URL der Website des Entwicklers.
-* `privacyUrl`: Die HTTPS-URL der Datenschutzerklärung des Entwicklers.
-* `termsOfUseUrl`: Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
+* [Name](#name): Der Anzeigename der App.
+* [shortDescription](#description): Die Kurzbeschreibung der App.
+* [longDescription](#description): Die lange Beschreibung der App.
+* [smallImageUrl](#icons): Das Gliederungssymbol der App.
+* [largeImageUrl](#icons): Das Farbsymbol der App.
+* [accentColor](#accentcolor): Die zu verwendenden Farben und ein Hintergrund für Ihre Gliederungssymbole.
+* [developerUrl](#developer): Die HTTPS-URL der Website des Entwicklers.
+* [privacyUrl](#developer): Die HTTPS-URL der Datenschutzrichtlinie des Entwicklers.
+* [termsOfUseUrl](#developer): Die HTTPS-URL der Nutzungsbedingungen des Entwicklers.
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 
