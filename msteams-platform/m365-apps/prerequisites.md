@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
+ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919739"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67457291"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
 
@@ -32,15 +32,25 @@ Sie benötigen einen Sandbox-Mandanten für Microsoft 365-Entwicklerabonnements,
 
 Außerdem müssen Sie das Sideloading für Ihren Mandanten aktivieren:
 
-1. Melden Sie sich beim Microsoft 365 Admin Center an (https://admin.microsoft.com) mit den Anmeldeinformationen für Ihren Testmandanten), und wählen Sie im Seitenbereich **Microsoft Teams** aus, um das *Microsoft Teams Admin Center* zu öffnen.
-1. Auswählen: Microsoft Teams-Apps > Apps verwalten > **Organisationsweite App-Einstellungen**.
-1. Aktivieren Sie unter **Benutzerdefinierte Apps** die Option *Interaktion mit benutzerdefinierten Apps*.
+ 1. Melden Sie sich mit Ihren Anmeldeinformationen für den Testmandanten beim [Teams Admin Center](https://admin.teams.microsoft.com/dashboard) an.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Aktivieren Sie das Sideloading für benutzerdefinierte Apps über das Teams-Administrationszentrum":::
+ 1. Wechseln Sie zu **Teams-Apps** > **Verwalten von Apps**.
+
+ 1. Wählen Sie oben rechts **organisationsweite App-Einstellungen** aus.
+
+ 1. Aktivieren Sie unter "Benutzerdefinierte Apps" die **Umschaltfläche "Interaktion mit benutzerdefinierter App** ", und speichern Sie sie.
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Der Screenshot ist ein Beispiel, das das Querladen für benutzerdefinierte Apps aus dem Teams Admin Center ermöglicht.":::
+
+ 1. Neben organisationsweiten App-Einstellungen ermöglichen benutzerdefinierte App-Richtlinieneinstellungen benutzern auch das Hochladen benutzerdefinierter Apps in Teams. Weitere Informationen finden Sie [unter Verwalten von benutzerdefinierten App-Richtlinien und -Einstellungen](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+ 1. Wechseln Sie im Teams Admin Center zu den **Setuprichtlinien** für **Teams-Apps** > , und wählen Sie dann die **globale Richtlinie (organisationsweite Standardrichtlinie)** aus.
+
+ 1. Aktivieren Sie **"Benutzerdefinierte Apps hochladen**", und wählen Sie **"Speichern" aus**.
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Registrieren Sie Ihren Entwicklermandanten für gezielte Versionen von Office 365
 
-> [!Important]
+> [!IMPORTANT]
 > Es kann bis zu fünf Tage nach dem Erstellen eines [Microsoft 365 Entwickler-Sandkastenmandanten](/office/developer-program/microsoft-365-developer-program-get-started) und der Registrierung in [Office 365 Targeted-Versionen](#enroll-your-developer-tenant-for-office-365-targeted-releases) für quergeladene Teams-Apps dauern, die in Outlook und Office angezeigt werden.
 
 So registrieren Sie Ihren Testmandanten für gezielte Versionen von Office 365:
