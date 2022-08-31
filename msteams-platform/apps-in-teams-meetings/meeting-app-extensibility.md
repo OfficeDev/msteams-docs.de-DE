@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417507"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465386"
 ---
 # <a name="unified-meetings-apps"></a>Einheitliche Besprechungs-Apps
 
@@ -214,7 +214,7 @@ Die folgende Tabelle enthält die Benutzertypen und listet die Features auf, auf
 
 | Benutzertyp | Registerkarten | Bots | Nachrichtenerweiterungen | Adaptive Karten | Aufgabenmodule | Dialogfeld "Besprechung" | Besprechungsphase |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Nicht verfügbar |
+| Anonymer Benutzer | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Nicht verfügbar | Nicht verfügbar | Nicht verfügbar |
 | Gast, Teil des Mandanten Azure AD | Interaktion ist zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Available | Kann nur auf dem Teams-Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren |
 | Verbundbenutzer finden weitere Informationen unter [nicht standardmäßigen Benutzern](/microsoftteams/non-standard-users). | Interaktion ist in geplanten Besprechungen zulässig. Erstellen, Aktualisieren und Löschen sind nicht zulässig. | Interaktion ist zulässig. Abrufen, Aktualisieren und Löschen sind nicht zulässig. | Nicht verfügbar | Interaktionen im Besprechungschat sind zulässig. | Interaktionen im Besprechungschat über die adaptive Karte sind zulässig. | Nicht verfügbar | Kann die App nur auf dem Teams-Desktopclient starten, anzeigen und mit der App in der Besprechungsphase interagieren. |
 

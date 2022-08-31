@@ -3,19 +3,21 @@ title: Unterstützung für einmaliges Anmelden für Bots
 description: Erfahren Sie, wie Sie ein Benutzertoken erhalten, und ein Bot-Entwickler kann eine Anmeldekarte oder den Azure-Botdienst mit der OAuth-Kartenunterstützung verwenden.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611499"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465379"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Verwenden der SSO-Authentifizierung für Bots
 
 Die Single-Sign-On-Authentifizierung in Microsoft Azure Active Directory (Azure AD) aktualisiert das Authentifizierungstoken im Hintergrund, um die Anzahl der Male zu minimieren, die Benutzer ihre Anmeldeinformationen eingeben müssen. Wenn Benutzer der Verwendung Ihrer App zustimmen, müssen sie ihre Zustimmung auf einem anderen Gerät nicht erneut erteilen, da sie automatisch angemeldet werden. Registerkarten und Bots haben einen ähnlichen Fluss für die SSO-Unterstützung. Aber Bot [fordert Token](#request-a-bot-token) an und [erhält Antworten](#receive-the-bot-token) mit einem anderen Protokoll.
 
 >[!NOTE]
-> OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist Voraussetzung für die Arbeit mit Authentifizierung in Teams.
+> * OAuth 2.0 ist ein offener Standard für die Authentifizierung und Autorisierung, der von Azure AD und vielen anderen Identitätsanbietern verwendet wird. Ein grundlegendes Verständnis von OAuth 2.0 ist Voraussetzung für die Arbeit mit Authentifizierung in Teams.
+>
+> * Bot-SSO wird nur in Einem-zu-Eins-Chat unterstützt.
 
 Im folgenden Video erfahren Sie mehr über die SSO-Unterstützung (Single Sign-On) für Bots:
 <br>
