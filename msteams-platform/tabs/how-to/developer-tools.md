@@ -1,14 +1,14 @@
 ---
 title: Entwicklertools für Microsoft Teams-Registerkarten
-description: In diesem Modul erfahren Sie, wie Sie bei Verwendung des Microsoft Teams Desktopclients und debuggen zu den DevTools gelangen.
+description: In diesem Modul erfahren Sie, wie Sie bei Verwendung des Microsoft Teams-Desktopclients und Debuggens zu den DevTools gelangen.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143011"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488271"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Entwicklertools für Microsoft Teams-Registerkarten
 
@@ -50,3 +50,7 @@ Sie können die DevTools auch über den Teams-Android-Client aktivieren. Um DevT
 1. Wählen **Sie unter der** Registerkarte, die Sie debuggen möchten, Inspizieren aus, wie in der folgenden Abbildung:
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>Siehe auch
+
+[Teams-Clientcache löschen](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)

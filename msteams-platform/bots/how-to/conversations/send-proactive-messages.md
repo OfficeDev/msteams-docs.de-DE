@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot sen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 964dd5bf33ab527ea1dcf5307e7d9ae94a29d9ec
-ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
+ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "67442984"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488264"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -50,9 +50,9 @@ Um eine neue Unterhaltung oder einen Unterhaltungsthread in einem Kanal zu erste
 
 * Wenn Ihre App in einem bestimmten Kontext installiert wird, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Wenn ein neuer Benutzer zu einem Kontext hinzugefügt wird, in dem Ihre App installiert ist, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* Jedes Ereignis, das der Bot empfängt, enthält die erforderlichen Informationen, die Sie aus dem Botkontext abrufen können (TurnContext-Objekt).
 * Sie können in einem Team, in dem Ihre App installiert ist, die [Liste der Kanäle](~/bots/how-to/get-teams-context.md) abrufen.
 * Sie können die [Liste der Mitglieder](~/bots/how-to/get-teams-context.md) eines Teams abrufen, in dem Ihre App installiert ist.
-* Jede Aktivität, die Ihr Bot empfängt, muss die erforderlichen Informationen enthalten.
 
 Unabhängig davon, wie Sie die Informationen erhalten, speichern Sie die `tenantId` und entweder die `userId` oder `channelId` um eine neue Unterhaltung zu erstellen. Sie können auch die `teamId` verwenden, um einen neuen Unterhaltungsthread im allgemeinen oder Standardkanal eines Teams zu erstellen.
 
@@ -327,7 +327,7 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 |---------------|--------------|--------|-------------|--------|
 | Grundlagen zu Teams-Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams, einschließlich des Sendens proaktiver 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Starten eines neuen Threads in einem Kanal | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation der App für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation der App für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 | Proaktives Messaging | Dies ist ein Beispiel, das zeigt, wie Sie die Unterhaltungsreferenzinformationen des Benutzers speichern, um proaktive Erinnerungsnachrichten mithilfe von Bots zu senden. | In Kürze verfügbar | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 > [!div class="nextstepaction"]
@@ -346,3 +346,4 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 * [Proaktive Benachrichtigungen an Benutzer senden](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Erstellen Ihrer ersten Bot-App mit JavaScript](../../../sbs-gs-bot.yml)
 * [Erstellen eines Benachrichtigungs-Bots mit JavaScript zum Senden einer proaktiven Nachricht](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

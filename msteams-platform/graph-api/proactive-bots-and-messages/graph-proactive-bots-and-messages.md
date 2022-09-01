@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 229fa56331f9c8797d0511d77a86e418bbdb7103
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: 525f49de49312d91705bc3a14c4a5da12bd44fdf
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288199"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488278"
 ---
 # <a name="send-proactive-installation-messages"></a>Senden proaktiver Installationsnachrichten
 
@@ -25,7 +25,7 @@ Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit Benutzern
 
 ## <a name="proactive-app-installation-in-teams"></a>Proaktive App-Installation in Microsoft Teams
 
-Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie Benutzern, die Ihre App nicht installiert oder zuvor interagiert haben, proaktiv eine Nachricht senden. Wenn Sie beispielsweise wichtige Informationen an alle Personen in Ihrer Organisation senden müssen, können Sie den Microsoft Graph API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
+Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie Benutzern, die Ihre App nicht installiert oder zuvor interagiert haben, proaktiv eine Nachricht senden. Wenn Sie beispielsweise wichtige Informationen an alle Personen in Ihrer Organisation senden müssen, können Sie die Microsoft Graph-API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -249,3 +249,4 @@ server.get('/api/notify', async (req, res) => {
 * [Proaktive Benachrichtigungen an Benutzer senden – SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [Senden von Aktivitätsfeedbenachrichtigungen an Benutzer in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Hinzufügen einer App zum Team – Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Geschützte APIs in Microsoft Teams](/graph/teams-protected-apis)
