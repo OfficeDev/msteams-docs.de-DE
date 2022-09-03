@@ -1,15 +1,15 @@
 ---
 title: Aktualisieren des Manifests zum Aktivieren von SSO für Registerkarten
-description: Beschreibt das Aktualisieren des Manifests zum Aktivieren von SSO für Registerkarten
+description: Aktualisieren Sie das Teams-Manifest zum Aktivieren des einmaligen Anmeldens (Single Sign-On, SSO) für Registerkarten und zum Querladen in den Teams-Client, um die SSO-Authentifizierung zu testen.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658966"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587001"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Aktualisieren von App-Manifest für SSO und App-Vorschau
 

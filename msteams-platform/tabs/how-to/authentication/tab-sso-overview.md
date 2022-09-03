@@ -1,15 +1,15 @@
 ---
 title: Übersicht über die Authentifizierung für Registerkarten mit SSO in Teams mit Azure AD
-description: Übersicht über die SSO-Authentifizierung in Teams und deren Verwendung auf Registerkarten
+description: Erfahren Sie mehr über die SSO-Authentifizierung (Single Sign-On) in Teams und wie Sie sie auf Registerkarten aktivieren.
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungsregisterkarten Microsoft Azure Active Directory (Azure AD) SSO-Zugriffstoken-App-Manifest
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659014"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586994"
 ---
 # <a name="enable-sso-for-tab-app"></a>Aktivieren von SSO für die Registerkarten-App
 
@@ -67,8 +67,8 @@ Die folgende Abbildung zeigt, wie SSO funktioniert, wenn ein Benutzer einer Team
 | 1 | Registerkarten-App → Teams-Client | Die Registerkarten-App führt einen JavaScript-Aufruf durch `getAuthToken()`, der Teams angibt, ein Zugriffstoken abzurufen. |
 | 2 | Teams-Client → Azure AD | Teams fordert den Azure AD-Endpunkt für das Zugriffstoken für den aktuellen App-Benutzer basierend auf der Teams-Identität an. |
 | 3 | Azure AD → Zustimmungsformular | Wenn der aktuelle App-Benutzer Ihre Registerkarten-App zum ersten Mal verwendet, zeigt Teams die Aufforderung zur Zustimmung an, wenn die App auf einige geschützte Daten zugreifen muss. Der App-Benutzer (oder der Administrator) muss Microsoft Teams zustimmen, um die Teams-Identität des App-Benutzers zum Abrufen des Zugriffstokens von Azure AD zu verwenden. <br> Alternativ gibt es eine Aufforderung, eine erhöhte Authentifizierung durchführen, z. B. die zweistufige Authentifizierung. |
-| 4 | Azure AD → Teams-Client | Azure AD sendet das Zugriffstoken an den Teams-Client. Der Token ist ein JSON-Webtoken (JWT), wessen Überprüfung genauso wie die Tokenüberprüfung in den meisten standardmäßigen OAuth-Flüssen erfolgt. Office speichert das Token in Ihrem Namen zwischen, sodass zukünftige Aufrufe von `getAuthToken()` einfach das zwischengespeicherte Token zurückgeben. |
-| 5 | Teams-Client → Registerkarten-App-Client | Teams sendet das Registerkartenzugriffstoken als Teil des Ergebnisobjekts, das vom `getAuthToken()`-Aufruf zurückgegeben wird, an die Registerkarte. |
+| 4  | Azure AD → Teams-Client | Azure AD sendet das Zugriffstoken an den Teams-Client. Der Token ist ein JSON-Webtoken (JWT), wessen Überprüfung genauso wie die Tokenüberprüfung in den meisten standardmäßigen OAuth-Flüssen erfolgt. Office speichert das Token in Ihrem Namen zwischen, sodass zukünftige Aufrufe von `getAuthToken()` einfach das zwischengespeicherte Token zurückgeben. |
+| 5  | Teams-Client → Registerkarten-App-Client | Teams sendet das Registerkartenzugriffstoken als Teil des Ergebnisobjekts, das vom `getAuthToken()`-Aufruf zurückgegeben wird, an die Registerkarte. |
 | 6  | Registerkarten-App (zwischen Client & Server) | Das Token wird in der Registerkartenanwendung mithilfe von JavaScript analysiert, um die erforderlichen Informationen wie z. B. die E-Mail-Adresse des Benutzers zu extrahieren. Das an die Registerkarten-App zurückgegebene Token ist sowohl ein Zugriffstoken als auch ein ID-Token. |
 
 Weitere Informationen finden Sie unter ["Update-Code zum Aktivieren von SSO"](tab-sso-code.md).

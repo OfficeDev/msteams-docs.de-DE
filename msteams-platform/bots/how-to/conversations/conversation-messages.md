@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Nachricht, vorgeschlagene Aktionen, Bena
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363445"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586987"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -192,7 +192,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Die Nachrichtenaufteilung erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird von Microsoft Teams in separate Aktivitäten unterteilt, eine mit nur einer Textnachricht und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie als Antwort keine Nachrichten-ID, die verwendet wird, um die Nachricht proaktiv zu [aktualisieren oder zu löschen](~/bots/how-to/update-and-delete-bot-messages.md) . Es wird empfohlen, getrennte Aktivitäten zu senden, anstatt je nach Nachrichtenteilung.
+>
+>* Die Nachrichtenaufteilung erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird von Microsoft Teams in separate Aktivitäten unterteilt, eine mit nur einer Textnachricht und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie als Antwort keine Nachrichten-ID, die verwendet wird, um die Nachricht proaktiv zu [aktualisieren oder zu löschen](~/bots/how-to/update-and-delete-bot-messages.md) . Es wird empfohlen, getrennte Aktivitäten zu senden, anstatt je nach Nachrichtenteilung.
+>* Gesendete Nachrichten können lokalisiert werden, um eine Personalisierung bereitzustellen. Weitere Informationen finden Sie [unter Lokalisieren Ihrer App](../../../concepts/build-and-test/apps-localization.md).
 
 Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne Kanaldaten innerhalb der Nachricht. Diese Daten ermöglichen es dem Bot, in diesem Kanal ordnungsgemäß zu kommunizieren. Mit dem Bot Builder SDK können Sie die Nachrichtenstruktur ändern.
 
@@ -368,7 +370,7 @@ Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. W
 
 Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIFs werden nicht unterstützt.
 
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Zum Beispiel:
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
 
 * Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -459,9 +461,10 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 
 ## <a name="code-sample"></a>Codebeispiel
 
-|Beispielname | Beschreibung | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Beispielname | Beschreibung | Node.js | .NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | – |
+| Lokalisierung von Teams-Apps | Lokalisierung von Teams-Apps mithilfe von Bot und Registerkarte. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | – | – | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -474,3 +477,4 @@ Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
 * [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md)
 * [Senden der Mandanten-ID und Konversations-ID an die Anforderungsheader des Bots](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Lokalisieren IhrerApp](../../../concepts/build-and-test/apps-localization.md)

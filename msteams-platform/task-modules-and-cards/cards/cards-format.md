@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, was Kartentextformatierung in Microso
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962433"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586959"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -326,6 +326,9 @@ Die folgende Abbildung zeigt ein Beispiel für die Maskierung von Informationen 
 ### <a name="full-width-adaptive-card"></a>Adaptive Karte in ganzer Breite
 
 Sie können die `msteams`-Eigenschaft verwenden, um die Breite einer adaptiven Karte zu erweitern und zusätzlichen Canvas-Raum zu verwenden. Der nächste Abschnitt enthält Informationen zur Verwendung der Eigenschaft.
+
+> [!NOTE]
+> Testen Sie Die adaptive Karte mit voller Breite in schmalen Formfaktoren wie mobilen und Besprechungsseitenbereichen, um sicherzustellen, dass Inhalte nicht abgeschnitten werden.
 
 #### <a name="construct-full-width-cards"></a>Erstellen von Karten in ganzer Breite
 

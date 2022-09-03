@@ -1,15 +1,15 @@
 ---
 title: Registrieren Ihrer Registerkartenapp bei Azure AD
-description: Beschreibt das Registrieren Ihrer Registerkartenapp bei Azure AD
+description: Konfigurieren Sie single sign-on (SSO) mit Azure AD, indem Sie den App-ID-URI, den Zugriffstokenbereich und vertrauenswürdige Clients vorab autorisieren.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Authentifizierung Registerkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken SSO Mandantenbereich
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658999"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586798"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 

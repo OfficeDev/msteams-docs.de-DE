@@ -1,16 +1,16 @@
 ---
 title: SSO-Unterstützung für Ihre Nachrichtenerweiterungen
 author: KirtiPereira
-description: In diesem Artikel erfahren Sie, wie Sie die SSO-Unterstützung (Single Sign-On) für Ihre Messaging-Erweiterungen mit Codebeispielen aktivieren.
+description: Aktivieren Sie einmaliges Anmelden (Single Sign-On, SSO) in Ihrer Teams-Nachrichtenerweiterungs-App mithilfe von Azure AD und Codebeispiel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 999094e1649008e6d0528c8ac44c21a3f5f2f7a4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658917"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586847"
 ---
 # <a name="enable-sso-for-message-extensions"></a>Aktivieren des einmaligen Anmeldens für Nachrichtenerweiterungen
 
@@ -123,7 +123,7 @@ Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Tab, Bot und ME - Suche, Aktion, Link entfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | – |
 |Registerkarten-, Bot- und Nachrichtenerweiterung| In diesem Beispiel wird gezeigt, wie Sie die Authentifizierung in Bot, Tab und nachrichtenerweiterung mit SSO überprüfen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | – |
 

@@ -3,12 +3,12 @@ title: Kartentypen
 description: In diesem Modul erfahren Sie, was Karten und Kartenaktionen sind, die Bots in Teams zur Verfügung stehen, und erstellen Sie eine Hero-, Miniaturansicht und adaptive Karten.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 20654804580c4e52f9355f32cd742458cccfc88c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435027"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586791"
 ---
 # <a name="types-of-cards"></a>Kartentypen
 
@@ -131,6 +131,7 @@ Die folgende Tabelle enthält die Features, die Adaptive Karten unterstützen:
 > * Die Teams-Plattform unterstützt v1.3 oder frühere Features von Adaptiven Karten für andere Funktionen, z. B. von Benutzern gesendeten Karten (suchbasierte Nachrichtenerweiterungen und Verbreitung von Links), Registerkarten und Aufgabenmodule.
 > * Das Formatieren positiver oder destruktiver Aktionen wird in Adaptiven Karten auf der Teams-Plattform nicht unterstützt.
 > * Medienelemente werden derzeit in Adaptive Card auf der Teams-Plattform nicht unterstützt.
+> * Testen Sie Die adaptive Karte mit voller Breite in schmalen Formfaktoren wie mobilen und Besprechungsseitenbereichen, um sicherzustellen, dass Inhalte nicht abgeschnitten werden.
 
 ### <a name="example-of-adaptive-card"></a>Beispiel für Adaptive Card
 

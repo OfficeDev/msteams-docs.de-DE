@@ -1,14 +1,14 @@
 ---
 title: Automatische Authentifizierung
-description: In diesem Modul erfahren Sie, wie Sie automatische Authentifizierung, einmaliges Anmelden und Azure AD für Registerkarten durchführen und wie es funktioniert
+description: Konfigurieren Sie Ihre Registerkarten-App mit Azure AD für Registerkarten und deren Funktionsweise.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ef80c44e38e32666f68b13e42e1f815a4c351353
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435041"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586777"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Stille Authentifizierung in Azure AD verwenden
 

@@ -1,14 +1,14 @@
 ---
 title: Unterstützung für einmaliges Anmelden für Bots
-description: Erfahren Sie, wie Sie ein Benutzertoken erhalten, und ein Bot-Entwickler kann eine Anmeldekarte oder den Azure-Botdienst mit der OAuth-Kartenunterstützung verwenden.
+description: Aktivieren Sie einmaliges Anmelden (Single Sign-On, SSO) mithilfe der Azure AD-Konfiguration und der OAuth-Kartenunterstützung für Teams-Bot-Apps.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
-ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
+ms.openlocfilehash: 0b6ffec6cd9fedcfb67c3f65b391b24ff71e8528
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67465379"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586714"
 ---
 # <a name="use-sso-authentication-for-bots"></a>Verwenden der SSO-Authentifizierung für Bots
 

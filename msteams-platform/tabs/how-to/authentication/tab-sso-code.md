@@ -1,15 +1,15 @@
 ---
 title: Codekonfiguration zum Aktivieren von SSO für Registerkarten
-description: Beschreibt die Codekonfiguration zum Aktivieren von SSO für Registerkarten
+description: Aktualisieren Sie Code in Ihrer Registerkarten-App zum Anfordern und Empfangen von Zugriffstoken mithilfe der Teams-Identität des App-Benutzers zum Aktivieren des einmaligen Anmeldens (Single Sign-On, SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658939"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586784"
 ---
 # <a name="add-code-to-enable-sso"></a>Hinzufügen von Code zum Aktivieren von SSO
 

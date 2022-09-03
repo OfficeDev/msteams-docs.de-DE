@@ -1,15 +1,15 @@
 ---
 title: Problembehandlung bei der Authentifizierung für Registerkarten mit SSO in Teams
-description: Problembehandlung bei der SSO-Authentifizierung in Teams und deren Verwendung in Registerkarten
+description: Behandeln von Problemen mit der SSO-Authentifizierung (Single Sign-On) in Teams und deren Verwendung in der Registerkarten-App.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Fragen zu SSO-Fehlern bei Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658949"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586896"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Fehlerbehebung bei der SSO-Authentifizierung in Teams
 

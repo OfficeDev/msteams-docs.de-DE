@@ -1,16 +1,16 @@
 ---
 title: Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 author: surbhigupta
-description: In diesem Artikel erfahren Sie, wie Sie einer Messaging-Erweiterung mithilfe von Codebeispielen und Beispielen die Authentifizierung hinzufügen.
+description: Aktivieren Sie die Authentifizierung in der Teams-Nachrichtenerweiterungs-App mithilfe des OAuth-Anbieters eines Drittanbieters mit Azure AD-Konfiguration und Codebeispiel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 4d5288d0145e60a263b439adfff3a5ae825caf23
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435048"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586980"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
 
