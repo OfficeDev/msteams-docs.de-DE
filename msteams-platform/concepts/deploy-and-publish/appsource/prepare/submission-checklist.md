@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363550"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605756"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -82,7 +82,7 @@ Der Name Ihrer App (insbesondere der *[Kurzname](~/resources/schema/manifest-sch
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo der Kurzname einer App in einem Store-Eintrag angezeigt wird.":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="Der Beispiel-Screenshot zeigt, wo der Kurzname einer App in einem Store-Eintrag angezeigt wird.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -102,7 +102,7 @@ Eine präzise Zusammenfassung Ihrer App, die originell, ansprechend und auf Ihre
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die kurze Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="Der Beispiel-Screenshot zeigt, wo die kurze Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -124,7 +124,7 @@ Obwohl diese Beschreibung bis zu 4 000 Zeichen lang sein kann, werden die meiste
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Der Beispiel-Screenshot zeigt, wo die lange Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Der Beispiel-Screenshot zeigt, wo die lange Beschreibung einer App in einem Store-Eintrag angezeigt wird.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -146,7 +146,7 @@ Screenshots bieten eine auffällige visuelle Vorschau Ihrer App, um Ihren App-Na
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="Im Beispiel-Screenshot wird hervorgehoben, wo App-Screenshots in einem Store-Eintrag angezeigt werden.":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -189,14 +189,14 @@ Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. 
 
 | Teams Kategorien       | Partner Center Kategorien  |
 |:---------------------|:---------------|
-| Analysen und BI | Analyse, Datenvisualisierung und BI |
-| Entwickler und IT | Entwicklertools, IT-Administrator |
+| Datenvisualisierung und BI | Analyse, Datenvisualisierung und BI |
+| Entwicklertools | Entwicklertools, IT-Administrator |
 | Bildung | Bildung |
-| Personalwesen | Personalwesen und Rekrutierung |
+| Personalwesen & Recruiting| Personalwesen und Rekrutierung |
 | Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Hilfsprogramme |
 | Projektmanagement | Kommunikations-, Project-, Workflow- und Unternehmensverwaltung |
 | Vertrieb und Support | Kunden- und Kontaktverwaltung, Kundensupport, Finanzmanagement sowie Vertrieb und Marketing |
-| Soziale Netzwerke und Unterhaltung | Bild- und Videogalerien, Lifestyle, Nachrichten und Wetter, Soziales, Reisen und Navigation |
+| Sozial | Bild- und Videogalerien, Lifestyle, Nachrichten und Wetter, Soziales, Reisen und Navigation |
 
 ### <a name="localize-your-store-listing"></a>Lokalisieren Ihres Store-Eintrags
 
