@@ -3,12 +3,12 @@ title: Hinzufügen von Kartenaktionen in einem Bot
 description: In diesem Modul erfahren Sie, was Kartenaktionen in Microsoft Teams, Aktionstypen und deren Verwendung in Ihren Bots sind.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035303"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605012"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -37,7 +37,9 @@ Karten, die von Bots und Nachrichtenerweiterungen in Teams verwendet werden, unt
 Der `openUrl`-Aktionstyp gibt eine URL an, die im Standardbrowser gestartet werden soll.
 
 > [!NOTE]
-> Ihr Bot erhält keine Benachrichtigung darüber, welche Schaltfläche ausgewählt wurde.
+>
+> * Ihr Bot erhält keine Benachrichtigung, auf welcher Schaltfläche ausgewählt wurde.
+> * Computernamen mit Zahlen werden in der URL nicht unterstützt.
 
 Mit `openUrl` können Sie eine Aktion mit den folgenden Eigenschaften erstellen:
 

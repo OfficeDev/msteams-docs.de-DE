@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363459"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604857"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -85,8 +85,6 @@ Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Eb
 ### <a name="create-an-action-command-using-developer-portal"></a>Erstellen eines Aktionsbefehls mithilfe des Entwicklerportals
 
 Sie können einen Aktionsbefehl über das **Entwicklerportal** erstellen.
-
-# <a name="app-studio"></a>[App-Studio](#tab/AS)
 
 > [!NOTE]
 > Die Voraussetzung zum Erstellen eines Aktionsbefehls ist, dass Sie bereits eine Nachrichtenerweiterung erstellt haben. Informationen zum Erstellen einer Nachrichtenerweiterung finden Sie unter [Erstellen einer Nachrichtenerweiterung](~/messaging-extensions/how-to/create-messaging-extension.md).

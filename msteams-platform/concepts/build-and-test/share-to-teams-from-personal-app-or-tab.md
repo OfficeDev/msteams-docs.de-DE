@@ -3,12 +3,12 @@ title: Für Teams über persönliche App oder Registerkarte freigeben
 description: Erfahren Sie, wie Sie die Schaltfläche "In Teams teilen" auf Ihrer persönlichen App oder Registerkarte, Einschränkungen und der Endbenutzererfahrung aktivieren.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: cd4de40fdb557300ad957df03f463a0879f44b0e
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232197"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605061"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Für Teams über persönliche App oder Registerkarte freigeben
 
@@ -98,9 +98,6 @@ Nachdem Sie die Schaltfläche "Für Teams freigeben" auf der persönlichen App o
 2. Fügen Sie andere Benutzer oder Gruppen oder Kanäle hinzu, um den Inhalt freizugeben.
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="Add-Empfänger":::
-
-    > [!NOTE]
-    > Sie können dazu eine Notiz **hinzufügen.**
 
 3. Wählen Sie **Freigeben** aus.
 

@@ -1,15 +1,15 @@
 ---
 title: Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen
-description: Beschreibt das Konfigurieren von API-Berechtigungen mit Microsoft Graph
+description: Konfigurieren Sie zusätzliche Berechtigungen und Bereiche mit Microsoft Graph, um einmaliges Anmelden (Single Sign-On, SSO) zu aktivieren.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Delegierter Berechtigungszugriffstokenbereich für Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658994"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605089"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich
 

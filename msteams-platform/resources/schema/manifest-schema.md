@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363438"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605026"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -792,7 +792,7 @@ Aktiviert Ihre App in Kanälen die keine Standardkanäle sind. Wenn Ihre App ein
 
 **Optional** – Boolescher Wert
 
-Wenn die `defaultBlockUntilAdminAction`-Eigenschaft auf **true** festgelegt ist, ist die App so lange standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **true** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Microsoft Teams Admin Center sehen und Maßnahmen ergreifen, um sie zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum standardmäßigen App-Block finden Sie unter [Ausblenden von Microsoft Teams-App, bis sie vom Administrator genehmigt werden](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+Wenn die `defaultBlockUntilAdminAction`-Eigenschaft auf **true** festgelegt ist, ist die App so lange standardmäßig für Benutzer ausgeblendet, bis der Administrator sie zulässt. Bei Festlegung auf **true** ist die App für alle Mandanten und Endbenutzer ausgeblendet. Mandantenadministratoren können die App im Microsoft Teams Admin Center sehen und Maßnahmen ergreifen, um sie zuzulassen oder zu blockieren. Der Standardwert ist **false**. Weitere Informationen zum Standardmäßigen App-Block finden Sie unter ["Apps standardmäßig blockieren" für Benutzer, bis ein Administrator dies genehmigt.](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

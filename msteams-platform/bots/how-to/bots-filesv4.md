@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Dateien über den Bot senden und empfangen, i
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 20dc421531864cf88f55932bc85ae7979f7992ff
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503879"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605047"
 ---
 # <a name="send-and-receive-files-using-bot"></a>Senden und Empfangen von Dateien mithilfe eines Bots
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>Einfaches Beispiel in C #
+### <a name="basic-example-in-c"></a>Einfaches Beispiel in C# #
 
 Der folgende Code zeigt ein Beispiel für die Behandlung von Dateiuploads und das Senden von Dateizustimmungsanforderungen im Dialogfeld des Bots:
 

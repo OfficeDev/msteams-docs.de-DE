@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie den Teams-spezifischen Kontext für Ihren Bot
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
-ms.translationtype: HT
+ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150694"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605075"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Microsoft Teams-Kontext für Ihren Bot erhalten
 
@@ -374,3 +374,7 @@ Response body
 
 > [!div class="nextstepaction"]
 > [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md)
+
+## <a name="see-also"></a>Siehe auch
+
+[Lokalisieren IhrerApp](../../concepts/build-and-test/apps-localization.md)

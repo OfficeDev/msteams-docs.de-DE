@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435006"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605082"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -122,7 +122,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |20.10.2021| Besprechungsdetails-API und Teams-Besprechungsereignisse in Echtzeit | Erstellen von Apps für Teams-Besprechungen > [Laden der API zum Abrufen von Besprechungsdetails](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18.10.2021| Registerkartenlink entfalten und Bühnenansicht | Erstellen von Registerkarten > [Registerkartenlink aufklappen und Phasenansicht](tabs/tabs-link-unfurling.md) |
 |08.10.2021| Neue Best Practices für die Gestaltung Adaptiver Karten | Entwerfen Ihrer App > UI-Komponenten > [Entwerfen von adaptiven Karten für Ihre Teams-App](task-modules-and-cards/cards/design-effective-cards.md) |
-|05.10.2021| Teams-App ausblenden, bis der Administrator das Anzeigen der App zulässt | Entwerfen Ihrer App > [Teams-App ausblenden, bis der Administrator sie genehmigt](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|05.10.2021| Teams-App ausblenden, bis der Administrator das Anzeigen der App zulässt | Entwerfen Sie Ihre App [> Apps standardmäßig für Benutzer blockieren, bis ein Administrator dies genehmigt.](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |05.10.2021| Planen Sie Ihre Apps für Teams-Mobilgeräte | App-Grundlagen > [Planen interaktiver Registerkarten für Teams Mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |04.10.2021| Neues Entwicklerportal für Teams für die Verwaltung Ihrer Teams-Apps eingeführt | Tools und SDK > [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
 |21.09.2021|Teams unterstützt die Azure AD-Objekt-ID und den UPN in Benutzernennungen für Bots und eingehende Webhooks. | • Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Azure AD-Objekt-ID und UPN in Benutzernennung](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Karten – Übersicht](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |

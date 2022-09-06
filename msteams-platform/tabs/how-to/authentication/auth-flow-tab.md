@@ -1,14 +1,14 @@
 ---
 title: Aktivieren der Authentifizierung mithilfe eines OAuth-Drittanbieters
-description: In diesem Artikel erfahren Sie mehr über den Teams-Authentifizierungsablauf auf Registerkarten, OAuth-Drittanbieter, OAuth by Azure AD und Authentifizierungscodebeispiele.
+description: Erfahren Sie mehr über den Teams-Authentifizierungsfluss auf Registerkarten mithilfe des OAuth-Anbieters eines Drittanbieters mit Azure AD-Konfiguration und Codebeispielen.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 33300461e16f5a8ab5e1e69f5fea775adb2359aa
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c9969e154dae2f0d2439c1d8513af34970723e5c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435058"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605040"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>Aktivieren der Authentifizierung mithilfe eines OAuth-Drittanbieters
 
