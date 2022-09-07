@@ -98,40 +98,66 @@
       items:
         - name: Übersicht über das Teams-Toolkit
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Erstellen einer neuen Teams-App
-          href: toolkit/create-new-project.md
-        - name: Vorbereiten von Konten zum Erstellen einer Teams-App
-          href: toolkit/accounts.md
-        - name: Lokales Debuggen Ihrer Teams-App
-          href: toolkit/debug-local.md
-        - name: Debuggen von Hintergrundprozessen
-          href: toolkit/debug-background-process.md
-        - name: Bereitstellen von Cloudressourcen
-          href: toolkit/provision.md
-        - name: Bereitstellen der Teams-App in der Cloud
-          href: toolkit/deploy.md
-        - name: Teams-App-Manifest bearbeiten
-          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Azure AD-Manifests anpassen
-          href: toolkit/AAD-manifest-customization.md
-        - name: Hinzufügen von Funktionen zur Teams-App
-          href: toolkit/add-capability.md
-        - name: Hinzufügen von Cloudressourcen zur Teams-App
-          href: toolkit/add-resource.md
-        - name: Hinzufügen des einmaligen Anmeldens zur Teams-App
-          href: toolkit/add-single-sign-on.md
-        - name: Hinzufügen einer API-Verbindung zur Teams-App
-          href: toolkit/add-API-connection.md
-        - name: Einrichten von CI/CD-Pipelines
-          href: toolkit/use-CICD-template.md
-        - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
-          href: toolkit/publish.md
-        - name: Verwalten mehrerer Umgebungen
-          href: toolkit/TeamsFx-multi-env.md
-        - name: Zusammenarbeiten am Teams-Projekt
-          href: toolkit/TeamsFx-collaboration.md
-        - name: TeamsFx SDK
-          href: toolkit/TeamsFx-SDK.md
+        - name: Installieren des Teams-Toolkits
+          href: toolkit/install-Teams-Toolkit.md
+        - name: Erkunden des Teams-Toolkits
+          href: toolkit/explore-Teams-Toolkit.md
+        - name: Vorbereiten des Erstellens von Apps mit dem Microsoft Teams-Toolkit
+          href: toolkit/build-environments.md
+        - name: Verwenden des Teams-Toolkits zum Erstellen Ihrer App
+          items:
+            - name: Voraussetzungen für das Erstellen Ihrer Teams-App
+              href: toolkit/tools-prerequisites.md
+            - name: Erstellen eines neuen Teams-App-Projekts
+              href: toolkit/create-new-project.md
+            - name: Entwickeln Ihrer Teams-App
+              items:
+                - name: Hinzufügen und Verwalten von Umgebungen
+                  href: toolkit/TeamsFx-multi-env.md
+                - name: Erstellen einer App mit mehreren Funktionen
+                  href: toolkit/add-capability.md
+                - name: Erstellen von funktionsbasierten Cloudressourcen
+                  href: toolkit/add-resource.md
+                - name: Integrieren vorhandener Drittanbieter-APIs
+                  href: toolkit/add-API-connection.md
+            - name: Manifest anpassen
+              items:
+                - name: Anpassen des Teams-App-Manifests
+                  href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+                - name: Bearbeiten des Azure AD-Manifests
+                  href: toolkit/AAD-manifest-customization.md
+            - name: TeamsFx SDK
+              href: toolkit/TeamsFx-SDK.md
+            - name: Debuggen Sie Ihre Teams-App
+              items:
+                - name: Übersicht
+                  href: toolkit/debug-overview.md
+                - name: Lokales Debuggen Ihrer Teams-App
+                  href: toolkit/debug-local.md
+                - name: Debuggen von Hintergrundprozessen
+                  href: toolkit/debug-background-process.md
+            - name: Hosten Ihrer App in Azure
+              items:
+                - name: Bereitstellen von Cloudressourcen
+                  href: toolkit/provision.md
+                - name: Bereitstellen der Teams-App in der Cloud
+                  href: toolkit/deploy.md
+            - name: Testen Ihrer Teams-App
+              items:
+                - name: Integrieren und Zusammenarbeiten
+                  href: toolkit/TeamsFx-collaboration.md
+                - name: Querladen und Testen der App in der Teams-Umgebung
+                  href: toolkit/sideload-and-test-app.md
+                - name: Testen des App-Verhaltens in unterschiedlichen Umgebungen
+                  href: toolkit/test-app-behavior.md
+        - name: Veröffentlichen Ihrer Teams-App
+          items:
+            - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
+              href: toolkit/publish.md
+            - name: Integration in das Entwicklerportal
+              href: toolkit/Integrate-with-developer-portal.md
+        - name: Häufig gestellte Fragen
+          href: toolkit/faq.md
     - name: Microsoft Teams-Toolkit-Erweiterung für Visual Studio
       items:
         - name: Übersicht über das Teams-Toolkit
@@ -385,7 +411,7 @@
           displayName: Ephemeral data structures
         - name: Mediensynchronisierung
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-          displayName: 'Audio ducking,'
+          displayName: Audio ducking
         - name: Schrittweise Anleitungen
           items:
             - name: Agiles Poker-Tutorial
@@ -404,12 +430,15 @@
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: Erstellen ausgehender Webhooks
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      displayName: 'HMAC security token, access, channel'
     - name: Erstellen eingehender Webhooks
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      displayName: 'Access, permissions'
     - name: Erstellen von Office 365-Connectors
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: Nachrichten erstellen und senden
       href: webhooks-and-connectors/how-to/connectors-using.md
+      displayName: 'Access, settings, configuration'
 - name: Erstellen von Karten und Aufgabenmodulen
   items:
     - name: Übersicht
@@ -418,34 +447,44 @@
       items:
         - name: Übersicht
           href: task-modules-and-cards/what-are-cards.md
+          displayName: 'People picker, type-ahead'
         - name: Kartentypen
           href: task-modules-and-cards/cards/cards-reference.md
+          displayName: 'Flexible layout, receipt card, carousel card, setting'
         - name: Formatieren von Karten in Microsoft Teams
           href: task-modules-and-cards/cards/cards-format.md
+          displayName: 'Information masking, background, extension, notification'
         - name: Kartenaktionen
           href: task-modules-and-cards/cards/cards-actions.md
         - name: Personenauswahl in Adaptiven Karten
           href: task-modules-and-cards/cards/people-picker.md
+          displayName: 'Setting, channel, static typeahead'
         - name: Vorausschauende Suche in Adaptiven Karten
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: Universal-Aktionen für adaptive Karten
           items:
             - name: Übersicht
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+              displayName: 'Access, extension, channel, communication'
             - name: Mit Universal-Aktionen für adaptive Karten arbeiten
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+              displayName: 'Setting, channels,'
             - name: Benutzerspezifische Ansichten
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+              displayName: 'Poll creator controls, channel, extension'
             - name: Sequenzielle Workflows
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+              displayName: Channel
             - name: Aktuelle Karten
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: Erstellen von Aufgabenmodulen
       items:
         - name: Übersicht
           href: task-modules-and-cards/what-are-task-modules.md
+          displayName: Channel
         - name: Aufrufen und Schließen von Aufgabenmodulen
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
+          displayName: 'Access, module sizing'
         - name: Verwenden von Aufgabenmodulen in Registerkarten
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: Verwenden von Aufgabenmodulen aus Bots
