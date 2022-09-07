@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: Ereignisse Bot Kanal Nachricht Reaktion Unterhaltung
-ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695327"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616996"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Unterhaltungsereignisse in Ihrem Teams-Bot
 
@@ -581,7 +581,6 @@ In den folgenden Szenarien wird ein Mitglied entferntes Ereignis an Ihren Bot ge
 
 Die Aktivität `eventType` "Mitglied entfernt" wird festgelegt `teamMemberRemoved` , wenn das Ereignis aus einem Teamkontext gesendet wird. Um festzustellen, ob das entfernte neue Mitglied der Bot selbst war oder ein Benutzer, überprüfen Sie das `Activity`-Objekt des `turnContext`. Wenn die `MembersRemoved` Liste ein Objekt enthält, das `id` mit dem `id` Feld des `Recipient` Objekts identisch ist, ist das hinzugefügte Element der Bot, andernfalls ist es ein Benutzer. Die ID des Bots ist formatiert als `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > Wenn ein Benutzer dauerhaft aus einem Mandanten gelöscht wird, wird das `membersRemoved conversationUpdate`-Ereignis ausgelöst.
 
@@ -673,7 +672,6 @@ Das Objekt `channelData` im folgenden Nutzlastbeispiel basiert auf dem Hinzufüg
     }
 }
 ```
-
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -1340,24 +1338,27 @@ In diesem Beispiel wird der `conversation.id` Von und `installationUpdate` die `
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
-// TO:DO Installation workflow }
-else
-{ // TO:DO Uninstallation workflow
-} return; }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        // TO:DO Installation workflow
+    }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
+}
 ```
 
 Sie können auch einen dedizierten Handler für *add* oder *remove* von Szenarien als alternative Methode zum Erfassen eines Ereignisses verwenden.
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 
@@ -1463,7 +1464,7 @@ Es ist wichtig zu wissen, dass neue Ereignisse jederzeit in der Zukunft hinzugef
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Unterhaltungs-Bot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Unterhaltungs-Bot | Beispielcode für Bots-Unterhaltungsereignisse. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -6,30 +6,29 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: fe9bbbb7a6d3668f43c31322ad8099bf994051b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b614c73a9d15b058dcd01bb26b15bf35bd3030ce
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558331"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616890"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
 
-Das Teams-Toolkit für Microsoft Visual Studio Code unterstützt Sie beim Erstellen und Bereitstellen von Teams-Apps mit integrierter Identität, Zugriff auf Cloud-Speicher, Daten aus Microsoft Graph und anderen Diensten in Azure und Microsoft 365 ohne Konfiguration. Für die Entwicklung von Teams-Apps können Sie ähnlich wie beim Teams-Toolkit für Visual Studio das [CLI-Tool verwenden](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), das aus Toolkit besteht `teamsfx`.
-Mit dem Teams-Toolkit können Sie Ihre Teams-App direkt aus Visual Studio Code erstellen, debuggen und bereitstellen. Die App-Entwicklung mit dem Toolkit hat folgende Vorteile:
+Mit dem Teams-Toolkit können Sie Ihre Teams-App direkt aus Visual Studio erstellen, debuggen und bereitstellen, Code.App Entwicklung mit dem Toolkit hat die folgenden Vorteile:
 
 * Integrierte Identität
 * Zugriff auf Cloudspeicher
 * Daten von Microsoft Graph
 * Azure- und Microsoft 365-Dienste mit Zero-Configuration-Ansatz.
 
-Teams Toolkit bringt alle Tools, die zum Erstellen einer Teams-App benötigt werden, an einem Ort zusammen.
+Für die Entwicklung von Teams-Apps können Sie ähnlich wie beim Teams-Toolkit für Visual Studio das [CLI-Tool verwenden](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), das aus Toolkit besteht `teamsfx`.
 
 ## <a name="user-journey-of-teams-toolkit"></a>User Journey des Teams Toolkits
 
 Teams Toolkit automatisiert manuelle Arbeit und bietet eine hervorragende Integration von Teams und Azure-Ressourcen. Das folgende Bild zeigt die Benutzerreise von Teams Toolkit:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="User Journey des Teams-Toolkits" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey des Teams-Toolkits" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Die wichtigsten Meilensteine dieser Reise sind:
 
@@ -39,129 +38,41 @@ Die wichtigsten Meilensteine dieser Reise sind:
 1. Verwenden Sie das Azure-Konto zum Bereitstellen und Bereitstellen Ihrer App in der Cloud.
 1. Veröffentlichen Sie Ihre App in Teams.
 
-## <a name="install-teams-toolkit-for-visual-studio-code"></a>Installieren Sie das Teams-Toolkit für Visual Studio Code
+Die folgende Tabelle hilft Ihnen, den Überblick über das Teams-Toolkit in Visual Studio Code zu erhalten:
 
-1. Öffnen Sie **Visual Studio Code.**
-1. Wählen Sie die Ansicht "Erweiterungen" (**STRG+UMSCHALT+X** / **⌘⇧-X** oder **Ansicht > Erweiterungen**) aus.
+| Prozess | Beschreibung |
+| ---- | ---- |
+| Installieren des Teams-Toolkits | Sie können das Teams-Toolkit auf zwei Arten installieren: <br> - Verwenden von Visual Studio Code <br> – Verwenden von Visual Studio Code Marketplace|
+| Unterstützung für Buildumgebungen | Es gibt zwei verschiedene Umgebungstypen: <br> - Javascript oder Typescript <br> - SPFx |
+| Unterstützung für App-Typen und Azure-Funktion | Es gibt zwei verschiedene Arten von Apps: <br> – Funktionsbasierte App wie Registerkarte, Bot, Nachrichtenerweiterung  <br> – Szenariobasierte Teams-App wie Benachrichtigungs-Bot, Befehls-Bot und SSO-aktivierte persönliche Registerkarte |
+| Entwickeln Ihrer Teams-App | Dazu zählen: <br> – Hinzufügen und Verwalten von Umgebungen <br> – Erstellen einer App mit mehreren Funktionen <br> – Erstellen von funktionsbasierten Cloudressourcen <br> – Integrieren der Drittanbieter-API <br> - Anpassen der Manifestdatei <br> – TeamsFx SDK |
+| Debuggen Sie Ihre Teams-App | Dazu zählen: <br> – Lokales Debuggen Ihrer Teams-App <br> - Debuggen des Hintergrundprozesses|
+| Hosten Ihrer Teams-App | Dazu zählen: <br> – Bereitstellen von Ressourcen in der Cloud <br> – Bereitstellen in der Cloud|
+| Testen Ihrer Teams-App | Dazu zählen: <br> - Integrieren und Reduzieren <br> – Zip-Teams-Metadatenpaket <br> – Querladen und Testen der App in der Teams-Umgebung <br> – Testen des App-Verhaltens in unterschiedlichen Umgebungen|
+| Veröffentlichen Ihrer Teams-App | Dazu zählen: <br> – Veröffentlichen Ihrer App <br> – Administratorgenehmigung verwalten <br> - Zum Speichern veröffentlichen <br> – Integration in das Entwicklerportal |
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="installieren":::
+### <a name="entities-integrated-with-teams-toolkit"></a>In teams-Toolkit integrierte Entitäten
 
-1. Geben Sie das **Teams-Toolkit** in das Suchfeld ein.
+Teams Toolkit ist eine Erweiterung in Visual Studio Code. Es ist in die folgenden Entitäten in Teams Toolkit integriert, z. B. Azure AD und Microsoft 365, Developer Portal und Microsoft Graph. Alle Entitäten sind in das Teams-Toolkit integriert und helfen Benutzern beim Erstellen einer App.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Toolkit":::
+| Entitäten | Beschreibung |
+| ---- | ---- |
+| Azure AD  | Azure Active Directory (Azure AD) ist ein cloudbasierter Identitäts- und Zugriffsverwaltungsdienst. Dieser Dienst hilft Ihren Mitarbeitern, auf externe Ressourcen wie Microsoft 365, die Azure-Portal und Tausende anderer SaaS-Anwendungen zuzugreifen. |
+| Microsoft 365  | Teams-Entwicklerkonto beim Entwickeln einer App.|
+| Entwicklerportal | Das Entwicklerportal für Teams ist das primäre Tool zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps. Mit dem Entwicklerportal können Sie mit Kollegen an Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr. |
+| Microsoft Graph | Microsoft Graph ist das Gateway zu Daten und Informationen in Microsoft 365. Es bietet ein vereinheitlichtes Programmierbarkeitsmodell, mit dem Sie auf die enormen Datenmengen in Microsoft 365, Windows und Enterprise Mobility + Security zugreifen können. |
 
-1. Wählen Sie **Installieren** aus.
-  
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="Installieren von Toolkit 4.0.0":::
+Teams Toolkit bringt alle Tools, die zum Erstellen einer Teams-App benötigt werden, an einem Ort zusammen.
 
-> [!TIP]
-> Sie können das Teams-Toolkit vom [Visual Studio Code Marketplace installieren](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+## <a name="manage-your-apps-using-developer-portal"></a>Verwalten Ihrer Apps mithilfe des Entwicklerportals
 
-## <a name="take-a-tour-of-teams-toolkit"></a>Machen Sie eine Tour durch das Teams-Toolkit
+Da das Teams-Toolkit in das Entwicklerportal integriert ist, können Sie Ihre App nach dem Erstellen einer App mithilfe des [Entwicklerportals für Teams](../concepts/build-and-test/teams-developer-portal.md) unter BEREITSTELLUNG konfigurieren, verteilen und verwalten. Weitere Informationen finden Sie unter [Verwalten Ihrer Teams-Apps mithilfe des Entwicklerportals](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
-Nach der Toolkit-Installation sehen Sie die Teams Toolkit-Benutzeroberfläche wie in der folgenden Abbildung gezeigt:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="minifunktionen":::
-
-Sie können " **Erste Schritte** " auswählen, um das Teams-Toolkit zu erkunden, oder **eine neue Teams-App** erstellen, um ein Teams-Projekt zu erstellen. Wenn Sie ein vom Teams-Toolkit erstelltes Teams-Projekt in Visual Studio Code geöffnet haben, wird die Benutzeroberfläche des Teams-Toolkits mit allen Funktionen angezeigt, wie in der folgenden Abbildung gezeigt:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Screenshot des Teams-Toolkits":::
-
-Lassen Sie uns eine Tour durch die in diesem Dokument behandelten Themen unternehmen.
-
-## <a name="accounts"></a>Konten
-
-Um eine Teams-App zu entwickeln, benötigen Sie mindestens ein Microsoft 365-Konto mit einem gültigen Abonnement. Wenn Sie Ihre Back-End-Ressourcen auf Azure hosten möchten, ist außerdem ein Azure-Konto erforderlich. Das Teams-Toolkit unterstützt die integrierte Erfahrung bei der Anmeldung, Bereitstellung und Bereitstellung für Azure-Ressourcen. Sie können ein [kostenloses Azure-Konto erstellen, bevor](https://azure.microsoft.com/free/) Sie beginnen.
-
-## <a name="environment"></a>Umgebung
-
-Das Teams-Toolkit unterstützt Sie beim Erstellen und Verwalten mehrerer Umgebungen sowie beim Bereitstellen und Bereitstellen von Artefakten in der Zielumgebung für die Teams-App.
-
-### <a name="teamsfx-collaboration"></a>TeamsFx-Zusammenarbeit
-
-Es ermöglicht Entwicklern und Projektinhabern, andere Mitarbeiter zum TeamsFx-Projekt einzuladen, um dasselbe TeamsFx-Projekt zu debuggen, bereitzustellen und bereitzustellen.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Teamsfx-Projekt":::
-
-## <a name="development"></a>Development
-
-Das Teams-Toolkit unterstützt Sie beim Erstellen und Anpassen Ihres Teams-App-Projekts, das die Entwicklung der Teams-App vereinfacht.
-
-### <a name="create-a-new-teams-app"></a>Erstellen einer neuen Teams-App
-
-Es hilft Ihnen, mit der Entwicklung von Teams-Apps zu beginnen, indem Sie ein neues Teams-Projekt mithilfe des Teams-Toolkits erstellen, indem **Sie entweder ein neues Projekt erstellen** oder **anhand eines Beispiels starten**.
-
-### <a name="add-features"></a>Features hinzufügen
-
-Es hilft Ihnen, zusätzliche Teams-Funktionen wie **Tab** oder **Bot** inkrementell hinzuzufügen oder optional Azure-Ressourcen wie **Azure SQL-Datenbank** oder **Azure Key Vault** hinzuzufügen, was Ihren Entwicklungsanforderungen an Ihre aktuelle Teams-App entspricht. Sie können auch **Workflows für einmaliges Anmelden** oder **CI/CD** für Ihre Teams-App hinzufügen.
-
-### <a name="edit-manifest-file"></a>Manifestdatei bearbeiten
-
-Es hilft Ihnen, die Teams-App-Integration mit dem Teams-Client zu bearbeiten.
-
-## <a name="deployment"></a>Bereitstellung)
-
-Stellen Sie während oder nach der Entwicklung sicher, dass die Teams-App bereitgestellt, bereitgestellt und veröffentlicht wird, bevor sie für Benutzer zugänglich ist.
-
-### <a name="provision-in-the-cloud"></a>Bereitstellung in der Cloud
-
-Es lässt sich in Azure Resource Manager integrieren, mit dem Sie Azure-Ressourcen bereitstellen können, die Ihre Anwendung für den Codeansatz benötigt.
-
-### <a name="deploy-to-the-cloud"></a>Bereitstellen in die Cloud
-
- Es hilft Ihnen, den Quellcode in Azure bereitzustellen.
-
-### <a name="publish-to-teams"></a>In Teams veröffentlichen
-
-Nachdem Sie die App erstellt haben, können Sie Ihre App an verschiedene Bereiche verteilen, z. B. Einzelpersonen, Teams, Organisationen oder alle. In Teams veröffentlichen hilft Ihnen, Ihre entwickelte App zu veröffentlichen.
-
-#### <a name="teamsfx-cli"></a>TeamsFx CLI
-
-Es ist eine textbasierte Befehlszeilenschnittstelle, die die Entwicklung von Teams-Anwendungen beschleunigt und auch CI/CD-Szenarien ermöglicht, in denen Sie CLI in Skripts zur Automatisierung integrieren können.
-
-#### <a name="teamsfx-sdk"></a>TeamsFx SDK
-
-Es hilft Ihnen, die Aufgaben der Implementierung der Identität und des Zugriffs auf Cloud-Ressourcen auf einzeilige Anweisungen ohne Konfiguration zu reduzieren.
-
-## <a name="help-and-feedback"></a>Hilfe und Feedback
-
-In diesem Abschnitt finden Sie die Dokumentation und Ressourcen, die Sie benötigen. Sie können im Teams-Toolkit **Probleme auf GitHub** melden auswählen, um schnellen **Support vom** Produktexperten zu erhalten. Durchsuchen Sie das Problem, bevor Sie ein neues erstellen, oder [besuchen Sie das StackOverflow-Tag, um `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) Feedback zu senden.
-<!--  
-Let's explore Teams Toolkit features.
-
-| Teams Toolkit Features | Includes | What you can do |
-| --- | --- | --- |
-| **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
-| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
-| **Environment** | &nbsp; | &nbsp; |
-| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
-| &nbsp; | dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
-| **Development** | &nbsp; | &nbsp; |
-| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
-| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
-| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
-| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
-| **Deployment** | &nbsp; | &nbsp; |
-| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
-| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
-| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
-| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
-| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
-| **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
-| &nbsp; | Tutorial | Select to access different tutorials. |
-| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
-| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
-
--->
-> [!TIP]
-> Durchsuchen Sie vorhandene Probleme, bevor Sie ein neues erstellen, oder besuchen Sie das [StackOverflow-Tag, `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) um Feedback zu senden.
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="Entwicklerportal":::
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erstellen Sie ein neues Projekt mit dem Teams Toolkit](create-new-project.md)
-* [Vorbereiten von Konten zum Erstellen von Teams-Apps](accounts.md)
-* [Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits](publish.md)
-* [Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen](provision.md)
-* [Bereitstellen in die Cloud](deploy.md)
+* [Erstellen eines neuen Teams-Projekts](create-new-project.md)
+* [Installieren des Teams-Toolkits](install-Teams-Toolkit.md)
+* [Erkunden des Teams-Toolkits](explore-Teams-Toolkit.md)
+* [Vorbereiten des Erstellens von Apps mit dem Microsoft Teams-Toolkit](build-environments.md)

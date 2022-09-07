@@ -1,31 +1,33 @@
 ---
 title: Debuggen von Hintergrundprozessen
-author: zyxiaoyuer
-description: In diesem Modul lernen Sie die Funktionen von Visual Studio Code und Teams Toolkit während des lokalen Debuggens kennen und registrieren und konfigurieren Ihre Teams-App
-ms.author: surbhigupta
+author: surbhigupta
+description: In diesem Modul erfahren Sie, wie Visual Studio-Code und Teams-Toolkit während des lokalen Debugprozesses funktionieren und wie Sie Ihre Teams-App registrieren und konfigurieren.
+ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 9891e2b93133484d4bb8394100f4e628841517f7
-ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67407567"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616788"
 ---
 # <a name="debug-background-process"></a>Debuggen von Hintergrundprozessen
 
-Der lokale Debugworkflow umfasst die Dateien `.vscode/launch.json` und `.vscode/tasks.json`, um den Debugger in Visual Studio Code (VS Code) zu konfigurieren. Der VS Code startet die Debugger, und Microsoft Edge oder Google Chrome startet eine neue Browserinstanz wie folgt:
+Der lokale Debugprozess umfasst die `.vscode/launch.json` Dateien `.vscode/tasks.json` zum Konfigurieren des Debuggers in Microsoft Visual Studio Code. Visual Studio Code startet die Debugger, und Microsoft Edge oder Google Chrome startet eine neue Browserinstanz.
 
-1. Die Datei `launch.json` konfiguriert den Debugger in Visual Studio Code.
+Der Debugprozessworkflow sieht wie folgt aus:
 
-2. Visual Studio Code führt den Verbund **preLaunchTask**, **Überprüfung vor dem Debuggen und alle Starten** in der Datei `.vscode/tasks.json` aus.
+1. `launch.json` -Datei konfiguriert den Debugger in Visual Studio Code.
+
+2. Visual Studio Code führt die zusammengesetzte **preLaunchTask,Pre** **Debug Check & Start All** in `.vscode/tasks.json` file.
 
 3. Visual Studio Code startet dann die in den Verbundkonfigurationen angegebenen Debugger, z. B. **An Bot anfügen**, **An Back-End anfügen**, **An Front-End anfügen** und **Bot starten**.
 
 4. Microsoft Edge oder Google Chrome startet eine neue Browserinstanz und öffnet eine Webseite zum Laden des Teams-Clients.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="teams-toolkit-verification-of-prerequisites"></a>Überprüfung der Voraussetzungen für das Teams-Toolkit
 
 Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Voraussetzungen:
 
@@ -38,14 +40,14 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   |Bot |  14, 16 (empfohlen)|
   |Nachrichtenerweiterung | 14, 16 (empfohlen) |
 
-* Microsoft 365-Konto mit gültigen Anmeldeinformationen, das Teams-Toolkit fordert Sie auf, sich bei dem Microsoft 365-Konto anzumelden, wenn Sie sich nicht bereits angemeldet haben.
-* Das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklermandanten ist aktiviert, wenn dies nicht der Fall ist, wird das lokale Debuggen beendet.
-* Die Ngrok-Binärversion 2.3, ist für Bot- und Messaging-Erweiterungen anwendbar. Wenn Ngrok nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Das Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin` verwaltet die Ngrok-Binärdatei.
-* Azure Functions Core Tools Version 3: Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Microsoft Teams-Toolkit das Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3, für **Windows** und für **MacOs** in `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
-* Die .NET Core SDK-Version, die für Azure Functions gilt. Wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Microsoft Teams-Toolkit .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Bei Linux wird das lokale Debuggen beendet.
-* Die Ngrok-Binärversion 2.3, ist für Bot- und Messaging-Erweiterungen anwendbar. Wenn Ngrok nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit das Ngrok-NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
-* Azure Functions Core Tools Version 4: Wenn Azure Functions Core Tools nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Microsoft Teams-Toolkit das Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und für **MacOs** in  `~/.fx/bin/func`. Das Azure Functions Core Tools-NPM-Paket in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
-* .NET Core SDK-Version, die für Azure Functions gilt. Wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht, installiert das Teams-Toolkit .NET Core SDK für Windows und MacOS in `~/.fx/bin/dotnet`. Bei Linux wird das lokale Debuggen beendet.
+* Das Teams-Toolkit fordert Sie auf, sich beim Microsoft 365-Konto anzumelden, wenn Sie sich nicht mit Ihren gültigen Anmeldeinformationen angemeldet haben.
+* Das Hochladen oder Querladen von benutzerdefinierten Apps für Ihren Entwicklermandanten ist aktiviert, um das Beenden des lokalen Debugs zu verhindern.
+* Das Teams-Toolkit installiert das Ngrok NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`, wenn Ngrok nicht installiert ist oder die Version nicht den Anforderungen entspricht. Das Ngrok NPM-Paket verwaltet `/.fx/bin/ngrok/node modules/ngrok/bin` die Ngrok-Binärversion 2.3, die für Bot- und Nachrichtenerweiterungen gilt.
+* Teams Toolkit installiert Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und **macOs** in`~/.fx/bin/func`, wenn Azure Functions Core Tools Version 3 nicht installiert ist oder die Version nicht der Anforderung entspricht. Das Azure Functions Core Tools-NPM-Paket in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
+* Das Teams-Toolkit installiert .NET Core SDK für **Windows** und **MacOS** in `~/.fx/bin/dotnet`, wenn die .NET Core SDK-Version, die für Azure Functions gilt, nicht installiert ist oder die Version nicht der Anforderung entspricht. Bei Linux wird das lokale Debuggen beendet.
+* Das Teams-Toolkit installiert das Ngrok NPM-Paket `ngrok@4.2.2` in `~/.fx/bin/ngrok`, wenn Ngrok nicht installiert ist oder die Version nicht den Anforderungen entspricht. Die binäre Ngrok-Version 2.3 gilt für Bot- und Nachrichtenerweiterungen. Die Ngrok-Binärdatei wird vom Ngrok-NPM-Paket in `/.fx/bin/ngrok/node modules/ngrok/bin`verwaltet.
+* Teams Toolkit installiert Azure Functions Core Tools NPM-Paket, azure-functions-core-tools@3 für **Windows** und **MacOs** in`~/.fx/bin/func`, wenn Azure Functions Core Tools Version 4 nicht installiert ist oder die Version nicht der Anforderung entspricht. Das Azure Functions Core Tools-NPM-Paket in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` verwaltet die Azure Functions Core Tools-Binärdatei. Bei Linux wird das lokale Debuggen beendet.
+* Das Teams-Toolkit installiert .NET Core SDK für **Windows** und **MacOS** in `~/.fx/bin/dotnet`der .NET Core SDK-Version, die für Azure Functions gilt, wenn .NET Core SDK nicht installiert ist oder die Version nicht der Anforderung entspricht. Bei Linux wird das lokale Debuggen beendet.
 
   In der folgenden Tabelle sind die .NET Core-Versionen aufgeführt:
 
@@ -54,10 +56,10 @@ Das Teams-Toolkit überprüft während des Debugprozesses die folgenden Vorausse
   |Windows, macOS (x64) und Linux | **3.1 (empfohlen)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Entwicklungszertifikat. Wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte in Windows oder MacOS installiert ist, werden Sie vom Teams-Toolkit aufgefordert, es zu installieren.
-* Azure Functions-Bindungserweiterungen, die in `api/extensions.csproj` definiert sind. Wenn Azure Functions-Bindungserweiterungen nicht installiert sind, installiert das Teams-Toolkit Azure Functions-Bindungserweiterungen.
-* NPM-Pakete, die für die Registerkarten-App, Bot-App, Nachrichtenerweiterungs-App und Azure Functions gelten. Wenn NPM nicht installiert ist, installiert das Teams-Toolkit alle NPM-Pakete.
-* Bot- und Nachrichtenerweiterung, das Teams Toolkit startet Ngrok, um einen HTTP-Tunnel für Bot- und Nachrichtenerweiterung zu erstellen.
+* Wenn das Entwicklungszertifikat für localhost nicht für die Registerkarte unter **Windows** oder **MacOS** installiert ist, werden Sie vom Teams Toolkit aufgefordert, es zu installieren.
+* Azure Functions bindungserweiterungen definiert in `api/extensions.csproj`, wenn Azure Functions Bindungserweiterungen nicht installiert ist, installiert Teams Toolkit Azure Functions Bindungserweiterungen.
+* NPM-Pakete, die für die Registerkarten-App, Bot-App, Nachrichtenerweiterungs-App und Azure Functions gelten. Wenn NPM-Pakete nicht installiert sind, installiert das Teams-Toolkit alle NPM-Pakete.
+* Bot- und Nachrichtenerweiterung, Teams Toolkit startet Ngrok, um einen HTTP-Tunnel für Bot- und Nachrichtenerweiterung zu erstellen.
 * Verfügbare Ports, wenn Registerkarten-, Bot-, Nachrichtenerweiterungs- und Azure Functions-Ports nicht verfügbar sind, wird das lokale Debuggen beendet.
 
   In der folgenden Tabelle sind die Ports aufgeführt, die für Komponenten verfügbar sind:
@@ -101,21 +103,21 @@ Use the following .NET Core versions:
 
 Wenn Sie **Start Debugging (F5)** auswählen, zeigt der Ausgabekanal des Teams-Toolkits den Fortschritt und das Ergebnis an, nachdem die Voraussetzungen überprüft wurden.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Voraussetzungen":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Zusammenfassung der Überprüfung der Voraussetzungen" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
 
 ## <a name="register-and-configure-teams-app"></a>Registrieren und Konfigurieren der Teams-App
 
 Im Einrichtungsprozess bereitet das Teams-Toolkit die folgenden Registrierungen und Konfigurationen für Ihre Teams-App vor:
 
-1. [Registriert und konfiguriert Azure AD-Anwendung](#registers-and-configures-azure-ad-application): Teams-Toolkit registriert und konfiguriert Ihre Azure AD-Anwendung.
+1. [Registriert und konfiguriert Microsoft Azure Active Directory(Azure AD)-App](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
-1. [Registriert und konfiguriert Bot](#registers-and-configures-bot): Teams-Toolkit registriert und konfiguriert Ihren Bot für die Registerkarten- oder Nachrichtenerweiterungs-App.
+1. [Registriert und konfiguriert den Bot](#registers-and-configures-bot).
 
-1. [Registriert und konfiguriert Teams-App](#registers-and-configures-teams-app): Teams-Toolkit registriert und konfiguriert Ihre Teams-App.
+1. [Registriert und konfiguriert die Teams-App](#registers-and-configures-teams-app).
 
-### <a name="registers-and-configures-azure-ad-application"></a>Registriert und konfiguriert Azure AD-Anwendung
+### <a name="registers-and-configures-microsoft-azure-active-directoryazure-ad-app"></a>Registriert und konfiguriert Microsoft Azure Active Directory(Azure AD)-App
 
-1. Registriert eine Azure AD-Anwendung.
+1. Registriert eine Azure AD-App.
 
 1. Erstellt einen geheimen Clientschlüssel.
 
@@ -163,13 +165,13 @@ Für Registerkarten-App oder Nachrichtenerweiterungs-App:
 
 ### <a name="registers-and-configures-teams-app"></a>Registriert und konfiguriert Teams-App
 
-Registriert eine Teams-App in [Entwickler](https://dev.teams.microsoft.com/home) mithilfe der Manifestvorlage in `templates/appPackage/manifest.template.json`.
+Registriert eine Teams-App im [Entwicklerportal](https://dev.teams.microsoft.com/home) mithilfe der Manifestvorlage in `templates/appPackage/manifest.template.json`.
 
 Nach der Registrierung und Konfiguration der App werden lokale Debugdateien generiert.
 
 ## <a name="take-a-tour-of-your-app-source-code"></a>Machen Sie einen Rundgang durch den Quellcode Ihrer App
 
-Sie können die Projektordner und -dateien unter **Explorer** in VS Code anzeigen, nachdem das Teams-Toolkit Ihre App registriert und konfiguriert hat. In der folgenden Tabelle sind die lokalen Debugdateien und die Konfigurationstypen aufgeführt:
+Sie können die Projektordner und Dateien unter **Explorer** in Visual Studio Code anzeigen, nachdem das Teams-Toolkit Ihre App registriert und konfiguriert hat. In der folgenden Tabelle sind die lokalen Debugdateien und die Konfigurationstypen aufgeführt:
 
 | Ordnername| Inhalt| Debugkonfigurationstyp |
 | --- | --- | --- |

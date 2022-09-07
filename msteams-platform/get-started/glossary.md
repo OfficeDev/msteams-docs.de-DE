@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382944"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616800"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -70,7 +70,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | Bereitstellen | Ein Prozess zum Upload des Back-End- und Front-End-Codes für die Anwendung. Bei der Bereitstellung wird der Code für Ihre App in die Ressourcen kopiert, die Sie während der Bereitstellung erstellt haben. <br>**Weitere Informationen**: [Bereitstellung](#p) |
 | [Gerätefunktionen](../concepts/device-capabilities/device-capabilities-overview.md) | Integrierte Geräte, z. B. Kamera, Mikrofon, Strichcodescanner, Fotogalerie auf Mobilgeräten oder Desktops. Sie können auf die folgenden Gerätefunktionen auf Mobilgeräten oder Desktops über dedizierte APIs zugreifen, die in Microsoft Teams JavaScript-Client-SDK verfügbar sind. <br>**Weitere Informationen unter**: [Funktion](#c); [Medienfunktion](#m); [Standortfunktion](#l) |
 | [Geräteberechtigung](../concepts/device-capabilities/browser-device-permissions.md) | Eine Teams App-Einstellung, die Sie in Ihrer App konfigurieren können. Sie verwenden diese, um die Berechtigung für Ihre App anzufordern, auf eine systemeigene Gerätefunktion zuzugreifen und diese zu nutzen. Sie können Geräteberechtigungen in Team- Einstellungen verwalten. <br>**Weitere Informationen unter**: [App-Berechtigungen](#a) |
-| [Entwicklungsumgebung](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Ein Entwicklungsumgebungstyp, den das Teams Toolkit standardmäßig erstellt. Es stellt Konfigurationen der Remote- oder Cloudumgebung dar. Ein Projekt kann mehrere Remoteumgebungen aufweisen. Mit Teams Toolkit können Sie Ihrem Projekt weitere Entwicklungsumgebungen hinzufügen. <br>**Weitere Informationen unter** [Umgebung](#e); [Lokale Umgebung](#l) |
+| [Entwicklungsumgebung](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Ein Entwicklungsumgebungstyp, den das Teams Toolkit standardmäßig erstellt. Es stellt Konfigurationen der Remote- oder Cloudumgebung dar. Ein Projekt kann mehrere Remoteumgebungen aufweisen. Mit Teams Toolkit können Sie Ihrem Projekt weitere Entwicklungsumgebungen hinzufügen. <br>**Weitere Informationen unter** [Umgebung](#e); [Lokale Umgebung](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | Die DevTools des Browsers werden verwendet, um Konsolenprotokolle anzuzeigen, Laufzeitnetzwerkanforderungen anzuzeigen oder zu ändern, Code (JavaScript) Haltepunkte hinzuzufügen und interaktives Debuggen für eine Teams App durchzuführen. Das Feature ist nur für Desktop- und Android-Clients verfügbar, nachdem die Entwicklervorschau aktiviert wurde. |
 | [Dynamische Suche](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | Ein Suchfeature für adaptive Karten, das hilfreich ist, um Daten aus großen Datasets zu suchen und auszuwählen. Es hilft beim Herausfiltern der Auswahl, wenn der Benutzer die Suchzeichenfolge eingibt. <br>**Weitere Informationen unter**: [Statische Suche](#s) |
 
@@ -111,7 +111,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | Begriff | Definition |
 | --- | --- |
 | [Verbreiten von Links](../messaging-extensions/how-to/link-unfurling.md) | Eine Funktion, die bei der Nachrichtenerweiterung und Besprechungen verwendet wird, um Links zu öffnen, die in einen Bereich zum Verfassen von Nachrichten eingefügt werden. Die Links werden erweitert, um zusätzliche Informationen zu dem Link in adaptiven Karten oder in der Besprechungsphasenansicht anzuzeigen. |
-| [Lokale Umgebung](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Eine standardmäßige Entwicklungsumgebung, die von Teams Toolkit erstellt wurde.  <br>**Weitere Informationen unter**: [Umgebung](#e); [Entwicklungsumgebung](#d) |
+| [Lokale Umgebung](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Eine standardmäßige Entwicklungsumgebung, die von Teams Toolkit erstellt wurde.  <br>**Weitere Informationen unter**: [Umgebung](#e); [Entwicklungsumgebung](#d) |
 | [Lokale Workbench](../sbs-gs-spfx.yml) | Die Standardoption zum Ausführen und Debuggen einer Teams-App in Visual Studio Code, die mit SPFx erstellt wird. <br>**Weitere Informationen unter**: [Workbench](#w); [Teams Workbench](#t) |
 | [Standortfunktion](../concepts/device-capabilities/location-capability.md) | Eine Gerätefunktion, die Sie in Ihre App integrieren können, um den geografischen Standort des App-Benutzers für eine verbesserte Zusammenarbeit zu kennen. Dieses Feature ist derzeit nur für mobile Microsoft Teams-Clients verfügbar.<br>**Weitere Informationen unter**: [Funktion](#c); [Medienfunktion](#m); [Gerätefunktion](#d); [Teams Mobile](#t) |
 | [Apps mit geringem Code](../samples/teams-low-code-solutions.md) | Eine benutzerdefinierte Teams-App, die mithilfe der Microsoft Power Platform von Grund auf neu erstellt wurde und wenig oder gar keine Codierung erfordert und schnell entwickelt und bereitgestellt werden kann. |
