@@ -18,7 +18,11 @@ Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/image
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot der Bereitstellungsbefehle":::
 
-1. Wählen Sie ein Abonnement aus, das für die Azure-Ressourcen verwendet werden soll.
+1. Wählen Sie eine beliebige Person des vorhandenen Abonnements aus.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Abonnement auswählen":::
+
+1. Wählen Sie eine Ressourcengruppe aus, die für die Azure-Ressourcen verwendet werden soll.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot mit Ressourcen für die Bereitstellung":::
 
@@ -29,7 +33,7 @@ Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/image
 
 1. Wählen Sie **"Bereitstellen" aus**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot des Bereitstellungsdialogfelds.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Abonnement auswählen":::
 
    Der Bereitstellungsprozess erstellt Ressourcen in der Azure-Cloud. Es kann einige Zeit dauern. Sie können den Fortschritt überwachen, indem Sie die Dialogfelder in der unteren rechten Ecke ansehen. Nach ein paar Minuten wird der folgende Hinweis angezeigt:
 
@@ -89,4 +93,3 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
     Herzlichen Glückwunsch, Ihre erste Registerkarten-App wird in Ihrer Azure-Umgebung ausgeführt!
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot zeigt die Meldung, dass Sie die App jetzt oder später testen können":::
- 
