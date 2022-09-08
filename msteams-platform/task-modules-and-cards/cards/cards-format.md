@@ -4,12 +4,12 @@ description: In diesem Modul erfahren Sie, was Kartentextformatierung in Microso
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 24ea264a1af4bbed94251f4d74602a17aa01e3e3
+ms.sourcegitcommit: a34a6c87ce756ef4f7a55e7f18fc72a446fbe913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586959"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "67627037"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Formatieren von Karten in Microsoft Teams
 
@@ -121,6 +121,9 @@ Adaptive Karten unterstützen Emoji. Der folgende Code zeigt ein Beispiel für A
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
+
+> [!NOTE]
+> Wenn Sie REST-APIs verwenden, legen Sie diese in den Anforderungsheadern fest `charset=UTF-8` , um Emojis in adaptiven Karten hinzuzufügen.
 
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive Karte mit einem Emoji":::
 
