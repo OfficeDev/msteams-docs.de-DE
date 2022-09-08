@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehend
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337138"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618280"
 ---
 # <a name="create-incoming-webhooks"></a>Erstellen eingehender Webhooks
 
@@ -52,16 +52,16 @@ Führen Sie die folgenden Schritte aus, um einem Teams-Kanal einen eingehenden W
 1. Öffnen Sie den Kanal, dem Sie den Webhook hinzufügen möchten, und wählen Sie &#8226;&#8226;&#8226; **Weitere Optionen** in der oberen Navigationsleiste aus.
 1. Wählen Sie **Connectors** aus dem Dropdownmenü aus:
 
-    ![Connector auswählen](~/assets/images/connectors.png)
+   :::image type="content" source="../../assets/images/connectors.png" alt-text="Dieser Screenshot zeigt, wie Sie den Connector auswählen.":::
 
 1. Suchen Sie nach **Eingehender Webhook** und wählen Sie **Hinzufügen** aus.
 1. Wählen Sie **Konfigurieren** aus, geben Sie einen Namen an, und laden Sie bei Bedarf ein Bild für Ihren Webhook hoch:
 
-    ![Schaltfläche „Konfigurieren“](~/assets/images/configure.png)
+   :::image type="content" source="../../assets/images/configure.png" alt-text="Dieser Screenshot zeigt, wie Sie ein Bild für Ihre Webhooks konfigurieren und hochladen.":::
 
 1. Kopieren und speichern Sie die eindeutige Webhook-URL, die im Dialogfeld vorhanden ist. Die URL ist dem Kanal zugeordnet, und Sie können sie verwenden, um Informationen an Teams zu senden. Wählen Sie **Fertig** aus.
 
-    ![Eindeutige URL](~/assets/images/url.png)
+   :::image type="content" source="../../assets/images/url.png" alt-text="Dieser Screenshot zeigt die eindeutige Webhook-URL.":::
 
 Der Webhook ist im Teams-Kanal verfügbar.
 
@@ -79,19 +79,19 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 1. Wählen Sie **Konfiguriert** unter **Verwalten** aus.
 1. Wählen Sie die Option **<*1*> Konfiguriert** aus, um eine Liste Ihrer aktuellen Connectors anzuzeigen:
 
-    ![Konfigurierter Webhook](~/assets/images/configured.png)
+   :::image type="content" source="../../assets/images/configured.png" alt-text="Dieser Screenshot zeigt, wie Sie so konfiguriert sind, dass eine Liste Ihrer aktuellen Connectors angezeigt wird.":::
 
 1. Wählen Sie **Verwalten** für den Verbinder aus, den Sie entfernen möchten:
 
-    ![Webhook verwalten](~/assets/images/manage.png)
+   :::image type="content" source="../../assets/images/manage.png" alt-text="Dieser Screenshot zeigt, wie Sie den Connector verwalten, den Sie entfernen möchten.":::
 
 1. Wählen Sie **Entfernen** aus, um das Dialogfeld **Konfiguration entfernen** anzuzeigen.
 
-    ![Konfiguration entfernen](~/assets/images/removeconfiguration.png)
+   :::image type="content" source="../../assets/images/removeconfiguration.png" alt-text="Dieser Screenshot zeigt, wie Sie das Dialogfeld &quot;Konfiguration entfernen&quot; anzeigen.":::
 
 1. Füllen Sie die Felder des Dialogfelds und die Kontrollkästchen aus, und wählen Sie **Entfernen** aus.
 
-    ![Endgültiges Entfernen](~/assets/images/finalremove.png)
+   :::image type="content" source="../../assets/images/finalremove.png" alt-text="Dieser Screenshot zeigt, wie Sie einen eingehenden Webhooks aus dem Teams-Kanal entfernen.":::
 
 ## <a name="code-sample"></a>Codebeispiel
 

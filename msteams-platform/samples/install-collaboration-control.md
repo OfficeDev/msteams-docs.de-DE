@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Steuerelemente für die Zusam
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: aa4259855ba0c95906d7196ffd83c093bea89ea9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
+ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178981"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67617978"
 ---
 # <a name="install-collaboration-controls"></a>Installieren von Steuerelementen für die Zusammenarbeit
 
@@ -31,9 +31,10 @@ Weitere Informationen zu Rollenberechtigungen finden Sie unter [Konfigurieren de
 
 ## <a name="install-the-collaboration-controls-solutions"></a>Installieren der Lösungen für Steuerelemente für die Zusammenarbeit
 
-Sie installieren die Steuerelemente für die Zusammenarbeit über einen privaten Link in Ihrer Dataverse-Umgebung. Dieser Link darf nicht für eine andere Person innerhalb oder außerhalb Ihrer Organisation freigegeben werden.
+Sie installieren die Steuerelemente für die Zusammenarbeit über [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) in Ihrer Dataverse-Umgebung.
 
-Sie können die Komponenten in Ihrer eigenen modellgesteuerten App erst konfigurieren und verwenden, nachdem Sie den Link erhalten und die Steuerelemente für die Zusammenarbeit in Ihrer dataverse-Umgebung installiert haben.
+
+Sie können die Komponenten in Ihrer eigenen modellgesteuerten App erst konfigurieren und verwenden, nachdem Sie zu [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  gesurft und die Steuerelemente für die Zusammenarbeit in Ihrer dataverse-Umgebung installiert haben.
 
 Zu den Steuerelementen für die Zusammenarbeit gehören die folgenden Lösungen:
 
@@ -57,7 +58,7 @@ Zu den Steuerelementen für die Zusammenarbeit gehören die folgenden Lösungen:
 
 Vor der Installation müssen Sie sich in einer Power Platform-Umgebung oder einem Administratormandanten befinden. Sie benötigen eine Dataverse-Umgebung mit einer Datenbank. Wenn Sie keines haben, müssen Sie [ein neues erstellen](/power-platform/admin/create-environment) , um die Installation fortzusetzen.
 
-Um die Lösungen zu installieren, navigieren Sie zunächst zu [Microsoft AppSource], und führen Sie dann die folgenden Schritte aus:
+Um die Lösungen zu installieren, navigieren Sie zu [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) , und führen Sie die folgenden Schritte aus:
 
 1. Wählen Sie die Schaltfläche " **Jetzt abrufen** " aus.
 

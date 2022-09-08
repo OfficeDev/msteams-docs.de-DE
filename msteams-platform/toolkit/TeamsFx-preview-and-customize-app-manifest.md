@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616686"
+ms.locfileid: "67617789"
 ---
 # <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
 
@@ -20,7 +20,7 @@ Das Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt i
 * [Vorschau der Manifestdatei in der lokalen Umgebung](#preview-manifest-file-in-local-environment)
 * [Vorschau der Manifestdatei in der Remoteumgebung](#preview-manifest-file-in-remote-environment)
 * [Lokale Änderungen mit Dev Portal synchronisieren](#sync-local-changes-to-dev-portal)
-* [Anpassen des Teams-App-Manifests](#customize-teams-app-manifest)
+* [Anpassen ihres Teams-App-Manifests](#customize-your-teams-app-manifest)
 * [Überprüfen des Manifests](#validate-manifest)
 
 Die Manifestvorlagendatei `manifest.template.json` ist nach dem Gerüstbau unter `templates/appPackage` Ordner verfügbar. Die Vorlagendatei mit Platzhaltern und die tatsächlichen Werte werden vom Teams-Toolkit mithilfe von Dateien unter `.fx/configs` und `.fx/states` für verschiedene Umgebungen aufgelöst.
@@ -188,7 +188,7 @@ Wenn die Manifestdatei aufgrund von Konfigurationsdateiänderungen oder Vorlagen
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
+## <a name="customize-your-teams-app-manifest"></a>Anpassen ihres Teams-App-Manifests
 
 Teams Toolkit besteht aus den folgenden Manifest-Vorlagendateien im `manifest.template.json` Ordner in lokalen und Remote-Umgebungen:
 
