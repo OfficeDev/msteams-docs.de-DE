@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338851"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636175"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
@@ -194,9 +194,6 @@ Sie können Benutzern die Freigabe und Interaktion mit einigen oder allen App-In
 * Spielen eines Spiels.
 
 Für die Besprechung freigegebene Apps belegen denselben Platz wie ein freigegebener Bildschirm. Die Phase wird auch für alle Besprechungsteilnehmer auf die gleiche Weise neu festgelegt.
-
-> [!NOTE]
-> Derzeit können mobile Benutzer Keine App-Inhalte für die Besprechungsphase freigeben. Sie können jedoch Inhalte sehen, die vom Desktop freigegeben wurden.
 
 ### <a name="use-cases"></a>Anwendungsfälle
 

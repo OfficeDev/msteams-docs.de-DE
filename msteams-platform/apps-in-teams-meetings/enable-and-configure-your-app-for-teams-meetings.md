@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418850"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636161"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -227,7 +227,7 @@ Um bestimmte Teile der App für das Freigabefenster freizugeben, müssen Sie die
 > [!NOTE]
 >
 > * Verwenden Sie die Teams-Manifestversion 1.12 oder höher, um bestimmte Teile der App für das Freigabefenster freizugeben.
-> * Derzeit können Sie bestimmte Teile der App nur auf Teams-Desktopclients für die Besprechungsphase freigeben.
+> * Sie können bestimmte Teile der App nur auf Teams-Desktopclients für die Besprechungsphase freigeben. Mobile Benutzer können bestimmte Teile der App freigeben, um sie mithilfe der [Api für die Freigabe zu inszenieren](API-references.md#share-app-content-to-stage-api).
 
 ### <a name="after-a-meeting"></a>Nach einer Besprechung
 
