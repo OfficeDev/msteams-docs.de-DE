@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605782"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635301"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -288,6 +288,7 @@ Wir empfehlen Teams-Entwicklern, Fragen zu stellen, Fehler zu melden, Anfragen z
 ## <a name="get-latest-updates"></a>Neueste Updates abrufen
 
 Sie können die neuesten Updates der Teams-Plattform erhalten, indem Sie den [RSS-Feed](https://aka.ms/TeamsPlatformUpdates) abonnieren.
+
 
 ### <a name="to-configure-rss-feed"></a>So konfigurieren Sie den RSS-Feed
 

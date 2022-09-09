@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreib
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058207"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635329"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Öffentliche Entwicklervorschau des Manifestschemas für Teams
 
@@ -395,10 +395,10 @@ Das Objekt ist ein Array, wobei alle Elemente vom Typ `object` sind. Dieser Bloc
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren der Registerkarte verwendet werden soll.|
 |`canUpdateConfiguration`|Boolesch|||Ein Wert, der angibt, ob eine Instanz der Registerkartenkonfiguration vom Benutzer nach der Erstellung aktualisiert werden kann. Standard: `true`|
-|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
+|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen konfigurierbare Registerkarten nur die Bereiche `team` und `groupchat`. |
 |`context` |Array von Enumerationen|6 ||Die Gruppe von `contextItem`-Bereichen, in denen eine [Registerkarte unterstützt wird](../../tabs/how-to/access-teams-context.md). Standard: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`und `meetingStage`.|
 |`sharePointPreviewImage`|Zeichenfolge|2048||Ein relativer Dateipfad zu einem Registerkarten-Vorschaubild zur Verwendung in SharePoint. Größe: 1024 x 768. |
-|`supportedSharePointHosts`|Array von Enumerationen|1 ||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird `sharePointFullPage` Optionen sind und `sharePointWebPart` |
+|`supportedSharePointHosts`|Array von Enumerationen|1||Definiert, wie Ihre Registerkarte in SharePoint verfügbar gemacht wird `sharePointFullPage` Optionen sind und `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -417,7 +417,7 @@ Das Objekt ist ein Array (maximal 16 Elemente) mit allen Elementen vom Typ `obje
 |`contentUrl`|Zeichenfolge|2048 Zeichen|✔️|Die https://-URL, die auf die Entitäts-Benutzeroberfläche verweist, die im Microsoft Teams-Canvas angezeigt werden soll.|
 |`contentBotId`|   | | | Die für den Bot im Bot Framework-Portal angegebene Microsoft Teams-App-ID. |
 |`websiteUrl`|Zeichenfolge|2048 Zeichen||Die https://-URL, auf die verwiesen werden soll, wenn ein Benutzer sich für die Anzeige in einem Browser entscheidet.|
-|`scopes`|Array von Enumerationen|1 |✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
+|`scopes`|Array von Enumerationen|1|✔️|Derzeit unterstützen statische Registerkarten nur den `personal`-Bereich. Das bedeutet, dass sie nur als Teil der persönlichen Benutzeroberfläche bereitgestellt werden können.|
 
 ## <a name="bots"></a>Bots
 
@@ -433,7 +433,7 @@ Das Objekt ist ein Array (maximal nur 1 Element&mdash;derzeit ist nur ein Bot pr
 |`needsChannelSelector`|Boolesch|||Beschreibt, ob der Bot einen Benutzerhinweis verwendet, um den Bot zu einem bestimmten Kanal hinzuzufügen. Standard: `false`|
 |`isNotificationOnly`|Boolesch|||Gibt an, ob es sich bei einem Bot um einen unidirektionalen Bot mit nur Benachrichtigungsfunktion und nicht um einen dialogorientierten Bot handelt. Standard: `false`|
 |`supportsFiles`|Boolesch|||Gibt an, ob der Bot die Möglichkeit unterstützt, Dateien im persönlichen Chat hoch-/herunterzuladen. Standard: `false`|
-|`scopes`|Array von Enumerationen|3 |✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
+|`scopes`|Array von Enumerationen|3|✔️|Gibt an, ob der Bot eine Umgebung im Kontext eines Kanals in einem `team` oder Gruppenchat (`groupchat`) bietet, oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`). Diese Optionen sind nicht exklusiv.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -441,7 +441,7 @@ Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das O
 
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
-|`items.scopes`|Array von Enumerationen|3 |✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
+|`items.scopes`|Array von Enumerationen|3|✔️|Gibt den Bereich an, für den die Befehlsliste gültig ist. Optionen sind `team`, `personal` und `groupchat`.|
 |`items.commands`|Array von Objekten|10  |✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ## <a name="connectors"></a>connectors
@@ -456,7 +456,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 |---|---|---|---|---|
 |`configurationUrl`|Zeichenfolge|2048 Zeichen|✔️|Die https://-URL, die beim Konfigurieren des Connectors verwendet werden soll.|
 |`connectorId`|String|64 Zeichen|✔️|Ein eindeutiger Bezeichner für den Connector, der seiner ID im [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) entspricht.|
-|`scopes`|Array von Enumerationen|1 |✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
+|`scopes`|Array von Enumerationen|1|✔️|Gibt an, ob der Connector eine Umgebung im Kontext eines Kanals in einem `team` oder aber eine Umgebung einzig für einen bestimmten Benutzer (`personal`) bietet. Derzeit wird nur der `team`-Bereich unterstützt.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -488,7 +488,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`title`|Zeichenfolge|32 Zeichen|✔️|Der benutzerfreundliche Name des Befehls.|
 |`description`|Zeichenfolge|128 Zeichen||Die Beschreibung, die Benutzern angezeigt wird, um den Zweck dieses Befehls anzugeben.|
 |`initialRun`|Boolescher Wert|||Ein boolescher Wert, der angibt, ob der Befehl anfänglich ohne Parameter ausgeführt werden soll. Standard: `false`|
-|`context`|Array von Zeichenfolgen|3 ||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Jede Kombination von `compose`, `commandBox`, `message`. Standard ist `["compose", "commandBox"]`|
+|`context`|Array von Zeichenfolgen|3||Definiert, wo die Nachrichtenerweiterung aufgerufen werden kann. Jede Kombination von `compose`, `commandBox`, `message`. Standard ist `["compose", "commandBox"]`|
 |`fetchTask`|Boolesch|||Ein boolescher Wert, der angibt, ob das Aufgabenmodul dynamisch abgerufen werden soll.|
 |`taskInfo`|Objekt|||Geben Sie das Aufgabenmodul an, das vorab geladen werden soll, wenn Sie einen Nachrichtenerweiterungsbefehl verwenden.|
 |`taskInfo.title`|Zeichenfolge|64||Titel des ersten Dialogfelds.|
@@ -671,12 +671,12 @@ Sie können eine der folgenden Eigenschaften definieren:
 
 **Optional** – Array
 
-Aktiviert Ihre App in nicht standardmäßigen Kanälen. Wenn Ihre App einen Teambereich unterstützt und diese Eigenschaft definiert ist, aktiviert Teams Ihre App in jedem Kanaltyp entsprechend. Derzeit werden die Typen des privaten und des freigegebenen Kanals unterstützt.
+Aktiviert Ihre App in Kanälen die keine Standardkanäle sind. Wenn Ihre App einen Teambereich unterstützt und diese Eigenschaft definiert ist, aktiviert Microsoft Teams Ihre App in jedem Kanaltyp entsprechend. Derzeit werden die Kanaltypen „Privat“ und „Freigegeben“ unterstützt.
 
 > [!NOTE]
 >
-> * Wenn Ihre App einen Teambereich unterstützt, funktioniert sie unabhängig von den in dieser Eigenschaft definierten Werten in den Standardkanälen.
-> * Ihre App kann die eindeutigen Eigenschaften jedes Kanaltyps berücksichtigen, damit er ordnungsgemäß funktioniert. Informationen zum Aktivieren Ihrer Registerkarte für private und freigegebene Kanäle finden [Sie unter Abrufen von Kontext in privaten Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) und [Abrufen von Kontext in freigegebenen Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Wenn Ihre App einen Teambereich unterstützt, funktioniert dieser in den Standardkanälen unabhängig von den in dieser Eigenschaft definierten Werten.
+> * Ihre Anwendung kann die individuellen Eigenschaften der einzelnen Kanaltypen berücksichtigen, um ordnungsgemäß zu funktionieren. Informationen zum Aktivieren Ihrer Registerkarte für private und freigegebene Kanäle finden [Sie unter Abrufen des Kontexts in privaten Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) und [Abrufen von Kontext in freigegebenen Kanälen](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -724,7 +724,7 @@ Geben Sie die Definition der Besprechungserweiterung an. Weitere Informationen f
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`scenes`|Array von Objekten| 5 Elemente||Unterstützte Besprechungsszenen.|
-|`supportsStreaming`|Boolescher Wert|||Ein Wert, der angibt, ob eine App die Audio- und Videoinhalte der Besprechung auf einen RTMP-Endpunkt (Real-Time Meeting Protocol) streamen kann. Der Standardwert ist **false**.|
+|`supportsStreaming`|Boolesch|||Ein Wert, der angibt, ob eine App die Audio- und Videoinhalte der Besprechung auf einen RTMP-Endpunkt (Real-Time Meeting Protocol) streamen kann. Der Standardwert ist **false**.|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

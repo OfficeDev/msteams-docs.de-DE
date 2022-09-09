@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605026"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635336"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -786,7 +786,7 @@ Aktiviert Ihre App in Kanälen die keine Standardkanäle sind. Wenn Ihre App ein
 > [!NOTE]
 >
 > * Wenn Ihre App einen Teambereich unterstützt, funktioniert dieser in den Standardkanälen unabhängig von den in dieser Eigenschaft definierten Werten.
-> * Ihre Anwendung kann die individuellen Eigenschaften der einzelnen Kanaltypen berücksichtigen, um ordnungsgemäß zu funktionieren. Um Ihre Registerkarte für private und freigegebene Kanäle zu aktivieren, ziehen Sie [Abrufen von Kontext in privaten Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) und [Abrufen von Kontext in freigegebenen Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels) zurate.
+> * Ihre Anwendung kann die individuellen Eigenschaften der einzelnen Kanaltypen berücksichtigen, um ordnungsgemäß zu funktionieren. Informationen zum Aktivieren Ihrer Registerkarte für private und freigegebene Kanäle finden [Sie unter Abrufen des Kontexts in privaten Kanälen](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) und [Abrufen von Kontext in freigegebenen Kanälen](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 

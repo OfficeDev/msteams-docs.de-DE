@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616800"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635322"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -102,7 +102,6 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Identitätsanbieter](../concepts/authentication/configure-identity-provider.md) | Eine Entität, die Anmeldeinformationen für den Benutzer speichert und bereitstellt. Benutzer können sich auch bei einem Identitätsanbieter registrieren.  <br>**Weitere Informationen unter**: [Authentifizierung](#a) |
 | [Eingehender Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Eine externe App kann Inhalte in Teams-Kanälen freigeben. Diese Webhooks werden als Nachverfolgungs- und Benachrichtigungstools verwendet. <br>**Weitere Informationen unter**: [Webhook](#w); [Ausgehender Webhook](#o) |
 | [In-Meeting-App-Umgebung](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Eine Phase im Microsoft Teams-Besprechungslebenszyklus. Über die In-Meeting-App-Umgebung können Sie während der Besprechung mithilfe von Apps und dem Dialogfeld die Teilnehmer einbeziehen.<br>**Weitere Informationen unter**: [Besprechungslebenszyklus](#m) |
 

@@ -3,12 +3,12 @@ title: Kontext für Ihre Registerkarte erhalten
 description: Erfahren Sie, wie Sie kontextbezogen für Ihre Registerkarte, den Kontext von Benutzer, Team oder Unternehmen, auf Informationen zugreifen, Kontext in privaten oder freigegebenen Kanälen abrufen und Designänderungen behandeln können.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450387"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635308"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -241,31 +241,8 @@ Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem priv
 
 Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channel.membershipType` sein `Private` , um zu bestimmen, ob ihre Seite in einem privaten Kanal geladen ist und entsprechend reagieren kann.
 
-## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Abrufen des Kontexts in Microsoft Teams Connect freigegebenen Kanälen
-
 > [!NOTE]
-> Derzeit befinden sich Microsoft Teams Connect freigegebenen Kanäle nur in der Entwicklervorschau.
-
-Wenn Ihre Inhaltsseite in einen Microsoft Teams Connect freigegebenen Kanal geladen wird, werden die Daten, die `getContext` Sie vom Anruf erhalten, aufgrund der eindeutigen Liste der Benutzer in freigegebenen Kanälen geändert.
-Die folgenden Felder werden geändert, wenn sich Ihre Inhaltsseite in einem freigegebenen Kanal befindet:
-
-* `team.groupId`: Nicht definiert für freigegebene Kanäle.
-* `team.internalId`: Auf das `threadId` Team festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird dies auf das Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
-* `team.displayName`: Auf den Namen des Teams festgelegt, wird der Kanal für den aktuellen Benutzer freigegeben. Wenn der Benutzer Zugriff auf mehrere Teams hat, wird dies auf das Team festgelegt, das den freigegebenen Kanal hostet (erstellt).
-* `sharepointSite.url`: Legen Sie die URL einer eindeutigen, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
-* `sharepointSite.path`: Legen Sie den Pfad einer eindeutigen, eindeutigen SharePoint-Website für den freigegebenen Kanal fest.
-* `sharepointSite.domain`: Auf die Domäne einer eindeutigen, eindeutigen SharePoint-Websitedomäne für den freigegebenen Kanal festgelegt.
-
-Zusätzlich zu diesen Feldänderungen stehen zwei neue Felder für freigegebene Kanäle zur Verfügung:
-
-* `hostTeamGroupId`: Legen Sie den Wert fest, der `team.groupId` dem Hostingteam oder dem Team zugeordnet ist, das den freigegebenen Kanal erstellt hat. Mit der Eigenschaft kann Microsoft Graph-API Aufrufe die Mitgliedschaft im freigegebenen Kanal abrufen.
-* `hostTeamTenantId`: Legen Sie den Wert fest, der `channel.ownerTenantId` dem Hostingteam oder dem Team zugeordnet ist, das den freigegebenen Kanal erstellt hat. Auf die Eigenschaft kann mit der Mandanten-ID des aktuellen Benutzers im `user.tenant.id` Feld des *Kontextobjekts* verwiesen werden, um festzustellen, ob der Benutzer intern oder extern zum Mandanten des Hostingteams gehört.
-
-Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channel.membershipType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
-
-> [!NOTE]
-> `teamSiteUrl` funktioniert auch gut für Standardkanäle.
-> Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
+>`teamSiteUrl` funktioniert auch gut für Standardkanäle. Wenn Ihre Seite einen dieser Werte verwendet, muss der Wert des Felds `channelType` sein `Shared` , um zu bestimmen, ob Ihre Seite in einem freigegebenen Kanal geladen ist und entsprechend reagieren kann.
 
 ## <a name="get-context-in-shared-channels"></a>Abrufen von Kontext in freigegebenen Kanälen
 
@@ -278,7 +255,7 @@ Verwenden Sie die folgenden `getContext` Eigenschaften in freigegebenen Kanälen
 
 | Eigenschaft | Beschreibung |
 |----------|--------------|
-|`channelId`| Die Eigenschaft wird auf die SC-Kanalthread-ID festgelegt.|
+|`channelId`| Die Eigenschaft wird auf die Thread-ID für freigegebene Kanäle festgelegt.|
 |`channelType`| Die Eigenschaft wird für freigegebene Kanäle festgelegt `sharedChannel` .|
 |`groupId`|Die Eigenschaft ist `null` für freigegebene Kanäle vorgesehen.|
 |`hostTenantId`| Die Eigenschaft wird neu hinzugefügt und beschreibt die Mandanten-ID des Hosts, die zum Vergleichen mit der Mandanten-ID-Eigenschaft des aktuellen Benutzers `tid` nützlich ist. |
