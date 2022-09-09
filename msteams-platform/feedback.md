@@ -3,12 +3,12 @@ title: Support und Feedback der Microsoft Teams-Entwicklercommunity
 description: Erfahren Sie, wie das Microsoft Teams-Produktteam über verschiedene Feedback- und Supportkanäle hinweg auf die Entwicklercommunity reagiert.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: bd24ee9f9706bdf845dd518db2735c843f2b46ca
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
+ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558149"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636052"
 ---
 # <a name="support-and-feedback"></a>Support und Feedback
 
@@ -65,6 +65,7 @@ Schlagen Sie ein Feature vor oder unterstützen Sie bereits formulierte Wünsche
 |:----------------------|:------------|
 | **Vorschläge zu Features** | Posten Sie Featurevorschläge im :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams-Feedbackportal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **Allgemeine Fragen** | Senden Sie allgemeine Fragen zur Microsoft Teams-Entwicklerplattform an [Microsoft Teams-Communityhilfe](mailto:microsoftteamsdev@microsoft.com). Wir empfehlen, Fragen auf den hier genannten Kanälen zu posten und nur dann E-Mails zu senden, wenn keine andere Art der Kommunikation verwendet werden kann. |
+| **Feedbackinterview** | Ihr Feedback ist uns wichtig. Wenn Sie daran interessiert sind, mit uns über Ihre Erfahrungen mit der Nutzung unserer Plattformdokumentation, antworten auf Communityforums und des Teams Store-Veröffentlichungsprozesses zu sprechen, [können Sie einen Slot buchen](https://aka.ms/bookdevfeedback).|
 
 ## <a name="see-also"></a>Siehe auch
 
