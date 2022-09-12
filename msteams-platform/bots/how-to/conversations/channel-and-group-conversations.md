@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Nachrichten für einen Bot in einem Kanal- od
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
+ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503606"
+ms.lasthandoff: 09/12/2022
+ms.locfileid: "67646139"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -23,14 +23,14 @@ Bots in einer Gruppe oder einem Kanal empfangen Nachrichten nur, wenn sie @botna
 > [!NOTE]
 > Dieses Feature ist derzeit nur in der [öffentlichen Entwicklervorschau](../../../resources/dev-preview/developer-preview-intro.md) verfügbar.
 >
-> Mithilfe der ressourcenspezifischen Zustimmung (Resource Specific Consent, RSC) können Bots alle Kanalnachrichten in Teams empfangen, in denen sie installiert sind, ohne @mentioned zu werden. Weitere Informationen finden Sie unter ["Empfangen aller Kanalnachrichten mit RSC"](channel-messages-with-rsc.md).
+> Mithilfe der ressourcenspezifischen Zustimmung (Resource-Specific Consent, RSC) können Bots alle Kanalnachrichten in Teams empfangen, in denen sie installiert sind, ohne @mentioned zu werden. Weitere Informationen finden Sie unter ["Empfangen aller Kanalnachrichten mit RSC"](channel-messages-with-rsc.md).
 >
 > Das Veröffentlichen einer Nachricht oder adaptiven Karte in einem privaten Kanal wird derzeit nicht unterstützt.
 
 Sehen Sie sich das folgende Video an, um mehr über Kanal- und Gruppenchatunterhaltungen mit einem Bot zu erfahren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## <a name="design-guidelines"></a>Richtlinien für den Entwurf
@@ -267,11 +267,14 @@ Jetzt können Sie eine Einführungsnachricht senden, wenn Ihr Bot zum ersten Mal
 
 Wenn Ihr Bot zum ersten Mal der Gruppe oder dem Team hinzugefügt wird, muss eine Einführungsnachricht gesendet werden. Die Nachricht muss eine kurze Beschreibung der Features des Bots und deren Verwendung enthalten. Sie müssen das `conversationUpdate` Ereignis mit eventType `teamMemberAdded` abonnieren.  Das Ereignis wird gesendet, wenn ein neues Teammitglied hinzugefügt wird. Überprüfen Sie, ob es sich bei dem hinzugefügten neuen Mitglied um den Bot handelt. Weitere Informationen finden Sie unter [Senden einer Willkommensnachricht an ein neues Teammitglied](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Senden Sie eine persönliche Nachricht an jedes Teammitglied, wenn der Bot hinzugefügt wird. Rufen Sie dazu die Teamliste ab, und senden Sie jedem Benutzer eine direkte Nachricht.
+Sie können eine persönliche Nachricht an jedes Mitglied des Teams senden, wenn der Bot hinzugefügt wird. Rufen Sie dazu [die Teamliste](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) ab, und senden Sie jedem Benutzer eine [direkte Nachricht](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+
+>[!NOTE]
+> Stellen Sie sicher, dass die vom Bot gesendete Nachricht relevant ist und der ursprünglichen Nachricht einen Mehrwert hinzufügt und die Benutzer nicht spammt.
 
 Senden Sie in den folgenden Fällen keine Nachricht:
 
-* Das Team ist groß, z. B. größer als 100 Mitglieder. Ihr Bot kann als Spam angesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten. Sie müssen das Wertversprechen Ihres Bots klar an alle Personen kommunizieren, die die Willkommensnachricht sehen.
+* Wenn das Team groß ist, z. B. größer als 100 Mitglieder. Ihr Bot kann als Spam angesehen werden, und die Person, die ihn hinzugefügt hat, kann Beschwerden erhalten. Sie müssen das Wertversprechen Ihres Bots klar an alle Personen kommunizieren, die die Willkommensnachricht sehen.
 * Ihr Bot wird zuerst in einer Gruppe oder einem Kanal erwähnt, anstatt zuerst einem Team hinzugefügt zu werden.
 * Eine Gruppe oder ein Kanal wird umbenannt.
 * Ein Teammitglied wird einer Gruppe oder einem Kanal hinzugefügt.
@@ -292,4 +295,3 @@ Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.ym
 * [Microsoft Teams-Kontext abrufen](~/bots/how-to/get-teams-context.md)
 * [Erstellen eines privaten Kanals im Namen des Benutzers](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Verbinden eines Bots mit Webchat Kanal](/azure/bot-service/bot-service-channel-connect-webchat)
-
