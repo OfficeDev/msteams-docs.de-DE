@@ -5,12 +5,12 @@ description: In diesem Artikel beginnen Sie mit der Integration von Webanwendung
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 19cf5b580c2d25e90eb90bd1fef9a78c75111092
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189774"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653181"
 ---
 # <a name="integrate-web-apps"></a>Integrieren von Web-Apps
 
@@ -49,7 +49,7 @@ Mit Power Apps können Sie Geschäftsanwendungen erstellen, die mit Ihren Gesch�
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent ist eine codefreie, geführte grafische Schnittstellenlösung. Es basiert auf der Microsoft Power Platform und dem Bot Framework. Es ermöglicht jedem Mitglied Ihres Teams, umfangreiche Konversations-Chatbots zu erstellen und zu verwalten, die problemlos in die Teams-Plattform integriert werden können. Sie können intelligente virtuelle Agenten für Teams entwerfen, entwickeln und veröffentlichen, ohne dass Sie eine Entwicklungsumgebung einrichten, einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren müssen.
+Power Virtual Agent ist eine codefreie, geführte grafische Schnittstellenlösung. Es basiert auf der Microsoft Power Platform und dem Bot Framework. Es ermöglicht jedem Mitglied Ihres Teams, umfangreiche Konversations-Chatbots zu erstellen und zu verwalten, die problemlos in die Teams-Plattform integriert werden können. Sie können intelligente virtuelle Agents für Teams entwerfen, entwickeln und veröffentlichen, ohne eine Entwicklungsumgebung einrichten, einen Webdienst erstellen oder sich direkt beim Bot Framework registrieren zu müssen.
 
 ### <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten
 
@@ -65,7 +65,7 @@ Moodle ist ein beliebtes Open-Source-Lernmanagementsystem (LMS). Es ist jetzt in
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Erstellen einer Schaltfläche zum Teilen in Teams für Ihre Website
 
-Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie die Schaltfläche auswählen, wird die Funktion Für Teams freigeben in einem Popup-Fenster geöffnet. So können Sie einen Link direkt an eine beliebige Person oder einen Microsoft Teams-Kanal weitergeben, ohne den Kontext zu wechseln.
+Websites von Drittanbietern können das Launcher-Skript verwenden, um Schaltflächen für die Weitergabe an Teams in ihre Webseiten einzubetten. Wenn Sie die Schaltfläche auswählen, wird die Funktion Für Teams freigeben in einem Popup-Fenster geöffnet. Es ermöglicht Ihnen, einen Link direkt mit einer beliebigen Person oder einem Microsoft Teams-Kanal zu teilen, ohne den Kontext zu wechseln.
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte in SharePoint
 
@@ -106,4 +106,4 @@ Sie können auch die Microsoft 365-Identität integrieren, um externe Anwendunge
 * [Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Erstellen von Deep-Links](~/concepts/build-and-test/deep-links.md)
 * [Gerätefunktionen](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [Steuerelement „Personenauswahl“](~/concepts/device-capabilities/people-picker-capability.md)
+* [Personen-Auswahlsteuerelement](~/concepts/device-capabilities/people-picker-capability.md)

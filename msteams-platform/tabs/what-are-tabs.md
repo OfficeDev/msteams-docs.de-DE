@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Registerkarten erstellen, webseiten, die in M
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450394"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653189"
 ---
 # <a name="build-tabs-for-teams"></a>Erstellen von Registerkarten für Teams
 
@@ -80,7 +80,7 @@ Sie können mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönlich
 
 ### <a name="tools-to-build-tabs"></a>Tools zum Erstellen von Registerkarten
 
-* [Teams-Toolkit für Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
 * [Microsoft Teams-Toolkit-Erweiterung für Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Nächster Schritt

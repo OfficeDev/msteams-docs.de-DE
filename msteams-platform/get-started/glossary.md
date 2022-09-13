@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635322"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653161"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -25,7 +25,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [App-Manifest](../resources/schema/manifest-schema.md) | Das Teams App-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Das Manifest muss dem [Manifestschema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) entsprechen. |
 | [App-Paket](../concepts/build-and-test/apps-package.md) | Ein Teams-App-Paket ist eine ZIP-Datei, die die App-Manifestdatei, das Farbsymbol und das Gliederungssymbol enthält. |
 | [App-Berechtigung](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Eine Option in einer Teams-App zum Aktivieren von Geräteberechtigungen. Sie ist nur verfügbar, wenn die Manifestdatei der App deklariert, dass die App Geräteberechtigungen benötigt. <br> **Siehe auch**: [Geräteberechtigungen](#d) |
-| [App-Bereich](../concepts/design/app-structure.md) | Ein Bereich in Teams, in dem Personen Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, darunter Privat, Kanäle, Chats und Besprechungen. Eine Teams-App kann bereichsübergreifend vorhanden sein. |
+| [App-Bereich](../concepts/design/understand-use-cases.md#app-scope) | Ein Bereich in Teams, in dem Personen Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, darunter Privat, Kanäle, Chats und Besprechungen. Eine Teams-App kann bereichsübergreifend vorhanden sein. |
 | Anwendungsleiste | Eine Anwendungsleiste, die sich auf der unteren Leiste einer mobilen Teams-App befindet. Sie sammelt alle Apps, die geöffnet sind, aber derzeit nicht verwendet werden oder deaktiviert sind. <br>**Weitere Informationen unter**: [Teams Mobile](#t) |
 | [Azure-Ressource](../toolkit/provision.md) | Ein über Azure verfügbarer Dienst, den Ihre Teams-App für die Azure-Bereitstellung verwenden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Der cloudbasierte Identitäts- und Zugriffsverwaltungsdienst von Microsoft. Es hilft authentifizierten Benutzern, auf interne und externe Ressourcen zuzugreifen. |
@@ -54,7 +54,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Cloudressourcen](../toolkit/add-resource.md) | Ein Dienst, der in der Cloud über das Internet verfügbar ist und von Ihrer Teams-App verwendet werden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Apps für die Zusammenarbeit](../concepts/extensibility-points.md) | Eine App mit Funktionen, mit denen ein Benutzer in einem kollaborativen Arbeitsbereich mit anderen Benutzern arbeiten kann. <br> **Weitere Informationen unter**: [Eigenständige App](#s) |
 | [Verfassen-Erweiterung](../resources/schema/manifest-schema.md#composeextensions) | Eine Eigenschaft im App-Manifest (`composeExtensions`), die auf die Nachrichtenerweiterungsfunktion verweist. Es wird verwendet, wenn sich Ihre Erweiterung entweder authentifizieren oder konfigurieren muss, um fortzufahren. <br>**Weitere Informationen**: [App-Manifest](#a); [Nachrichtenerweiterung](#m) |
-| [Befehlsfeld](../resources/schema/manifest-schema.md) | Ein Kontexttyp im App-Manifest (`commandBox`), den Sie konfigurieren können, um eine Nachrichtenerweiterung über das Teams-Befehlsfeld aufzurufen. |
+| [CommandBox](../resources/schema/manifest-schema.md) | Ein Kontexttyp im App-Manifest (`commandBox`), den Sie konfigurieren können, um eine Nachrichtenerweiterung über das Teams-Befehlsfeld aufzurufen. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Damit können Benutzer den Empfang von Benachrichtigungen und Nachrichten von den Webdiensten abonnieren. Connectors machen den HTTPS-Endpunkt für den Dienst verfügbar, um Nachrichten in Teams-Kanälen zu posten, in der Regel in Form von Karten. <br> **Weitere Informationen unter**: [Webhook](#w) |
 | Unterhaltung | Eine Reihe von Nachrichten, die zwischen Ihrer Microsoft Teams-App (Registerkarte oder Bot) und einem oder mehreren Benutzern gesendet werden. Eine Unterhaltung kann drei Bereiche haben: Kanal-, Privat- und Gruppen-Chat. <br>**Weitere Informationen unter**: [1:1-Chat](#o); [Gruppen-Chat](#g); [Kanal](#c) |
 | [Unterhaltungs-Bot](../bots/how-to/conversations/conversation-messages.md) |  Er ermöglicht einem Benutzer, mithilfe von Text, interaktiven Karten und Aufgabenmodulen mit Ihrem Webdienst zu interagieren. <br>**Weitere Informationen unter** [Chat-Bot](#c) |
@@ -102,6 +102,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
+| [Identitätsanbieter](../concepts/authentication/authentication.md) | Eine Entität, die Anmeldeinformationen speichert und für den Benutzer bereitstellt. Es ermöglicht benutzern auch, sich selbst zu registrieren.  <br>**Weitere Informationen unter**: [Authentifizierung](#a) |
 | [Eingehender Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Eine externe App kann Inhalte in Teams-Kanälen freigeben. Diese Webhooks werden als Nachverfolgungs- und Benachrichtigungstools verwendet. <br>**Weitere Informationen unter**: [Webhook](#w); [Ausgehender Webhook](#o) |
 | [In-Meeting-App-Umgebung](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Eine Phase im Microsoft Teams-Besprechungslebenszyklus. Über die In-Meeting-App-Umgebung können Sie während der Besprechung mithilfe von Apps und dem Dialogfeld die Teilnehmer einbeziehen.<br>**Weitere Informationen unter**: [Besprechungslebenszyklus](#m) |
 
@@ -126,7 +127,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Nachrichtenerweiterung](../messaging-extensions/what-are-messaging-extensions.md) | Nachrichtenerweiterungen sind Abkürzungen zum Einfügen von App-Inhalten oder zum Bearbeiten einer Nachricht. Sie können eine Nachrichtenerweiterung verwenden, ohne die Konversation verlassen zu müssen.<br>**Weitere Informationen unter**: [Suchbefehle](#s); [Aktionsbefehle](#a) |
 | [Besprechungserweiterung](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Eine App, die während des Besprechungslebenszyklus verwendet werden soll, um sie produktiver zu machen, wie z. B. Whiteboard, Dashboard und viele mehr. |
 | [Microsoft 365 Konto](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 Konto umfasst 25 Benutzerlizenzen, einschließlich des Administrators, nur für Entwicklungszwecke. |
-| [Microsoft 365-Entwicklerprogramm](../toolkit/accounts.md)| Das Microsoft 365-Entwicklerprogramm hilft Ihnen beim Erstellen von Apps, die Microsoft 365 erweitern. |
+| [Microsoft 365-Entwicklerprogramm](../toolkit/tools-prerequisites.md)| Das Microsoft 365-Entwicklerprogramm hilft Ihnen beim Erstellen von Apps, die Microsoft 365 erweitern. |
 | [Microsoft Graph-Tester](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Das Gateway zu Daten und Informationen in Microsoft 365. Microsoft Graph bietet ein einheitliches Programmierbarkeitsmodell, mit dem Sie auf Daten in Microsoft 365, Windows 10 und Enterprise Mobility + Security zugreifen können. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams ist eine Software für die Gruppenzusammenarbeit, die verwendet werden kann, um Teams bei der Remotearbeit zu unterstützen. |
 | [Microsoft Teams-Plattform](../concepts/app-fundamentals-overview.md) | Die Microsoft Teams Entwicklerplattform erleichtert Entwicklern die Integration eigener Apps und Dienste in Teams. |

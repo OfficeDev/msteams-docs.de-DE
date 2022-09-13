@@ -4,12 +4,12 @@ description: Konfigurieren Sie single sign-on (SSO) mit Azure AD, indem Sie den 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Authentifizierung Registerkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken SSO Mandantenbereich
-ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586798"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653199"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 
@@ -21,7 +21,7 @@ Um Ihre Registerkartenapp in Azure AD zu registrieren und für SSO zu aktivieren
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Konfigurieren von Azure AD, um Zugriffstoken an die Teams-Client-App zu senden":::
 
-Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-) API mithilfe von Bereichen (Berechtigungen) verfügbar. Konfigurieren Sie eine Vertrauensstellung zwischen der verfügbar gemachten API auf Azure AD und Ihrer App. Dadurch kann der Teams-Client ein Zugriffstoken im Namen Ihrer Anwendung und des angemeldeten Benutzers abrufen. Sie können Client-IDs für die vertrauenswürdigen mobilen, Desktop- und Webanwendungen hinzufügen, die Sie vorab autorisieren möchten.
+Erstellen Sie eine neue App-Registrierung in Azure AD, und machen Sie ihre (Web-) API mithilfe von Bereichen (Berechtigungen) verfügbar. Konfigurieren Sie eine Vertrauensstellung zwischen der verfügbar gemachten API auf Azure AD und Ihrer App. Es ermöglicht dem Teams-Client, ein Zugriffstoken im Namen Ihrer Anwendung und des angemeldeten Benutzers abzurufen. Sie können Client-IDs für die vertrauenswürdigen mobilen, Desktop- und Webanwendungen hinzufügen, die Sie vorab autorisieren möchten.
 
 Möglicherweise müssen Sie auch zusätzliche Details konfigurieren, z. B. die Authentifizierung von App-Benutzern auf der Plattform oder auf dem Gerät, auf das Sie Ihre Registerkartenapp ausrichten möchten.
 
@@ -36,7 +36,7 @@ Die Azure AD-Konfiguration aktiviert SSO für Ihre Registerkartenapp in Teams. S
 
 Es ist hilfreich, wenn Sie sich zuerst über die Konfiguration für die Registrierung Ihrer App auf Azure AD informieren. Stellen Sie sicher, dass Sie sich darauf vorbereitet haben, die folgenden Details zu konfigurieren, bevor Sie Ihre App registrieren:
 
-- **Einzel- oder Mehrmandanten-Optionen**: Wird Ihre Anwendung nur in dem Microsoft 365-Mandanten verwendet, in dem sie registriert ist, oder werden viele Microsoft 365-Mandanten sie verwenden? Anwendungen, die für ein Unternehmen geschrieben wurden, sind in der Regel für Einzelmandanten ausgerichtet. Anwendungen, die von einem unabhängigen Softwarehersteller geschrieben und von vielen Kunden verwendet werden, müssen mehrmandantenfähig sein, damit der Mandant jedes Kunden auf die Anwendung zugreifen kann.
+- **Einzel- oder Mehrinstanzenoptionen**: Wird Ihre Anwendung nur im Microsoft 365-Mandanten verwendet, in dem sie registriert ist, oder wird sie von vielen Microsoft 365-Mandanten verwendet? Anwendungen, die für ein Unternehmen geschrieben wurden, sind in der Regel ein mandant. Anwendungen, die von einem unabhängigen Softwareanbieter geschrieben und von vielen Kunden verwendet werden, müssen mehrere Mandanten sein, damit der Mandant jedes Kunden auf die Anwendung zugreifen kann.
 - **Anwendungs-ID-URI**: Es handelt sich um einen global eindeutigen URI, der die Web-API identifiziert, die Sie für den Zugriff Ihrer App über Bereiche verfügbar machen. Er wird auch als Bezeichner-URI bezeichnet. Der Anwendungs-ID-URI enthält die App-ID und die tertiäre Domäne, in der Ihre App gehostet wird. Der Domänenname Ihrer Anwendung und der Domänenname, den Sie für Ihre Azure AD-Anwendung registrieren, sollten identisch sein. Derzeit werden mehrere Domänen pro App nicht unterstützt.
 - **Bereich**: Dies ist die Berechtigung, die einem autorisierten App-Benutzer oder Ihrer App für den Zugriff auf eine Ressource erteilt werden kann, die von der API verfügbar gemacht wird.
 
@@ -208,13 +208,13 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
 
     Die Seite **Ein Clientanwendung hinzufügen** wird angezeigt.
 
-1. Geben Sie die entsprechende Client-ID für den Teams-Client für die Anwendungen ein, die Sie für die Webanwendung Ihrer App autorisieren möchten.
+1. Geben Sie die entsprechende Microsoft 365-Client-ID für den Teams-Client für die Anwendungen ein, die Sie für die Webanwendung Ihrer App autorisieren möchten.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Hinzufügen einer Clientanwendung":::
 
     > [!NOTE]
     >
-    > - Die Client-IDs für mobile Teams-, Desktop- und Webanwendungen sind die tatsächlichen IDs, die Sie hinzufügen sollten.
+    > - Die Microsoft 365-Client-IDs für mobile, Desktop- und Webanwendungen für Teams, Office und Outlook sind die eigentlichen IDs, die Sie hinzufügen sollten.
     > - Für eine Teams-Registerkartenapp benötigen Sie entweder Web oder SPA, da Sie keine mobile oder Desktop-Clientanwendung in Teams haben können.
 
     1. Wählen Sie eine der folgenden Client-IDs aus:
@@ -223,6 +223,10 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | mobile Teams- oder Desktopanwendung |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams-Webanwendung |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Office-Webanwendung |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office-Desktopanwendung |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook-Desktop, mobile Anwendung |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook-Webanwendung |
 
     1. Wählen Sie den Anwendungs-ID-URI aus, den Sie für Ihre App in **Autorisierte Bereiche** erstellt haben, um den Bereich der Web-API hinzuzufügen, die Sie verfügbar gemacht haben.
 

@@ -120,6 +120,8 @@
                   href: toolkit/add-resource.md
                 - name: Integrieren vorhandener Drittanbieter-APIs
                   href: toolkit/add-API-connection.md
+                - name: Hinzufügen des einmaligen Anmeldens zur Teams-App
+                  href: toolkit/add-single-sign-on.md
             - name: Manifest anpassen
               items:
                 - name: Anpassen des Teams-App-Manifests
@@ -146,6 +148,8 @@
               items:
                 - name: Integrieren und Zusammenarbeiten
                   href: toolkit/TeamsFx-collaboration.md
+                - name: Einrichten von CI/CD-Pipelines
+                  href: toolkit/use-CICD-template.md
                 - name: Querladen und Testen der App in der Teams-Umgebung
                   href: toolkit/sideload-and-test-app.md
                 - name: Testen des App-Verhaltens in unterschiedlichen Umgebungen
