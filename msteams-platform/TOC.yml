@@ -698,7 +698,7 @@
     - name: Testvorschau für monetarisierte Apps
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App-Manifest
-  itesms:
+  items:
     - name: App-Manifestschema für Teams
       href: resources/schema/manifest-schema.md
     - name: Öffentliche Entwicklervorschau
