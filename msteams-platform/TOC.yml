@@ -705,7 +705,6 @@
       items:
         - name: Übersicht
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Öffentliche Entwicklervorschau des Manifestschemas für Teams
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Integration in Microsoft Teams
