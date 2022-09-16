@@ -5,16 +5,16 @@ ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288213"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781073"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Erweitern von Teams-Apps auf Microsoft 365
 
-Mit den neuesten Versionen von [Microsoft Teams JavaScript-Client-SDK](../tabs/how-to/using-teams-client-sdk.md) (Version 2.0.0), [Teams-App-Manifest](../resources/schema/manifest-schema.md) (Version 1.13) und [Teams-Toolkit](../toolkit/visual-studio-code-overview.md) können Sie Teams-Apps erstellen und aktualisieren, um sie in anderen microsoft 365-Produkten mit hoher Nutzung auszuführen, und sie auf dem kommerziellen Microsoft Marketplace ([dem kommerziellen Microsoft Marketplace](https://appsource.microsoft.com/)) veröffentlichen.
+Mit den neuesten Versionen des [JavaScript-Client-SDK für Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md) (Version 2.0.0 und höher), dem [Teams-App-Manifest](../resources/schema/manifest-schema.md) (Version 1.13 und höher) und dem [Teams-Toolkit](../toolkit/visual-studio-code-overview.md) können Sie Teams-Apps so erstellen und aktualisieren, dass sie in anderen microsoft 365-Produkten mit hoher Nutzung ausgeführt werden, und sie im kommerziellen Microsoft Marketplace ([dem kommerziellen Microsoft Marketplace](https://appsource.microsoft.com/)) veröffentlichen.
 
 Die Erweiterung Ihrer Teams-App auf Microsoft 365 bietet eine optimierte Möglichkeit, plattformübergreifende Apps für eine erweiterte Benutzergruppe bereitzustellen: Aus einer einzigen Codebasis können Sie App-Umgebungen erstellen, die auf Teams-, Outlook- und Office-Umgebungen zugeschnitten sind. Endbenutzer müssen den Kontext ihrer Arbeit nicht verlassen, um Ihre App verwenden zu können, und Administratoren profitieren von einem konsolidierten Verwaltungs- und Bereitstellungsworkflow.
 
@@ -22,9 +22,8 @@ Die Teams-App-Plattform entwickelt sich weiter und erweitert sich ganzheitlich i
 
 |          | App-Manifestelement | Teams-Support |Outlook*-Unterstützung | Office*-Support | Anmerkungen |
 |--|--|--|--|--|--|
-| [**Registerkarten**](../tabs/what-are-tabs.md) (persönlicher Bereich)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Betakanal) | Web (Targeted Release)| Kanal- und Gruppenbereich werden für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Registerkarten**](../tabs/what-are-tabs.md) (persönlicher Bereich)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Betakanal) | Web (Targeted Release), Desktop (Betakanal)| Kanal- und Gruppenbereich werden für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Nachrichtenerweiterungen**](../messaging-extensions/what-are-messaging-extensions.md) (suchbasiert)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Betakanal)| - |Aktionsbasiert wird für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
-| [**Graph-Connectors**](/graph/connecting-external-content-connectors-overview)| `graphConnector` | Web, Desktop, Mobile| Web, Desktop | Netz| Notizen [anzeigen](#graph-connectors)
 | [**Office-Add-Ins**](/office/dev/add-ins/develop/json-manifest-overview) (Vorschau) | `extensions` | - | Web, Desktop | - | Nur in [devPreview-Manifestversion](../resources/schema/manifest-schema-dev-preview.md) verfügbar. Siehe [Notizen](#office-add-ins-preview).|
 
 \*Die [Microsoft 365 Targeted Release-Option](/microsoft-365/admin/manage/release-options-in-office-365) und [Microsoft 365 Apps Updatekanalregistrierung](/deployoffice/change-update-channels) erfordern die Administratoranmeldung für die gesamte Organisation oder ausgewählte Benutzer. Updatekanäle sind gerätespezifisch und gelten nur für Installationen von Office unter Windows.
@@ -50,22 +49,15 @@ Wenn Sie Ihre App mit dem neuesten [Teams-App-Manifest](../resources/schema/mani
 
 Mit dem Ziel, das Microsoft 365-Entwicklerökosystem zu vereinfachen und zu optimieren, erweitern wir das Teams-App-Manifest in weitere Bereiche von Microsoft 365 mit den folgenden Themen.
 
-### <a name="graph-connectors"></a>Graph-Connectors
-
-Mit Microsoft Graph-Connectors kann Ihre Organisation Daten von Drittanbietern indizieren, sodass sie als Microsoft Search-Ergebnisse angezeigt werden, wodurch die Typen durchsuchbarer Inhaltsquellen in Ihren Teams-Apps erweitert werden.
-Weitere Informationen finden Sie in der [Übersicht über Microsoft Graph-Connectors für Microsoft Search](/microsoftsearch/connectors-overview).
-
-Um mit Graph-Connectors in Teams-Apps zu beginnen, sehen Sie sich das [Beispiel für Graph-Connectors des Teams-Toolkits](https://aka.ms/teamsfx-graph-connector-sample) und die [Schemareferenz für das Microsoft Teams Developer-Vorschaumanifest](../resources/schema/manifest-schema-dev-preview.md) an.
-
 ### <a name="office-add-ins-preview"></a>Office-Add-Ins (Vorschau)
 
 Sie können jetzt Office-Add-Ins in der [Entwicklervorschauversion](../resources/schema/manifest-schema-dev-preview.md) des Microsoft Teams-App-Manifests definieren und bereitstellen. Derzeit ist diese Vorschau auf Outlook-Add-Ins beschränkt, die im Abonnement von Office für Windows ausgeführt werden.
 
 Weitere Informationen finden Sie unter [Teams-Manifest für Office-Add-Ins (Vorschau)](/office/dev/add-ins/develop/json-manifest-overview).
 
-## <a name="microsoft-appsource-submission"></a>Microsoft AppSource-Übermittlung
+## <a name="microsoft-commercial-marketplace-submission"></a>Übermittlung an den kommerziellen Microsoft Marketplace
 
-Treten Sie der wachsenden Anzahl von Teams-Produktions-Apps im [Microsoft AppSource-Store](https://appsource.microsoft.com/) mit erweiterter Unterstützung für Outlook- und Office Preview -Zielgruppen (Targeted Release) bei. Der [App-Übermittlungsprozess für Teams-Apps, die für Outlook und Office aktiviert sind](../concepts/deploy-and-publish/appsource/publish.md) , ist der gleiche wie bei herkömmlichen Teams-Apps. Der einzige Unterschied besteht darin, dass Sie die Version [1.13](../tabs/how-to/using-teams-client-sdk.md) des Teams-App-Manifests in Ihrem App-Paket verwenden, wodurch Unterstützung für Teams-Apps eingeführt wird, die in Microsoft 365 ausgeführt werden.
+Treten Sie der wachsenden Anzahl von Teams-Produktions-Apps im [Microsoft Commercial Marketplace](https://appsource.microsoft.com/) (Microsoft AppSource)-Store mit erweiterter Unterstützung für Outlook- und Office Preview -Zielgruppen (Targeted Release) bei. Der [App-Übermittlungsprozess für Teams-Apps, die für Outlook und Office aktiviert sind](../concepts/deploy-and-publish/appsource/publish.md) , ist der gleiche wie bei herkömmlichen Teams-Apps. Der einzige Unterschied besteht darin, dass Sie die Version [1.13](../tabs/how-to/using-teams-client-sdk.md) des Teams-App-Manifests in Ihrem App-Paket verwenden, wodurch Unterstützung für Teams-Apps eingeführt wird, die in Microsoft 365 ausgeführt werden.
 
 Nach der Veröffentlichung als Microsoft 365-fähige Teams-App kann Ihre App zusätzlich zum Teams Store als installierbare App aus den Outlook- und Office-App-Stores ermittelt werden. Bei der Ausführung in Outlook und Office verwendet Ihre App die gleichen Berechtigungen, die in Teams erteilt wurden. Teams-Administratoren können [den Zugriff auf Teams-Apps in Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) für Benutzer in ihrer Organisation verwalten.
 

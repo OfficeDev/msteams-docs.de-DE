@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: Tools und SDKs
   items:
-    - name: Microsoft Teams-Toolkit-Erweiterung für Visual Studio Code
+    - name: Teams Toolkit
       items:
         - name: Übersicht über das Teams-Toolkit
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: Häufig gestellte Fragen
           href: toolkit/faq.md
-    - name: Microsoft Teams-Toolkit-Erweiterung für Visual Studio
-      items:
-        - name: Übersicht über das Teams-Toolkit
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: Erstellen einer neuen Teams-App
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: Debuggen Sie Ihre Teams-App
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: Bereitstellen von Cloudressourcen
-          href: toolkit/provision-cloud-resources.md
-        - name: Bereitstellen der Teams-App in der Cloud
-          href: toolkit/deploy-teams-app.md
-        - name: Teams-App-Manifest bearbeiten
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams-Toolkit-CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Yeoman-Generator für Microsoft Teams (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: Erstellen eines Partner Center-Entwicklerkontos
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: Vorbereiten ihrer Teams Store-Übermittlung
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

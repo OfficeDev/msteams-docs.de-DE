@@ -6,16 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 68999351232deb60015259840147d2a1ab55681a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616568"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780865"
 ---
 # <a name="debug-your-microsoft-teams-app-locally"></a>Lokales Debuggen Ihrer Microsoft Teams-App
 
-Mit dem Microsoft Teams-Toolkit können Sie Ihre Teams-App lokal debuggen und eine Vorschau anzeigen. Während des Debugprozesses startet das Teams-Toolkit automatisch App-Dienste, startet Debugger und lädt die Teams-App quer. Sie können eine Vorschau Ihrer Teams-App im Teams-Webclient lokal nach dem Debuggen anzeigen. Sie müssen das Teams-Toolkit einrichten, bevor Sie Ihre App debuggen.
+Das Teams-Toolkit hilft Ihnen, Ihre Teams-App lokal zu debuggen und eine Vorschau anzuzeigen. Während des Debugprozesses startet das Teams-Toolkit automatisch App-Dienste, startet Debugger und lädt die Teams-App quer. Sie können eine Vorschau Ihrer Teams-App im Teams-Webclient lokal nach dem Debuggen anzeigen.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Lokales Debuggen Ihrer Microsoft Teams-App für Visual Studio Code
+
+Das Teams-Toolkit in Visual Studio Code bietet Ihnen die Funktionen, um das Debuggen Ihrer Teams-App lokal zu automatisieren. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Sie müssen das Teams-Toolkit einrichten, bevor Sie Ihre App debuggen.
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Einrichten Ihres Teams-Toolkits für das Debuggen
 
@@ -140,9 +147,73 @@ Die Konfiguration **"An Frontend anfügen** " oder **"Bot starten** " startet ei
 > [!div class="nextstepaction"]
 > [Debuggen von Hintergrundprozessen](debug-background-process.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Lokales Debuggen Ihrer Microsoft Teams-App mit Visual Studio
+
+Mit dem Teams-Toolkit können Sie Ihre Microsoft Teams-App lokal debuggen und eine Vorschau anzeigen. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Sie können Ihre App lokal in Visual Studio mithilfe des Teams-Toolkits debuggen, indem Sie Folgendes ausführen:
+
+### <a name="set-up-ngrok-only-for-bot-and-message-extension-app"></a>Einrichten von ngrok (nur für Bot- und Nachrichtenerweiterungs-App)
+
+Verwenden Sie eine Eingabeaufforderung, um diesen Befehl auszuführen:
+
+```
+ngrok http 5130
+```
+
+### <a name="set-up-your-teams-toolkit"></a>Einrichten des Teams-Toolkits
+
+Führen Sie die folgenden Schritte mithilfe des Teams-Toolkits aus, um Ihre App nach dem Erstellen eines Projekts zu debuggen:
+
+1. Klicken Sie mit der rechten Maustaste auf Ihr **Projekt**.
+1. Wählen Sie **"Teams-Toolkit** > **vorbereiten Teams-App-Abhängigkeiten" aus**.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Abhängigkeiten von Teams-Apps für das lokale Debuggen" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+
+   > [!NOTE]
+   > In diesem Szenario lautet der Projektname "MyTeamsApp1"
+
+   Ihr Microsoft 365-Konto muss über die Berechtigung zum Querladen verfügen, bevor Sie sich anmelden.  Stellen Sie sicher, dass Ihre Teams-App in den Mandanten hochgeladen werden kann, andernfalls kann Ihre Teams-App im Teams-Client nicht ausgeführt werden.
+
+1. Melden Sie sich bei Ihrem **Microsoft 365-Konto** an, und wählen Sie dann **"Weiter"** aus.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Anmelden beim Microsoft 365-Konto":::
+
+   > [!Note]
+   > Weitere Informationen zum Querladen von Berechtigungen finden Sie unter <https://aka.ms/teamsfx-sideloading-option>.
+
+1. Wählen Sie **"Debuggen** > **starten"** oder direkt **F5** aus.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Debuggen starten":::
+
+   Visual Studio startet die Teams-App innerhalb des Microsoft Teams-Clients in Ihrem Browser.
+
+   > [!Note]
+   > Weitere Informationen finden Sie unter <https://aka.ms/teamsfx-vs-debug>.
+
+1. Nachdem Microsoft Teams geladen wurde, wählen Sie **"Hinzufügen"** aus, um Ihre App in Teams zu installieren.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Wählen Sie &quot;App hinzufügen&quot; aus, um die App zu laden.":::
+
+   > [!TIP]
+   > Sie können die Hot Reload-Funktion von Visual Studio auch während des Debuggens verwenden. Weitere Informationen finden Sie unter <https://aka.ms/teamsfx-vs-hotreload>.
+
+   > [!NOTE]
+   > Stellen Sie sicher, dass Sie beim Debuggen der Benachrichtigungs-Bot-App eine HTTP-Anforderung an "<http://localhost:5130/api/notification>" posten, um eine Benachrichtigung auszulösen. Wenn Sie beim Erstellen des Projekts den HTTP-Trigger ausgewählt haben, können Sie alle API-Tools wie curl (Windows-Eingabeaufforderung), Postman usw. verwenden.
+
+   > [!TIP]
+   > Wenn Sie Änderungen an der Teams-App-Manifestdatei (/templates/appPackage/manifest.template.json) vornehmen, stellen Sie sicher, dass Sie den Befehl "Teams-App-Abhängigkeiten vorbereiten" ausführen. Bevor Sie versuchen, die Teams-App erneut lokal auszuführen.
+
+::: zone-end
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen](provision.md)
 * [Hinzufügen von Funktionen zu ihrer Teams-App](add-capability.md)
 * [Bereitstellen in die Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen im Teams-Toolkit](TeamsFx-multi-env.md)
+* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
+* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
+* [Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

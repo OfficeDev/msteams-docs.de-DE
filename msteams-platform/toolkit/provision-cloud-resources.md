@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7dfc5817fb8872a782b28c113c270a318e3d5078
-ms.sourcegitcommit: 52a11f7614c43172bc2d57401a60d569db5310a9
+ms.openlocfilehash: 00e021e3e42eed6eeb5881d258a9884a7e579377
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67291687"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781003"
 ---
 # <a name="provision-cloud-resources-using-visual-studio"></a>Bereitstellen von Cloudressourcen mit Visual Studio
 
@@ -87,7 +87,7 @@ Die folgenden Schritte helfen Ihnen bei der Bereitstellung von Cloudressourcen m
 5. Sie können entweder eine neue **Ressourcengruppe** auswählen oder erstellen.
 6. Wählen Sie **"Bereitstellen" aus**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="Ressourcengruppe auswählen":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Ressourcengruppe auswählen":::
 
 7. Das Dialogfeld warnt Sie, dass Gebühren gemäß Azure-Nutzung hinzugefügt werden können. Wählen Sie **"Bereitstellen" aus**.
 

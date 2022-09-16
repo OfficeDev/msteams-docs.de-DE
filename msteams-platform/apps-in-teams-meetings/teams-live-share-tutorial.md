@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425617"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780814"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller Code-Lernprogramm
 
@@ -351,7 +351,7 @@ Benutzer, die zur Besprechung eingeladen sind, können Ihre App auf der Phase se
 
 ## <a name="deployment"></a>Bereitstellung
 
-Nachdem Sie Ihren Code bereitgestellt haben, können Sie [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit) oder das [Teams-Entwicklerportal](https://dev.teams.microsoft.com/apps) verwenden, um die ZIP-Datei Ihrer App bereitzustellen und hochzuladen.
+Nachdem Sie Ihren Code bereitgestellt haben, können Sie [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio-code) oder das [Teams-Entwicklerportal](https://dev.teams.microsoft.com/apps) verwenden, um die ZIP-Datei Ihrer App bereitzustellen und hochzuladen.
 
 > [!NOTE]
 > Sie müssen Ihre bereitgestellte appId dem `manifest.json` hinzufügen, bevor Sie die App hochladen oder verteilen.

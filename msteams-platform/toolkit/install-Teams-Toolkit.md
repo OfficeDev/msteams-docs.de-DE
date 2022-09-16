@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 1072d377393e6b3d3aecc3a7d3e3a89b9ec82192
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617188"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780686"
 ---
 # <a name="install-teams-toolkit"></a>Installieren des Teams-Toolkits
 
-Teams Toolkit ist eine Erweiterung in Visual Studio Code. In diesem Dokument erfahren Sie, wie Sie das Teams-Toolkit installieren. Bevor Sie mit der Installation beginnen, müssen Visual Studio Code und der Teams-Client installiert sein.
+Das Teams-Toolkit ist eine Erweiterung in Visual Studio und Visual Studio Code. In diesem Dokument erfahren Sie, wie Sie das Teams-Toolkit installieren.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="install-teams-toolkit-for-visual-studio-code"></a>Installieren Sie das Teams-Toolkit für Visual Studio Code
+
+Bevor Sie mit der Installation beginnen, müssen Visual Studio Code und der Teams-Client installiert sein.
 
 ## <a name="steps-to-install-teams-toolkit"></a>Schritte zum Installieren des Teams-Toolkits
 
@@ -79,6 +86,35 @@ Das Teams-Toolkit wird standardmäßig auf die neueste Version aktualisiert. Mit
 * Wählen Sie in der Erweiterung des Teams-Toolkits das Symbol aus :::image type="icon" source="../assets/images/teams-toolkit-v2/setting icon.PNG"::: .
 * Wählen Sie **"Andere Version installieren** " aus, um auf die neueste Version des Teams-Toolkits zu aktualisieren.
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="install-teams-toolkit-for-visual-studio"></a>Installieren Sie das Teams-Toolkit für Visual Studio
+
+Bevor Sie mit der Installation beginnen, müssen Sie Visual Studio-Installer installieren.
+
+Sie können die neuesten Visual Studio-Installer von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/vs/preview/) herunterladen.
+
+## <a name="steps-to-install-teams-toolkit"></a>Schritte zum Installieren des Teams-Toolkits
+
+Nachdem Sie die Visual Studio-Installer geöffnet haben, gehen Sie im Popupfenster "Workloads" wie folgt vor:
+
+1. Wählen Sie die Workload **ASP.NET und Webentwicklung** aus.
+1. Wählen Sie im Bereich "**Installationsdetails**" die **Microsoft Teams-Entwicklungstools** aus.
+1. Wählen Sie **Installieren** aus.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual Studio-Installation":::
+
+1. Wählen Sie **"Starten"** aus, um Visual Studio zu öffnen.
+
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Starten von Visual Studio":::
+
+   > [!IMPORTANT]
+   > Es wird empfohlen, Visual Studio 2022, Version 17.3.3, herunterzuladen, da teams Toolkit für Visual Studio ga in dieser Version ist. Dieser Artikel wurde für Visual Studio 2022, Version 17.3.3, geschrieben. Teams Toolkit Version 17.3.* oder höher.
+
+::: zone-end
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Erkunden des Teams-Toolkits](explore-Teams-Toolkit.md)
@@ -86,3 +122,6 @@ Das Teams-Toolkit wird standardmäßig auf die neueste Version aktualisiert. Mit
 * [Vorbereiten des Erstellens von Apps mit dem Microsoft Teams-Toolkit](build-environments.md)
 * [Bereitstellen von Cloudressourcen mithilfe des Teams-Toolkits](provision.md)
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
+* [Erstellen einer neuen Teams-App in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
+* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)

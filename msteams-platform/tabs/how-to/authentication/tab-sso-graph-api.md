@@ -4,12 +4,12 @@ description: Konfigurieren Sie zusätzliche Berechtigungen und Bereiche mit Micr
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Delegierter Berechtigungszugriffstokenbereich für Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605089"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780849"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich
 
@@ -220,8 +220,9 @@ Sie können die Zustimmung mithilfe der Auth-API anfordern. Ein weiterer Ansatz 
 4. Wenn Sie weitere Zustimmungen von Azure AD anfordern, müssen Sie `prompt=consent` in den [Abfragezeichenfolgenparameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) in Azure AD einschließen, andernfalls würde Azure AD nicht nach den anderen Bereichen fragen.
     - Verwenden Sie `?prompt=consent&scope={scopes}` anstelle von `?scope={scopes}`
     - Stellen Sie sicher, dass `{scopes}` alle Bereiche enthält, für die Sie den Benutzer auffordern, z. B. `Mail.Read` oder `User.Read`.
-5. Nachdem der App-Benutzer mehr Berechtigungen erteilt hat, wiederholen Sie den OBO-Fluss, um Zugriff auf diese anderen APIs zu erhalten.
 
+    Informationen zum Behandeln der inkrementellen Zustimmung für die Registerkarten-App finden Sie [unter "Inkrementelle und dynamische Benutzerzustimmung"](/azure/active-directory/develop/v2-permissions-and-consent).
+5. Nachdem der App-Benutzer mehr Berechtigungen erteilt hat, wiederholen Sie den OBO-Fluss, um Zugriff auf diese anderen APIs zu erhalten.
     </details>
 
 ## <a name="see-also"></a>Siehe auch

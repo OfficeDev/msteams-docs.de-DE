@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
-ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67452360"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780884"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -392,7 +392,7 @@ Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams S
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deeplink-Verknüpfung für SharePoint-Framework-Registerkarten
 
-Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwendet werden: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Wenn ein Bot eine TextBlock-Nachricht mit einem Deeplink sendet, wird eine neue Browserregisterkarte geöffnet, wenn Benutzer den Link auswählen. Dies erfolgt in der Chrome und Microsoft Teams Desktop-App, die unter Linux ausgeführt wird.

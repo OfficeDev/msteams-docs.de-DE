@@ -6,17 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 8545d4bbd97a6a4c5065c279368505f18dd5a14a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617141"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781019"
 ---
 # <a name="debug-your-microsoft-teams-app"></a>Debuggen Ihrer Microsoft Teams-App
 
-Mit dem Microsoft Teams-Toolkit können Sie Ihre Teams-App debuggen und eine Vorschau anzeigen. Debuggen ist der Prozess des Überprüfens, Erkennens und Behebens von Problemen oder Fehlern, um sicherzustellen, dass das Programm in Teams erfolgreich ausgeführt wird.
+Das Teams-Toolkit hilft Ihnen beim Debuggen und der Vorschau Ihrer Teams-App. Debuggen ist der Prozess des Überprüfens, Erkennens und Behebens von Problemen oder Fehlern, um sicherzustellen, dass das Programm in Teams erfolgreich ausgeführt wird.
 
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Debuggen Ihrer Microsoft Teams-App für Visual Studio Code
+
+Das Teams-Toolkit in Visual Studio Code automatisiert den Debugprozess. Sie können Fehler erkennen und beheben sowie eine Vorschau der Teams-App anzeigen. Sie können auch Debugeinstellungen anpassen, um Ihre Registerkarte oder Ihren Bot zu erstellen.
 Während des Debugprozesses:
 
 * Das Teams-Toolkit startet automatisch App-Dienste, startet Debugger und lädt die Teams-App quer.
@@ -193,9 +199,119 @@ Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen
 > [!div class="nextstepaction"]
 > [Lokales Debuggen Ihrer App](debug-local.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Debuggen Ihrer Microsoft Teams-App mit Visual Studio
+
+Das Teams-Toolkit automatisiert App-Startdienste, initiiert das Debuggen und lädt die Teams-App quer. Nach dem Debuggen können Sie eine Vorschau der Teams-App im Teams-Webclient anzeigen. Sie können auch Debugeinstellungen anpassen, um Ihre Bot-Endpunkte oder Umgebungsvariablen zum Laden Ihrer konfigurierten App zu verwenden. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Während des Debugprozesses unterstützt das Teams-Toolkit die folgenden Debugfeatures:
+
+* Vorbereiten von Teams-App-Abhängigkeiten
+* Debugging starten
+* Umschalthaltepunkte
+* Hot Reload
+* Debuggen beenden
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+| &nbsp; | Installieren | Zum Benutzen... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio 2022, Version 17.3 | Sie können die Enterprise-Edition von Visual Studio und die "ASP.NET" Workload und Microsoft Teams-Entwicklungstools installieren. |
+| &nbsp; | Teams Toolkit | Eine Visual Studio-Erweiterung, die ein Projektgerüst für Ihre App erstellt. Verwenden Sie die neueste Version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams für die Zusammenarbeit mit allen, mit denen Sie zusammenarbeiten, über Apps für Chats, Besprechungen und Anrufe – alles an einem Ort. |
+| &nbsp; | [Vorbereiten Ihres Microsoft 365-Mandanten](../concepts/build-and-test/prepare-your-o365-tenant.md) | Zugriff auf das Teams-Konto mit den entsprechenden Berechtigungen zum Installieren einer App. |
+| &nbsp; | [Microsoft 365-Entwicklerkonto](/../concepts/build-and-test/prepare-your-o365-tenant) | Zugriff auf das Teams-Konto mit den entsprechenden Berechtigungen zum Installieren einer App. |
+| &nbsp; | Azure-Tools und [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure-Tools für den Zugriff auf gespeicherte Daten oder die Bereitstellung eines cloudbasierten Back-End für Ihre Teams-App in Azure. |
+|&nbsp;  | **Optional** | &nbsp; |
+|&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok wird verwendet, um externe Nachrichten von Azure Bot Framework an Ihren lokalen Computer weiterzuleiten.|
+
+## <a name="key-features-of-teams-toolkit"></a>Wichtige Features des Teams-Toolkits
+
+Sie können die folgenden wichtigen Features des Teams-Toolkits sehen, die den lokalen Debugprozess Ihrer Teams-App automatisieren:
+
+### <a name="prepare-teams-app-dependencies"></a>Vorbereiten von Teams-App-Abhängigkeiten
+
+Das Teams-Toolkit bereitet lokale Debugabhängigkeiten vor und registriert Ihre Teams-App im Mandanten in Ihrem Konto. Für Bot- und Nachrichtenerweiterungs-Apps registriert und konfiguriert das Teams-Toolkit den Bot.
+
+### <a name="start-debugging"></a>Debugging starten
+
+Sie können das Debuggen mit einem einzigen Vorgang ausführen und **F5** drücken, um das Debuggen zu starten. Das Teams-Toolkit erstellt Code, startet Dienste und startet die App in Ihrem Browser.
+
+### <a name="toggle-breakpoints"></a>Umschalthaltepunkte
+
+Sie können Haltepunkte in den Quellcodes von Registerkarten, Bots, Nachrichtenerweiterungen und Azure-Funktionen umschalten. Die Haltepunkte werden ausgeführt, wenn Sie mit der Teams-App in Ihrem Webbrowser interagieren.
+Die folgende Abbildung zeigt die Umschalthaltepunkte:
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Lokale Debug-Umschaltfläche" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
+
+### <a name="hot-reload"></a>Hot Reload
+
+Wählen Sie **Hot Reload** aus, um Ihre Änderungen in Ihrer Teams-App anzuwenden, wenn Sie die Quellcodes während des Debuggens gleichzeitig aktualisieren und speichern möchten.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Symbol &quot;Hot Reload&quot; auswählen":::
+
+Wählen Sie in der Dropdownliste die Option **Hot Reload dateispeichern** aus, um das automatische Hot Reload zu aktivieren.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Beim Speichern der Datei &quot;Hot Reload&quot; auswählen":::
+  
+   > [!Tip]
+   > Weitere Informationen zu Hot Reload Funktion von Visual Studio während des Debuggens finden <https://aka.ms/teamsfx-vs-hotreload>Sie unter .
+
+### <a name="stop-debugging"></a>Debuggen beenden
+
+Wählen Sie **"Debuggen beenden** " aus, wenn das lokale Debuggen abgeschlossen ist.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Symbol &quot;Debug beenden&quot; auswählen":::
+
+## <a name="customize-debug-settings"></a>Anpassen von Debugeinstellungen
+
+Sie können die Debugeinstellung für Ihre Teams-App anpassen, um Ihre Bot-Endpunkte zu verwenden und Umgebungsvariablen hinzuzufügen:
+
+### <a name="use-your-bot-endpoint"></a>Verwenden Ihres Bot-Endpunkts
+
+Sie können die siteEndpoint-Konfiguration in **.fx/configs/config.local.json** auf Ihren Endpunkt festlegen.
+
+```
+"bot": {
+    "siteEndpoint": "https://baidu.com"
+}
+```
+
+### <a name="add-environment-variables"></a>Umgebungsvariablen hinzufügen
+
+Sie können **"environmentVariables** " zur Datei **"launchSettings.json** " hinzufügen.
+
+:::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Hinzufügen benutzerdefinierter Umgebungsvariablen":::
+
+### <a name="launch-teams-app-as-a-web-app"></a>Starten der Teams-App als Web-App
+
+Sie können die Teams-App als Web-App starten, anstatt sie im Teams-Client auszuführen.
+
+1. Wählen Sie **eigenschaften** > **launchSettings.json** in Projektmappen-Explorer Panel unter Ihrem Projekt aus.
+1. Entfernen Sie " **launchUrl"** aus der Datei.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Starten von Teams als Web-App durch Entfernen von launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
+
+1. Klicken Sie mit der rechten Maustaste auf **"Projektmappe** ", und wählen Sie **"Eigenschaften"** aus.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="Klicken Sie mit der rechten Maustaste auf die Lösung, und wählen Sie Eigenschaften aus." lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
+
+1. Wählen Sie im Dialogfeld **"Konfigurationseigenschaftenkonfiguration** > " aus.
+1. Deaktivieren Sie das Kontrollkästchen **Bereitstellen** .
+1. Wählen Sie **OK** aus.
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Deaktivieren der Bereitstellung in Konfigurationseigenschaften" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
+
+::: zone-end
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Debuggen von Hintergrundprozessen](debug-background-process.md)
 * [Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen](provision.md)
 * [Bereitstellen in die Cloud](deploy.md)
 * [Vorschau und Anpassen des Teams-App-Manifests](TeamsFx-preview-and-customize-app-manifest.md)
+* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
+* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
+* [Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

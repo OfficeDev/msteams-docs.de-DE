@@ -6,18 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 0ef95064a1715a64d8f719c54aced7cdc74ecb23
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617248"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781047"
 ---
 # <a name="explore-teams-toolkit"></a>Erkunden des Teams-Toolkits
 
-In diesem Dokument können Sie verschiedene UI-Elemente zusammen mit einer Beschreibung und grundlegenden Verwendung im Teams-Toolkit verstehen.
+In diesem Dokument können Sie verschiedene UI-Elemente sowie beschreibung und grundlegende Verwendung im Teams-Toolkit für Visual Studio Code und Visual Studio verstehen.
 
-## <a name="teams-toolkit-basic-ui-elements"></a>Grundlegende UI-Elemente des Teams-Toolkits
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-for-visual-studio-code-basic-ui-elements"></a>Teams Toolkit für Visual Studio Code – grundlegende UI-Elemente
 
 Nach der Installation des Teams-Toolkits wird die Benutzeroberfläche des Teams-Toolkits wie in der folgenden Abbildung dargestellt angezeigt:
 
@@ -142,12 +145,63 @@ Im Aufgabenbereich sehen Sie die folgenden Abschnitte:
    :::column-end:::
 :::row-end:::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="explore-teams-toolkit-for-visual-studio"></a>Erkunden des Teams-Toolkits für Visual Studio
+
+Nach der Installation des Teams-Toolkits können Sie die Optionen des Teams-Toolkits in zwei verschiedenen Methoden anzeigen:
+
+# <a name="project"></a>[Projekt](#tab/prj)
+
+Sie können unter **Project** auf das Teams-Toolkit zugreifen.
+
+1. Wählen Sie **Project** > **Teams Toolkit** aus.
+1. Sie können jetzt auf verschiedene Teams-Toolkit-Optionen zugreifen.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Menü &quot;Teams-Toolkit-Vorgänge&quot;":::
+
+# <a name="solution-explorer"></a>[Projektmappen-Explorer](#tab/solutionexplorer)
+
+   Sie können unter **Projektmappen-Explorer** auf das Teams-Toolkit zugreifen.
+
+1. Wählen Sie **"Ansicht** >  **Projektmappen-Explorer** aus, um Projektmappen-Explorer Bereich anzuzeigen.
+1. Klicken Sie mit der rechten Maustaste auf Ihr **Projekt**.
+1. Wählen Sie **das Teams-Toolkit** aus, um auf verschiedene Teams-Toolkit-Optionen zuzugreifen.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams-Toolkit-Vorgänge aus Project":::
+
+   > [!NOTE]
+   > In diesem Szenario lautet der Projektname **"MyTeamsApp1**".
+
+---
+
+Nachdem Sie Ihr Teams-Projekt erstellt haben, können Sie die folgenden Funktionen im Teams-Toolkit für Visual Studio ausführen:
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Teams-Toolkit-Vorgänge über das Menü &quot;Projekt&quot;":::
+
+|Funktion  |Beschreibung  |
+|---------|---------|
+|Vorbereiten von Abhängigkeiten von Teams-Apps     |Bevor Sie diesen Schritt mit einem lokalen Debuggen ausführen, können Sie die lokalen Debugabhängigkeiten einrichten und die Teams-App auf der Teams-Plattform registrieren. Sie benötigen ein Microsoft 365-Konto. Weitere Informationen finden Sie unter [Debuggen Ihrer Teams-App lokal mit Visual Studio](debug-teams-app-visual-studio.md)         |
+|Manifestdatei öffnen     |Zum Öffnen der Teams-Manifestdatei können Sie mit der Maus auf die Parameter zeigen, um eine Vorschau der Werte anzuzeigen. Weitere Informationen finden [Sie unter Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)         |
+|Updatemanifest im Teams-Entwicklerportal     |Wenn Sie die Manifestdatei aktualisieren, können Sie die Manifestdatei nur dann erneut in Azure bereitstellen, ohne das gesamte Projekt erneut bereitzustellen. Verwenden Sie diesen Befehl, um Ihre Änderungen auf remote zu aktualisieren. Weitere Informationen finden [Sie unter Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)       |
+|Bereitstellung in der Cloud     |Diese Option hilft Ihnen beim Erstellen von Azure-Ressourcen, die Ihre Teams-App hosten. Weitere Informationen finden Sie unter [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)        |
+|Bereitstellen in der Cloud     |Mit dieser Option können Sie Ihren Code in die Azure-Ressourcen kopieren, die bei der Bereitstellung in der Cloud erstellt wurden. Weitere Informationen finden [Sie unter Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)        |
+|Vorschau in Teams     |Mit dieser Option wird der Teams-Webclient gestartet, und Sie können eine Vorschau der Teams-App in ihrem Browser anzeigen.         |
+|Zip-App-Paket     |Diese Option generiert ein Teams-App-Paket im `Build` Ordner unter dem Projekt. Sie können das Paket auf den Teams-Client hochladen und die Teams-App ausführen.         |
+
+::: zone-end
+
 ## <a name="see-also"></a>Siehe auch
 
 * [Installieren des Teams-Toolkits](install-Teams-Toolkit.md)
 * [Erstellen einer neuen Teams-App mit Teams Toolkit](create-new-project.md)
 * [Vorbereiten des Erstellens von Apps mit dem Microsoft Teams-Toolkit](build-environments.md)
 * [Bereitstellen von Cloudressourcen mithilfe des Teams-Toolkits](provision.md)
+* [Erstellen einer neuen Teams-App in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
+* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337236"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781211"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -46,7 +46,7 @@ Wenn Sie über eine vorhandene persönliche Registerkarten-App verfügen, erstel
 
 Wenn Sie beispielcode zum Abschließen dieses Lernprogramms verwenden möchten, führen Sie die Setupschritte im [Todo-Listenbeispiel aus,](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) um eine persönliche Registerkarten-App mithilfe der Teams-Toolkit-Erweiterung für Visual Studio Code zu erstellen, und kehren Sie dann zu diesem Artikel zurück, um sie für Microsoft 365 zu aktualisieren.
 
-Alternativ können Sie eine einfache Single Sign-On *Hello World-App* verwenden, die Microsoft 365 bereits im folgenden Schnellstartabschnitt aktiviert hat, und dann zum [Querladen Ihrer App in Teams](#sideload-your-app-in-teams) springen.
+Alternativ können Sie im folgenden Schnellstartabschnitt eine einfache App für einmaliges Anmelden ( *Hello World* ) verwenden, die Microsoft 365 bereits aktiviert hat, und dann zum [Querladen Ihrer App in Teams](#sideload-your-app-in-teams) springen.
 
 ### <a name="quickstart"></a>Schnellstart
 
@@ -190,7 +190,7 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 So zeigen Sie Ihre App in Outlook im Web an:
 
 1. Navigieren Sie zu [Outlook im Web](https://outlook.office.com), und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
-1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
+1. Wählen Sie auf der Seitenleiste  **"Weitere Apps" aus**. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App zu starten und eine Vorschau anzuzeigen, die in Outlook im Web ausgeführt wird.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Klicken Sie auf outlook.com auf der Seitenleiste auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
@@ -200,7 +200,7 @@ So zeigen Sie Ihre App in Outlook im Web an:
 So zeigen Sie Ihre App an, die in Office auf einem Windows-Desktop ausgeführt wird:
 
 1. Starten Sie Office, und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
-1. Wählen Sie die Auslassungszeichen (**...**) auf der Seitenleiste aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
+1. Wählen Sie auf der Seitenleiste das **Symbol "Apps** " aus. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um Ihre App in Office zu starten.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste in Office-Desktopclients auf die Option &quot;Weitere Apps&quot; (Auslassungspunkte), um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
@@ -233,7 +233,7 @@ Verwenden Sie die [Kanäle der Microsoft Teams-Entwicklercommunity](/microsoftte
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Auswählen von Microsoft Teams-, Outlook- und Office-Debugzielen im Teams-Toolkit":::
 
-Bei der ersten Ausführung des lokalen Debuggens bei Office oder Outlook werden Sie aufgefordert, sich bei Ihrem Microsoft 365-Mandantenkonto anzumelden und ein selbstsigniertes Testzertifikat zu installieren. Sie werden auch aufgefordert, Teams manuell zu installieren. Wählen Sie **"In Teams installieren** " aus, um ein Browserfenster zu öffnen und Ihre App manuell zu installieren. Klicken Sie dann auf **"Weiter** ", um mit dem Debuggen Ihrer App in Office/Outlook fortzufahren.
+Bei der ersten Ausführung des lokalen Debuggens bei Office oder Outlook werden Sie aufgefordert, sich bei Ihrem Microsoft 365-Mandantenkonto anzumelden und ein selbstsigniertes Testzertifikat zu installieren. Sie werden auch aufgefordert, Teams manuell zu installieren. Wählen Sie **"In Teams installieren** " aus, um ein Browserfenster zu öffnen und Ihre App manuell zu installieren. Wählen Sie dann **"Weiter"** aus, um mit dem Debuggen Ihrer App in Office/Outlook fortzufahren.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Dialogfeld &quot;Toolkit&quot; – Teams-Installation":::
 
@@ -246,7 +246,7 @@ Geben Sie Feedback und melden Sie Alle Probleme mit der Debugumgebung des Teams-
 | Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Beispielstartseite (Microsoft 365) | Anzeigen der SSO-Authentifizierung und Nutzung der TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Beispielstartseite (Microsoft 365) | Veranschaulicht die SSO-Authentifizierung und die TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

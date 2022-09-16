@@ -6,20 +6,27 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
-ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 02bbcc86c769f8ebff87803b6a12bf882e214bf6
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617789"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780707"
 ---
 # <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
+
+Das Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird.
+
+::: zone pivot="visual-studio-code"
+
+## <a name="customize-teams-app-manifest-for-visual-studio-code"></a>Anpassen des Teams-App-Manifests für Visual Studio Code
 
 Das Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Weitere Informationen zum Manifest finden Sie unter [App-Manifestschema für Teams](../resources/schema/manifest-schema.md). In diesem Abschnitt werden folgende Themen behandelt:
 
 * [Vorschau der Manifestdatei in der lokalen Umgebung](#preview-manifest-file-in-local-environment)
 * [Vorschau der Manifestdatei in der Remoteumgebung](#preview-manifest-file-in-remote-environment)
-* [Lokale Änderungen mit Dev Portal synchronisieren](#sync-local-changes-to-dev-portal)
+* [Lokale Änderungen mit dem Entwicklerportal synchronisieren](#sync-local-changes-to-developer-portal)
 * [Anpassen ihres Teams-App-Manifests](#customize-your-teams-app-manifest)
 * [Überprüfen des Manifests](#validate-manifest)
 
@@ -133,9 +140,9 @@ Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der **
    > [!NOTE]
    > Wenn es mehr als eine Umgebung gibt, müssen Sie die Umgebung auswählen, die Sie in der Vorschau anzeigen möchten (siehe Abbildung):
 
-## <a name="sync-local-changes-to-dev-portal"></a>Lokale Änderungen mit Dev Portal synchronisieren
+## <a name="sync-local-changes-to-developer-portal"></a>Lokale Änderungen mit dem Entwicklerportal synchronisieren
 
-Nachdem Sie die Manifestdatei in der Vorschau angezeigt haben, können Sie Ihre lokalen Änderungen auf folgende Weise mit dev Portal synchronisieren:
+Nach der Vorschau der Manifestdatei können Sie Ihre lokalen Änderungen auf folgende Weise mit dem Entwicklerportal synchronisieren:
 
 > [!NOTE]
 > Weitere Informationen zum Entwicklerportal finden Sie im [Entwicklerportal für Teams](../concepts/build-and-test/teams-developer-portal.md).
@@ -254,8 +261,104 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## Edit Teams app manifest using Visual Studio
+
+Teams Toolkit in Visual Studio loads manifest from `manifest.template.json` with configurations from `state.{env}.json` and `config.{env}.json` while provisioning and preparing app dependencies. You can also create Microsoft Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps) with the manifest.
+
+After scaffolding, in the manifest template file under `templates/appPackage` folder,
+`manifest.template.json` is shared between local and remote environment.
+
+In the manifest template, select **Project** > **Teams Toolkit** > **Open Manifest File**.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest file" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png":::
+
+### Customize app manifest in Teams Toolkit
+
+There are two types of placeholders in `manifest.template.json`:
+
+* `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. It's recommended to not modify the values in `state.{env}.json`.
+* `{{config.manifest.xx}}` is customized placeholder, whose value is resolved from `config.{env}.json`.
+
+You can add a customized parameter by:
+
+* Adding a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
+* Adding a config value in `config.{env}.json`.
+
+    ```
+        {
+            "manifest": {
+            "KEY": "VALUE"
+            }
+    }
+    ```
+
+### Preview app manifest in Teams Toolkit
+
+You can preview values in app manifest in two ways:
+
+* When you hover over the placeholder in `manifest.template.json`, then you can see the values for **dev** and **local** environment.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png":::
+
+* You can also hover over the key besides each placeholder in `manifest.template.json`, and you can see the same values for **dev** and **local** environment.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png":::
+
+   > [!NOTE]
+   > If the environment has not been provisioned, or the Teams app dependencies have not been prepared, it indicates that the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
+
+### Preview manifest file
+
+To preview the manifest file, you can sideload for local or deploy for Azure. You can preview the manifest file by performing the following step:
+
+* Select **Project** > **Teams Toolkit** and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates configuration for local or remote Teams app.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png":::
+
+There are two other ways to upload zip app package before you can preview manifest file:
+
+1. From the list of menu select **Project** > **Teams Toolkit** > **Zip App Package**, and select **For Local** or **For Azure**.
+
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png":::
+
+1. You can also upload zip app package from Solution Explorer, if you right-click on **MyTeamsApp1** and then select **Teams Toolkit** > **Zip App Package** > **For Local** or **For Azure**.
+
+  > [!NOTE]
+  > In this scenario the project name is **MyTeamsApp1**.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
+
+Teams Toolkit generates the zip app package, and to preview manifest file content you can follow the step below:
+
+* Right-click on **manifest.template.json** under **appPackage** folder, select **Preview Manifest File** > **For Local** or **For Azure**.
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png":::
+
+This displays the preview of the manifest file in Visual Studio.
+
+### Sync local changes to Developer Portal
+
+After you've previewed the manifest file in Visual Studio, you can now sync the local changes to the Developer Portal. Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Portal**, or context menu from Solution Explorer. You can now preview the manifest file in Developer Portal as a result of syncing the local changes.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Update manifest in teams developer portal" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png":::
+
+> [!NOTE]
+> The changes are updated to Teams Developer Portal. If you have some manual updates in Developer Portal, that can be overwritten. In the **Warning** dialog box you can select **Overwrite and update** or **Cancel**.
+
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
+
+::: zone-end
+
 ## See also
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
+
+* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+
+* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)

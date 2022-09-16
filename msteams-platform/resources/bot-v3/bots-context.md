@@ -1,17 +1,17 @@
 ---
-title: Abrufen von Kontext für Ihren Microsoft Teams Bot
+title: Abrufen von Kontext für Ihren Microsoft Teams-Bot
 description: In diesem Modul erfahren Sie, wie Sie Kontext für Bots in Microsoft Teams abrufen, die Teamliste und das Benutzerprofil oder die Teilnehmerliste im persönlichen oder Gruppenchat abrufen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 3fd75e063f9b12c09bc4dded167bd8cdaead6b7a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fd43d9c4b3a3e4702b9bbd4955e58c0fc86caddf
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143116"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780926"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Abrufen von Kontext für Ihren Microsoft Teams Bot
+# <a name="get-context-for-your-microsoft-teams-bot"></a>Abrufen von Kontext für Ihren Microsoft Teams-Bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -19,13 +19,13 @@ Ihr Bot kann auf zusätzlichen Kontext zum Team oder Chat zugreifen, z. B. auf d
 
 > [!NOTE]
 >
-> * auf Microsoft Teams-spezifischen Bot-APIs können Sie am besten über unsere Erweiterungen für das Bot Builder SDK zugreifen.
-> * Laden Sie für C# oder .NET unser [Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet" herunter.
-> * Für Node.js Entwicklung ist der Bot Builder für Teams Funktionalität in das [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
+> * Auf Microsoft Teams-spezifische Bot-APIs können Sie am besten über unsere Erweiterungen für das Bot Builder SDK zugreifen.
+> * Laden Sie für C# oder .NET unser [NuGet-Paket "Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) " herunter.
+> * Für Node.js Entwicklung ist die Bot Builder für Teams-Funktionalität in das [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 integriert.
 
 ## <a name="fetch-the-team-roster"></a>Abrufen der Teamliste
 
-Ihr Bot kann die Liste der Teammitglieder und deren grundlegende Profile abfragen. Zu den grundlegenden Profilen gehören Teams Benutzer-IDs und Microsoft Azure Active Directory (Azure AD)-Informationen wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob ein Benutzer, der sich über Microsoft Azure Active Directory (Azure AD)-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ein Teammitglied ist.
+Ihr Bot kann die Liste der Teammitglieder und deren grundlegende Profile abfragen. Zu den grundlegenden Profilen gehören Microsoft Teams-Benutzer-IDs und Microsoft Azure Active Directory (Azure AD)-Informationen wie Name und Objekt-ID. Sie können diese Informationen verwenden, um Benutzeridentitäten zu korrelieren. Überprüfen Sie beispielsweise, ob ein Benutzer, der sich über Microsoft Azure Active Directory (Azure AD)-Anmeldeinformationen bei einer Registerkarte angemeldet hat, ein Teammitglied ist.
 
 ### <a name="rest-api-example"></a>BEISPIEL FÜR REST-API
 
@@ -72,6 +72,7 @@ Response body
 ### <a name="net-example"></a>.NET-Beispiel
 
 Rufen Sie `GetConversationMembersAsync` die Verwendung `Team.Id` auf, um eine Liste der Benutzer-IDs zurückzugeben.
+Der Aufruf `GetConversationMembersAsync` zum Abrufen `userRole` der Eigenschaft gibt den Wert als Benutzer zurück.
 
 ```csharp
 // Fetch the members in the current conversation
