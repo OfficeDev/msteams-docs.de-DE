@@ -3,18 +3,18 @@ title: Übersicht über universelle Aktionen für adaptive Karten
 description: Informationen zu universellen Aktionen für adaptive Karten, z. B. benutzerspezifische Ansichten, sequenzielle Workflowunterstützung und mehr für Desktop- und mobile Umgebungen
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142087"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786976"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Universal-Aktionen für adaptive Karten
 
 Universelle Aktionen für adaptive Karten haben sich aus dem Feedback von Entwicklern entwickelt, dass die Aktionsbehandlung trotz der universellen Darstellung von Layout und Rendering für adaptive Karten nicht möglich war. Auch wenn ein Entwickler die gleiche Karte an verschiedene Orte senden wollte, muss er Aktionen anders behandeln.
 
-Universelle Aktionen für adaptive Karten bringen den Bot als allgemeines Back-End für die Behandlung von Aktionen mit sich und führen einen neuen Aktionstyp ein, der appsübergreifend funktioniert, `Action.Execute`z. B. Teams und Outlook.
+Universelle Aktionen für adaptive Karten bringen den Bot als allgemeines Back-End für die Behandlung von Aktionen und führen einen neuen Aktionstyp ein, `Action.Execute`der appsübergreifend funktioniert, z. B. Teams und Outlook.
 
 Dieses Dokument hilft Ihnen zu verstehen, wie Sie das Modell für universelle Aktionen verwenden können, um die Benutzererfahrung bei der Interaktion mit adaptiven Karten über Plattformen und Anwendungen hinweg zu verbessern.
 
@@ -34,36 +34,36 @@ Universelle Aktionen für adaptive Karten verbessern die Benutzerfreundlichkeit,
 
 Vor den universellen Aktionen für adaptive Karten stellten verschiedene Hosts unterschiedliche Aktionsmodelle wie folgt bereit:
 
-* Teams oder bots verwendet `Action.Submit`, ein Ansatz, der das tatsächliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurückstellen.
-* Outlook verwendet`Action.Http`, um mit dem in der Nutzlast der adaptiven Karte explizit angegebenen Back-End-Dienst zu kommunizieren.
+* Teams oder Bots verwendet `Action.Submit`, ein Ansatz, der das tatsächliche Kommunikationsmodell auf den zugrunde liegenden Kanal zurücksetzt.
+* Outlook wurde für die Kommunikation mit dem Back-End-Dienst verwendet `Action.Http` , der explizit in der Nutzlast der adaptiven Karte angegeben ist.
 
 Die folgende Abbildung zeigt das aktuelle inkonsistente Aktionsmodell:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Inkonsistentes Aktionsmodell":::
 
-Mit den universellen Aktionen für adaptive Karten können Sie die Aktionsbehandlung auf verschiedenen Plattformen verwenden `Action.Execute` . `Action.Execute`funktioniert hubübergreifend, einschließlich Teams und Outlook. Darüber hinaus kann eine adaptive Karte als Antwort für eine `Action.Execute` ausgelöste Aufrufanforderung zurückgegeben werden.
+Mit den universellen Aktionen für adaptive Karten können Sie die Aktionsbehandlung auf verschiedenen Plattformen verwenden `Action.Execute` . `Action.Execute` funktioniert hubübergreifend, einschließlich Teams und Outlook. Darüber hinaus kann eine adaptive Karte als Antwort für eine `Action.Execute` ausgelöste Aufrufanforderung zurückgegeben werden.
 
 Die folgende Abbildung zeigt das neue Modell für universelle Aktionen:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Neue universelle Aktionen für adaptive Karten":::
 
-Sie können jetzt die gleiche Karte an beide senden, Teams und Outlook, und sie mithilfe des zugrunde liegenden Bots synchron halten. Alle Auf beiden Plattformen ausgeführten Aktionen werden mit diesem Build einmal für die andere plattform widergespiegelt *. Stellen Sie das Modell an einer beliebigen Stelle* (Universelle Aktionen für adaptive Karten) bereit.
+Sie können jetzt die gleiche Karte an Teams und Outlook senden und mithilfe des zugrunde liegenden Bots miteinander synchronisieren. Alle Auf beiden Plattformen ausgeführten Aktionen werden mit diesem Build einmal für die andere plattform widergespiegelt *. Stellen Sie das Modell an einer beliebigen Stelle* (Universelle Aktionen für adaptive Karten) bereit.
 
 Die folgende Abbildung zeigt die universellen Aktionen für adaptive Karten für Teams und Outlook:
 
 # <a name="mobile"></a>[Mobil](#tab/mobile)
 
-:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Mobile karte zum Teams und Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Mobile gleiche Karte für Teams und Outlook":::
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte zum Teams und Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Gleiche Karte für Teams und Outlook" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>Benutzerspezifische Ansichten
 
-Heute sieht jeder Benutzer im Teams Chat oder Kanal genau die gleichen Ansichts- und Schaltflächenaktionen auf der adaptiven Karte. In bestimmten Szenarien ist es jedoch erforderlich, dass bestimmte Benutzer anders handeln und Zugriff auf unterschiedliche Informationen innerhalb desselben Chats oder Kanals haben.
+Heute sieht jeder Benutzer im Teams-Chat oder -Kanal genau die gleichen Ansichts- und Schaltflächenaktionen auf der adaptiven Karte. In bestimmten Szenarien ist es jedoch erforderlich, dass bestimmte Benutzer anders handeln und Zugriff auf unterschiedliche Informationen innerhalb desselben Chats oder Kanals haben.
 
 Wenn Sie z. B. eine Vorfallberichtskarte in einem Chat oder Kanal senden, muss nur dem Benutzer, dem der Vorfall zugewiesen wurde, die Schaltfläche " **Auflösen** " angezeigt werden. Andererseits muss dem Vorfallersteller eine Schaltfläche **"Bearbeiten"** angezeigt werden, und alle anderen Benutzer dürfen nur Details des Vorfalls anzeigen. Dies wird durch benutzerspezifische Ansichten ermöglicht, die von der `refresh` Eigenschaft aktiviert werden.
 
@@ -122,3 +122,4 @@ Sie können die ersten Schritte ausführen, indem Sie Szenarien mithilfe der [Sc
 * [Übersicht über adaptive Karten](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Karten @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Karten @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
+* [Universelle Aktionen für suchbasierte Messaging-Erweiterungen](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: In diesem Modul erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Teams-Apps, um einen Suchbefehl über das App-Manifest und manuell zu erstellen.
+description: In diesem Modul erfahren Sie mehr über Suchbefehlsspeicherorte und das Erstellen eines Suchbefehls für Messaging-Erweiterungen.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363473"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786962"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -34,11 +34,11 @@ Der Suchbefehl wird an einem oder an beiden der folgenden Speicherorte aufgerufe
 * Bereich zum Verfassen von Nachrichten: die Schaltflächen am unteren Rand des Bereichs zum Verfassen von Nachrichten.
 * Befehlsfeld: Durch @mentioning im Befehlsfeld.
 
-  Wenn der Suchbefehl aus dem Nachrichtenbereich zum Verfassen aufgerufen wird, sendet der Benutzer die Ergebnisse an die Unterhaltung. Wenn sie über das Befehlsfeld aufgerufen wird, interagiert der Benutzer mit der resultierenden Karte oder kopiert sie zur Verwendung an anderer Stelle.
+  Wenn ein Suchbefehl aus dem Nachrichtenbereich zum Verfassen aufgerufen wird, sendet der Benutzer die Ergebnisse an die Unterhaltung. Wenn sie über das Befehlsfeld aufgerufen wird, interagiert der Benutzer mit der resultierenden Karte oder kopiert sie zur Verwendung an anderer Stelle.
 
 In der folgenden Abbildung werden die Aufrufspeicherorte des Suchbefehls angezeigt:
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Suchbefehl ruft Speicherorte auf":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Screenshot zeigt die Aufrufspeicherorte eines Suchbefehls in einem Teams-Kanal.":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Hinzufügen des Suchbefehls zum App-Manifest
 
@@ -54,28 +54,28 @@ Die Voraussetzung zum Erstellen eines Suchbefehls ist, dass Sie bereits eine Nac
 1. Wählen Sie nach dem Importieren eines App-Pakets **nachrichtenerweiterungen** unter **"App-Features"** aus.
 1. Um eine Nachrichtenerweiterung zu erstellen, benötigen Sie einen von Microsoft registrierten Bot. Sie können entweder einen vorhandenen Bot verwenden oder einen neuen Bot erstellen. Wählen Sie " **Neuen Bot erstellen** " aus, geben Sie dem neuen Bot einen Namen, und wählen Sie dann " **Erstellen"** aus.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Der Screenshot zeigt, wie Sie einen Bot im Entwicklerportal erstellen.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Der Screenshot zeigt die Optionen zum Konfigurieren eines Bots für eine App im Teams-Entwicklerportal.":::
 
 1. Um einen vorhandenen Bot zu verwenden, wählen **Sie einen vorhandenen Bot und** dann die vorhandenen Bots aus der Dropdownliste aus, oder geben **Sie eine Bot-ID ein** , wenn Sie bereits eine Bot-ID erstellt haben.
 
 1. Wählen Sie den Bereich der Messaging-Erweiterung und dann **"Speichern"** aus.
 
-1. Wählen Sie " **Befehl hinzufügen"** im Abschnitt **"Befehl** " aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
+1. Wählen Sie im Abschnitt **"Befehl****" die Option "Befehl hinzufügen**" aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
 In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichtenerweiterung angezeigt:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Der Screenshot zeigt, wie Sie einen Befehl hinzufügen, um das Verhalten der Nachrichtenerweiterung zu definieren.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot zeigt, wie Sie im Teams Developer Portal einen Befehl hinzufügen, um das Verhalten der Nachrichtenerweiterung zu definieren.":::
 
 1. Wählen Sie **"Suchen** " aus, und geben Sie **Befehls-ID**, **Befehlstitel** und **Befehlsbeschreibung** ein.
 
 1. Geben Sie alle Parameter ein, und wählen Sie den Typ der Eingabe aus der Dropdownliste aus.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Der Screenshot zeigt, wie Sie einen Parameter hinzufügen, um den Befehl für die Nachrichtenerweiterung zu definieren.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot zeigt, wie Sie einen Parameter hinzufügen, um Ihren Befehl im Teams Developer Portal für eine Nachrichtenerweiterung zu definieren.":::
 
 1. Wählen Sie unter "**Vorschaulinks****" die Option "Domäne hinzufügen"** aus.
 
 1. Geben Sie eine gültige Domäne ein, und wählen Sie dann **"Hinzufügen"** aus.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Der Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
 
 1. Wählen Sie **Speichern**.
 
@@ -85,7 +85,7 @@ In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichten
 
 1. Wählen Sie im Befehlsbereich die Ellipse und dann den **Parameter "Bearbeiten"** aus.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots zeigen, wie Sie zusätzliche Parameter für Ihre Nachrichtenerweiterung hinzufügen.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots zeigen, wie Sie Parameter für Ihre Nachrichtenerweiterung bearbeiten.":::
 
 1. Wählen Sie **"Parameter hinzufügen"** aus, und geben Sie alle Parameter ein.
 
@@ -109,11 +109,11 @@ Sie müssen die Details des Suchparameters hinzufügen, der den Text definiert, 
 | Eigenschaftenname | Zweck | Erforderlich? | Minimale Manifestversion |
 |---|---|---|---|
 | `parameters` | Diese Eigenschaft definiert eine statische Liste von Parametern für den Befehl. | Nein | 1.0 |
-| `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
+| `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Die `parameter.name` wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
 | `parameter.description` | Diese Eigenschaft beschreibt die Zwecke oder das Beispiel des Werts, der angegeben werden muss. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
 | `parameter.title` | Diese Eigenschaft ist ein kurzer benutzerfreundlicher Parametertitel oder eine Bezeichnung. | Ja | 1.0 |
 | `parameter.inputType` | Diese Eigenschaft wird auf den Typ der erforderlichen Eingabe festgelegt. Mögliche Werte sind `text`, `textarea`, `number`, `date`, `time`. `toggle` Der Standardwert ist auf `text`. | Nein | 1.4 |
-| `parameters.value` | Anfangswert für den Parameter. Derzeit wird der Wert nicht unterstützt. | Nein | 1,5 |
+| `parameters.value` | Anfangswert für den Parameter. Der Wert wird derzeit nicht unterstützt. | Nein | 1,5 |
 
 #### <a name="example"></a>Beispiel
 
@@ -142,6 +142,7 @@ Der folgende Abschnitt ist ein Beispiel für das einfache App-Manifest des Objek
   ],
 ...
 }
+
 ```
 
 Das vollständige App-Manifest finden Sie im [App-Manifestschema](~/resources/schema/manifest-schema.md).

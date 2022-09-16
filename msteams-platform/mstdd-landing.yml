@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: e4a64e7ad55d369f7246927173e9841c10d85e89
-  ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+  ms.openlocfilehash: 6dcfa4770612496b94845ef8d922535b911bc81a
+  ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/13/2022
-  ms.locfileid: "67653175"
+  ms.lasthandoff: 09/16/2022
+  ms.locfileid: "67786948"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
+    - text: Universelle Aktionen für suchbasierte Nachrichtenerweiterungen
+      url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
     - text: Microsoft Teams-Toolkit-Erweiterung für Visual Studio 2022 eingeführt
       url: toolkit/teams-toolkit-overview-visual-studio.md
     - text: Steuerelemente für die Zusammenarbeit [Entwicklervorschau]
@@ -45,8 +47,6 @@ landingContent:
       url: tabs/how-to/using-teams-client-sdk.md
     - text: Teams-Toolkit, Version 4.0.0, für Visual Studio Code jetzt allgemein verfügbar
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: Bots und Nachrichtenerweiterungen für GCC und GCCH
-      url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 - title: Erste Schritte
   linkLists:
   - linkListType: get-started
