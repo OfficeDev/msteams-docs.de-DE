@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312229"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833390"
 ---
 # <a name="add-link-unfurling"></a>Linkausweitung hinzufügen
 
@@ -22,6 +22,7 @@ In diesem Dokument erfahren Sie, wie Sie Mithilfe des Entwicklerportals oder man
 >
 > * Derzeit wird das Aufheben der Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verbreitung von Links wird 30 Minuten lang zwischengespeichert.
+> * Messaging-Erweiterungsbefehle sind für die Verbreitung von Links nicht erforderlich. Es muss jedoch mindestens ein Befehl im Manifest vorhanden sein, da es sich um eine obligatorische Eigenschaft in Messagingerweiterungen handelt. Weitere Informationen finden Sie [unter Verfassen von Erweiterungen](/microsoftteams/platform/resources/schema/manifest-schema)
 
 Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, das die Nachrichtenerweiterung in eine Karte aufgelöst hat:
 
