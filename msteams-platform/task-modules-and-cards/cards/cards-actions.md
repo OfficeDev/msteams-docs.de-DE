@@ -3,12 +3,12 @@ title: Hinzufügen von Kartenaktionen in einem Bot
 description: In diesem Modul erfahren Sie, was Kartenaktionen in Microsoft Teams, Aktionstypen und deren Verwendung in Ihren Bots sind.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: da0c4f08a078d7bcd72c48aacccabdbf9f71b6ea
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605012"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806745"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -69,7 +69,7 @@ var button = new CardAction()
 {
     Type = ActionTypes.OpenUrl,
     Title = "Tabs in Teams",
-    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+    Value = "https://learn.microsoft.com/en-us/microsoftteams/platform/"
 };
 ```
 
@@ -82,7 +82,7 @@ CardFactory.actions([
 {
     type: 'openUrl',
     title: 'Tabs in Teams',
-    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+    value: 'https://learn.microsoft.com/en-us/microsoftteams/platform/'
 }])
 ```
 

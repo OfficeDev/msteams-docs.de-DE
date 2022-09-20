@@ -7,16 +7,17 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780865"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806752"
 ---
-# <a name="debug-your-microsoft-teams-app-locally"></a>Lokales Debuggen Ihrer Microsoft Teams-App
+# <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
-Das Teams-Toolkit hilft Ihnen, Ihre Teams-App lokal zu debuggen und eine Vorschau anzuzeigen. Während des Debugprozesses startet das Teams-Toolkit automatisch App-Dienste, startet Debugger und lädt die Teams-App quer. Sie können eine Vorschau Ihrer Teams-App im Teams-Webclient lokal nach dem Debuggen anzeigen.
+
+Mit dem Teams-Toolkit können Sie Ihre Microsoft Teams-App lokal debuggen und eine Vorschau anzeigen. Während des Debugprozesses startet das Teams-Toolkit automatisch App-Dienste, startet Debugger und lädt die Teams-App quer. Sie können eine Vorschau Ihrer Teams-App im Teams-Webclient lokal nach dem Debuggen anzeigen.
 
 ::: zone pivot="visual-studio-code"
 
@@ -151,7 +152,7 @@ Die Konfiguration **"An Frontend anfügen** " oder **"Bot starten** " startet ei
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Lokales Debuggen Ihrer Microsoft Teams-App mit Visual Studio
+## <a name="debug-your-teams-app-locally-using-visual-studio"></a>Lokales Debuggen Ihrer Teams-App mit Visual Studio
 
 Mit dem Teams-Toolkit können Sie Ihre Microsoft Teams-App lokal debuggen und eine Vorschau anzeigen. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Sie können Ihre App lokal in Visual Studio mithilfe des Teams-Toolkits debuggen, indem Sie Folgendes ausführen:
 
@@ -214,6 +215,3 @@ Führen Sie die folgenden Schritte mithilfe des Teams-Toolkits aus, um Ihre App 
 * [Hinzufügen von Funktionen zu ihrer Teams-App](add-capability.md)
 * [Bereitstellen in die Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen im Teams-Toolkit](TeamsFx-multi-env.md)
-* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
-* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
-* [Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

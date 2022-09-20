@@ -6,16 +6,16 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616981"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806857"
 ---
-# <a name="add-capabilities-to-microsoft-teams-apps"></a>Hinzufügen von Funktionen zu Microsoft Teams-Apps
+# <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
-Das Hinzufügen von Funktionen mit dem Teams-Toolkit hilft Ihnen, ihrer vorhandenen Teams-App zusätzliche Features hinzuzufügen. Der Vorteil des Hinzufügens weiterer Funktionen besteht darin, dass Sie Ihrer App weitere Funktionen hinzufügen können, indem Sie quellcodes automatisch mithilfe des Teams-Toolkits hinzufügen. Sie können auch verschiedene Funktionen basierend auf dem Projekt auswählen, das Sie in Ihrer Teams-App erstellt haben. In der folgenden Tabelle sind die Funktionen der Teams-App aufgeführt:
+Durch das Hinzufügen von Funktionen mit dem Teams-Toolkit können Sie zusätzliche Features zu Ihrer vorhandenen Microsoft Teams-App hinzufügen. Der Vorteil des Hinzufügens weiterer Funktionen besteht darin, dass Sie Ihrer App weitere Funktionen hinzufügen können, indem Sie quellcodes automatisch mithilfe des Teams-Toolkits hinzufügen. Sie können auch verschiedene Funktionen basierend auf dem Projekt auswählen, das Sie in Ihrer Teams-App erstellt haben. In der folgenden Tabelle sind die Funktionen der Teams-App aufgeführt:
 
 |Funktion|Beschreibung|Weitere unterstützte Funktionen|
 |--------|-------------|-----------------|

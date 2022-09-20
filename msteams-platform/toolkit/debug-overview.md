@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781019"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806922"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>Debuggen Ihrer Microsoft Teams-App
+# <a name="debug-your-teams-app"></a>Debuggen Sie Ihre Teams-App
 
-Das Teams-Toolkit hilft Ihnen beim Debuggen und der Vorschau Ihrer Teams-App. Debuggen ist der Prozess des Überprüfens, Erkennens und Behebens von Problemen oder Fehlern, um sicherzustellen, dass das Programm in Teams erfolgreich ausgeführt wird.
+
+Das Teams-Toolkit hilft Ihnen beim Debuggen und der Vorschau Ihrer Microsoft Teams-App. Debuggen ist der Prozess des Überprüfens, Erkennens und Behebens von Problemen oder Fehlern, um sicherzustellen, dass das Programm in Teams erfolgreich ausgeführt wird.
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>Debuggen Ihrer Teams-App für Visual Studio Code
+
+Das Teams-Toolkit in Microsoft Visual Studio Code automatisiert den Debugprozess. Sie können Fehler erkennen und beheben sowie eine Vorschau der Teams-App anzeigen. Sie können auch Debugeinstellungen anpassen, um Ihre Registerkarte oder Ihren Bot zu erstellen.
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Debuggen Ihrer Microsoft Teams-App für Visual Studio Code
 
 Das Teams-Toolkit in Visual Studio Code automatisiert den Debugprozess. Sie können Fehler erkennen und beheben sowie eine Vorschau der Teams-App anzeigen. Sie können auch Debugeinstellungen anpassen, um Ihre Registerkarte oder Ihren Bot zu erstellen.
+
 Während des Debugprozesses:
 
 * Das Teams-Toolkit startet automatisch App-Dienste, startet Debugger und lädt die Teams-App quer.
@@ -203,7 +209,7 @@ Teams Toolkit nutzt Visual Studio Code Multi-Target-Debugging zum gleichzeitigen
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Debuggen Ihrer Microsoft Teams-App mit Visual Studio
+## <a name="debug-your-teams-app-using-visual-studio"></a>Debuggen Ihrer Teams-App mit Visual Studio
 
 Das Teams-Toolkit automatisiert App-Startdienste, initiiert das Debuggen und lädt die Teams-App quer. Nach dem Debuggen können Sie eine Vorschau der Teams-App im Teams-Webclient anzeigen. Sie können auch Debugeinstellungen anpassen, um Ihre Bot-Endpunkte oder Umgebungsvariablen zum Laden Ihrer konfigurierten App zu verwenden. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Während des Debugprozesses unterstützt das Teams-Toolkit die folgenden Debugfeatures:
 
@@ -312,6 +318,3 @@ Sie können die Teams-App als Web-App starten, anstatt sie im Teams-Client auszu
 * [Verwenden des Teams-Toolkits zum Bereitstellen von Cloudressourcen](provision.md)
 * [Bereitstellen in die Cloud](deploy.md)
 * [Vorschau und Anpassen des Teams-App-Manifests](TeamsFx-preview-and-customize-app-manifest.md)
-* [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
-* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
-* [Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

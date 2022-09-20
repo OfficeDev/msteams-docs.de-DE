@@ -1,20 +1,20 @@
 ---
 title: Mitwirken an der Teams-Dokumentation
-description: Erfahren Sie mehr über die Schritte zum Erstellen und Veröffentlichen Teams Dokumentation
+description: Erfahren Sie mehr über die Schritte zum Erstellen und Veröffentlichen der Teams-Dokumentation
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 165f5df18395d329aa2f383d2f07e6f7ff3afdcf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a9b2f16b23eaa4879062c104a85b223564cc10c
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143081"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806759"
 ---
 # <a name="contribute-to-teams-documentation"></a>Mitwirken an der Teams-Dokumentation
 
-Teams Dokumentation ist Teil der **Microsoft-Dokumentation** Technischen Dokumentationsbibliothek. Der Inhalt ist in Gruppen unterteilt, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel im selben Dokument weisen nach docs.microsoft.com die gleiche URL-Pfaderweiterung **auf**. `/docs.microsoft.com/microsoftteams/...` Beispielsweise ist der Anfang des Teams Docset-Dateipfads. Teams Artikel werden in Markdown-Syntax geschrieben und auf GitHub gehostet.
+Die Teams-Dokumentation ist Teil der **Microsoft-Dokumentation** technischen Dokumentationsbibliothek. Der Inhalt ist in Gruppen unterteilt, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Artikel im selben Dokument haben die gleiche URL-Pfaderweiterung nach `learn.microsoft.com`. `/learn.microsoft.com/microsoftteams/...` Beispielsweise ist der Anfang des Teams-Dokumentdateipfads. Teams-Artikel werden in Markdown-Syntax geschrieben und auf GitHub gehostet.
 
 ## <a name="set-up-your-workspace"></a>Einrichten Ihres Arbeitsbereichs
 
@@ -26,7 +26,7 @@ Teams Dokumentation ist Teil der **Microsoft-Dokumentation** Technischen Dokumen
 <br>&emsp;&emsp; Oder
 > [!div class="checklist"]
 >
-> * Installieren sie innerhalb VS Code:
+> * Installieren in VS Code:
 
    1. Wählen Sie das **Symbol "Erweiterungen"** auf der seitenseitigen Aktivitätsleiste aus, oder verwenden Sie den Befehl **"Ansicht => Erweiterungen**" oder STRG+UMSCHALT+X, und suchen Sie nach **Microsoft-Dokumentation Authoring Pack**.
    1. Wählen Sie **Installieren** aus.
@@ -40,7 +40,7 @@ Der Leitfaden für Mitwirkende enthält eine Anleitung zum Erstellen, Veröffent
 
 * **[Microsoft Writing Style Guide](/style-guide/welcome)**: Microsoft Writing Style Guide ist eine umfassende Ressource für technisches Schreiben und spiegelt den modernen Ansatz von Microsoft für Sprache und Stil wider. Für eine einfache Referenz fügen Sie diesen Onlineleitfaden zum **Favoritenmenü** Ihres Browsers hinzu.
 
-* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**: Teams bestimmte Inhalte richtet sich an ein Entwicklerpublikum mit einem grundlegenden Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und dabei den Ton und Stil von Microsoft beibehalten.
+* **[Schreiben von Entwicklerinhalten](/style-guide/developer-content/)**: Teams-spezifische Inhalte richten sich an ein Entwicklerpublikum mit einem grundlegenden Verständnis von Programmierkonzepten und -prozessen. Es ist wichtig, dass Sie klare, technisch genaue Informationen auf überzeugende Weise bereitstellen und dabei den Ton und Stil von Microsoft beibehalten.
 
 * **[Schrittweise Anleitungen](/style-guide/procedures-instructions/writing-step-by-step-instructions)** schreiben: Angewendete und interaktive Erfahrungen sind eine großartige Möglichkeit für Entwickler, sich über Microsoft-Produkte und -Technologien zu informieren. Die Darstellung komplexer oder einfacher Verfahren in einem progressiven Format ist natürlich und benutzerfreundlich.
 
@@ -50,7 +50,7 @@ Der Leitfaden für Mitwirkende enthält eine Anleitung zum Erstellen, Veröffent
 
 ## <a name="file-paths"></a>Dateipfade
 
-Wenn Sie relative Pfade verwenden und Links zu anderen Dokumentenmappen erstellen, ist es wichtig, einen gültigen Dateipfad für Links in Ihrer Dokumentation festzulegen. Der Build ist auf GitHub nur erfolgreich, wenn der Dateipfad korrekt oder gültig ist.
+Wenn Sie relative Pfade verwenden und Links zu anderen Dokumentenmappen erstellen, ist es wichtig, einen gültigen Dateipfad für Links in Ihrer Dokumentation festzulegen. Ihr Build ist auf GitHub nur dann erfolgreich, wenn der Dateipfad korrekt oder gültig ist.
 
 Weitere Informationen zu Links und Dateipfaden finden [Sie unter "Verwenden von Links in der Dokumentation"](/contribute/how-to-write-links).
 
@@ -58,11 +58,11 @@ Weitere Informationen zu Links und Dateipfaden finden [Sie unter "Verwenden von 
 > So verweisen Sie auf einen Artikel, **der Teil des** Teams-Plattformdokuments ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad ohne vorangestellten Schrägstrich.<br>
 > &emsp;&#x2714; Die Dateierweiterung Markdown einschließen.<br>
->Beispiel: **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** –> [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
+>Beispiel:  **übergeordnetes Verzeichnis/Verzeichnis/Pfad-zu-article.md** –> [Erstellen einer App für Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > So verweisen Sie auf einen Microsoft-Dokumentation **Bibliotheksartikel, der nicht Teil des** Teams-Plattformdokuments ist:<br>
 > &emsp;&#x2714; Verwenden Sie einen relativen Pfad, der mit einem Schrägstrich beginnt.<br>
 > &emsp;&#x2714; Schließen Sie die Dateierweiterung nicht ein. <br>
-> Beispiel: **/docset/address-to-file-location** –> [Verwenden der Microsoft Graph-API zum Arbeiten mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> Beispiel: **/docset/address-to-file-location** –> [Verwenden der Microsoft Graph-API für die Zusammenarbeit mit Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Verwenden Sie den vollständigen `https` Dateipfad, um auf eine Seite außerhalb der Microsoft-Dokumentation Bibliothek zu verweisen, z. B. GitHub.<br>
 
 ## <a name="code-samples-and-snippets"></a>Codebeispiele und Codeausschnitte
@@ -80,5 +80,5 @@ Codebeispiele spielen eine wichtige Rolle, um APIs und SDKs effektiv zu verwende
 * [Leitfaden für Mitwirkende](/contribute)
 * [Dokumentformat und Sprachschnellstart](/contribute/style-quick-start)
 * [Aktuelles: Tipps zur Lesbarkeit von Quellcode](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
-* [Teams Dokumentation](/microsoftteams/platform/overview)
+* [Teams-Dokumentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
