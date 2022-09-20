@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihr Office 365-Entwicklerprogrammabonnement f
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6d3524ffc5e2ec5bb8f43fefcc100050060e154e
+ms.sourcegitcommit: 22e0803bb1d17ccb5222b7a1aa0f1ccebd785bdc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503459"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67835547"
 ---
 # <a name="add-test-data-to-your-environment"></a>Hinzufügen von Testdaten zu Ihrer Umgebung
 
@@ -179,7 +179,7 @@ Standardmäßig können nur globale Administratoren oder Teams-Dienstadministrat
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {

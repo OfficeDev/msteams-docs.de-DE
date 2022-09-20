@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 6dcfa4770612496b94845ef8d922535b911bc81a
-  ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+  ms.openlocfilehash: d6673489a45fb33141738ee553c97805e8fd1257
+  ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/16/2022
-  ms.locfileid: "67786948"
+  ms.lasthandoff: 09/20/2022
+  ms.locfileid: "67833718"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -27,8 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
-    - text: Universelle Aktionen für suchbasierte Nachrichtenerweiterungen
-      url: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
+    - text: Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt
+      url: apps-in-teams-meetings/meeting-app-extensibility.md
     - text: Microsoft Teams-Toolkit-Erweiterung für Visual Studio 2022 eingeführt
       url: toolkit/teams-toolkit-overview-visual-studio.md
     - text: Steuerelemente für die Zusammenarbeit [Entwicklervorschau]
@@ -103,6 +103,8 @@ landingContent:
       url: ~/concepts/design/design-teams-app-overview.md
     - text: Codebeispiele
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+    - text: Einheitliche Besprechungs-Apps
+      url: ~/apps-in-teams-meetings/meeting-app-extensibility.md
   - linkListType: whats-new
     links:
     - text: Neuigkeiten

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232253"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833655"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
@@ -19,11 +19,12 @@ Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikat
 
 > [!Note]
 >
-> Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) verfügbar.
+> Apps für Sofortbesprechungen, geplante Besprechungen im öffentlichen Kanal, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
 Teams unterstützt den Zugriff auf Apps während der Besprechung für die folgenden Besprechungstypen:
 
 * [**Geplante Besprechungen**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): Besprechungen, die über den Teams-Kalender geplant sind.
+* [**Geplante Kanalbesprechungen: Besprechungen**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop), die über öffentliche Teams-Kanäle geplant sind.
 * [**Einzelanrufe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Anrufe, die in einem Einzelchat initiiert wurden.
 * [**Gruppenanrufe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Anrufe, die im Gruppenchat initiiert wurden.
 * [**Sofortbesprechungen: Besprechungen**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5), die über die Schaltfläche " **Jetzt besprechen** " im Teams-Kalender initiiert wurden.
@@ -40,7 +41,7 @@ Besuchen Sie den [Teams-Store](https://go.microsoft.com/fwlink/p/?LinkID=2183121
 >
 > * Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
 >
-> * Derzeit werden App-Oberflächen in Teams-Kanalbesprechungen (sowohl geplante Besprechungen als auch Sofortbesprechungen) nicht unterstützt.
+> * Derzeit werden App-Erfahrungen in Teams-Sofortkanalbesprechungen nicht unterstützt.
 
 Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichkeiten der Besprechungs-App:
 
@@ -48,11 +49,11 @@ Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichk
 
 Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der Besprechungs-App, API-Verweise, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams.
 
-- **Erweitern der Besprechungs-App**: Verbessern Sie Ihre Besprechungserfahrung mithilfe der Besprechungserweiterungsfunktion. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
-- **Konfigurieren von Apps für Besprechungen**: Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
-- **Anpassen mit Zusammen-Modus-Szenen**: Das neue benutzerdefinierte Feature "Zusammen-Modus-Szenen" ermöglicht Benutzern die Zusammenarbeit an einer Besprechung mit ihrem Team an einer zentralen Stelle.
-- **Anpassen der App-Berechtigung im freigegebenen Kanal: Wenn Ihre App wichtige Informationen im freigegebenen Kanal freigibt, können Sie die App-Berechtigung für externe Mitglieder anpassen. App-Berechtigungen in [freigegebenen Kanälen](../concepts/build-and-test/Shared-channels.md) folgen der App-Liste des Hostteams und der App-Richtlinie des Hostmandanten.
-- **Abrufen von Besprechungsaufzeichnungen**: Sie können in einem Szenario nach der Besprechung auf Besprechungstranskripte zugreifen und diese abrufen. Konfigurieren Sie Ihre App so, dass Transkriptionen automatisch für eine geplante Besprechung abgerufen werden, und verwenden Sie sie für Einblicke, intelligente Analysen und vieles mehr.
+* **Erweitern der Besprechungs-App**: Verbessern Sie Ihre Besprechungserfahrung mithilfe der Besprechungserweiterungsfunktion. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
+* **Konfigurieren von Apps für Besprechungen**: Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.
+* **Anpassen mit Zusammen-Modus-Szenen**: Das neue benutzerdefinierte Feature "Zusammen-Modus-Szenen" ermöglicht Benutzern die Zusammenarbeit an einer Besprechung mit ihrem Team an einer zentralen Stelle.
+* **Anpassen der App-Berechtigung im freigegebenen Kanal**: Wenn Ihre App wichtige Informationen im freigegebenen Kanal freigibt, können Sie die App-Berechtigung für externe Mitglieder anpassen. App-Berechtigungen in [freigegebenen Kanälen](../concepts/build-and-test/Shared-channels.md) folgen der App-Liste des Hostteams und der App-Richtlinie des Hostmandanten.
+* **Abrufen von Besprechungsaufzeichnungen**: Sie können in einem Szenario nach der Besprechung auf Besprechungstranskripte zugreifen und diese abrufen. Konfigurieren Sie Ihre App so, dass Transkriptionen automatisch für eine geplante Besprechung abgerufen werden, und verwenden Sie sie für Einblicke, intelligente Analysen und vieles mehr.
 
 ## <a name="next-step"></a>Nächster Schritt
 
