@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c151217bc2a93de9337688b562b9f63f142c09fa
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435013"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833725"
 ---
 # <a name="meeting-apps-api-references"></a>API-Referenzen für Besprechungs-Apps
 
@@ -355,7 +355,7 @@ Verwenden Sie das folgende Beispiel, um die `webApplicationInfo` Eigenschaft Ihr
 >
 > * Der Bot kann Meeting-Start- oder -Endereignisse automatisch von allen Meetings empfangen, die in allen Kanälen erstellt wurden, indem er zum `ChannelMeeting.ReadBasic.Group` Manifest die RSC-Berechtigung hinzufügt.
 >
-> * Für einen Einzelanruf `organizer` ist der Initiator des Chats und für Gruppenanrufe `organizer` der Anrufinitiator.
+> * Für einen Einzelanruf `organizer` ist der Initiator des Chats und für Gruppenanrufe `organizer` der Anrufinitiator. Bei Besprechungen `organizer`im öffentlichen Kanal ist die Person, die den Kanalbeitrag erstellt hat.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -416,6 +416,33 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
              "tenantId": "<Tenant ID>" 
          }
     } 
+    ```
+
+* **Geplante Kanalbesprechungen:**
+
+    ```json
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
     ```
 
 * **Einzelanrufe:**
@@ -503,7 +530,7 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
 | **details.title** | Der Titel der Besprechung. |
-| **details.type** | Der Typ der Besprechung (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled oder Unknown). |
+| **details.type** | Der Besprechungstyp (GroupCall, ChannelScheduled, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled oder Unknown). |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
 | **conversation.conversationType** | Der Unterhaltungstyp. |
 | **conversation.id** | Die Besprechungschat-ID. |

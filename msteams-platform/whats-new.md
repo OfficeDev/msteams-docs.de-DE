@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786969"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833739"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -66,7 +66,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 19.04.2022 | Hochladen Ihrer App in Microsoft Teams | Verteilen Ihrer App > [Hochladen Ihrer App](concepts/deploy-and-publish/apps-upload.md)|
 | 01.04.2022 | Schritt-für-Schritt-Anleitung für die Erstellung von Teams-Unterhaltungs-Bots eingeführt| Erstellen von Bots > Bot-Unterhaltungen > Kanal- und Gruppenunterhaltungen > [Schrittweise Anleitung zum Erstellen von Teams Unterhaltungs-Bots](sbs-teams-conversation-bot.yml) |
 | 30.03.2022 | Das Modul „Erste Schritte mit der Blazor-App mithilfe von Registerkarten und Bots“ wurde aktualisiert|  Erste Schritte > [Erstellen Ihrer ersten App mit Blazor](sbs-gs-blazorupdate.yml)|
-|30.03.2022|Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
+| 30.03.2022 | Geräteberechtigungen für den Browser | Integrieren der Gerätefunktionen > [Geräteberechtigungen für den Browser](concepts/device-capabilities/browser-device-permissions.md) |
 | 29.03.2022 |Integration der Personenauswahl | Integrieren in Teams > [Integrieren der Personenauswahl](concepts/device-capabilities/people-picker-capability.md)
 | 23.03.2022 | Schritt-für-Schritt-Anleitung zum Entfalten von Links in Teams mithilfe des Bots wurde eingeführt | Nachrichtenerweiterungen erstellen > Linkentfaltung hinzufügen > [Links in Teams mit Bot entfalten](sbs-botbuilder-linkunfurling.yml)|  
 | 22.03.2022 | Informationen zum Debugprozess hinzugefügt| • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Lokales Debuggen Ihrer Teams-App](toolkit/debug-local.md) </br> • Tools und SDKs> Teams Toolkit für Visual Studio Code > [Debug-Hintergrundprozess](toolkit/debug-background-process.md)|
@@ -77,7 +77,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 24.02.2022| Schrittweise Anleitung zum Erstellen einer aktionsbasierten Nachrichtenerweiterung eingeführt | Nachrichtenerweiterungen erstellen > Aktionsbefehle > Aktionsbefehle definieren > [Aktionsbasierte Nachrichtenerweiterung erstellen](sbs-meetingextension-action.yml)|
 | 24.02.2022 | Schrittweise Anleitung zum Erstellen einer suchbasierten Nachrichtenerweiterung eingeführt | Erstellen von Nachrichtenerweiterungen > Suchbefehle > Definieren von Suchbefehlen > [Erstellen einer suchbasierten Nachrichtenerweiterung](sbs-messagingextension-searchcommand.yml)|
 | 24.02.2022 | Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
-| 23.02.2022 |Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 23.02.2022 | Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18.02.2022 | Ein umfangreiches Glossar für die Microsoft Teams-Entwicklerdokumentation wurde eingeführt, damit Sie die Definition eines Begriffs schnell finden können. | [Glossar](~/get-started/glossary.md) |
 | 18.02.2022 | Aktualisierung des Übersichtsmoduls für die Zuordnung der Teams-App zu den Unternehmenszielen, der Benutzergeschichte und der Erkundung der Funktionen der Teams-App | [Übersicht > Passende Teams-App](overview.md) |
 | 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält. | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
@@ -266,7 +266,8 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-| 08/23/2022 | Freigeben von Apps für die Teams-Besprechungsphase auf mobilen Geräten | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Aktivieren und Konfigurieren von Apps für Besprechungen](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 09/20/2022 | Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [einheitlichen Besprechungs-Apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 08/10/2022 | Apps für geplante Besprechungen im öffentlichen Kanal | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03.08.2022 | APIs zum Stummschalten und Aufheben der Stummschaltung für Apps in der Teams-Besprechungsphase | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [API-Referenzen für Besprechungs-Apps](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
 | 30.06.2022 | Apps für Sofortbesprechungen, Einzel- und Gruppenanrufe| Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md)|
