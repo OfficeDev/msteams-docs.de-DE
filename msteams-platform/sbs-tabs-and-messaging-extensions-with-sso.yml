@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Weitere Informationen zur SSO-Authentifizierung für Registerkarten.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c0e9ff9397c2afd70ab7de1a03b4fb04727dcec3
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 7932c22485aaeffc39bd1339e92740afe51396e6
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806864"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858930"
 items:
 - durationInMinutes: 1
   content: "Das Azure Active Directory Single Sign-On (Azure AD SSO) hilft bei der Authentifizierung von Benutzern in Teams. \n\n**Wichtige Aspekte der schrittweisen Anleitung von Azure AD SSO für Registerkarten und Nachrichtenerweiterungen**:\n\n * Nach der ersten Anmeldung ermöglicht Azure AD SSO dem Benutzer die automatische Anmeldung.\n * Ermöglicht dem Benutzer, sich bei anderen Geräten anzumelden, ohne erneut Anmeldeinformationen einzugeben.\n * Ruft das Token für den angemeldeten Benutzer ab.   \n\nDiese schrittweise Anleitung hilft Ihnen beim Erstellen von Registerkarten und Nachrichtenerweiterungen, die die Azure AD SSO-Authentifizierung aktivieren. Die folgende Ausgabe wird angezeigt:\n\n  ![Bild \"Herzlichen Glückwunsch\"](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"

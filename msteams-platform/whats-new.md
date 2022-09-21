@@ -3,12 +3,12 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833739"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858902"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -169,7 +169,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-|30.11.2020|Integration der Identitätsplattform mit Teams-Toolkit und Visual Studio Code für Registerkarten |[SSO-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/visual-studio-code-tab-sso.md)|
+|30.11.2020|Integration der Identitätsplattform mit Teams-Toolkit und Visual Studio Code für Registerkarten |[SSO-Authentifizierung mit Teams Toolkit und Visual Studio Code für Registerkarten](toolkit/add-single-sign-on.md)|
 |16.11.2020|Das Teams App-Manifest wurde auf Version 1.8 aktualisiert.|[Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |10.11.2020|Entwurfsanleitungen für Teams-Bots |[Bot-Entwurfsrichtlinien](bots/design/bots.md)|
 |30.09.2020|Das Senden und Empfangen von Dateien mit Bots auf mobilen Geräten wird jetzt unterstützt. |[Senden und Empfangen von Dateien über Ihren Bot](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |20.07.2020|Teams App-Überprüfungstool für AppSource-Einreichungen |[Teams App-Überprüfungstool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |15.07.2020|Erstellen eines virtuellen Assistenten für Teams |[Virtual Assistant für Microsoft Teams](samples/virtual-assistant.md)|
 |14.07.2020|Anzeigen der Dokumentation eines nativen Ladeindikators |[Anzeigen eines systemeigenen Ladeindikators](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|01.07.2020|Erste Schritte beim Erstellen von Teams-Apps mit dem Visual Studio Code-Toolkit |[Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|01.07.2020|Erste Schritte beim Erstellen von Teams-Apps mit dem Visual Studio Code-Toolkit |[Erstellen von Apps mit dem Microsoft Teams Toolkit und Visual Studio Code](sbs-gs-javascript.yml) |
 |01.07.2020|Single Sign-On für Registerkarten – allgemeine Verfügbarkeit für Teams Web- und Desktop-Clients |[Single Sign-On (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |05.06.2020| Das Manifestschema wurde auf Version 1.7 aktualisiert.| [Referenz: Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
 |18.05.2020|Integrieren von Power Virtual Agents in Teams |[Integrieren eines Power Virtual Agents-Chatbots in Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

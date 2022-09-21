@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die verfügbaren Microsoft Low- und No-Code
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382937"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858909"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Erstellen von benutzerdefinierten Apps mit geringem Code für Teams
 
@@ -59,10 +59,10 @@ Virtual Assistant ist eine Open-Source-Vorlage von Microsoft, mit der Sie eine s
 
 |  Thema  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI für App-Hersteller](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI für Entwickler](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps für App-Hersteller](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate für App-Hersteller](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate für Entwickler](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents für App-Hersteller und Entwickler](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI für App-Hersteller](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI für Entwickler](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps für App-Hersteller](/training/browse/?products=power-apps&roles=maker)</br>[Power Apps für Entwickler](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate für App-Hersteller](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate für Entwickler](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[Power Virtual Agents für App-Hersteller und Entwickler](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (Vorschau)
 
