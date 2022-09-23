@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehend
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618280"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990945"
 ---
 # <a name="create-incoming-webhooks"></a>Erstellen eingehender Webhooks
 
@@ -20,9 +20,12 @@ Mit einem eingehenden Webhook können externe Anwendungen Inhalte in Microsoft T
 * Nachrichtenerweiterungen
 * Connectors
 
+> [!IMPORTANT]
+> Sie können die Teams-App des Benachrichtigungs-Bots erstellen, die keine eingehenden Webhooks ist. Sie funktionieren ähnlich, aber der Benachrichtigungs-Bot hat mehr Funktionen. Weitere Informationen finden Sie im [Buildbenachrichtigungs-Bot mit JavaScript](../../sbs-gs-notificationbot.yml) oder [im Beispiel für eingehende Webhook-Benachrichtigungen](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Um zu beginnen, laden Sie das [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) jetzt herunter, und erkunden Sie es. Weitere Informationen finden Sie in den [Teams-Toolkit-Dokumenten](../../toolkit/teams-toolkit-fundamentals.md).
+
 Im folgenden Video erfahren Sie, wie Sie eingehende Webhooks erstellen:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Wichtige Features des eingehenden Webhooks
 
@@ -32,7 +35,7 @@ Die folgende Tabelle enthält die Features und die Beschreibung eines eingehende
 | -------- | ----------- |
 |Adaptiven Karten, die einen eingehenden Webhook verwenden | Adaptive Karten können über eingehende Webhooks gesendet werden. Weitere Informationen finden Sie unter [Senden von adaptiven Karten mit eingehenden Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
 |Unterstützung für Aktion erfordernde Nachrichten|Aktion erfordernde Nachrichtenkarten werden in allen Office 365-Gruppen einschließlich Microsoft Teams unterstützt. Wenn Sie Nachrichten über Karten senden, müssen Sie das Format für die eine Aktion erfordernde Nachrichtenkarte verwenden. Weitere Informationen finden Sie unter [Legacy-Referenz für eine Aktion erfordernde Nachrichtenkarte](/outlook/actionable-messages/message-card-reference) und [Nachrichten-Testwebsite für Karten](https://messagecardplayground.azurewebsites.net).|
-|Unabhängige HTTPS-Messaging-Unterstützung|Karten stellen Informationen klar und konsistent bereit. Jedes Tool oder Framework, das HTTPS-POST-Anforderungen senden kann, kann über einen eingehenden Webhook Nachrichten an Teams senden.|
+|Unabhängige HTTPS-Messaging-Unterstützung|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown-Unterstützung|Alle Textfelder in Aktion erfordernden Nachrichtenkarten unterstützen grundlegendes Markdown. Verwenden Sie in Ihren Karten kein HTML-Markup. HTML wird ignoriert und als reiner Text behandelt.|
 |Konfigurationsbereich|Der eingehender Webhook ist auf Kanalebene begrenzt und konfiguriert.|
 |Sichere Ressourcendefinitionen|Nachrichten werden als JSON-Nutzlast formatiert. Diese deklarative Nachrichtenstruktur verhindert das Einfügen von bösartigem Code.|
@@ -95,9 +98,9 @@ Führen Sie die folgenden Schritte aus, um einen eingehenden Webhook aus einem T
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| Beispielname           | Beschreibung | C#    | Node.js   |
+| Beispielname           | Beschreibung | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|Eingehender Webhook|Dieser Beispielcode veranschaulicht das Senden einer Karte mithilfe des eingehenden Webhooks. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|Eingehender Webhook|Dieser Beispielcode veranschaulicht das Senden einer Karte mithilfe des eingehenden Webhooks. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833655"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990889"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
@@ -36,8 +36,6 @@ Benutzer können der Besprechung Apps hinzufügen, indem sie die **+** Option au
 Besuchen Sie den [Teams-Store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) , und erkunden Sie Apps, die speziell für Besprechungen entwickelt wurden.
 
 > [!Note]
->
-> * Derzeit wird das Hinzufügen einer App auf Mobilgeräten nicht unterstützt. Ein Benutzer kann die App jedoch anzeigen und die App von mobilgeräten aus für die Stufe freigeben.
 >
 > * Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
 >

@@ -5,19 +5,19 @@ description: Verwenden Sie in diesem Artikel Unterhaltungsbots in Microsoft Team
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363510"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990910"
 ---
 # <a name="build-bots-for-teams"></a>Erstellen von Bots für Teams
 
-> [!NOTE]
-> Es wird empfohlen, dass Sie Ihre erste Bot-App oder Benachrichtigungs-Bot-App mit dem Entwicklungstool der neuen Generation für Teams erstellen. Weitere Informationen finden Sie unter [Teams Toolkit für Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) und [Teams Toolkit für Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
-
 Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben von Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. Die tägliche Verwendung von Bots umfasst Bots, die Informationen über das Wetter bereitstellen, Essensreservierungen durchführen oder Reiseinformationen bereitstellen. Interaktionen mit Bots können kurze Fragen und Antworten oder komplexe Unterhaltungen sein.
+
+> [!NOTE]
+> Es wird empfohlen, mit dem [Erstellen Ihrer ersten Bot-App mit JavaScript](../sbs-gs-bot.yml) oder [dem Buildbenachrichtigungs-Bot mit JavaScript](../sbs-gs-notificationbot.yml) mithilfe des Entwicklungstools der neuen Generation für Teams zu beginnen. Weitere Informationen finden Sie in der [Übersicht über das Teams-Toolkit](../toolkit/teams-toolkit-fundamentals.md).
 
 > [!IMPORTANT]
 >
@@ -67,7 +67,7 @@ Sie können die Teams-Bot-APIs verwenden, um Informationen für Mitglieder eines
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Tägliche Aufgabenerinnerung des Bots| Zeigen Sie, wie Sie eine wiederkehrende Aufgabe planen und eine Erinnerung zu einem bestimmten Zeitpunkt erhalten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Tägliche Aufgabenerinnerung des Bots| Zeigen Sie, wie Sie eine wiederkehrende Aufgabe planen und eine Erinnerung zu einem bestimmten Zeitpunkt erhalten. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
 | Hallo Welt Bot | Dies ist eine einfache Hello World-Anwendung mit Bot- und Nachrichtenerweiterungsfunktionen. |  | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
 | Benachrichtigung über adaptive Karten | Dies ist ein Beispiel, das zeigt, wie Benachrichtigungen mit verschiedenen adaptiven Karten mithilfe von Bots gesendet werden. |  | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
 | Eingehende Webhook-Benachrichtigung | Dies ist ein Beispiel, das zeigt, wie Sie Benachrichtigungen über eingehenden Webhook in Microsoft Teams-Kanälen senden. |  | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |

@@ -5,20 +5,23 @@ description: In diesem Modul erfahren Sie, wie Webhooks und Connectors Ihre Webd
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 4381ea978676b4526eb56bfdd1eaeb8157873618
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: bb453367eb0d8f4c2c1a54681d67dc38fb3e0358
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337208"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991649"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks und Connectors
 
 Webhooks und Connectors helfen beim Verbinden der Webdienste mit Kanälen und Teams in Microsoft Teams. Webhooks sind benutzerdefinierte HTTP-Rückrufe, mit denen Benutzer über alle Aktionen benachrichtigt werden, die im Teams-Kanal ausgeführt wurden. Es ist eine Möglichkeit für eine App, Echtzeitdaten abzurufen. Connectors ermöglichen Benutzern, Benachrichtigungen und Nachrichten von Ihren Webdiensten zu abonnieren. Sie stellen einen HTTPS-Endpunkt für Ihren Dienst bereit, um Nachrichten in Form von Karten zu posten.
 
+> [!IMPORTANT]
+> Sie können die Teams-App des Benachrichtigungs-Bots erstellen, die keine eingehenden Webhooks ist. Sie funktionieren ähnlich, aber der Benachrichtigungs-Bot hat mehr Funktionen. Weitere Informationen finden Sie im [Buildbenachrichtigungs-Bot mit JavaScript](../sbs-gs-notificationbot.yml) oder [im Beispiel für eingehende Webhook-Benachrichtigungen](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Um zu beginnen, laden Sie das [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) jetzt herunter, und erkunden Sie es. Weitere Informationen finden Sie in den [Teams-Toolkit-Dokumenten](../toolkit/teams-toolkit-fundamentals.md).
+
 ## <a name="outgoing-webhooks"></a>Ausgehende Webhooks
 
-Webhooks hilft Teams bei der Integration in externe Apps. Mit ausgehenden Webhooks können Sie Textnachrichten von einem Kanal an die Webdienste senden. Nach dem Konfigurieren der ausgehenden Webhooks können Benutzer Outgoing Webhook via @mention erwähnen und eine Nachricht an Webdienste senden. Der Dienst antwortet innerhalb von zehn Sekunden mit einem Text oder einer Karte auf die Nachricht.
+Webhooks hilft Teams bei der Integration in externe Apps. Mit ausgehenden Webhooks können Sie Textnachrichten von einem Kanal an die Webdienste senden. Nach dem Konfigurieren der ausgehenden Webhooks können Benutzer Outgoing Webhook via @mention erwähnen und eine Nachricht an Webdienste senden. Der Dienst antwortet innerhalb von 10 Sekunden mit einem Text oder einer Karte auf die Nachricht.
 
 > [!NOTE]
 > Ausgehende Webhooks werden pro Team konfiguriert und können nicht als Teil einer normalen Teams-App eingeschlossen werden.
@@ -31,7 +34,7 @@ Connectors ermöglichen Benutzern das Abonnieren von Benachrichtigungen und Nach
 
 Eingehende Webhooks helfen beim Veröffentlichen von Nachrichten aus Apps in Teams. Wenn eingehende Webhooks für ein Team in einem beliebigen Kanal aktiviert sind, wird der HTTPS-Endpunkt verfügbar gemacht, der korrekt formatierte JSON akzeptiert und die Nachrichten in diesen Kanal einfügt. Sie können z. B. einen eingehenden Webhook in Ihrem DevOps-Kanal erstellen, Ihren Build konfigurieren und gleichzeitig Dienste bereitstellen und überwachen, um Warnungen zu senden.
 
-#### <a name="notification-bot-or-incoming-webhook---choose-the-right-one"></a>Benachrichtigungs-Bot oder eingehender Webhook – wählen Sie den richtigen!
+#### <a name="notification-bot-or-incoming-webhook---choose-the-right-one"></a>Benachrichtigungs-Bot oder eingehender Webhook – wählen Sie den richtigen aus
 
 Bevor Sie mit dem Erstellen eingehender Webhooks beginnen, sollten Sie auch wissen, dass Sie den Benachrichtigungs-Bot mithilfe des Teams-Toolkits erstellen können. Benachrichtigungs-Bots können eine anpassbare Benutzeroberfläche ermöglichen, um verschiedene Geschäftsszenarien zu erfüllen.
 
@@ -48,13 +51,13 @@ Erfahren Sie mehr über die Unterschiede zwischen dem Benachrichtigungs-Bot und 
 | Adaptive Karte senden | Ja | Ja |
 | Senden einer Willkommensnachricht | Kann eine Willkommensnachricht senden | Keine Willkommensnachricht |
 | Trigger unterstützt | Alle Trigger werden unterstützt. Wenn Sie das Teams-Toolkit verwenden, können Sie Vorlagenprojekte mit den folgenden Triggern schnell abrufen: <br> • Zeittrigger, der in Azure-Funktionen gehostet wird. <br> • Erneutes Bestätigen des HTTP-Triggers, der im Azure-App-Dienst gehostet wird <br> • HTTP-Trigger, der auf Azure Functions gehostet wird | Alle triggers supported |
-| Erstellungstools | • [Übersicht über das Teams-Toolkit für Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Übersicht über das Teams-Toolkit für Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md) <br> • [TeamsFx-Bibliothek](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | Keine Tools erforderlich |
+| Erstellungstools | • [Übersicht über das Teams-Toolkit für Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Übersicht über das Teams-Toolkit für Visual Studio](../toolkit/teams-toolkit-fundamentals.md) <br> • [TeamsFx-Bibliothek](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | Keine Tools erforderlich |
 | Cloudressource erforderlich | Azure Bot Framework | Keine Ressourcen erforderlich |
-| Lernprogramm | [Erstellen eines Benachrichtigungsbots mit JavaScript](../sbs-gs-notificationbot.yml) | – |
+| Lernprogramm | [Erstellen eines Benachrichtigungsbots mit JavaScript](../sbs-gs-notificationbot.yml) | [Beispiel für eingehende Webhook-Benachrichtigungen](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### <a name="office-365-connectors"></a>Office 365-Connectors
 
-Mit Office 365 Connectors können Sie eine benutzerdefinierte Konfigurationsseite für Ihren eingehenden Webhook erstellen und diese als Teil einer Teams-App zusammenfassen. Sie senden Nachrichten in erster Linie mit Office 365 Connectorkarten und haben die Möglichkeit, ihnen einen begrenzten Satz von Kartenaktionen hinzuzufügen. Beispielsweise ein Wetterconnector, mit dem Benutzer einen Ort und eine Uhrzeit auswählen können, um Updates über das Wetter von morgen zu erhalten. Sie werden auf Kanalebene konfiguriert, aber auf einer Teamebene installiert.
+Mit Office 365 Connectors können Sie eine benutzerdefinierte Konfigurationsseite für Ihren eingehenden Webhook erstellen und diese als Teil einer Teams-App zusammenfassen. Sie senden Nachrichten in erster Linie mit Office 365 Connectorkarten und haben die Möglichkeit, ihnen einen begrenzten Satz von Kartenaktionen hinzuzufügen. Beispielsweise ein Wetterconnector, mit dem Benutzer einen Ort und eine beliebige Tageszeit auswählen können, um Updates über das Wetter von morgen zu erhalten. Sie sind auf Kanalebene konfiguriert, aber auf Teamebene installiert.
 
 > [!NOTE]
 > Sie können die Office 365-Connector Teams-App an unseren AppStore leiten.

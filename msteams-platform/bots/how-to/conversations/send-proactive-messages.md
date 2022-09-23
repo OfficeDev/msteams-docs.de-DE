@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot sen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: adecf29766909fb9a8692aa135e09c41a307c867
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586903"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990938"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -22,12 +22,10 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, di
 * Geplante Nachrichten
 
 > [!IMPORTANT]
-> Bots sind in Government Community Cloud (GCC) und GCC-High aber nicht in DOD-Umgebungen (Department of Defense) verfügbar.
 >
-> Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden:
+> * Um proaktive Nachrichten zu senden, empfiehlt es sich, mit dem [Erstellen eines Benachrichtigungs-Bots mit JavaScript](../../../sbs-gs-notificationbot.yml) oder [einem Beispiel für eingehende Webhook-Benachrichtigungen](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) zu beginnen. Um zu beginnen, laden Sie [das Teams-Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) herunter. Weitere Informationen finden Sie in den [Teams-Toolkit-Dokumenten](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`.
-> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD). Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Um eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team zu senden, muss Ihr Bot über den erforderlichen Zugriff zum Senden der Nachricht verfügen. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden.
 
@@ -87,7 +85,7 @@ Im folgenden Video erfahren Sie, wie Sie proaktive Nachrichten aus Bots senden:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>Verstehen, wer einen Bot blockiert, stummgeschaltet oder deinstalliert hat
@@ -327,7 +325,7 @@ Die folgende Tabelle enthält ein einfaches Codebeispiel, das den grundlegenden 
 |---------------|--------------|--------|-------------|--------|
 | Grundlagen zu Teams-Unterhaltungen  | Veranschaulicht die Grundlagen von Unterhaltungen in Teams, einschließlich des Sendens proaktiver 1:1-Nachrichten.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Starten eines neuen Threads in einem Kanal | Veranschaulicht das Erstellen eines neuen Threads in einem Kanal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation der App für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| Proaktive Installation der App und Senden proaktiver Benachrichtigungen | Dieses Beispiel zeigt, wie Sie die proaktive Installation der App für Benutzer verwenden und proaktive Benachrichtigungen senden können, indem Sie Microsoft Graph APIs aufrufen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 | Proaktives Messaging | Dies ist ein Beispiel, das zeigt, wie Sie die Unterhaltungsreferenzinformationen des Benutzers speichern, um proaktive Erinnerungsnachrichten mithilfe von Bots zu senden. | In Kürze verfügbar | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
 
 > [!div class="nextstepaction"]

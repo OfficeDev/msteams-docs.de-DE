@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 9b6492efed353e2f3228a04da292141679401e66
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780686"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991656"
 ---
 # <a name="install-teams-toolkit"></a>Installieren des Teams-Toolkits
 
@@ -94,7 +94,7 @@ Das Teams-Toolkit wird standardmäßig auf die neueste Version aktualisiert. Mit
 
 Bevor Sie mit der Installation beginnen, müssen Sie Visual Studio-Installer installieren.
 
-Sie können die neuesten Visual Studio-Installer von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/vs/preview/) herunterladen.
+Sie können die neuesten Visual Studio-Installer von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com) herunterladen.
 
 ## <a name="steps-to-install-teams-toolkit"></a>Schritte zum Installieren des Teams-Toolkits
 

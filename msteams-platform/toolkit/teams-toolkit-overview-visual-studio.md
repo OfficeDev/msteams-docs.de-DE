@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 0f51d2c44eef3ec09d48581a797c63d501be8644
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
+ms.openlocfilehash: 3685d105f13024507b880c35040b9d798a6d845f
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302451"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990917"
 ---
 # <a name="teams-toolkit-overview-for-visual-studio"></a>Übersicht über das Teams-Toolkit für Visual Studio
 
@@ -45,7 +45,7 @@ Die wichtigsten Meilensteine dieser Reise sind:
 
 ## <a name="install-teams-toolkit-for-visual-studio"></a>Installieren Sie das Teams-Toolkit für Visual Studio
 
-Sie können das neueste Visual Studio-Installationsprogramm von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/vs/preview/) herunterladen.
+Sie können das neueste Visual Studio-Installationsprogramm von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com) herunterladen.
 
 > [!NOTE]
 > Sie müssen zuerst das Visual Studio-Installationsprogramm installieren, bevor Sie Visual Studio installieren.
@@ -75,7 +75,7 @@ Nachdem Sie das Teams-Toolkit installiert haben, können Sie sich die verschiede
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu.png" alt-text="Menü &quot;Teams-Toolkit-Vorgänge&quot;":::
 
-   Sie können auch über Průzkumník řešení auf das Menü des Teams-Toolkits zugreifen.
+   Sie können auch über Projektmappen-Explorer auf das Menü des Teams-Toolkits zugreifen.
 
 4. Klicken Sie mit der rechten Maustaste auf Ihr **Projekt**.
 5. Wählen Sie **die Menüoptionen** des **Teams Toolkit** >  Teams Toolkit aus.

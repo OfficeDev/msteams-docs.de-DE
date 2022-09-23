@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780884"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991001"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -258,7 +258,7 @@ Die Abfrageparameter sind:
 * `content`: Ein optionales Feld für das Besprechungsdetails-Feld.
 
 > [!NOTE]
-> Derzeit wird die Angabe des Standorts nicht unterstützt. Sie müssen den UTC-Offset angeben. Dies bedeutet Zeitzonen, wenn Sie Ihre Start- und Endzeiten generieren.
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 Um diesen Deeplink mit Ihrem Bot zu verwenden, können Sie diesen als URL-Ziel auf der Schaltfläche Ihrer Karte angeben oder über den Aktionstyp `openUrl` auf die Aktion tippen.
 
@@ -348,7 +348,7 @@ Das folgende Deep Link-Format kann in einem Bot, Connector oder einer Nachrichte
 
 Die Abfrageparameter sind:
 
-* `fileId`: Eindeutige Datei-ID aus Sharepoint Online, auch bekannt als `sourcedoc`. Beispiel:`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Mandanten-ID, z. B. `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Unterstützter Dateityp, z. B. docx, pptx, xlsx und pdf.
 * `objectUrl`: Objekt-URL der Datei. Das Format ist `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Beispiel: `https://microsoft.sharepoint.com/teams/(filepath)`.
@@ -385,7 +385,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-to-an-app"></a>Deeplinks zu einer App
 
-Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld angezeigt, um die App zu installieren.
+Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld zum Installieren oder Öffnen der App angezeigt.
 
 > [!NOTE]
 > Wenn Ihre App für die mobile Plattform genehmigt wurde, können Sie deep-Links zu einer App auf mobilgeräten erstellen. Apple App Store Connect Team ID ist zusätzlich erforderlich, damit der Deep-Link unter Teams-iOS funktioniert. Weitere Informationen finden Sie unter [Aktualisieren von Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
