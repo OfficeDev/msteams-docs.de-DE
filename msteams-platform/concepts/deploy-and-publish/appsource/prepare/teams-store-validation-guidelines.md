@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
-ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417650"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044700"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 
@@ -21,7 +21,7 @@ Wenn Sie diese Richtlinien befolgen, erhöht sich die Wahrscheinlichkeit, dass I
 > * Einige Richtlinien gelten möglicherweise nicht für Ihre App. Wenn Ihre App beispielsweise keinen Bot enthält, können Sie botbezogene Richtlinien ignorieren.
 > * Wir haben diese Richtlinien mit Querverweisen auf die kommerziellen Zertifizierungsrichtlinien von Microsoft versehen und Do's und Don'ts mit Beispielen für erfolgreiche oder nicht erfolgreiche Szenarien in unserem Validierungsprozess hinzugefügt.
 > * Bestimmte Richtlinien sind als *obligatorische Korrektur* gekennzeichnet. Wenn Ihre App-Einreichung diese obligatorischen Richtlinien nicht erfüllt, erhalten Sie von uns einen Fehlerbericht mit Maßnahmen zur Behebung des Problems. Ihre App-Einreichung wird die Microsoft Teams Store-Validierung erst bestehen, nachdem Sie die Probleme behoben haben.
-> * Andere Richtlinien sind als *vorgeschlagene Korrektur* markiert. Für ein optimales Nutzererlebnis empfehlen wir Ihnen, die Probleme zu beheben. Ihre App wird jedoch nicht für die Veröffentlichung im Teams Store gesperrt, wenn Sie die Probleme nicht beheben.
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -103,10 +103,10 @@ Der Name einer App spielt eine entscheidende Rolle dafür, wie Benutzer sie im S
   * **Help**
 * Präfixe oder Suffixe von allgemeinen Substantiven mit dem Namen des Entwicklers. Beispielsweise **Contoso Tasks** anstelle von **Tasks**.
 * Darf **keine Teams** oder andere Microsoft-Produktnamen wie Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox usw. verwenden, was fälschlicherweise auf Co-Branding oder Co-Selling hinweisen könnte. Weitere Informationen zum Verweisen auf Microsoft-Softwareprodukte und -Dienste finden Sie unter [Microsoft-Warenzeichen- und Markenrichtlinien](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
-* Wenn Ihre App Teil einer offiziellen Partnerschaft mit Microsoft ist, muss der Name Ihrer App an erster Stelle stehen. Beispiel: **Contoso Connector für Microsoft Teams**.
+* If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * Der Name einer im Store aufgeführten App oder eines anderen Angebots auf dem kommerziellen Marktplatz darf nicht kopiert werden.
 * Darf keine profanen oder abfälligen Begriffe enthalten. Der Name darf auch keine rassen- oder kulturell unsensible Sprache enthalten.
-* Muss eindeutig sein. Wenn Ihre App (Contoso) im Microsoft Teams Store und in Microsoft AppSource aufgeführt ist und Sie eine andere spezifische App für eine bestimmte Region wie Contoso Mexiko auflisten möchten, muss Ihre Einreichung die folgenden Kriterien erfüllen:
+* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
   * Nennen Sie die regionsspezifischen Funktionen der App in den Abschnitten Titel, Metadaten, First-Response-App-Erfahrung und Hilfe. Der Titel muss z. B. „Contoso Mexiko“ sein. Der Titel der App muss eine bestehende App desselben Entwicklers deutlich unterscheiden, um Verwechslungen beim Endnutzer zu vermeiden.
   * Wählen Sie beim Hochladen des App-Pakets im Partner Center die richtigen **Märkte** aus, in denen die App im Abschnitt **„Verfügbarkeit“** verfügbar sein wird.
 
@@ -196,7 +196,7 @@ Apps, die auf der iOS- oder Android-Version von Teams ausgeführt werden, müsse
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * Wenn Ihre App ein Konto erfordert, können sich Benutzer kostenlos für ein Konto registrieren. Die Verwendung des Begriffs **kostenlos** oder **kostenloser Account** ist untersagt.
-* Sie können bestimmen, ob ein Konto unbegrenzt oder für einen begrenzten Zeitraum aktiv ist. Wenn das Konto abläuft, darf die App keine Benutzeroberfläche, keinen Text oder keine Links anzeigen, die auf die Notwendigkeit der Zahlung hinweisen.
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * Die Datenschutzrichtlinien und Nutzungsbedingungen Ihrer App müssen frei von kommerziellen UI oder Links sein.
 
 </details>
@@ -225,7 +225,7 @@ Bots müssen immer die Berechtigung zum Hochladen einer Datei und zum Anzeigen e
 <br></br>
 <details><summary>Erweitern, um mehr zu erfahren</summary>
 
-Sie dürfen keine Domänen außerhalb der Kontrolle Ihrer Organisation (einschließlich Wildcards) und Tunnelingdienste in die Domänenkonfigurationen Ihrer App einschließen. Zu den folgenden Ausnahmen gehören:
+Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
 * Wenn Ihre App die OAuthCard des Azure Bot Service verwendet, müssen Sie `token.botframework.com` als gültige Domäne angeben oder die Schaltfläche **Anmelden** funktioniert nicht.
 * Wenn Ihre App auf SharePoint basiert, können Sie die zugehörige SharePoint-Stammsite mithilfe der Kontexteigenschaft `{teamSiteDomain}` als gültige Domäne einschließen.
@@ -420,7 +420,7 @@ Beachten Sie Folgendes:
 
 **Was Sie tun sollten:**
 
-* Konzentrieren Sie sich auf die Funktionen Ihrer App. Beispielsweise, wie Personen mit Ihrem Bot kommunizieren können.
+* Focus on your app's capabilities. For example, how people can communicate with your bot.
 * Fügen Sie Inhalte ein, die Ihre App genau darstellen.
 * Verwenden Sie Text mit Bedacht.
 * Rahmen Sie Screenshots mit einer Farbe, die Ihre Marke widerspiegelt und Marketinginhalte enthält.
@@ -526,9 +526,9 @@ Wenn Ihre App Lokalisierung unterstützt, muss Ihr App-Paket eine Datei mit Spra
 <details><summary>Benutzerfreundlichkeit und Funktionalität</summary>
 
 * Nach dem erfolgreichen Kauf und der Zuweisung von Lizenzen müssen Sie Folgendes angeben:
-* Zugang zu Nutzern für abonnierte Plan-Features.
-* Zusätzlicher Nutzen und bedeutende Vorteile des Abonnements für die Nutzer.
-* Stellen Sie in Ihrer Teams-App einen Link zur Startseite der SaaS-Anwendung bereit, auf der Abonnenten die Lizenzen in Zukunft verwalten können.
+  * Zugang zu Nutzern für abonnierte Plan-Features.
+  * Zusätzlicher Nutzen und bedeutende Vorteile des Abonnements für die Nutzer.
+  * Stellen Sie in Ihrer Teams-App einen Link zur Startseite der SaaS-Anwendung bereit, auf der Abonnenten die Lizenzen in Zukunft verwalten können.
 
 </details>
 </br>
@@ -566,7 +566,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
-* Der Registerkartenkonfigurationsbildschirm darf keine gesamte Website einbetten. Konzentrieren Sie sich auf Ihre Konfigurationserfahrung. Wenn Sie z. B. eine Projektmanagement-Anwendung entwickeln, mit der Benutzer ein Projekt in einem Kanal konfigurieren können, sollten Sie den Konfigurationsbildschirm für die Registerkarte so gestalten, dass der Benutzer ein Projekt aus Ihrer Anwendung auswählen kann, um es im Kanal zu konfigurieren. [*obligatorischer Fix*]
+* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
@@ -583,7 +583,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 
 <details><summary>Ansichten</summary>
 
-* Im Bereich des Anmeldebildschirms dürfen keine großen Logos verwendet werden. [*Obligatorischer Fix*]
+* The sign in screen area must not use large logos. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
@@ -591,7 +591,7 @@ Wenn Ihre App eine Registerkarte enthält, stellen Sie sicher, dass sie diesen R
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
-* Registerkarten dürfen keinen doppelten Header aufweisen. Entfernen Sie das doppelte Logo aus dem iframe, da das Registerkartenframework bereits das App-Symbol und den Namen anzeigt. [*Vorgeschlagener Fix*]
+* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
@@ -620,13 +620,13 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
-* Die Zweit- und Drittseiten eines Tabs müssen in einer Ebene Zwei (L2)- und Ebene Drei (L3)-Ansicht im Hauptregisterkartenbereich geöffnet werden, der über Breadcrumb Navigation oder die linke Navigationsleiste geleitet wird. Sie können auch die folgenden Komponenten einschließen, um die Registerkartennavigation zu unterstützen: [*Obligatorischer Fix*]
+* The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
   * Zurück-Schaltflächen
   * Seitenüberschriften
   * Hamburger-Menüs
-* Die Registerkarte darf keinen horizontalen Bildlauf aufweisen. Whiteboarding-Apps und andere Apps, die eine größere Arbeitsfläche benötigen, damit die Benutzer zusammenarbeiten können, ohne dass das Gefühl entsteht, dass die App nicht funktioniert, können je nach geschäftlichem Bedarf einen horizontalen Bildlauf verwenden. [*Vorgeschlagene Korrektur*]
+* Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
-* Deep-Links in Registerkarten dürfen nicht mit einer externen Webseite, sondern an einer Stelle in Teams verknüpft werden. Beispielsweise Aufgabenmodule oder andere Registerkarten. [*Obligatorischer Fix*]
+* Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -663,12 +663,12 @@ Entwerfen Sie Ihre App mit [einfachen](~/concepts/design/design-teams-app-basic-
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
-* Registerkarten müssen nach Möglichkeit Komponenten im Teams-Stil verwenden, z. B. Teams-Schriftarten, Typraster, Farbpaletten, Rastersystem, Bewegung, Ton der Stimme usw. Weitere Informationen finden Sie unter [Richtlinien für den Registerkartenentwurf](/microsoftteams/platform/tabs/design/tabs). [*vorgeschlagene Korrektur*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * Wenn Ihre App-Funktionalität Änderungen an den Einstellungen erfordert, fügen Sie eine **Registerkarte „Einstellungen“** ein. [*Vorgeschlagene Korrektur*]
-* Registerkarten müssen dem Teams-Interaktionsentwurf folgen, z. B. seiteninterne Navigation, Position und Verwendung von Dialogfeldern, Informationshierarchien usw. Weitere Informationen finden Sie unter [Microsoft Teams Fluent UI Kit](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Registerkarteninhalte im iframe dürfen keine Funktionen enthalten, die die Kernfunktionen von Teams nachahmen. Zum Beispiel Bots, Nachrichtenerweiterungen, Anrufe, Besprechungen usw.
 
@@ -705,7 +705,7 @@ Wenn Ihre App einen Bot enthält, stellen Sie sicher, dass er diesen Richtlinien
 </br>
 <details><summary>Bot-Befehle</summary>
 
-Das Analysieren von Benutzereingaben und das Vorhersagen der Benutzerabsicht ist schwierig. Botbefehle stellen Benutzern eine Reihe von Wörtern oder Ausdrücken bereit, die Ihr Bot versteht.
+Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
 * Es wird dringend empfohlen, unterstützte Bot-Befehle in Ihren App-Konfigurationen aufzulisten. Diese Befehle werden im Feld zum Verfassen angezeigt, wenn ein Benutzer versucht, Ihrem Bot eine Nachricht zu senden.
 

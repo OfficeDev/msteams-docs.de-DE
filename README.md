@@ -1,4 +1,4 @@
-## <a name="about-microsoft-teams-and-the-docs"></a>Informationen zu Microsoft Teams und den Dokumenten
+## <a name="about-microsoft-teams-and-its-documentation"></a>Informationen zu Microsoft Teams und dessen Dokumentation
 
 Microsoft Teams ist eine cloudbasierte Kommunikationsplattform, die verschiedene Dienste für die Zusammenarbeit kombiniert, z. B. Chats, Besprechungen, Anrufe und Dateien. Teams ist gut in Microsoft 365 integriert und kombiniert mehrere Workloads in einem einheitlichen Kommunikations- und Zusammenarbeitssystem. Darüber hinaus bietet Teams Integrationsfunktionen für andere Tools und Produkte von Drittanbietern.
 
@@ -6,9 +6,9 @@ Hier erhalten Sie Dokumentation, Beispielcode, Lernprogramme und vieles mehr, di
 
 ## <a name="how-to-contribute"></a>Möglichkeiten zur Mitwirkung
 
-Die Teams-Dokumentation ist Teil der Microsoft-Dokumentation technischen Dokumentationsbibliothek. Der Inhalt ist in Gruppen unterteilt, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Sie können Fragen stellen, Vorschläge machen oder Updates bereitstellen. Erfahren Sie [, wie Sie zur Teams-Dokumentation beitragen](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/) können.
+Die Microsoft Teams-Dokumentation ist Teil der Technischen Dokumentationsbibliothek von Microsoft Learn. Der Inhalt ist in Gruppen unterteilt, die als Docsets bezeichnet werden und jeweils eine Gruppe verwandter Dokumente darstellen, die als einzelne Entität verwaltet werden. Sie können Fragen stellen, Vorschläge machen oder Updates bereitstellen. Erfahren Sie [, wie Sie zur Teams-Dokumentation beitragen](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/) können.
 
-Informationen zu Microsoft-Dokumentation finden Sie in der [Übersicht über den Mitwirkendenleitfaden](https://learn.microsoft.com/contribute/).
+Informationen zum Beitrag zu Microsoft Learn finden Sie in der [Übersicht des Mitwirkendenhandbuchs](https://learn.microsoft.com/contribute/).
 
 Weitere Informationen zu Microsoft-Standards und -Formatvorlagen finden Sie im [Microsoft-Styleguide](https://learn.microsoft.com/style-guide/welcome/).
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: ffa7cdb0fabf07254c90590fe94fe2347c35658c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488285"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044679"
 ---
 # <a name="upload-your-app-in-teams"></a>Hochladen Ihrer App in Teams
 
@@ -21,7 +21,7 @@ In den folgenden Szenarien können Sie Microsoft Teams-Apps querladen, ohne sie 
 * Sie haben eine App für eine kleine Gruppe von Benutzern erstellt, z. B. Ihre Arbeitsgruppe.
 
 > [!NOTE]
-> Wenn Sie Ihre App mehrmals per Sideloading laden, wird mehr als eine Instanz für Messaging-Erweiterungen angezeigt.
+> Beim mehrfachen Querladen Ihrer Messaging-Erweiterungs-App werden mehr als eine Instanz für Messaging-Erweiterungen angezeigt.
 
 > [!IMPORTANT]
 >
@@ -50,21 +50,22 @@ Sie können Ihre App in ein Team, einen Chat, eine Besprechung oder zur persönl
 1. Wählen Sie die ZIP-Datei Ihres App-Pakets aus.
 1. Fügen Sie Ihre App gemäß Ihren Anforderungen zu Teams hinzu:</br>
 
-   a. Wählen Sie **Hinzufügen** aus, um Ihre persönliche App hinzuzufügen.</br> b. Verwenden Sie das Dropdownmenü, um Ihre App einem Team oder Chat hinzuzufügen.
+   a. Select **Add** to add your personal app.</br>
+   b. Use the dropdown menu to add your app to a Team or chat.
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="App-Beschreibung":::
 
 ## <a name="troubleshoot"></a>Troubleshooting
 
-Wenn Ihre App nicht quergeladen werden kann oder Probleme beim Hochladen auftreten, versuchen Sie die folgenden Optionen:
+Wenn die App nicht quergeladen werden kann oder Probleme beim Hochladen auftreten, überprüfen Sie die folgenden Optionen:
 
 1. Stellen Sie sicher, dass Sie alle Anweisungen zum [Erstellen Ihres App-Pakets](../../concepts/build-and-test/apps-package.md) befolgt haben.
 1. [Überprüfen Sie Ihr App-Paket](https://dev.teams.microsoft.com/appvalidation.html).
-1. Stellen Sie sicher, dass Ihr App-Manifest mit dem aktuellen [Schema](../../resources/schema/manifest-schema.md) übereinstimmt.
+1. Stellen Sie sicher, dass Ihr App-Manifest mit dem neuesten [Schema](../../resources/schema/manifest-schema.md) übereinstimmt.
 
 ## <a name="manage-your-apps"></a>Ihre Apps verwalten
 
-Mit Verwalten Sie Ihre Apps können Benutzer ihre Apps, Berechtigungen und Abonnements auf dem Teams-Client von einem speziellen Ort aus verwalten, aktualisieren und entfernen. Die Benutzer können die Apps von **Verwalten Sie Ihre Apps** aus installieren.
+Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
 
 ### <a name="access-your-app"></a>Zugriff auf Ihre App
 
@@ -92,7 +93,7 @@ Wenn für Ihre App ein Update verfügbar ist, ist die **Update verfügbar**-Opti
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Teams-App aktualisieren.":::
 
-1. Wählen Sie **Aktualisierung anzeigen** aus und ein Fenster mit Aktualisierungsoptionen erscheint.
+1. Wählen Sie **"Aktualisierung anzeigen"** aus. Ein Fenster mit der Option "Aktualisieren" wird angezeigt.
 1. Wählen Sie die Schaltfläche **Aktualisieren** aus, um Ihre App zu aktualisieren.
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Aktualisieren Sie die Teams-App in der App-Verwaltung.":::
@@ -115,7 +116,7 @@ Führen Sie die folgenden Schritte aus, um die App aus Teams zu entfernen:
 
 > [!NOTE]
 >
-> * Sie können persönliche Botaktivitäten nicht vollständig entfernen. Wenn Sie die App entfernen und erneut hinzufügen, wird die neue Kommunikation mit dem Bot an die vorherige Konversation mit ihm angefügt.
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 > * Derzeit können Sie Ihre benutzerdefinierte App nicht in den Teams-Store migrieren. Wenn Sie Ihre App im Teams-Store auflisten möchten, lesen Sie [Veröffentlichung Ihrer App im Microsoft Teams-Store](appsource/publish.md).
 
 ## <a name="next-step"></a>Nächster Schritt

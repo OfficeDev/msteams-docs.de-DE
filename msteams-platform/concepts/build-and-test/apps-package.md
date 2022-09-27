@@ -3,16 +3,16 @@ title: Verpacken Ihrer App
 description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App mit Symbolen zum Testen, Hochladen und Veröffentlichen im Store verpacken.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 5d46eec7f32ccb18e861f32769bb2ecb87842abf
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
-ms.translationtype: HT
+ms.openlocfilehash: 03f1df6af15b5e07dd71bcec22838ecff53d4c7f
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695320"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044686"
 ---
 # <a name="create-teams-app-package"></a>Teams-App-Paket erstellen
 
-Sie benötigen ein App-Paket, ganz gleich, wie Sie vorhaben, Ihre Microsoft Teams-App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
+Sie benötigen ein App-Paket, wie immer Sie planen, Ihre Microsoft Teams-App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
 * **App-Manifest**: Das Manifest beschreibt, wie Ihre App konfiguriert ist, einschließlich ihrer Funktionen, der erforderlichen Ressourcen und anderer wichtiger Attribute.
 * **App-Symbole**: Jedes Paket erfordert ein Farb- und ein Kontursymbol für Ihre App.

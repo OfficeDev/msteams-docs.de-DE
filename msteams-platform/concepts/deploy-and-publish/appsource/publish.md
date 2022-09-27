@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
-ms.translationtype: HT
+ms.openlocfilehash: f8891edb11134570a79c5483eea722a44ad48b91
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158066"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044651"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -124,7 +124,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
 * **Nach der App-Übermittlung**
 
-  * Nachdem Sie den Validierungsbericht geprüft haben, antworten Sie auf den E-Mail-Thread mit allen Fragen zum Validierungsbericht oder wenn Sie zusätzliche Unterstützung bei der Lösung der gemeldeten Probleme benötigen.
+  * Nachdem Sie den Überprüfungsbericht überprüft haben, beantworten Sie den E-Mail-Thread mit allen Abfragen im Zusammenhang mit dem Überprüfungsbericht, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
 
   * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um gemeldete Probleme zu beheben, bis die App genehmigt wird.
 
