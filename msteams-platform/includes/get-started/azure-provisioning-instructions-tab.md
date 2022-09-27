@@ -1,6 +1,6 @@
 ## <a name="deploy-your-app-to-azure"></a>Bereitstellen Ihrer App in Azure
 
-Die Bereitstellung besteht aus zwei Schritten.  Zunächst werden erforderliche Cloudressourcen erstellt (auch als Bereitstellung bezeichnet). Anschließend wird der Code Ihrer App in die erstellten Cloudressourcen kopiert. In diesem Lernprogramm stellen Sie die Registerkarten-App bereit.
+Die Bereitstellung besteht aus zwei Schritten. Zunächst werden erforderliche Cloudressourcen erstellt (auch als Bereitstellung bezeichnet). Anschließend wird der Code Ihrer App in die erstellten Cloudressourcen kopiert. In diesem Lernprogramm stellen Sie die Registerkarten-App bereit.
 <br>
 <br>
 <details>
@@ -20,34 +20,38 @@ Wählen Sie das Teams-Toolkit-Symbol :::image type="icon" source="~/assets/image
 
 1. Wählen Sie eine beliebige Person des vorhandenen Abonnements aus.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Abonnement auswählen":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Screenshot der Auswahl des vorhandenen Abonnements":::
 
 1. Wählen Sie eine Ressourcengruppe aus, die für die Azure-Ressourcen verwendet werden soll.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot mit Ressourcen für die Bereitstellung":::
 
    > [!NOTE]
-   > Es werden immer einige Azure-Ressourcen zum Hosten Ihrer App verwendet.
+   > Ihre App wird mitHilfe von Azure-Ressourcen gehostet.
+   >
+   >Weitere Informationen finden Sie unter [Erstellen einer Ressourcengruppe](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
 
     In einem Dialogfeld werden Sie gewarnt, dass beim Ausführen von Ressourcen in Azure Möglicherweise Kosten anfallen.
 
 1. Wählen Sie **"Bereitstellen" aus**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Abonnement auswählen":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Der Screenshot, der die Bereitstellung des Dialogfelds zeigt.":::
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot mit der Auswahl des Abonnements.":::
 
    Der Bereitstellungsprozess erstellt Ressourcen in der Azure-Cloud. Es kann einige Zeit dauern. Sie können den Fortschritt überwachen, indem Sie die Dialogfelder in der unteren rechten Ecke ansehen. Nach ein paar Minuten wird der folgende Hinweis angezeigt:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Der Screenshot, der zeigt, dass die Ressource erfolgreich in der Cloud bereitgestellt wurde.":::
 
     Wenn Sie möchten, können Sie die bereitgestellten Ressourcen anzeigen. Für dieses Lernprogramm müssen Sie keine Ressourcen anzeigen.
 
     Die bereitgestellte Ressource wird im Abschnitt **"Umgebung"** angezeigt.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot des Dialogfelds &quot;Bereitstellung abgeschlossen&quot;.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot der bereitgestellten Ressource.":::
 
 1. Wählen Sie " **In der Cloud bereitstellen** " aus dem **Bereitstellungsbereich** aus, nachdem die Bereitstellung abgeschlossen ist.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot, der zeigt, wo auf die Bereitstellung in der Cloud geklickt werden soll.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Der Screenshot, der die Bereitstellung in der Cloud zeigt.":::
 
    Wie bei der Bereitstellung dauert die Bereitstellung einige Zeit. Sie können den Prozess überwachen, indem Sie die Dialogfelder in der unteren rechten Ecke ansehen. Nach ein paar Minuten wird ein Abschlusshinweis angezeigt.
 
@@ -65,9 +69,6 @@ Im Terminalfenster:
 
    Wenn Sie dazu aufgefordert werden, wählen Sie ein Azure-Abonnement aus, um Azure-Ressourcen zu verwenden.
 
-   > [!NOTE]
-   > Es werden immer einige Azure-Ressourcen zum Hosten Ihrer App verwendet.
-
 1. Ausführen `teamsfx deploy`.
 
    ``` bash
@@ -75,6 +76,9 @@ Im Terminalfenster:
    ```
 
 ---
+
+> [!NOTE]
+> Ihre App wird mitHilfe von Azure-Ressourcen gehostet.
 
 ## <a name="run-the-deployed-app"></a>Ausführen der bereitgestellten App
 
@@ -84,12 +88,12 @@ Sobald die Bereitstellungs- und Bereitstellungsschritte abgeschlossen sind:
 1. Wählen Sie in der Dropdownliste "Startkonfiguration" die Option " **Remote starten(Edge)** " aus.
 1. Wählen Sie das **Startdebugging (F5)** aus, um Ihre App über Azure zu starten.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot der Remotestart-App.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Der Screenshot zeigt, wie Sie die App remote starten.":::
 
 1. Wählen Sie **"Hinzufügen"** aus, wenn Sie aufgefordert werden, die App in Teams querzuladen.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot der installierten App.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Der Screenshot, der zeigt, dass eine App installiert wird.":::
 
     Herzlichen Glückwunsch, Ihre erste Registerkarten-App wird in Ihrer Azure-Umgebung ausgeführt!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot zeigt die Meldung, dass Sie die App jetzt oder später testen können":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Der Screenshot mit der Meldung, dass Sie die App jetzt oder später testen können.":::
