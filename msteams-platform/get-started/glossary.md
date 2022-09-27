@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
+ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027326"
+ms.locfileid: "68027512"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -78,7 +78,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [E5-Entwicklerkonto](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5-Entwicklerabonnement zum Erstellen von Apps zur Erweiterung von Microsoft 365. Es umfasst bis zu 25 Benutzerlizenzen, einschließlich des Administrators (nur für Entwicklungszwecke).  <br>**Weitere Informationen unter**: [Microsoft 365 Konto](#m) |
+| [E5-Entwicklerkonto](../toolkit/tools-prerequisites.md) | E5-Entwicklerabonnement zum Erstellen von Apps zur Erweiterung von Microsoft 365. Es umfasst bis zu 25 Benutzerlizenzen, einschließlich des Administrators (nur für Entwicklungszwecke).  <br>**Weitere Informationen unter**: [Microsoft 365 Konto](#m) |
 | [Einstiegspunkt](../concepts/app-fundamentals-overview.md) | Ein Zugriffspunkt, z. B. Team, Kanal und Chat, für eine Teams App, in der Benutzer Ihre App verwenden können. |
 | [Umgebung](../toolkit/teamsfx-multi-env.md) | Ein Feature im Teams-Toolkit, mit dem Sie mehrere Entwicklungsumgebungen für Ihr App-Projekt erstellen und verwenden können. Es gibt zwei Entwicklungsumgebungen, die Teams Toolkit standardmäßig erstellt, lokale Umgebung und Entwicklungsumgebung. <br>**Weitere Informationen unter**: [Lokale Umgebung](#l); [Entwicklungsumgebung](#d) |
 
