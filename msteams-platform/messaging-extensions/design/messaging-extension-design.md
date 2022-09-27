@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338900"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027081"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Entwerfen Ihrer Microsoft Teams-Nachrichtenerweiterung
 
@@ -117,7 +117,7 @@ In den folgenden Szenarien werden die wichtigsten Verwendungsmöglichkeiten von 
 
 ### <a name="insert-content-into-a-message"></a>Einfügen von Inhalt in eine Nachricht
 
-**1. Wählen Sie eine Nachrichtenerweiterung** aus. Benutzer können über das Feld „Verfassen“ nach dem Inhalt suchen, den sie freigeben möchten.
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>Mobil
 
@@ -127,7 +127,7 @@ In den folgenden Szenarien werden die wichtigsten Verwendungsmöglichkeiten von 
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Das Beispiel zeigt einen Benutzer, der nach Inhalten sucht, die aus dem &quot;Verfassen&quot;-Feld eingefügt werden sollen.":::
 
-**2. Inhalt einfügen**. Nach der Veröffentlichung können andere Personen auf den Inhalt antworten oder diesen auswählen, um weitere Informationen in Ihrer App anzuzeigen.
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>Mobil
 
@@ -161,7 +161,7 @@ Mit Nachrichtenerweiterungen können Sie auch Rich-Links von einer erkannten URL
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Das Beispiel zeigt, wie ein Benutzer einen Link in das &quot;Verfassen&quot;-Feld eingibt.":::
 
-**2. Inhalt einfügen**. Wenn Ihre Anwendung die URL im Erfassungsfeld erkennt, wird der Link als Karte dargestellt, die eine umfassende Vorschau des Webinhalts bietet. (Weitere Informationen finden Sie in den [Designrichtlinien für adaptive Karten](../../task-modules-and-cards/cards/design-effective-cards.md)).
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>Mobil
 
@@ -230,7 +230,7 @@ Verwenden Sie diese Empfehlungen, um eine hochwertige App-Erfahrung zu erstellen
 
 #### <a name="do-integrate-with-single-sign-on"></a>Was Sie tun sollten: Integration mit einmaligem Anmelden
 
-SSO macht den Anmeldeprozess einfacher, schneller und sicherer. Wenn sich ein Benutzer bereits bei Ihrer persönlichen App angemeldet hat, muss er sich nicht noch einmal anmelden, um auf die Nachrichtenerweiterung zuzugreifen.
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ Wenn Ihre Nachrichtenerweiterung Aktionsbefehle erfordert, halten Sie das Aufgab
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Was Sie tun sollten: Teams-Farbtoken nutzen
 
-Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen automatisch zu verarbeiten, verwenden Sie <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">Farbtoken (Fluent UI)</a> in Ihrem Entwurf.
+Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen automatisch zu verarbeiten, verwenden Sie [Farbtoken (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in Ihrem Entwurf.
 
    :::column-end:::
    :::column span="":::

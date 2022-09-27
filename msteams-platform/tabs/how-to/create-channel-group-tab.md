@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 8fb28eeed3b3de73fa5646ec51f23b4ae5421954
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605068"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027333"
 ---
 # <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
@@ -252,9 +252,9 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>
@@ -475,9 +475,9 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus, um zu überprüfen, ob die Anwendung ordnungsgemäß geladen wurde. Wechseln Sie in einem Browser zu den folgenden URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Überprüfen des Quellcodes</b></summary>

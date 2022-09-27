@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die verfügbaren Microsoft Low- und No-Code
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 05553535f146316dddef311a9a7c2f859fedc3f8
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858909"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027228"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Erstellen von benutzerdefinierten Apps mit geringem Code für Teams
 
@@ -43,7 +43,7 @@ Die neue [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143374) in Te
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams und Power Automate
 
-Sie können [Abläufe erstellen, um sich wiederholende Arbeitsaufgaben](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) direkt in der Teams-Umgebung mit der [Power Automate-App in Teams](/power-automate/flows-teams) zu automatisieren. Sie können [einen Fluss aus einer beliebigen Nachricht in Microsoft Teams auslösen](/power-automate/trigger-flow-teams-message) und [adaptive Karten in Power Automate verwenden](/power-automate/create-adaptive-cards). Darüber hinaus können Sie Flüsse erstellen, um Microsoft Teams in der neuen [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams anzupassen und einen weiteren Mehrwert zu schaffen.
+Sie können [Abläufe erstellen, um sich wiederholende Arbeitsaufgaben](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) direkt in der Teams-Umgebung mit der [Power Automate-App in Teams](/power-automate/teams/install-teams-app) zu automatisieren. Sie können [einen Fluss aus einer beliebigen Nachricht in Microsoft Teams auslösen](/power-automate/trigger-flow-teams-message) und [adaptive Karten in Power Automate verwenden](/power-automate/create-adaptive-cards). Darüber hinaus können Sie Flüsse erstellen, um Microsoft Teams in der neuen [Power Apps-App](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams anzupassen und einen weiteren Mehrwert zu schaffen.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams und virtuelle Power Agents
 

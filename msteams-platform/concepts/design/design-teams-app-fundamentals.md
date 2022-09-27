@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 654bc49cfc671b849e3b88aae1eefa5d1bbaef02
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558835"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026976"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Das App-Designsystem von Microsoft Teams
 
-Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleitungen und Beispiele finden Sie im <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams-UI-Kit (Figma)</a>.
+Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleitungen und Beispiele finden Sie im [Microsoft Teams-UI-Kit (Figma)](https://www.figma.com/community/file/916836509871353159).
 
 ## <a name="layout"></a>Layout
 
@@ -42,7 +42,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Ein Avatar ist eine grafische Darstellung einer Person, eines Teams, eines Bots oder einer Entität in Teams. Eine Avatargruppe wird häufig verwendet, um Live-Aktivität zu vermitteln oder eine Teilnehmerliste so darzustellen, dass vertikaler Raum erhalten bleibt. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Lesen Sie den vollständigen Leitfaden zu Avataren (Figma)</a>
+      * [Lesen Sie den vollständigen Leitfaden zu Avataren (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -62,7 +62,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Sie können auch Fluent UI-Symbole in der gesamten App verwenden:
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Holen Sie sich die neueste Fluent-Symbolsammlung (Figma)</a>
+      * [Holen Sie sich die neueste Fluent-Symbolsammlung (Figma)](https://www.figma.com/community/file/836835755999342788)
       * [Implementieren der Symbole (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -81,7 +81,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Teams verwendet Segoe UI für seine Typpalette und verschiedene Schriftgrade und -breiten, um die Hierarchie zu erstellen und die Lesbarkeit zu gewährleisten.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Lesen Sie den vollständigen Leitfaden zu Typen (Figma)</a>
+      * [Lesen Sie den vollständigen Leitfaden zu Typen (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementieren von Typografie (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
@@ -100,7 +100,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Teams-Web- und Desktopversionen unterstützen die Designs Standard (hell), dunkel und mit hohem Kontrast, während Teams-Mobile helle und dunkle Designs unterstützt. Jedes Teams-Design verfügt über ein eigenes Farbschema.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Lesen Sie den vollständigen Leitfaden zu Farben und verfügbaren Farbtoken (Figma)</a>
+      * [Lesen Sie den vollständigen Leitfaden zu Farben und verfügbaren Farbtoken (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementieren von Farben (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,7 +118,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Mithilfe von Form und Tiefe können Sie zusätzliche Hierarchien in Ihrer App erstellen. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Lesen Sie den vollständigen Leitfaden zu Form und Tiefe (Figma)</a>
+      * [Lesen Sie den vollständigen Leitfaden zu Form und Tiefe (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementieren von Form und Tiefe (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
@@ -137,7 +137,7 @@ Erlernen Sie schnell die Grundlagen des App-Designs von Teams. Umfassende Anleit
 
       Um sich als Teil von Teams zu fühlen, sollte Ihr App-Text im Allgemeinen die folgenden [Microsoft Sprachrichlinien](/style-guide/brand-voice-above-all-simple-human) befolgen: herzlich und entspannt, klar und deutlich, hilfsbereit.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Lesen Sie den vollständigen Leitfaden zu Text und Inhalt – einschließlich zum Schreiben für Bots (Figma)</a>
+      * [Lesen Sie den vollständigen Leitfaden zu Text und Inhalt – einschließlich zum Schreiben für Bots (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

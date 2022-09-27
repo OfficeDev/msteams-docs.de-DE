@@ -3,46 +3,51 @@ title: Neuerungen und Updates für Entwickler in Teams
 description: Was sind die neuen Microsoft Teams-Entwicklerfeatures und Updates für vorhandene Features.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+zone_pivot_groups: What-new-features
+ms.openlocfilehash: 2540738b2001363c6bc4466bcaa0b4754d4935cc
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858902"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027175"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
-Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar (GA) und in der Entwicklervorschau verfügbar sind. Sie können jetzt die neuesten Updates für die Teams-Plattform erhalten, indem Sie den RSS-Feed [![Download-Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds](#get-latest-updates).
+::: zone pivot="ga-feature"
 
-<!--
-## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
+Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar sind. Sie können jetzt die neuesten Updates für die Teams-Plattform erhalten, indem Sie den RSS-Feed [![Download-Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds](#get-latest-updates).
 
-| Date | Update | Find here |
-| --- | --- | --- |
-|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-|05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
-|05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
-|05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
--->
+## <a name="generally-available"></a>Allgemein verfügbar
 
-## <a name="ga-features"></a>Allgemeine Verfügbarkeitsfunktionen
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Aktualisierungen für allgemein verfügbare Features":::
+
+:::column-end:::
+:::column span="2":::
 
 Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
-<br>
+**September 2022**
 
+* ***16. September 2022***: [Adaptive Karten in suchbasierten Nachrichtenerweiterungen unterstützen jetzt universelle Aktionen.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* ***06. September 2022***: [Codeausschnitte zum Aufnehmen von Videos mithilfe der Kamera über `selectMedia` die API eingeführt.](concepts/device-capabilities/media-capabilities.md#code-snippets)
+
+:::column-end:::
+:::row-end:::
+
+<br>
 <details>
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ----------------|
-| 09/16/2022 | Adaptive Karten in suchbasierten Nachrichtenerweiterungen unterstützen jetzt universelle Aktionen. | Erstellen von Nachrichtenerweiterungen > Suchbefehlen > Definieren von Suchbefehlen > [universellen Aktionen für suchbasierte Nachrichtenerweiterungen](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
-| 09/06/2022 | `selectMedia` API zum Aufnehmen von Videos mithilfe der Kamera | Integrieren von Gerätefunktionen > [Integrieren von Medienfunktionen](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 09.08.2022 | Microsoft Teams-Toolkit-Erweiterung für Visual Studio 2022 eingeführt | Tools und SDKs > Teams Toolkit für Visual Studio > [Überblick über das Teams-Toolkit für Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03.08.2022 | Für Teams über persönliche App oder Registerkarte freigeben | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus einer persönlichen App oder Registerkarte](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03.08.2022 | Feature zum Abrufen von Besprechungstranskripten im Postbesprechungsszenario hinzugefügt. | Erstellen von Apps für Teams-Besprechungen und -Anrufe > Abrufen von Besprechungstranskripten mithilfe von Graph-APIs > [Übersicht](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 03.08.2022 | Link zum Freigeben für Teams aus Web-Apps entfalten | Integration in Teams > Freigeben in Teams > [Freigeben in Teams aus Web-Apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 08/01/2021| Hinweis: Entwicklerportal ist jetzt GA und App Studio ist ab dem 01. August 2022 veraltet. | Tools und SDK > [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
+| 08/01/2022| Hinweis: Entwicklerportal ist jetzt GA und App Studio ist ab dem 01. August 2022 veraltet. | Tools und SDK > [Entwicklerportal für Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 28.07.2022 | Microsoft Teams-Anzeigebild und Personenkarte für Benachrichtigungen in der Besprechung hinzugefügt| Apps für Microsoft Teams-Besprechungen und -Anrufe erstellen > Apps für Besprechungen aktivieren und konfigurieren > [Benachrichtigung in Besprechungen](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 28.07.2022 | Erstellen von freigegebenen Kanälen in Microsoft Teams | Erstellen von Apps für Microsoft Teams-Besprechungen und -Anrufe > [Freigegebene Kanäle](concepts/build-and-test/Shared-channels.md) |
 | 28.07.2022|App-Manifest v1.14 eingeführt| App-Manifest > [App-Manifestschema für Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -91,15 +96,13 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 17.01.2022 | Personenauswahl in adaptiven Karten für Desktop | Erstellen von Karten und Aufgabenmodulen > Erstellen von Karten > [Personenauswahl in Adaptiven Karten](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-
-<br>
-
+</br>
 <details>
 <summary><b>Ältere Updates</b></summary>
-<br>
-Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier aufgeführt sind.
-<br><br>
 
+Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier aufgeführt sind.
+
+</br>
 <details>
 <summary><b>2021</b></summary>
 
@@ -203,7 +206,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-| 26.12.2019 | Der `replyToId`Parameter in Payloads, die an einen Bot gesendet werden, wird nicht mehr verschlüsselt, sodass Sie diesen Wert verwenden können, um Deeplinks zu diesen Nachrichten zu erstellen. Nachrichten-Payloads enthalten die verschlüsselten Werte im Parameter`legacy.replyToId`.  |
+| 26.12.2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 05.11.2019 | Einmaliges Anmelden mit dem Teams JavaScript-SDK. | [Einmaliges Anmelden](tabs/how-to/authentication/tab-sso-overview.md) |
 | 31.10.2019 | Die Dokumentation zu Konversationsbots und Nachrichtenerweiterungen wurde aktualisiert, um das 4.6 Bot Framework SDK zu berücksichtigen. Die Dokumentation für das v3 SDK ist im Abschnitt „Ressourcen“ verfügbar. | Die gesamte Dokumentation zu Bots und Nachrichtenerweiterungen |
 | 31.10.2019 | Neue Dokumentationsstruktur und Überarbeitung wichtiger Artikel. Bitte melden Sie alle toten Links oder 404's, indem Sie ein GitHub-Problem erstellen. | Alle! |
@@ -259,14 +262,34 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 |
 </details>
 </details>
+</details>
+::: zone-end
+
+::: zone pivot="dev-preview"
+
+Entdecken Sie die Microsoft Teams-Plattformfeatures, die sich in der Entwicklervorschau befinden. Sie können jetzt die neuesten Updates für die Teams-Plattform erhalten, indem Sie den RSS-Feed [![Download-Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds](#get-latest-updates).
 
 ## <a name="developer-preview"></a>Developer Preview
 
-Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf nicht veröffentlichte Features der Teams-Plattform bietet.  
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Aktualisierungen für Features, die in der Entwicklervorschau verfügbar sind":::
+
+:::column-end:::
+:::column span="2":::
+
+Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf nicht veröffentlichte Features der Teams-Plattform bietet.
+
+**September 2022**
+
+***23. September 2022***: [Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt.](apps-in-teams-meetings/meeting-app-extensibility.md)
+
+:::column-end:::
+:::row-end:::
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
-| 09/20/2022 | Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [einheitlichen Besprechungs-Apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/10/2022 | Apps für geplante Besprechungen im öffentlichen Kanal | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03.08.2022 | APIs zum Stummschalten und Aufheben der Stummschaltung für Apps in der Teams-Besprechungsphase | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [API-Referenzen für Besprechungs-Apps](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 02.08.2022| Steuerelemente für die Zusammenarbeit für Teams| Integration in Teams >[Steuerelemente für die Zusammenarbeit](samples/collaboration-control.md)|
@@ -279,9 +302,36 @@ Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff
 
 Weitere Informationen finden Sie unter [Öffentliche Entwickler-Vorschau für Teams](~/resources/dev-preview/developer-preview-intro.md).
 
+::: zone-end
+
+::: zone pivot="dep-feature"
+
+Entdecken Sie veraltete Microsoft Teams-Plattformfeatures. Sie können jetzt die neuesten Updates für die Teams-Plattform erhalten, indem Sie den RSS-Feed [![Download-Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)abonnieren. Weitere Informationen finden Sie unter [Konfigurieren des RSS-Feeds](#get-latest-updates).
+
+## <a name="deprecated"></a>Deprecated
+
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/deprecated.png" alt-text="Veraltete Features":::
+
+:::column-end:::
+:::column span="2":::
+
+Microsoft Teams-Plattformfeatures, die nicht verfügbar sind.
+
+**August 2022**
+
+***01. August 2022***: App Studio ist veraltet, verwenden Sie [das Entwicklerportal](concepts/build-and-test/teams-developer-portal.md) für Teams.
+
+:::column-end:::
+:::row-end:::
+
+::: zone-end
+
 ## <a name="teams-app-template-catalog"></a>Teams App-Vorlagenkatalog
 
-Neben neuen Features bieten wir auch [produktionsreife Teams-App-Vorlagen](samples/app-templates.md), die Sie sofort einsetzen oder an Ihre Anforderungen anpassen können. Neu hinzugefügte Vorlagen werden mit einem Stern ☆ gekennzeichnet.
+Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
 
 ## <a name="submit-your-feedback"></a>Feedback übermitteln
 
@@ -296,7 +346,7 @@ Sie können die neuesten Updates der Teams-Plattform erhalten, indem Sie den [RS
 1. Öffnen Sie Microsoft Teams.
 1. Wählen Sie im linken Bereich **Teams** aus.
 1. Wählen Sie einen Kanal im Team aus.
-1. Ellipsen &#x25CF;&#x25CF;&#x25CF; auswählen und wählen Sie aus der Dropdown-Liste **Connectors**.
+1. Wählen Sie Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, und wählen Sie in der Dropdownliste **"Connectors**" aus.
 1. Suchen Sie im angezeigten Dialogfeld **Connectors** nach **RSS**.
 1. Wählen Sie **Konfigurieren** aus.
 1. Geben Sie einen Namen in **Geben Sie einen Namen für Ihre RSS-Verbindung ein**.

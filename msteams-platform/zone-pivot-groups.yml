@@ -20,6 +20,16 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: What-new-features
+  title: Featureupdates für Teams
+  prompt: Wählen Sie den Typ der Featureverfügbarkeit aus, um die Features zu erkunden.
+  pivots:
+  - id: ga-feature
+    title: Allgemein verfügbar
+  - id: dev-preview
+    title: Developer Preview
+  - id: dep-feature
+    title: Deprecated
 - id: teams-app-platform
   title: Teams-App-Plattform
   prompt: Bevor Sie beginnen, wählen Sie eine beliebige der folgenden Anwendungen basierend auf der Umgebung aus, in der Sie eine App erstellen möchten.
@@ -29,9 +39,9 @@ groups:
   - id: visual-studio
     title: Visual Studio
 metadata:
-  ms.openlocfilehash: 5abc8210d4988c0dc42ad02f3e5dae0b7dfc61d2
-  ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+  ms.openlocfilehash: c015bc3eccf12cedf7fd4195c0ef5c24fe91b280
+  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/16/2022
-  ms.locfileid: "67780842"
+  ms.lasthandoff: 09/27/2022
+  ms.locfileid: "68026948"

@@ -4,12 +4,12 @@ description: Konfigurieren Sie single sign-on (SSO) mit Azure AD, indem Sie den 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Authentifizierung Registerkarten Microsoft Azure Active Directory (Azure AD) Zugriffstoken SSO Mandantenbereich
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653199"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027095"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrieren Ihrer Registerkarten-App in Azure AD
 
@@ -154,8 +154,8 @@ Um den Bereich zu konfigurieren und vertrauenswürdige Clientanwendungen zu auto
     >
     >   | Wenn der verwendete Basisressourcenname wie folgt lautet | Die URL wird folgende sein... | Format wird unterstützt auf... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | Alle Plattformen.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Nur Desktop, Web und iOS. Sie wird auf Android nicht unterstützt. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | Alle Plattformen.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Nur Desktop, Web und iOS. Sie wird auf Android nicht unterstützt. |
     >
     >    Verwenden Sie die Kleinbuchstabenoption *demoapplication* als Basisressourcennamen.
 

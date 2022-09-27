@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558324"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026997"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Entwerfen Sie Ihre Registerkarte für Microsoft Teams
 
@@ -60,8 +60,8 @@ Es gibt einen kurzen Einrichtungsprozess, um eine App als Kanal, Chat oder Bespr
 |1|**App-Logo:** Vollfarbiges App-Logo Ihrer App.|
 |2|**App-Name**: Vollständiger Name Ihrer App.|
 |3|**iframe**:Dynamischer Speicherplatz für den Inhalt Ihrer App (z. B. Registerkarteneinstellungen oder Authentifizierung).|
-|4|**Infolink:** Öffnet ein Dialogfeld mit weiteren Informationen zur App, z. B. eine vollständige Beschreibung, von der App erforderliche Berechtigungen und Links zu Ihren Datenschutzrichtlinien und Nutzungsbedingungen.|
-|5|**Schaltfläche „Schließen“**:Schließt das Dialogfeld.|
+|4 |**Infolink:** Öffnet ein Dialogfeld mit weiteren Informationen zur App, z. B. eine vollständige Beschreibung, von der App erforderliche Berechtigungen und Links zu Ihren Datenschutzrichtlinien und Nutzungsbedingungen.|
+|5 |**Schaltfläche „Schließen“**:Schließt das Dialogfeld.|
 |6 |**Option „Teammitglieder benachrichtigen“**:Im Dialogfeld werden die Benutzer gefragt, ob sie einen Beitrag erstellen möchten, in dem sie andere darüber informiert werden, dass sie eine Registerkarte hinzugefügt haben.|
 |7 |**Schaltfläche „Zurück“**:Wechselt basierend auf dem geöffneten Dialogfeld zum vorherigen Schritt.|
 |8 |**Schaltfläche „Speichern“**: Schließt die Registerkarteneinrichtung ab.|
@@ -113,7 +113,7 @@ Registerkarten bieten eine Weboberfläche im Vollbildmodus in Teams, in der Sie 
 |1|**Registerkartenname**:Navigationsbezeichnung für Ihre Registerkarte.|
 |2|**Registerkartenüberlauf**: Öffnet Registerkartenaktionen, z. B. Umbenennen und Entfernen.|
 |3|**Registerkartenchat**: Öffnet einen Chat auf der rechten Seite, sodass Benutzer eine Unterhaltung neben dem Inhalt führen können.|
-|4|**iframe**: Zeigt Ihre App-Inhalte an.|
+|4 |**iframe**: Zeigt Ihre App-Inhalte an.|
 
 ### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Entwerfen einer Registerkarte mit Benutzeroberflächenvorlagen und erweiterten Komponenten
 
@@ -173,8 +173,8 @@ Sie können Optionen zum Umbenennen, Entfernen oder Ändern einer Registerkarte 
 |1|**Im Browser öffnen**: Öffnet die App im Standardbrowser des Geräts.|
 |2|**Link kopieren**: Benutzer können einen Link zu der Registerkarte kopieren und freigeben.|
 |3|**Einstellungen**: (Optional) Ändern Sie die Einstellungen einer Registerkarte, nachdem sie hinzugefügt wurde.|
-|4|**Umbenennen**: Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
-|5|**Löschen**: Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
+|4 |**Umbenennen**: Benutzer können der Registerkarte einen Namen geben, der für den Kanal, den Chat oder die Besprechung von Bedeutung ist.|
+|5 |**Löschen**: Entfernt die Registerkarte aus dem Kanal, Chat oder der Besprechung.|
 
 #### <a name="desktop"></a>Desktop
 
@@ -270,7 +270,7 @@ Entfernen Sie alle unnötigen Schritte zum Hinzufügen einer Registerkarte.
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Was Sie tun sollten: Teams-Farbtoken nutzen
 
-Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen automatisch zu verarbeiten, verwenden Sie <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">Farbtoken (Fluent UI)</a> in Ihrem Entwurf.
+Jedes Teams-Design verfügt über ein eigenes Farbschema. Um Designänderungen automatisch zu verarbeiten, verwenden Sie [Farbtoken (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in Ihrem Entwurf.
 
    :::column-end:::
    :::column span="":::

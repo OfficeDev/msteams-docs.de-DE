@@ -3,12 +3,12 @@ title: Verwenden externer OAuth-Anbieter
 description: Authentifizieren Sie Ihre App-Benutzer mithilfe externer OAuth-Anbieter, und erfahren Sie, wie Sie sie dem externen Browser hinzufügen.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ca88471405fa06713261d56eaf94179c7896d8c4
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 4892dc23174e34015a02a9afff64269e01871fb5
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605054"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027319"
 ---
 # <a name="use-external-oauth-providers"></a>Verwenden externer OAuth-Anbieter
 
@@ -31,7 +31,7 @@ Die folgende Tabelle enthält die Liste der `authenticate()` API-Parameter (`Aut
 | --- | --- |
 |`isExternal` | Der Parametertyp ist Boolean, was angibt, dass das Authentifizierungsfenster in einem externen Browser geöffnet wird.|
 |`height` |Die bevorzugte Höhe für das Pop-up. Der Wert kann ignoriert werden, wenn er außerhalb der akzeptablen Grenzen liegt.|
-|`url`  <br>|Die URL des 3P-App-Servers für das Authentifizierungs-Popup mit den folgenden zwei Parameterplatzhaltern:</br> <br> - `oauthRedirectMethod`: Übergeben Sie den Platzhalter in `{}`. Dieser Platzhalter wird von der Teams-Plattform durch einen Deeplink oder eine Webseite ersetzt, die den App-Server informiert, wenn der Anruf von einer mobilen Plattform kommt.</br> <br> - `authId`: Dieser Platzhalter wird durch UUID ersetzt. Der App-Server verwendet es, um die Sitzung aufrechtzuerhalten.| 
+|`url`  <br>|Die URL des 3P-App-Servers für das Authentifizierungs-Popup mit den folgenden zwei Parameterplatzhaltern:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: Dieser Platzhalter wird durch UUID ersetzt. Der App-Server verwendet es, um die Sitzung aufrechtzuerhalten.|
 |`width`|Die bevorzugte Breite für das Pop-up. Der Wert kann ignoriert werden, wenn er außerhalb der akzeptablen Grenzen liegt.|
 
 Weitere Informationen zu Parametern finden Sie unter der [Authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) -Funktion.
@@ -39,7 +39,8 @@ Weitere Informationen zu Parametern finden Sie unter der [Authenticate(Authentic
 ## <a name="add-authentication-to-external-browsers"></a>Authentifizierung zu externen Browsern hinzufügen
 
 > [!NOTE]
-> * Derzeit können Sie die Authentifizierung zu externen Browsern nur für Registerkarten auf Mobilgeräten hinzufügen. 
+>
+> * Derzeit können Sie die Authentifizierung zu externen Browsern nur für Registerkarten auf Mobilgeräten hinzufügen.
 > * Verwenden Sie die Beta-Version von JS SDK, um die Funktionalität zu nutzen. Betaversionen sind über [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2) verfügbar.
 
 Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu externen Browsern:
@@ -53,7 +54,6 @@ Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu exte
    Die 3P-App ruft die SDK-Funktion `authentication.authenticate` auf, wobei `isExternal` auf „true“ gesetzt ist, um den externen Authentifizierungs-Anmeldeprozess zu initiieren.
 
    Die übergebene `url` enthält Platzhalter für `{authId}` und `{oauthRedirectMethod}`.  
-
 
     ```JavaScript
     import { authentication } from "@microsoft/teams-js";
@@ -102,7 +102,7 @@ Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu exte
 
 5. Melden Sie sich beim externen Browser an.
 
-   Der Benutzer meldet sich beim externen Browser an. Die OAuth-Anbieter leiten zurück zum `redirect_uri` mit dem Authentifizierungscode und dem Zustandsobjekt.
+   User signs in to the external browser. The OAuth providers redirects back to the `redirect_uri` with the auth code and the state object.
 
 6. Der 3P-App-Server überprüft Teams und antwortet darauf.
 
@@ -126,7 +126,7 @@ Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu exte
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
- 8. Teams ruft einen Erfolgsrückruf auf und sendet das Ergebnis.
+8. Teams ruft einen Erfolgsrückruf auf und sendet das Ergebnis.
 
     Teams ruft den Erfolgsrückruf auf und sendet das Ergebnis (Authentifizierungscode) an die 3P-App. Die 3P-App empfängt den Code im Erfolgsrückruf und verwendet den Code, um das Token und dann die Benutzerinformationen abzurufen und die Benutzeroberfläche zu aktualisieren.
 
@@ -138,5 +138,5 @@ Das folgende Bild zeigt den Ablauf zum Hinzufügen der Authentifizierung zu exte
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Identitätsanbieter konfigurieren](../../../concepts/authentication/configure-identity-provider.md)
+* [Identitätsanbieter konfigurieren](~/concepts/authentication/authentication.md)
 * [Microsoft Teams-Authentifizierungsablauf für Registerkarten](auth-flow-tab.md)

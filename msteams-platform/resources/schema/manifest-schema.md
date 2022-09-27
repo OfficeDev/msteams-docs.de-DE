@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990931"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026969"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -634,7 +634,7 @@ Geben Sie Ihre Azure Active Directory-App-ID und Microsoft Graph-Informationen a
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`id`|string|36 Zeichen|✔️|Azure AD-Anwendungs-ID der App. Diese ID muss eine GUID sein.|
-|`resource`|string|2048 Zeichen|✔️|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Dummy-Zeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, <https://notapplicable> um beispielsweise eine Fehlerantwort zu vermeiden. |
+|`resource`|string|2048 Zeichen|✔️|Ressourcen-URL der App zum Abrufen des Authentifizierungstokens für Einmaliges Anmelden. </br> **HINWEIS:** Wenn Sie SSO nicht verwenden, stellen Sie sicher, dass Sie einen Dummy-Zeichenfolgenwert in dieses Feld in Ihr App-Manifest eingeben, `https://notapplicable` um beispielsweise eine Fehlerantwort zu vermeiden. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -886,7 +886,7 @@ Delegierte Berechtigungen ermöglichen der App den Zugriff auf Daten im Namen de
     |`MeetingStage.Write.Chat`|Ermöglicht es der App, in Meetings, die mit diesem Chat verbunden sind, im Namen des angemeldeten Benutzers Inhalte auf der Meeting-Bühne zu zeigen.|
     |`OnlineMeetingParticipant.Read.Chat`|Ermöglicht es der App, im Namen des angemeldeten Benutzers die Teilnehmerinformationen, einschließlich Name, Rolle, ID, Beitritts- und Austrittszeiten, der mit diesem Chat verbundenen Besprechung zu lesen.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Ermöglicht der App, eingehende Audiodaten für Teilnehmer an Meetings, die mit diesem Chat verknüpft sind, im Namen des angemeldeten Benutzers umzuschalten.|
-    |`LiveShareSession.ReadWrite.Chat`|Ermöglicht der App, Live-Freigabesitzungen für Besprechungen im Zusammenhang mit diesem Chat zu erstellen und zu synchronisieren und im Namen des angemeldeten Benutzers auf verwandte Informationen über die Teilnehmerliste der Besprechung zuzugreifen, z. B. die Besprechungsrolle des Mitglieds.|   
+    |`LiveShareSession.ReadWrite.Chat`|Ermöglicht der App, Live-Freigabesitzungen für Besprechungen im Zusammenhang mit diesem Chat zu erstellen und zu synchronisieren und im Namen des angemeldeten Benutzers auf verwandte Informationen über die Teilnehmerliste der Besprechung zuzugreifen, z. B. die Besprechungsrolle des Mitglieds.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Ermöglicht der App, Änderungen am Status eingehender Audiodaten in Besprechungen im Zusammenhang mit diesem Chat im Namen des angemeldeten Benutzers zu erkennen.|
 
 * **Ressourcespezifische delegierte Berechtigungen für Benutzer**

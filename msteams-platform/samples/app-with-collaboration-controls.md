@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie eine modellgesteuerte App mit
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: b5300a66fa8a5948a2081e90e8ad138858d38f3f
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179160"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027340"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Erstellen einer neuen modellgesteuerten App mit Steuerelementen für die Zusammenarbeit für Teams
 
@@ -45,7 +45,7 @@ Steuerelemente für die Zusammenarbeit sind für [modellgesteuerte Anwendungen](
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Der Screenshot beschreibt, wie Sie eine neue Aktivität erstellen.":::
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
 1. Nachdem Sie ihre Tabelle erstellt haben, können Sie sie anpassen, indem Sie zusätzliche Spalten, Beziehungen und vieles mehr hinzufügen (optional).
 
@@ -190,9 +190,9 @@ Verwenden Sie die folgenden Anweisungen, um die SharePoint-Website-ID und Laufwe
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Der Screenshot ist ein Beispiel für den Graph-Explorer.":::
 
      1. Stellen Sie sicher, dass Sie den Hostnamen durch Ihren Hostnamen und den relativen Pfad zum Websitepfad ersetzen, und führen Sie einen Graph-Aufruf an `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Es folgt ein Beispiel:
-         1. Wenn Ihre Website-URL = <https://myhostname.sharepoint.com/sites/MySiteName>
-         1. Hostname = myhostname.sharepoint.com
-         1. Relativer Pfad zu site = sites/MySiteName
+         1. Wenn Ihre Website-URL = `https://myhostname.sharepoint.com/sites/MySiteName`
+         1. Hostname = `myhostname.sharepoint.com`
+         1. Relativer Pfad zur Website = `sites/MySiteName`
 
               :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Der Screenshot ist ein Beispiel für den Graph-Aufruf.":::
 

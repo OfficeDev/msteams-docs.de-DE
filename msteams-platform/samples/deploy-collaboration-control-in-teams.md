@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Ihre App mit der Zusammenarbe
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179092"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027305"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Bereitstellen von Steuerelementen für die Zusammenarbeit in Microsoft Teams
 
@@ -21,7 +21,7 @@ Steuerelemente für die Zusammenarbeit funktionieren derzeit am besten in Micros
 
 ## <a name="configure-the-app-for-teams"></a>Konfigurieren der App für Teams
 
-Die App, die Sie beim [Erstellen einer modellgesteuerten Anwendung](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) erstellt haben, verfügt nur über einen einzigen linken Bereich, und es gibt keine komplexen Befehle. Bevor Sie Ihre App zu Teams hinzufügen, können Sie also den linken Bereich ausblenden und eine verständlichere Kopfzeilenansicht erstellen.
+Die App, die Sie beim [Erstellen einer modellgesteuerten Anwendung](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) erstellt haben, verfügt nur über einen einzigen linken Bereich, und es gibt keine komplexen Befehle. Bevor Sie Ihre App zu Teams hinzufügen, können Sie also den linken Bereich ausblenden und eine verständlichere Kopfzeilenansicht erstellen.
 
 > [!NOTE]
 > Aktivieren Sie die folgenden Schritte nicht, wenn Sie den linken Bereich und die Kopfzeile mit hoher Dichte für Ihre Benutzer anzeigen möchten.
@@ -151,6 +151,6 @@ Es sind Folgendes erforderlich, damit Benutzer die bereitgestellten Collaboratio
 
 1. Wählen Sie die Rollen aus, die [in einer Sicherheitsrolle erstellt wurden](#create-a-security-role).
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 
 Weitere Informationen zu Rollenberechtigungen finden Sie unter [Konfigurieren der Benutzersicherheit in einer Umgebung](/power-platform/admin/database-security).

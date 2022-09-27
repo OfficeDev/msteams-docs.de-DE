@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die Phasenansicht, eine Vollbild-UI-Kompone
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450450"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027291"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -24,7 +24,7 @@ Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie auf
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Bühnenansicht
 
-Stage View sorgt für ein nahtloses Erlebnis beim Betrachten von Inhalten in Teams. Die Benutzer können die von Ihrer App bereitgestellten Inhalte öffnen und ansehen, ohne den Kontext zu verlassen, und sie können die Inhalte an den Chat oder den Kanal anheften, um später schnell darauf zugreifen zu können, was zu einem höheren Engagement der Benutzer mit Ihrer App führt.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>Bühnenansicht im Vergleich zum Aufgabenmodul
 
@@ -84,13 +84,13 @@ Der `invoke`-Anforderungstyp muss `composeExtension/queryLink` sein.
 
 Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 
-* Wenn der Benutzer **Ansicht** wählt, erhält der Bot eine `invoke`Anfrage. Der Anfragetyp ist`composeExtension/queryLink`.
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * Die `invoke`-Antwort des Bots enthält eine adaptive Karte mit darin enthaltenem Typ `tab/tabInfoAction`.
 * Der Bot antwortet mit einem `200`-Code.
 
 > [!NOTE]
-
-> Auf mobilen Clients von Teams wird beim Aufrufen von Stage View für Apps, die über den [Teams Store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) vertrieben werden und nicht für Mobilgeräte optimiert sind, der Standard-Webbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`Parameter des `TabInfo`Objekts angegebene URL.
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 
@@ -141,8 +141,8 @@ Codiert
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Zeichenfolge | 64 | Diese Eigenschaft ist ein eindeutiger Bezeichner für die von der Registerkarte angezeigte Entität. Dies ist ein Pflichtfeld.|
 | `name` | Zeichenfolge | 128 | Diese Eigenschaft ist der Anzeigename der Registerkarte auf der Kanaloberfläche. Dieses Feld ist optional.|
-| `contentUrl` | Zeichenfolge | 2048 | Bei dieser Eigenschaft handelt es sich um die URL https://, die auf die Entitäts-UI verweist, die im Teams Canvas angezeigt werden soll. Dies ist ein Pflichtfeld.|
-| `websiteUrl?` | Zeichenfolge | 2048 | Bei dieser Eigenschaft handelt es sich um die URL https://, auf die Sie verweisen, wenn ein Benutzer die Ansicht in einem Browser auswählt. Dies ist ein Pflichtfeld.|
+| `contentUrl` | Zeichenfolge | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | Zeichenfolge | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | Zeichenfolge | 2048 | Diese Eigenschaft ist die https:// URL, die auf die Benutzeroberfläche verweist, die angezeigt werden soll, wenn der Benutzer die Registerkarte löscht. Dies ist ein optionales Feld.|
 
 ## <a name="code-sample"></a>Codebeispiel
