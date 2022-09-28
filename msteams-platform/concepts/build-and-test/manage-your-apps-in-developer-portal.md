@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mithilfe des Entw
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435076"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098918"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Verwalten Ihrer Apps im Entwicklerportal
 
@@ -56,7 +56,7 @@ Im Abschnitt **"Konfigurieren"** sehen Sie die folgenden Komponenten zum Verwalt
   * Besprechungserweiterung
   * Aktivitätsfeedbenachrichtigung
 * **Berechtigungen**: In diesem Abschnitt können Sie Geräteberechtigungen, Teamberechtigungen, Chat- oder Besprechungsberechtigungen und Benutzerberechtigungen für Ihre App erteilen.
-* **Einmaliges Anmelden**: Sie können Ihre App so konfigurieren, dass Benutzer mit einmaligem Anmelden (Single Sign-On, SSO) authentifiziert werden.
+* **Einmaliges Anmelden**: Der in Azure AD registrierte Bot unterstützt single Sign-On (SSO). Wenn ein Bot im Bot Framework-Portal (oder im Entwicklerportal unter Bot-Verwaltung) registriert ist, unterstützen diese Bots SSO nicht, und Sie müssen Ihren Bot bei Azure AD registrieren, um SSO zu unterstützen. Fügen Sie für einen in Azure AD registrierten Bot den **Anwendungs-ID-URI hinzu**. Informationen zum Abrufen des Anwendungs-ID-URI aus Azure AD finden [Sie unter Verwenden der SSO-Authentifizierung für Bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Sprachen**: Sie können die Sprache Ihrer App einrichten oder ändern.
 * **Domäne**: Sie können die Domänen hinzufügen, um Ihre Apps im Teams-Client zu laden (z. B.: *.example.com).
 
@@ -81,7 +81,7 @@ Im Abschnitt **"Erweitert** " sehen Sie die folgenden Komponenten zum Verwalten 
 * **App-Inhalt**: Sie können Ihre App mit den folgenden zusätzlichen Features konfigurieren:
   
   * Ladeindikator: Zeigt einen Indikator an, um Benutzern mitzuteilen, dass Ihre gehosteten App-Inhalte (z. B. Registerkarten und Aufgabenmodule) geladen werden.
-  * Vollbildmodus: Zeigt eine persönliche App ohne App-Header an. Es wird nur für die veröffentlichten Apps in Ihrer Organisation unterstützt.
+  * Vollbildmodus: Zeigt eine persönliche App ohne App-Header an. Es wird nur für die veröffentlichten Apps für Ihre Organisation unterstützt.
 
 * **Umgebungen**
 
