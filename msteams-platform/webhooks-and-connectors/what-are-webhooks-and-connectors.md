@@ -1,16 +1,16 @@
 ---
 title: Webhooks und Connectors
 author: clearab
-description: In diesem Modul erfahren Sie, wie Webhooks und Connectors Ihre Webdienste mit dem Teams-Client verbinden können.
+description: Erfahren Sie, wie Webhooks und Connectors dazu beitragen, die Webdienste mit Kanälen und Teams in Microsoft Teams zu verbinden. Lernen Sie eingehende, ausgehende Webhooks und Office 365 Connectors kennen.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bb453367eb0d8f4c2c1a54681d67dc38fb3e0358
-ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+ms.openlocfilehash: 94c84b577dfb20cb823167d3af84f5460bb87554
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991649"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100448"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks und Connectors
 

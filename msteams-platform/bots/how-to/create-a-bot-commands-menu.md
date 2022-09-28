@@ -1,18 +1,21 @@
 ---
 title: Ein Befehlsmenü für Ihren Bot erstellen
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie ein Befehlsmenü für Ihren Microsoft Teams-Bot mit Codebeispielen erstellen und behandeln.
+description: Erfahren Sie, wie Sie ein Befehlsmenü für Ihren Microsoft Teams-Bot erstellen und behandeln sowie bewährte Methoden. Erfahren Sie, wie Sie Befehle aus Ihrem Manifest entfernen.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0e0f9ce9ada0cde0aa6f7b6b29c7badb07dd7db9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312302"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100903"
 ---
 # <a name="create-a-commands-menu"></a>Ein Befehlsmenü erstellen
+
+> [!NOTE]
+> Es wird empfohlen, einen Befehlsbot zu erstellen, indem Sie die schrittweise Anleitung zum [Erstellen eines Befehlsbots mit JavaScript](../../sbs-gs-commandbot.yml) mithilfe des Entwicklungstools der neuen Generation für Teams befolgen. Weitere Informationen zum Teams-Toolkit finden Sie unter [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -61,7 +64,7 @@ So erstellen Sie ein Befehlsmenü für Ihren Bot mithilfe des Entwicklerportals:
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Erstellen eines Befehlsmenüs für Ihren Bot durch Bearbeiten von Manifest.json
 
-Eine weitere Möglichkeit zum Erstellen eines Befehlsmenüs besteht darin, es direkt in der Manifestdatei zu erstellen, während Sie den Bot-Quellcode entwickeln. Um diese Methode anzuwenden, sollten Sie die folgenden Punkte beachten:
+Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
 * Jedes Menü unterstützt bis zu 10 Befehle.
 * Erstellen Sie ein einzelnes Befehlsmenü, das in allen Bereichen funktioniert.
@@ -188,7 +191,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Sie können den Nachrichtentextteil **@Erwähnung** mithilfe einer statischen Methode analysieren, die im Bot Framework bereitgestellt wird. Dies ist eine Methode der `TurnContext`-Klasse mit Namen `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
 
 Der Python-Code zum Analysieren des Nachrichtentextteils **\@Erwähnung** lautet wie folgt:
 
@@ -205,7 +208,7 @@ Um eine reibungslose Funktionsweise Ihres Bot-Codes zu ermöglichen, müssen Sie
 Im Folgenden werden die bewährten Methoden für das Befehlsmenü aufgeführt:
 
 * Halten Sie es einfach: Das Bot-Menü soll die wichtigsten Funktionen Ihres Bots darstellen.
-* Halten Sie es kurz: Menüoptionen dürfen nicht lang sein und dürfen keine komplexen Anweisungen in natürlicher Sprache sein. Sie müssen einfache Befehle sein.
+* Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
 * Lassen Sie es aufrufbar: Bot-Menüaktionen oder -Befehle müssen immer verfügbar sein, unabhängig vom Status der Unterhaltung oder des Dialogs, in dem sich der Bot befindet.
 
 > [!NOTE]

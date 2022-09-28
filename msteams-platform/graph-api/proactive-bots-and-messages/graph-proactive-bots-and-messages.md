@@ -1,16 +1,16 @@
 ---
 title: Verwenden von Microsoft Graph zum Autorisieren der proaktiven Bot-Installation und des proaktiven Bot-Messagings in Microsoft Teams
-description: In diesem Artikel werden proaktive Nachrichten in Teams und deren Implementierung beschrieben. Erfahren Sie anhand eines Codebeispiels, wie Sie die proaktive App-Installation und das proaktive Messaging aktivieren.
+description: Installieren Sie die App proaktiv mithilfe von Graph-APIs. Überprüfen Sie, ob Ihr Bot zurzeit installiert ist, rufen Sie die Unterhaltungschat-ID ab, um proaktive Nachrichten zu senden.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5c45eff85b3a46f27e91e4740513c48c05588198
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604850"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100749"
 ---
 # <a name="send-proactive-installation-messages"></a>Senden proaktiver Installationsnachrichten
 
@@ -25,7 +25,7 @@ Proaktive Nachrichten werden von Bots initiiert, um Unterhaltungen mit Benutzern
 
 ## <a name="proactive-app-installation-in-teams"></a>Proaktive App-Installation in Microsoft Teams
 
-Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie Benutzern, die Ihre App nicht installiert oder zuvor interagiert haben, proaktiv eine Nachricht senden. Wenn Sie beispielsweise wichtige Informationen an alle Personen in Ihrer Organisation senden müssen, können Sie den Microsoft Graph API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
+Bevor Ihr Bot proaktiv eine Nachricht an einen Benutzer senden kann, muss er entweder als persönliche App oder in einem Team installiert werden, in dem der Benutzer Mitglied ist. Manchmal müssen Sie Benutzern, die Ihre App nicht installiert oder zuvor interagiert haben, proaktiv eine Nachricht senden. Wenn Sie beispielsweise wichtige Informationen an alle Personen in Ihrer Organisation senden müssen, können Sie die Microsoft Graph-API verwenden, um Ihren Bot proaktiv für Ihre Benutzer zu installieren.
 
 ## <a name="permissions"></a>Berechtigungen
 

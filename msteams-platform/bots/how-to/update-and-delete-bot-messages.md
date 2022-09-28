@@ -1,18 +1,18 @@
 ---
 title: Aktualisieren und Löschen von Nachrichten, die von Ihrem Bot gesendet wurden
 author: WashingtonKayaker
-description: Erfahren Sie anhand von Codebeispielen, wie Sie Nachrichten, die von Ihrem Microsoft Teams-Bot gesendet wurden, in verschiedenen Umgebungen und mit REST-APIs aktualisieren und löschen.
+description: Erfahren Sie, wie Sie Nachrichten aktualisieren und löschen, die von Ihrem Microsoft Teams-Bot in verschiedenen Umgebungen und mit REST-APIs mithilfe von Beispielen (.NET, Node.js, Python) gesendet wurden.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d85bb7086661eba58c6cf852cab599970fdc9c80
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503802"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100819"
 ---
-# <a name="update-and-delete-messages-sent-from-bot"></a>Aktualisieren und Löschen von Nachrichten, die vom Bot gesendet wurden 
+# <a name="update-and-delete-messages-sent-from-bot"></a>Vom Bot gesendete Nachrichten aktualisieren und löschen 
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

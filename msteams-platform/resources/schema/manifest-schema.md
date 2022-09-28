@@ -1,14 +1,14 @@
 ---
 title: Manifestschemareferenz
-description: In diesem Artikel finden Sie eine Referenz, ein Schema und vollständige Beispielmanifest des Manifestschemas für Microsoft Teams.
+description: In diesem Artikel verfügen Sie über die neueste Version des öffentlichen Manifestschemas für Microsoft Teams-Referenz, Schema und vollständiges Beispielmanifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026969"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100168"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -511,7 +511,7 @@ Eine Liste der Befehle, die Ihr Bot Benutzern empfehlen kann. Das Objekt ist ein
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
-|`items.commands`|Array von Objekten|10  |✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.commands`|Array von Objekten|10|✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: Name des Bot-Befehls (string, 32)<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -548,7 +548,7 @@ Das Element ist ein Array (maximal ein Element), wobei alle Elemente vom Typ `ob
 |Name| Typ | Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`botId`|string|64|✔️|Die eindeutige Microsoft-App-ID für den Bot, welcher der Nachrichtenerweiterung zugeordnet ist, wie beim Bot Framework registriert. Die ID kann mit der Gesamt-App-ID übereinstimmen.|
-|`commands`|Array von Objekten|10  |✔️|Array von Befehlen, die von der Nachrichtenerweiterung unterstützt werden.|
+|`commands`|Array von Objekten|10|✔️|Array von Befehlen, die von der Nachrichtenerweiterung unterstützt werden.|
 |`canUpdateConfiguration`|Boolesch|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|Array von Objekten|5 ||Eine Liste von Handlern, mit denen Apps aufgerufen werden können, wenn bestimmte Bedingungen erfüllt sind.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|

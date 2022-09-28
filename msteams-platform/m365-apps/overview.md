@@ -1,16 +1,16 @@
 ---
 title: Erweitern Sie Teams-Apps auf Microsoft 365 (Vorschau)
-description: In diesem Artikel erfahren Sie, wie Sie Ihre Teams-App-Erfahrungen erstellen, aktualisieren und erweitern und Apps erstellen, die in anderen bereichen mit hoher Nutzung von Microsoft 365 verwendet werden.
+description: Erfahren Sie, wie Sie Ihre Teams-App in Microsoft M365 (Teams, Outlook und Office als Anwendungshosts) erstellen, aktualisieren und erweitern. Microsoft AppSource-Übermittlung.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 835af580a23a5fa4bcf99bf5fd2f091d076df489
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781073"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100619"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Erweitern von Teams-Apps auf Microsoft 365
 
@@ -20,9 +20,9 @@ Die Erweiterung Ihrer Teams-App auf Microsoft 365 bietet eine optimierte Möglic
 
 Die Teams-App-Plattform entwickelt sich weiter und erweitert sich ganzheitlich in das Microsoft 365-Ökosystem. Hier ist die aktuelle Unterstützung von Teams-App-Plattformelementen in Microsoft 365 (Teams, Outlook und Office als Anwendungshosts):
 
-|          | App-Manifestelement | Teams-Support |Outlook*-Unterstützung | Office*-Support | Anmerkungen |
+|          | App-Manifestelement | Teams-Support |Outlook*-Unterstützung | Office*-Support | Notizen |
 |--|--|--|--|--|--|
-| [**Registerkarten**](../tabs/what-are-tabs.md) (persönlicher Bereich)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Betakanal) | Web (Targeted Release), Desktop (Betakanal)| Kanal- und Gruppenbereich werden für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Registerkarten**](../tabs/what-are-tabs.md) (persönlicher Bereich)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Betakanal) | Web (Targeted Release), Desktop (Betakanal), Mobile (Android)| Kanal- und Gruppenbereich werden für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Nachrichtenerweiterungen**](../messaging-extensions/what-are-messaging-extensions.md) (suchbasiert)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Betakanal)| - |Aktionsbasiert wird für Microsoft 365 noch nicht unterstützt. Siehe [Notizen](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
 | [**Office-Add-Ins**](/office/dev/add-ins/develop/json-manifest-overview) (Vorschau) | `extensions` | - | Web, Desktop | - | Nur in [devPreview-Manifestversion](../resources/schema/manifest-schema-dev-preview.md) verfügbar. Siehe [Notizen](#office-add-ins-preview).|
 
@@ -38,6 +38,10 @@ Eine Anleitung zum Microsoft Teams-App-Manifest und zur SDK-Versionsverwaltung s
 Erreichen Sie Ihre Benutzer direkt im Kontext ihrer Arbeit, indem Sie Ihre Web-App als persönliche Registerkartenanwendung für Teams erweitern, die auch in Outlook und Office ausgeführt wird.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Der Screenshot ist ein Beispiel für die Registerkarte &quot;Persönlich&quot;, die in Outlook, Office und Teams ausgeführt wird.":::
+
+Auf mobilgeräten können Sie Ihre persönliche Teams-Registerkarte testen und debuggen, die in der Office-App für Android ausgeführt wird.
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="Der Screenshot ist ein Beispiel für die persönliche Registerkarte, die in Office ausgeführt wird.":::
 
 Sie können Ihre suchbasierten Teams-Nachrichtenerweiterungen auch auf Outlook im Web und Windows-Desktop erweitern, sodass Ihre Kunden neben Microsoft Teams-Clients auch Ergebnisse über den Nachrichtenbereich zum Verfassen von Outlook durchsuchen und freigeben können.
 

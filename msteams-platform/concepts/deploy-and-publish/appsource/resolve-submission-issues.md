@@ -1,18 +1,18 @@
 ---
 title: Beheben von Problemen mit Der Store-Übermittlung
-description: In diesem Artikel erfahren Sie, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übermittlung behandeln und beheben.
+description: Erfahren Sie, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übermittlung behandeln und beheben. Rufen Sie Hilfe direkt von Microsoft ab, beheben Sie Probleme, und übermitteln Sie Ihre App erneut.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503872"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100280"
 ---
-# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Beheben von Problemen, wenn die Übermittlung an den Teams-Store fehlschlägt
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Beheben von Problemen, wenn die Anmeldung Ihres Teams Store fehlschlägt
 
 Apps, die im Microsoft Teams-Store veröffentlicht werden, müssen den [Validierungsrichtlinien für den Teams-Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) und [den Richtlinien für kommerzielle Marketplaces](/legal/marketplace/certification-policies) entsprechen.
 

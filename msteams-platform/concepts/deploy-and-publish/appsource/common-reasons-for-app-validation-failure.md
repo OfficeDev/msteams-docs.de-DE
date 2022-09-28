@@ -1,16 +1,16 @@
 ---
 title: Häufige Gründe für App-Überprüfungsfehler
-description: Erfahren Sie mehr über die häufigsten Gründe für das Fehlschlagen der App-Überprüfung, und erhöhen Sie die Wahrscheinlichkeit, dass ihre App den Teams Store-Übermittlungsprozess besteht.
+description: Erfahren Sie mehr über die häufigsten Gründe für das Fehlschlagen der App-Überprüfung. Fehlerhafte Links, Fehler in der Beschreibung, ungültige Richtlinienlinks, verstöße gegen gültige Domänenrichtlinien, ungültige Supportlinks und vieles mehr.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: b8d0b0eb44a3071a6831500cfae41952e520399e
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
-ms.translationtype: HT
+ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132762"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100910"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Häufige Gründe für App-Überprüfungsfehler
 

@@ -1,16 +1,16 @@
 ---
 title: Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
-description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen, die zum Ausführen von Vorabversionen erforderlich sind, um Ihre Teams-Apps auf Microsoft 365 zu erweitern.
+description: Anforderungen zum Einrichten Ihrer Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365. Kennen Sie die Konfigurationen, die zum Ausführen von Builds von Microsoft Teams und Microsoft Office-Anwendungen erforderlich sind.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
-ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67457291"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100951"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
 
@@ -70,6 +70,8 @@ Weitere Informationen zu den Veröffentlichungsoptionen von Office 365 finden [S
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Installieren Sie Office-Apps in Ihrer Testumgebung
 
+### <a name="desktop"></a>Desktop
+
 Sie können eine Vorschau von Teams-Apps anzeigen, die in Outlook auf dem Windows-Desktop ausgeführt werden, indem Sie einen aktuellen *Betakanal-Build verwenden*. Überprüfen Sie, ob Sie den [Updatekanal](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) für Microsoft 365-Apps für Ihren Testmandanten ändern müssen, um einen Office 365-Betakanal-Build zu installieren.
 
 So installieren Sie Office 365 Beta Channel-Anwendungen in Ihrer Testumgebung:
@@ -90,6 +92,27 @@ So installieren Sie Office 365 Beta Channel-Anwendungen in Ihrer Testumgebung:
 
     Wenn es nicht aufgeführt ist, installieren Sie [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) in Ihrer Testumgebung.
 
+### <a name="mobile"></a>Mobil
+
+Sie können eine Vorschau der persönlichen Teams-Registerkarten anzeigen, die in der Office-App für Android ausgeführt werden, indem Sie am Betaprogramm teilnehmen.
+
+So installieren Sie den neuesten Betabuild der Office-App auf Ihrem physischen Android-Gerät oder Android-Emulator:
+
+1. Stellen Sie sicher, dass Sie ein von Google Play [unterstütztes Android-Gerät](https://support.google.com/googleplay/answer/1727131) verwenden.
+1. Starten Sie den **Play Store** auf Ihrem Android-Gerät.
+1. Suchen Sie nach Office, und wählen Sie **Microsoft Office aus: Bearbeiten & Freigeben**.
+1. Wählen Sie die Schaltfläche " **Installieren** " aus.
+
+    :::image type="content" source="images/office-android-install.png" alt-text="Screenshot von Microsoft Office: Bearbeiten & Share-App im Google Play Store":::
+
+1. Wählen Sie nach Abschluss der Installation unter **"Dem Betaabschnitt beitreten"** die Option **"Beitreten**" aus.
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="Screenshot des Bildschirms &quot;Teilnehmen am Betabildschirm&quot;":::
+
+1. Starten Sie die Office-App, und melden Sie sich mit Ihren Anmeldeinformationen für den Testmandanten an.
+1. Öffnen Sie Ihr Profil **(Ich) > Einstellungen** , und scrollen Sie zum Ende des Menüs.
+2. Stellen Sie sicher, dass Sie Office-App Version 16.0.15726.20000 oder höher für Android verwenden.
+
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Wechseln Sie zur Developer Preview-Version von Teams
 
 Stellen Sie sicher, dass Sie von Ihrem Microsoft Teams-Client zur [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) wechseln.
@@ -104,7 +127,7 @@ Stellen Sie sicher, dass Sie von Ihrem Microsoft Teams-Client zur [öffentlichen
 
 Optional können Sie [Visual Studio Code](https://code.visualstudio.com/) verwenden, um Teams-Apps in Office und Outlook zu erweitern.
 
-Die Erweiterung [Teams Toolkit für Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0`oder höher) bietet Befehle, mit denen Sie Ihren vorhandenen Teams-Code so ändern können, dass er mit Outlook und Office kompatibel ist. Weitere Informationen finden Sie unter [Aktivieren der persönlichen Registerkarte von Teams für Office und Outlook](extend-m365-teams-personal-tab.md).
+The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. For more information, see [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 

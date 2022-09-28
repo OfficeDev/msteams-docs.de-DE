@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams-Entwicklerdokumentation – Glossar
-description: Informationen zu den in der Microsoft Teams-Entwicklerdokumentation verwendeten Begriffen
+description: Erfahren Sie mehr über die allgemeinen Begriffe, Bedeutungen und Definitionen, die in der Microsoft Teams-Entwicklerdokumentation verwendet werden.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
-ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
+ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027512"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100861"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -78,7 +78,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [E5-Entwicklerkonto](../toolkit/tools-prerequisites.md) | E5-Entwicklerabonnement zum Erstellen von Apps zur Erweiterung von Microsoft 365. Es umfasst bis zu 25 Benutzerlizenzen, einschließlich des Administrators (nur für Entwicklungszwecke).  <br>**Weitere Informationen unter**: [Microsoft 365 Konto](#m) |
+| [E5-Entwicklerkonto](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5-Entwicklerabonnement zum Erstellen von Apps zur Erweiterung von Microsoft 365. Es umfasst bis zu 25 Benutzerlizenzen, einschließlich des Administrators (nur für Entwicklungszwecke).  <br>**Weitere Informationen unter**: [Microsoft 365 Konto](#m) |
 | [Einstiegspunkt](../concepts/app-fundamentals-overview.md) | Ein Zugriffspunkt, z. B. Team, Kanal und Chat, für eine Teams App, in der Benutzer Ihre App verwenden können. |
 | [Umgebung](../toolkit/teamsfx-multi-env.md) | Ein Feature im Teams-Toolkit, mit dem Sie mehrere Entwicklungsumgebungen für Ihr App-Projekt erstellen und verwenden können. Es gibt zwei Entwicklungsumgebungen, die Teams Toolkit standardmäßig erstellt, lokale Umgebung und Entwicklungsumgebung. <br>**Weitere Informationen unter**: [Lokale Umgebung](#l); [Entwicklungsumgebung](#d) |
 

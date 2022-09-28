@@ -1,17 +1,17 @@
 ---
 title: Erkunden von Teams als Plattform zum Erstellen von Apps
 author: heath-hamilton
-description: Hier finden Sie eine Übersicht über die Microsoft Teams-Plattformfeatures für Ihre App auf Desktop- und mobilen Geräten.
+description: Microsoft Teams-Plattformfeatures für Ihre App auf Desktops und Mobilgeräten. Registerkarten, Bots, Messaging-Erweiterungen, Webhook, Connectors, Microsoft Graph oder adaptive Karten.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558828"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100308"
 ---
 # <a name="explore-teams-platform-features"></a>Erkunden der Features der Teams-Plattform
 
@@ -23,7 +23,7 @@ Mit Teams können Sie Ihre App in einer funktionsreichen Umgebung erstellen. Wen
 
 | Feature | Beschreibung | Nützlich für |
 | --- | --- | --- |
-|Registerkarten | Registerkarten sind Teams-fähige Webseiten, die in Microsoft Teams eingebettet sind. Sie können sie als Teil eines Kanals innerhalb eines Teams, eines Gruppenchats oder einer persönlichen App für einen einzelnen Benutzer hinzufügen. | Persönliche Registerkarte, Kanal- oder Gruppenregisterkarte, Bühnenansicht und Entfaltung von Links. |
+|Registerkarten | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Persönliche Registerkarte, Kanal- oder Gruppenregisterkarte, Bühnenansicht und Entfaltung von Links. |
 | Bots | Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende automatisierte Aufgaben ausführt, die von den Benutzern erledigt werden. Eine Botinteraktion kann eine kurze Frage und Antwort oder eine komplexe Konversation sein, die Zugriff auf Dienste bietet. | Kundendienst, Informationen zum Wetter, Essensreservierungen oder Liefern von Reiseinformationen. |
 | Nachrichtenerweiterung | Nachrichtenerweiterungen ermöglichen Benutzern die Interaktion mit Ihrem Webdienst-Teams-Client. Sie suchen oder starten Aktionen in einem externen System. Sie können das Ergebnis der Interaktion an den Teams-Client in Form einer detailreich formatierten Karte senden. | Reservieren Sie eine Ressource und lassen Sie den Kanal das reservierte Zeitfenster kennen. Suchen Sie nach einem Arbeitselement und geben Sie es als Adaptive Card für die Gruppe frei. Erstellen Sie einen Bug in Ihrem Tracking-System auf der Grundlage einer Teams-Nachricht, weisen Sie diesen Bug einem Benutzer zu und senden Sie eine Karte mit den Details des Bugs an den Konversationsthread. |
 |Besprechungserweiterungen | Sie können Apps erstellen, um Besprechungen produktiver zu gestalten. | Bitten Sie Personen, während eines Anrufs an einer Umfrage teilzunehmen, oder senden Sie eine kurze Erinnerung, die den Ablauf der Besprechung nicht unterbricht. |

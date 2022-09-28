@@ -1,14 +1,14 @@
 ---
 title: Senden der Mandanten-ID und Konversations-ID an die Anforderungsheader des Bots
-description: In diesem Modul erfahren Sie, wie Sie Mandanten-ID und Unterhaltungs-ID an die Anforderungsheader des Bots in Teams senden.
+description: Erfahren Sie, wie Sie den Bot-Datenverkehr weiterleiten, ohne die gesamte Nutzlast mithilfe der Mandanten-ID und Unterhaltungs-ID auszupacken, die in Anforderungsheadern des Bots in Teams vorhanden sind.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b292db11ced764bbe235bee0f6f8f4829ba7b6c9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 3132d91d4b3d0b290ee8e1fb35ebeea076217fe8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503774"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100147"
 ---
 # <a name="request-headers-of-the-bot"></a>Anfordern von Kopfzeilen des Bots
 

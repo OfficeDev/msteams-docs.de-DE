@@ -1,19 +1,19 @@
 ---
 title: Anforderungen und Überlegungen für anwendungsgehostete Medienbots
-description: Lernen Sie wichtige Anforderungen und Überlegungen sowie Skalierbarkeits- und Leistungsaspekte im Zusammenhang mit der Erstellung von in der Anwendung gehosteten Medienbots für Teams
+description: Erfahren Sie, wie Sie anwendungsgehostete Medienbots für Microsoft Teams, Skalierbarkeit und Leistung erstellen. Beispiele für verschiedene Remote- und lokale Medienszenarien finden Sie unter .
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 8643575f2fcb64cbfe6349c32d0b1b3df98ea31e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150791"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100875"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Anforderungen und Überlegungen für anwendungsgehostete Medienbots
 
-Für einen in der Anwendung gehosteten Medienbot ist die [`Microsoft.Graph.Communications.Calls.Media` .NET-Bibliothek](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) erforderlich, um auf die Audio- und Videomedienstreams zuzugreifen. Der Bot muss auf einem Windows Server auf einem lokalen Computer oder einem Windows Server-Gastbetriebssystem in Azure bereitgestellt werden.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ Der nächste Abschnitt enthält Einzelheiten darüber, wo sich Echtzeit-Medienau
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Medienanrufe in Echtzeit bleiben dort, wo sie erstellt werden
 
-Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die Instanz der virtuellen Maschine (VM) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Teams Anruf- oder Besprechungsflüsse an diese VM-Instanz und Medien, die der Bot an Teams zurücksendet, müssen ebenfalls von dieser VM stammen. Wenn beim Stoppen der VM Echtzeit-Medienaufrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot Vorkenntnisse über das bevorstehende Herunterfahren der VM hat, kann er die Anrufe beenden.
+Echtzeit-Medienanrufe bleiben auf dem Computer, auf dem sie erstellt wurden. Ein Echtzeit-Medienanruf wird an die Instanz der virtuellen Maschine (VM) angeheftet, die den Anruf angenommen oder gestartet hat. Medien aus einem Teams-Anruf oder einer Besprechung fließen an diese VM-Instanz, und Medien, die der Bot an Teams zurücksendet, müssen ebenfalls von dieser VM stammen. Wenn beim Stoppen der VM Echtzeit-Medienaufrufe ausgeführt werden, werden diese Aufrufe abrupt beendet. Wenn der Bot Vorkenntnisse über das bevorstehende Herunterfahren der VM hat, kann er die Anrufe beenden.
 
 Der nächste Abschnitt enthält Details zur Zugänglichkeit von anwendungsgehosteten Medien-Bots.
 

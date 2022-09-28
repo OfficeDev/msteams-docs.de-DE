@@ -1,16 +1,16 @@
 ---
 title: Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie Aktionsbefehle für Messaging-Erweiterungen mit dem App-Manifestbeispiel in Microsoft Teams definieren.
+description: Erfahren Sie, wie Sie Aktionsbefehle für Messaging-Erweiterungen mit dem App-Manifestbeispiel in Microsoft Teams definieren. Beispiel (.NET, Node.js) zum Definieren von Aktionsbefehlen, Erstellen eines Aufgabenmoduls und Reagieren auf Aufgabenmodul-Sendeaktion.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604857"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100735"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -77,7 +77,7 @@ Wenn die Nachrichtenerweiterung über das Feld zum Verfassen oder direkt aus ein
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Hinzufügen des Aktionsbefehls zum App-Manifest
 
-Um den Aktionsbefehl zum App-Manifest hinzuzufügen, müssen Sie der obersten Ebene des App-Manifest-JSON ein neues Objekt `composeExtension` hinzufügen. Dazu können Sie eine der folgenden Methoden verwenden:
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [Erstellen eines Aktionsbefehls mithilfe des Entwicklerportals](#create-an-action-command-using-developer-portal)
 * [Manuelles Erstellen eines Aktionsbefehls](#create-an-action-command-manually)
@@ -119,7 +119,7 @@ So erstellen Sie einen Aktionsbefehl:
 
    :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
 
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Der Screenshot zeigt, wie Sie alle Einstellungen und Parameter für Ihre Nachrichtenerweiterung speichern.":::
 
@@ -149,9 +149,9 @@ Wenn Sie eine statische Liste von Parametern verwenden, müssen Sie auch die fol
 
 | Eigenschaftenname | Zweck | Erforderlich? | Minimale Manifestversion |
 |---|---|---|---|
-| `parameters` | Diese Eigenschaft beschreibt die statische Liste von Parametern für den Befehl. Nur verwenden, wenn `fetchTask` gleich `false` ist. | Nein | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | Nein | 1.0 |
 | `parameter.name` | Diese Eigenschaft beschreibt den Namen des Parameters. Dies wird in der Benutzeranforderung an Ihren Dienst gesendet. | Ja | 1.0 |
-| `parameter.description` | Diese Eigenschaft beschreibt den Zweck des Parameters oder ein Beispiel für den Wert, der bereitgestellt werden soll. Dieser Wert wird auf der Benutzeroberfläche angezeigt. | Ja | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Ja | 1.0 |
 | `parameter.title` | Diese Eigenschaft ist ein kurzer benutzerfreundlicher Parametertitel oder eine Bezeichnung. | Ja | 1.0 |
 | `parameter.inputType` | Diese Eigenschaft ist auf den Typ der erforderlichen Eingabe festgelegt. Folgende Werte stehen zur Verfügung: `text`, `textarea`, `number`, `date`, `time`, `toggle`. Der Standardwert ist `text`. | Nein | 1.4 |
 

@@ -1,16 +1,16 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Lernen Sie die letzten Schritte kennen, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen und vieles mehr.
+description: Lernen Sie die letzten Schritte kennen, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen. Erfahren Sie, wie Sie Apple App Store Connect Team ID im Partner Center aktualisieren.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605756"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100441"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -33,7 +33,7 @@ Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizier
 1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch im [Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md) verfügbar.
 1. Laden Sie Ihr App-Paket hoch, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste**, und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
-1. [Beheben Sie Fehler mit Ihren Konfigurationen ](~/resources/schema/manifest-schema.md) oder Ihrer App ganz allgemein. Diese Probleme treten auf, wenn die automatisierten Tests Ihnen Fehler liefern, oder wenn Sie nicht alle Kriterien in der Prüfliste erfüllt haben.
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## <a name="compile-testing-instructions"></a>Kompilieren von Testanweisungen
 
@@ -97,7 +97,7 @@ Sie müssen eine kurze und lange Beschreibung Ihrer App haben.
 
 #### <a name="short-description"></a>Kurzbeschreibung
 
-Eine präzise Zusammenfassung Ihrer App, die originell, ansprechend und auf Ihre Zielgruppe ausgerichtet sein sollte. Beschränken Sie die kurze Beschreibung auf einen Satz.
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 :::row:::
 
@@ -167,7 +167,7 @@ Bewährte Methoden finden Sie in den folgenden Ressourcen:
 
 ### <a name="create-a-video"></a>Erstellen eines Videos
 
-Ein Video in Ihrem Listing kann die effektivste Methode sein, um zu kommunizieren, warum Personen Ihre App verwenden sollten. Beantworten Sie die folgenden Fragen in einem Video:
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * Für wen ist Ihre App geeignet?
 * Welche Probleme kann Ihre App lösen?
@@ -179,7 +179,7 @@ Sie können eine URL für Ihr YouTube- oder Vimeo-Video hinzufügen.
 #### <a name="best-practices-for-videos"></a>Bewährte Methoden für Videos
 
 * Halten Sie Ihr Video zwischen 60 und 90 Sekunden.
-* Achten Sie auf Qualität. In einem Listing sehen Benutzer Ihr Video vor Screenshots.
+* Aim for quality. In a listing, users will see your video before screenshots.
 * Kommunizieren Sie den Wert des Produkts in erzählerischer Form.
 * Veranschaulichen, wie das Produkt funktioniert.
 

@@ -1,16 +1,16 @@
 ---
 title: Einschließen eines SaaS-Angebots mit Ihrer App
-description: In diesem Artikel erfahren Sie, wie Sie Ihre Microsoft Teams-App mit einem abonnementbasierten Preismodell monetarisieren und ein SaaS-Angebot in Ihre Microsoft Teams-App einschließen.
+description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App monetarisieren, indem Sie Abonnementpläne direkt aus Ihrem Teams Store-Eintrag verkaufen. Grundlegendes zum Veröffentlichen von Apps, Endbenutzern und Administratoren.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
-ms.translationtype: HT
+ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288185"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100637"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Binden Sie ein SaaS-Angebot in Ihre Teams-App ein
 
@@ -109,7 +109,7 @@ Vollständige Anweisungen dazu finden Sie unter [Erstellen eines SaaS-Angebots](
 
     * Fügen Sie den AppSource-Link unter **Microsoft 365 Integration** zu Ihrem App-Eintrag hinzu. Mit diesem Schritt wird sichergestellt, dass Benutzer Ihre Abonnementpläne zusätzlich zu Teams in AppSource kaufen können.
 
-1. Speichern Sie Ihre Herausgeber-ID und Angebot-ID. (Sie benötigen sie später, um das Angebot mit Ihrer App im Entwicklerportal zu verknüpfen.)
+1. Speichern Sie Ihren Herausgeber und Angebot-IDs. (Sie benötigen sie später, um das Angebot mit Ihrer App im Entwicklerportal zu verknüpfen.)
 
 1. Veröffentlichen Sie Ihr Angebot auf dem Commercial Marketplace.
 

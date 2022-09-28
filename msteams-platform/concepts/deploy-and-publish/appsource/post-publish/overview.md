@@ -1,16 +1,16 @@
 ---
 title: Verwalten und Unterstützen Ihrer veröffentlichten App
-description: Erfahren Sie, wie Sie Ihre veröffentlichte Microsoft Teams-App warten und woran Sie denken müssen, wenn Ihr Store im Teams Store und in AppSource aufgeführt ist.
+description: Erfahren Sie, wie Sie Ihre veröffentlichte Microsoft Teams-App verwalten und wie Sie vorgehen können, nachdem Ihr Store im Teams-Store und in AppSource aufgeführt ist. Analysieren Sie die App-Nutzung, veröffentlichen Sie Updates, bewerben Sie Ihre App, schließen Sie die Microsoft 365-Zertifizierung ab.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484845"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100329"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Unterhalt Ihrer veröffentlichte Microsoft Teams-App
 
@@ -35,7 +35,7 @@ Stellen Sie beim Veröffentlichen von Updates Folgendes sicher:
 
 * Ändern Sie Ihre App-ID nicht.
 * Erhöhen Sie die Versionsnummer Ihrer App.
-* Wählen Sie im Partner Center nicht **Neue App hinzufügen** aus, um das Update durchzuführen. Wechseln Sie stattdessen zur Seite Ihrer App.
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### <a name="app-updates-requiring-user-consent"></a>App-Updates, die eine Zustimmung des Benutzers erfordern
 
@@ -50,7 +50,7 @@ Wenn Sie jedoch eine der folgenden Änderungen an Ihrer App vornehmen, müssen I
 * Sie fügen eine persönliche Registerkarte hinzu.
 * Sie fügen eine Kanal- und Gruppen-Registerkarte hinzu.
 * Sie fügen einen Connector hinzu.
-* Ändern Sie Konfigurationen im Zusammenhang mit der Registrierung Ihrer Microsoft Azure Active Directory (Azure AD)-App. Weitere Informationen finden Sie unter[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Beheben von Problemen mit Ihrer veröffentlichten App
 

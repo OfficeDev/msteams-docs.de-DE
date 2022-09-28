@@ -1,14 +1,13 @@
 ---
 title: Ratenbegrenzung für Bots
-description: Informationen zum Behandlungsratenlimit für Bots mit pro Bot und Threadlimit für alle Bots mit Codebeispielen
-ms.topic: conceptual
+description: Erfahren Sie, wie Sie den Bot mit einer Begrenzung der Rate optimieren. Erkennen vorübergehender Ausnahmen pro Botthreadlimit. Sie können auch einen exponentiellen Backoff durchführen.
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 487f251be40894464e55b891a7386cd8a04abe25
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503865"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100427"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimieren eines Bots mit Ratenbegrenzung in Teams
 
@@ -139,12 +138,12 @@ In der folgenden Tabelle sind die Grenzwerte pro Bot pro Thread aufgeführt:
 | Unterhaltung erstellen | 2 | 8  |
 | Unterhaltung erstellen | 30 | 60 |
 | Unterhaltung erstellen | 3600 | 1800 |
-| Abrufen von Unterhaltungsmitgliedern| 1 | 14 |
-| Abrufen von Unterhaltungsmitgliedern| 2 | 16 |
+| Abrufen von Unterhaltungsmitgliedern| 1 | 14  |
+| Abrufen von Unterhaltungsmitgliedern| 2 | 16  |
 | Abrufen von Unterhaltungsmitgliedern| 30 | 120 |
 | Abrufen von Unterhaltungsmitgliedern| 3600 | 3600 |
-| Abrufen von Unterhaltungen | 1 | 14 |
-| Abrufen von Unterhaltungen | 2 | 16 |
+| Abrufen von Unterhaltungen | 1 | 14  |
+| Abrufen von Unterhaltungen | 2 | 16  |
 | Abrufen von Unterhaltungen | 30 | 120 |
 | Abrufen von Unterhaltungen | 3600 | 3600 |
 
@@ -161,12 +160,12 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 
 | Szenario | Zeitraum in Sekunden | Maximal zulässige Vorgänge |
 | --- | --- | --- |
-| An Unterhaltung senden | 1 | 14 |
-| An Unterhaltung senden | 2 | 16 |
-| Unterhaltung erstellen | 1 | 14 |
-| Unterhaltung erstellen | 2 | 16 |
-| Unterhaltung erstellen| 1 | 14 |
-| Unterhaltung erstellen| 2 | 16 |
+| An Unterhaltung senden | 1 | 14  |
+| An Unterhaltung senden | 2 | 16  |
+| Unterhaltung erstellen | 1 | 14  |
+| Unterhaltung erstellen | 2 | 16  |
+| Unterhaltung erstellen| 1 | 14  |
+| Unterhaltung erstellen| 2 | 16  |
 | Abrufen von Unterhaltungsmitgliedern| 1 | 28 |
 | Abrufen von Unterhaltungsmitgliedern| 2 | 32 |
 | Abrufen von Unterhaltungen | 1 | 28 |
@@ -177,6 +176,6 @@ Die folgende Tabelle enthält den Grenzwert pro Thread für alle Bots:
 > [!div class="nextstepaction"]
 > [Bots für Anrufe und Besprechungen](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwalten eines lang andauernden Vorgangs](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

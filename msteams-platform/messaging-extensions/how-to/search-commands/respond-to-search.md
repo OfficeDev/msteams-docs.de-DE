@@ -1,16 +1,16 @@
 ---
 title: " Reagieren Sie auf den Suchbefehl "
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie mithilfe von Codebeispielen und Beispielen auf den Suchbefehl aus einer Nachrichtenerweiterung in einer Microsoft Teams-App reagieren.
+description: Erfahren Sie, wie Sie über eine Nachrichtenerweiterung in einer Microsoft Teams-App auf den Suchbefehl reagieren. Verstehen, wie sie auf die Benutzeranfrage reagieren.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143704"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100560"
 ---
 # <a name="respond-to-search-command"></a> Reagieren Sie auf den Suchbefehl 
 
@@ -107,7 +107,7 @@ Informationen zum Verwenden der Miniaturansichten- und Hero-Kartentypen finden S
 
 Weitere Informationen zur Office 365 Connectorkarte finden [Sie unter Verwenden von Office 365 Connectorkarten](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-Die Ergebnisliste wird in der benutzeroberfläche Microsoft Teams mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden folgenden Arten generiert:
+Die Ergebnisliste wird in der Microsoft Teams-Benutzeroberfläche mit einer Vorschau der einzelnen Elemente angezeigt. Die Vorschau wird auf eine der beiden folgenden Arten generiert:
 
 * Verwenden der `preview` Eigenschaft innerhalb des Objekts `attachment` . Die `preview` Anlage kann nur ein Held oder eine Miniaturansichtskarte sein.
 * Extrahieren aus den grundlegenden `title`, `text`und `image` Eigenschaften des Objekts `attachment` . Die grundlegenden Eigenschaften werden nur verwendet, wenn die `preview` Eigenschaft nicht angegeben ist.
@@ -387,7 +387,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>Standardabfrage
 
-Wenn Sie im Manifest festlegen `initialRun` `true`, gibt Microsoft Teams eine **Standardabfrage** aus, wenn der Benutzer die Nachrichtenerweiterung zum ersten Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab ausgefüllten Ergebnissen antworten. Dies ist nützlich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen angezeigt werden, die nicht von benutzereingaben abhängig sind.
+Wenn Sie im Manifest festlegen `initialRun` `true` , gibt Microsoft Teams eine **Standardabfrage** aus, wenn der Benutzer die Nachrichtenerweiterung zum ersten Mal öffnet. Ihr Dienst kann auf diese Abfrage mit einer Reihe von vorab ausgefüllten Ergebnissen antworten. Dies ist nützlich, wenn ihr Suchbefehl eine Authentifizierung oder Konfiguration erfordert und zuletzt angezeigte Elemente, Favoriten oder andere Informationen angezeigt werden, die nicht von benutzereingaben abhängig sind.
 
 Die Standardabfrage hat die gleiche Struktur wie jede normale Benutzerabfrage, wobei das Feld auf `initialRun` das `name` folgende Objekt festgelegt und `value` festgelegt `true` ist:
 
@@ -424,6 +424,6 @@ Die Standardabfrage hat die gleiche Struktur wie jede normale Benutzerabfrage, w
 > [!div class="nextstepaction"]
 > [Hinzufügen der Authentifizierung zu einer Nachrichtenerweiterung](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Hinzufügen einer Konfiguration zu einer Nachrichtenerweiterung](~/get-started/first-message-extension.md)

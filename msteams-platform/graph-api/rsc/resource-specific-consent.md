@@ -1,16 +1,16 @@
 ---
 title: Aktivieren Sie die ressourcenspezifische Zustimmung in Teams
-description: In diesem Artikel erfahren Sie, wie Sie ressourcenspezifische Zustimmung in Microsoft Teams erhalten und wie Sie sie nutzen können.
+description: Erfahren Sie mehr über die unterstützten granularen RSC-Berechtigungen (Resource-Specific Consent), die es Teambesitzern und Chatbesitzern ermöglichen, die Zustimmung für eine Anwendung zu erteilen.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 558ddd3603c9545781a3ebe06b7878df48b1333c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586707"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100889"
 ---
 # <a name="resource-specific-consent"></a>Ressourcenspezifische Zustimmung
 

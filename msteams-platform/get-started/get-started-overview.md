@@ -1,14 +1,14 @@
 ---
 title: Erste Schritte – Übersicht
-description: In diesem Modul erfahren Sie, wie Sie mit der Microsoft Teams-Entwicklerdokumentation beginnen, die Sie mit allgemeinen Tools, grundlegenden Konzepten und erweiterten Features vertraut macht.
+description: Beginnen. Erstellen Sie Ihre erste Microsoft Teams-App basierend auf Sprache (Node.js,C#, Java, Python) und Entwicklungsumgebung, und verstehen Sie die App-Funktionen, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 4ad64240c97ab11da6a999f87621fdff6d70ebe2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312282"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100434"
 ---
 # <a name="get-started"></a>Erste Schritte
 

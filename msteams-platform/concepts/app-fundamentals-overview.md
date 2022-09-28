@@ -1,22 +1,22 @@
 ---
 title: Planen der App-Übersicht
 author: heath-hamilton
-description: Einführung in die Elemente der Planung einer App, des Verständnisses von Anwendungsfällen, App-Funktionen und anderer Teams-Funktionen.
+description: Verstehen von Anwendungsfall- und Microsoft Teams-App-Features, Zuordnen von Anwendungsfällen, Planen reaktionsfähiger Registerkarten für mobile Geräte. Erfahren Sie mehr über die Teams-Features und -Verfügbarkeit für GCC, GCC-High und DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058242"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100420"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planen Ihrer App mit Teams-Features
 
 Beim Erstellen einer großartigen Teams-App geht es darum, die richtige Kombination von Features zu finden, um die Anforderungen Ihrer Benutzer zu erfüllen. Das Design, die Features und die Funktionen einer App ergeben sich aus diesem Zweck.
 
-Im Kern ist Teams eine Plattform für die Zusammenarbeit. Es ist auch eine soziale Plattform, ist nativ plattformübergreifend, bildet das Herzstück von Office 365 und bietet Ihnen eine persönliche Leinwand für die Erstellung von Apps.
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 In diesem Abschnitt erfahren Sie, wie Sie:
 
@@ -76,7 +76,7 @@ Die folgende Tabelle enthält Teams-Features und -Verfügbarkeit für GCC, GCC-H
 |-------------|---------|---|---|
 | Apps im Besitz von Teams wie bei intern entwickelten Apps | ✔️ Die App ist aktiviert, wenn sie über GCC verfügt. | ✔️ Die App ist aktiviert, wenn sie über GCC-High verfügt. | ✔️ Die App ist aktiviert, wenn sie über DOD verfügt. |
 | Microsoft-Apps | ✔️ Mit GCC kompatible Microsoft-Apps | ✔️ Mit GCC-High kompatible Microsoft-Apps | ✔️ Microsoft-Apps, die mit DOD kompatibel sind |
-| 3P- oder Drittanbieter-Apps | ✔️ Apps von Drittanbietern sind verfügbar. Standardmäßig deaktiviert und der Mieter-Administrator kann sie nach eigenem Ermessen aktivieren. | ❌ | ❌ |
+| 3P- oder Drittanbieter-Apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Benutzerdefinierte oder Branchenregisterkarten-Apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading von Apps | ✔️ | ❌ | ❌ |

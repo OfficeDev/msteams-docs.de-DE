@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Lernen Sie in diesem Modul das JavaScript-Client-SDK von Microsoft Teams kennen, das Ihnen beim Erstellen von App-Erfahrungen helfen kann, die in <iframe> in Office und Outlook gehostet werden.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781066"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100154"
 ---
 # <a name="teams-javascript-client-sdk"></a>Microsoft Teams JavaScript-Client-SDK
 
@@ -38,10 +38,10 @@ In der folgenden Tabelle sind Teams-Registerkarten und -Dialogfelder (Aufgabenmo
 
 |Funktion | Hostunterstützung | Hinweise |
 |-----------|--------------|-------|
-| App | Teams, Outlook, Office | Namespace, der die App-Initialisierung und den Lebenszyklus darstellt. |
+| App | Teams, Outlook, Office, Office-App für Android | Namespace, der die App-Initialisierung und den Lebenszyklus darstellt. |
 | appInitialization| | Veraltet. Durch Namespace `app` ersetzt. |
 | appInstallDialog | Teams||
-| Authentifizierung | Teams, Outlook, Office | |
+| Authentifizierung | Teams, Outlook, Office, Office-App für Android | |
 | Kalender | Outlook ||
 | call | Teams||
 | Chat |Teams||
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind Teams-Registerkarten und -Dialogfelder (Aufgabenmo
 | Speicherort |Teams| Siehe Hinweise zu [App-Berechtigungen](#app-permissions).|
 | mail | Outlook (nur Windows Desktop)||
 | media |Teams| Siehe Hinweise zu [App-Berechtigungen](#app-permissions).|
-| Seiten | Teams, Outlook, Office | Namespace, der die Seitennavigation darstellt. Siehe Hinweise zu [Deep Linking](#deep-linking). |
+| Seiten | Teams, Outlook, Office, Office-App für Android | Namespace, der die Seitennavigation darstellt. Siehe Hinweise zu [Deep Linking](#deep-linking). |
 | Kontakte |Teams||
 | settings || Veraltet. Ersetzt durch `pages.config`.|
 | sharing | Teams||

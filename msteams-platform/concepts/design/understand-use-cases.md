@@ -1,16 +1,16 @@
 ---
 title: Grundlegendes zu Anwendungsfällen und Teams-Features Ihrer App
 author: heath-hamilton
-description: In diesem Artikel erfahren Sie mehr über die Funktionen der Microsoft Teams-App, das Planen und Verstehen von Teams-Apps und -Features sowie über Benutzerprobleme, die die Teams-App lösen würde.
+description: Erfahren Sie mehr über Microsoft Teaams-App-Funktionen– Registerkarten, Bots, Besprechungserweiterungen, Nachrichtenerweiterungen, Webhook-Connectors, persönliche App-Erfahrung, gemeinsame App-Erfahrung.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558443"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100455"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -31,7 +31,7 @@ Wenn Sie die Benutzeranforderungen mit Ihrer App erfüllen sollen, müssen Sie d
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams-App-Features
 
-Es gibt mehrere Möglichkeiten, Teams so zu erweitern, dass jede App einzigartig ist. Teams-App-Features bieten Folgendes:
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [App-Funktionen](#app-capabilities)
 - [App-Bereich](#app-scope)
@@ -171,9 +171,9 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 Ihre App kann einen der folgenden Bereiche aufweisen:
 
 - **Persönliche App-Benutzeroberfläche**: Eine persönliche App ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
-- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder die Erschließung neuer sozialer Interaktionen.
+- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder das Freischalten neuer sozialer Interaktionen.
 
-Eine App kann in verschiedenen Bereichen vorhanden sein. Zum Beispiel:
+Eine App kann über verschiedene Bereiche hinweg vorhanden sein. Beispiel:
 
 - Ihre App kann Daten an einem zentralen freigegebenen Speicherort anzeigen, d. h. auf einer Registerkarte.
 - Sie kann dieselben Informationen auch über eine persönliche Konversationsschnittstelle, d. h. einen Bot, darstellen.

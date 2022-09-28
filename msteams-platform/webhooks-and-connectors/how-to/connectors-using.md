@@ -1,15 +1,15 @@
 ---
 title: Nachrichten erstellen und senden
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie Office 365-Connectors verwenden und Aktionen erfordernde Nachrichten in Microsoft Teams erstellen und senden.
+description: Erstellen Sie Aktionen erfordernde Nachrichten, senden Sie Nachrichten über eingehenden Webhook, Office 365 Connector, cURL oder PowerShell. Adaptive Karten senden. Zeitbasierte Transaktion.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 5014c23d13dd8f0b1c694c144e936c624c602d40
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ce7f2dd8eba6aaa98156ea118a9724dcd79fd989
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806780"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100462"
 ---
 # <a name="create-and-send-messages"></a>Nachrichten erstellen und senden
 
@@ -258,10 +258,10 @@ Die folgende Tabelle enthält die Details zu zeitbasierten Transaktionen:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Befolgen Sie die [bewährten Methoden](../../bots/how-to/rate-limit.md), um zu vermeiden, dass die Ratenbegrenzungen erreicht werden.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
-> Eine [Wiederholungslogik mit exponentiellem Backoff](/azure/architecture/patterns/retry) kann die Begrenzung der Datenübertragungsrate in Fällen verringern, in denen Anforderungen die Grenzwerte innerhalb einer Sekunde überschreiten. Verweisen Sie auf [HTTP 429-Antworten](../../bots/how-to/rate-limit.md#handle-http-429-responses), um zu vermeiden, dass die Ratenbegrenzungen erreicht werden.
+> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

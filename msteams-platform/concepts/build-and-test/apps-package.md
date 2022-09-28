@@ -1,14 +1,14 @@
 ---
 title: Verpacken Ihrer App
-description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App mit Symbolen zum Testen, Hochladen und Veröffentlichen im Store verpacken.
+description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App verpacken und in Teams hochladen. Erstellen Sie ein App-Paket, aktivieren Sie das benutzerdefinierte Hochladen, stellen Sie sicher, dass Ihre App ausgeführt wird und über HTTPs darauf zugegriffen werden kann.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 03f1df6af15b5e07dd71bcec22838ecff53d4c7f
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044686"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100196"
 ---
 # <a name="create-teams-app-package"></a>Teams-App-Paket erstellen
 

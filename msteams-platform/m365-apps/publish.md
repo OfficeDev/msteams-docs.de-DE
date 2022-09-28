@@ -1,20 +1,20 @@
 ---
 title: Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
-description: In diesem Artikel erfahren Sie, wie Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office auffindbar machen.
+description: Erfahren Sie, wie Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office auffindbar machen. Informieren Sie sich über die mehrinstanzenfähige Verteilung mit einem Mandanten.
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: c99114ed397b9c20f699ffee165189ec7c4fd26d
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919816"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100938"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 
-Microsoft 365-fähige Teams-Apps werden für die Produktionsverwendung in Microsoft Teams unterstützt. Sie können diese Apps verteilen, um eine Vorschau von Zielgruppen anzuzeigen, die die *Targeted Release-Versionen* von outlook.com und office.com sowie den *Betakanalbuild* von Outlook für Windows Desktop verwenden. Verteilungsoptionen und -prozesse für Microsoft 365-fähige Teams-Apps sind identisch mit herkömmlichen Teams-Apps.
+Microsoft Teams unterstützt Microsoft 365-fähige Teams-Apps für die Produktion. Sie können diese Apps an Benutzergruppen verteilen, die die *Targeted Release* (Dev Preview)-Versionen von Outlook.com und Office.com, den *Betakanalbuild* von Outlook für Windows Desktop und den Office Current Channel (Dev Preview)-Build der Office-App für Android verwenden. Verteilungsoptionen und -prozesse für Microsoft 365-fähige Teams-Apps sind identisch mit herkömmlichen Teams-Apps.
 
 Nachdem sie veröffentlicht wurde, kann Ihre App zusätzlich zum Teams Store als installierbare App aus den Outlook- und Office-App-Stores auffindbar sein. Ihre App verwendet die in Teams in Outlook und Office definierten Berechtigungen. Teams-Administratoren können [den Zugriff auf Teams-Apps in Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) für Benutzer in ihrer Organisation verwalten.
 

@@ -1,20 +1,20 @@
 ---
 title: Ausweiten einer Microsoft Teams-App für persönliche Registerkarten auf Microsoft 365
-description: In diesem Artikel erfahren Sie, wie Sie eine persönliche Teams-Registerkarten-App in Microsoft 365 erweitern, indem Sie die persönliche Registerkarte so aktualisieren, dass sie sowohl in Outlook als auch in Office ausgeführt wird.
+description: Aktualisieren Sie Ihre persönliche App so, dass sie in Outlook und Office ausgeführt wird. Aktualisieren Sie das Manifest und das TeamsJS SDK V2, ändern Sie die Zustimmungssicherheit, aktualisieren Sie die Azure AD-App-Registrierung für SSO.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781211"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100776"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
-Persönliche Registerkarten bieten eine hervorragende Möglichkeit, das Benutzererlebnis in Microsoft Teams noch weiter zu verbessern. Mithilfe persönlicher Registerkarten können Sie einem Benutzer direkt innerhalb Microsoft Teams den Zugriff auf seine Anwendung ermöglichen, ohne dass er die Umgebung verlassen oder sich erneut anmelden muss. Mit dieser Vorschauversion können persönliche Registerkarten in anderen Microsoft 365-Anwendungen angezeigt werden. In diesem Lernprogramm wird veranschaulicht, wie eine vorhandene persönliche Microsoft Teams-Registerkarte so aktualisiert wird, dass sie sowohl in Outlook Desktop- und Webversionen als auch in Office im Web (office.com) funktioniert.
+Persönliche Registerkarten bieten eine hervorragende Möglichkeit, das Benutzererlebnis in Microsoft Teams noch weiter zu verbessern. Mithilfe persönlicher Registerkarten können Sie einem Benutzer direkt innerhalb Microsoft Teams den Zugriff auf seine Anwendung ermöglichen, ohne dass er die Umgebung verlassen oder sich erneut anmelden muss. Mit dieser Vorschauversion können persönliche Registerkarten in anderen Microsoft 365-Anwendungen angezeigt werden. In diesem Lernprogramm wird das Erstellen einer vorhandenen persönlichen Teams-Registerkarte und deren Aktualisierung für die Ausführung in Outlook und Office-Desktop- und Weboberflächen sowie in der Office-App für Android veranschaulicht.
 
 Das Aktualisieren Ihrer persönlichen App für die Ausführung in Outlook und Office umfasst die folgenden Schritte:
 
@@ -141,8 +141,12 @@ Wenn Ihre App CSP-Header ( [Content Security Policy](https://developer.mozilla.o
     |Teams-Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office Web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office-Desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office Mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook Desktop, Mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook Web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Einige Microsoft 365-Clientanwendungen teilen Client-IDs.
 
 ## <a name="sideload-your-app-in-teams"></a>Querladen der App in Microsoft Teams
 
@@ -164,7 +168,7 @@ Der letzte Schritt zum Ausführen Ihrer App in Office und Outlook besteht darin,
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option &quot;Benutzerdefinierte App hochladen&quot; in Microsoft Teams":::
 
-Nachdem sie in Teams quergeladen wurde, ist Ihre persönliche Registerkarte in Outlook und Office verfügbar. Melden Sie sich mit denselben Anmeldeinformationen an, die Sie zum Querladen Ihrer App bei Teams verwendet haben.
+Nachdem sie in Teams quergeladen wurde, ist Ihre persönliche Registerkarte in Outlook und Office verfügbar. Sie müssen sich mit denselben Anmeldeinformationen anmelden, die Sie zum Querladen Ihrer App in Teams verwendet haben. Wenn Sie die Office-App für Android ausführen, müssen Sie die App neu starten, um Ihre persönliche Registerkarten-App aus der Office-App zu verwenden.
 
 Sie können die App für den schnellen Zugriff anheften, oder Sie finden Ihre App im Flyout mit den Auslassungszeichen (**...**) unter den zuletzt verwendeten Anwendungen in der Randleiste auf der linken Seite. Das Anheften einer App in Teams heften Sie sie nicht als App in Office oder Outlook an.
 
@@ -215,6 +219,19 @@ So zeigen Sie eine Vorschau Ihrer App an, die in Office im Web ausgeführt wird:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Klicken Sie auf der Seitenleiste von office.com auf die Option &quot;Weitere Apps&quot;, um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
 
+### <a name="office-app-for-android"></a>Office-App für Android
+
+> [!NOTE]
+> Führen Sie vor der Installation der App [die Schritte aus, um den neuesten Betabuild der Office-App zu installieren](prerequisites.md#mobile) und Teil des Betaprogramms zu sein.
+
+So zeigen Sie Ihre App an, die in der Office-App für Android ausgeführt wird:
+
+1. Starten Sie die Office-App, und melden Sie sich mit Ihrem Dev-Mandantenkonto an. Wenn die Office-App für Android bereits vor dem Querladen Ihrer App in Teams ausgeführt wurde, müssen Sie sie neu starten, um sie unter Ihren installierten Apps anzuzeigen.
+1. Wählen Sie das **Symbol "Apps** " aus. Ihre quergeladene App wird unter den installierten Apps angezeigt.
+1. Wählen Sie Ihr App-Symbol aus, um Ihre App in der Office-App für Android zu starten.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Tippen Sie auf der Seitenleiste der Office-App auf die Option &quot;Apps&quot;, um Ihre installierten persönlichen Registerkarten anzuzeigen.":::
+
 ## <a name="troubleshooting"></a>Problembehandlung
 
 Derzeit wird eine Teilmenge der Teams-Anwendungstypen und -Funktionen in Outlook- und Office-Clients unterstützt. Diese Unterstützung wird im Laufe der Zeit erweitert.
@@ -239,14 +256,35 @@ Bei der ersten Ausführung des lokalen Debuggens bei Office oder Outlook werden 
 
 Geben Sie Feedback und melden Sie Alle Probleme mit der Debugumgebung des Teams-Toolkits bei [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
+#### <a name="mobile-debugging"></a>Mobiles Debuggen
+
+Das Debuggen mit dem Teams-Toolkit (`F5`) wird von der Office-App für Android noch nicht unterstützt. Hier erfahren Sie, wie Sie Ihre App, die in der Office-App für Android ausgeführt wird, remote debuggen:
+
+1. Wenn Sie mit einem physischen Android-Gerät debuggen, verbinden Sie es mit Ihrem Entwicklungscomputer, und aktivieren Sie die Option für [das USB-Debuggen](https://developer.android.com/studio/debug/dev-options). Dies ist standardmäßig mit dem Android-Emulator aktiviert.
+1. Starten Sie die Office-App von Ihrem Android-Gerät aus.
+1. Öffnen Sie Ihr Profil **"Ich > Einstellungen" > "Debugging zulassen**", und aktivieren Sie die Option zum **Aktivieren des Remotedebuggings**.
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot, der das Aktivieren des Remotedebuggings zeigt":::
+
+1. Einstellungen **beenden**.
+1. Beenden Sie den Profilbildschirm.
+1. Wählen Sie **"Apps** " aus, und starten Sie Ihre quergeladene App, um sie in der Office-App auszuführen.
+1. Stellen Sie sicher, dass Ihr Android-Gerät mit Ihrem Entwicklungscomputer verbunden ist. Öffnen Sie auf Ihrem Entwicklungscomputer Ihren Browser auf der DevTools-Inspektionsseite. Wechseln Sie z. B. zu `edge://inspect/#devices` Microsoft Edge, um eine Liste debugfähiger Android-WebViews anzuzeigen.
+1. Suchen Sie die `Microsoft Teams Tab` Url mit Ihrer Registerkarte, und wählen Sie " **Inspect** " aus, um mit dem Debuggen Ihrer App mit DevTools zu beginnen.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="Screenshot mit einer Liste der Webviews in devtool":::
+
+1. Debuggen Sie Ihre Registerkarten-App in der Android WebView. Auf die gleiche Weise [debuggen](/microsoft-edge/devtools-guide-chromium/remote-debugging) Sie remote eine normale Website auf einem Android-Gerät.
+
 ## <a name="code-sample"></a>Codebeispiel
 
 | **Beispielname** | **Beschreibung** | **Node.js** |
 |---------------|--------------|--------|
 | Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Beispielstartseite (Microsoft 365) | Veranschaulicht die SSO-Authentifizierung und die TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders-App | Veranschaulicht die Verwendung von Microsoft TeamsJS SDK V2, um die Teams-Anwendung auf andere M365-Host-Apps zu erweitern. Funktioniert in Teams, Outlook, Office. Für Mobilgeräte optimiert.| [Anzeigen](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

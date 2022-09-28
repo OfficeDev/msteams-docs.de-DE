@@ -1,17 +1,17 @@
 ---
 title: Teams-Lösung zum Erstellen von Apps
 author: heath-hamilton
-description: Erfahren Sie mehr über die Teams-Lösung zum Erstellen von Apps, und bieten Sie Unterstützung von der Planung Ihrer App bis zur Verteilung.
+description: Verstehen, wie Sie Ihre App planen, entwerfen, erstellen, auf Microsoft 365 erweitern, testen, verteilen, monetarisieren und in Teams integrieren.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 10e35af5ec4993ea93579f70afc120ff0aa8b18a
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
-ms.translationtype: HT
+ms.openlocfilehash: ac4f3a208484a093460a14777a351aa4abc10af7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66793061"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100784"
 ---
 # <a name="the-teams-solution"></a>Die Teams-Lösung
 
@@ -22,7 +22,7 @@ Die Microsoft Teams-Plattform ist eine leistungsstarke und flexible Plattform zu
 
 Sie haben eine Ansicht der Teams-Angebote erhalten. Sie können sie nun den Benutzeranforderungen zuordnen. Sehen wir uns das Szenario noch einmal an.
 
-Der Entwickler eines Reisebüros möchte eine App für seine Nutzer, die Reisenden, entwickeln. Die App muss:
+Der Entwickler der Tours and Travel Agency möchte eine App für seine Nutzer, die Reisenden, entwickeln. Die App muss:
 
 - Überprüfung und Übermittlung der Vorhersage an die im Reisebüro registrierten Reisenden.
 - Benachrichtigung der Nutzer einen Tag vor dem Abflugdatum, damit sie planen können.
@@ -40,7 +40,7 @@ Sortieren und Zuordnen von Anforderungen zu Teams-Features:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Ein Entwickler in einem Reisebüro erstellt einen Bot für Teams, der Wettervorhersagen an Kunden sendet, damit sie ihre Reisedaten im Voraus planen können":::
 
-Teams bietet diese und viele weitere Funktionen, um Ihren Benutzern eine funktionsreiche App-Lösung zu bieten. So entwickeln Sie diese App:
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Erstellen Sie eine persönliche Chatbot-App.
 1. Integrieren Sie eine externe Wettervorhersage-API, um eine Verbindung herzustellen und eine Vorhersage für ein bestimmtes Datum und einen bestimmten Standort abzufragen.
@@ -55,7 +55,7 @@ Eine Teams-App bietet Ihnen die Flexibilität, Ihre Buildumgebung auszuwählen. 
 
 :::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Unternehmen benötigt App":::
 
-Erstellen Sie Ihre Teams-App in der Umgebung, die ihren speziellen Anforderungen entspricht. Sie können sogar eine Kombination auswählen.
+Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 Beispielsweise können Sie das Teams-Toolkit verwenden, um eine App mit JavaScript zu erstellen und auf einer SharePoint-Website zu hosten.
 
@@ -67,10 +67,10 @@ Als Plattform zum Erstellen von Apps bietet Teams die gesamte Palette von Apps u
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Beschreiben eines Lebenszyklus der Teams-App-Entwicklung. Planen, Entwerfen, Erstellen, Erweitern, Testen, Bereitstellen, Vermarkten. Details werden unten in einer Aufzählung angezeigt.":::
 
-Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie verschiedene Tools und Dienste nutzen. Ein Beispiel für einen Entwicklungsablauf kann sein:
+From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. Planen Sie Ihr Projekt und ermitteln Sie die Anforderung.
-1. Entwerfen Sie die App. Verwenden Sie Teams UI Kit und UI Library für die Gestaltung der Benutzeroberfläche von Registerkarten.
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Erstellen Sie die App mit JavaScript mithilfe des Teams-Toolkits.
 1. Erweitern Sie die Funktionalität, indem Sie weitere Teams-Funktionen und M365-Daten mit :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph hinzufügen.
 1. Testen Sie die App auf einem Entwicklermandanten mit Beispiel-Nutzerdaten.
@@ -122,7 +122,7 @@ Vom Entwurf bis zur Erstellung und Vermarktung einer Teams-App können Sie versc
         **Erstellen Sie Ihre Anwendung**
     :::column-end:::
     :::column span="2":::
-        Suchen Sie nach Inspiration für die App-Entwicklung? Stöbern Sie in unserer Liste mit realen Szenarien und Branchenlösungen mit High Fidelity-Konzeptmodellen, um die verschiedenen Möglichkeiten zu verstehen, wie eine Teams-App Ihren Benutzern helfen kann.
+        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
         > [Anzeigen von App-Szenarien](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
@@ -194,7 +194,7 @@ Mit dem Teams JavaScript-Client-SDK v2 Preview können Sie eine Vorschau Ihrer T
         **Selbst ein kleiner Code kann viel bewirken**
     :::column-end:::
     :::column span="2":::
-        Sie müssen kein erfahrener Programmierer sein, um eine großartige Teams-App zu entwickeln. Probieren Sie eine der verschiedenen Low-Code-Lösungen aus.
+        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
         > [!div class="nextstepaction"]
         > [Erstellen einer App mit wenig Code](samples/teams-low-code-solutions.md)

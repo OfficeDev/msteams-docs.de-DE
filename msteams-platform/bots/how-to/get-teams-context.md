@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams-Kontext für Ihren Bot erhalten
 author: surbhigupta
-description: Erfahren Sie, wie Sie den Teams-spezifischen Kontext für Ihren Bot abrufen, z. B. die Unterhaltungsliste, die Details eines einzelnen Mitglieds oder Teams, die Kanalliste und Codebeispiele.
+description: Rufen Sie teamsspezifischen Kontext für Ihren Bot ab, rufen Sie das Benutzerprofil ab, rufen Sie ein einzelnes Mitglied, team's, liste der Kanäle in einem Team details ab. Beispiel zum Erstellen eines neuen Kanalthreads.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605075"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100140"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Microsoft Teams-Kontext für Ihren Bot erhalten
 
@@ -375,6 +375,6 @@ Response body
 > [!div class="nextstepaction"]
 > [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Lokalisieren IhrerApp](../../concepts/build-and-test/apps-localization.md)

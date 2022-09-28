@@ -1,15 +1,15 @@
 ---
 title: Manifest-Schemareferenz für die öffentliche Entwicklervorschau
-description: Erfahren Sie mehr über die Beispielmanifestdatei und die Beschreibung aller komponenten, die für Microsoft Teams unterstützt werden.
+description: Erfahren Sie, wie Sie die Entwicklervorschau aktivieren. Beispielschema des öffentlichen Entwicklervorschaumanifests für Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990924"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100294"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Öffentliche Entwicklervorschau des Manifestschemas für Teams
 
@@ -443,7 +443,7 @@ Eine optionale Liste von Befehlen, die Ihr Bot Benutzern vorschlagen kann. Das O
 |Name| Typ| Maximale Größe | Erforderlich | Beschreibung|
 |---|---|---|---|---|
 |`items.scopes`|Array von Enumerationen|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
-|`items.commands`|Array von Objekten|10  |✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
+|`items.commands`|Array von Objekten|10|✔️|Ein Array von Befehlen, die der Bot unterstützt:<br>`title`: der Bot-Befehlsname (Zeichenfolge, 32).<br>`description`: Eine einfache Beschreibung oder ein Beispiel für die Befehlssyntax und zugehörige Argumente (string, 128)|
 
 ## <a name="connectors"></a>connectors
 
@@ -474,7 +474,7 @@ Das Objekt ist ein Array (maximal 1 Element) mit allen Elementen vom Typ `object
 |---|---|---|---|---|
 |`botId`|Zeichenfolge|64|✔️|Die eindeutige Microsoft-App-ID für den Bot, welcher der Nachrichtenerweiterung zugeordnet ist, wie beim Bot Framework registriert. Dies kann durchaus mit der Gesamt-[App-ID identisch sein](#id).|
 |`canUpdateConfiguration`|Boolesch|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
-|`commands`|Objekt-Array|10  |✔️|Array von Befehlen, die die Nachrichtenerweiterung unterstützt|
+|`commands`|Objekt-Array|10|✔️|Array von Befehlen, die die Nachrichtenerweiterung unterstützt|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -504,7 +504,7 @@ Jedes Befehlselement ist ein Objekt mit folgender Struktur:
 |`parameter.title`|Zeichenfolge|32 Zeichen|✔️|Benutzerfreundlicher Titel für den Parameter.|
 |`parameter.description`|Zeichenfolge|128 Zeichen||Benutzerfreundliche Zeichenfolge, die den Zweck dieses Parameters beschreibt.|
 |`parameter.inputType`|Zeichenfolge|128 Zeichen||Definiert den Typ des Steuerelements, das in einem Aufgabenmodul für `fetchTask: true` angezeigt wird. Einer von `text`, `textarea`, `number`, `date`, `time`, `toggle`. `choiceset`|
-|`parameter.choices`|Array von Objekten|10  ||Die Auswahloptionen für `choiceset`. Wird nur verwendet, wenn `parameter.inputType` `choiceset` ist.|
+|`parameter.choices`|Array von Objekten|10||Die Auswahloptionen für `choiceset`. Wird nur verwendet, wenn `parameter.inputType` `choiceset` ist.|
 |`parameter.choices.title`|Zeichenfolge|128||Titel der Auswahl.|
 |`parameter.choices.value`|Zeichenfolge|512||Value of the choice.|
 

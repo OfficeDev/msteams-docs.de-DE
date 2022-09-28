@@ -1,15 +1,15 @@
 ---
 title: Monetarisieren Ihrer App planen
-description: In diesem Lernmodul lernen Sie, wie Sie Ihre Microsoft Teams-App monetarisieren und die beste Monetarisierungsoption für globale Sichtbarkeit zu verstehen.
+description: Planen Sie die Monetarisierung Ihrer Microsoft Teams-App und verstehen Sie auch die besten Monetarisierungsoptionen für die globale Sichtbarkeit.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 0bc933282990437742f99a53da5ee386efd9020c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558135"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100343"
 ---
 # <a name="plan-to-monetize-your-app"></a>Monetarisieren Ihrer App planen
 

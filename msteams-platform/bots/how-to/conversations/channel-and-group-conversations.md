@@ -1,16 +1,16 @@
 ---
 title: Erstellen von Unterhaltungs-Bots für Kanal- oder Gruppenchats
 author: surbhigupta
-description: Erfahren Sie, wie Sie Nachrichten für einen Bot in einem Kanal- oder Gruppenchat senden, empfangen und behandeln. Erfahren Sie mehr über Designrichtlinien und mehr.
+description: Erfahren Sie, wie Sie neue Unterhaltungsthreads erstellen, an Erwähnungen arbeiten und nachrichten bei der Installation senden. Erkunden Sie das Uploadbeispiel für Teams-Dateien (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8db8858ff746ce466b8cfef1cfa210111662cbeb
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 18af255a8d0975878865b101b8787422d5cfa3d5
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780933"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100602"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Kanal- und Gruppenchatunterhaltungen mit einem Bot
 
@@ -290,7 +290,7 @@ Befolgen Sie die [schrittweise Anleitung](../../../sbs-teams-conversation-bot.ym
 > [!div class="nextstepaction"]
 > [Abonnieren von Unterhaltungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Microsoft Teams-Kontext abrufen](~/bots/how-to/get-teams-context.md)
 * [Erstellen eines privaten Kanals im Namen des Benutzers](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)

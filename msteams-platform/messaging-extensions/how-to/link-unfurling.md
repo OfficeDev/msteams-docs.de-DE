@@ -1,16 +1,16 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie die Verbreitung von Links mit messaging-Erweiterung in einer Teams-App mit App-Manifest oder manuell mitHilfe von Codebeispielen und Beispielen hinzufügen.
+description: Hinzufügen der Verbreitung von Links mit Messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell. Hinzufügen der Verbreitung von Links mithilfe des Entwicklerportals. So aktualisieren Sie den Webdienstcode, um die Aufrufanforderung zu behandeln.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
-ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
+ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833390"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100630"
 ---
 # <a name="add-link-unfurling"></a>Linkausweitung hinzufügen
 
@@ -45,7 +45,7 @@ Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `co
 1. Öffnen Sie das **Entwicklerportal** über den Microsoft Teams-Client, und wählen Sie dann die Registerkarte **"Apps** " aus.
 1. Laden Sie Ihr App-Manifest.
 1. Wählen Sie auf der Seite " **Messaging-Erweiterung** " unter **"App-Features**" einen vorhandenen Bot aus, oder erstellen Sie einen neuen Bot.
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 1. Wählen Sie im Abschnitt "**Vorschaulinks**" die Option **"Domäne hinzufügen**" aus, und geben Sie dann eine gültige Domäne ein.
 1. Klicken Sie auf **Hinzufügen**. In der folgenden Abbildung wird der Prozess erläutert:
 

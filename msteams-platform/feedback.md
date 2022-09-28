@@ -1,14 +1,14 @@
 ---
 title: Support und Feedback der Microsoft Teams-Entwicklercommunity
-description: Erfahren Sie, wie das Microsoft Teams-Produktteam über verschiedene Feedback- und Supportkanäle hinweg auf die Entwicklercommunity reagiert.
+description: Erfahren Sie mehr über die Entwicklercommunity und Hilfe, die erforderlich ist, um Probleme, Einschränkungen und allgemeine Fragen zu lösen. Stellen Sie Fragen im Zusammenhang mit SDK und Beispielen, Dokumentationsfeedback, Featureanforderungen.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
-ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
+ms.openlocfilehash: 15d0fb7ccb9ad738a053e1e5c53970ea6bc27f2e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636052"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100175"
 ---
 # <a name="support-and-feedback"></a>Support und Feedback
 

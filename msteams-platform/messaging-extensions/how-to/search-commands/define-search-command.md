@@ -1,16 +1,16 @@
 ---
 title: Definieren von Suchbefehlen für Nachrichtenerweiterungen
 author: surbhigupta
-description: In diesem Modul erfahren Sie mehr über Suchbefehlsspeicherorte und das Erstellen eines Suchbefehls für Messaging-Erweiterungen.
+description: Erfahren Sie mehr über die Suchbefehle für Nachrichtenerweiterungen für Teams-Apps, um einen Suchbefehl über das App-Manifest und manuell zu erstellen.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: f774ae4ce0e4198a8e676080b87c33c8ecec3f3f
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786962"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100896"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -77,7 +77,7 @@ In der folgenden Abbildung wird das Hinzufügen des Befehls für die Nachrichten
 
    :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Der Screenshot zeigt, wie Sie Ihrer Messaging-Erweiterung eine gültige Domäne für die Verbreitung von Links hinzufügen.":::
 
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Der Screenshot zeigt, wie Sie alle Einstellungen und Parameter für Ihre Nachrichtenerweiterung speichern.":::
 

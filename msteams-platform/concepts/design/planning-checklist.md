@@ -1,16 +1,15 @@
 ---
 title: Fragen zur Planung der Entwicklung von Teams-Apps
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Ihre App mithilfe der Checkliste planen, um sicherzustellen, dass Ihr Plan die wichtigen Details der App-Entwicklung abdeckt.
-ms.topic: conceptual
+description: Erfahren Sie, wie Sie Ihre App mithilfe der Checkliste planen, um sicherzustellen, dass Ihr Plan die wichtigen Details der App-Entwicklung abdeckt. Planen des App-Lebenszyklus. Planen Sie, Ihre Teams-App zu hosten.
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338767"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100714"
 ---
 # <a name="teams-app-planning-checklist"></a>Prüfliste für die Teams App-Planung
 
@@ -106,9 +105,9 @@ Beim Erstellen einer großartigen Teams-App geht es darum, die richtige Kombinat
 
 | # | Erwägen Sie... |
 | --- | --- |
-| 1 | Sind die informationen, die von der App auf der Registerkarte oder über einen Bot angezeigt werden, für die meisten Mitglieder eines Teams relevant und nützlich? Beispiel: Scrum-App. |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | Könnte sich der Kontext der App ändern, je nachdem, zu welchem Team sie hinzugefügt wird? Aufgaben der Planer unterscheiden sich beispielsweise in verschiedenen Teams. |
-| 3 | Ist es möglich, dass alle Mitglieder einer Persona, die zusammenarbeiten müssen, Teil eines einzelnen Teams sind? Beispielsweise Mitarbeiter, die an einem Ticket arbeiten. |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

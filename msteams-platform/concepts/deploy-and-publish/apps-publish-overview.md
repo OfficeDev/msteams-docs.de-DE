@@ -1,16 +1,16 @@
 ---
 title: Übersicht – Verteilen Ihrer App
-description: In diesem Artikel lernen Sie die Optionen zum Veröffentlichen Ihrer Microsoft Teams-App, Hochladen und Bereitstellen Ihrer App und GCC kennen.
+description: Erfahren Sie, wie Sie Ihre App im Microsoft Teams Store oder in Ihrer Organisation verteilen, veröffentlichen. Verstehen Sie, wie die Endpunkte der App den Anforderungen Ihrer Government Community Cloud(GCC)-Organisation entsprechen müssen.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044672"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100721"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Verteilen Ihrer Microsoft Teams-App
 

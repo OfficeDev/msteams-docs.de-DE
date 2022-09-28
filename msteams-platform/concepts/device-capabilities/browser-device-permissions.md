@@ -1,14 +1,14 @@
 ---
 title: Geräteberechtigungen für den Browser
-description: Erfahren Sie, wie Sie Geräteberechtigungen wie Kamera- oder Mikrofonzugriffe für Apps im Webclient sicher wiederherstellen.
+description: app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: a9df46a3bacd66b32efceaf2f2069e92c2cc64a3
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035079"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100574"
 ---
 # <a name="device-permissions-for-the-browser"></a>Geräteberechtigungen für den Browser
 

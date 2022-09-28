@@ -1,16 +1,16 @@
 ---
 title: Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie über einen Aktionsbefehl einer Messagingerweiterung mit proaktiver Nachricht und mehr auf die Aufgabenmodul-Übermittlungsaktion reagieren.
+description: Erfahren Sie, wie Sie mithilfe eines Aktionsbefehls für die Nachrichtenerweiterung mit proaktiver Nachricht auf die Aufgabenmodul-Sendeaktion reagieren. Definieren Sie Suchbefehle, und reagieren Sie auf Suchvorgänge.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144026"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100483"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 

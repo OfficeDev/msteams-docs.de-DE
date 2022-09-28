@@ -1,16 +1,16 @@
 ---
 title: Formatieren von Bot-Nachrichten
 author: surbhigupta
-description: In diesem Modul erfahren Sie, wie Sie Ihren Bot-Nachrichten umfangreiche Formatierungen und Formatvorlagen hinzufügen, z. B. durchgestrichene, sortierte und ungeordnete Liste, Link, Bildlink und mehr.
+description: Erfahren Sie, wie Sie Ihre Bot-Nachrichten formatieren und formatieren, z. B. durchgestrichen, sortierte und ungeordnete Liste, Link oder Bildlink. Grundlegendes zur plattformübergreifenden Unterstützung.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363494"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100182"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 

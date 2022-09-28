@@ -1,14 +1,14 @@
 ---
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
-description: In diesem Modul erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, einen neuen Bot erstellen oder Anruffunktionen hinzufügen und Graph-Berechtigungen hinzufügen.
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, neuen Bot erstellen oder Anruffunktionen hinzufügen, Diagrammberechtigungen hinzufügen. Beispiel zum Erstellen von Anrufen, Teilnehmen an Besprechungen und Durchstellen von Anrufen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
-ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67407574"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100924"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -22,8 +22,8 @@ Ein Bot, der an Audio- oder Videoanrufen und Onlinebesprechungen teilnimmt, ist 
 
 Für Aufruf- und Onlinebesprechungs-Bots gibt es die folgenden zwei zusätzlichen Einstellungen in der manifest.json-Datei, über die Audio oder Video für Ihren Bot in Microsoft Teams aktiviert werden.
 
-* `bots[0].supportsCalling`. Wenn vorhanden und auf `true` festgelegt, erlaubt Microsoft Teams Ihrem Bot die Teilnahme an Anrufen und Onlinebesprechungen.
-* `bots[0].supportsVideo`. Wenn vorhanden und auf `true` festgelegt, weiß Microsoft Teams, dass Ihr Bot Videofunktionen unterstützt.
+* `bots[0].supportsCalling`. If present and set to `true`, Teams allows your bot to participate in calls and online meetings.
+* `bots[0].supportsVideo`. If present and set to `true`, Teams knows that your bot supports video.
 
 Wenn Ihre IDE das manifest.json-Schema für Ihre Aufrufe und Besprechungs-Bots ordnungsgemäß auf diese Werte überprüfen soll, können Sie das `$schema`-Attribut wie folgt ändern:
 
@@ -39,7 +39,7 @@ Informationen zum Erstellen von Bots finden Sie unter [Erstellen eines Bots für
 
 So erstellen Sie einen neuen Bot für Microsoft Teams:
 
-1. Verwenden Sie diesen Link, um einen neuen Bot zu erstellen, `https://dev.botframework.com/bots/new`. Alternativ können Sie im Bot Framework-Portal die Schaltfläche **Bot erstellen** anklicken und Ihren Bot in Microsoft Azure erstellen. Hierfür müssen Sie über ein Azure-Konto verfügen.
+1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
 1. Fügen Sie den Microsoft Teams-Kanal hinzu.
 1. Wählen Sie die Registerkarte **Anrufe** auf der Microsoft Teams-Kanalseite aus. Klicken Sie auf **Anrufe aktivieren**, und aktualisieren Sie dann **Webhook (für Anrufe)** mit Ihrer HTTPS-URL, unter der Sie eingehende Benachrichtigungen erhalten, beispielsweise `https://contoso.com/teamsapp/api/calling`. Weitere Informationen finden Sie unter [Konfigurieren von Kanälen](/bot-framework/portal-configure-channels).
 
@@ -81,9 +81,9 @@ Wenn Sie den [Microsoft Azure Active Directory (Azure AD) V1-Endpunkt](/azure/ac
 
 ### <a name="get-tenant-administrator-consent"></a>Einholen der Administratorzustimmung
 
-Bei Apps, die den Azure AD V1-Endpunkt verwenden, kann ein Administrator den Anwendungsberechtigungen im [Microsoft Azure-Portal](https://portal.azure.com) zustimmen, wenn die App in seiner Organisation installiert wird. Alternativ können Sie eine Registrierungsfunktion in der App bereitstellen, über die Administratoren den von Ihnen konfigurierten Berechtigungen zustimmen können. Sobald die Administratorzustimmung von Azure AD aufgezeichnet wurde, kann Ihre App Token anfordern, ohne dass eine erneute Zustimmung erforderlich ist.
+For apps using the Azure AD V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Azure AD, your app can request tokens without having to request consent again.
 
-Ein Administrator kann für Sie die Berechtigungen, die Ihre App benötigt, im [Microsoft Azure-Portal](https://portal.azure.com) gewähren. Eine bessere Option besteht darin, Administratoren eine Registrierungsfunktion über den Azure AD V2`/adminconsent`-Endpunkt zur Verfügung zu stellen. Weitere Informationen finden Sie unter [Anweisungen zum Erstellen einer Administratorzustimmungs-URL](/graph/auth-v2-service#3-get-administrator-consent).
+You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Um die Zustimmungs-URL des Mandantenadministrators zu erstellen, ist eine konfigurierte Umleitungs-URI oder Antwort-URL im [App-Registrierungsportal](https://apps.dev.microsoft.com/) erforderlich. Um Antwort-URLs für Ihren Bot hinzuzufügen, wählen Sie in Ihrer Bot-Registrierung **Erweiterte Optionen** > **Anwendungsmanifest bearbeiten** aus. Fügen Sie die Umleitungs-URL zur `replyUrls`-Sammlung hinzu.

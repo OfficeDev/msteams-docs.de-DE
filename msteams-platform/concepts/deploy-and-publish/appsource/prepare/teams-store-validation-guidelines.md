@@ -1,16 +1,16 @@
 ---
 title: Richtlinien zur Validierung von Microsoft Teams-Speichern
-description: In diesem Artikel finden Sie die Richtlinien, denen jede an den Teams Store (AppSource) übermittelte App folgen muss.
+description: Erfahren Sie, wie Sie die Wahrscheinlichkeit erhöhen, dass Ihre App den Microsoft Teams Store-Übermittlungsprozess besteht. Grundlegendes zu den obligatorischen und vorgeschlagenen Korrekturen. Erkunden Sie die Validierungsrichtlinien.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: ed428ba714f5e6cf409f7ded25e8b0df22cd61a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044700"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100301"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Richtlinien zur Validierung von Microsoft Teams-Speichern
 

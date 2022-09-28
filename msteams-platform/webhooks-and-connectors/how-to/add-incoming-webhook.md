@@ -1,16 +1,16 @@
 ---
 title: Erstellen eines eingehenden Webhooks
 author: laujan
-description: In diesem Modul erfahren Sie, wie Sie der Teams-App einen eingehenden Webhook hinzufügen und alle externen Anforderungen mit diesem Webhook an Teams senden.
+description: Erstellen Sie eingehenden Webhook in der Teams-App, und veröffentlichen Sie externe Anforderungen an Teams. Eingehenden Webhook entfernen. Beispielcode(C#,Node.js) zum Senden einer Karte mithilfe des eingehenden Webhooks.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: c439a7147ea4fe76e2cd1778396b4936a6313a23
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990945"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100476"
 ---
 # <a name="create-incoming-webhooks"></a>Erstellen eingehender Webhooks
 
