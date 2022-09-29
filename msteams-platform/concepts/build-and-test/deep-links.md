@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991001"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158844"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -383,7 +383,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### <a name="deep-linking-to-an-app"></a>Deeplinks zu einer App
+## <a name="deep-linking-to-an-app"></a>Deeplinks zu einer App
 
 Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld zum Installieren oder Öffnen der App angezeigt.
 
@@ -408,9 +408,9 @@ Die Abfrageparameter sind:
 
 Beispiel: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### <a name="navigate-to-an-audio-or-audio-video-call"></a>Navigieren zu einem Audio- oder Audiovideoanruf
+## <a name="navigate-to-an-audio-or-audio-video-call"></a>Navigieren zu einem Audio- oder Audiovideoanruf
 
-Sie können nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufrufen, indem Sie den Anruftyp und die Teilnehmer angeben. Bevor der Anruf erfolgt, fordert der Microsoft Teams-Client eine Bestätigung für den Anruf an. Bei einem Gruppenanruf können Sie eine Gruppe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern mit demselben Deep-Link-Aufruf anrufen.
+Sie können nur Audio- oder Audiovideoanrufe an einen einzelnen Benutzer oder eine Gruppe von Benutzern aufrufen, indem Sie den Anruftyp und die Teilnehmer angeben. Bevor der Anruf erfolgt, fordert der Microsoft Teams-Client eine Bestätigung für den Anruf an. Im Falle eines Gruppenanrufs können Sie eine Reihe von VoIP-Benutzern und eine Gruppe von PSTN-Benutzern im selben Deep-Link-Aufruf aufrufen.
 
 Bei einem Videoanruf fordert der Client eine Bestätigung an und aktiviert das Video des Anrufers für den Anruf. Der Empfänger des Anrufs kann über das Teams Anrufbenachrichtigungsfenster nur über Audio oder Video antworten.
 
@@ -430,7 +430,78 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### <a name="generate-a-deep-link-to-a-call"></a>Generieren eines Deeplinks zu einem Anruf
+## <a name="generate-a-deep-link-to-share-content-to-stage-in-meetings"></a>Generieren eines Deep-Links zum Freigeben von Inhalten für die Phase in Besprechungen
+
+Sie können auch einen Deep-Link generieren, um [die App für das Bereitstellen](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) und Starten oder Teilnehmen an einer Besprechung freizugeben.
+
+> [!Note]
+> Deep-Link zum Freigeben von Inhalten in der Phase der Besprechung wird nur im Teams-Desktopclient unterstützt.
+
+Wenn in einer App ein Deep-Link von einem Benutzer ausgewählt wird, der Teil einer laufenden Besprechung ist, wird die App für die Phase freigegeben, und ein Popupfenster für Berechtigungen wird angezeigt. Benutzer können den Teilnehmern Berechtigungen erteilen, z. B. das gemeinsame Bearbeiten eines Dokuments oder die Zusammenarbeit mit einer App.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="Der Screenshot ist ein Beispiel für ein Popupfenster mit Berechtigungen.":::
+
+Wenn sich der Benutzer nicht in einer Besprechung befindet, wird der Benutzer zum Teams-Kalender umgeleitet, in dem der Benutzer an einer Besprechung teilnehmen muss, oder es kann eine Sofortbesprechung (Jetzt besprechen) initiiert werden.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="Der Screenshot ist ein Beispiel für ein Popupfenster, wenn keine Besprechung ausgeführt wird.":::
+
+Sobald der Benutzer eine Sofortbesprechung initiiert (jetzt besprechen), kann er Teilnehmer hinzufügen und mit der App interagieren.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="Der Screenshot ist ein Beispiel, das eine Option zum Hinzufügen von Teilnehmern und die Interaktion mit der App zeigt.":::
+
+Um einen Deep-Link hinzuzufügen, um Inhalte auf der Bühne freizugeben, benötigen Sie einen App-Kontext. Der App-Kontext ermöglicht es dem Teams-Client, das App-Manifest abzurufen und zu überprüfen, ob die Freigabe in der Phase möglich ist. Es folgt ein Beispiel für einen App-Kontext.
+
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+Die Abfrageparameter für den App-Kontext lauten:
+
+* `appID`: Dies ist die ID, die aus dem App-Manifest abgerufen werden kann.
+* `appSharingUrl`: Die URL, die in der Phase freigegeben werden muss, sollte eine gültige Domäne sein, die im App-Manifest definiert ist. Wenn die URL keine gültige Domäne ist, wird ein Fehlerdialogfeld angezeigt, in dem dem Benutzer eine Beschreibung des Fehlers angezeigt wird.
+* `useMeetNow`: Dazu gehört ein boolescher Parameter, der entweder "true" oder "false" sein kann.
+  * **True** – Wenn der `UseMeetNow` Wert wahr ist und keine laufende Besprechung vorhanden ist, wird eine neue Besprechung "Jetzt besprechen" initiiert. Wenn eine Besprechung läuft, wird dieser Wert ignoriert.
+
+  * **False** – Der Standardwert ist `UseMeetNow` "false", d. h., wenn ein Deep-Link für die Phase freigegeben wird und keine Besprechung ausgeführt wird, wird ein Kalenderpopup angezeigt. Wenn eine Besprechung läuft, kann die Freigabe direkt erfolgen.
+
+Stellen Sie sicher, dass alle Abfrageparameter ordnungsgemäß URI-codiert sind und der App-Kontext zweimal in der endgültigen URL codiert werden muss. Es folgt ein Beispiel.
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+Ein Deep-Link kann entweder über das Teams-Web oder über den Teams-Desktopclient gestartet werden.
+
+* **Teams-Web** : Verwenden Sie das folgende Format, um einen Deep-Link aus dem Teams-Web zu starten, um Inhalte auf der Bühne freizugeben.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Beispiel: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep-Link|Format|Beispiel|
+    |---------|---------|---------|
+    |Um die App freizugeben und den Teams-Kalender zu öffnen, ist UseMeeetNow standardmäßig "false".|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |Um die App freizugeben und eine sofortige Besprechung zu initiieren, wenn UseMeeetNow "true" ist.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Teamdesktopclient** : Verwenden Sie das folgende Format, um einen Deep-Link vom Teams-Desktopclient aus zu starten, um Inhalte auf der Bühne freizugeben.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Beispiel: `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Deep-Link|Format|Beispiel|
+    |---------|---------|---------|
+    |Um die App freizugeben und den Teams-Kalender zu öffnen, ist UseMeeetNow standardmäßig "false".|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |Um die App freizugeben und eine sofortige Besprechung zu initiieren, wenn UseMeeetNow "true" ist.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+Die Abfrageparameter sind:
+
+* `deepLinkId`: Jeder Bezeichner, der für die Telemetriekorrelation verwendet wird.
+* `fqdn`: `fqdn` ist ein optionaler Parameter, der verwendet werden kann, um zu einer geeigneten Umgebung einer Besprechung zu wechseln, um eine App auf der Bühne freizugeben. Es unterstützt Szenarien, in denen eine bestimmte App-Freigabe in einer bestimmten Umgebung erfolgt. Der Standardwert ist die `fqdn` Unternehmens-URL, und die möglichen Werte gelten `Teams.live.com` für Teams for Life `teams.microsoft.com`oder `teams.microsoft.us`.
+
+Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest konfigurieren `meetingStage` und `meetingSidePanel` als Framekontexte das [App-Manifest anzeigen](../../resources/schema/manifest-schema.md). Andernfalls können Besprechungsteilnehmer den Inhalt möglicherweise nicht auf der Bühne sehen.
+
+## <a name="generate-a-deep-link-to-a-call"></a>Generieren eines Deeplinks zu einem Anruf
 
 Zwar wird Verwendung der typisierten APIs von TeamsJS empfohlen, Sie können jedoch auch einen manuell erstellten Deep-Link verwenden, um einen Anruf zu starten.
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833707"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158820"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -177,7 +177,7 @@ Sie können das Microsoft Teams-Anzeigebild und die Personenkarte des Benutzers 
 
 Das geteilte Freigabefenster ermöglicht Besprechungsteilnehmern die Interaktion mit und die Zusammenarbeit an App-Inhalten in Echtzeit. Sie können Ihre Apps auf folgende Weise für das gemeinschaftliche Freigabefenster freigeben:
 
-* [Freigabe der gesamten App für das Freigabefenster](#share-entire-app-to-stage) mithilfe der Schaltfläche „Freigabe für Freigabefenster“ im Teams-Client.
+* [Teilen Sie die gesamte App für die Phase](#share-entire-app-to-stage) mithilfe der Schaltfläche "Teilen auf Stufe" im Besprechungsbereich des Teams-Clients oder über [Deeplinks](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 * [Freigabe bestimmter Teile der App für das Freigabefenster](#share-specific-parts-of-the-app-to-stage) mithilfe von APIs im Teams-Client-SDK.
 
 ##### <a name="share-entire-app-to-stage"></a>Freigeben der gesamten App für das Freigabefenster
@@ -190,18 +190,18 @@ Um die gesamte App für das Freigabefenster freizugeben, müssen Sie im App-Mani
 
 ```json
 "configurableTabs": [
-    {
+   {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
       "scopes": [
-        "groupchat"
-      ],
+         "groupchat"
+        ],
       "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
+         "meetingSidePanel",
+         "meetingStage"
+        ]
     }
-  ]
+]
 ```
 
 Weitere Informationen finden Sie unter [App-Manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
