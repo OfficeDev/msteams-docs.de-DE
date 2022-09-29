@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450401"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158681"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -130,7 +130,8 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
     * **Benötigen Sie Microsoft Azure Active Directory (Azure AD) SSO-Unterstützung für die Registerkarte?**
 
       Legen Sie fest, **keine** Azure AD SSO-Unterstützung für die Registerkarte einzuschließen. Der Standardwert ist „ja“, geben Sie **n** ein.
-
+    > [!NOTE]
+    > In einer Registerkarte wird die Registerkartenhomepage nur angezeigt, wenn der Benutzer die Schaltfläche "Zurück" auswählt (oder sich aus der Registerkarte heraus bewegt) und zur Startseite zurückkehrt. Die Registerkarte behält den vorherigen Zustand nicht standardmäßig bei.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Hinzufügen einer Inhaltsseite zur persönlichen Registerkarte
