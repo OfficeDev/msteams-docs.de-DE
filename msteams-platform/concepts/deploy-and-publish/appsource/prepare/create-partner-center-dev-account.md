@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: aa2d0b7f30f049c800b31705900ddc81ea1d91cc
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
-ms.translationtype: HT
+ms.openlocfilehash: c4c0b6bdbab5c11563d9b66e72993af3874eabdc
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232190"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160706"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Erstellen eines Partner Center-Entwicklerkontos
 
@@ -208,24 +208,8 @@ Die folgenden Ressourcen können ebenfalls hilfreich sein:
 
 </details>
 
-## <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>Aktualisieren der Apple App Store Connect-Team-ID im Partner Center
-
-Damit Benutzer Ihre App auf der iOS-Plattform von Teams installieren können, aktualisieren Sie Ihre Apple App Store Connect-Team-ID im Microsoft Partner Center. Die Apple App Store Connect-Team-ID wird für Apple freigegeben. Führen Sie die folgenden Schritte aus, um Ihre Apple App Store Connect-Team-ID zu aktualisieren:
-
-1. Melden Sie sich mit den Anmeldeinformationen des globalen Administrators beim [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) an.
-1. Wählen Sie das Symbol „Einstellungen“ in der oberen rechten Ecke der Seite aus.
-1. Wechseln Sie im linken Bereich unter **Organisationsprofil** zum Abschnitt **Rechtliche Informationen**.
-1. Klicken Sie auf die Registerkarte **Entwickler**.
-1. Geben Sie Ihre Apple App Store Connect-Team-ID an.
-1. Wechseln Sie zur Angebotsseite, und veröffentlichen Sie Ihre Teams-App erneut.
-  
-Ihre Apple App Store Connect-Team-ID wurde jetzt aktualisiert, und Benutzer können Ihre App auf der iOS-Plattform von Teams installieren.
-
-Führen Sie die folgenden Schritte aus, um die Apple App Store Connect-Team-ID aus dem Apple Developer-Portal abzurufen:
-
-1. Melden Sie sich beim [Apple Developer Center](https://developer.apple.com/)an.
-1. Wählen Sie **Konto** aus, und wechseln Sie zu **Mitgliedschaft**.
-1. Greifen Sie unter **Mitgliedschaft** auf **Apple App Store Team-ID verbinden** zu.
+> [!NOTE]
+> Informationen dazu, wie Endbenutzer Ihre App auf der iOS-Plattform von Teams installieren können, finden [Sie unter Update Apple App Store Connect Team ID im Partner Center](update-apple-store-team-connect-id.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 

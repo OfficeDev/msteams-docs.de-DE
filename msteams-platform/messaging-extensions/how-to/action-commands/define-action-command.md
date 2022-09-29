@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Aktionsbefehle für Messaging-Erweiterungen m
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100735"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160643"
 ---
 # <a name="define-message-extension-action-commands"></a>Definieren von Aktionsbefehlen für Nachrichtenerweiterungen
 
@@ -99,7 +99,7 @@ So erstellen Sie einen Aktionsbefehl:
 
 1. Um einen vorhandenen Bot zu verwenden, wählen **Sie einen vorhandenen Bot** und dann die vorhandenen Bots aus der Dropdownliste aus, oder geben **Sie eine Bot-ID ein** , wenn Sie bereits eine Bot-ID erstellt haben.
 
-1. Wählen Sie den Bereich der Messaging-Erweiterung und dann **"Speichern"** aus.
+1. Wählen Sie den Bereich des Bots und **"Speichern"** aus.
 
 1. Wählen Sie " **Befehl hinzufügen"** im Abschnitt **"Befehl** " aus, um die Befehle einzuschließen, die das Verhalten der Nachrichtenerweiterung bestimmen.
 
@@ -167,17 +167,13 @@ Wenn Sie eine eingebettete Webansicht verwenden, können Sie das `taskInfo` Obje
 
 #### <a name="app-manifest-example"></a>Beispiel für ein App-Manifest
 
-Der folgende Abschnitt ist ein Beispiel für ein Objekt `composeExtensions`, das zwei Aktionsbefehle definiert. Es ist kein Beispiel für das vollständige Manifest. Das vollständige App-Manifestschema finden Sie unter [App-Manifestschema](~/resources/schema/manifest-schema.md):
-
+Dieser Abschnitt ist kein Beispiel für das vollständige Manifest. Das vollständige App-Manifestschema finden Sie im [App-Manifestschema](~/resources/schema/manifest-schema.md). Es folgt ein Beispiel für ein `composeExtensions` Objekt, das zwei Aktionsbefehle definiert:
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",

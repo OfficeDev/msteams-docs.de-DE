@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100441"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160713"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 
@@ -19,7 +19,7 @@ Sie haben Ihre Microsoft Teams-App entworfen, erstellt und getestet. Jetzt könn
 Sehen Sie sich das folgende Video an, um mehr über die Veröffentlichung Ihrer Anwendung im Microsoft Teams App Store zu erfahren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Bevor Sie Ihre App beim[Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)einreichen, sollten Sie Folgendes tun.
@@ -30,7 +30,10 @@ Während Ihre App möglicherweise in einer Testumgebung funktioniert, sollten Si
 
 Das Microsoft Teams App-Überprüfungstool hilft Ihnen, Probleme zu identifizieren und zu beheben, bevor Sie sie an Partner Center übermitteln. Das Tool überprüft die Konfigurationen Ihrer App automatisch anhand der gleichen Testfälle, die während der Store-Überprüfung verwendet werden.
 
-1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html). (Hinweis: Das Tool ist auch im [Entwicklerportal für Teams](~/concepts/build-and-test/teams-developer-portal.md) verfügbar.
+1. Wechseln Sie zum [Microsoft Teams App-Überprüfungstool](https://dev.teams.microsoft.com/appvalidation.html).
+
+   Sie können Ihre App auch mithilfe des [Entwicklerportals für Teams überprüfen.](~/concepts/build-and-test/teams-developer-portal.md)
+
 1. Laden Sie Ihr App-Paket hoch, um die automatisierten Tests auszuführen.
 1. Wechseln Sie zur **vorläufigen Checkliste**, und überprüfen Sie die Testfälle, die schwierig zu automatisieren sind.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ Sie können eine URL für Ihr YouTube- oder Vimeo-Video hinzufügen.
 
 ### <a name="select-a-category-for-your-app"></a>Wählen Sie eine Kategorie für Ihre App aus.
 
-Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. In der folgenden Tabelle werden Teams Store Kategorien den im [Partner Center](https://aka.ms/PartnerCenterHomePage) aufgeführten Kategorien zugeordnet.
+Während der Übermittlung werden Sie aufgefordert, Ihre App zu kategorisieren. Sie können Ihre App anhand der folgenden Kategorien kategorisieren:
 
-| Teams Kategorien       | Partner Center Kategorien  |
-|:---------------------|:---------------|
-| Datenvisualisierung und BI | Analyse, Datenvisualisierung und BI |
-| Entwicklertools | Entwicklertools, IT-Administrator |
-| Bildung | Bildung |
-| Personalwesen & Recruiting| Personalwesen und Rekrutierung |
-| Produktivität | Inhaltsverwaltung, Dateien und Dokumente, Produktivität, Schulungen und Lernprogramme und Hilfsprogramme |
-| Projektmanagement | Kommunikations-, Project-, Workflow- und Unternehmensverwaltung |
-| Vertrieb und Support | Kunden- und Kontaktverwaltung, Kundensupport, Finanzmanagement sowie Vertrieb und Marketing |
-| Sozial | Bild- und Videogalerien, Lifestyle, Nachrichten und Wetter, Soziales, Reisen und Navigation |
+|Categories  |
+|--------------|
+| Microsoft |
+| Education |
+| Produktivität |
+| Bilder & Videogalerien |
+| Projektmanagement |
+| Dienstprogramme |
+| Sozial |
+| Kommunikation |
+| Inhaltsverwaltung |
+| Dateien & Dokumente |
+| Workflow & Unternehmensverwaltung |
+| IT/Admin |
+| Personalwesen & Recruiting|
+| Entwicklungstools |
+| Planen von Besprechungen & |
+| Datenvisualisierung & BI |
+| Schulungs-& Lernprogramm |
+| Nachrichten & Wetter |
+| Kundensupport |
+| Referenz |
+| Vertrieb & Marketing |
+| Aussehen & Verhalten |
+| Customer & Contact Management (CRM) |
+| Finanzverwaltung |
+| Karten & Feeds |
+| Andere |
 
 ### <a name="localize-your-store-listing"></a>Lokalisieren Ihres Store-Eintrags
 

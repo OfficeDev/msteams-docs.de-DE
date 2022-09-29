@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158844"
+ms.locfileid: "68160720"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Erstellen Sie einen Deep-Link für die App, nachdem die App im Microsoft Teams Store aufgeführt wurde. Um einen Link zum Starten von Teams zu erstellen, fügen Sie die App-ID der folgenden URL hinzu: `https://teams.microsoft.com/l/app/<your-app-id>`. Es wird ein Dialogfeld zum Installieren oder Öffnen der App angezeigt.
 
 > [!NOTE]
-> Wenn Ihre App für die mobile Plattform genehmigt wurde, können Sie deep-Links zu einer App auf mobilgeräten erstellen. Apple App Store Connect Team ID ist zusätzlich erforderlich, damit der Deep-Link unter Teams-iOS funktioniert. Weitere Informationen finden Sie unter [Aktualisieren von Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
+> Wenn Ihre App für die mobile Plattform genehmigt wurde, können Sie deep-Links zu einer App auf mobilgeräten erstellen. Apple App Store Connect Team ID ist zusätzlich erforderlich, damit der Deep-Link unter Teams-iOS funktioniert. Weitere Informationen finden Sie unter [Aktualisieren von Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Deeplink-Verknüpfung für SharePoint-Framework-Registerkarten
 
