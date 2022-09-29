@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806773"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158263"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
 
@@ -59,7 +59,7 @@ Die folgende Tabelle hilft Ihnen, den Überblick über das Teams-Toolkit in Visu
 | Veröffentlichen Ihrer Teams-App | Dazu zählen: <br> – Veröffentlichen Ihrer App <br> – Administratorgenehmigung verwalten <br> - Zum Speichern veröffentlichen <br> – Integration in das Entwicklerportal |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>In teams-Toolkit integrierte Entitäten
-
+ 
 Teams Toolkit ist eine Erweiterung in Visual Studio Code. Es ist in die folgenden Entitäten in Teams Toolkit integriert, z. B. Azure AD und Microsoft 365, Developer Portal und Microsoft Graph. Alle Entitäten sind in das Teams-Toolkit integriert und helfen Benutzern beim Erstellen einer App.
 
 | Entitäten | Beschreibung |
@@ -133,7 +133,7 @@ Die folgenden Vorgänge werden im Teams-Toolkit für Visual Studio noch nicht un
 
 ::: zone-end
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Erstellen einer neuen Teams-App in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Bereitstellen von Cloudressourcen mit Visual Studio](provision-cloud-resources.md)
