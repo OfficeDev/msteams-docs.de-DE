@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Entwicklervorschau aktivieren. Beispielsc
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100294"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243171"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Öffentliche Entwicklervorschau des Manifestschemas für Teams
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Optional**, außer **Erforderlich**, wo angegeben
 
-Eine Liste gültiger Domänen, von denen die App erwartet, Inhalte zu laden. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne als der einen Verwendung für die Registerkartenkonfiguration navigieren muss, muss diese Domäne hier angegeben werden.
+Eine Liste gültiger Domänen, von denen die App erwartet, Inhalte zu laden. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`. Wenn Ihre Registerkartenkonfiguration oder Inhalts-UI zu einer anderen Domäne neben derjenigen wechseln muss, die für die Registerkartenkonfiguration verwendet wird, muss diese Domäne hier angegeben werden.
 
 Es ist jedoch **nicht** erforderlich, die Domains von Identitätsanbietern, die Sie unterstützen möchten, in Ihre App aufzunehmen. Um sich beispielsweise mithilfe einer Google-ID zu authentifizieren, ist es notwendig, zu accounts.google.com umzuleiten, aber Sie sollten accounts.google.com nicht in `validDomains[]`einschließen.
 

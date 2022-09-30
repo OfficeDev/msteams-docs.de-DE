@@ -6,12 +6,12 @@ keywords: Demo zu Microsoft Teams-Vorlagenbeispielen
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 7f99a15ee8138c029e3ae0c68ae52152f0efc6bb
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 1314221e5962db045a5e75b8dadbcb6a868c959c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058123"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243038"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>App-Vorlagen für Microsoft Teams
 
@@ -38,7 +38,7 @@ Die App-Vorlage für die Champion Management Platform (CMP) hilft Ihnen, Ihre Te
 
 Die App „Unternehmens-Communicator“ ermöglicht es Unternehmensteams, Nachrichten für mehrere Teams oder eine große Anzahl von Mitarbeitern über einen Chat zu erstellen und zu versenden, so dass das Unternehmen seine Mitarbeiter genau dort erreichen kann, wo sie zusammenarbeiten. Verwenden Sie diese Vorlage für verschiedene Szenarien, z. B. für die Ankündigung neuer Initiativen, das Onboarding von Mitarbeitern, modernes Lernen und Entwicklung oder organisationsweite Übertragungen.
 
-Die App bietet eine einfache Schnittstelle für designierte Benutzer, um Nachrichten zu erstellen, in der Vorschau anzuzeigen, zusammenzuarbeiten und zu versenden.
+Die App bietet eine einfache Benutzeroberfläche für bestimmte Benutzer, um Nachrichten zu erstellen, in der Vorschau anzuzeigen, zusammenzuarbeiten und Nachrichten zu senden.
 
 Sie bietet eine Grundlage für den Aufbau benutzerdefinierter, zielgerichteter Kommunikationsfunktionen, wie z. B. benutzerdefinierte Telemetrie darüber, wie viele Benutzer eine Nachricht bestätigt haben oder mit ihr interagiert haben.
 
@@ -83,7 +83,7 @@ Mit der App-Vorlage "Erste Schritte" können Sie die Leistungsfähigkeit von Mic
 
 ## <a name="microsoft-teams-emergency-operations-center-teoc"></a>Microsoft Teams Emergency Operations Center (TEOC)
 
-Die Lösungsvorlage für das Microsoft Teams Emergency Operations Center (TEOC) nutzt die Leistungsfähigkeit der Microsoft 365-Plattform, um Die Reaktion auf Vorfälle, die Informationsfreigabe und die Feldkommunikation mit leistungsstarken Diensten wie Microsoft Listen, SharePoint und mehr zu zentralisieren. Eine von Microsoft unterstützte Open-Source-Lösung bietet Kernfunktionen und kann erweitert werden, um bestimmte Agenturanforderungen zu erfüllen.
+Die Lösungsvorlage für das Microsoft Teams Emergency Operations Center (TEOC) nutzt die Leistungsfähigkeit der Microsoft 365-Plattform, um die Reaktion auf Vorfälle, die Informationsfreigabe und die Feldkommunikation mit leistungsstarken Diensten wie Microsoft Listen, SharePoint und mehr zu zentralisieren. Eine von Microsoft unterstützte Open-Source-Lösung bietet Kernfunktionen und kann erweitert werden, um bestimmte Agenturanforderungen zu erfüllen.
 
 [Auf GitHub herunterladen](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
@@ -99,7 +99,7 @@ Die Codebeispiele für App-Vorlagen sind eine Sammlung von Beispiel-Apps für Mi
 
 > [!NOTE]
 >
-> * Microsoft verwaltet den Quellcode nicht aktiv. Der vollständige Quellcode ist Open Source, und Sie können den Quellcode untersuchen, kopieren und ändern, um Ihre spezifischen Anforderungen zu erfüllen.
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * Sie dürfen mit Microsoft Power Platform erstellte Apps nicht im Teams App Store veröffentlichen. Microsoft Power Platform-Apps können nur im App Store einer Organisation veröffentlicht werden.
 
 In der folgenden Tabelle werden Codebeispiele für App-Vorlagen erläutert:  

@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 83a4b4d40ebca418b62dcac5f94f77ac30ee85d7
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: c2276c720ca4d7014b3317365411a9c3d7fe6a73
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895503"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243178"
 ---
 # <a name="install-moodle-lms"></a>Installieren von Moodle LMS
 
@@ -64,7 +64,7 @@ Stellen Sie sicher, dass Sie Folgendes installieren und herunterladen, bevor Sie
 
 1. Nach der Erkennung neuer Plug-Ins, die installiert werden sollen, sollte Moodle Sie zur Seite "Neue Plugins installieren" umleiten. Wenn dies nicht der Fall ist, wählen Sie auf der Seite "**Websiteverwaltung**" auf der Registerkarte "**Allgemein**" die Option **"Benachrichtigungen**" aus. Dies sollte die Installation der Plug-Ins auslösen.
 
-1. Nachdem die Plug-Ins installiert wurden, wechseln Sie auf der Seite "**Websiteadministrator**" zur Registerkarte **"Plug-Ins**", wählen Sie den Link zum Abschnitt **"Authentifizierung**" aus, und aktivieren Sie **OpenID Connect**. Es ist in Ordnung, die Plug-In-Konfiguration leer zu lassen - sie werden später ausgefüllt.
+1. Nachdem die Plug-Ins installiert wurden, wechseln Sie auf der Seite "**Websiteadministrator**" zur Registerkarte **"Plug-Ins**", wählen Sie den Link zum Abschnitt **"Authentifizierung**" aus, und aktivieren Sie **OpenID Connect**. Es ist in Ordnung, die Plug-In-Konfiguration leer zu lassen – sie werden später ausgefüllt.
 
 1. Scrollen Sie auf der Seite **"Websiteadministrator** " nach unten zum Abschnitt " **Lokale Plug-Ins** ", und wählen Sie den Link **"Microsoft 365-Integration** " aus.
 
@@ -115,7 +115,7 @@ Verwenden Sie die generierte `AppID` und `Key` in Ihrer Microsoft 365 Moodle Plu
     1. Klicken Sie mit der rechten Maustaste auf **Windows PowerShell**.
     1. Wählen Sie **"Als Administrator ausführen" aus**.
 
-1. Navigieren Sie zum entpackten Verzeichnis, indem Sie eingeben `cd .../.../Moodle-AzureAD-Powershell` , wo `.../...` sich der Pfad zum Verzeichnis befindet.
+1. Wechseln Sie zum entzippten Verzeichnis, indem Sie `cd .../.../Moodle-AzureAD-Powershell` eingeben, wo `.../...` sich der Pfad zum Verzeichnis befindet.
 
 1. Führen Sie das PowerShell-Skript aus:
 
@@ -245,7 +245,7 @@ So stellen Sie Ihre App bereit:
 
 4. Wählen Sie das Paket aus, das `manifest.zip` Sie zuvor heruntergeladen haben, und wählen Sie **"Speichern"** aus. Wenn Sie das App-Manifestpaket nicht heruntergeladen haben, können Sie es von der Registerkarte " **Teameinstellungen** " der Plug-In-Konfigurationsseite in Moodle herunterladen.
 
-Nachdem Sie die App installiert haben, können Sie die Registerkarte jedem Kanal hinzufügen, auf den Sie Zugriff haben. Navigieren Sie dazu zum Kanal, wählen Sie das **Pluszeichen** (➕) aus, und wählen Sie Ihre App aus der Liste aus. Folgen Sie den Anweisungen, um das Hinzufügen Ihrer Moodle-Kursregisterkarte zu einem Kanal abzuschließen.
+Nachdem Sie die App installiert haben, können Sie die Registerkarte jedem Kanal hinzufügen, auf den Sie Zugriff haben. Wechseln Sie dazu zum Kanal, wählen Sie das **Pluszeichen** (➕) aus, und wählen Sie Ihre App aus der Liste aus. Folgen Sie den Anweisungen, um das Hinzufügen Ihrer Moodle-Kursregisterkarte zu einem Kanal abzuschließen.
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. Zulassen der automatischen Erstellung von Moodle-Registerkarten in Microsoft Teams
 

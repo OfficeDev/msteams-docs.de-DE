@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100951"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243325"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Richten Sie Ihre Entwicklungsumgebung für die Erweiterung von Teams-Apps auf Microsoft 365 ein
 
@@ -79,12 +79,12 @@ So installieren Sie Office 365 Beta Channel-Anwendungen in Ihrer Testumgebung:
 1. Melden Sie sich mit Ihren Testmandanten-Anmeldeinformationen bei Ihrer Testumgebung an.
 1. Laden Sie das [Office-Bereitstellungstool](https://www.microsoft.com/download/details.aspx?id=49117) herunter und extrahieren Sie es in einen lokalen Ordner.
 1. Gehen Sie zum lokalen Ordner und öffnen Sie *configuration-Office365-x86.xml* (oder **x64.xml*, abhängig von Ihrer Umgebung) in einem *Texteditor* und aktualisieren Sie den Kanalwert auf `BetaChannel`.
-1. Öffnen Sie die Eingabeaufforderung und navigieren Sie zum lokalen Ordnerpfad.
+1. Öffnen Sie die Eingabeaufforderung, und wechseln Sie zum Pfad des lokalen Ordners.
 1. Ausführen `setup.exe /configure configuration-Office365-x86.xml` (oder verwenden Sie die **x64.xml* Datei, abhängig von Ihrer Einrichtung).
 1. Öffnen Sie Outlook (Desktop-Client) und richten Sie das E-Mail-Konto mit Ihren Testmandanten-Anmeldeinformationen ein.
 1. Öffnen Sie **Datei** > **Office-Konto** > **Informationen zu Outlook** um zu bestätigen, dass Sie einen Microsoft 365 *Beta-Kanal* Build von Outlook ausführen.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Gehen Sie in Ihrem Office-Konto zu &quot;Über Outlook&quot;, um zu überprüfen, ob Sie ein Beta-Channel-Build ausführen.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Wechseln Sie in Ihrem Office-Konto zu &quot;Info zu Outlook&quot;, um zu überprüfen, ob Sie einen Betakanalbuild ausführen.":::
 
 1. Stellen Sie sicher, dass *Microsoft Edge WebView2 Runtime* installiert ist. Öffnen Sie Windows **Start** > **Apps & Features** und suchen Sie nach **Webansicht**:
 
@@ -96,7 +96,7 @@ So installieren Sie Office 365 Beta Channel-Anwendungen in Ihrer Testumgebung:
 
 Sie können eine Vorschau der persönlichen Teams-Registerkarten anzeigen, die in der Office-App für Android ausgeführt werden, indem Sie am Betaprogramm teilnehmen.
 
-So installieren Sie den neuesten Betabuild der Office-App auf Ihrem physischen Android-Gerät oder Android-Emulator:
+Um die neueste Betaversion der Office-App zu installieren, erstellen Sie auf Ihrem physischen Android-Gerät oder Android-Emulator:
 
 1. Stellen Sie sicher, dass Sie ein von Google Play [unterstütztes Android-Gerät](https://support.google.com/googleplay/answer/1727131) verwenden.
 1. Starten Sie den **Play Store** auf Ihrem Android-Gerät.

@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Aufgaben für externe Clients
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: bb98ab632b335717a61499600aef01e652fd0dee
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 7d458cc97429772695958606835edd4ef953b5db
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179044"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243164"
 ---
 # <a name="configure-tasks-for-external-clients"></a>Konfigurieren von Aufgaben für externe Clients
 
@@ -21,7 +21,7 @@ Um dies zu aktivieren, benötigen Sie einen zusätzlichen Schritt zum Übergeben
 > [!NOTE]
 > Derzeit sind Die Steuerelemente für die Zusammenarbeit nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) verfügbar.
 
-Im Folgenden sind die Schritte zum Erstellen externer Aufgaben aufgeführt:
+Führen Sie die folgenden Schritte aus, um externe Aufgaben zu erstellen:
 
 1. Erstellen Sie eine neue benutzerdefinierte Entität, z. B. "Kunde", oder verwenden Sie eine vorhandene Kundenentität wie "Kontakte".
 
@@ -30,7 +30,7 @@ Im Folgenden sind die Schritte zum Erstellen externer Aufgaben aufgeführt:
     1. E-Mails
     1. Übergeordnetes Element (Nachschlagen in der übergeordneten Tabelle, z. B. Inspektionen)
     > [!NOTE]
-    > Die oben erstellte Kundenentität ist die Stelle, aus der das Aufgabensteuerelement die Kundeninformationen abruft, wenn eine externe Aufgabe zugewiesen wird. Das Feld "Übergeordnetes Element" stellt sicher, dass die Kundenentität mit einem Prüfdatensatz verknüpft ist.
+    > Die oben erstellte Kundenentität ist, aus der das Aufgabensteuerelement die Kundeninformationen beim Zuweisen einer externen Aufgabe abruft. Das Feld "Übergeordnetes Element" stellt sicher, dass die Kundenentität mit einem Prüfdatensatz verknüpft ist.
 
 1. Generieren Sie eine FETCH-XML-Datei, damit das PCF-Steuerelement die richtigen Kundeninformationen abrufen kann.
 
@@ -40,7 +40,7 @@ Im Folgenden sind die Schritte zum Erstellen externer Aufgaben aufgeführt:
 
     * Das Abfrageergebnis muss die folgenden Eigenschaften für jedes Benutzerobjekt zurückgeben:
       * ID
-      * Anzeigename
+      * Displayname
       * E-Mail verwenden, bei Bedarf Alias verwenden.
     * Die Abfrage muss den **parameter @top** enthalten, damit der Aufrufer die Anzahl der Ergebnisse einschränken kann.
     * Die Abfrage muss **@rootEntityId** Parameter haben, um ergebnisse bei Bedarf nur nach verwandten Datensätzen zu filtern.
@@ -81,19 +81,19 @@ Im Folgenden sind die Schritte zum Erstellen externer Aufgaben aufgeführt:
 
 1. Navigieren Sie im klassischen Formular-Designer, bis Sie die Registerkarte " **Aufgaben** " gefunden haben. Doppelklicken Sie auf das Untergrid, um das Eigenschaftendialogfeld zu öffnen.
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Dialogfeld &quot;Tasks&quot;-Eigenschaft":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Screenshot des Dialogfelds &quot;Aufgabeneigenschaft&quot;.":::
 
 1. Legen Sie im Eigenschaftendialogfeld die Eigenschaften wie in der folgenden Abbildung dargestellt fest:
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Einstellungen der Tasks-Eigenschaft":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot zeigt an, dass die Eigenschaften in den Einstellungen der Tasks-Eigenschaft festgelegt werden.":::
 
-1. Wechseln Sie zur Registerkarte "Steuerelemente", und wählen Sie :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="&quot;Aufgaben bearbeiten"::: " in der Eigenschaft "Benutzerdefinierte Aufgaben" aus, um den oben generierten FETCH-XML-Code hinzuzufügen.
+1. Wechseln Sie zur Registerkarte "Steuerelemente", und wählen Sie :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="&quot;Screenshot&quot; aus, um zu erfahren, wie Sie die Aufgaben bearbeiten."::: für die Eigenschaft "Benutzerdefinierte Aufgaben", um den oben generierten FETCH-XML-Code hinzuzufügen.
 
 1. Einfügen des FETCH-XML-Codes
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Abrufen von XML-Eigenschafteneinstellungen":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Der Screenshot zeigt, wie Fetch XML eingefügt wird.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Abrufen von benutzerdefinierten XML-Eigenschafteneinstellungen":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Der Screenshot zeigt, wie Benutzerdefinierte Eigenschafteneinstellungen konfiguriert werden.":::
 
 1. Wählen Sie " **OK** " unter "Benutzerdefinierte Aufgaben konfigurieren" und "Eigenschaften festlegen" aus.
 

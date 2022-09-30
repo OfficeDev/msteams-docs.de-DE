@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636175"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243129"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Entwerfen eigener Microsoft Teams-Messaging-Erweiterungen
 
@@ -126,7 +126,7 @@ Beachten Sie Folgendes, wenn Sie das Scrollen zulassen:
 
 ### <a name="navigation"></a>Navigation
 
-Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern die Navigation zu einer sekundären Ebene zu ermöglichen. Benutzer müssen zur vorherigen Ebene zurückkehren können.
+Für Szenarien mit Navigationsebenen oder umfangreichen Inhalten wird empfohlen, Benutzern den Zugriff auf eine sekundäre Ebene zu ermöglichen. Benutzer müssen zur vorherigen Ebene zurückkehren können.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Das Beispiel zeigt die Navigation in der Besprechung.":::
 
@@ -268,7 +268,7 @@ In der gemeinsamen Besprechungsphase geht es um Zusammenarbeit und Teilnahme. Hi
 
 Apps, die für die Besprechungsphase freigegeben wurden, variieren je nach Status der Besprechung und der Größe des Benutzers. Behalten Sie abstand und das dynamische Layout der Navigation und Steuerelemente wie in einem Browser bei.
 
-* **Seitenbereich**: Ein Benutzer kann den Seitenbereich während einer Besprechung jederzeit öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App (z. B. Die Registerkarte "In der Besprechung") zu verwenden. Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
+* **Seitenbereich**: Ein Benutzer kann den Seitenbereich während einer Besprechung jederzeit öffnen lassen, um zu chatten, die Teilnehmerliste anzuzeigen oder eine App zu verwenden (d. a. Die Registerkarte "In der Besprechung"). Die Phase wird dynamisch neu angeordnet, wenn das Panel geöffnet ist.
 * **Video- und Audioraster**: Das Video- und Audioraster ist immer sichtbar, um Besprechungsteilnehmer anzuzeigen. Wenn ein Benutzer jemanden in der Besprechung spotlights oder anheftt, erhöht dies die Höhe oder Breite des Teilnehmerrasters je nach Ausrichtung.
 
 #### <a name="meeting-stage-without-side-panel"></a>Besprechungsphase (ohne Seitenbereich)
@@ -477,7 +477,7 @@ Farben, die mit der Besprechungsumgebung kollidieren, können ablenken und in Te
 
 #### <a name="do-have-a-back-button"></a>Do: Have a Back button
 
-Wenn auf einer Registerkarte in der Besprechung mehrere Navigationsebenen vorhanden sind, müssen Benutzer zu ihren vorherigen Ansichten zurückkehren können.
+Wenn Auf einer Registerkarte in der Besprechung mehrere Navigationsebenen vorhanden sind, müssen Benutzer zu ihren vorherigen Ansichten zurückkehren können.
 
    :::column-end:::
    :::column span="":::

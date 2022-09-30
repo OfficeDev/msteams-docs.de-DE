@@ -3,12 +3,12 @@ title: Erstellen von Deep-Links
 description: In diesem Artikel erfahren Sie, wie Sie Deep-Links erstellen und in Ihren Microsoft Teams-Apps mit Registerkarten navigieren.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160720"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243220"
 ---
 # <a name="create-deep-links"></a>Erstellen von Deep-Links
 
@@ -101,7 +101,7 @@ Es wird zwar empfohlen, einen Deep-Link zu Ihrer Registerkarte mit `shareDeepLin
 > [!NOTE]
 >
 > * Persönliche Registerkarten haben einen `personal` Bereich, während Kanal- und Gruppenregisterkarten `team` oder `group` Bereiche nutzen. Die Syntax der beiden Registerkartentypen unterscheidet sich geringfügig, da nur dem Kontextobjekt der konfigurierbaren Registerkarte eine `channel` Eigenschaft zugeordnet ist. Weitere Informationen zu Registerkartenbereichen finden Sie in der [Manifest](~/resources/schema/manifest-schema.md)-Referenz.
-> * Deeplinks funktionieren nur ordnungsgemäß, wenn die Registerkarte mithilfe der Bibliothek v0.4 oder höher konfiguriert wurde und daher eine Entitäts-ID vorhanden ist. Deeplinks zu Registerkarten ohne Entitäts-IDs navigieren weiterhin zur Registerkarte, können aber die Unterentitäts-ID nicht auf der Registerkarte bereitstellen.
+> * Deeplinks funktionieren nur ordnungsgemäß, wenn die Registerkarte mithilfe der Bibliothek v0.4 oder höher konfiguriert wurde und daher eine Entitäts-ID vorhanden ist. Deep-Links zu Registerkarten ohne Entitäts-IDs wechseln immer noch zur Registerkarte, können aber die Unterentitäts-ID nicht auf der Registerkarte angeben.
 
 Verwenden Sie das folgende Format für einen Deep-Link, den Sie in einem Bot, Connector oder einer Nachrichtenerweiterungskarte verwenden können:
 
@@ -322,7 +322,7 @@ Um diesen Deeplink mit Ihrem Bot zu verwenden, geben Sie diesen als URL-Ziel auf
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>Erzeugen von Deep Links zu Channel-Konversationen
 
-Verwenden Sie dieses Deep-Link-Format, um zu einer bestimmten Konversation innerhalb eines Kanal-Threads zu navigieren:
+Verwenden Sie dieses Deep-Link-Format, um zu einer bestimmten Unterhaltung innerhalb des Kanalthreads zu wechseln:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

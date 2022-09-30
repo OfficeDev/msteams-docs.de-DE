@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die neuen Microsoft Teams-Entwicklerfeature
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160727"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243423"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -22,7 +22,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die allgemein verfügbar si
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Aktualisierungen für allgemein verfügbare Features":::
+:::image type="icon" source="~/assets/images/general-availabe.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -31,6 +31,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 **September 2022**
 
+* ***30. September 2022***: [Verwalten von SaaS-Lizenzen für Drittanbieter-Apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***29. September 2022***: [Die mobile Teams-App unterstützt jetzt Dateidownloads auf lokale Geräte.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***29. September 2022***: [Generieren Sie einen Deep-Link, um Inhalte für die Phase in Besprechungen freizugeben.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16. September 2022***: [Adaptive Karten in suchbasierten Nachrichtenerweiterungen unterstützen jetzt universelle Aktionen.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
@@ -265,6 +266,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 </details>
 </details>
 </details>
+
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -276,7 +278,7 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die sich in der Entwicklerv
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Aktualisierungen für Features, die in der Entwicklervorschau verfügbar sind":::
+:::image type="icon" source="~/assets/images/developer-preview.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -316,7 +318,7 @@ Entdecken Sie veraltete Microsoft Teams-Plattformfeatures. Sie können jetzt die
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/deprecated.png" alt-text="Veraltete Features":::
+:::image type="icon" source="~/assets/images/deprecated.png":::
 
 :::column-end:::
 :::column span="2":::

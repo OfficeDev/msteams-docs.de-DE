@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie suchbasierte Nachrichtenerw
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035226"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243031"
 ---
 # <a name="search-with-message-extensions"></a>Suchen mit Nachrichtenerweiterungen
 
@@ -88,7 +88,7 @@ Legen Sie für die suchbasierte Nachrichtenerweiterung den `type` Parameter auf 
 
 Sie können Ihre Nachrichtenerweiterung testen, indem Sie Ihre App hochladen.
 
-Um Ihre Nachrichtenerweiterung zu öffnen, navigieren Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche " **Weitere Optionen** (**&#8943;**) und dann Ihre Nachrichtenerweiterung aus.
+Um Ihre Nachrichtenerweiterung zu öffnen, wechseln Sie zu einem Ihrer Chats oder Kanäle. Wählen Sie im Feld "Verfassen" die Schaltfläche " **Weitere Optionen** (**&#8943;**) und dann Ihre Nachrichtenerweiterung aus.
 
 ## <a name="add-event-handlers"></a>Hinzufügen von Ereignishandlern
 
@@ -657,6 +657,6 @@ const app = new App();
 app.run();
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Bot Framework-Beispiele](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie eine modellgesteuerte App mit
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027340"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243059"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Erstellen einer neuen modellgesteuerten App mit Steuerelementen für die Zusammenarbeit für Teams
 
@@ -45,7 +45,7 @@ Steuerelemente für die Zusammenarbeit sind für [modellgesteuerte Anwendungen](
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Der Screenshot beschreibt, wie Sie eine neue Aktivität erstellen.":::
 
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 1. Nachdem Sie ihre Tabelle erstellt haben, können Sie sie anpassen, indem Sie zusätzliche Spalten, Beziehungen und vieles mehr hinzufügen (optional).
 
@@ -227,7 +227,7 @@ Sie müssen die Einstellungs-IDs hinzufügen, die Sie zuvor für Ihre Anwendung 
 
      :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Der Screenshot ist ein Beispiel für das Steuerelementfenster.":::
 
-1. Wählen Sie **"Konfigurieren"** aus, und navigieren Sie zur Registerkarte "Allgemein", um die Gruppen-ID hinzuzufügen.
+1. Wählen Sie **"Konfigurieren"** aus, und wechseln Sie zur Registerkarte "Allgemein", um die Gruppen-ID hinzuzufügen.
 
      :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Der Screenshot beschreibt, wie Die Gruppen-ID auf der Registerkarte &quot;Allgemein&quot; hinzugefügt wird.":::
 
@@ -284,7 +284,7 @@ Um eine externe Besprechung mit dem Kunden zu planen, wählen Sie die Dropdownli
 
 Benutzer können sowohl interne Besprechungen als auch Kundenbuchungen in ihrer Besprechungsliste sehen. Nachdem die Besprechung gestartet wurde, können Benutzer teilnehmen, indem sie die Schaltfläche " **Teilnehmen** " auswählen, die die Besprechung direkt in Microsoft Teams öffnet.
 
-Da die Besprechungen von Outlook unterstützt werden, können Benutzer entweder zu Bookings oder Outlook-Kalender navigieren, um alle Besprechungen in einem einzigen Kalender anzuzeigen. Interne Besprechungen werden im freigegebenen Kalender aufgelistet.
+Da die Besprechungen von Outlook unterstützt werden, können Benutzer entweder zu Bookings oder Outlook-Kalender wechseln, um alle Besprechungen in einem einzigen Kalender anzuzeigen. Interne Besprechungen werden im freigegebenen Kalender aufgelistet.
 
 Es folgen die Schritte zum Hinzufügen eines freigegebenen Kalenders zu Outlook (optional):
 

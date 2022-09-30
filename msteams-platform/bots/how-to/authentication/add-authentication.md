@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie die Authentifizierung mithilfe des OAuth-Anbi
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618384"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243122"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Authentifizierung für Ihren Teams-Bot hinzufügen
 
@@ -149,7 +149,7 @@ So fügen Sie den Microsoft Teams-Kanal hinzu:
 
    :::image type="content" source="../../../assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Dieser Screenshot zeigt, wie Sie die Bedingungen festlegen, wenn der Dienst.":::
 
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/select-teams.png" alt-text="Dieser Screenshot zeigt, wie Sie den Microsoft Teams-Kanal hinzufügen.":::
 
@@ -170,7 +170,7 @@ In diesem Verfahren verwenden Sie einen Azure AD-Anbieter. andere von Azure AD u
    1. **Name**. Geben Sie den Namen für die Anwendung ein. Ein Beispiel hierfür ist *BotTeamsIdentity*. Denken Sie daran, dass der Name eindeutig sein muss.
    1. Wählen Sie **Unterstützte Kontotypen** für Ihre Anwendung aus. Wählen Sie *Konten in einem beliebigen Organisationsverzeichnis (Any Microsoft Azure Active Directory (Azure AD) – Multitenant) und persönliche Microsoft-Konten (z. B. Skype, Xbox)* aus.
    1. Für den **Umleitungs-URI**:<br/>
-       &#x2713;**Web** auswählen.<br/>
+       &#x2713;Select **Web**. <br/>
        &#x2713; Legen Sie die URL auf `https://token.botframework.com/.auth/web/redirect`.
    1. Wählen Sie **Registrieren** aus.
 
@@ -283,12 +283,12 @@ Nachdem die vorläufigen Einstellungen abgeschlossen sind, konzentrieren wir uns
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. Navigieren Sie im Projektmappen-Explorer zum Ordner `TeamsAppManifest`, öffnen Sie `manifest.json`, legen Sie `id` und `botId` auf die **Bot-App-ID** fest, die Sie zum Zeitpunkt der Botregistrierung gespeichert haben.
+1. Wechseln Sie in der Projektmappen-Explorer zu dem `TeamsAppManifest` Ordner, öffnen `manifest.json` und legen Sie die **Bot-App-ID** fest `id` `botId`, die Sie zum Zeitpunkt der Bot-Registrierung gespeichert haben.
 
 # <a name="javascript"></a>[JavaScript](#tab/node-js)
 
 1. Klonen Sie [node-auth-sample][teams-auth-bot-js].
-1. Navigieren Sie in einer Konsole zum Projekt: </br></br>
+1. Wechseln Sie in einer Konsole zum Projekt: </br></br>
 `cd samples/javascript_nodejs/46.teams`  
 1. Module installieren</br></br>
 `npm install`
@@ -334,7 +334,7 @@ Alternativ können Sie in Visual Studio die folgenden Schritte ausführen:
 
 1. Wählen Sie **Erstellen** aus.
 1. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, sollte sie in Visual Studio angezeigt werden. Darüber hinaus wird in Ihrem Standardbrowser eine Seite mit der Meldung *Ihr Bot ist bereit!* angezeigt. Die URL sieht folgendermaßen aus: `https://botteamsauth.azurewebsites.net/`. Speichern Sie sie in einer Datei.
-1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
+1. Wechseln Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
 1. Überprüfen Sie Ihre Ressourcengruppe, der Bot sollte zusammen mit den anderen Ressourcen aufgeführt werden. Die folgende Abbildung dient lediglich als Beispiel:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="Dieser Screenshot zeigt, wie Ressourcengruppe und Bot überprüft werden.":::
@@ -407,7 +407,7 @@ Nachdem Sie den Authentifizierungsmechanismus konfiguriert haben, können Sie di
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
+1. Wechseln Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
 1. Suchen Sie Ihre Ressourcengruppe.
 1. Wählen Sie den Ressourcenlink aus. Die Ressourcenseite wird angezeigt.
 1. Wählen Sie auf der Ressourcenseite **Testen im Webchat** aus. Der Bot startet und zeigt die vordefinierten Begrüßungen an.
@@ -435,14 +435,14 @@ and when for these, and just reference that from here, along with the set of ste
 ## <a name="install-and-test-the-bot-in-teams"></a>Installieren und Testen des Bots in Teams
 
 1. Stellen Sie in Ihrem Botprojekt sicher, dass der Ordner `TeamsAppManifest` die `manifest.json` zusammen mit einer `outline.png` und `color.png`-Dateien enthält.
-1. Navigieren Sie in Projektmappen-Explorer zum Ordner `TeamsAppManifest`. Bearbeiten Sie `manifest.json`, indem Sie die folgenden Werte zuweisen:
+1. Wechseln Sie in Projektmappen-Explorer zum `TeamsAppManifest` Ordner. Bearbeiten Sie `manifest.json`, indem Sie die folgenden Werte zuweisen:
     1. Stellen Sie sicher, dass die **Bot-App-ID**, die Sie zum Zeitpunkt der Botregistrierung erhalten haben, `id` und `botId`zugewiesen ist.
     1. Weisen Sie diesen Wert zu: `validDomains: [ "token.botframework.com" ]`.
 1. Wählen Sie die Dateien `manifest.json`, `outline.png` und `color.png` aus und **zippen Sie** sie.
 1. Öffnen Sie **Microsoft Teams**.
 1. Wählen Sie im linken Bereich unten das **Apps-Symbol** aus.
 1. Wählen Sie im rechten Bereich unten **Benutzerdefinierte App hochladen** aus.
-1. Navigieren Sie zum Ordner `TeamsAppManifest`, und laden Sie das ZIP-Manifest hoch.
+1. Wechseln Sie zum `TeamsAppManifest` Ordner, und laden Sie das gezippte Manifest hoch.
 Der folgende Assistent wird angezeigt:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="Dieser Screenshot zeigt ein Beispiel für den Bot, nachdem er in Teams hochgeladen wurde.":::
@@ -468,7 +468,7 @@ Dadurch wird ngrok gestartet, um den von Ihnen angegebenen Port lauschen zu kön
 1. Kopieren Sie die HTTPS-Adresse unter Forwarding. Sie sieht folgendermaßen aus: `https://dea822bf.ngrok.io/`.
 1. Fügen Sie `/api/messages` an, um `https://dea822bf.ngrok.io/api/messages` abzurufen. Dies ist der **Nachrichtenendpunkt** für den Bot, der lokal auf Ihrem Computer ausgeführt wird und über das Web in einem Chat in Teams erreichbar ist.
 1. Ein letzter Schritt besteht darin, den Nachrichtenendpunkt des bereitgestellten Bots zu aktualisieren. Im Beispiel haben wir den Bot in Azure bereitgestellt. Führen wir also die folgenden Schritte aus:
-    1. Navigieren Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
+    1. Wechseln Sie in Ihrem Browser zum [**Azure-Portal**][azure-portal].
     1. Wählen Sie Ihre **Bot-Registrierung** aus.
     1. Wählen Sie im linken Bereich **Einstellungen** aus.
     1. Geben Sie im rechten Bereich im Feld **Nachrichtenendpunkt** die ngrok-URL ein, in unserem Beispiel, `https://dea822bf.ngrok.io/api/messages`.
@@ -639,8 +639,8 @@ Dieser Abschnitt enthält ein Beispiel für botauthentifizierung v3 SDK.
 
 | **Beispielname** | **Beschreibung** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Registerkarten, Bots und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
+| Bot-Authentifizierung | In diesem Beispiel wird gezeigt, wie Sie mit der Authentifizierung in einem Bot für Teams beginnen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Registerkarten-, Bot- und Nachrichtenerweiterungs-SSO (ME) | Dieses Beispiel zeigt SSO für Registerkarten, Bots und ME – Suche, Aktion, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Nicht verfügbar |
 
 ## <a name="see-also"></a>Siehe auch
 

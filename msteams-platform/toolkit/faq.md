@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 6a6c6599ff036cf7b81dd30b00e5608db3dc4cc2
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806901"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243375"
 ---
 # <a name="faq-for-teams-toolkit"></a>Häufig gestellte Fragen zum Teams-Toolkit
 
@@ -25,7 +25,7 @@ Häufig gestellte Fragen zur [Bereitstellung von Cloudressourcen mithilfe des Te
 
 <summary><b>Wie kann ich Fehler beheben?</b></summary>
 
-Wenn Sie Fehler mit Teams Toolkit in Visual Studio Code erhalten, können Sie in der Fehlerbenachrichtigung **Hilfe erhalten** auswählen, um zum zugehörigen Dokument zu navigieren. Wenn Sie TeamsFx CLI verwenden, befindet sich am Ende der Fehlermeldung ein Hyperlink, der auf das Hilfedokument verweist. Sie können auch direkt das [Hilfedokument zur Bereitstellung](https://aka.ms/teamsfx-arm-help) anzeigen.
+Wenn Sie Fehler mit dem Teams-Toolkit in Visual Studio Code erhalten, können Sie **hilfe** zu der Fehlerbenachrichtigung auswählen, um zum zugehörigen Dokument zu wechseln. Wenn Sie TeamsFx CLI verwenden, befindet sich am Ende der Fehlermeldung ein Hyperlink, der auf das Hilfedokument verweist. Sie können auch direkt das [Hilfedokument zur Bereitstellung](https://aka.ms/teamsfx-arm-help) anzeigen.
 
 <br>
 

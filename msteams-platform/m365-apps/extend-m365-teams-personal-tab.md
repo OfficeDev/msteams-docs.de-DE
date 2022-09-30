@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100776"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243507"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -193,7 +193,7 @@ So zeigen Sie Ihre App an, die in Outlook auf Windows Desktop ausgeführt wird:
 
 So zeigen Sie Ihre App in Outlook im Web an:
 
-1. Navigieren Sie zu [Outlook im Web](https://outlook.office.com), und melden Sie sich mit Ihrem Entwickler-Mandantenkonto an.
+1. Wechseln Sie zu [Outlook im Web](https://outlook.office.com), und melden Sie sich mit Ihrem Dev-Mandantenkonto an.
 1. Wählen Sie auf der Seitenleiste  **"Weitere Apps" aus**. Ihr quergeladener App-Titel wird unter den installierten Apps angezeigt.
 1. Wählen Sie Ihr App-Symbol aus, um die App zu starten und eine Vorschau anzuzeigen, die in Outlook im Web ausgeführt wird.
 

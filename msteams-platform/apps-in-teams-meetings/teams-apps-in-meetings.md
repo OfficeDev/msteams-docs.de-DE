@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990889"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243206"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
@@ -46,6 +46,10 @@ Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichk
 ![Erweiterbarkeit der Besprechungs-App](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der Besprechungs-App, API-Verweise, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams.
+
+> [!Note]
+>
+> Besprechungs-Apps (Randbereich, Besprechungsphase) werden im Teams-Desktopclient unterstützt. Wo wie im Teams-Webclient wird es nur unterstützt, wenn die Entwicklervorschau aktiviert ist.
 
 * **Erweitern der Besprechungs-App**: Verbessern Sie Ihre Besprechungserfahrung mithilfe der Besprechungserweiterungsfunktion. Mit diesem Feature können Sie Ihre Apps in Besprechungen integrieren. Es umfasst auch verschiedene Freigabefenster eines Besprechungslebenszyklus, in denen Sie Registerkarten, Bots und Messaging-Erweiterungen integrieren können. Sie können verschiedene Teilnehmerrollen und Benutzertypen angeben, Besprechungsereignisse abrufen und In-Meeting-Dialogfenster generieren.
 * **Konfigurieren von Apps für Besprechungen**: Um Teams mit Apps für Besprechungen anzupassen, aktivieren Sie Ihre Apps für Teams-Besprechungen, indem Sie das App-Manifest aktualisieren und die Apps auch für Besprechungsszenarien konfigurieren.

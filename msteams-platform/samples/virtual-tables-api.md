@@ -5,16 +5,16 @@ description: In diesem Modul erfahren Sie mehr über die Web-API für virtuelle 
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179093"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243549"
 ---
 # <a name="virtual-tables-web-api"></a>Web-API für virtuelle Tabellen
 
-Wenn Sie die Dataverse-Web-API verwenden, um mehrere Datensätze aus einer virtuellen Tabelle abzurufen, können zusätzliche Abfrageparameter einbezogen werden, um Sortierung, Filterung und Paginierung zu unterstützen. Diese Features werden in den virtuellen Tabellen der Zusammenarbeitssteuerelemente nicht einheitlich unterstützt, da sie auf der Unterstützung durch die Microsoft Graph-API basieren. In der Entitätsreferenz für virtuelle Tabellen finden Sie Details dazu, was jede virtuelle Tabelle unterstützt.
+Wenn Sie die Dataverse-Web-API verwenden, um mehrere Datensätze aus einer virtuellen Tabelle abzurufen, können zusätzliche Abfrageparameter einbezogen werden, um Sortierung, Filterung und Paginierung zu unterstützen. Diese Features werden in den virtuellen Tabellen der Zusammenarbeitssteuerelemente nicht einheitlich unterstützt, da sie auf der Unterstützung durch die Microsoft Graph-API basieren. Details dazu, was die einzelnen virtuellen Tabellen unterstützen, finden Sie in der Entitätsreferenz für virtuelle Tabellen.
 
 > [!NOTE]
 > Derzeit sind Die Steuerelemente für die Zusammenarbeit nur in der [öffentlichen Entwicklervorschau](~/resources/dev-preview/developer-preview-intro.md) verfügbar.
@@ -29,7 +29,7 @@ Mit den virtuellen Tabellen können Sie den OData-$orderby Abfrageparameter verw
 * Graph-Ereignis
 
 > [!NOTE]
-> Das Sortieren wird nicht für alle Attribute der jeweiligen Graph-Ressourcen unterstützt. Wenn ein Benutzer versucht, nach einer virtuellen Tabelle mit einem nicht unterstützten Attribut zu sortieren, hat dieses Resultset seine Standardreihenfolge. Dies entspricht dem Verhalten der Dataverse-Web-API für Spalten, die keine Sortierung unterstützen.
+> Das Sortieren wird nicht für alle Attribute der jeweiligen Graph-Ressourcen unterstützt. Wenn ein Benutzer versucht, nach einer virtuellen Tabelle mit einem nicht unterstützten Attribut zu sortieren, hat dieses Resultset seine Standardreihenfolge. Dies entspricht dem Verhalten der Dataverse-Web-API für Spalten, die das Sortieren nicht unterstützen.
 
 Beispiele:
 

@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über virtuelle Tabellen für Auf
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314595"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243045"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Virtuelle Tabellen für Aufgaben, Besprechungen, Dateien
 
@@ -45,18 +45,18 @@ Um diesem Artikel zu folgen, benötigen Sie Folgendes:
 
 1. Eine Dataverse-Umgebung, in der die Steuerelemente für die Zusammenarbeit installiert wurden.
 1. Ein Benutzerkonto in der Dataverse-Umgebung, dem die **Benutzerrolle "Zusammenarbeit"** zugewiesen ist.
-1. Ein Drittanbietertool, z. B.: Post man oder einen benutzerdefinierten C#-Code, mit dem Sie sich bei Microsoft Dataverse-Instanzen authentifizieren und Web-API-Anforderungen verfassen und senden und Antworten anzeigen können.  
+1. Ein Drittanbietertool, z. B. "Post man" oder benutzerdefinierter C#-Code, mit dem Sie sich bei Microsoft Dataverse-Instanzen authentifizieren und Web-API-Anforderungen verfassen und senden und Antworten anzeigen können.  
 
 > [!TIP]
 > Microsoft stellt Informationen zum Konfigurieren einer Postman-Umgebung bereit, die eine Verbindung mit Ihrer Dataverse-Instanz herstellt und Postman zum Ausführen von Vorgängen mit der Web-API verwendet. Siehe [Verwenden von Postman mit Microsoft Dataverse-Web-API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## <a name="virtual-tables-sample-scenario"></a>Beispielszenario für virtuelle Tabellen
 
-Das in diesem Leitfaden beschriebene Szenario verwendet die virtuellen Tabellen "Planner Plan" und "Task". Das beschriebene Szenario ist das gleiche, das vom Steuerelement für die Zusammenarbeit von Aufgaben verwendet wird. Aus Benutzersicht zeigt das Szenario, wie ein Planner-Plan und mehrere Aufgaben erstellt und einem bestimmten Geschäftsdatensatz zugeordnet werden. In diesem Szenario wird gezeigt, wie Sie die dem Geschäftsdatensatz zugeordneten Aufgaben abrufen und wie Sie eine bestimmte Planner-Aufgabe lesen, aktualisieren und löschen.
+Das in diesem Leitfaden beschriebene Szenario verwendet die virtuellen Tabellen "Planner Plan" und "Task". Das beschriebene Szenario ist das gleiche, das vom Steuerelement für die Zusammenarbeit von Aufgaben verwendet wird. Aus Benutzersicht zeigt das Szenario, wie ein Planner-Plan und mehrere Aufgaben erstellt und einem bestimmten Geschäftsdatensatz zugeordnet werden. In diesem Szenario wird gezeigt, wie Sie die dem Geschäftsdatensatz zugeordneten Aufgaben abrufen und eine bestimmte Planner-Aufgabe lesen, aktualisieren und löschen.
 
 Im folgenden Sequenzdiagramm wird die Interaktion zwischen dem Client erläutert, z. B. das Steuerelement für die Aufgabenzusammenarbeit, die [Zusammenarbeits-API](/rest/api/industry/collaboration-controls/) und die virtuellen Tabellen "Plan für Planner" und "Aufgaben".
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequenzdiagramm für virtuelle Tabellen":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Die Abbildung zeigt das Sequenzdiagramm für virtuelle Tabellen.":::
 
 ## <a name="virtual-tables-basic-operations"></a>Grundlegende Vorgänge für virtuelle Tabellen
 
@@ -73,7 +73,7 @@ Rufen Sie die Gruppen-ID ab, die in [den Einstellungen für Ihre Zusammenarbeit]
 
 Eine Zusammenarbeitssitzung ist ein Datensatz in der Stammtabelle für die Zusammenarbeit, mit dem Sie mehrere Zusammenarbeiten zuordnen können, z. B. Aufgaben, Ereignisse, Termine mit einem Geschäftsdatensatz.
 
-Mithilfe einer Zusammenarbeitssitzung können Sie Vorgänge ausführen, z. B. eine Liste der Kalenderereignisse, die einem Geschäftsdatensatz zugeordnet sind, z. B. eine Inspektionsanwendung.
+Mithilfe einer Zusammenarbeitssitzung können Sie Vorgänge wie die Liste der Kalenderereignisse ausführen, die einem Geschäftsdatensatz zugeordnet sind, z. B. eine Inspektionsanwendung.
 
 # <a name="request"></a>[Anforderung](#tab/request)
 
@@ -108,7 +108,7 @@ Mithilfe einer Zusammenarbeitssitzung können Sie Vorgänge ausführen, z. B. ei
 
 ---
 
-Behalten Sie den `collaborationRootId` Überblick, wie er in nachfolgenden Anforderungen benötigt wird.
+Verfolgen Sie, `collaborationRootId` wie dies in nachfolgenden Anforderungen erforderlich ist.
 
 **Aufgabe 3: Erstellen eines Planner-Plans**
 
@@ -132,7 +132,7 @@ Erstellen Sie einen Planner-Plan, und ordnen Sie ihn der oben erstellten Zusamme
 
 * `collaborationRootId`: Identifiziert die Zusammenarbeitssitzung, der wir diesen Plan zuordnen möchten, und verwendet den Wert aus Aufgabe 2.
 
-* `groupId`: Identifiziert die Gruppe, der dieser Plan gehören soll. Verwenden Sie den Wert aus Schritt 1.
+* `groupId`: Identifiziert die Gruppe, der dieser Plan gehört. Verwenden Sie den Wert aus Schritt 1.
 
 * `planTitle`: Titel des Plans
 
@@ -161,7 +161,7 @@ Erstellen Sie einen Planner-Plan, und ordnen Sie ihn der oben erstellten Zusamme
 
 ---
 
-Behalten Sie den`m365_id` Überblick, wie er in nachfolgenden Anforderungen benötigt wird.
+Verfolgen Sie,`m365_id` wie dies in nachfolgenden Anforderungen erforderlich ist.
 
 **Aufgabe 4: Erstellen einer Planner-Aufgabe**
 
@@ -184,7 +184,7 @@ Erstellen einer Planner-Aufgabe mit `PlanId` und `collaborationRootId`. Sie kön
 
 ```
 
-* `collaborationRootId`: Identifiziert die Zusammenarbeitssitzung, der wir diesen Plan zuordnen möchten, uns den Wert aus Aufgabe 2.
+* `collaborationRootId`: Identifiziert die Zusammenarbeitssitzung, der wir diesen Plan zuordnen möchten, und verwendet den Wert aus Aufgabe 2.
 * `planId`: Identifiziert den Plan, dem diese Aufgabe zugewiesen wird, verwenden Sie den Wert aus dem vorherigen Schritt.
 * `taskTitle`: Titel der Aufgabe
 
@@ -230,7 +230,7 @@ Erstellen einer Planner-Aufgabe mit `PlanId` und `collaborationRootId`. Sie kön
 
 ---
 
-Behalten Sie den `m365_graphplannertaskid` Überblick, wie er in nachfolgenden Anforderungen benötigt wird.
+Verfolgen Sie, `m365_graphplannertaskid` wie dies in nachfolgenden Anforderungen erforderlich ist.
 
 > [!NOTE]
 > Dies `m365_graphplannertaskid` ist der Primärschlüssel des Datensatzes in der virtuellen Tabelle "Planner-Aufgabe". Alle nachfolgenden Anforderungen an die virtuelle Tabelle zur Interaktion mit diesem Datensatz müssen diesen Primärschlüssel verwenden. Dies wird als in den `plannerTaskId` nachfolgenden Schritten in diesem Dokument bezeichnet.

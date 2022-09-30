@@ -5,12 +5,12 @@ keywords: Problembehandlung bei der Entwicklung von Teams-Apps
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048962"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243472"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Fehlerbehebung für Ihre Microsoft Teams-Anwendung
 
@@ -18,7 +18,7 @@ ms.locfileid: "66048962"
 
 ### <a name="accessing-the-devtools"></a>Zugreifen auf die DevTools
 
-Sie können [DevTools im Teams-Client](~/tabs/how-to/developer-tools.md) öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (auf Windows) oder Command-Option-I (unter MacOS) in einem Browser zu erhalten.
+Sie können [DevTools im Teams-Client](~/tabs/how-to/developer-tools.md) öffnen, um eine ähnliche Erfahrung wie das Drücken von F12 (unter Windows) oder Command-Option-I (unter MacOS) in einem Browser zu erhalten.
 
 ### <a name="blank-tab-screen"></a>Leerer Registerkartenbildschirm
 
@@ -26,6 +26,9 @@ Wenn Ihr Inhalt in der Registerkartenansicht nicht angezeigt wird, könnte dies 
 
 * Ihre Inhalte können nicht in einem `<iframe>`angezeigt werden.
 * die Inhaltsdomäne nicht in der Liste ["validDomains](~/resources/schema/manifest-schema.md#validdomains) " im Manifest enthalten ist.
+
+> [!NOTE]
+> Eine leere Registerkarte wird angezeigt, wenn die angegebene Registerkarten-URL zum Anmeldebildschirm umleitet. Anmeldeseiten werden in iFrames nicht als Schutz vor Clickjacking gerendert. Ihre Authentifizierungslogik muss eine andere Methode als die Umleitung verwenden.
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>Die Schaltfläche "Speichern" ist im Dialogfeld "Einstellungen" nicht aktiviert.
 
@@ -50,7 +53,7 @@ Wenn Sie beim Hinzufügen einer Registerkarte " **Speichern"** auswählen, aber 
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Der Benutzer kann nicht authentifiziert oder Ihr Authentifizierungsanbieter auf der Registerkarte angezeigt werden.
 
-Sofern Sie keine automatische Authentifizierung durchführen, müssen Sie den Authentifizierungsprozess befolgen, der vom [Microsoft Teams JavaScript-Client-SDK](/javascript/api/overview/msteams-client) bereitgestellt wird.
+Sofern Sie keine automatische Authentifizierung durchführen, müssen Sie den Authentifizierungsprozess befolgen, der vom [JavaScript-Client-SDK für Microsoft Teams](/javascript/api/overview/msteams-client) bereitgestellt wird.
 
 > [!NOTE]
 > Wir verlangen, dass der gesamte Authentifizierungsfluss in Ihrer Domäne beginnt und endet, die im `validDomains` Objekt in Ihrem Manifest aufgeführt sein muss.
@@ -87,12 +90,12 @@ Die meisten Manifestfehler geben einen Hinweis darauf, welches feld fehlt oder w
 
 Häufige Gründe für Manifestlesefehler:
 
-* Ungültiger JSON-Code. Verwenden Sie eine IDE wie [Visual Studio Code](https://code.visualstudio.com) oder [Visual Studio](https://www.visualstudio.com/vs/), die die JSON-Syntax automatisch überprüft.
+* Ungültiger JSON-Code. Verwenden Sie eine IDE wie [Visual Studio Code](https://code.visualstudio.com) oder [Visual Studio](https://www.visualstudio.com/vs/) , die die JSON-Syntax automatisch überprüft.
 * Codierungsprobleme. Verwenden Sie UTF-8 für die Datei *manifest.json* . Andere Codierungen, insbesondere mit der BOM, sind möglicherweise nicht lesbar.
-* Falsch formatiertes .zip-Paket. Die Datei *manifest.json* muss sich auf der obersten Ebene der .zip Datei befinden. Beachten Sie, dass die Standardmäßige Mac-Dateikomprimierung die *Datei manifest.json* möglicherweise in einem Unterverzeichnis platziert, das in Microsoft Teams nicht ordnungsgemäß geladen wird.
+* Falsch formatiertes .zip-Paket. Die Datei *manifest.json* muss sich auf der obersten Ebene der .zip Datei befinden. Beachten Sie, dass die standardmäßige Mac-Dateikomprimierung die *Datei manifest.json* möglicherweise in einem Unterverzeichnis platziert, das in Microsoft Teams nicht ordnungsgemäß geladen wird.
 
 ### <a name="another-extension-with-same-id-exists"></a>Eine weitere Erweiterung mit derselben ID ist vorhanden.
 
-Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID erneut hochzuladen, wählen Sie das Symbol **"Ersetzen"** am Ende der Tabellenzeile der Registerkarte statt der Schaltfläche **"Hochladen**" aus.
+Wenn Sie versuchen, ein aktualisiertes Paket mit derselben ID erneut hochzuladen, wählen Sie das **Symbol "Ersetzen"** am Ende der Tabellenzeile der Registerkarte statt der Schaltfläche " **Hochladen** " aus.
 
 Wenn Sie ein aktualisiertes Paket nicht erneut hochladen, stellen Sie sicher, dass die ID eindeutig ist.

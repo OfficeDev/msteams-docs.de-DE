@@ -3,12 +3,12 @@ title: Vorbereiten Ihres Microsoft 365-Mandanten
 description: In diesem Modul erfahren Sie, wie Sie mit Teams in Microsoft 365 beginnen und Ihre Entwicklungsumgebung erstellen.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c5ebc7d36f73978e1cd954c7be8d7ac3595ba68e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484887"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243584"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
@@ -46,7 +46,7 @@ Um das Hochladen oder Querladen benutzerdefinierter Apps für Ihren Entwicklerma
     > [!Note]
     > Es kann bis zu 24 Stunden dauern, bis die Option **Teams** angezeigt wird. Sie können in dieser Zeit [Ihre benutzerdefinierte App in eine Teams-Umgebung hochladen](/microsoftteams/upload-custom-apps#validate), um sie zu testen und zu validieren.
 
-3. Navigieren Sie zu **Teams-Apps** > **Setuprichtlinien** > **Global**.
+3. Wechseln Sie zu "**Setuprichtlinien für** >  **Teams-Apps** > **global**".
 
    ![Aktivieren der Querladenansicht](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 

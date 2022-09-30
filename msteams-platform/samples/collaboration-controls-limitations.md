@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie mehr über Einschränkungen und bekann
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 6961b5fc51cc8aa2a2ad0620c8a8ef5032005f40
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: fe403c566b47be6509ff0d11113c34a8fc667cc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179017"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243388"
 ---
 # <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 
@@ -22,13 +22,13 @@ Es folgen die Einschränkungen für Steuerelemente für die Zusammenarbeit:
 * Komponenten können in Canvas-Apps nicht verwendet werden.
 * Komponenten unterstützen nur vollständige Registerkartenansichten.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="Aufgaben" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="Der Screenshot zeigt die Aufgaben." border="true":::
 
 * Die ausgewählte Untergitteransicht wird nicht berücksichtigt. Alle Aufgaben, Besprechungen oder Notizen für den Datensatz für die Zusammenarbeit werden angezeigt.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="Subgrid-Ansicht" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="Der Screenshot zeigt die Subgrid-Ansicht der Aufgaben." border= "true":::
 
-* Aktivitäten, die dem Zeitachsensteuerelement hinzugefügt wurden, werden nicht in den Komponenten angezeigt, Aufgaben, Besprechungen und Notizen, die in den Komponenten erstellt wurden, sind nicht im Zeitachsensteuerelement enthalten.
+* Aktivitäten, die dem Zeitachsensteuerelement hinzugefügt wurden, werden nicht in den Komponenten, Aufgaben, Besprechungen und Notizen angezeigt, die in den Komponenten erstellt wurden, nicht im Zeitachsensteuerelement enthalten.
 * Neue Datensätze müssen vor dem Zugriff auf die Komponenten gespeichert werden, andernfalls wird ein leerer Bildschirm angezeigt.
 * Die Komponenten erben keine Designelemente von dem Formular oder der App, dem sie hinzugefügt werden.
 * Lokalisierung ist nur verfügbar, wenn die App in Microsoft Teams ausgeführt wird.
@@ -36,23 +36,23 @@ Es folgen die Einschränkungen für Steuerelemente für die Zusammenarbeit:
 
 **Admin Center wird nicht aktualisiert, wenn die Installation oder das Upgrade abgeschlossen ist**
 
-Wenn Sie die Installationsschritte bei der [Installation der Steuerelemente für die Zusammenarbeit ausführen](~/samples/install-collaboration-control.md), werden Sie zum Power Platform Admin Center umgeleitet. Ein Banner wird angezeigt, wenn die Installation gestartet wird, aber es wird nicht aktualisiert, wenn die Installation abgeschlossen ist. Der Status wird während der Installation aufgelistet, und wenn die Installation abgeschlossen ist, wird er möglicherweise nicht mehr in der Liste angezeigt. Sie können die Lösungsliste anzeigen, um [https://make.powerapps.com/](https://make.preview.powerapps.com/) zu bestätigen, dass die Installation abgeschlossen ist.
+Wenn Sie die Installationsschritte bei der [Installation der Steuerelemente für die Zusammenarbeit ausführen](~/samples/install-collaboration-control.md), werden Sie zum Power Platform Admin Center umgeleitet. Ein Banner wird angezeigt, wenn die Installation gestartet wird, aber es wird nicht aktualisiert, wenn die Installation abgeschlossen ist. Der Status wird während der Installation aufgelistet, und wenn er abgeschlossen ist, ist er möglicherweise nicht in der Liste verfügbar. Sie können die Lösungsliste anzeigen, um [https://make.powerapps.com/](https://make.preview.powerapps.com/) zu bestätigen, dass die Installation abgeschlossen ist.
 
-**Ansicht während der Installation:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="Ansicht während der Installation" border="true":::
+**Ansicht während der Installation:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="Der Screenshot zeigt den Prozess während der Installation." border="true":::
 
-**Ansicht nach der Installation:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="Ansicht nach der Installation" border="true":::
+**Ansicht nach der Installation:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="Der Screenshot zeigt den Abschluss der Installation." border="true":::
 
-Beim Upgrade der Steuerelemente auf eine höhere Version wird das banner für die gleiche installation gestartet angezeigt, aber der Status des Steuerelements bleibt auch nach Abschluss des Upgrades installiert. Sie können bestätigen, dass das Upgrade abgeschlossen ist, indem Sie die Lösungsliste unter [https://make.powerapps.com/](https://make.preview.powerapps.com/)überprüfen. Dies sollte ungefähr 15 Minuten dauern.
+Beim Upgrade der Steuerelemente auf eine höhere Version wird das banner für die gleiche installation gestartet angezeigt, aber der Status des Steuerelements bleibt auch nach Abschluss des Upgrades installiert. Sie können bestätigen, dass das Upgrade abgeschlossen ist, indem Sie die Lösungsliste unter [https://make.powerapps.com/](https://make.preview.powerapps.com/)überprüfen, es muss ungefähr 15 Minuten dauern.
 
-Sie können auch im Verlauf für bestimmte Lösungen sehen, dass die höhere Version installiert und dann die vorherige Version entfernt wurde: :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="Verlaufsprüfung" border="true":::
+Sie können auch im Verlauf für bestimmte Lösungen sehen, dass die spätere Version installiert und dann die vorherige Version entfernt wurde: :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="Der Screenshot zeigt den Verlauf für bestimmte Lösungen der Versionen, die installiert und entfernt werden." border="true":::
 
 ## <a name="bookings-meetings"></a>Bookings-Besprechungen
 
-Das Steuerelement "Besprechungen" unterstützt eine Besprechung auf einmal, wenn Sie Bookings verwenden, um mit Benutzern außerhalb Ihrer Organisation in Kontakt zu treten. one to many meetings aren't supported at this time using Collaboration controls.
+Das Steuerelement "Besprechungen" unterstützt eine Besprechung auf einmal, wenn Sie Bookings verwenden, um mit Benutzern außerhalb Ihrer Organisation in Kontakt zu treten. Ein bis viele Besprechungen werden derzeit nicht mithilfe von Steuerelementen für die Zusammenarbeit unterstützt.
 
 **Der Status des Besprechungsteilnehmers ist falsch.**
 
-Wenn ein Teilnehmer eine Besprechung anzeigt, wird sein Antwortstatus in der Agendaansicht und in den Besprechungsdetails möglicherweise nicht ordnungsgemäß angezeigt. Wenn Sie die Schaltfläche "Ablehnen" auswählen, wird möglicherweise auch eine Fehlermeldung auf dem Bildschirm zurückgegeben.
+Wenn ein Teilnehmer eine Besprechung mit rsvpst, wird sein Antwortstatus in der Agendaansicht und in den Besprechungsdetails möglicherweise nicht ordnungsgemäß angezeigt. Wenn Sie die Schaltfläche "Ablehnen" auswählen, wird möglicherweise eine Fehlermeldung auf dem Bildschirm zurückgegeben.
 
 ## <a name="tasks"></a>Aufgaben
 
@@ -78,7 +78,7 @@ Beim Navigieren in den Archivordner nach dem Archivieren von Dateien können Ben
 
 Wenn ein Steuerelement eine Aufgabe oder Besprechung nicht speichern kann, ist die ursache wahrscheinlich eine falsch konfigurierte Gruppen-ID oder Kanal-ID.  
 
-Lösung 1: Vergewissern Sie sich, dass die IDs korrekt sind und die Einstellungen gemäß der Einstellungsübung angewendet wurden.  
+Lösung 1: Stellen Sie sicher, dass die IDs korrekt sind und die Einstellungen gemäß der Einstellungsübung angewendet werden.  
 
 Lösung 2: Stellen Sie sicher, dass sich die Power Apps-Umgebung und die Teams-Umgebung auf demselben Mandanten befinden.  
 
@@ -88,11 +88,11 @@ Wenn die Steuerelemente nicht geladen werden können oder ein Fehler angezeigt w
 
 Beispiel:
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Steuerelementsynchronisierungsfehler":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Der Screenshot zeigt, dass die Steuerelementsynchronisierung fehlschlägt.":::
 
 Dies würde im Konsolenprotokoll wie folgt gerendert:
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="Steuerelementfehler" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="Screenshot ist ein Beispiel für ein Steuerelementfehler im Consol-Protokoll." border="true":::
 
 Lösung: Aktualisieren Sie Ihren Browser, oder laden Sie die Registerkarte in der Teams-App neu.
 
@@ -170,7 +170,7 @@ Bitten Sie Ihren Power Platform-Administrator, die Steuerelemente aus AppSource 
 
 <summary><b>Gewusst wie die Steuerelemente einer modellgesteuerten App hinzufügen?</b></summary>
 
-Navigieren Sie zum Formular-Designer, und ziehen Sie die Steuerelemente aus dem Komponentenbereich auf ein Formular.
+Wechseln Sie zum Formular-Designer, und ziehen Sie die Steuerelemente aus dem Komponentenbereich auf ein Formular.
 
 <br>
 
