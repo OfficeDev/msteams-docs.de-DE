@@ -3,12 +3,12 @@ title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, neuen Bot erstellen oder Anruffunktionen hinzufügen, Diagrammberechtigungen hinzufügen. Beispiel zum Erstellen von Anrufen, Teilnehmen an Besprechungen und Durchstellen von Anrufen.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
+ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100924"
+ms.lasthandoff: 10/01/2022
+ms.locfileid: "68319937"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -93,9 +93,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## <a name="code-sample"></a>Codebeispiel
 
-| **Beispielname** | **Beschreibung** | **Graph** |
+| **Beispielname** | **Beschreibung** | **C#** |
 |---------------|----------|--------|
 | Anruf- und Besprechungs-Bots | Die Beispiel-App verdeutlicht, wie Bots Anrufe erstellen, an Besprechungen teilnehmen und Anrufe durchstellen können. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Echtzeitbesprechungsereignisse |Die Beispiel-App veranschaulicht, wie Bot Echtzeitbesprechungsereignisse empfangen kann.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
@@ -111,3 +112,4 @@ Befolgen Sie die [schrittweise Anleitung](../../sbs-calling-and-meeting.yml) zum
 * [Eingehende Anrufbenachrichtigungen](~/bots/calls-and-meetings/call-notifications.md)
 * [Entwickeln von Anruf- und Onlinebesprechungs-Bots auf Ihrem lokalen PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [Anzeigen von App-Berechtigungen und Erteilen der Administratorzustimmung](/MicrosoftTeams/app-permissions-admin-center)
+* [Arbeiten mit der Cloudkommunikations-API in Microsoft Graph](/graph/api/resources/communications-api-overview)
