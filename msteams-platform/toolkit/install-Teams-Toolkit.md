@@ -7,84 +7,96 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 9b6492efed353e2f3228a04da292141679401e66
-ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+ms.openlocfilehash: 03d101df114d3f7564c78c433d01191172e180c9
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991656"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295984"
 ---
 # <a name="install-teams-toolkit"></a>Installieren des Teams-Toolkits
 
-Das Teams-Toolkit ist eine Erweiterung in Visual Studio und Visual Studio Code. In diesem Dokument erfahren Sie, wie Sie das Teams-Toolkit installieren.
+In diesem Artikel wird beschrieben, wie Die Teams Toolkit-Erweiterung installiert wird.
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+::: zone pivot="visual-studio-code"
+
+Vor der Installation des Teams-Toolkits für Visual Studio Code müssen Sie [Visual Studio Code herunterladen und installieren](https://code.visualstudio.com/Download).
+
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+Vor der Installation des Teams-Toolkits für Visual Studio müssen Sie [Visual Studio 2022](https://aka.ms/VSDownload) mithilfe der Visual Studio-Installer herunterladen und installieren.
+
+::: zone-end
 
 ::: zone pivot="visual-studio-code"
 
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Installieren Sie das Teams-Toolkit für Visual Studio Code
 
-Bevor Sie mit der Installation beginnen, müssen Visual Studio Code und der Teams-Client installiert sein.
-
-## <a name="steps-to-install-teams-toolkit"></a>Schritte zum Installieren des Teams-Toolkits
-
-Sie können das Teams-Toolkit aus einer Erweiterung in Visual Studio Code und von Visual Studio Code Marketplace installieren. Die folgenden Schritte helfen Ihnen beim Installieren des Teams-Toolkits:
+Sie können das Teams-Toolkit über das Fenster "Erweiterungen" in Visual Studio Code oder über den Visual Studio Marketplace installieren.
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Öffnen Sie **Visual Studio Code**.
-1. Wählen Sie die Ansicht "Erweiterungen" (**STRG+UMSCHALT+X** / **⌘⇧-X** oder **Ansicht > Erweiterungen**) aus.
+1. Starten Sie **Visual Studio Code**.
+1. Öffnen Des Fensters Erweiterungen (**STRG+UMSCHALT+X** / **⌘⇧-X** oder **Ansicht > Erweiterungen**).
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="installieren":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="Screenshot zeigt, wie Sie installieren.":::
 
 1. Geben Sie das **Teams-Toolkit** in das Suchfeld ein.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Toolkit":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Screenshot des Toolkits.":::
 
 1. Wählen Sie **Installieren** aus.
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Installieren von Toolkit 4.0.0":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Screenshot der Installation von Toolkit 4.0.0.":::
 
-   Nach der erfolgreichen Installation des Teams-Toolkits in Visual Studio Code wird das Symbol des Teams-Toolkits auf der Visual Studio Code-Symbolleiste angezeigt.
+   Nach der erfolgreichen Installation des Teams-Toolkits in Visual Studio Code wird auf der Visual Studio Code-Symbolleiste ein Symbol für das Teams-Toolkit angezeigt.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="Nach der Installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="Screenshot der Nachinstallationsansicht.":::
 
 # <a name="marketplace"></a>[Markt](#tab/marketplace)
 
-1. Öffnen Sie [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+1. Wechseln Sie in einem Webbrowser zu [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) .
 
-   Die folgende Seite wird angezeigt.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace.png" alt-text="TTK Marketplace installieren":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace.png" alt-text="Screenshot der Installation von TTK Marketplace.":::
 
 1. Wählen Sie **Installieren** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="TTK installieren":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="Der Screenshot zeigt, wie TTK installiert wird.":::
 
-1. Wählen Sie im Popupfenster " **Öffnen**" aus.
+1. Wählen Sie im Popupfenster " **Öffnen** " aus, um Visual Studio Code zu starten.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open.png" alt-text="Wählen Sie &quot;Öffnen&quot; aus.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open.png" alt-text="Screenshot zum Auswählen des geöffneten Bildschirms.":::
 
-   Die folgende Visual Studio Code-Seite wird angezeigt.
+   Die Erweiterungsseite des Teams-Toolkits wird in Visual Studio Code angezeigt:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Auswählen von TTK in VSC":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Screenshot zeigt, wie Sie TTK in VSC auswählen.":::
 
 1. Wählen Sie **Installieren** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Wählen Sie &quot;TTK in VSC installieren&quot; aus.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Der Screenshot zeigt, wie Sie &quot;TTK in VSC installieren&quot; auswählen.":::
 
-   Nach der erfolgreichen Installation des Teams-Toolkits in Visual Studio Code wird das Symbol des Teams-Toolkits auf der Visual Studio Code-Symbolleiste angezeigt.
+   Nach der erfolgreichen Installation des Teams-Toolkits in Visual Studio Code wird auf der Visual Studio Code-Symbolleiste ein Symbol für das Teams-Toolkit angezeigt.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="Nach der Installation":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="Screenshot der Ansicht &quot;Nach der Installation&quot;.":::
 
 ---
 
-#### <a name="upgrade-teams-toolkit"></a>Aktualisieren des Teams-Toolkits
+## <a name="installing-a-different-release-version"></a>Installieren einer anderen Version
 
-Das Teams-Toolkit wird standardmäßig auf die neueste Version aktualisiert. Mit den folgenden Schritten können Sie unterschiedliche Versionen installieren:
+Visual Studio Code hält das Teams-Toolkit standardmäßig automatisch auf dem neuesten Stand. Wenn Sie eine andere Version installieren möchten, führen Sie die folgenden Schritte aus:
 
-* Wählen Sie das Symbol "Erweiterungen :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.PNG"::: " aus.
+* Wählen Sie auf der Visual Studio Code-Symbolleiste das Symbol "Erweiterungen (:::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.PNG":::)" aus.
 * Geben Sie das **Teams-Toolkit**  in das Suchfeld ein.
-* Wählen Sie in der Erweiterung des Teams-Toolkits das Symbol aus :::image type="icon" source="../assets/images/teams-toolkit-v2/setting icon.PNG"::: .
-* Wählen Sie **"Andere Version installieren** " aus, um auf die neueste Version des Teams-Toolkits zu aktualisieren.
+* Wählen Sie auf der Seite "Teams-Toolkit" den Dropdownpfeil neben der Schaltfläche " **Deinstallieren** " aus.
+* Wählen Sie im Menü " **Andere Version installieren...** " aus, und wählen Sie aus, welche Version installiert werden soll.
+
+## <a name="installing-a-pre-release-version"></a>Installieren einer Vorabversion
+
+Die Erweiterung "Teams Toolkit für Visual Studio Code" ist auch auf GitHub verfügbar. Um Vorabversionen herunterzuladen, wechseln Sie [auf GitHub zur Seite "Releases"](https://github.com/OfficeDev/TeamsFx/releases) , und suchen Sie nach Erweiterungsdownloads, die als Vorabversion gekennzeichnet sind.
 
 ::: zone-end
 
@@ -92,28 +104,26 @@ Das Teams-Toolkit wird standardmäßig auf die neueste Version aktualisiert. Mit
 
 ## <a name="install-teams-toolkit-for-visual-studio"></a>Installieren Sie das Teams-Toolkit für Visual Studio
 
-Bevor Sie mit der Installation beginnen, müssen Sie Visual Studio-Installer installieren.
-
-Sie können die neuesten Visual Studio-Installer von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com) herunterladen.
-
-## <a name="steps-to-install-teams-toolkit"></a>Schritte zum Installieren des Teams-Toolkits
-
-Nachdem Sie die Visual Studio-Installer geöffnet haben, gehen Sie im Popupfenster "Workloads" wie folgt vor:
-
-1. Wählen Sie die Workload **ASP.NET und Webentwicklung** aus.
-1. Wählen Sie im Bereich "**Installationsdetails**" die **Microsoft Teams-Entwicklungstools** aus.
-1. Wählen Sie **Installieren** aus.
-
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual Studio-Installation":::
-
-1. Wählen Sie **"Starten"** aus, um Visual Studio zu öffnen.
-
-    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Starten von Visual Studio":::
-
    > [!IMPORTANT]
-   > Es wird empfohlen, Visual Studio 2022, Version 17.3.3, herunterzuladen, da teams Toolkit für Visual Studio ga in dieser Version ist. Dieser Artikel wurde für Visual Studio 2022, Version 17.3.3, geschrieben. Teams Toolkit Version 17.3.* oder höher.
+   > Wir empfehlen die Verwendung von Visual Studio 2022, Version 17.3.3 oder höher für das Teams-Toolkit, das die neueste Version ist, um mehrere bekannte Probleme in früheren Versionen von Visual Studio zu beheben.
+
+1. [Laden Sie das Visual Studio-Installationsprogramm herunter](https://aka.ms/VSDownload), oder öffnen Sie es, wenn es bereits installiert ist.
+2. Wählen Sie **"Installieren"** oder **"Ändern** " aus, wenn Visual Studio bereits installiert ist.
+3. Wählen Sie die Registerkarte **"Workloads** " und dann die **ASP.NET- und Webentwicklungsworkload** aus.
+4. Wählen Sie auf der rechten Seite im Abschnitt **"Optional**" im Bereich "**Installationsdetails**" die **Microsoft Teams-Entwicklungstools** aus.
+5. Wählen Sie **"Ändern"** oder " **Installieren** " aus, um die Installation abzuschließen.
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Der Screenshot zeigt, wie Visual Studio installiert wird.":::
+
+6. Wählen Sie nach Abschluss der Installation **"Starten** " aus, um Visual Studio zu öffnen.
+
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Screenshot zeigt, wie Visual Studio gestartet wird.":::
 
 ::: zone-end
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Nachdem das Teams-Toolkit installiert wurde, besuchen [Sie "Erstellen eines neuen Teams-Projekts](create-new-project.md) ", um zu beginnen.
 
 ## <a name="see-also"></a>Siehe auch
 
