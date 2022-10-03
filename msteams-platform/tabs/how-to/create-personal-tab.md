@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
-ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
+ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158681"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329091"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
 1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
-1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
+1. Wählen Sie **"Apps** >  verwalten **" aus. Laden Sie eine App** >  hoch **, um eine benutzerdefinierte App hochzuladen**.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner aus und dann **Öffnen**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte":::
@@ -399,9 +399,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
-1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
+1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
 
-1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld „Website-URL“ leer, und wählen Sie für „personalTab“ in der Dropdownliste **Kontext** und **Hinzufügen** aus.
+1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -477,7 +477,7 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core sucht die Anwendung im Webstammordner nach statischen Dateien.
 
-#### <a name="appmanifest-folder"></a>Ordner „AppManifest“
+#### <a name="appmanifest-folder"></a>AppManifest-Ordner
 
 Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 
@@ -566,11 +566,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Fügen Sie die Kurz- und Langbeschreibung für Ihre App in **Beschreibungen** hinzu.
 
-1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
+1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie auf der **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL an.
 
-1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
+1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
 
-1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld „Website-URL“ leer, und wählen Sie für „personalTab“ in der Dropdownliste **Kontext** und **Hinzufügen** aus.
+1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
 
 1. Wählen Sie **Speichern**.
 

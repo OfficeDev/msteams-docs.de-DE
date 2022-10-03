@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027333"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329084"
 ---
 # <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
 1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
-1. Wählen Sie **Ihre Apps verwalten** und **Eine benutzerdefinierte App hochladen** aus.
+1. Wählen Sie **"Apps** >  verwalten **" aus. Laden Sie eine App** >  hoch **, um eine benutzerdefinierte App hochzuladen**.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner des App-Pakets und dann **Öffnen** aus.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Hochgeladene Kanalregisterkarte":::
@@ -426,9 +426,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
-1. Aktualisieren Sie unter **App-URLs** die Datenschutzerklärung auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
+1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
-1. Wählen Sie in den **App-Features** die Option "Gruppen- und Kanal-App" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
+1. Wählen Sie **in den App-Features** **"Gruppen- und Kanal-App**" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -647,9 +647,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
-1. Aktualisieren Sie unter **App-URLs** die Datenschutzerklärung auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
+1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
-1. Wählen Sie in den **App-Features** die Option "Gruppen- und Kanal-App" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
+1. Wählen Sie **in den App-Features** **"Gruppen- und Kanal-App**" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
 
 1. Wählen Sie **Speichern**.
 

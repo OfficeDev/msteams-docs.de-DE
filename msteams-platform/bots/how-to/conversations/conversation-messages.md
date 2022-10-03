@@ -1,15 +1,15 @@
 ---
 title: Meldungen in Bot-Unterhaltungen
-description: Erfahren Sie, wie Sie eine Nachricht, vorgeschlagene Aktionen, Benachrichtigungen, Anlagen, Bilder, adaptive Karten, Statusfehlercodeantworten für Drosselung senden.
+description: Erfahren Sie, wie Sie eine Nachricht, vorgeschlagene Aktionen, Benachrichtigungen, Anlagen, Bilder, Adaptive Karte und Statusfehlercodeantworten senden.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586987"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327594"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -248,8 +248,8 @@ Ein typisches `channelData` Objekt in einer Aktivität, die an Ihren Bot gesende
 * `channel`: Wird nur in Kanalkontexten übergeben, wenn der Bot erwähnt wird oder für Ereignisse in Kanälen in Teams, in denen der Bot hinzugefügt wurde.
   * `id`: GUID für den Kanal.
   * `name`: Kanalname, der nur in Fällen von [Kanaländerungsereignissen](~/bots/how-to/conversations/subscribe-to-conversation-events.md) übergeben wird.
-* `channelData.teamsTeamId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
-* `channelData.teamsChannelId`: Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
+* `channelData.teamsTeamId`:Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
+* `channelData.teamsChannelId`:Veraltet. Diese Eigenschaft ist nur aus Gründen der Abwärtskompatibilität enthalten.
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>Beispiel eines channelData-Objekts (channelCreated-Ereignis)
 
@@ -444,27 +444,46 @@ Die Meldung zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, wä
 
 Weitere Informationen zu Karten und Karten in Bots finden Sie in der [Kartendokumentation](~/task-modules-and-cards/what-are-cards.md).
 
-## <a name="status-code-responses"></a>Statuscodeantworten
+## <a name="status-codes-from-bot-conversational-apis"></a>Statuscodes von Bot-Unterhaltungs-APIs
 
-Es folgen die Statuscodes und deren Fehlercode- und Meldungswerte:
+Stellen Sie sicher, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und beschreibungen aufgeführt, unter denen die Fehler generiert werden:
 
-| Statuscode | Fehlercode- und Meldungswerte | Beschreibung |
-|----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Nachricht**: Der Benutzer hat die Unterhaltung mit dem Bot blockiert. | Der Benutzer hat den Bot im 1:1-Chat oder einem Kanal über Moderationseinstellungen blockiert. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Nachricht**: Der Bot ist nicht Teil der Unterhaltungsliste. | Der Bot ist nicht Teil der Unterhaltung. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Nachricht**: Der Mandantenadministrator hat diesen Bot deaktiviert. | Der Mandant hat den Bot blockiert. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Nachricht**: Für diesen Bot wurde keine Registrierung gefunden. | Die Registrierung für diesen Bot wurde nicht gefunden. |
-| 412 | **Code**: `PreconditionFailed` <br/> **Meldung**: Voraussetzung fehlgeschlagen, bitte versuchen Sie es erneut. | Eine Vorbedingung für eine unserer Abhängigkeiten ist aufgrund mehrerer gleichzeitiger Vorgänge in derselben Unterhaltung fehlgeschlagen. |
-| 404 | **Code**: `ConversationNotFound` <br/> **Nachricht**: Unterhaltung nicht gefunden. | Die Unterhaltung wurde nicht gefunden. |
-| 413 | **Code**: `MessageSizeTooBig` <br/> **Nachricht**: Nachrichtengröße zu groß. | Die Größe der eingehenden Anforderung war zu groß. |
-| 429 | **Code**: `Throttled` <br/> **Nachricht**: Zu viele Anforderungen. Gibt auch zurück, wann der Wiederholungsversuch ausgeführt werden soll. | Zu viele Anfragen wurden vom Bot gesendet. Weitere Informationen finden Sie [unter Zinslimit](~/bots/how-to/rate-limit.md). |
+| Statuscode | Fehlercode- und Meldungswerte | Beschreibung | Wiederholungsanforderung | Entwickleraktion |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Argument` <br/> **Meldung**: *szenariospezifisch | Ungültige Vom Bot bereitgestellte Anforderungsnutzlast. Spezifische Details finden Sie in der Fehlermeldung. | Nein | Erneutes Auswerten der Anforderungsnutzlast für Fehler. Überprüfen Sie die zurückgegebene Fehlermeldung auf Details. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Nachricht**: Für diesen Bot wurde keine Registrierung gefunden. | Die Registrierung für diesen Bot wurde nicht gefunden. | Nein | Überprüfen Sie die Bot-ID und das Kennwort. Stellen Sie sicher, dass die Bot-ID (AAD-ID) im Teams-Entwicklerportal oder über die Azure-Botkanalregistrierung in Azure mit aktiviertem "Teams"-Kanal registriert ist.|
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Nachricht**: Der Mandantenadministrator hat diesen Bot deaktiviert. | Der Mandantenadministrator hat Interaktionen zwischen Benutzer und Bot-App blockiert. Der Mandantenadministrator muss die App für den Benutzer innerhalb von App-Richtlinien zulassen. Weitere Informationen finden Sie unter [App-Richtlinien](/microsoftteams/app-policies). | Nein | Beenden Sie die Veröffentlichung der Unterhaltung, bis die Interaktion mit dem Bot explizit von einem Benutzer in der Unterhaltung initiiert wird, der angibt, dass der Bot nicht mehr blockiert ist. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Nachricht**: Der Bot ist nicht Teil der Unterhaltungsliste. | Der Bot ist nicht Teil der Unterhaltung. Die App muss in einer Unterhaltung neu installiert werden. | Nein | Bevor Sie versuchen, zusätzliche Unterhaltungsanfragen zu senden, warten Sie auf ein [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) Ereignis, das angibt, dass der Bot erneut hinzugefügt wurde.|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Nachricht**: Der Benutzer hat die Unterhaltung mit dem Bot blockiert. | Der Benutzer hat den Bot im persönlichen Chat oder einem Kanal über Moderationseinstellungen blockiert. | Nein | Löschen Sie die Unterhaltung aus dem Cache. Beenden Sie den Versuch, Unterhaltungen zu posten, bis die Interaktion mit dem Bot explizit von einem Benutzer in der Unterhaltung initiiert wird, was darauf hinweist, dass der Bot nicht mehr blockiert ist. |
+| 403 | **Code**: `NotEnoughPermissions` <br/> **Meldung**: *szenariospezifisch | Der Bot verfügt nicht über die erforderlichen Berechtigungen, um die angeforderte Aktion auszuführen. | Nein | Ermitteln Sie die erforderliche Aktion aus der Fehlermeldung. |
+| 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Nachricht**: Unterhaltung nicht gefunden. | Die angegebene Nachrichten-ID konnte in der Unterhaltung nicht gefunden werden. Die Nachricht ist nicht vorhanden, oder sie wurde gelöscht. | Nein | Überprüfen Sie, ob die gesendete Nachrichten-ID ein erwarteter Wert ist. Entfernen Sie die ID, wenn sie zwischengespeichert wurde. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Nachricht**: Unterhaltung nicht gefunden. | Die Unterhaltung wurde nicht gefunden, da sie nicht vorhanden ist oder gelöscht wurde. | Nein | Überprüfen Sie, ob die gesendete Unterhaltungs-ID ein erwarteter Wert ist. Entfernen Sie die ID, wenn sie zwischengespeichert wurde. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Meldung**: Voraussetzung fehlgeschlagen, bitte versuchen Sie es erneut. | Eine Vorbedingung für eine unserer Abhängigkeiten ist aufgrund mehrerer gleichzeitiger Vorgänge in derselben Unterhaltung fehlgeschlagen. | Ja | Wiederholen Sie den Vorgang mit exponentiellem Backoff. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Nachricht**: Nachrichtengröße zu groß. | Die Größe der eingehenden Anforderung war zu groß. Weitere Informationen finden Sie unter [Formatieren Ihrer Bot-Nachrichten](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | Nein | Verringern Sie die Nutzlastgröße. |
+| 429 | **Code**: `Throttled` <br/> **Nachricht**: Zu viele Anforderungen. Gibt auch zurück, wann der Wiederholungsversuch ausgeführt werden soll. | Zu viele Anfragen wurden vom Bot gesendet. Weitere Informationen finden Sie [unter Zinslimit](/microsoftteams/platform/bots/how-to/rate-limit). | Ja | Versuchen Sie erneut, die Backoff-Zeit mithilfe der `Retry-After` Kopfzeile zu ermitteln. |
+| 500 | **Code**: `ServiceError` <br/> **Nachricht**: *verschiedene | Internal server error. (Interner Serverfehler) | Nein | Melden Sie das Problem in der [Entwicklercommunity](~/feedback.md#developer-community-help). |
+| 502 | **Code**: `ServiceError` <br/> **Nachricht**: *verschiedene | Dienstabhängigkeitsproblem. | Ja | Wiederholen Sie den Vorgang mit exponentiellem Backoff. Wenn das Problem weiterhin besteht, melden Sie das Problem in der [Entwicklercommunity](~/feedback.md#developer-community-help). |
+| 503 | | Der Dienst ist nicht verfügbar. | Ja | Wiederholen Sie den Vorgang mit exponentiellem Backoff. Wenn das Problem weiterhin besteht, melden Sie das Problem in der [Entwicklercommunity](~/feedback.md#developer-community-help). |
+| 504 | | Gatewaytimeout. | Ja | Wiederholen Sie den Vorgang mit exponentiellem Backoff. Wenn das Problem weiterhin besteht, melden Sie das Problem in der [Entwicklercommunity](~/feedback.md#developer-community-help). |
+
+### <a name="status-codes-retry-guidance"></a>Statuscodes – Wiederholungsanleitung
+
+Die allgemeinen Wiederholungsanleitungen für jeden Statuscode sind in der folgenden Tabelle aufgeführt. Der Bot sollte es vermeiden, statuscodes erneut zu verwenden, die in der folgenden Tabelle nicht angegeben sind:
+
+|Statuscode | Wiederholungsstrategie |
+|----------------|-----------------|
+| 412 | Wiederholen Sie den Vorgang mithilfe des exponentiellen Backoffs. |
+| 429 | Versuchen Sie erneut, die Kopfzeile zu verwenden `Retry-After` , um die Wartezeit in Sekunden und zwischen den Anforderungen zu ermitteln, falls verfügbar. Versuchen Sie andernfalls nach Möglichkeit erneut, exponentiellen Backoff mit Thread-ID zu verwenden. |
+| 502 | Wiederholen Sie den Vorgang mithilfe des exponentiellen Backoffs. |
+| 503 | Wiederholen Sie den Vorgang mithilfe des exponentiellen Backoffs. |
+| 504 | Wiederholen Sie den Vorgang mithilfe des exponentiellen Backoffs. |
 
 ## <a name="code-sample"></a>Codebeispiel
 
 | Beispielname | Beschreibung | Node.js | .NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
 | Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | – |
-| Lokalisierung von Teams-Apps | Lokalisierung von Teams-Apps mithilfe von Bot und Registerkarte. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | – | – | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Lokalisierung von Teams-Apps | Lokalisierung von Teams-Apps mithilfe von Bot und Registerkarte. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | – | – | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

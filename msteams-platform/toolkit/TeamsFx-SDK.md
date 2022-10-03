@@ -6,16 +6,16 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f4147a204fe4ff51c2015457fe62581adfd63c8d
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616870"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327587"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
-TeamsFx trägt dazu bei, Ihre Aufgaben zu reduzieren, indem Microsoft Teams Single Sign-On (Teams SSO) verwendet wird und auf Cloudressourcen bis hin zu einzeiligen Anweisungen mit Nullkonfiguration zugegriffen wird. Sie können das TeamsFx SDK in Browser- und Node.js-Umgebung verwenden. Auf die Kernfunktionen von TeamsFx kann sowohl in der Client- als auch in der Serverumgebung zugegriffen werden. Sie können Benutzerauthentifizierungscode auf eine vereinfachte Weise für Folgendes schreiben:
+TeamsFx trägt dazu bei, Ihre Aufgaben zu reduzieren, indem Microsoft Teams Single Sign-On (Teams SSO) verwendet wird und auf Cloudressourcen bis hin zu einzeiligen Anweisungen mit Nullkonfiguration zugegriffen wird. Sie können das TeamsFx SDK in Browser- und Node.js-Umgebung verwenden. Auf die Kernfunktionen von TeamsFx kann in der Client- und Serverumgebung zugegriffen werden. Sie können Benutzerauthentifizierungscode auf eine vereinfachte Weise für Folgendes schreiben:
 
 * Registerkarte "Teams"
 * Teams-Bot
@@ -91,7 +91,7 @@ Weitere Informationen zur Benutzeridentität und Anwendungsidentität finden Sie
 
 | Befehl | Beschreibung |
 |----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| Die Anwendung wird als Anwendung authentifiziert. Die Berechtigung erfordert normalerweise die Genehmigung des Administrators.|
+| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application. The permission usually needs administrator's approval.|
 | `TeamsFx:getCredential()`| Es stellt automatisch dem Identitätstyp entsprechende Anmeldeinformationsinstanzen bereit. |
 
 > [!NOTE]
@@ -100,7 +100,7 @@ Weitere Informationen zur Benutzeridentität und Anwendungsidentität finden Sie
 
 ### <a name="credential"></a>Credential
 
-Um TeamsFx zu initialisieren, müssen Sie den erforderlichen Identitätstyp auswählen. Post specifying the identity type SDK uses different type of credential class. Diese helfen, die Identität darzustellen und Zugriffstoken durch den entsprechenden Authentifizierungsfluss abzurufen. Anmeldeinformationsklassen implementieren `TokenCredential` eine Schnittstelle, die allgemein in Azure-Bibliotheks-APIs verwendet wird, die zugriffstoken für bestimmte Bereiche bereitstellen sollen. Andere APIs verlassen sich auf den Aufruf `TeamsFx:getCredential()` von Anmeldeinformationen, um eine Instanz von `TokenCredential` zu erhalten. Weitere Informationen zu klassenbezogenen Klassen für Anmeldeinformationen und den Authentifizierungsfluss finden Sie im [Ordner "Anmeldeinformationen"](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+Um TeamsFx zu initialisieren, müssen Sie den erforderlichen Identitätstyp auswählen. Post specifying the identity type SDK uses different type of credential class. Diese stellen die Identität dar und rufen das Zugriffstoken durch den entsprechenden Authentifizierungsfluss ab. Anmeldeinformationsklassen implementieren `TokenCredential` eine Schnittstelle, die allgemein in Azure-Bibliotheks-APIs verwendet wird, die zugriffstoken für bestimmte Bereiche bereitstellen sollen. Andere APIs verlassen sich auf den Aufruf `TeamsFx:getCredential()` von Anmeldeinformationen, um eine Instanz von `TokenCredential` zu erhalten. Weitere Informationen zu klassenbezogenen Klassen für Anmeldeinformationen und den Authentifizierungsfluss finden Sie im [Ordner "Anmeldeinformationen"](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 Es gibt drei Anmeldeinformationsklassen, um die Authentifizierung zu vereinfachen. Hier sind die entsprechenden Szenarien für die Ziele der einzelnen Anmeldeinformationsklassen.
 
@@ -138,15 +138,15 @@ Erforderliche Konfiguration: `initiateLoginEndpoint`, `tenantId`, `clientId` und
 
 ### <a name="supported-functions"></a>Unterstützte Funktionen
 
-TeamsFx SDK bietet mehrere Funktionen, um die Konfiguration für Bibliotheken von Drittanbietern zu vereinfachen. Sie befinden sich unter dem [Hauptordner](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
+TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 * Microsoft Graph Service:`createMicrosoftGraphClient` und `MsGraphAuthProvider` Hilfe beim Erstellen einer authentifizierten Graph-Instanz.
 * SQL:`getTediousConnectionConfig` gibt eine langwierige Verbindungskonfiguration zurück.
 
-Erforderliche Konfiguration:
+    Erforderliche Konfiguration:
 
-* Wenn Sie die Benutzeridentität verwenden möchten, `sqlUsername` `sqlPassword` ist dies `sqlServerEndpoint`erforderlich.
-* Wenn Sie msi-Identität verwenden möchten, dann `sqlServerEndpoint`und `sqlIdentityId` sind erforderlich.
+  * Wenn Sie die Benutzeridentität verwenden möchten, dann `sqlServerEndpoint`und `sqlUsername` `sqlPassword` sind erforderlich.
+  * Wenn Sie msi-Identität verwenden möchten, dann `sqlServerEndpoint`und `sqlIdentityId` sind erforderlich.
 
 ### <a name="override-configuration"></a>Konfiguration überschreiben
 
@@ -179,11 +179,11 @@ Wenn Sie ein Azure-Funktions- oder Botprojekt mit dem Visual Studio Code Toolkit
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) – wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
+* sqlServerEndpoint (SQL_ENDPOINT) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
 * sqlUsername (SQL_USER_NAME) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
 * sqlPassword (SQL_PASSWORD) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
 * sqlDatabaseName (SQL_DATABASE_NAME) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
-* sqlIdentityId (IDENTITY_ID) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
+* sqlIdentityId (IDENTITY_ID) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist.
 
 </details>
 
@@ -191,7 +191,7 @@ Wenn Sie ein Azure-Funktions- oder Botprojekt mit dem Visual Studio Code Toolkit
 
 Der grundlegende Typ der API-Fehlerantwort ist `ErrorWithCode`, der Fehlercode und Fehlermeldung enthält. Um beispielsweise bestimmte Fehler herauszufiltern, können Sie das folgende Snippet verwenden:
 
-```ts
+```typescript
 try {
   const teamsfx = new TeamsFx();
   await teamsfx.login("User.Read");
@@ -218,7 +218,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     1. Importieren Sie die erforderlichen Klassen.
 
-    ```ts
+    ```typescript
     import {
       createMicrosoftGraphClient,
       TeamsFx,
@@ -227,14 +227,14 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     2. Hiermit erhalten Sie `TeamsFx.login()` die Zustimmung des Benutzers.
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
     await teamsfx.login(["User.Read"]); // Login with scope
     ```
 
     3. Sie können eine TeamsFx-Instanz und einen Graph-Client initialisieren und Informationen von MS Graph von diesem Client abrufen.
 
-    ```ts
+    ```typescript
     try {
       const teamsfx = new TeamsFx();
       const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
@@ -266,8 +266,8 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     2. Initialisieren Sie den Anbieter in Ihrer Komponente.
 
-    ```ts
-    // Import the providers and credential at the top of the page
+    ```typescript
+     // Import the providers and credential at the top of the page
     import {Providers} from '@microsoft/mgt-element';
     import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
     import {TeamsUserCredential} from "@microsoft/teamsfx";
@@ -275,12 +275,12 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
     const scope = ["User.Read"];
     const teamsfx = new TeamsFx();
     const provider = new TeamsFxProvider(teamsfx, scope);
-    Providers.globalProvider = provider;
+    Providers.globalProvider = provider;   
     ```
 
     3. Sie können die `teamsfx.login(scopes)` Methode verwenden, um das erforderliche Zugriffstoken abzurufen.
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
     await teamsfx.login(this.scope);
     Providers.globalProvider.setState(ProviderState.SignedIn);
@@ -292,14 +292,14 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
     <mgt-person query="me" view="threeLines"></mgt-person>
     ```
 
-    ```ts
+    ```typescript
     public render(): void {
     return (
         <div>
             <Person personQuery="me" view={PersonViewType.threelines}></Person>
         </div>
     );
-    }
+    }    
     ```
 
     Weitere Informationen zum Beispiel zum Initialisieren des TeamsFx-Anbieters finden Sie im Beispiel für den [Kontaktexporteur](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter).
@@ -313,7 +313,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     1. Initialisieren und Hinzufügen `TeamsBotSsoPrompt` zum Dialogfeldsatz.
 
-    ```ts
+    ```typescript
     const { ConversationState, MemoryStorage } = require("botbuilder");
     const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
     const { TeamsBotSsoPrompt } = require("@microsoft/teamsfx");
@@ -327,12 +327,12 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
       new TeamsBotSsoPrompt(teamsfx, "TeamsBotSsoPrompt", {
         scopes: ["User.Read"],
       })
-    );
+    );    
     ```
 
     2. Beginnen Sie das Dialogfeld, und melden Sie sich an.
 
-    ```ts
+    ```typescript
     dialogs.add(
       new WaterfallDialog("taskNeedingLogin", [
         async (step) => {
@@ -348,10 +348,74 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
           }
         },
       ])
-    );
+    );    
     ```
 
     Weitere Informationen zum Beispiel zur Verwendung der Graph-API in der [Bot-Anwendung finden Sie im Beispiel "bot-sso"](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
+
+    </details>
+
+    <details>
+    <summary><b>Verwenden von Graph-API in der Nachrichtenerweiterung</b></summary>
+
+    Dieser Codeausschnitt zeigt Ihnen, wie Sie Erweiterungen von `TeamsActivityHandler`außer Kraft setzen `handleTeamsMessagingExtensionQuery` und die vom TeamsFx SDK bereitgestellte Verwendung `handleMessageExtensionQueryWithToken` verwenden, um sich anzumelden, um ein Zugriffstoken abzurufen:
+
+    ```typescript
+    public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
+      return await handleMessageExtensionQueryWithToken(context, null, 'User.Read', 
+        async (token: MessageExtensionTokenResponse) => {
+          // ... continue to query with access token ...
+        });
+    }    
+    ```
+
+    Weitere Informationen zum Beispiel zur Verwendung der Graph-API in der Nachrichtenerweiterung finden Sie unter [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample).
+    </details>
+
+    <details>
+    <summary><b>Verwenden von Graph-API im Befehls-Bot</b></summary>
+
+    Dieser Codeausschnitt zeigt Ihnen, wie Sie den Befehls-Bot zum Aufrufen der Microsoft-API implementieren `TeamsFxBotSsoCommandHandler` .
+
+    ```typescript
+    import { Activity, TurnContext } from "botbuilder";
+    import {
+      CommandMessage,
+      TriggerPatterns,
+      TeamsFx,
+      createMicrosoftGraphClient,
+      TeamsFxBotSsoCommandHandler,
+      TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+      triggerPatterns: TriggerPatterns = "profile";
+
+      async handleCommandReceived(
+        context: TurnContext,
+        message: CommandMessage,
+        tokenResponse: TeamsBotSsoPromptTokenResponse,
+      ): Promise<string | Partial<Activity> | void> {
+        // Init TeamsFx instance with SSO token
+        const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+        // Add scope for your Azure AD app. For example: Mail.Read, etc.
+        const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+      
+        // Call graph api use `graph` instance to get user profile information
+        const me = await graphClient.api("/me").get();
+
+        if (me) {
+          // Bot will send the user profile info to user
+          return `Your command is '${message.text}' and you're logged in as ${me.displayName}`;
+        } else {
+          return "Could not retrieve profile information from Microsoft Graph.";
+        }
+      }
+    }    
+    ```
+
+    Weitere Informationen zur Verwendung dieser Klasse im Befehlsbot finden [Sie unter Hinzufügen von einmaligem Anmelden zur Teams-App](add-single-sign-on.md). Und es gibt auch ein [Command-Bot-with-sso-Beispielprojekt](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) , das Sie mit dem SSO-Befehls-Bot testen können.
 
     </details>
 
@@ -362,7 +426,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     1. Sie können die vom TeamsFx SDK bereitgestellte Azure-Funktion verwenden `CreateApiClient` :
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const teamsfx = new TeamsFx();
 
@@ -377,12 +441,12 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
       // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
       const response = await apiClient.get("RELATIVE_API_PATH");
       return response.data;
-    }
+    }    
     ```
 
     Sie können die Bibliothek auch zum Aufrufen der Azure-Funktion verwenden `axios` .
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const accessToken = await teamsfx.getCredential().getToken(""); // Get SSO token 
       // teamsfx.getConfig("apiEndpoint") will read REACT_APP_FUNC_ENDPOINT environment variable 
@@ -393,12 +457,12 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
         },
       });
       return response.data;
-    }
+    }    
     ```
 
     2. Rufen Sie Graph-API in der Azure-Funktion im Auftrag des Benutzers als Reaktion auf.
 
-    ```ts
+    ```typescript
     export default async function run(
       context: Context,
       req: HttpRequest,
@@ -425,7 +489,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
       } catch (e) {
       }
       return res;
-    }
+    }    
     ```
 
     Weitere Informationen zum Beispiel zur Verwendung der Graph-API in der Bot-Anwendung finden Sie im  [Beispiel "hello-world-tab-with-back"](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
@@ -439,21 +503,21 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     1. Sie können die `authConfig` initialisieren, indem Sie eine `PEM-encoded key certificate`.
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       certificateContent: "The content of a PEM-encoded public/private key certificate",
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. Sie können das `authConfig` Token verwenden, um das Token abzurufen.
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     </details>
@@ -465,21 +529,21 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
 
     1. Sie können die `authConfig` initialisieren, indem Sie eine `client secret`.
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       clientSecret: process.env.M365_CLIENT_SECRET,
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. Sie können das `authConfig` Token verwenden, um das Token abzurufen.
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     Weitere Informationen zum Beispiel zur Verwendung der Graph-API in der Bot-Anwendung finden Sie im [Beispiel "hello-world-tab-with-back"](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
@@ -495,7 +559,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für andere Szenarien im Zusam
 
   Dieser Codeausschnitt zeigt, wie Sie eine vorhandene API in Bot nach `ApiKeyProvider`aufrufen.
 
-  ```ts
+  ```typescript
   const teamsfx = new TeamsFx();
 
   // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
@@ -513,7 +577,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für andere Szenarien im Zusam
   );
 
   // Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
-  const response = await apiClient.get("RELATIVE_API_PATH");
+  const response = await apiClient.get("RELATIVE_API_PATH");  
   ```
 
   </details>
@@ -525,7 +589,7 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für andere Szenarien im Zusam
 
   1. Legen Sie die Verbindungskonfiguration fest.
 
-  ```ts
+  ```typescript
   // Equivalent to:
   // const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
   //    sqlServerEndpoint: process.env.SQL_ENDPOINT,
@@ -536,18 +600,18 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für andere Szenarien im Zusam
   // If there's only one SQL database
   const config = await getTediousConnectionConfig(teamsfx);
   // If there are multiple SQL databases
-  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");
+  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");  
   ```
 
   2. Stellen Sie eine Verbindung mit Ihrer Datenbank her.
 
-  ```ts
+  ```typescript
   const connection = new Connection(config);
   connection.on("connect", (error) => {
     if (error) {
       console.log(error);
     }
-  });
+  });  
   ```
 
   > [!NOTE]
@@ -570,7 +634,7 @@ Wenn Sie die Protokollebene festlegen, wird die Protokollierung aktiviert. Proto
 
 Legen Sie die Protokollebene mit dem folgenden Snippet fest:
 
-```ts
+```typescript
 // Only need the warning and error messages.
 setLogLevel(LogLevel.Warn);
 ```
@@ -580,7 +644,7 @@ setLogLevel(LogLevel.Warn);
 
 #### <a name="redirect-by-setting-custom-logger"></a>Umleitung durch Einstellen eines benutzerdefinierten Loggers
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Set another logger if you want to redirect to Application Insights in Azure Function
 setLogger(context.log);
@@ -588,7 +652,7 @@ setLogger(context.log);
 
 #### <a name="redirect-by-setting-custom-log-function"></a>Umleitung durch Einstellen der benutzerdefinierten Protokollfunktion
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Only log error message to Application Insights in bot application.
 setLogFunction((level: LogLevel, message: string) => {
