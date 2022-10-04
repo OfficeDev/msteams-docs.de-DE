@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Steuerelemente für die Zusam
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
-ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
+ms.openlocfilehash: 5a253c9e7373a2df9e1161e6d3fc9d9b1c8ccdaa
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617978"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373031"
 ---
 # <a name="install-collaboration-controls"></a>Installieren von Steuerelementen für die Zusammenarbeit
 
@@ -33,12 +33,11 @@ Weitere Informationen zu Rollenberechtigungen finden Sie unter [Konfigurieren de
 
 Sie installieren die Steuerelemente für die Zusammenarbeit über [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) in Ihrer Dataverse-Umgebung.
 
-
 Sie können die Komponenten in Ihrer eigenen modellgesteuerten App erst konfigurieren und verwenden, nachdem Sie zu [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  gesurft und die Steuerelemente für die Zusammenarbeit in Ihrer dataverse-Umgebung installiert haben.
 
 Zu den Steuerelementen für die Zusammenarbeit gehören die folgenden Lösungen:
 
-|**Einstellungslösungen** | **Zweck** |
+|**Settings'-Lösungen** | **Zweck** |
 |---|---|
 | Einstellungen für Die Zusammenarbeitssteuerelemente | Speichern der Einstellungsinfrastruktur, die die Steuerelemente für die Zusammenarbeit unterstützt |
 | Steuerelemente für die Zusammenarbeit – Einstellungsobjekte | Stellt vordefinierte Einstellungswerte bereit, die von den Steuerelementen für die Zusammenarbeit verwendet werden.|
@@ -62,20 +61,20 @@ Um die Lösungen zu installieren, navigieren Sie zu [Microsoft AppSource](https:
 
 1. Wählen Sie die Schaltfläche " **Jetzt abrufen** " aus.
 
-   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Vorschauformular "border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Screenshot der Schaltfläche &quot;Jetzt abrufen&quot;, um die Zusammenarbeitssteuerung anzuzeigen."border="true":::
 
 1. Melden Sie sich mit Ihrem Konto an, füllen Sie das Formular aus, und wählen Sie **"Weiter"** aus.
 
-   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="Übersicht über die Zusammenarbeitskontrolle" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="Screenshot der Übersicht über das Steuerelement &quot;Zusammenarbeit&quot;." border="true":::
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Vorschau der Steuerelemente für die Zusammenarbeit" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Screenshot der Vorschau des Steuerelements &quot;Zusammenarbeit installieren&quot;." border="true":::
 
 1. Sie werden zum Power Platform Admin Center weitergeleitet. Wählen Sie im Dropdownmenü eine Umgebung aus, und stimmen Sie den Bedingungen und Richtlinienanweisungen zu.
 
    > [!TIP]
    > Wenn beim Auswählen der Umgebung ein Berechtigungsfehler angezeigt wird, versuchen Sie, außerhalb des Dropdownmenüs der Umgebung auszuwählen, um festzustellen, ob das Problem dadurch behoben wird.
 
-   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Installieren der Kontrollumgebung für die Zusammenarbeit" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Screenshot ist ein Beispiel für die Steuerungsumgebung für die Zusammenarbeit bei der Installation." border="true":::
 
 1. Wählen Sie **"Installieren**" aus. Die Installation kann ca. 15 Minuten dauern.
 
@@ -85,7 +84,7 @@ Um die Lösungen zu installieren, navigieren Sie zu [Microsoft AppSource](https:
 
 1. Wählen Sie die Registerkarte " **Lösungen** " aus, um alle Lösungen anzuzeigen, die Sie in der richtigen Umgebung installiert haben.
 
-   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="Steuerung der Zusammenarbeit von Lösungen" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="Screenshot der Registerkarte &quot;Lösungen&quot; zum Anzeigen aller Steuerelemente für die Zusammenarbeit an Lösungen." border= "true":::
 
 > [!NOTE]
 > Die Steuerelemente für die Zusammenarbeit sind Vorschau, und Elemente können sich im Laufe der Zeit ändern, was zu Änderungen führen kann. Die Steuerelemente für die Zusammenarbeit werden in Produktionsumgebungen nicht unterstützt.

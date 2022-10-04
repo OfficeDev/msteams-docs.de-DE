@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie Ihre App mit der Zusammenarbe
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 816dd8052cdfb13ab83bfc34ae2a99a16f9f9569
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027305"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373038"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Bereitstellen von Steuerelementen für die Zusammenarbeit in Microsoft Teams
 
@@ -34,31 +34,31 @@ Dazu verwenden wir **neue Power Apps-App-Einstellungen** .
 
 1. Suchen Sie nach **der Einstellungsdefinition**, und wählen Sie sie aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Einstellungsdefinition":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Screenshot der Such- und Einstellungsdefinition in Power-Apps.":::
 
 1. Suchen Sie **die Navigationsleiste aus der** Liste der Einstellungsdefinitionen, und wählen Sie sie aus. Dadurch wird der linke Bereich in Ihrer Anwendung ausgeblendet.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Ausblenden der Navigationsleiste":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Der Screenshot zeigt, wie Sie die Navigationsleiste ausblenden auswählen.":::
 
 1. Unten rechts in der Anwendung im Bearbeitungsbereich befindet sich ein Abschnitt mit dem Titel **"App-Werte festlegen"**. Wenn Sie Ihre App mit dem modernen App-Designer erstellt haben, wird Ihre App in der Liste angezeigt. Wählen Sie unter Ihrer App den **Wert "Neue App** " aus.
 
 1. Ändern Sie den Wert von **"Nein"** in **"Ja".**
 
-     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Wert in &quot;Ja&quot; ändern":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Screenshot zeigt die Dropdownliste an, um den Änderungswert in &quot;Ja&quot; auszuwählen.":::
 
 1. Wählen Sie **"Speichern" aus.**
 
 1. Suchen Sie in der Liste der Einstellungsdefinitionen die **App-Kopfzeile mit hoher Dichte** , und wählen Sie sie aus, und wiederholen Sie den Vorgang.
 
-     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Kopfzeile der Dichteseite":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Screenshot zeigt, wie Sie den Seitenkopf der App mit hoher Dichte auswählen.":::
 
 1. Wählen Sie **"Zurück zu Lösungen**" aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Standardlösung":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Der Screenshot zeigt die Standardlösung.":::
 
 1. Wählen Sie **"Alle Anpassungen veröffentlichen** " aus, um alle abgeschlossenen Arbeiten zu veröffentlichen.
 
-     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Veröffentlichen aller Anpassungen":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Veröffentlichen Sie alle Anpassungen.":::
 
 ## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>Hinzufügen der App zum Microsoft Teams-App-Katalog
 
@@ -66,11 +66,11 @@ Wenn die Einstellungen definiert sind, können Sie die App jetzt zu Microsoft Te
 
 Um die App zu Teams hinzuzufügen, wählen Sie **"Zu Teams hinzufügen" aus**.
 
-:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Zu Teams hinzufügen":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Zu Teams hinzufügen.":::
 
 Wenn Sie **"Zu Teams hinzufügen" auswählen,** wird ein Dialogfeld geöffnet, in dem Sie die Details überprüfen und " **App herunterladen"** auswählen können, in dem das Microsoft Teams-App-Manifest auf Ihrem Gerät gespeichert wird.
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Der Screenshot ist ein Beispiel für die Überprüfung des Zusammenarbeits-Managers":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="Der Screenshot ist ein Beispiel für die Überprüfung des Zusammenarbeits-Managers.":::
 
 Informationen zum Hochladen Ihrer App in Teams finden Sie [unter "Hochladen Ihrer App in Team"](~/concepts/deploy-and-publish/apps-upload.md).
 
@@ -100,7 +100,7 @@ Es sind Folgendes erforderlich, damit Benutzer die bereitgestellten Collaboratio
      1. **Administrator:** Suchen Sie nach dem Benutzer in Ihrer Organisation, den Sie als Administrator zuweisen möchten, indem Sie Zeichen eingeben.
      1. **Teamtyp:** Wählen Sie den Teamtyp aus. Bei den folgenden Schritten wird davon ausgegangen, dass Sie "Besitzer" aus der Dropdownliste ausgewählt haben. Die anderen Teamtypen (Microsoft 365-Team und Microsoft Azure Active Directory-Team) füllen Teammitglieder automatisch aus Azure Active Directory aus.
 
-         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Neues Team":::
+         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Screenshot zum Auswählen eines neuen Teamtyps.":::
 
      1. Stellen Sie sicher, dass Sie den Teamnamen notieren. Sie benötigen dies später, um dieses Team als Besitzer eines Datensatzes zuzuweisen.
 
@@ -125,7 +125,7 @@ Es sind Folgendes erforderlich, damit Benutzer die bereitgestellten Collaboratio
 
 1. Wählen Sie **"Sicherheitsrollen" aus**.
 
-     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Benutzerberechtigung":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Screenshot zum Hinzufügen neuer Teammitglieder für Benutzerberechtigungen.":::
 
 1. Wählen Sie oben links auf der Seite die **Option "Neue Rolle** " aus, wodurch nun eine neue Seite geöffnet wird.
 
@@ -135,7 +135,7 @@ Es sind Folgendes erforderlich, damit Benutzer die bereitgestellten Collaboratio
 
      1. Erteilen Sie Organisationsberechtigungen (vollständiger grüner Kreis) für jede der Entitäten für die Zusammenarbeit, **die Zuordnung zur Zusammenarbeit**, **die Metadaten** für die Zusammenarbeit und **das Stammverzeichnis für die Zusammenarbeit**.
 
-         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Karte für die Zusammenarbeit":::
+         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Screenshot zeigt, wie Sie eine Sicherheitsrolle auf der Karte für die Zusammenarbeit erstellen.":::
 
 1. Wählen Sie **"Speichern"** und **"Schließen" aus**.
 
@@ -147,10 +147,10 @@ Es sind Folgendes erforderlich, damit Benutzer die bereitgestellten Collaboratio
 
 1. Wählen Sie in der Kopfzeile " **Sicherheitsrollen verwalten** " aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Team bearbeiten":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Der Screenshot zeigt die Zuordnung zur Zusammenarbeit, Die Metadaten für die Zusammenarbeit und den Stamm der Zusammenarbeit an. für &quot;Team bearbeiten&quot;.":::
 
 1. Wählen Sie die Rollen aus, die [in einer Sicherheitsrolle erstellt wurden](#create-a-security-role).
 
-1. Wählen Sie **Speichern**.
+1. Wählen Sie **Speichern** aus.
 
 Weitere Informationen zu Rollenberechtigungen finden Sie unter [Konfigurieren der Benutzersicherheit in einer Umgebung](/power-platform/admin/database-security).

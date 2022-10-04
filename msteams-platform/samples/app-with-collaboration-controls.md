@@ -5,12 +5,12 @@ description: In diesem Modul erfahren Sie, wie Sie eine modellgesteuerte App mit
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243059"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373045"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Erstellen einer neuen modellgesteuerten App mit Steuerelementen für die Zusammenarbeit für Teams
 
@@ -27,11 +27,11 @@ Steuerelemente für die Zusammenarbeit sind für [modellgesteuerte Anwendungen](
 
 1. Wählen Sie **"Neue Lösung**" aus, damit Sie allen Ihren zukünftigen Anpassungen ein Zuhause bieten können.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="Der Screenshot ist ein Beispiel für die neue Lösung.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="Screenshot ist ein Beispiel für die neue Lösung, die ein Zuhause für alle Zukünftigen Anpassungen bietet.":::
 
 1. Geben Sie den Namen und Herausgeber Ihrer neuen Lösung an. Diese Lösung wird Ihre benutzerdefinierte Collaboration Manager enthalten.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Der Screenshot ist ein Beispiel für den Zusammenarbeits-Manager.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Screenshot ist ein Beispiel, das Publisher-Details zu Ihrer neuen Lösung bereitstellt.":::
 
 1. Wählen Sie **Erstellen** aus
 
@@ -39,41 +39,41 @@ Steuerelemente für die Zusammenarbeit sind für [modellgesteuerte Anwendungen](
 
 1. Erstellen Sie vor dem Erstellen Ihrer App ein Zuhause für Ihre Daten. wählen Sie **"Neue** > **Tabelle"** aus, um zu beginnen.
 
-     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="Der Screenshot beschreibt, wie Sie eine neue Tabelle erstellen.":::
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="Screenshot beschreibt, wie sie eine neue Tabelle erstellen.":::
 
 1. Geben Sie Ihrer Tabelle einen Namen. Wählen Sie unter **"Erweiterte Optionen****" die Option "Neue Aktivität erstellen"** aus.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Der Screenshot beschreibt, wie Sie eine neue Aktivität erstellen.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Screenshot beschreibt, wie Sie eine neue Aktivität erstellen.":::
 
 1. Wählen Sie **Speichern** aus.
 
-1. Nachdem Sie ihre Tabelle erstellt haben, können Sie sie anpassen, indem Sie zusätzliche Spalten, Beziehungen und vieles mehr hinzufügen (optional).
+1. Nachdem Sie die Tabelle erstellt haben, können Sie sie anpassen, indem Sie zusätzliche Spalten, Beziehungen und mehr hinzufügen (optional).
 
 1. Jetzt können Sie eine neue modellgesteuerte App erstellen, indem Sie "**Neue** > **appmodellgesteuerte** >  App" auswählen.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="Der Screenshot ist ein Beispiel für die neue modellgesteuerte App.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="Screenshot ist ein Beispiel zum Erstellen einer neuen modellgesteuerten App.":::
 
 1. Wählen Sie den neuen **Modernen App-Designer (Vorschau)** aus, um die neue App zu öffnen.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="Der Screenshot ist ein Beispiel, in dem die neue modellgesteuerte App leer ist.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="Screenshot ist ein Beispiel, in dem die neue modellgesteuerte App leer ist und Sie eine Erstellungsoberfläche auswählen können.":::
 
 1. Wählen Sie **"Erstellen" aus.**
 
 1. Geben Sie Ihrer App einen Namen, und wählen Sie **"Erstellen" aus.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Der Screenshot ist ein Beispiel für den Zusammenarbeits-Manager für die Überprüfung.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Screenshot ist ein Beispiel, das zeigt, wie Sie den Zusammenarbeits-Manager für die Inspektion hinzufügen und eine neue modellgesteuerte App erstellen.":::
 
 1. Wählen Sie **"Seite hinzufügen" aus.**
 
 1. Wählen Sie **"Tabellenbasierte Ansicht und Formular" aus.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Der Screenshot ist ein Beispiel für die tabellenbasierte Ansicht und das Formular.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Screenshot ist ein Beispiel für die tabellenbasierte Ansicht und das Formular, und Sie können einen Seitentyp auswählen.":::
 
 1. Wählen Sie **"Weiter" aus.**
 
 1. Suchen Sie die Tabelle, die Sie zuvor erstellt haben, und wählen Sie sie aus.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Der Screenshot ist ein Beispiel für die Formularseiten der Tabellenansicht.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Screenshot ist ein Beispiel, das die Formularseiten der Tabellenansicht zeigt und die von Ihnen erstellte Tabelle auswählen kann.":::
 
 1. Wählen Sie **"Hinzufügen" aus.**
 
@@ -93,54 +93,54 @@ Im Folgenden werden die Schritte zum Hinzufügen von Steuerelementfunktionen fü
 
 1. Wechseln Sie zur Registerkarte "Formulare" für Ihre Tabelle.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="Der Screenshot ist ein Beispiel für die Registerkarte &quot;Formulare&quot; für Ihre Tabelle.":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="Screenshot ist ein Beispiel, das die Registerkarte &quot;Formulare&quot; für Ihre Tabelle zeigt.":::
 
 1. Wählen Sie das Informationsformular des Formulartyps **"Main** " aus, um es im Formular-Designer zu öffnen.
 
 1. Sobald Sie sich im Formular-Designer befinden, drücken und ziehen Sie eine **einspaltige Registerkarte** aus dem Abschnitt **"Komponenten** ".
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Der Screenshot ist ein Beispiel für die Komponenten von Power-Apps.":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Screenshot ist ein Beispiel, das die Komponenten von Power-Apps zeigt.":::
 
 1. Nachdem Sie die Registerkarte ausgewählt haben, benennen Sie die Registerkarte im Eigenschaftenbereich in "Aufgaben" um.
 
 1. Wählen Sie den Namen der Registerkarte aus, um den vollständigen Abschnitt auszuwählen, und wählen Sie im Eigenschaftenbereich die **Option "Erste Komponente bis zur vollständigen Registerkarte erweitern** " aus. Dies ist erforderlich, da die Steuerelemente für die Zusammenarbeit am besten in vollständigen Registerkartenansichten angezeigt werden.
 
-    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" Der Screenshot beschreibt, wie Sie die erste Komponente zur vollständigen Registerkarte auswählen.":::
+    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" Screenshot beschreibt, wie Sie die erste Komponente zur vollständigen Registerkarte auswählen.":::
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Im Screenshot wird beschrieben, wie Sie die erste Komponente auf die vollständige Registerkarte erweitern.":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Screenshot beschreibt, wie die erste Komponente auf die vollständige Registerkarte erweitert wird.":::
 
 1. Erweitern Sie die Kategorie "Zusammenarbeit (Vorschau)" in der Steuerelementschublade, und ziehen Sie das Steuerelement "Aufgaben" (Vorschau) auf den Abschnitt im Formular "Aufgaben".
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Vorschau des Steuerelements auf dem Abschnitt im Aufgabenformular":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Der Screenshot beschreibt, wie sie die Steuerung in der Vorschau auf den Abschnitt im Aufgabenformular anzeigen.":::
 
 3. Legen Sie die Tabelle auf "Aktivitäten" fest, & wählen Sie "Fertig" aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Wählen Sie die Tabelle für Aktivitäten aus.":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Screenshot zeigt, wie Sie die Tabelle für Aktivitäten auswählen.":::
 
 5. Wählen Sie in den Eigenschaften "Bezeichnung ausblenden" aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Bezeichnung ausblenden auswählen":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Der Screenshot zeigt, wie Sie &quot;Bezeichnung ausblenden&quot; auswählen.":::
 
-1. Das Aufgabensteuerelement wird jetzt angezeigt.
+1. Das Steuerelement "Aufgaben" wird jetzt angezeigt.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Anzeige des Aufgabensteuerelements":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Screenshot zeigt ein Beispiel für die Anzeige von Aufgabensteuerelement.":::
 
 1. Wiederholen Sie die Aufgabenschritte, um Ihrer App Genehmigungen, Dateien, Besprechungen und Notizensteuerelemente hinzuzufügen.
-1. Nachdem alle Steuerelemente hinzugefügt wurden, werden die unten im Formular-Designer gerenderten Steuerelemente angezeigt. Wenn ein Steuerelement nicht im Formular-Designer gerendert wird, z. B. ein leeres Formular angezeigt wird, führen Sie Ihre App in Power Apps aus, und das Vorhandensein einer "Configure"-Seite oder eines "leeren Zustands" bedeutet, dass das Steuerelement erfolgreich hinzugefügt wurde.
+1. Nachdem Sie alle Steuerelemente hinzugefügt haben, werden die unten im Formular-Designer gerenderten Steuerelemente angezeigt. Wenn ein Steuerelement nicht im Formular-Designer gerendert wird, z. B. ein leeres Formular angezeigt wird, führen Sie Ihre App in Power Apps aus, und das Vorhandensein einer "Configure"-Seite oder eines "leeren Zustands" bedeutet, dass das Steuerelement erfolgreich hinzugefügt wurde.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Steuerelemente-Formular-Designer":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot, der zeigt, dass der Formular-Designer für Steuerelemente erfolgreich hinzugefügt wurde.":::
 
 1. Sie können Ihre Power-App jetzt in Power Apps ausführen, indem Sie sie auswählen.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Zusammenarbeits-Manager für Inspektionen":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Screenshot zeigt, wie Sie Ihre Power-App ausführen, indem Sie den Zusammenarbeits-Manager für Inspektionen auswählen.":::
 
 1. Erstellen Sie einen neuen Datensatz, indem Sie **"+Neu** " auswählen und dann den Datensatz öffnen.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Der Screenshot ist ein Beispiel für die Power-Apps, die den Datensatz öffnen.":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Screenshot zum Erstellen eines neuen Datensatzes.":::
 
 1. Jetzt können Sie Ansichten für jede Registerkarte sehen, die der folgenden Abbildung ähnlich aussehen:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Der Screenshot ist ein Beispiel für die Aufgaben.":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Screenshot ist ein Beispiel, das die Ansicht für jede Registerkarte zeigt.":::
 
      > [!TIP]
      > Die Steuerelemente sind erst sichtbar, nachdem ein Datensatz in der Anwendung gespeichert wurde. Wenn die Steuerelementregisterkarten in Ihrem Datensatz nicht angezeigt werden, versuchen Sie, Ihren Browser zu aktualisieren oder die App über Power Apps erneut zu veröffentlichen.
@@ -161,7 +161,7 @@ Sie können folgende Einstellungen anwenden:
 |Laufwerk-ID|SharePoint-Dateien|
 
 > [!NOTE]
-> Einstellungen sind crtical, um Ihre App zu starten, also stellen Sie sicher, dass Sie die Schritte wie vorgeschlagen ausführen. Wenn Beim Starten und Speichern der Steuerelemente Probleme auftreten, überprüfen Sie die Werte erneut.
+> Einstellungen sind wichtig, um Ihre App zu starten. Stellen Sie daher sicher, dass Sie die schritte wie vorgeschlagen ausführen. Wenn Beim Starten und Speichern der Steuerelemente Probleme auftreten, überprüfen Sie die Werte erneut.
 
 Sie können die Gruppen-ID abrufen, indem Sie ein neues Team erstellen oder ein vorhandenes Team in Microsoft Teams verwenden, um Ihre Anwendung zu hosten und Einstellungsvariablen zu erstellen.
 
@@ -173,7 +173,7 @@ Verwenden Sie die folgenden Anweisungen, um die Gruppen-ID Ihres Teams-Teams fü
 
 1. Wählen Sie die Ellipse **...** und dann **"Link zum Team** abrufen" aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="Der Screenshot beschreibt, wie Die Verknüpfung mit dem Team abgerufen wird.":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="Screenshot beschreibt, wie die Verknüpfung mit dem Team abgerufen wird.":::
 
 1. Kopieren Sie den Link, und notieren Sie den Wert von `groupId` der URL. Sie verwenden diesen Wert zu einem späteren Zeitpunkt, während Sie die Einstellungen Ihrer Lösung definieren.
 
@@ -187,14 +187,14 @@ Verwenden Sie die folgenden Anweisungen, um die SharePoint-Website-ID und Laufwe
 
      1. **Website-ID**: Melden Sie sich mit [dem Graph-Explorer](https://developer.microsoft.com/graph/graph-explorer) an, und erteilen Sie Berechtigungen für Directory.ReadWrite.All und User.ReadWrite.All
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Der Screenshot ist ein Beispiel für den Graph-Explorer.":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Screenshot ist ein Beispiel für den Graph-Explorer.":::
 
      1. Stellen Sie sicher, dass Sie den Hostnamen durch Ihren Hostnamen und den relativen Pfad zum Websitepfad ersetzen, und führen Sie einen Graph-Aufruf an `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. Es folgt ein Beispiel:
          1. Wenn Ihre Website-URL = `https://myhostname.sharepoint.com/sites/MySiteName`
          1. Hostname = `myhostname.sharepoint.com`
          1. Relativer Pfad zur Website = `sites/MySiteName`
 
-              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Der Screenshot ist ein Beispiel für den Graph-Aufruf.":::
+              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Screenshot ist ein Beispiel für den Graph-Aufruf.":::
 
             Graph-Aufruf wäre, `https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/sites/MySiteName`.
 
@@ -225,15 +225,15 @@ Sie müssen die Einstellungs-IDs hinzufügen, die Sie zuvor für Ihre Anwendung 
 
 1. Starten Sie ein Steuerelement, und Sie können ein Fenster wie folgt anzeigen:
 
-     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Der Screenshot ist ein Beispiel für das Steuerelementfenster.":::
+     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Screenshot ist ein Beispiel für das Steuerelementfenster.":::
 
 1. Wählen Sie **"Konfigurieren"** aus, und wechseln Sie zur Registerkarte "Allgemein", um die Gruppen-ID hinzuzufügen.
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Der Screenshot beschreibt, wie Die Gruppen-ID auf der Registerkarte &quot;Allgemein&quot; hinzugefügt wird.":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Screenshot beschreibt, wie die Gruppen-ID auf der Registerkarte &quot;Allgemein&quot; hinzugefügt wird.":::
 
 1. Öffnen Sie die Registerkarte "Dateien", um die Website-ID und laufwerks-ID hinzuzufügen.
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Der Screenshot beschreibt, wie Sie die Website-ID und Laufwerk-ID auf der Registerkarte &quot;Dateien&quot; hinzufügen.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Screenshot beschreibt, wie Sie die Website-ID und Laufwerk-ID auf der Registerkarte &quot;Dateien&quot; hinzufügen.":::
 
 Für das Notizensteuerelement ist kein Einstellungswert erforderlich. Jetzt können Sie Entitäten wie Aufgaben und Besprechungen in Ihrer Anwendung erstellen. Wenn Beim Starten und Speichern der Steuerelemente Probleme auftreten, überprüfen Sie die Einstellungswerte erneut.
 
@@ -247,13 +247,13 @@ Erkunden Sie die Zusammenarbeit auf der Registerkarte "Aufgaben", indem Sie die 
 
 1. Um eine neue Aufgabe für das Team zu erstellen, wählen Sie **"Aufgabe hinzufügen"** aus. Es wird ein Dialogfeld geöffnet, in dem Sie Einzelheiten zu der Aufgabe angeben und sie den relevanten Personen im Team zuweisen und "Speichern" auswählen können.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Der Screenshot beschreibt, wie Sie eine Aufgabe hinzufügen.":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Screenshot beschreibt, wie Sie eine Aufgabe hinzufügen.":::
 
 1. Der gespeicherte Vorgang wird in der Aufgabenliste angezeigt.
 
 1. Da alle Aufgaben von Microsoft Planner unterstützt werden. Benutzer können die Aufgaben-App in Microsoft Teams verwenden, um alle zugewiesenen Aufgaben anzuzeigen. Um zu beginnen, wählen Sie Auslassungszeichen **aus...** im linken Bereich von Teams. Suchen sie Aufgaben nach Planner und Aufgaben, und wählen Sie sie aus.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="Der Screenshot ist ein Beispiel für die Aufgaben von Planner und To Do.":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="Screenshot ist ein Beispiel für die Aufgaben von Planner und To Do.":::
 
 1. Nach dem Öffnen der App "Aufgaben nach Planner" und "Aufgaben" können Benutzer alle Aufgaben, die in Ihrer App erstellt wurden, im Abschnitt **"Mir zugewiesen"** der App anzeigen. Benutzer können auch die Details einer Aufgabe anzeigen, Anlagen hinzufügen und als erledigt markieren.
 
@@ -268,7 +268,7 @@ Wählen Sie die Registerkarte " **Besprechungen** " in einem Datensatz aus, um s
 
 Um eine interne Besprechung zu planen, wählen Sie die Dropdownliste neben der Schaltfläche " **Neue Besprechung** " und dann " **Interne Besprechung"** aus.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Der Screenshot beschreibt, wie Sie interne Besprechungen planen.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Screenshot beschreibt, wie interne Besprechungen geplant werden.":::
 
 > [!NOTE]
 >
@@ -276,11 +276,11 @@ Um eine interne Besprechung zu planen, wählen Sie die Dropdownliste neben der S
 
 Im Dialogfeld **"Neue Besprechung** " können Benutzer relevante Informationen zur Besprechung bereitstellen und **"Speichern"** auswählen. Die Besprechung wird in der Besprechungsliste angezeigt.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="Der Screenshot beschreibt, wie Sie eine neue Besprechung planen.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="Screenshot beschreibt, wie Sie eine neue Besprechung planen.":::
 
 Um eine externe Besprechung mit dem Kunden zu planen, wählen Sie die Dropdownliste neben der Schaltfläche " **Neue Besprechung** " und dann **"Kundenbuchung**" aus. Wenn die Option **"Kundenbuchung**" in der Dropdownliste "**Neue Besprechung**" nicht verfügbar ist, vergewissern Sie sich, dass die App in den Einstellungen für Microsoft Bookings konfiguriert ist und der Benutzer über die Rolle "Bookings-Administrator" verfügt. Weitere Informationen finden Sie unter ["Hinzufügen von Mitarbeitern zu Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true)". Sie können zusätzliche Buchungstypen hinzufügen, indem Sie zusätzliche Dienste in Ihrem Bookings-Unternehmen hinzufügen.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Der Screenshot beschreibt, wie Sie Kundenbuchungen planen.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Screenshot beschreibt, wie Sie Kundenbuchungen planen.":::
 
 Benutzer können sowohl interne Besprechungen als auch Kundenbuchungen in ihrer Besprechungsliste sehen. Nachdem die Besprechung gestartet wurde, können Benutzer teilnehmen, indem sie die Schaltfläche " **Teilnehmen** " auswählen, die die Besprechung direkt in Microsoft Teams öffnet.
 
@@ -294,13 +294,13 @@ Es folgen die Schritte zum Hinzufügen eines freigegebenen Kalenders zu Outlook 
 
 Im linken Bereich sollte unter "Freigegebene Kalender" nun ein zusätzlicher Kalender mit dem Namen der Person angezeigt werden.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Der Screenshot beschreibt, wie Sie Kundenbuchungen planen.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Screenshot beschreibt, wie Sie Kundenbuchungen planen.":::
 
 ### <a name="add-files"></a>Dateien hinzufügen
 
 Öffnen Sie die Registerkarte "**Dateien**" in Ihrer Anwendung, und wählen Sie "**Hochladen**" aus, um Dateien von OneDrive for Business oder von Ihrem Computer hochzuladen. Wenn eine Datei erfolgreich hochgeladen wurde, wird die Hauptlistenansicht automatisch aktualisiert, um die Dateien in der Liste anzuzeigen.
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="Der Screenshot beschreibt das Öffnen des freigegebenen Kalenders.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="Screenshot beschreibt, wie freigegebener Kalender geöffnet wird.":::
 
 ### <a name="approvals"></a>Genehmigungen
 
@@ -310,15 +310,15 @@ Mit Genehmigungen können Benutzer die Abmeldung von anderen Personen anfordern,
 
 1. Wenn keine Genehmigungsanforderungen vorhanden sind, wird den Benutzern der folgende Bildschirm angezeigt.
 
-      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="Der Screenshot ist ein Beispiel, in dem keine Genehmigungsanforderungen angezeigt werden.":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="Screenshot ist ein Beispiel, in dem keine Genehmigungsanforderungen angezeigt werden.":::
 
 1. Wählen Sie die **Neue Genehmigungsanforderung** aus, um das Genehmigungsanforderungsformular zu öffnen.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Der Screenshot ist ein Beispiel für das neue Genehmigungsanforderungsformular.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Screenshot ist ein Beispiel für das neue Genehmigungsanforderungsformular.":::
 
 1. Füllen Sie im Genehmigungsanforderungsformular die erforderlichen Felder aus, und wählen Sie **"Senden**" aus, wodurch eine Anforderung erstellt und der Liste hinzugefügt wird.
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Der Screenshot ist ein Beispiel für die Liste der Genehmigungen.":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Screenshot ist ein Beispiel für die Liste der Genehmigungen.":::
 
 1. Wählen Sie die Genehmigung aus, um die Details anzuzeigen.
 
