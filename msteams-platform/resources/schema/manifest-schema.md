@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel verfügen Sie über die neueste Version des öffentlichen Manifestschemas für Microsoft Teams-Referenz, Schema und vollständiges Beispielmanifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100168"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376571"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -29,7 +29,6 @@ Das folgende Schemabeispiel umfasst alle Erweiterbarkeitsoptionen:
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -404,12 +403,6 @@ Stellen Sie sicher, dass Ihre Beschreibung Ihre Lösung beschreibt und potenziel
 |---|---|---|---|
 |`short`|80 Zeichen|✔️|Eine kurze Beschreibung der App; wird verwendet, wenn der Platz begrenzt ist.|
 |`full`|4.000 Zeichen|✔️|Die vollständige Beschreibung Ihrer App.|
-
-## <a name="packagename"></a>packageName
-
-**Optional** – Zeichenfolge
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -910,7 +903,7 @@ So erstellen Sie eine Teams-App-Manifestdatei:
 <br>
 
 > [!NOTE]
-> Der hier gezeigte Inhalt des Manifestbeispiels gilt nur für eine Registerkarten-App. Es werden Beispielwerte für den URI der tertiären Domäne und den Paketnamen verwendet. Weitere Informationen finden Sie unter [Beispielmanifestschema](#sample-full-manifest).
+> Der hier gezeigte Inhalt des Manifestbeispiels gilt nur für eine Registerkarten-App. Es werden Beispielwerte für den Subdomänen-URI verwendet. Weitere Informationen finden Sie unter [Beispielmanifestschema](#sample-full-manifest).
 
   ```json
 { 
@@ -918,7 +911,6 @@ So erstellen Sie eine Teams-App-Manifestdatei:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

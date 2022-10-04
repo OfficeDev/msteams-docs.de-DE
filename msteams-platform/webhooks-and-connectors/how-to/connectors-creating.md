@@ -5,12 +5,12 @@ description: Erste Schritte mit Office 365 Connectors. Fügen Sie der Teams-App 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 977bcac5daa3185177fbc9a3b441c245541914df
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 82fa425b3a2edb4db72c327655bdc8513d6b51f3
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100728"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376578"
 ---
 # <a name="create-office-365-connectors"></a>Erstellen von Office 365-Connectors
 
@@ -185,7 +185,6 @@ Die folgende Datei *manifest.json* enthält die Elemente, die zum Testen und Üb
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
-  "packageName": "com.sampleapp",
   "developer": {
     "name": "Publisher",
     "websiteUrl": "https://www.microsoft.com",

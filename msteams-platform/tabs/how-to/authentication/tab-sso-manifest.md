@@ -4,12 +4,12 @@ description: Aktualisieren Sie das Teams-Manifest zum Aktivieren des einmaligen 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: bd5b7257a131a11e861b94221c533d8364b6bb54
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67587001"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376585"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Aktualisieren von App-Manifest für SSO und App-Vorschau
 
@@ -81,7 +81,6 @@ Weitere Informationen finden Sie unter [webApplicationInfo](../../../resources/s
   "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-  "packageName": "com.contoso.teamsauthsso",
   "developer": {
     "name": "Microsoft",
     "websiteUrl": "https://www.microsoft.com",

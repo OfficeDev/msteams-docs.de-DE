@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450464"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376627"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -57,7 +57,6 @@ Es folgt ein Beispielmanifest für ein Manifest einer Registerkarte mit adaptive
   "manifestVersion": "1.9",
   "id": "00000000-0000-0000-0000-000000000000",
   "version": "0.0.1",
-  "packageName": "acprototype",
   "developer": {
     "name": "Contoso",
     "websiteUrl": "https://contoso.yourwebsite.com",

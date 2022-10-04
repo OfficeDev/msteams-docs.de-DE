@@ -3,12 +3,12 @@ title: Initiieren von Aktionen mit Nachrichtenerweiterungen
 description: In diesem Modul erfahren Sie, wie Sie aktionsbasierte Nachrichtenerweiterungen erstellen, damit Benutzer externe Dienste auslösen können.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: c087e8d3866215a1ed55c0bc503b34f920a4e436
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243570"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376613"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Initiieren von Aktionen mit Nachrichtenerweiterungen
 
@@ -18,13 +18,11 @@ Aktionsbasierte Nachrichtenerweiterungen ermöglichen Es Ihren Benutzern, Aktion
 
 ![Beispiel für eine Nachrichtenerweiterungskarte](~/assets/images/compose-extensions/ceexample.png)
 
-In den folgenden Abschnitten wird dies beschrieben:
-
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ## <a name="action-type-message-extensions"></a>Nachrichtenerweiterungen des Aktionstyps
 
-Um Aktionen aus einer Nachrichtenerweiterung zu initiieren, legen Sie den `type` Parameter auf `action`. Nachfolgend finden Sie ein Beispiel für ein Manifest mit einer Suche und einem Befehl zum Erstellen. Eine einzelne Nachrichtenerweiterung kann bis zu 10 verschiedene Befehle haben. Dies kann sowohl mehrere Suchbefehle als auch mehrere aktionsbasierte Befehle umfassen.
+Um Aktionen aus einer Nachrichtenerweiterung zu initiieren, legen Sie den `type` Parameter auf `action`. Nachfolgend finden Sie ein Beispiel für ein Manifest mit einer Suche und einem Befehl zum Erstellen. Eine einzelne Nachrichtenerweiterung kann bis zu 10 verschiedene Befehle enthalten und mehrere Such- und aktionsbasierte Befehle enthalten.
 
  > [!NOTE]
  >`justInTimeInstall` funktioniert, wenn Sie eine App in den App-Katalog hochladen, aber beim Querladen einer App ein Fehler auftritt.
@@ -37,7 +35,6 @@ Um Aktionen aus einer Nachrichtenerweiterung zu initiieren, legen Sie den `type`
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://todobotservice.azurewebsites.net/",
@@ -133,7 +130,7 @@ Um Aktionen aus einer Nachrichtenerweiterung zu initiieren, legen Sie den `type`
 
 ### <a name="initiate-actions-from-messages"></a>Initiieren von Aktionen aus Nachrichten
 
-Zusätzlich zum Initiieren von Aktionen aus dem Bereich zum Verfassen von Nachrichten können Sie ihre Nachrichtenerweiterung auch verwenden, um eine Aktion aus einer Nachricht zu initiieren. Auf diese Weise können Sie den Nachrichteninhalt zur Verarbeitung an Ihren Bot senden und optional mit einer Antwort auf diese Nachricht mithilfe der Methode antworten, die unter [Antworten auf Übermittlung](#responding-to-submit) beschrieben wird. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü `...` auf die Nachrichtenerweiterung zugreifen und dann wie in der folgenden Abbildung dargestellt auswählen `Take action` :
+Sie können Aktionen aus dem Bereich zum Verfassen von Nachrichten initiieren und auch Ihre Nachrichtenerweiterung verwenden, um eine Aktion aus einer Nachricht zu initiieren, mit der Sie den Nachrichteninhalt zur Verarbeitung an Ihren Bot senden können. Optional können Sie auf diese Nachricht mit einer Antwort antworten, indem Sie die unter ["Antworten auf Übermittlung"](#responding-to-submit) beschriebene Methode verwenden. Die Antwort wird als Antwort auf die Nachricht eingefügt, die Ihre Benutzer vor dem Senden bearbeiten können. Ihre Benutzer können über das Überlaufmenü `...` auf die Nachrichtenerweiterung zugreifen und dann wie in der folgenden Abbildung dargestellt auswählen `Take action` :
 
 ![Beispiel für das Initiieren einer Aktion aus einer Nachricht](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -313,7 +310,7 @@ Genau wie im Ablauf adaptiver Karten sendet Ihr Dienst ein `fetchTask` Ereignis 
 
 ### <a name="request-to-install-your-conversational-bot"></a>Anfordern der Installation Ihres Unterhaltungs-Bots
 
-Wenn Ihre App einen Unterhaltungs-Bot enthält, stellen Sie sicher, dass er in der Unterhaltung installiert ist, bevor Sie das Aufgabenmodul laden. Dies kann in Situationen hilfreich sein, in denen Sie zusätzlichen Kontext für Ihr Aufgabenmodul abrufen müssen. Beispielsweise müssen Sie möglicherweise die Teilnehmerliste abrufen, um ein Personenauswahl-Steuerelement oder die Liste der Kanäle in einem Team aufzufüllen.
+Wenn Ihre App einen Unterhaltungs-Bot enthält, stellen Sie sicher, dass er in der Unterhaltung installiert ist, bevor Sie Das Aufgabenmodul laden, um mehr Kontext für Ihr Aufgabenmodul zu erhalten. Beispielsweise müssen Sie möglicherweise die Teilnehmerliste abrufen, um ein Personenauswahl-Steuerelement oder die Liste der Kanäle in einem Team aufzufüllen.
 
 Um diesen Fluss zu vereinfachen, überprüft Ihre Nachrichtenerweiterung beim ersten Empfang des `composeExtension/fetchTask` Aufrufs, ob Ihr Bot im aktuellen Kontext installiert ist. Sie können dies erreichen, indem Sie versuchen, den Dienstplananruf abzurufen. Wenn Ihr Bot beispielsweise nicht installiert ist, geben Sie eine adaptive Karte mit einer Aktion zurück, die den Benutzer auffordert, Ihren Bot zu installieren. Der Benutzer muss über die Berechtigung zum Installieren von Apps an diesem Speicherort verfügen. Wenn die Installation nicht ausgeführt werden kann, wird der Administrator in der Meldung aufgefordert, sich an den Administrator zu wenden.
 
@@ -379,15 +376,15 @@ Dies sind die unterschiedlichen erwarteten Antworten auf eine `submitAction`.
 
 ### <a name="task-module-response"></a>Antwort des Aufgabenmoduls
 
-Dies wird verwendet, wenn Ihre Erweiterung Dialogfelder miteinander verketten muss, um weitere Informationen zu erhalten. Die Antwort ist genau die gleiche wie `fetchTask` zuvor erwähnt.
+Die Antwort des Aufgabenmoduls wird verwendet, wenn die Erweiterung Dialogfelder miteinander verketten muss, um weitere Informationen zu erhalten. Die Antwort ist genau die gleiche wie `fetchTask` zuvor erwähnt.
 
 ### <a name="compose-extension-authconfig-response"></a>Verfassen der Erweiterungsauthentifizierungs-/Konfigurationsantwort
 
-Dies wird verwendet, wenn ihre Erweiterung authentifiziert oder konfiguriert werden muss, um den Vorgang fortzusetzen. Weitere Informationen finden Sie im [Abschnitt "Authentifizierung](~/resources/messaging-extension-v3/search-extensions.md#authentication) " im Suchabschnitt.
+Die Antwort auf die Verfassenerweiterungsauthentifizierung/-konfiguration wird verwendet, wenn ihre Erweiterung authentifiziert oder konfiguriert werden muss, um den Vorgang fortzusetzen. Weitere Informationen finden Sie im [Abschnitt "Authentifizierung](~/resources/messaging-extension-v3/search-extensions.md#authentication) " im Suchabschnitt.
 
 ### <a name="compose-extension-result-response"></a>Ergebnisantwort der Erstellerweiterung
 
-Dies wird verwendet, um eine Karte als Ergebnis des Befehls in das Feld zum Verfassen einzufügen. Es ist die gleiche Antwort, die im Suchbefehl verwendet wird, aber sie ist auf eine Karte oder ein Ergebnis im Array beschränkt.
+Die Ergebnisantwort der Erstellerweiterung wird verwendet, um als Ergebnis des Befehls eine Karte in das Feld zum Verfassen einzufügen. Es ist die gleiche Antwort, die im Suchbefehl verwendet wird, aber sie ist auf eine Karte oder ein Ergebnis im Array beschränkt.
 
 ```json
 {
@@ -450,7 +447,6 @@ Um diesen Fluss zu aktivieren, sollte Ihr Aufgabenmodul wie im folgenden Beispie
 
 > [!NOTE]
 > Der `activityPreview` Muss eine `message` Aktivität mit genau 1 adaptiver Kartenanlage enthalten.
-
 
 ```json
 {
