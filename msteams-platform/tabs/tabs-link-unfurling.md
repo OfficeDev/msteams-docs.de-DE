@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die Phasenansicht, eine Vollbild-UI-Kompone
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
+ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027291"
+ms.lasthandoff: 10/06/2022
+ms.locfileid: "68484920"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
@@ -90,7 +90,7 @@ Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> Wenn Sie auf mobilen Teams-Clients die Phasenansicht für Apps aufrufen, die über den [Teams-Store](~/concepts/deploy-and-publish/apps-publish-overview.md) verteilt sind und keine für Mobilgeräte optimierte Umgebung haben, wird der Standardwebbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 
@@ -149,7 +149,7 @@ Codiert
 
 | Beispielname | Beschreibung | C# |Node.js|
 |-------------|-------------|------|----|
-|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Registerkarte in der Bühnenansicht |Beispiel-App für Microsoft Teams-Registerkarten zum Demonstrieren einer Registerkarte in der Bühnenansicht.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Nächster Schritt
 
