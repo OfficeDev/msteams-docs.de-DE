@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780996"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499300"
 ---
 # <a name="manage-multiple-environments"></a>Verwalten mehrerer Umgebungen
 
@@ -156,7 +156,7 @@ Schritte für die Anpassung:
 4. Öffnen Sie die Konfigurationsdatei `.fx/configs/config.staging.json`.
 5. Fügen Sie dieselbe Eigenschaft zu `my app description for staging`hinzu.
 6. Öffnen Sie die Manifestvorlage `templates/appPackage/manifest.template.json`der Teams-App.
-7. Aktualisieren Sie die Eigenschaft **`description`** > **`short`** so, dass die **variable** verwendet wird, die in der Konfiguration von Dateien mit Schnurrbartsyntax **`{{config.manifest.description.short}}`** definiert ist.
+7. Aktualisieren Sie die Eigenschaft **`description`** > **`short`** so, dass die **variable** verwendet wird, die in der Konfiguration von Dateien mit geschweiften Klammern **`{{config.manifest.description.short}}`** definiert ist.
   
   Die Aktualisierungen `manifest.template.json` sind:
 

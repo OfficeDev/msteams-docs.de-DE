@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781140"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499244"
 ---
 # <a name="create-a-new-teams-project"></a>Erstellen eines neuen Teams-Projekts
 
@@ -260,7 +260,7 @@ Sie können Teams-App-Vorlagen sehen, die bereits im Teams-Toolkit für verschie
 |Benachrichtigungs-Bot     |Die Benachrichtigungs-Bot-App kann Benachrichtigungen an Ihren Teams-Client senden. Es gibt mehrere Möglichkeiten, die Benachrichtigung auszulösen. Lösen Sie z. B. die Benachrichtigung per HTTP-Anforderung oder nach Zeit aus. Sie können auch ausgelöste Benachrichtigungen basierend auf Ihrem Geschäftsszenario auswählen.         |
 |Befehls-Bot     |Benutzer können einen Befehl eingeben, um mithilfe der Command Bot-App mit dem Bot zu interagieren.         |
 |Tab     |Die Registerkarten-App zeigt eine Webseite in Teams an und ermöglicht einmaliges Anmelden mithilfe des Teams-Kontos.         |
-|Nachrichtenerweiterung     |Die Nachrichtenerweiterungs-App implementiert einfache Features wie das Erstellen einer adaptiven Karte, die Suche nach Nugget-Paketen und das Erweitern von Links für die Domäne "dev.botframework.com".         |
+|Nachrichtenerweiterung     |Die Nachrichtenerweiterungs-App implementiert einfache Features wie das Erstellen adaptiver Karten, das Durchsuchen von Nugget-Paketen und das Erweitern von Links für die Domäne "dev.botframework.com".         |
 
 > [!NOTE]
 > Nachdem das Projekt erstellt wurde, öffnet das Teams-Toolkit automatisch das Fenster " **Erste Schritte** ". Sie können nun die Anweisungen im Fenster " **Erste Schritte** " sehen und sich die verschiedenen Features im Teams-Toolkit ansehen.

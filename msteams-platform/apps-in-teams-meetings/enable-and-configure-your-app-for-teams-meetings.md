@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295977"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499202"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Aktivieren und Konfigurieren von Apps für Besprechungen
 
@@ -42,6 +42,7 @@ Die Funktionen der Besprechungs-App werden in Ihrem App-Manifest mithilfe der Ar
 > * Apps in Besprechungen erfordern `groupchat` oder `team` bereichsbezogene. Der `team` Bereich funktioniert für Registerkarten in Kanälen oder Kanalbesprechungen.
 > * Um das Hinzufügen von Registerkarten in geplanten Kanalbesprechungen zu unterstützen, geben Sie den **Teambereich** im **Bereichsabschnitt** in Ihrem App-Manifest an. Ohne **Teambereich** würde die App nicht im Flyout für Kanalbesprechungen angezeigt.
 > * Apps in Besprechungen können die folgenden Kontexte verwenden: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` und `meetingStage`.
+> * Die delegierten RSC-Berechtigungen `MeetingStage.Write.Chat` und `ChannelMeetingStage.Write.Group` sind im Manifest erforderlich, um die Freigabe der Besprechungsphase zu aktivieren.
 
 Der folgende Codeausschnitt ist ein Beispiel für eine konfigurierbare Registerkarte, die in einer App für Teams Besprechungen verwendet wird:
 

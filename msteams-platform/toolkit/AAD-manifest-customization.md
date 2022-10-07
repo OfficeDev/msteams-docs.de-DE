@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 0df9cc75b6a9775f9369b6a3bf8b95c35941207b
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616653"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499321"
 ---
 # <a name="edit-azure-ad-manifest"></a>Bearbeiten des Azure AD-Manifests
 
@@ -278,7 +278,7 @@ Sie müssen während verschiedener Phasen des Entwicklungslebenszyklus Ihrer Tea
 
     * Zunächst werden einige Eigenschaften in der Manifestdatei ignoriert, die mehr Kontext erfordern (z. B. replyUrls-Eigenschaft, die einen lokalen Debugendpunkt erfordert) während der Erstellung einer neuen Azure AD-Anwendung mit der Manifestdatei.
 
-    * Nach dem erfolgreichen Start der lokalen Entwicklungsumgebung werden die IdentifierUris, replyUrls und anderen Eigenschaften der Azure AD-Anwendung, die während der Erstellungsphase nicht verfügbar sind, entsprechend aktualisiert.
+    * Nachdem die lokale Entwicklungsumgebung erfolgreich gestartet wurde, werden die IdentifierUris, replyUrls und andere Eigenschaften der Azure AD-Anwendung, die während der Erstellungsphase nicht verfügbar sind, entsprechend aktualisiert.
 
     * Die Änderungen, die Sie an Ihrer Azure AD-Anwendung vorgenommen haben, werden während der nächsten lokalen Debugsitzung geladen. Sie können [Änderungen der Azure AD-Anwendung](https://github.com/OfficeDev/TeamsFx/wiki/) anzeigen, um Änderungen manuell an der Azure AD-Anwendung anzuwenden.
 

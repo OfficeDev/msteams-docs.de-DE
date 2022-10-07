@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 29ba0fff62678a18222f0229701546515b7d4c38
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806857"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499188"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Hinzufügen von Funktionen zu Teams-Apps
 
@@ -71,11 +71,11 @@ Sie können Funktionen mit den folgenden Methoden hinzufügen:
 * Wechseln Sie in das Verzeichnis für **Ihr Projekt**.
 * In der folgenden Tabelle sind die Funktionen und erforderlichen Befehle aufgeführt:
 
-  |Funktion und Szenario| Befehl|
+  |Funktion und Szenario| Get-Help|
   |-----------------------|----------|
   |So fügen Sie einen Benachrichtigungs-Bot hinzu |`teamsfx add notification`|
   |So fügen Sie den Befehlsbot hinzu |`teamsfx add command-and-response`|
-  |So fügen Sie eine sso-aktivierte Registerkarte hinzu |`teamsfx add sso-tab`|
+  |So fügen Sie die SSO-aktivierte Registerkarte hinzu |`teamsfx add sso-tab`|
   |So fügen Sie eine Registerkarte hinzu |`teamsfx add tab`|
   |So fügen Sie einen Bot hinzu |`teamsfx add bot`|
   |So fügen Sie eine Nachrichtenerweiterung hinzu |`teamsfx add message extension`|
@@ -89,7 +89,7 @@ In der folgenden Tabelle sind die Änderungen aufgeführt, die in den Dateien Ih
 |Bot, Nachrichtenerweiterung und Registerkarte|Enthält eine **Hello World-Bot**&nbsp;- oder Registerkartenanwendungsvorlage in Ihr Projekt.|Ein Front-End-Bot- oder Registerkartenvorlagencode wird einem Unterordner mit Pfad `yourProjectFolder/bot` bzw `yourProjectFolder/tab` . Pfad hinzugefügt.|
 | Bot, Nachrichtenerweiterung und Registerkarte |Enthält die erforderlichen Skripts für Visual Studio Code und wird ausgeführt, wenn Sie Ihre Anwendung lokal debuggen möchten. |Dateien `launch.json` und `task.json` ordnerunter `.vscode` werden aktualisiert.|
 | Bot- und Nachrichtenerweiterung|Enthält Bot- oder Registerkarteninformationen in der Manifestdatei, die Ihre Anwendung in der Teams-Plattform darstellt.|Die Datei`manifest.template.json` unter `templates/appPackage` dem Ordner wird aktualisiert, die registerkartenbezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung auf der Teams-Plattform darstellt. Die Änderungen sind in der ID Ihres Bots, den Bereichen Ihres Bots und den Befehlen sichtbar, auf die der Hello World-Bot oder die Registerkartenanwendung reagieren kann.|
-|Tab|Enthält Bot- oder Registerkarteninformationen in der Manifestdatei, die Ihre Anwendung in der Teams-Plattform darstellt.|Die Datei`manifest.template.json` unter `templates/appPackage` dem Ordner wird aktualisiert, die registerkartenbezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung auf der Teams-Plattform darstellt. Die Änderungen sind auf konfigurierbaren und statischen Registerkarten und bereichen der Registerkarten sichtbar.|
+|Tab|Enthält Bot- oder Registerkarteninformationen in der Manifestdatei, die Ihre Anwendung in der Teams-Plattform darstellt.|Die Datei `manifest.template.json` unter `templates/appPackage` dem Ordner wird aktualisiert, die registerkartenbezogene Informationen in der Manifestdatei enthält, die Ihre Anwendung auf der Teams-Plattform darstellt. Die Änderungen sind auf konfigurierbaren und statischen Registerkarten und bereichen der Registerkarten sichtbar.|
 |Bot, Nachrichtenerweiterung und Registerkarte|Enthält Bot-&nbsp;oder Registerkarteninformationen in teamsfx- und Bereitstellungsdateien, die für die Integration von Azure-Funktionen vorgesehen sind.|Dateien unter `templates/azure/teamsfx` werden aktualisiert, und `templates/azure/provision/xxx`Bicep-Dateien werden neu generiert.|
 |Bot, Nachrichtenerweiterung und Registerkarte|Stellt sicher, dass Ihr Projekt mit den richtigen Konfigurationen für neu hinzugefügte Funktionen festgelegt ist.|Dateien unter `.fx/config` werden neu generiert|
 

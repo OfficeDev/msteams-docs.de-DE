@@ -4,12 +4,12 @@ description: In diesem Artikel erhalten Sie Informationen zu Microsoft 365-Plugi
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 438093c5ffe9990c5aa7c8175131c654019c3120
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 56ba41598fb7d9e75aff92f240f7a3132988c1ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841750"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499307"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365-Plugins
 
@@ -36,7 +36,7 @@ In der folgenden Tabelle sind die Plugins und GitHub-Bezeichnungen aufgeführt, 
 |[**Microsoft 365-Integration**](#microsoft-365-integration)|Erstellen Sie Teams-Instanzen für jeden Kurs in Moodle, und synchronisieren Sie Lehrpersonal als Eigentümer und Studierende als Teammitglieder.|local_o365|
 |[**Microsoft 365 Repository**](#microsoft-365-repository) |Unterstützt Microsoft 365 OneDrive-Inhalte für Dateiablagen, um den Speicherbedarf in Moodle zu reduzieren.| repository_office 365|
 |[**Teams-Besprechung**](#teams-meetings) |Ermöglicht dem Atto-Editor in Moodle das Erstellen von Teams-Besprechungslinks.|atto_teamsmeeting |
-|[**Teams-Design**](#microsoft-365-teams-theme)| Entfernen Sie Moodle-Blöcke und zusätzliches Chrom in den Moodle-Iframes für Teams, die beim Zuordnen von Kursen zu Teams-Instanzen gelten.| themeboost_o365teams |
+|[**Teams-Design**](#microsoft-365-teams-theme)| Entfernen Sie Moodle-Blöcke und zusätzliche Chrome innerhalb der Moodle iFrames für Teams, die beim Zuordnen von Kursen zu Teams-Instanzen gilt.| themeboost_o365teams |
 |[**OneNote**](#onenote-integration)| Aktivieren Sie die Verwendung von OneNote für Zuweisung, Übermittlung und Feedback.|local_onenote, assignsubmission_onenote und assignfeedback_onenote </br>|  
 |[**Microsoft Block**](#microsoft-block) | Aktiviert Microsoft 365 Schnellzugriffsblöcke in Moodle mit Links zu Microsoft 365-Zusammenarbeitsdiensten und Installationslinks für Microsoft Office.|block_microsoft |
 |[**oEmbed-Filter**](#oembed-filter) | Aktivieren Sie Videolinks in Moodle.|Filter_oembed|

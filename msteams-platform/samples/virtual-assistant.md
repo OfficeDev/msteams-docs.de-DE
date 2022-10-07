@@ -3,12 +3,12 @@ title: Erstellen eines virtuellen Assistenten
 description: Erfahren Sie, wie Sie einen virtuellen Assistenten-Bot für Teams erstellen, indem Sie Codebeispiele und Codeausschnitte mit Features wie adaptive Karten, Behandlung von Unterbrechungen und mehr verwenden.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 4f35edee79dba5b6a8faa9720906915bec27d6d5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178604"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499279"
 ---
 # <a name="create-virtual-assistant"></a>Erstellen eines virtuellen Assistenten
 
@@ -564,7 +564,7 @@ Weitere Informationen finden Sie in [diesem](/microsoftteams/platform/samples/vi
     }
 ```
 
-Sie können auch vorhandene Skills aus dem [Repository für Bot Framework-Lösungen](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder ganz von Grund auf einen neuen Skill erstellen. Informationen zum Erstellen eines neuen Skills finden Sie in den [Lernprogrammen zum Erstellen neuer Skills](https://microsoft.github.io/botframework-solutions/overview/skills/). Dokumentationen zur Architektur virtueller Assistenten und von Skills finden Sie unter [Architektur von virtuellen Assistenten und Skills](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+Sie können auch vorhandene Skills aus dem [Repository für Bot Framework-Lösungen](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) nutzen oder ganz von Grund auf einen neuen Skill erstellen. Informationen zum Erstellen eines neuen Skills finden Sie in den [Lernprogrammen zum Erstellen neuer Skills](https://microsoft.github.io/botframework-solutions/overview/skills/). Dokumentation zum virtuellen Assistenten und zur Kompetenzarchitektur finden Sie unter [Virtueller Assistent und Kompetenzarchitektur](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## <a name="limitations-of-virtual-assistant"></a>Einschränkungen von virtuellen Assistenten
 

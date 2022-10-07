@@ -5,12 +5,12 @@ description: Erfahren Sie anhand von Codebeispielen, wie Sie Ihre bestehende Mic
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 076cf027e2696848319fc0beb7ae69c3633b8dc4
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189470"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499195"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Hinzufügen einer Microsoft Teams-Registerkarte zu SharePoint
 
@@ -67,7 +67,7 @@ Ab SharePoint-Framework Version 1.7 können Sie Ihre Microsoft Teams-Registerkar
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint-Framework in Microsoft Teams
 
-Sie können Ihre Teams Registerkarten auch mithilfe von SharePoint-Framework implementieren. SharePoint-Framework-Webparts werden automatisch innerhalb von SharePoint gehostet, ohne dass externe Dienste wie Azure nötig sind. SharePoint-Entwicklern vereinfacht dies den Entwicklungsprozess für Microsoft Teams-Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Microsoft Teams finden Sie unter [Verwenden des SharePoint-Frameworks in Microsoft Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Sie können Ihre Teams-Registerkarten auch mithilfe von SharePoint-Framework implementieren. SharePoint-Framework-Webparts werden automatisch innerhalb von SharePoint gehostet, ohne dass externe Dienste wie Azure nötig sind. SharePoint-Entwicklern vereinfacht dies den Entwicklungsprozess für Microsoft Teams-Registerkarten erheblich. Weitere Informationen zu SharePoint-Framework in Microsoft Teams finden Sie unter [Verwenden des SharePoint-Frameworks in Microsoft Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Einführung
 
@@ -124,7 +124,7 @@ In der folgenden Abbildung wird der entsprechende Bildschirm angezeigt:
 1. Klicken Sie auf die Schaltfläche **Veröffentlichen**, nachdem Sie die Bearbeitung abgeschlossen haben.
 
 1. Wählen Sie **Seite zu Navigation hinzufügen** aus, um in der linken Navigationsleiste einen Schnellverweis auf Ihre Seite zu erhalten.
-Die folgende Abbildung zeigt die Registerkarte in Sharepoint:
+Die folgende Abbildung zeigt die Registerkarte in SharePoint:
 
    ![Abbildung der Registerkarte in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 

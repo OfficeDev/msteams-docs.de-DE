@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329091"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499210"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -193,13 +193,13 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
 
 1. Speichern Sie die aktualisierte `manifest.json`-Datei.
 
-1. Öffnen Sie **Tab.ts** in Ihrem Visual Studio Code aus dem folgenden Pfad, um Ihre Inhaltsseite in einem IFrame bereitzustellen:
+1. Öffnen Sie **Tab.ts** in Visual Studio Code über den folgenden Pfad, um die Inhaltsseite in einem iFrame bereitzustellen:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Fügen Sie der Liste der IFrame-Decorators Folgendes hinzu:
+1. Fügen Sie der Liste der iFrame-Dekorateure Folgendes hinzu:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -485,7 +485,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt die in Ihrem Manifest angegebene `contentUrl`, bettet sie in ein IFrame ein, und rendert sie in Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt das `contentUrl` in Ihrem Manifest angegebene Element, bettet es in einen iFrame ein und rendert es auf Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 

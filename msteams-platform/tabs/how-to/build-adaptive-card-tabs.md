@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376627"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499286"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
@@ -25,7 +25,7 @@ Bei der Entwicklung einer Registerkarte mithilfe der herkömmlichen Methode kön
 * iFrame-Einschränkungen
 * Serverwartung und -kosten
 
-Registerkarten mit adaptiven Karten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen IFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und mit der gerenderten adaptiven Karte angemessen zu reagieren.
+Registerkarten mit adaptiven Karten sind eine neue Möglichkeit zum Erstellen von Registerkarten in Teams. Anstatt Webinhalte in einen iFrame einzubetten, können Sie adaptive Karten auf einer Registerkarte rendern. Während das Front-End mit adaptiven Karten gerendert wird, wird das Back-End von einem Bot unterstützt. Der Bot ist dafür verantwortlich, Anforderungen zu akzeptieren und mit der gerenderten adaptiven Karte angemessen zu reagieren.
 
 Sie können Ihre Registerkarten mit den systemeigenen vorgefertigten Benutzeroberflächenbausteinen von Desktops, des Internets und von Mobilgeräte erstellen. In diesem Artikel erfahren Sie, welche Änderungen am App-Manifest vorgenommen werden müssen. Der Artikel beschreibt auch, wie die Aufrufaktivität Informationen auf der Registerkarte mit adaptiven Karten anfragt und sendet, sowie deren Auswirkungen auf den Aufgabenmodulworkflow.
 

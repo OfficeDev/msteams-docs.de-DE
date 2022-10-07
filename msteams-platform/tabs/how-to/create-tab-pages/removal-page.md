@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie ihre Registerkarte nach der Installation neu 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450408"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499294"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
@@ -30,9 +30,9 @@ Wenn Ihre Registerkarte in einen Kanal- oder Gruppenchat hochgeladen wird, fügt
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Einstellungen            |   √    |       |Die `configurationUrl` Seite wird in einem IFrame neu geladen, sodass der Benutzer die Registerkarte neu konfigurieren kann. |
+|     Einstellungen            |   √    |       |Die `configurationUrl` Seite wird in einem iFrame neu geladen, sodass der Benutzer die Registerkarte neu konfigurieren kann. |
 |     Umbenennen              |   √    |   √   | Der Benutzer kann den Namen der Registerkarte ändern, wie er in der Registerkartenleiste angezeigt wird.          |
-|     Entfernen              |   √    |   √   |  Wenn die Eigenschaft und der  `removeURL` Wert auf der **Konfigurationsseite** enthalten sind, wird die **Seite zum Entfernen** in einen IFrame geladen und dem Benutzer angezeigt. Wenn keine Seite zum Entfernen enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
+|     Entfernen              |   √    |   √   |  Wenn die  `removeURL` Eigenschaft und der Wert auf der **Konfigurationsseite** enthalten sind, wird die **Seite zum Entfernen** in einen iFrame geladen und dem Benutzer angezeigt. Wenn keine Seite zum Entfernen enthalten ist, wird dem Benutzer ein Bestätigungsdialogfeld angezeigt.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Erstellen einer Seite zum Entfernen von Registerkarten für Ihre Anwendung
 
@@ -111,7 +111,7 @@ Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 
 ***
 
-Wenn ein Benutzer "Aus dem Dropdownmenü der Registerkarte **entfernen** " auswählt, lädt Teams die optionale `removeUrl` Seite, die auf Ihrer **Konfigurationsseite** zugewiesen ist, in einen IFrame. Dem Benutzer wird eine Schaltfläche angezeigt, die mit der Funktion geladen wird, die `onClick()` die Schaltfläche "**Entfernen**" am unteren Rand der IFrame-Seite zum Entfernen aufruft `pages.config.setValidityState(true)` und aktiviert.
+Wenn ein Benutzer "Aus dem Dropdownmenü der Registerkarte **entfernen** " auswählt, lädt Teams die optionale `removeUrl` Seite, die auf Ihrer **Konfigurationsseite** zugewiesen ist, in einen iFrame. Dem Benutzer wird eine Schaltfläche angezeigt, die mit der Funktion geladen ist, die `onClick()` die Schaltfläche **"Entfernen**" aufruft `pages.config.setValidityState(true)` und aktiviert, die am unteren Rand der Entfernungsseite iFrame angezeigt wird.
 
 Nachdem der Remove-Handler ausgeführt wurde, `removeEvent.notifySuccess()` oder `removeEvent.notifyFailure()` benachrichtigt Teams über das Ergebnis der Inhaltsentfernung.
 

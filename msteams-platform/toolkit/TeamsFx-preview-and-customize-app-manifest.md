@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 233000d39ee60b6affd5efa26c69e04390a24686
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: ac0be381837b62e1a3108f71a0320ae8b0c0a908
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243367"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499314"
 ---
 # <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
 
@@ -95,11 +95,11 @@ So zeigen Sie eine Vorschau der Manifestdatei mit Visual Studio Code an:
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot ist ein Beispiel für die Auswahl der Bereitstellung in der Cloudressource.":::
 
-So zeigen Sie eine Vorschau der Manifestdatei mithilfe der Befehlspapatte an:
+So zeigen Sie eine Vorschau der Manifestdatei mithilfe der Befehlspalette an:
 
 * Trigger **Teams: Bereitstellung in der Cloud über die** Befehlspalette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot ist ein Beispiel für die Bereitstellung einer Cloudressource mithilfe der Befehlspapatte.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot ist ein Beispiel für die Bereitstellung einer Cloudressource mithilfe der Befehlspalette.":::
 
 Es generiert die Konfiguration für die Remote-Teams-App und erstellt paket- und Vorschaumanifest unter `build/appPackage` dem Ordner.
 
@@ -350,7 +350,7 @@ The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
 >
-> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in the Developer Portal.
 > * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::

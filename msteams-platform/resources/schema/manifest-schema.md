@@ -3,12 +3,12 @@ title: Manifestschemareferenz
 description: In diesem Artikel verfügen Sie über die neueste Version des öffentlichen Manifestschemas für Microsoft Teams-Referenz, Schema und vollständiges Beispielmanifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376571"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499174"
 ---
 # <a name="app-manifest-schema-for-teams"></a>App-Manifestschema für Teams
 
@@ -643,9 +643,9 @@ Geben Sie die Graph-Connectorkonfiguration der App an. Wenn dies vorhanden ist, 
 
 **Optional** – Boolescher Wert
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+Gibt an, ob die Ladefortschritt angezeigt werden soll, während eine App oder Registerkarte geladen wird. Der Standardwert ist **false**.
 >[!NOTE]
->Wenn Sie für `showLoadingIndicator` im App-Manifest "true" auswählen, ändern Sie zum ordnungsgemäßen Laden der Seite die Inhaltsseiten Ihrer Registerkarten und Aufgabenmodule, wie im Dokument [Anzeigen eines systemeigenen Lade-Indikators](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+>Wenn Sie in Ihrem App-Manifest die Option "True" auswählen `showLoadingIndicator` , ändern Sie zum ordnungsgemäßen Laden der Seite die Inhaltsseiten Ihrer Registerkarten und Aufgabenmodule wie unter ["Anzeigen eines systemeigenen Ladeindikatordokuments](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) " beschrieben.
 
 ## <a name="isfullscreen"></a>isFullScreen
 

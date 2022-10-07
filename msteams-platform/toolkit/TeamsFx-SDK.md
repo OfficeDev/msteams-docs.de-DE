@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327587"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499167"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -179,6 +179,7 @@ Wenn Sie ein Azure-Funktions- oder Botprojekt mit dem Visual Studio Code Toolkit
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * sqlServerEndpoint (SQL_ENDPOINT) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
 * sqlUsername (SQL_USER_NAME) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
 * sqlPassword (SQL_PASSWORD) / wird nur verwendet, wenn eine SQL-Instanz vorhanden ist
@@ -254,9 +255,9 @@ Dieser Abschnitt enthält mehrere Codeausschnitte für allgemeine Szenarien im Z
     <details>
     <summary><b>Integration in das Microsoft Graph-Toolkit</b></summary>
 
-    Die [Mgt-Bibliothek (Microsoft Graph Toolkit)](https://aka.ms/mgt) ist eine Sammlung verschiedener Authentifizierungsanbieter und UI-Komponenten, die von Microsoft Graph unterstützt werden.
+    Die [Microsoft Graph-Toolkit-Bibliothek](https://aka.ms/mgt) ist eine Sammlung verschiedener Authentifizierungsanbieter und UI-Komponenten, die von Microsoft Graph unterstützt werden.
 
-    Das `@microsoft/mgt-teamsfx-provider` Paket macht die Klasse verfügbar, die die `TeamsFxProvider` Klasse zum Anmelden von Benutzern und zum Abrufen von Token für die Verwendung mit Graph verwendet `TeamsFx` .
+    Das `@microsoft/mgt-teamsfx-provider` Paket macht die Klasse verfügbar, die die `TeamsFxProvider` Klasse zum Anmelden von Benutzern und zum Abrufen von Token für die Verwendung mit Microsoft Graph verwendet `TeamsFx` .
 
     1. Sie können die folgenden erforderlichen Pakete installieren:
 
