@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Weitere Informationen zum Aktivieren und Konfigurieren von Apps für Besprechungen
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 7301003a6a69119ec1ca0658b90a53f2184dac38
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 396f1e1a2a085e18d4a8778998953e7eff517fbc
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243150"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490745"
 items:
 - durationInMinutes: 1
   content: >
@@ -59,7 +59,7 @@ items:
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="endgültige Ausgabe":::
 - title: Voraussetzungen
   durationInMinutes: 1
-  content: "Sie installieren die folgenden Tools und richten Ihre Entwicklungsumgebung ein: \n\n * [Microsoft Teams](https://teams.microsoft.com/) mit gültigem Konto \n * [Abrufen eines kostenlosen Teams-Entwicklermandanten](https://developer.microsoft.com/microsoft-365/dev-program)\n * [Neueste Version von .NET Core SDK](https://dotnet.microsoft.com/download)\n * [Neueste Version von Visual Studio](https://visualstudio.microsoft.com/downloads/)\n * [Neueste Version von nodejs](https://nodejs.org/en/download/)\n * [Neueste Version von ngrok](https://ngrok.com/download) oder einer gleichwertigen Tunnellösung\n \n   > [!NOTE]\n   > Melden Sie sich nach dem Herunterladen von ngrok an, und installieren Sie [authtoken](https://ngrok.com/download).\n \n Sie müssen über Kenntnisse der folgenden Technologien verfügen:\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [Neueste Version von ASP.NET Core](/aspnet/core/?view=aspnetcore-3.1)\n * [Neueste Version von React.JS](https://reactjs.org/tutorial/tutorial.html) \n \n"
+  content: "Sie installieren die folgenden Tools und richten Ihre Entwicklungsumgebung ein: \n\n  | &nbsp; | Installieren | Zum Benutzen... |\n  | --- | --- | --- |\n  | **Required** | &nbsp; | &nbsp; |\n  | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams für die Zusammenarbeit mit allen Personen, mit denen Sie zusammenarbeiten, über Apps für Chats, Besprechungen, Anrufe und alle an einem Ort.|\n  | &nbsp; | [Visual Studio 2022, Version 17.3](https://visualstudio.microsoft.com)<br> Installieren Sie einen der folgenden beiden Workloads:<br> • **ASP.NET und Webentwicklung** <br> • **Plattformübergreifende .NET Core-Entwicklung** | Sie können die Enterprise-Version in Visual Studio 2022 und die Workloads installieren. |\n  | &nbsp; | [Microsoft 365-Entwicklerkonto](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Zugriff auf das Teams-Konto mit den entsprechenden Berechtigungen zum Installieren einer App. |\n  | &nbsp; | [.NET Core SDK, Version 3.1](https://dotnet.microsoft.com/en-us/download) | Angepasste Bindungen für das lokale Debuggen und Azure Functions App-Bereitstellungen. Wenn Sie das .NET 3.1-SDK (oder höher) nicht global installiert haben, kann die portable Version installiert werden. |\n  | &nbsp; | [Node.js und NPM](https://nodejs.org/) | Back-End-JavaScript-Laufzeitumgebung. Verwenden Sie die neueste Version von v16 LTS.|\n  | &nbsp; | [ngrok](https://ngrok.com/download) | Teams-App-Features (Unterhaltungsbots, Nachrichtenerweiterungen und eingehende Webhooks) erfordern eingehende Verbindungen. Ein Tunnel verbindet Ihr Entwicklungssystem mit Teams. Sie ist nicht für Apps erforderlich, die nur Registerkarten enthalten. Dieses Paket wird im Projektverzeichnis installiert (mit npm `devDependencies`). |\n \n   > [!NOTE]\n   > Melden Sie sich nach dem Herunterladen von ngrok an, und installieren Sie [authtoken](https://ngrok.com/download).\n \n Sie müssen über Kenntnisse der folgenden Technologien verfügen:\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [Neueste Version von ASP.NET Core](/aspnet/core/?view=aspnetcore-3.1)\n * [Neueste Version von React.JS](https://reactjs.org/tutorial/tutorial.html) \n \n"
 - title: Einrichten einer lokalen Umgebung
   durationInMinutes: 1
   content: "1. Öffnen Sie [Microsoft Teams-Beispiele](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n1. Wählen Sie **\"Code**\" aus.\n1. Wählen Sie im Dropdownmenü \" **Mit GitHub-Desktop öffnen**\" aus.\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-bot-builder-samples.png\" alt-text=\"Bot\":::\n\n1. Wählen Sie **\"Klonen**\" aus. \n\n   > [!NOTE]\n   > Wenn die Fehlermeldung \"Dateiname zu lang\" auftritt, wenden Sie den Git-Befehl \"git config --system core.longpaths true\" in Ihrem Administratorterminal ihrer Wahl an.\n"
