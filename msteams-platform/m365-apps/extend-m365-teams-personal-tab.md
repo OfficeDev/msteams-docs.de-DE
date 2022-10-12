@@ -1,16 +1,16 @@
 ---
 title: Ausweiten einer Microsoft Teams-App für persönliche Registerkarten auf Microsoft 365
-description: Aktualisieren Sie Ihre persönliche App so, dass sie in Outlook und Office ausgeführt wird. Aktualisieren Sie das Manifest und das TeamsJS SDK V2, ändern Sie die Zustimmungssicherheit, aktualisieren Sie die Azure AD-App-Registrierung für SSO.
-ms.date: 05/24/2022
+description: Erfahren Sie, wie Sie Ihre persönliche Registerkarten-App so aktualisieren, dass sie zusätzlich zu Microsoft Teams in Outlook und Office ausgeführt wird.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243507"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537591"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ausweiten einer persönlichen Microsoft Teams-Registerkarte auf Microsoft 365
 
@@ -35,6 +35,7 @@ Für dieses Lernprogramm benötigen Sie Folgendes:
 * Einen Sandkastenmandanten für das Microsoft 365-Entwicklerprogramm
 * Ihren Sandkastenmandanten, der in *gezielten Office 365-Releases* registriert ist
 * Einen Computer mit Office-Apps, die über den Microsoft 365 Apps-*Betakanal* installiert sind
+* (Optional) Ein Android-Gerät oder -Emulator, auf dem die Office-App für Android installiert und im *Betaprogramm* registriert ist
 * (Optional) Die [Microsoft Teams-Toolkit-Erweiterung](https://aka.ms/teams-toolkit) für Microsoft Visual Studio Code zur Aktualisierung Ihres Codes
 
 > [!div class="nextstepaction"]
@@ -46,7 +47,7 @@ Wenn Sie über eine vorhandene persönliche Registerkarten-App verfügen, erstel
 
 Wenn Sie beispielcode zum Abschließen dieses Lernprogramms verwenden möchten, führen Sie die Setupschritte im [Todo-Listenbeispiel aus,](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) um eine persönliche Registerkarten-App mithilfe der Teams-Toolkit-Erweiterung für Visual Studio Code zu erstellen, und kehren Sie dann zu diesem Artikel zurück, um sie für Microsoft 365 zu aktualisieren.
 
-Alternativ können Sie im folgenden Schnellstartabschnitt eine einfache App für einmaliges Anmelden ( *Hello World* ) verwenden, die Microsoft 365 bereits aktiviert hat, und dann zum [Querladen Ihrer App in Teams](#sideload-your-app-in-teams) springen.
+Alternativ können Sie im folgenden [Schnellstartabschnitt](#quickstart) eine einfache App für einmaliges Anmelden (*Hello World*) verwenden, die Microsoft 365 bereits aktiviert hat, und dann zum [Querladen Ihrer App in Teams](#sideload-your-app-in-teams) springen.
 
 ### <a name="quickstart"></a>Schnellstart
 
@@ -93,7 +94,7 @@ Wenn Sie das Microsoft Teams-Toolkit zum Erstellen Ihrer persönlichen App verwe
 
 Um in Outlook und Office ausgeführt werden zu können, muss Ihre App auf das npm-Paket `@microsoft/teams-js@2.0.0` (oder höher) verweisen. Während Code mit Versionen auf unterer Ebene in Outlook und Office unterstützt wird, werden Veraltetkeitswarnungen protokolliert, und die Unterstützung für Versionen unterer Ebene von TeamsJS in Outlook und Office wird schließlich eingestellt.
 
-Sie können das Teams-Toolkit verwenden, um die erforderlichen Codeänderungen zum Upgrade von 1.x TeamsJS-Versionen auf TeamsJS Version 2.0.0 zu identifizieren und zu automatisieren. Alternativ können Sie dieselben Schritte manuell ausführen. Weitere Informationen finden Sie im [JavaScript-Client-SDK für Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) .
+Sie können das Teams-Toolkit verwenden, um die erforderlichen Codeänderungen zum Upgrade von 1.x TeamsJS-Versionen auf TeamsJS Version 2.x.x zu identifizieren und zu automatisieren. Alternativ können Sie dieselben Schritte manuell ausführen. Weitere Informationen finden Sie im [JavaScript-Client-SDK für Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) .
 
 1. Öffnen Sie die *Befehlspalette*: `Ctrl+Shift+P`.
 1. Führen Sie den Befehl `Teams: Upgrade Teams JS SDK and code references` aus.
@@ -102,8 +103,8 @@ Nach Abschluss der Datei *"package.json* " wird auf die Datei "package.json" (od
 
 > [!div class="checklist"]
 >
-> * Importieren von Anweisungen für teams-js@2.0.0
-> * [Funktions-, Enumerations- und Schnittstellenaufrufe](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) für teams-js@2.0.0
+> * Importieren von Anweisungen für teams-js@2.x.x
+> * [Funktions-, Enumerations- und Schnittstellenaufrufe](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) für teams-js@2.x.x
 > * `TODO` Kommentarerinnerungen, die Bereiche kennzeichnen, die von Änderungen der [Kontextschnittstelle](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) betroffen sein könnten
 > * `TODO` Kommentarerinnerungen zum [Konvertieren von Rückruffunktionen in Zusagen](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -240,7 +241,7 @@ Lesen Sie den [Microsoft 365-Support](../tabs/how-to/using-teams-client-sdk.md#m
 
 Eine Allgemeine Zusammenfassung der Microsoft 365-Host- und Plattformunterstützung für Teams-Apps finden Sie unter [Erweitern von Teams-Apps in Microsoft 365](overview.md).
 
-Sie können die Hostunterstützung einer bestimmten Funktion zur Laufzeit überprüfen, indem Sie die Funktion für diese `isSupported()` Funktion (Namespace) aufrufen und das App-Verhalten entsprechend anpassen. Auf diese Weise kann Ihre App benutzeroberflächen und Funktionen in Hosts, die sie unterstützen, aufhellen und in Hosts, die dies nicht unterstützen, eine ansprechende Fallbackerfahrung bieten. Weitere Informationen finden Sie unter ["Unterscheiden der App-Erfahrung"](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+Sie können die Hostunterstützung einer bestimmten Funktion zur Laufzeit überprüfen, indem Sie die Funktion für diese `isSupported()` Funktion (Namespace) aufrufen und das App-Verhalten entsprechend anpassen. Auf diese Weise kann Ihre App benutzeroberflächen und Funktionen in Hosts aufhellen, die sie unterstützen, und eine ansprechende Fallback-Erfahrung in Hosts bereitstellen, die dies nicht sind. Weitere Informationen finden Sie unter ["Unterscheiden der App-Erfahrung"](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
 Verwenden Sie die [Kanäle der Microsoft Teams-Entwicklercommunity](/microsoftteams/platform/feedback), um Probleme zu melden und Feedback zu geben.
 
@@ -280,11 +281,11 @@ Das Debuggen mit dem Teams-Toolkit (`F5`) wird von der Office-App für Android n
 
 | **Beispielname** | **Beschreibung** | **Node.js** |
 |---------------|--------------|--------|
-| Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Todoliste | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert nur in Teams (verwenden Sie diese Beispiel-App, um den in diesem Lernprogramm beschriebenen Upgradeprozess auszuprobieren). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Todo-Liste (Microsoft 365) | Bearbeitbare Todoliste mit SSO, die mit React und Azure Functions erstellt wurde. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Bild-Editor (Microsoft 365) | Erstellen, Bearbeiten, Öffnen und Speichern von Bildern mithilfe von Microsoft Graph-API. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Beispielstartseite (Microsoft 365) | Veranschaulicht die SSO-Authentifizierung und die TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [Anzeigen](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Northwind Orders-App | Veranschaulicht die Verwendung von Microsoft TeamsJS SDK V2, um die Teams-Anwendung auf andere M365-Host-Apps zu erweitern. Funktioniert in Teams, Outlook, Office. Für Mobilgeräte optimiert.| [Anzeigen](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Beispielstartseite (Microsoft 365) | Veranschaulicht die SSO-Authentifizierung und die TeamsJS SDK-Funktionen, die in verschiedenen Hosts verfügbar sind. Funktioniert in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders-App | Veranschaulicht die Verwendung von Microsoft TeamsJS SDK V2, um die Teams-Anwendung auf andere M365-Host-Apps zu erweitern. Funktioniert in Teams, Outlook, Office. Für Mobilgeräte optimiert.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
