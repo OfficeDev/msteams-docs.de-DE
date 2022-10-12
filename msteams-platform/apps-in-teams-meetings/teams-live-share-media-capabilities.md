@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 0ab0bf436ce3ca27b55a68ea2c80f1451f4d967e
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425586"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552493"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share-Medienfunktionen
 
@@ -26,8 +26,8 @@ Das Live Share SDK ermöglicht eine stabile **Mediensynchronisierung** für jede
 So fügen Sie ihrer Anwendung mithilfe von NPM die neueste Version des SDK hinzu:
 
 ```bash
-npm install @microsoft/live-share --save
-npm install @microsoft/live-share-media --save
+npm install @microsoft/live-share@next --save
+npm install @microsoft/live-share-media@next --save
 ```
 
 ODER
@@ -35,8 +35,8 @@ ODER
 So fügen Sie die neueste Version des SDK mit [Yarn](https://yarnpkg.com/) zu Ihrer Anwendung hinzu:
 
 ```bash
-yarn add @microsoft/live-share
-yarn add @microsoft/live-share-media
+yarn add @microsoft/live-share@next
+yarn add @microsoft/live-share-media@next
 ```
 
 ## <a name="media-sync-overview"></a>Übersicht über die Mediensynchronisierung
@@ -45,8 +45,8 @@ Das Live Share-SDK verfügt über zwei primäre Klassen, die sich auf die Medien
 
 | Klassen                                                                                        | Beschreibung                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralMediaSession](/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | Benutzerdefiniertes kurzlebiges Objekt, das entwickelt wurde, um Medientransportsteuerelemente und den Wiedergabestatus in unabhängigen Medienstreams zu koordinieren.                          |
-| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronisiert alle Objekte, die die `IMediaPlayer` Schnittstelle implementieren , einschließlich HTML5 `<video>` und `<audio>` -- mithilfe `EphemeralMediaSession`von . |
+| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | Benutzerdefiniertes Liveobjekt zum Koordinieren von Medientransportsteuerelementen und Wiedergabestatus in unabhängigen Medienstreams.                          |
+| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronisiert alle Objekte, die die `IMediaPlayer` Schnittstelle implementieren , einschließlich HTML5 `<video>` und `<audio>` -- mithilfe `LiveMediaSession`von . |
 
 Beispiel:
 
@@ -61,19 +61,15 @@ Beispiel:
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession } from "@microsoft/live-share-media";
-
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession } from "@microsoft/live-share-media";
 
 // Setup the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { mediaSession } = container.initialObjects;
 
 // Get the player from your document and create synchronizer
@@ -88,21 +84,17 @@ await mediaSession.initialize(allowedRoles);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { ContainerSchema } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
-const mediaSession = container.initialObjects.mediaSession as EphemeralMediaSession;
+const { container } = await liveShare.joinContainer(schema);
+const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;
@@ -115,7 +107,7 @@ await mediaSession.initialize(allowedRoles);
 
 ---
 
-Die `EphemeralMediaSession` App lauscht automatisch auf Änderungen am Wiedergabezustand der Gruppe. `MediaPlayerSynchronizer` überwacht zustandsänderungen, die von `EphemeralMediaSession` ausgegeben werden, und wendet sie auf das bereitgestellte `IMediaPlayer` Objekt an, z. B. ein HTML5 `<video>` oder `<audio>` Element. Um Wiedergabestatusänderungen zu vermeiden, die ein Benutzer nicht absichtlich initiiert hat, z. B. ein Pufferereignis, müssen Transportsteuerelemente über den Synchronizer und nicht direkt über den Player aufgerufen werden.
+Die `LiveMediaSession` App lauscht automatisch auf Änderungen am Wiedergabezustand der Gruppe. `MediaPlayerSynchronizer` überwacht zustandsänderungen, die von `LiveMediaSession` ausgegeben werden, und wendet sie auf das bereitgestellte `IMediaPlayer` Objekt an, z. B. ein HTML5 `<video>` oder `<audio>` Element. Um Wiedergabestatusänderungen zu vermeiden, die ein Benutzer nicht absichtlich initiiert hat, z. B. ein Pufferereignis, müssen Transportsteuerelemente über den Synchronizer und nicht direkt über den Player aufgerufen werden.
 
 Beispiel:
 
@@ -156,13 +148,13 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!NOTE]
-> Sie können das `EphemeralMediaSession` Objekt zwar zum manuellen Synchronisieren von Medien verwenden, es wird jedoch im Allgemeinen empfohlen, das `MediaPlayerSynchronizer`Objekt zu verwenden. Abhängig vom Player, den Sie in Ihrer App verwenden, müssen Sie möglicherweise einen Stellvertretungsshim erstellen, damit die Schnittstelle Ihres Webplayers der [IMediaPlayer-Schnittstelle](/javascript/api/@microsoft/live-share-media/imediaplayer) entspricht.
+> Sie können das `LiveMediaSession` Objekt zwar zum manuellen Synchronisieren von Medien verwenden, es wird jedoch im Allgemeinen empfohlen, das `MediaPlayerSynchronizer`Objekt zu verwenden. Abhängig vom Player, den Sie in Ihrer App verwenden, müssen Sie möglicherweise einen Stellvertretungsshim erstellen, damit die Schnittstelle Ihres Webplayers der [IMediaPlayer-Schnittstelle](/javascript/api/@microsoft/live-share-media/imediaplayer) entspricht.
 
 ## <a name="suspensions-and-wait-points"></a>Unterbrechungen und Wartepunkte
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Screenshot, der eine Ansetzungssynchronisierung mit dem Referenten zeigt.":::
 
-Wenn Sie die Synchronisierung für das `EphemeralMediaSession`-Objekt vorübergehend anhalten möchten, können Sie Unterbrechungen verwenden. Ein [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension)-Objekt ist standardmäßig lokal, was in Fällen hilfreich sein kann, in denen ein Benutzer etwas nachholen möchte, das er verpasst hat, eine Pause einlegen möchte usw. Wenn der Benutzer die Unterbrechung beendet, wird die Synchronisierung automatisch fortgesetzt.
+Wenn Sie die Synchronisierung für das `LiveMediaSession`-Objekt vorübergehend anhalten möchten, können Sie Unterbrechungen verwenden. Ein [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension)-Objekt ist standardmäßig lokal, was in Fällen hilfreich sein kann, in denen ein Benutzer etwas nachholen möchte, das er verpasst hat, eine Pause einlegen möchte usw. Wenn der Benutzer die Unterbrechung beendet, wird die Synchronisierung automatisch fortgesetzt.
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -235,18 +227,18 @@ document.getElementById("ready-up-button")!.onclick = () => {
 
 ## <a name="audio-ducking"></a>Audio-Ducking
 
-Das Live Share-SDK unterstützt intelligentes Audio-Ducking. Sie können das _experimentelle_ Feature in Ihrer Anwendung verwenden, indem Sie Folgendes zu Ihrem Code hinzufügen:
+Das Live Share-SDK unterstützt intelligentes Audio-Ducking. Sie können das Feature in Ihrer Anwendung verwenden, indem Sie Folgendes zu Ihrem Code hinzufügen:
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -267,13 +259,13 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer: NodeJS.Timeout | undefined;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: microsoftTeams.meeting.ISpeakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -317,24 +309,23 @@ Fügen Sie ihrem App-Manifest außerdem die folgenden [RSC-Berechtigungen](/micr
 ```
 
 > [!NOTE]
-> Die für das Audio-Ducking verwendete `registerSpeakingStateChangeHandler`-API funktioniert derzeit nur für nicht-lokale Benutzer, die sprechen.
+> Die `registerSpeakingStateChangeHandler` für Audio-Ducking verwendete API funktioniert derzeit nur auf dem Microsoft Teams-Desktop und in geplanten Besprechungstypen und Besprechungsterminen.
 
 ## <a name="code-samples"></a>Codebeispiele
 
 | Beispielname          | Beschreibung                                                                                                                               | JavaScript                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| React-Video          | Einfaches Beispiel, das zeigt, wie das EphemeralMediaSession-Objekt mit HTML5-Video funktioniert.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
+| React-Video          | Einfaches Beispiel, das zeigt, wie das LiveMediaSession-Objekt mit HTML5-Video funktioniert.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
 | React-Medienvorlage | Ermöglichen Sie es allen angeschlossenen Clients, Videos gemeinsam anzusehen, eine gemeinsame Wiedergabeliste zu erstellen, zu übertragen, wer die Kontrolle hat und das Video mit Anmerkungen zu versehen. | [Anzeigen](https://aka.ms/liveshare-mediatemplate) |
 
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Agiles Poker-Tutorial](../sbs-teams-live-share.yml)
+> [Live-Freigabe-Canvas](teams-live-share-canvas.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Live Share SDK – FAQ](teams-live-share-faq.md)
 - [Live Share SDK-Referenzdokumente](/javascript/api/@microsoft/live-share/)
 - [Referenzdokumentation zum Live Share Media SDK](/javascript/api/@microsoft/live-share-media/)
-- [Referenzdokumente](https://aka.ms/livesharedocs)
 - [Teams-Apps in Besprechungen](teams-apps-in-meetings.md)

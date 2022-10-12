@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780814"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552574"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller Code-Lernprogramm
 
@@ -28,7 +28,7 @@ In der Dice Roller-Beispiel-App wird Benutzern ein Würfel mit einer Schaltfläc
 
 ## <a name="set-up-the-application"></a>Einrichten der Anwendung
 
-Beginnen Sie mit dem Importieren der erforderlichen Module. Das Beispiel verwendet den [SharedMap-DDS](https://fluidframework.com/docs/data-structures/map/) aus dem Fluid Framework und den [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) aus dem Live Share SDK. Das Beispiel unterstützt die Erweiterbarkeit von Teams-Besprechungen, daher müssen wir das [Teams-Client-SDK](https://github.com/OfficeDev/microsoft-teams-library-js) einschließen. Schließlich ist das Beispiel so konzipiert, dass es sowohl lokal als auch in einer Teams-Besprechung ausgeführt wird. Daher müssen wir einige zusätzliche Fluid Framework-Komponenten einschließen, [die zum lokalen Testen des Beispiels](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) erforderlich sind.
+Beginnen Sie mit dem Importieren der erforderlichen Module. Im Beispiel wird der [SharedMap-DDS](https://fluidframework.com/docs/data-structures/map/) aus dem Fluid Framework und der [LiveShareClient-Klasse](/javascript/api/@microsoft/live-share/liveshareclient) verwendet. Das Beispiel unterstützt die Erweiterbarkeit von Teams-Besprechungen, daher müssen wir das [Teams-Client-SDK](https://github.com/OfficeDev/microsoft-teams-library-js) einschließen. Schließlich ist das Beispiel so konzipiert, dass es sowohl lokal als auch in einer Teams-Besprechung ausgeführt wird. Daher müssen wir einige zusätzliche Fluid Framework-Komponenten einschließen, [die zum lokalen Testen des Beispiels](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) erforderlich sind.
 
 Anwendungen erstellen Fluid-Container mithilfe eines Schemas, das eine Reihe von _anfänglichen Objekten_ definiert, die für den Container verfügbar sind. Im Beispiel wird eine SharedMap verwendet, um den letzten Würfelwert zu speichern, der gerollt wurde. Weitere Informationen finden Sie unter [Datenmodellierung](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -38,9 +38,8 @@ Zusätzlich zum `inTeams=true`-Abfrageparameter können wir einen `view=content|
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { app, pages } from "@microsoft/teams-js";
-import { LOCAL_MODE_TENANT_ID } from "@fluidframework/azure-client";
+import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -100,36 +99,26 @@ start().catch((error) => console.error(error));
 
 Nicht alle Ihre App-Ansichten müssen zusammenarbeiten. Die `stage`-Ansicht benötigt _immer_ Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt _möglicherweise_ Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte _niemals_ Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
 
-Der Beitritt zum Container für das Meeting ist so einfach wie das Erstellen eines neuen [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) und das anschließende Aufrufen seiner Methode [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer). Wenn Sie lokal ausgeführt werden, müssen Sie eine benutzerdefinierte Verbindungskonfiguration mit einem speziellen `LOCAL_MODE_TENANT_ID` übergeben. Andernfalls ist der Beitritt zu einem lokalen Container mit dem Beitritt zu einem Container in Teams identisch.
+Das Beitreten zum Container für die Besprechung ist so einfach wie das Initialisieren des [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) und das Aufrufen der [joinContainer()-](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) Methode.
+
+Wenn Sie lokal ausgeführt werden, können Sie [testLiveShare](/javascript/api/@microsoft/live-share/testliveshare) importieren und dessen [initialize()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) -Methode aufrufen. Verwenden Sie dann die [joinContainer()-](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) Methode, um eine Verbindung mit einer Sitzung herzustellen.
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
-  let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    client = new TeamsFluidClient();
-  } else {
-    // Create client and configure for testing
-    client = new TeamsFluidClient({
-      connection: {
-        type: "local",
-        tokenProvider: new InsecureTokenProvider("", {
-          id: "123",
-          name: "Test User",
-        }),
-        endpoint: "http://localhost:7070",
-      },
-    });
+    const liveShare = new LiveShareClient();
+    // Join container
+    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
   }
-
-  // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  // Create client and configure for testing
+  testLiveShare.initialize();
+  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-> [!NOTE]
-> Beim lokalen Testen aktualisiert TeamsFluidClient die Browser-URL so, dass sie die ID des erstellten Testcontainers enthält. Wenn Sie diesen Link auf andere Browserregisterkarten kopieren, wird TeamsFluidClient dem erstellten Testcontainer hinzugefügt. Wenn die Änderung der Anwendungs-URL den Betrieb der Anwendung beeinträchtigt, kann die zum Speichern der Testcontainer-ID verwendete Strategie mithilfe der Optionen [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) und [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) angepasst werden, die an TeamsFluidClient übergeben werden.
+Aktualisiert beim lokalen Testen die Browser-URL so, `testLiveShare` dass sie die ID des erstellten Testcontainers enthält. Wenn Sie diesen Link auf andere Browserregisterkarten kopieren, wird der `testLiveShare` erstellte Testcontainer verknüpft. Wenn die Änderung der Anwendungs-URL den Betrieb der Anwendung beeinträchtigt, kann die Strategie zum Speichern der Testcontainer-ID mithilfe der [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) - und [getLocalTestContainerId-Optionen](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) angepasst werden, die an `LiveShareClient`übergeben werden.
 
 ## <a name="write-the-stage-view"></a>Schreiben der Phasenansicht
 
@@ -200,7 +189,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>Schreiben der Seitenbereichsansicht
 
-Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel dieser Ansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App für die Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht _und_ der Seitenbereichsansicht aller Benutzer kommunizieren.
+Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel dieser Ansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App für die Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht _und_ der Seitenbereichsansicht aller Benutzer kommunizieren.
 
 In der Seitenbereichsansicht des Beispiels wird der Benutzer aufgefordert, die Schaltfläche "Freigeben in Phase" auszuwählen.
 
@@ -228,8 +217,8 @@ function renderSidePanel(elem) {
 
 Die Einstellungsansicht, die über `configurationUrl` in Ihrem App-Manifest geladen wird, wird einem Benutzer angezeigt, wenn er Ihre App zum ersten Mal einer Teams-Besprechung hinzufügt. In dieser Ansicht kann der Entwickler `contentUrl` für die Registerkarte konfigurieren, die basierend auf Benutzereingaben an die Besprechung angeheftet ist. Diese Seite ist derzeit auch dann erforderlich, wenn zum Festlegen des `contentUrl` keine Benutzereingabe erforderlich ist.
 
-> [!IMPORTANT]
-> Der [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) des Live Share SDK wird im Kontext der Registerkarte "`settings`" nicht unterstützt.
+> [!NOTE]
+> [JoinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) der Live-Freigabe wird im Registerkartenkontext `settings` nicht unterstützt.
 
 In der Einstellungsansicht des Beispiels wird der Benutzer aufgefordert, die Schaltfläche "Speichern" auszuwählen.
 
@@ -360,7 +349,7 @@ Nachdem Sie Ihren Code bereitgestellt haben, können Sie [Teams Toolkit](../tool
 
 | Beispielname | Beschreibung                                                     | JavaScript                                                                           |
 | :---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Dice Roller | Ermöglichen Sie allen verbundenen Clients, einen Würfel zu rollen und das Ergebnis anzuzeigen. | [Anzeigen](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>Nächster Schritt
 

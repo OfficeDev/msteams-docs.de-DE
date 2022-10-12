@@ -6,28 +6,81 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 3738ee1037c87f283fd31ebdaba53b57f1784bb2
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425624"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552528"
 ---
 ---
 
 # <a name="live-share-sdk"></a>Live Share SDK
 
-> [!NOTE]
-> Das Live Share SDK ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar. Sie müssen Teil der öffentlichen Entwicklervorschau sein, damit Microsoft Teams Live Share verwenden kann.
+> [!VIDEO https://www.youtube.com/embed/971YIvosuUk]
 
-Live Share ist ein SDK, das entwickelt wurde, um Teams-Apps in kollaborative Mehrbenutzererlebnisse umzuwandeln, ohne einen dedizierten Back-End-Code schreiben zu müssen. Live Share integriert Besprechungen nahtlos in [Fluid Framework](https://fluidframework.com/). Fluid Framework ist eine Sammlung von Client-Bibliotheken zum Verteilen und Synchronisieren von freigegeben Status. Live Share bietet ein kostenloses, vollständig verwaltetes und einsatzbereites [Azure Fluid Relay](/azure/azure-fluid-relay/), das durch die Sicherheit und globale Reichweite von Teams unterstützt wird.
+Live Share ist ein SDK, das entwickelt wurde, um Teams-Apps in kollaborative Mehrbenutzererlebnisse umzuwandeln, ohne einen dedizierten Back-End-Code schreiben zu müssen. Mit Live Share können Ihre Benutzer während Besprechungen gemeinsam Besprechungen ansehen, gemeinsam erstellen und gemeinsam bearbeiten.
+
+Manchmal reicht die Bildschirmfreigabe einfach nicht aus, weshalb Microsoft Tools wie PowerPoint Live und Whiteboard direkt in Teams erstellt hat. Indem Sie Ihre Webanwendung direkt in den Mittelpunkt der Besprechungsoberfläche stellen, können Ihre Benutzer während Besprechungen und Anrufen nahtlos zusammenarbeiten.
 
 > [!div class="nextstepaction"]
 > [Erste Schritte](teams-live-share-quick-start.md)
 
-Live Share enthält eine `TeamsFluidClient` Klasse zum Herstellen einer Verbindung mit einem speziellen Fluid-Container, der jeder Besprechung in einigen Codezeilen zugeordnet ist. Zusätzlich zu den von Fluid Framework bereitgestellten Datenstrukturen unterstützt Live Share auch einen neuen Satz von DDS-Klassen (Distributed Data Structure), um das Erstellen von Anwendungen für gängige Besprechungsszenarien, wie z. B. die Wiedergabe gemeinsam genutzter Medien, zu vereinfachen.
+## <a name="feature-overview"></a>Featureübersicht
+
+Live Share verfügt über drei Pakete, die unbegrenzte Szenarien für die Zusammenarbeit unterstützen. Diese Pakete machen eine Reihe verteilter Datenstrukturen (Distributed Data Structures, DDS) verfügbar, einschließlich primitiver Bausteine und schlüsselfertiger Szenarien.
+
+Live Share integriert Besprechungen nahtlos in [Fluid Framework](https://fluidframework.com/). Fluid Framework ist eine Sammlung von Client-Bibliotheken zum Verteilen und Synchronisieren von freigegeben Status. Live Share bietet ein kostenloses, vollständig verwaltetes und einsatzbereites [Azure Fluid Relay](/azure/azure-fluid-relay/), das durch die Sicherheit und globale Reichweite von Teams unterstützt wird.
+
+### <a name="live-share-core"></a>Live Share Core
+
+Live Share ermöglicht die Verbindung mit einem speziellen FluidContainer, der jeder Besprechung in einigen Codezeilen zugeordnet ist. Zusätzlich zu den von Fluid Framework bereitgestellten Datenstrukturen unterstützt Live Share auch einen neuen Satz von DDS-Klassen, um die Synchronisierung des App-Zustands in Besprechungen zu vereinfachen.
+
+Zu den vom Live Share-Kernpaket unterstützten Features gehören:
+
+- Nehmen Sie an der Live-Freigabesitzung einer Besprechung mit teil `LiveShareClient`.
+- Nachverfolgen der Anwesenheit von Besprechungen und Synchronisieren von Benutzermetadaten mit `LivePresence`.
+- Senden Von Echtzeitereignissen an andere Clients in der Sitzung mit `LiveEvent`.
+- Koordinieren Sie den App-Zustand, der verschwindet, wenn Benutzer die Sitzung mit `LiveState`verlassen.
+- Synchronisieren eines Countdown-Timers mit `LiveTimer`.
+- Nutzen Sie alle Funktionen von Fluid Framework, z `SharedMap` . B. und `SharedString`.
+
+Weitere Informationen zu diesem Paket finden Sie auf der [Seite "Kernfunktionen"](./teams-live-share-capabilities.md).
+
+### <a name="live-share-media"></a>Live Teilen von Medien
 
 :::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share Video-Sharing-Erfahrung":::
+
+Video und Audio sind wichtige Bestandteile der modernen Welt und des Arbeitsplatzes. Live Share Media ermöglicht **die Mediensynchronisierung** für jeden Media Player mit nur wenigen Codezeilen. Durch die Synchronisierung von Medien auf der Ebene der Zustands- und Transportsteuerelemente des Players können Sie Ansichten einzeln zuordnen und gleichzeitig die höchstmögliche Qualität bereitstellen, die über Ihre App verfügbar ist. Da Microsoft Ihre Medieninhalte nicht erneut aktualisiert, bleiben Ihre Lizenzierungs- und Zugriffsanforderungen erhalten.
+
+Zu den von Live Share-Medien unterstützten Features gehören:
+
+- Synchronisieren des Media Player-Zustands und Nachverfolgen mit `MediaPlayerSynchronizer`.
+- Intelligente Anpassungen der Medienlautstärke, wenn Benutzer während der Besprechung sprechen.
+- Begrenzen Sie, welche Benutzer den Spielerstatus ändern können.
+- Anhalten und Fortsetzen der Mediensynchronisierung im Flug oder an geplanten Wartepunkten.
+
+Weitere Informationen zu diesem Paket finden Sie auf der [Live Share-Medienseite](./teams-live-share-media-capabilities.md).
+
+> [!NOTE]
+> Live-Freigaben übertragen keine Medieninhalte erneut. Es wurde für die Verwendung mit eingebetteten Webplayern wie HTML5 `<video>` oder Azure Media Player entwickelt.
+
+### <a name="live-share-canvas"></a>Live-Freigabe-Canvas
+
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+
+Bei der Zusammenarbeit in Besprechungen ist es wichtig, dass Benutzer auf Inhalte auf dem Bildschirm hinweisen und diese hervorheben können. Live Share Canvas erleichtert das Hinzufügen von Freihandeingaben, Laserpointern und Cursorn zu Ihrer App für eine nahtlose Zusammenarbeit.
+
+Zu den von der Live-Freigabe-Canvas unterstützten Features gehören:
+
+- Fügen Sie Ihrer App eine Zusammenarbeit `<canvas>` mit `LiveCanvas`hinzu.
+- Vermitteln Sie Ideen mithilfe der Stift-, Textmarker-, Linien- und Pfeiltools.
+- Präsentieren Sie effektiv mit dem Laserpointer.
+- Folgen Sie den Mauscursorn in Echtzeit.
+- Konfigurieren sie Einstellungen für variable Geräte und Ansichtszustände.
+- Verwenden Sie vollständig unterstützte Maus-, Touch- und Eingabestifteingaben.
+
+Weitere Informationen zu diesem Paket finden Sie auf der [Canvasseite "Live-Freigabe"](./teams-live-share-canvas.md).
 
 ## <a name="why-build-apps-with-live-share"></a>Warum Apps mit Live Share erstellen?
 
@@ -38,11 +91,9 @@ Hier sind einige der wichtigsten Vorteile des Live Share SDK:
 - Problemloses Sitzungsmanagement und Sicherheit
 - Zustandsbehaftete und zustandslose verteilte Datenstrukturen
 - Medienerweiterungen zum einfachen Synchronisieren von Video und Audio
+- Freihandeingabe mit Drehtaste, Laserpointer und Cursor.
 - Besprechungsberechtigungen mithilfe der Rollenüberprüfung respektieren
 - Kostenloser und vollständig verwalteter Dienst mit geringer Latenz
-- Intelligentes Audio-Ducking
-
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 
 Um zu verstehen, ob Live Share für Ihr Szenario für die Zusammenarbeit geeignet ist, ist es hilfreich, die Unterschiede zwischen Live Share und anderen Frameworks für die Zusammenarbeit zu verstehen, einschließlich:
 
@@ -55,6 +106,8 @@ Um zu verstehen, ob Live Share für Ihr Szenario für die Zusammenarbeit geeigne
 Websockets sind eine allgegenwärtige Technologie für die Kommunikation in Echtzeit im Web, und einige Apps bevorzugen möglicherweise ein eigenes benutzerdefiniertes Websocket-Back-End. Im Gegensatz zu REST-APIs behalten Websockets eine offene Verbindung zwischen einem Server und Clients in einer Sitzung bei.
 
 Wie andere benutzerdefinierte API-Dienste umfassen die Anforderungen in der Regel Authentifizierungssitzungen, regionale Zuordnung, Wartung und Skalierung. Viele Szenarien für die Zusammenarbeit erfordern auch die Aufrechterhaltung des Sitzungszustands auf dem Server, was Speicherinfrastruktur, Konfliktauflösungen und vieles mehr erfordert.
+
+Durch die Verwendung von Live Share erhalten Sie die gesamte Leistungsfähigkeit von Websockets ohne den Aufwand.
 
 ### <a name="azure-fluid-relay"></a>Azure Fluid Relay
 
@@ -69,14 +122,14 @@ Live Share bietet einen schlüsselfertigen Azure Fluid Relay-Dienst, der von der
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { presence: EphemeralPresence },
+  initialObjects: { presence: LivePresence },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -84,15 +137,15 @@ const { container } = await client.joinContainer(schema);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
-  initialObjects: { presence: EphemeralPresence },
+  initialObjects: { presence: LivePresence },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -121,6 +174,9 @@ Weitere Informationen finden Sie im benutzerdefinierten Leitfaden zum Azure Flui
 | Während einer Marketingbewertung möchte ein Benutzer Feedback zu seiner neuesten Videobearbeitung sammeln. | Der Benutzer teilt das Video in der Besprechungsphase und startet das Video. Bei Bedarf hält der Benutzer das Video an, um die Szene zu besprechen, und die Teilnehmer zeichnen über Teile des Bildschirms, um wichtige Punkte hervorzuheben. |
 | Ein Projektmanager spielt agiles Poker mit ihrem Team während der Planung.                    | Der Manager teilt eine Agile Poker-App für die Besprechungsphase, die es ermöglicht, das Planungsspiel zu spielen, bis das Team konsensfähig ist.                                                                        |
 | Ein Finanzberater überprüft PDF-Dokumente mit Kunden vor der Unterzeichnung.                  | Der Finanzberater teilt den PDF-Vertrag mit der Besprechungsphase. Alle Teilnehmer können sich gegenseitig Cursor und hervorgehobenen Text in der PDF-Datei sehen, nach dem beide Parteien die Vereinbarung unterzeichnen.        |
+
+> [!IMPORTANT]
+> Live Share ist unter der [Microsoft Live Share SDK-Lizenz](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE) lizenziert. Um diese Funktionen in Ihrer App nutzen zu können, müssen Sie diese Bedingungen zuerst lesen und akzeptieren.
 
 ## <a name="next-step"></a>Nächster Schritt
 

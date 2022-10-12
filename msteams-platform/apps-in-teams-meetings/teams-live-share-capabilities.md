@@ -1,26 +1,23 @@
 ---
 title: Live Share – Erste Schritte
 author: surbhigupta
-description: In diesem Modul erfahren Sie mehr über Live Share SDK-Funktionen, RSC-Berechtigungen und kurzlebige Datenstrukturen.
+description: In diesem Modul erfahren Sie mehr über die Funktionen des Live Share SDK, RSC-Berechtigungen und Live-Datenstrukturen.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 35b39f062bcdaf79e0c32d33260dbd0940a4fe2c
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 6d2e1dc9d49ab1ec551fd814ba8baa330e9ace3f
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425603"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552549"
 ---
 # <a name="live-share-core-capabilities"></a>Live Share Kernfunktionen
 
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Teams Live Share":::
+
 Das Live Share SDK kann mit minimalem Aufwand den `sidePanel` und `meetingStage` Kontexten Ihrer Besprechungserweiterung hinzugefügt werden. Dieser Artikel konzentriert sich auf die Integration des Live Share SDK in Ihre App und wichtige Funktionen des SDK.
-
-> [!NOTE]
-> Derzeit werden nur geplante Besprechungen unterstützt, und alle Teilnehmer müssen sich im Besprechungskalender befinden. Besprechungstypen wie 1:1-Anrufe, Gruppenanrufe und Besprechungen werden derzeit nicht unterstützt.
-
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams Live Share":::
 
 ## <a name="install-the-javascript-sdk"></a>Installieren des JavaScript SDK
 
@@ -29,13 +26,13 @@ Das [Live Share SDK](https://github.com/microsoft/live-share-sdk) ist ein auf [n
 ### <a name="npm"></a>npm
 
 ```bash
-npm install @microsoft/live-share --save
+npm install @microsoft/live-share@next --save
 ```
 
 ### <a name="yarn"></a>Garn
 
 ```bash
-yarn add @microsoft/live-share
+yarn add @microsoft/live-share@next
 ```
 
 ## <a name="register-rsc-permissions"></a>Registrieren von RSC-Berechtigungen
@@ -47,8 +44,8 @@ Um das Live Share SDK für Ihre Besprechungserweiterung zu aktivieren, müssen S
   // ...rest of your manifest here
   "configurableTabs": [
     {
-        "configurationUrl": "https://<<BASE_URI_ORIGIN>>/config",
-        "canUpdateConfiguration": false,
+        "configurationUrl": "<<YOUR_CONFIGURATION_URL>>",
+        "canUpdateConfiguration": true,
         "scopes": [
             "groupchat"
         ],
@@ -91,29 +88,24 @@ Um das Live Share SDK für Ihre Besprechungserweiterung zu aktivieren, müssen S
 
 Führen Sie die Schritte aus, um einer Sitzung beizutreten, die der Besprechung eines Benutzers zugeordnet ist:
 
-1. Initialisieren Sie das Teams Client-SDK.
-2. Initialisieren des [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient).
-3. Definieren der vertraulichen Daten, die Sie schützen möchten. Beispiel: `SharedMap`.
-4. Dem Container beitreten.
+1. Initialisieren Sie [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
+2. Definieren der vertraulichen Daten, die Sie schützen möchten. Beispiel: `SharedMap`.
+3. Dem Container beitreten.
 
 Beispiel:
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -121,19 +113,15 @@ const { container } = await client.joinContainer(schema);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { ContainerSchema, SharedMap } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -141,6 +129,9 @@ const { container } = await client.joinContainer(schema);
 ---
 
 Das war alles, was zum Einrichten des Containers und zum Teilnehmen an der Besprechungssitzung erforderlich war. Sehen wir uns nun die verschiedenen Arten von _verteilten Datenstrukturen_ an, die Sie mit dem Live Share SDK verwenden können.
+
+> [!TIP]
+> Stellen Sie sicher, dass das Teams Client SDK initialisiert wird, bevor Sie die Live Share-APIs verwenden.
 
 ## <a name="fluid-distributed-data-structures"></a>Fluid-verteilte Datenstrukturen
 
@@ -157,15 +148,15 @@ Sehen wir uns an, wie `SharedMap` funktioniert. In diesem Beispiel haben wir `Sh
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const playlistMap = container.initialObjects.playlistMap as SharedMap;
 
 // Register listener for changes to values in the map
@@ -183,15 +174,15 @@ function onClickAddToPlaylist(video) {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const playlistMap = container.initialObjects.playlistMap as SharedMap;
 
 // Declare interface for object being stored in map
@@ -217,22 +208,25 @@ function onClickAddToPlaylist(video: IVideo) {
 > [!NOTE]
 > Kern-Fluid Framework DDS-Objekte unterstützen die Überprüfung der Besprechungsrolle nicht. Jeder in der Besprechung kann Daten ändern, die über diese Objekte gespeichert sind.
 
-## <a name="live-share-ephemeral-data-structures"></a>Live Share kurzlebige Datenstrukturen
+## <a name="live-share-data-structures"></a>Live Share-Datenstrukturen
 
-Das Live Share SDK enthält eine Reihe neuer kurzlebiger `SharedObject`-Klassen, die zustandsbehaftete und zustandslose Objekte bereitstellen, die nicht im Fluid-Container gespeichert sind. Wenn Sie beispielsweise ein Laserpointerfeature in Ihre App integrieren möchten, z. B. die beliebte PowerPoint Live-Integration, können Sie unsere Objekte `EphemeralEvent` bzw. `EphemeralState` verwenden.
+Das Live Share SDK enthält eine Reihe neuer Live Share-Klassen `SharedObject` , die zustandsbehaftete und zustandslose Objekte bereitstellen, die nicht im Fluid-Container gespeichert sind. Wenn Sie beispielsweise ein Laserpointerfeature in Ihre App integrieren möchten, z. B. die beliebte PowerPoint Live-Integration, können Sie unsere Objekte `LiveEvent` bzw. `LiveState` verwenden.
 
-| Kurzlebiges Objekt                                                             | Beschreibung                                                                                                                             |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralPresence](/javascript/api/@microsoft/live-share/ephemeralpresence) | Sehen Sie, welche Benutzer online sind, legen Sie benutzerdefinierte Eigenschaften für jeden Benutzer fest, und übertragen Sie Änderungen an ihren Anwesenheitsinformationen.                               |
-| [EphemeralEvent](/javascript/api/@microsoft/live-share/ephemeralevent)       | Übertragen einzelner Ereignisse mit benutzerdefinierten Datenattributen in der Nutzlast.                                                             |
-| [EphemeralState](/javascript/api/@microsoft/live-share/ephemeralstate)       | Ähnlich wie bei SharedMap, einem verteilten Schlüsselwertspeicher, der eingeschränkte Zustandsänderungen basierend auf der Rolle zulässt, z. B. dem Referenten. |
+| Live-Objekt                                                        | Beschreibung                                                                                                                             |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | Sehen Sie, welche Benutzer online sind, legen Sie benutzerdefinierte Eigenschaften für jeden Benutzer fest, und übertragen Sie Änderungen an ihren Anwesenheitsinformationen.                               |
+| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Übertragen einzelner Ereignisse mit benutzerdefinierten Datenattributen in der Nutzlast.                                                             |
+| [Livestate](/javascript/api/@microsoft/live-share/livestate)       | Ähnlich wie bei SharedMap, einem verteilten Schlüsselwertspeicher, der eingeschränkte Zustandsänderungen basierend auf der Rolle zulässt, z. B. dem Referenten. |
+| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronisieren eines Countdown-Timers für ein bestimmtes Intervall.                                                                                     |
 
-### <a name="ephemeralpresence-example"></a>EphemeralPresence-Beispiel
+### <a name="livepresence-example"></a>LivePresence-Beispiel
 
-Die `EphemeralPresence` Klasse erleichtert das Nachverfolgen, wer sich in der Sitzung befindet. Beim Aufrufen der `.initialize()` oder `.updatePresence()` Methoden können Sie benutzerdefinierte Metadaten für diesen Benutzer zuweisen, z. B. Name oder Profilbild. Durch das Überwachen von `presenceChanged` Ereignissen empfängt jeder Client das neueste `EphemeralPresenceUser` Objekt, wodurch alle Anwesenheitsaktualisierungen in einem einzigen Datensatz für jeden eindeutigen `userId`Datensatz zusammengefasst werden.
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Teams Live Share-Anwesenheit":::
+
+Die `LivePresence` Klasse erleichtert das Nachverfolgen, wer sich in der Sitzung befindet. Beim Aufrufen der `.initialize()` oder `.updatePresence()` Methoden können Sie benutzerdefinierte Metadaten für diesen Benutzer zuweisen, z. B. Name oder Profilbild. Durch das Überwachen von `presenceChanged` Ereignissen empfängt jeder Client das neueste `LivePresenceUser` Objekt, wodurch alle Anwesenheitsaktualisierungen in einem einzigen Datensatz für jeden eindeutigen `userId`Datensatz zusammengefasst werden.
 
 > [!NOTE]
-> Die jedem `EphemeralPresenceUser` zugewiesene Standardeinstellung `userId` ist eine zufällige UUID und ist nicht direkt an eine AAD-Identität gebunden. Sie können dies außer Kraft setzen, indem Sie einen benutzerdefinierten `userId` Schlüssel als Primärschlüssel festlegen, wie im folgenden Beispiel gezeigt.
+> Die jedem `LivePresenceUser` zugewiesene Standardeinstellung `userId` ist eine zufällige UUID und ist nicht direkt an eine AAD-Identität gebunden. Sie können dies außer Kraft setzen, indem Sie einen benutzerdefinierten `userId` Schlüssel als Primärschlüssel festlegen, wie im folgenden Beispiel gezeigt.
 
 Beispiel:
 
@@ -240,19 +234,19 @@ Beispiel:
 
 ```javascript
 import {
-  TeamsFluidClient,
-  EphemeralPresence,
+  LiveShareClient,
+  LivePresence,
   PresenceState,
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence,
+    presence: LivePresence,
   },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const presence = container.initialObjects.presence;
 
 // Register listener for changes to presence
@@ -277,7 +271,12 @@ function onUserDidLogIn(userName, profilePicture) {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralPresence, PresenceState, EphemeralPresenceUser } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  LivePresence,
+  PresenceState,
+  LivePresenceUser,
+} from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
 interface ICustomUserData {
@@ -286,17 +285,17 @@ interface ICustomUserData {
 }
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence<ICustomUserData>,
+    presence: LivePresence<ICustomUserData>,
   },
 };
-const { container } = await client.joinContainer(schema);
-const presence = container.initialObjects.presence as EphemeralPresence<ICustomUserData>;
+const { container } = await liveShare.joinContainer(schema);
+const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
 
 // Register listener for changes to presence
-presence.on("presenceChanged", (userPresence: EphemeralPresenceUser<ICustomUserData>, local: boolean) => {
+presence.on("presenceChanged", (userPresence: LivePresenceUser<ICustomUserData>, local: boolean) => {
   // Update UI with presence
 });
 
@@ -316,21 +315,23 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ---
 
-### <a name="ephemeralevent-example"></a>EphemeralEvent-Beispiel
+### <a name="liveevent-example"></a>LiveEvent-Beispiel
 
-`EphemeralEvent` ist eine hervorragende Möglichkeit, einfache Ereignisse an andere Clients in einer Besprechung zu senden. Es ist nützlich für Szenarien wie das Senden von Sitzungsbenachrichtigungen.
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Teams Live Share-Ereignis zum Anzeigen von Benachrichtigungen":::
+
+`LiveEvent` ist eine hervorragende Möglichkeit, einfache Ereignisse an andere Clients in einer Besprechung zu senden. Es ist nützlich für Szenarien wie das Senden von Sitzungsbenachrichtigungen.
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient, EphemeralEvent } from "@microsoft/live-share";
+import { LiveEvent, LiveShareClient } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { notifications: EphemeralEvent },
+  initialObjects: { notifications: LiveEvent },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { notifications } = container.initialObjects;
 
 // Register listener for incoming notifications
@@ -356,23 +357,23 @@ notifications.sendEvent({
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralEvent, IEphemeralEvent } from "@microsoft/live-share";
+import { LiveShareClient, LiveEvent, ILiveEvent } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
-interface ICustomEvent extends IEphemeralEvent {
+interface ICustomEvent extends ILiveEvent {
   senderName: string;
   text: string;
 }
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
-    notifications: EphemeralEvent<ICustomEvent>,
+    notifications: LiveEvent<ICustomEvent>,
   },
 };
-const { container } = await client.joinContainer(schema);
-const notifications = container.initialObjects.notifications as EphemeralEvent<ICustomEvent>;
+const { container } = await liveShare.joinContainer(schema);
+const notifications = container.initialObjects.notifications as LiveEvent<ICustomEvent>;
 
 // Register listener for incoming notifications
 notifications.on("received", (event: ICustomEvent, local: boolean) => {
@@ -396,21 +397,23 @@ notifications.sendEvent({
 
 ---
 
-### <a name="ephemeraltimer-example"></a>EphemeralTimer-Beispiel
+### <a name="livetimer-example"></a>LiveTimer-Beispiel
 
-`EphemeralTimer` ermöglicht Szenarien, die ein Zeitlimit haben, z. B. einen Gruppenmeditationszeitgeber oder einen Rundentimer für ein Spiel.
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Countdown-Timer für Teams Live Share":::
+
+`LiveTimer` ermöglicht Szenarien, die ein Zeitlimit haben, z. B. einen Gruppenmeditationszeitgeber oder einen Rundentimer für ein Spiel.
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient, EphemeralTimer } from "@microsoft/live-share";
+import { LiveShareClient, LiveTimer } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { timer: EphemeralTimer },
+  initialObjects: { timer: LiveTimer },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { timer } = container.initialObjects;
 
 // Register listener for when the timer starts its countdown
@@ -456,42 +459,42 @@ timer.play();
 
 ```TypeScript
 import {
-  TeamsFluidClient,
-  EphemeralTimer,
-  EphemeralTimerEvents,
+  LiveShareClient,
+  LiveTimer,
+  LiveTimerEvents,
   ITimerConfig,
 } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { timer: EphemeralTimer },
+  initialObjects: { timer: LiveTimer },
 };
-const { container } = await client.joinContainer(schema);
-const timer = container.initialObjects.timer as EphemeralTimer;
+const { container } = await liveShare.joinContainer(schema);
+const timer = container.initialObjects.timer as LiveTimer;
 
 // Register listener for when the timer starts its countdown
-timer.on(EphemeralTimerEvents.started, (config: ITimerConfig, local: boolean) => {
+timer.on(LiveTimerEvents.started, (config: ITimerConfig, local: boolean) => {
   // Update UI to show timer has started
 });
 
 // Register listener for when a paused timer has resumed
-timer.on(EphemeralTimerEvents.played, (config: ITimerConfig, local: boolean) => {
+timer.on(LiveTimerEvents.played, (config: ITimerConfig, local: boolean) => {
   // Update UI to show timer has resumed
 });
 
 // Register listener for when a playing timer has paused
-timer.on(EphemeralTimerEvents.paused, (config: ITimerConfig, local: boolean) => {
+timer.on(LiveTimerEvents.paused, (config: ITimerConfig, local: boolean) => {
   // Update UI to show timer has paused
 });
 
 // Register listener for when a playing timer has finished
-timer.on(EphemeralTimerEvents.finished, (config: ITimerConfig) => {
+timer.on(LiveTimerEvents.finished, (config: ITimerConfig) => {
   // Update UI to show timer is finished
 });
 
 // Register listener for the timer progressed by 20 milliseconds
-timer.on(EphemeralTimerEvents.onTick, (milliRemaining: number) => {
+timer.on(LiveTimerEvents.onTick, (milliRemaining: number) => {
   // Update UI to show remaining time
 });
 
@@ -511,30 +514,26 @@ timer.play();
 
 ---
 
-## <a name="role-verification-for-ephemeral-data-structures"></a>Rollenüberprüfung für kurzlebige Datenstrukturen
+## <a name="role-verification-for-live-data-structures"></a>Rollenüberprüfung für Livedatenstrukturen
 
-Besprechungen in Teams können von Einzelanrufen bis hin zu Besprechungen mit allen Mitarbeitern reichen und Mitglieder aus verschiedenen Organisationen umfassen. Kurzlebige Objekte unterstützen die Rollenüberprüfung, sodass Sie die Rollen definieren können, die zum Senden von Nachrichten für jedes einzelne kurzlebige Objekt zulässig sind. Sie können beispielsweise festlegen, dass nur Besprechungsreferenten und Organisatoren die Videowiedergabe steuern können, Gäste und Teilnehmer jedoch weiterhin die Möglichkeit haben, Videos anzufordern, die sie als Nächstes ansehen können.
+Besprechungen in Teams können von Einzelanrufen bis hin zu Besprechungen mit allen Mitarbeitern reichen und Mitglieder aus verschiedenen Organisationen umfassen. Liveobjekte unterstützen die Rollenüberprüfung, sodass Sie die Rollen definieren können, die Nachrichten für jedes einzelne Liveobjekt senden dürfen. Sie können beispielsweise festlegen, dass nur Besprechungsreferenten und Organisatoren die Videowiedergabe steuern können, Gäste und Teilnehmer jedoch weiterhin die Möglichkeit haben, Videos anzufordern, die sie als Nächstes ansehen können.
 
 > [!NOTE]
-> Die `EphemeralPresence` Klasse unterstützt die Rollenüberprüfung nicht. Das `EphemeralPresenceUser` Objekt verfügt über eine `getRoles` Methode, die die Besprechungsrollen für einen bestimmten Benutzer zurückgibt.
+> Die `LivePresence` Klasse unterstützt die Rollenüberprüfung nicht. Das `LivePresenceUser` Objekt verfügt über eine `getRoles` Methode, die die Besprechungsrollen für einen bestimmten Benutzer zurückgibt.
 
-Beispiel für die Verwendung von `EphemeralState`:
+Beispiel für die Verwendung von `LiveState`:
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import {
-  TeamsFluidClient,
-  EphemeralState,
-  UserMeetingRole,
-} from "@microsoft/live-share";
+import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { appState: EphemeralState },
+  initialObjects: { appState: LiveState },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { appState } = container.initialObjects;
 
 // Register listener for changes to state and corresponding custom data
@@ -563,7 +562,7 @@ function onSelectPresentMode(documentId) {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
 
 // Declare interface for type of custom data for user
 interface ICustomState {
@@ -572,14 +571,14 @@ interface ICustomState {
 }
 
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
   initialObjects: {
-    appState: EphemeralState<ICustomState>,
+    appState: LiveState<ICustomState>,
   },
 };
-const { container } = await client.joinContainer(schema);
-const appState = container.initialObjects.appState as EphemeralState<ICustomState>;
+const { container } = await liveShare.joinContainer(schema);
+const appState = container.initialObjects.appState as LiveState<ICustomState>;
 
 // Register listener for changes to state and corresponding custom data
 appState.on("stateChanged", (state: string, data: ICustomState | undefined, local: boolean) => {
@@ -608,6 +607,9 @@ function onSelectPresentMode(documentId: string) {
 
 Achten Sie darauf, dass Ihre Kunden ihre Szenarien verstehen, bevor Sie die Rollenüberprüfung in Ihre App implementieren, insbesondere für die Rolle **Organisator**. Es gibt keine Garantie dafür, dass ein Besprechungsorganisator in der Besprechung anwesend ist. Als Faustregel gilt, dass alle Benutzer entweder **Organisator** oder **Referent** sind, wenn sie innerhalb einer Organisation zusammenarbeiten. Wenn ein Benutzer ein **Teilnehmer** ist, handelt es sich in der Regel um eine absichtliche Entscheidung im Namen eines Besprechungsorganisators.
 
+> [!NOTE]
+> Derzeit unterstützt Live Share keine Kanalbesprechungen.
+
 ## <a name="code-samples"></a>Codebeispiele
 
 | Beispielname | Beschreibung                                                     | JavaScript                                  |
@@ -618,12 +620,12 @@ Achten Sie darauf, dass Ihre Kunden ihre Szenarien verstehen, bevor Sie die Roll
 ## <a name="next-step"></a>Nächster Schritt
 
 > [!div class="nextstepaction"]
-> [Live Share-Medienfunktionen](teams-live-share-media-capabilities.md)
+> [Live Teilen von Medien](teams-live-share-media-capabilities.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-* [GitHub-Repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share SDK-Referenzdokumente](/javascript/api/@microsoft/live-share/)
-* [Live Share Media SDK-Referenzdokumente](/javascript/api/@microsoft/live-share-media/)
-* [Live Share – FAQ](teams-live-share-faq.md)
-* [Teams-Apps in Besprechungen](teams-apps-in-meetings.md)
+- [GitHub-Repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share SDK-Referenzdokumente](/javascript/api/@microsoft/live-share/)
+- [Live Share Media SDK-Referenzdokumente](/javascript/api/@microsoft/live-share-media/)
+- [Live Share – FAQ](teams-live-share-faq.md)
+- [Teams-Apps in Besprechungen](teams-apps-in-meetings.md)
