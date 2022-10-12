@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243206"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537528"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
 Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, während der Besprechung und nach der Besprechung, abhängig vom Status des Teilnehmers.
 
-> [!Note]
+> [!NOTE]
 >
 > Apps für Sofortbesprechungen, geplante Besprechungen im öffentlichen Kanal, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
 
@@ -35,7 +35,7 @@ Benutzer können der Besprechung Apps hinzufügen, indem sie die **+** Option au
 
 Besuchen Sie den [Teams-Store](https://go.microsoft.com/fwlink/p/?LinkID=2183121) , und erkunden Sie Apps, die speziell für Besprechungen entwickelt wurden.
 
-> [!Note]
+> [!NOTE]
 >
 > * Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
 >
@@ -47,7 +47,7 @@ Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichk
 
 Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der Besprechungs-App, API-Verweise, das Aktivieren und Konfigurieren von Apps für Besprechungen und benutzerdefinierte Zusammen-Modus-Szenen in Microsoft Teams.
 
-> [!Note]
+> [!NOTE]
 >
 > Besprechungs-Apps (Randbereich, Besprechungsphase) werden im Teams-Desktopclient unterstützt. Wo wie im Teams-Webclient wird es nur unterstützt, wenn die Entwicklervorschau aktiviert ist.
 
@@ -56,6 +56,7 @@ Dieser Artikel bietet eine Übersicht über die Erweiterungsmöglichkeiten der B
 * **Anpassen mit Zusammen-Modus-Szenen**: Das neue benutzerdefinierte Feature "Zusammen-Modus-Szenen" ermöglicht Benutzern die Zusammenarbeit an einer Besprechung mit ihrem Team an einer zentralen Stelle.
 * **Anpassen der App-Berechtigung im freigegebenen Kanal**: Wenn Ihre App wichtige Informationen im freigegebenen Kanal freigibt, können Sie die App-Berechtigung für externe Mitglieder anpassen. App-Berechtigungen in [freigegebenen Kanälen](../concepts/build-and-test/Shared-channels.md) folgen der App-Liste des Hostteams und der App-Richtlinie des Hostmandanten.
 * **Abrufen von Besprechungsaufzeichnungen**: Sie können in einem Szenario nach der Besprechung auf Besprechungstranskripte zugreifen und diese abrufen. Konfigurieren Sie Ihre App so, dass Transkriptionen automatisch für eine geplante Besprechung abgerufen werden, und verwenden Sie sie für Einblicke, intelligente Analysen und vieles mehr.
+* **Generieren Sie einen Deep-Link, um Inhalte für die Phase in Besprechungen freizugeben**: Sie können einen Deep-Link generieren, um die App für das Bereitstellen und Starten oder Teilnehmen an einer Besprechung freizugeben.
 
 ## <a name="next-step"></a>Nächster Schritt
 

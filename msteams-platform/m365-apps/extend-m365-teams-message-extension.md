@@ -1,16 +1,16 @@
 ---
 title: Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
-description: In diesem Artikel erfahren Sie, wie Sie die suchbasierte Teams-Nachrichtenerweiterung für die Ausführung in Outlook aktualisieren, indem Sie das Anwendungsmanifest aktualisieren, einen Outlook-Kanal hinzufügen und die aktualisierte Anwendung per Sideloading installieren.
-ms.date: 05/24/2022
+description: Erfahren Sie, wie Sie Ihre suchbasierte Nachrichtenerweiterung zusätzlich zu Microsoft Teams so aktualisieren, dass sie in Outlook ausgeführt wird.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: a0de61f0d1b6414d4ab35b54e4ec708f3b868948
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243514"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537507"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Erweitern einer Teams-Nachrichtenerweiterung in Microsoft 365
 
@@ -36,7 +36,11 @@ Für dieses Lernprogramm benötigen Sie Folgendes:
 * (Optional) Microsoft Visual Studio Code mit der Teams Toolkit-Erweiterung.
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen von Microsoft Teams-Apps, die für Microsoft 365 erweitert wurden](publish.md)
+> [Erforderliche Komponenten installieren](prerequisites.md)
+
+## <a name="link-unfurling"></a>Verbreiten von Links
+
+Wenn Ihre suchbasierte Nachrichtenerweiterung [die Verbreitung von Links](../messaging-extensions/how-to/link-unfurling.md) in Teams unterstützt, ermöglicht das Ausführen der Schritte dieses Lernprogramms auch die Verbreitung von Links in Outlook im Web- und Windows-Desktopumgebungen. Der Abschnitt ["Codebeispiele](#code-sample) " unten enthält eine app für einfache Links zur Verbreitung von Tests.
 
 ## <a name="prepare-your-message-extension-for-the-upgrade"></a>Vorbereiten Ihrer Nachrichtenerweiterung für das Upgrade
 
@@ -115,7 +119,7 @@ Damit Benutzer von Outlook aus mit Ihrer Nachrichtenerweiterung interagieren kö
 > [!NOTE]
 > Sie können den Schritt überspringen, wenn Sie die in diesem Lernprogramm bereitgestellte [Beispiel-App](#quickstart) verwenden, da das Szenario keine Azure Active Directory (AAD) Single Sign-On-Authentifizierung umfasst.
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+Azure Active Directory (AD) Single Sign-On (SSO) für Nachrichtenerweiterungen funktioniert in Outlook [genauso wie in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). Sie müssen jedoch mehrere Clientanwendungs-IDs zur Azure AD-App-Registrierung Ihres Bots im *App-Registrierungen* Portal Ihres Mandanten hinzufügen.
 
 1. Melden Sie sich mit Ihrem Sandkastenmandantenkonto beim [Azure-Portal](https://portal.azure.com) an.
 1. Öffnen Sie **App-Registrierungen**.
@@ -201,6 +205,7 @@ Beim Testen Ihrer Nachrichtenerweiterung können Sie die Quelle (aus Teams und n
 | **Beispielname** | **Beschreibung** | **Node.js** |
 |---------------|--------------|--------|
 | NPM-Suchconnector | Verwenden Sie Teams Toolkit, um eine Nachrichtenerweiterungs-App zu erstellen. Funktioniert in Teams, Outlook. |  [Anzeigen](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Teams-Link-Verbreitung | Einfache Teams-App zum Veranschaulichen der Verbreitung von Links. Funktioniert in Teams, Outlook. | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## <a name="next-step"></a>Nächster Schritt
 

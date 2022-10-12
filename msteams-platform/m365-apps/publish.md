@@ -1,16 +1,16 @@
 ---
 title: Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
-description: Erfahren Sie, wie Sie Ihre Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office auffindbar machen. Informieren Sie sich über die mehrinstanzenfähige Verteilung mit einem Mandanten.
-ms.date: 05/24/2022
+description: Erfahren Sie, wie Sie Ihre Microsoft 365-fähigen Microsoft 365-fähigen Teams-Apps für Benutzer in Teams, Outlook und Office über die Verteilung mit einem einzigen Mandanten und mehreren Mandanten auffindbar machen.
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b225624970a380679b2b1a508bf3b4d2882de72e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100938"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537521"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Veröffentlichen von Microsoft Teams-Apps für Microsoft 365
 
@@ -42,7 +42,7 @@ Als globaler Administrator können Sie das App-Paket vom [Microsoft-Administrato
 
 ## <a name="multitenant-distribution"></a>Verteilung an mehrere Mandanten
 
-Der Übermittlungsprozess [von Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft Commercial Marketplace) für Teams-Apps, die für Outlook und Office aktiviert sind, entspricht herkömmlichen Teams-Apps. Der einzige Unterschied besteht darin, dass Sie die Version [1.13](../tabs/how-to/using-teams-client-sdk.md) des Teams-App-Manifests in Ihrem App-Paket verwenden müssen, wodurch Unterstützung für Teams-Apps eingeführt wird, die in Microsoft 365 ausgeführt werden.
+Der Übermittlungsprozess des [kommerziellen Microsoft Marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) für Teams-Apps, die für Outlook und Office aktiviert sind, ist identisch mit herkömmlichen Teams-Apps. Der einzige Unterschied besteht darin, dass Sie die Version [1.13](../tabs/how-to/using-teams-client-sdk.md) des Teams-App-Manifests in Ihrem App-Paket verwenden müssen, wodurch Unterstützung für Teams-Apps eingeführt wird, die in Microsoft 365 ausgeführt werden.
 
 > [!TIP]
 > Verwenden Sie das Teams-Entwicklerportal, um [Ihr App-Paket zu überprüfen](https://dev.teams.microsoft.com/validation) , um Fehler oder Warnungen vor der Übermittlung an den Teams-Store (über [das Microsoft Partner Network)](https://partner.microsoft.com/) zu beheben.

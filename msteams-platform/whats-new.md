@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die neuen Microsoft Teams-Entwicklerfeature
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295970"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537577"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -284,15 +284,16 @@ Entdecken Sie die Microsoft Teams-Plattformfeatures, die sich in der Entwicklerv
 
 Die Entwicklervorschau ist ein öffentliches Programm, das frühzeitigen Zugriff auf nicht veröffentlichte Features der Teams-Plattform bietet.
 
-**September 2022**
+**Oktober 2022**
 
-***23. September 2022***: [Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt.](apps-in-teams-meetings/meeting-app-extensibility.md)
+***11. Oktober 2022***: [Generieren Sie einen Deep-Link, um Inhalte für die Phase in Besprechungen freizugeben.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Hier finden Sie** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | Unterstützung der Besprechungs-App für geplante Kanalbesprechungen eingeführt. | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [einheitlichen Besprechungs-Apps](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | Freigeben von Apps für die Teams-Besprechungsphase auf mobilen Geräten | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Aktivieren und Konfigurieren von Apps für Besprechungen](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Apps für geplante Besprechungen im öffentlichen Kanal | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [Übersicht](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03.08.2022 | APIs zum Stummschalten und Aufheben der Stummschaltung für Apps in der Teams-Besprechungsphase | Erstellen von Apps für Teams-Besprechungen und -Anrufe > [API-Referenzen für Besprechungs-Apps](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
