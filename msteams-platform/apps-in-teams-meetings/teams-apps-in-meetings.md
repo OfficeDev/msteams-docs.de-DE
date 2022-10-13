@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537528"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560533"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
@@ -19,7 +19,9 @@ Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikat
 
 > [!NOTE]
 >
-> Apps für Sofortbesprechungen, geplante Besprechungen im öffentlichen Kanal, Einzel- und Gruppenanrufe sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+> * Apps für geplante Besprechungen im öffentlichen Kanal sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> * Apps werden in [PSTN -Anrufen (Public Switched Telephone Network)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) und [end-to-End-verschlüsselten Teams-Anrufen](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90) nicht unterstützt.
 
 Teams unterstützt den Zugriff auf Apps während der Besprechung für die folgenden Besprechungstypen:
 

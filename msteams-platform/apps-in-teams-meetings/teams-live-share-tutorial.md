@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 66ff0cfed7fcd34d741a35ff4aa30e507adf8717
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552574"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560540"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller Code-Lernprogramm
 
-In der Dice Roller-Beispiel-App wird Benutzern ein Würfel mit einer Schaltfläche zum Rollen angezeigt. Wenn der Würfel rollt, verwendet das Live Share SDK das Fluid Framework, um die Daten clientsübergreifend zu synchronisieren, sodass jeder das gleiche Ergebnis sieht. Führen Sie zum Synchronisieren von Daten die folgenden Schritte in der Datei [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) aus:
+In der Beispiel-App "Würfelroller" wird benutzern ein Würfel mit einer Schaltfläche zum Rollen angezeigt. Wenn die Würfel rollt, verwendet das Live Share SDK das Fluid Framework, um die Daten über Clients hinweg zu synchronisieren, sodass jeder das gleiche Ergebnis sieht. Führen Sie zum Synchronisieren von Daten die folgenden Schritte in der Datei [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) aus:
 
 1. [Einrichten der Anwendung](#set-up-the-application)
 2. [Verknüpfen eines Fluid-Containers](#join-a-fluid-container)
@@ -28,13 +28,16 @@ In der Dice Roller-Beispiel-App wird Benutzern ein Würfel mit einer Schaltfläc
 
 ## <a name="set-up-the-application"></a>Einrichten der Anwendung
 
-Beginnen Sie mit dem Importieren der erforderlichen Module. Im Beispiel wird der [SharedMap-DDS](https://fluidframework.com/docs/data-structures/map/) aus dem Fluid Framework und der [LiveShareClient-Klasse](/javascript/api/@microsoft/live-share/liveshareclient) verwendet. Das Beispiel unterstützt die Erweiterbarkeit von Teams-Besprechungen, daher müssen wir das [Teams-Client-SDK](https://github.com/OfficeDev/microsoft-teams-library-js) einschließen. Schließlich ist das Beispiel so konzipiert, dass es sowohl lokal als auch in einer Teams-Besprechung ausgeführt wird. Daher müssen wir einige zusätzliche Fluid Framework-Komponenten einschließen, [die zum lokalen Testen des Beispiels](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) erforderlich sind.
+Sie können mit dem Importieren der erforderlichen Module beginnen. Das Beispiel verwendet [SharedMap-DDS](https://fluidframework.com/docs/data-structures/map/) aus dem Fluid Framework und [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) aus dem Live Share SDK. Das Beispiel unterstützt die Erweiterbarkeit von Teams-Besprechungen, sodass Sie das [Teams Client SDK](https://github.com/OfficeDev/microsoft-teams-library-js) einschließen müssen. Schließlich ist das Beispiel so konzipiert, dass es sowohl lokal als auch in einer Teams-Besprechung ausgeführt wird, sodass Sie weitere Fluid Framework-Komponenten einbeziehen müssen, um [das Beispiel lokal zu testen](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Anwendungen erstellen Fluid-Container mithilfe eines Schemas, das eine Reihe von _anfänglichen Objekten_ definiert, die für den Container verfügbar sind. Im Beispiel wird eine SharedMap verwendet, um den letzten Würfelwert zu speichern, der gerollt wurde. Weitere Informationen finden Sie unter [Datenmodellierung](https://fluidframework.com/docs/build/data-modeling/).
+Anwendungen erstellen Fluid-Container mithilfe eines Schemas, das eine Reihe von _anfänglichen Objekten_ definiert, die für den Container verfügbar sind. Im Beispiel wird eine SharedMap verwendet, um den aktuellen Würfelwert zu speichern, der rollt. Weitere Informationen finden Sie unter [Datenmodellierung](https://fluidframework.com/docs/build/data-modeling/).
 
-Teams-Besprechungs-Apps erfordern mehrere Ansichten (Inhalt, Konfiguration und Phase). Wir erstellen eine `start()`-Funktion, um die zu rendernden Ansichten zu identifizieren und alle erforderlichen Initialisierungen auszuführen. Wir möchten, dass unsere App sowohl die lokale Ausführung in einem Webbrowser als auch innerhalb einer Teams-Besprechung unterstützt, sodass die `start()`-Funktion nach einem `inTeams=true`-Abfrageparameter sucht, um zu bestimmen, ob er in Teams ausgeführt wird. Bei der Ausführung in Teams muss Ihre Anwendung `app.initialize()` aufrufen, bevor sie andere Teams-js-Methoden aufruft.
+Teams-Besprechungs-Apps erfordern mehrere Ansichten, z. B. Inhalte, Konfiguration und Stufe. Sie können eine `start()` Funktion erstellen, um die Ansicht zu identifizieren. Dies hilft beim Rendern und Durchführen aller erforderlichen Initialisierungen. Die App unterstützt die lokale Ausführung in einem Webbrowser und innerhalb einer Teams-Besprechung. Die `start()` Funktion sucht nach einem `inTeams=true` Abfrageparameter, um festzustellen, ob er in Teams ausgeführt wird.
 
-Zusätzlich zum `inTeams=true`-Abfrageparameter können wir einen `view=content|config|stage`-Abfrageparameter verwenden, um die Ansicht zu bestimmen, die gerendert werden muss.
+> [!NOTE]
+> Wenn Sie in Teams ausgeführt werden, muss Ihre Anwendung vor dem Aufrufen anderer teams-js-Methoden aufrufen `app.initialize()` .
+
+Zusätzlich zum `inTeams=true` Abfrageparameter können Sie einen `view=content|config|stage` Abfrageparameter verwenden, um die Ansicht zu bestimmen, die gerendert werden muss.
 
 ```js
 import { SharedMap } from "fluid-framework";
@@ -97,7 +100,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Verknüpfen eines Fluid-Containers
 
-Nicht alle Ihre App-Ansichten müssen zusammenarbeiten. Die `stage`-Ansicht benötigt _immer_ Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt _möglicherweise_ Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte _niemals_ Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
+Nicht alle Ansichten Ihrer App müssen zusammenarbeiten. Die `stage`-Ansicht benötigt _immer_ Funktionen für die Zusammenarbeit, die `content`-Ansicht benötigt _möglicherweise_ Funktionen für die Zusammenarbeit, und die `config`-Ansicht sollte _niemals_ Funktionen für die Zusammenarbeit benötigen. Für die Ansichten, die Funktionen für die Zusammenarbeit benötigen, müssen Sie einem Fluid-Container beitreten, der der aktuellen Besprechung zugeordnet ist.
 
 Das Beitreten zum Container für die Besprechung ist so einfach wie das Initialisieren des [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) und das Aufrufen der [joinContainer()-](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) Methode.
 
@@ -128,7 +131,7 @@ Viele Teams Meeting Extensibility-Anwendungen sind für die Verwendung von React
 
 Es ist einfach, die Ansicht mit lokalen Daten ohne Fluid-Funktionalität zu erstellen und dann Fluid hinzuzufügen, indem Sie einige wichtige Teile der App ändern.
 
-Die `renderStage`-Funktion fügt `stageTemplate` an das übergebene HTML-Element an und erstellt jedes Mal, wenn die Schaltfläche **Rollen** ausgewählt wird, eine funktionierende Würfelrolle mit einem zufälligen Würfelwert. `diceMap` wird in den nächsten Schritten verwendet.
+Die `renderStage` Funktion fügt das Element an das `stageTemplate` übergebene HTML-Element an und erstellt jedes Mal, wenn die Schaltfläche " **Rollen** " ausgewählt wird, eine funktionierende Würfelrolle mit einem zufälligen Würfelwert. `diceMap` wird in den nächsten Schritten verwendet.
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -158,7 +161,7 @@ function renderStage(diceMap, elem) {
 
 ### <a name="modify-fluid-data"></a>Ändern von Fluid-Daten
 
-Um Fluid in der Anwendung zu verwenden, müssen Sie zunächst ändern, was geschieht, wenn der Benutzer `rollButton` auswählt. Anstatt den lokalen Zustand direkt zu aktualisieren, aktualisiert die Schaltfläche die Zahl, die im `value`-Schlüssel der übergebenen `diceMap` gespeichert ist. Da `diceMap` ein Fluid `SharedMap` ist, werden Änderungen an alle Clients verteilt. Alle Änderungen am `diceMap` führen dazu, dass ein `valueChanged`-Ereignis ausgegeben wird, und ein Ereignishandler kann eine Aktualisierung der Ansicht auslösen.
+Um Fluid in der Anwendung zu verwenden, müssen Sie zunächst ändern, was geschieht, wenn der Benutzer `rollButton` auswählt. Anstatt den lokalen Zustand direkt zu aktualisieren, aktualisiert die Schaltfläche die Zahl, die im `value`-Schlüssel der übergebenen `diceMap` gespeichert ist. Da `diceMap` ein Fluid `SharedMap` ist, werden Änderungen an alle Clients verteilt. Alle Änderungen am `diceMap` Ereignis können dazu führen, dass ein `valueChanged` Ereignis ausgegeben wird, und ein Ereignishandler kann eine Aktualisierung der Ansicht auslösen.
 
 Dieses Muster ist in Fluid üblich, da es der Ansicht ermöglicht, sich sowohl bei lokalen als auch bei Remoteänderungen auf die gleiche Weise zu verhalten.
 
@@ -169,7 +172,7 @@ rollButton.onclick = () =>
 
 ### <a name="rely-on-fluid-data"></a>Verwenden von Fluid-Daten
 
-Die nächste Änderung, die vorgenommen werden muss, besteht darin, die `updateDice`-Funktion so zu ändern, dass sie keinen beliebigen Wert mehr akzeptiert. Dies bedeutet, dass die App den lokalen Würfelwert nicht mehr direkt ändern kann. Stattdessen wird der Wert jedes Mal aus dem `SharedMap` abgerufen, wenn `updateDice` aufgerufen wird.
+Die nächste Änderung, die vorgenommen werden muss, besteht darin, die `updateDice` Funktion zu ändern, da sie keinen beliebigen Wert mehr akzeptiert. Dies bedeutet, dass die App den lokalen Würfelwert nicht mehr direkt ändern kann. Stattdessen wird der Wert jedes Mal aus dem `SharedMap` abgerufen, wenn `updateDice` aufgerufen wird.
 
 ```js
 const updateDice = () => {
@@ -189,7 +192,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>Schreiben der Seitenbereichsansicht
 
-Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel dieser Ansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App für die Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht _und_ der Seitenbereichsansicht aller Benutzer kommunizieren.
+Die Seitenbereichsansicht, die über die Registerkarte "`contentUrl`" mit dem `sidePanel`-Framekontext geladen wird, wird dem Benutzer in einem Seitenbereich angezeigt, wenn er Ihre App innerhalb einer Besprechung öffnet. Das Ziel der Seitenbereichsansicht besteht darin, einem Benutzer die Auswahl von Inhalten für die App zu ermöglichen, bevor die App in der Besprechungsphase freigegeben wird. Für die Live Share SDK-Apps kann die Seitenbereichsansicht auch als Begleitoberfläche für die App verwendet werden. Der Aufruf von [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) aus der Seitenbereichsansicht stellt eine Verbindung mit demselben Fluid-Container her, mit dem die Phasenansicht verbunden ist. Dieser Container kann dann für die Kommunikation mit der Phasenansicht verwendet werden. Stellen Sie sicher, dass Sie mit der Stufenansicht _und_ der Seitenbereichsansicht aller Benutzer kommunizieren.
 
 In der Seitenbereichsansicht des Beispiels wird der Benutzer aufgefordert, die Schaltfläche "Freigeben in Phase" auszuwählen.
 
@@ -215,7 +218,7 @@ function renderSidePanel(elem) {
 
 ## <a name="write-the-settings-view"></a>Schreiben der Einstellungsansicht
 
-Die Einstellungsansicht, die über `configurationUrl` in Ihrem App-Manifest geladen wird, wird einem Benutzer angezeigt, wenn er Ihre App zum ersten Mal einer Teams-Besprechung hinzufügt. In dieser Ansicht kann der Entwickler `contentUrl` für die Registerkarte konfigurieren, die basierend auf Benutzereingaben an die Besprechung angeheftet ist. Diese Seite ist derzeit auch dann erforderlich, wenn zum Festlegen des `contentUrl` keine Benutzereingabe erforderlich ist.
+Die Einstellungsansicht, die in Ihrem App-Manifest geladen `configurationUrl` wurde, wird einem Benutzer angezeigt, wenn er Ihre App zum ersten Mal zu einer Teams-Besprechung hinzufüge. In dieser Ansicht kann der Entwickler `contentUrl` für die Registerkarte konfigurieren, die basierend auf Benutzereingaben an die Besprechung angeheftet ist. Diese Seite ist derzeit auch dann erforderlich, wenn zum Festlegen des `contentUrl` keine Benutzereingabe erforderlich ist.
 
 > [!NOTE]
 > [JoinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) der Live-Freigabe wird im Registerkartenkontext `settings` nicht unterstützt.

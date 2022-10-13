@@ -1,16 +1,16 @@
 ---
 title: Vorbereiten der Übermittlung an den Store
-description: Lernen Sie die letzten Schritte kennen, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt werden soll. Erfahren Sie, wie Sie Ihr App-Paket überprüfen. Erfahren Sie, wie Sie Apple App Store Connect Team ID im Partner Center aktualisieren.
+description: Letzte Schritte, bevor Sie Ihre Microsoft Teams-App übermitteln, die im Store aufgeführt wird. Überprüfen des App-Pakets und abschließen der Herausgeberüberprüfung und des Nachweises.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376606"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560680"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Vorbereiten Ihrer Teams Store-Übermittlung
 

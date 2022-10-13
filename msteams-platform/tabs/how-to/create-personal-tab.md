@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499210"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560736"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -50,13 +50,13 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
 1. Erstellen Sie an der Eingabeaufforderung ein neues Verzeichnis für Ihre persönliche Registerkarte.
 
-1. Geben Sie den folgenden Befehl in Ihr neues Verzeichnis ein, um den Microsoft Teams App-Generator zu starten:
+1. Geben Sie den folgenden Befehl in Ihr neues Verzeichnis ein, um den Microsoft Teams-App-Generator zu starten:
 
     ```cmd
     yo teams
     ```
 
-1. Geben Sie Ihre Werte für eine Reihe von Fragen an, die vom Microsoft Teams App-Generator gestellt werden, um Ihre `manifest.json`-Datei zu aktualisieren.
+1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die vom Microsoft Teams-App-Generator aufgefordert werden, Ihre `manifest.json` Datei zu aktualisieren.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams-Generator":::
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. Wählen Sie im linken Bereich von Teams die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, und wählen Sie dann Ihre hochgeladene App aus, um Ihre persönliche Registerkarte anzuzeigen.
 
-   Jetzt haben Sie Ihre persönliche Registerkarte erfolgreich erstellt und in Teams hinzugefügt.
+   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
   
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -371,7 +371,9 @@ Klicken Sie im Visual Studio-Lösungsexplorer mit der rechten Maustaste auf das 
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Öffnen Sie in Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Pages**, und fügen Sie `app.initialize()` in den `<script>`-Kategorien hinzu, und speichern Sie.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab.cshtml** aus dem Ordner **"Pages**", und fügen Sie die `<script>` Tags hinzu`microsoftTeams.app.initialize()`.
+
+1. Wählen Sie **Speichern** aus.
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus.
 
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Öffnen Sie **Apps**, und wählen Sie **App importieren** aus.
 
-1. Der Name der App-Paketdatei lautet `tab.zip` und ist unter dem `/bin/Debug/netcoreapp3.1/tab.zip`-Pfad verfügbar.
+1. Der Dateiname des App-Pakets ist `tab.zip` und ist im `/bin/Debug/netcoreapp3.1/tab.zip` Pfad verfügbar.
 
 1. Wählen Sie `tab.zip` aus, und öffnen Sie es im Entwicklerportal.
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
 
-1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
+1. Wählen Sie in **den App-Features** **die Option "Persönliche App** > **Erstellen Ihrer ersten persönlichen App-Registerkarte"** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -415,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Standardregisterkarte":::
 
-   Jetzt haben Sie Ihre persönliche Registerkarte erfolgreich erstellt und in Teams hinzugefügt.
+   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
   
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -536,7 +538,9 @@ Die Controller verwenden die `ViewBag`-Eigenschaft, um Werte dynamisch in die An
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Öffnen Sie im Visual Studio-Lösungsexplorer **PersonalTab.cshtml** aus dem Ordner **Views** > **PersonalTab**, und fügen Sie `app.initialize()` innerhalb der `<script>`-Kategorien hinzu, und speichern Sie.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab.cshtml** aus dem Ordner **"Views** > **PersonalTab"**, und fügen Sie die `<script>` Tags hinzu`microsoftTeams.app.initialize()`.
+
+1. Wählen Sie **Speichern** aus.
 
 1. Wählen Sie in Visual Studio **F5** oder **Debuggen starten** im Menü **Debuggen** Ihrer Anwendung aus.
 
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
 
-1. In **App-Features** wählen Sie **Persönliche App** > **Erstellen Ihrer ersten persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
+1. Wählen Sie in **den App-Features** **die Option "Persönliche App** > **Erstellen Ihrer ersten persönlichen App-Registerkarte"** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -584,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Registerkarte „Persönlich“":::
   
-   Jetzt haben Sie Ihre persönliche Registerkarte erfolgreich erstellt und in Teams hinzugefügt.
+   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
 
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Statische persönliche Registerkarten neu anordnen
 
-Ab Manifestversion 1.7 können Entwickler alle Registerkarten in ihrer persönlichen App neu anordnen. Insbesondere kann ein Entwickler die Registerkarte **Bot-Chat**, die standardmäßig immer an erster Stelle steht, an eine beliebige Stelle in der Kopfzeile der persönlichen App-Registerkarte verschieben. Es werden zwei reservierte `entityId`-Schlüsselwörter für die Registerkarte deklariert, **Unterhaltungen** und **Info**.
+Ab Manifestversion 1.7 können Entwickler alle Registerkarten in ihrer persönlichen App neu anordnen. Sie können die **Bot-Chat-Registerkarte** , die immer auf die erste Position festgelegt ist, an eine beliebige Stelle in der Kopfzeile der persönlichen App-Registerkarte verschieben. Es werden zwei reservierte `entityId`-Schlüsselwörter für die Registerkarte deklariert, **Unterhaltungen** und **Info**.
 
 Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standardmäßig in der ersten Registerkartenposition in einer persönlichen App angezeigt. Wenn Sie ihn an eine andere Position verschieben möchten, müssen Sie Ihrem Manifest ein statisches Registerkartenobjekt mit dem reservierten Schlüsselwort **Unterhaltungen** hinzufügen. Die Registerkarte **Unterhaltung** wird im Web oder Desktop angezeigt, je nachdem, wo Sie die Registerkarte **Unterhaltung** im `staticTabs`-Array hinzufügen.
 

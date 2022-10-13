@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0a1b7a48ffaf0cd71fd0aac2ecf7c1fe2c5970f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552493"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560589"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share-Medienfunktionen
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature-1.png" alt-text="Teams Live Share-Mediensynchronisierung":::
 
-Video und Audio sind wichtige Bestandteile der modernen Welt und des Arbeitsplatzes. Wir haben umfassendes Feedback erhalten, dass wir mehr tun können, um die Qualität, die Barrierefreiheit und den Lizenzschutz beim gemeinsamen Ansehen von Videos in Besprechungen zu verbessern.
+Video und Audio sind wichtige Bestandteile der modernen Welt und des Arbeitsplatzes. Wir haben breit gefächertes Feedback gehört, dass wir noch mehr tun können, um die Qualität, Barrierefreiheit und den Lizenzschutz beim gemeinsamen Ansehen von Videos in Besprechungen zu erhöhen.
 
 Das Live Share SDK ermöglicht eine stabile **Mediensynchronisierung** für jeden HTML-Code `<video>` und `<audio>` jedes Element mit nur wenigen Codezeilen. Durch die Mediensynchronisierung auf der Ebene des Playerstatus und der Transportsteuerelemente können Sie Ansichten und Lizenzen individuell zuweisen und gleichzeitig die bestmögliche Qualität bieten, die über Ihre Anwendung verfügbar ist.
 

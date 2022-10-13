@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329084"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560491"
 ---
 # <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
 
-Kanal-- oder Gruppenregisterkarten übermitteln Inhalte an Kanäle und Gruppenchats und sind eine hervorragende Möglichkeit zum Erstellen von Bereichen für die Zusammenarbeit rund um dedizierte webbasierte Inhalte.
+Kanal- oder Gruppenregisterkarten liefern Inhalte an Kanäle und Gruppenchats, was dazu beiträgt, Räume für die Zusammenarbeit rund um dedizierte webbasierte Inhalte zu schaffen.
 
 Stellen Sie sicher, dass Sie alle [Voraussetzungen](~/tabs/how-to/tab-requirements.md) zum Erstellen Ihrer Kanal- oder Gruppenregisterkarte haben.
 
@@ -31,7 +31,7 @@ Stellen Sie sicher, dass Sie alle [Voraussetzungen](~/tabs/how-to/tab-requiremen
     npm install yo gulp-cli --global
     ```
 
-2. Installieren Sie an der Eingabeaufforderung den Microsoft Teams-App-Generator durch Eingabe des folgenden Befehls:
+2. Installieren Sie an der Eingabeaufforderung den Microsoft Teams-App-Generator, indem Sie den folgenden Befehl eingeben:
 
     ```cmd
     npm install generator-teams --global
@@ -49,13 +49,13 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
 1. Erstellen Sie an der Eingabeaufforderung ein neues Verzeichnis für Ihre Kanal- oder Gruppenregisterkarte.
 
-1. Geben Sie den folgenden Befehl in Ihr neues Verzeichnis ein, um den Microsoft Teams App-Generator zu starten:
+1. Geben Sie den folgenden Befehl in Ihr neues Verzeichnis ein, um den Microsoft Teams-App-Generator zu starten:
 
     ```cmd
     yo teams
     ```
 
-1. Geben Sie Ihre Werte für eine Reihe von Fragen an, die vom Microsoft Teams App-Generator gestellt werden, um Ihre `manifest.json`-Datei zu aktualisieren.
+1. Geben Sie Ihre Werte für eine Reihe von Fragen an, die vom Microsoft Teams-App-Generator aufgefordert werden, Ihre `manifest.json` Datei zu aktualisieren:
 
     ![Screenshot zum Öffnen des Generators](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
     * **Ihr (Firmen)name? (max. 32 Zeichen)**
 
-        Ihr Firmenname wird im App-Manifest verwendet. Geben Sie einen Firmennamen ein, oder drücken **Sie die EINGABETASTE**, um den Standardnamen zu übernehmen.
+        Ihr Firmenname kann im App-Manifest verwendet werden. Geben Sie einen Firmennamen ein, oder drücken **Sie die EINGABETASTE**, um den Standardnamen zu übernehmen.
 
     * **Welche Manifestversion möchten Sie verwenden?**
 
@@ -94,7 +94,7 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
 
         Wählen Sie **( &ast; ) Eine Registerkarte** aus.
 
-    * **Die URL, unter der Sie diese Lösung hosten möchten?**: 
+    * **Die URL zum Hosten dieser Lösung?**
 
         Standardmäßig schlägt der Generator eine Azure-Website-URL vor. Sie testen Ihre App nur lokal, daher ist keine gültige URL erforderlich.
 
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Standardregisterkarte":::
 
-1. Um die Registerkartenkonfigurationsseite anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Es wird Folgendes angezeigt:
+1. Um die Registerkartenkonfigurationsseite anzuzeigen, wechseln Sie zu `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Konfigurationsseite für Registerkarten":::
 
@@ -338,7 +338,10 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,7 +349,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie einen Aufruf von `microsoftTeams.app.initialize();` in das `script`-Tag ein.
 
-1. Wechseln Sie in Visual Studio-Projektmappen-Explorer zum Ordner **Pages**, und öffnen Sie **Tab.cshtml**.
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Pages**", und öffnen **Sie Tab.cshtml**
 
     In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche " **Grau auswählen** " oder " **Rot auswählen** " wird ausgelöst `saveGray()` bzw `saveRed()` . festgelegt `pages.config.setValidityState(true)`und aktiviert "Auf der Konfigurationsseite **speichern** ". Dieser Code teilt Teams mit, dass Sie die Anforderungskonfiguration abgeschlossen haben, und kann mit der Installation fortfahren. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
@@ -537,15 +540,15 @@ Klicken Sie im Visual Studio-Projektmappen-Explorerfenster mit der rechten Maust
 
 #### <a name="models"></a>Modelle
 
-**ChannelGroup.cs** stellt ein Message-Objekt und Methoden bereit, die während der Konfiguration von den Controllern aufgerufen werden.
+**ChannelGroup.cs** stellt ein Nachrichtenobjekt und Methoden dar, die während der Konfiguration von den Controllern aufgerufen werden können.
 
 #### <a name="views"></a>Ansichten
 
 Dies sind die verschiedenen Ansichten in ASP.NET Core MVC:
 
-* Startseite: ASP.NET Core behandelt Dateien namens **Index** als die Standard- oder Startseite für die Website. Wenn Ihre Browser-URL auf das Stammverzeichnis der Website verweist, wird **Index.cshtml** als Startseite für Ihre Anwendung angezeigt.
+* Startseite: ASP.NET Core behandelt Dateien namens **Index** als die Standard- oder Startseite für die Website. Wenn Ihre Browser-URL auf den Stamm der Website verweist, kann **Index.cshtml** als Startseite für Ihre Anwendung angezeigt werden.
 
-* Freigegeben: Das Markup der Teilansicht **_Layout.cshtml** enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente. Es verweist auch auf die Microsoft Teams Library.
+* Freigegeben: Das Partielle **Ansichtsmarkup _Layout.cshtml** enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente, die auch auf die Teams-Bibliothek verweisen.
 
 #### <a name="controllers"></a>Controller
 
@@ -569,7 +572,10 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,7 +583,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie einen Aufruf von `microsoftTeams.app.initialize();` in das `script`-Tag ein.
 
-1. Wechseln Sie in Visual Studio-Projektmappen-Explorer zum Ordner **Tab**, und öffnen Sie **Tab.cshtml**.
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Tab"**, und öffnen **Sie "Tab.cshtml"**.
 
     In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche " **Grau auswählen** " oder " **Rot auswählen** " wird ausgelöst `saveGray()` bzw `saveRed()` . festgelegt `pages.config.setValidityState(true)`und aktiviert "Auf der Konfigurationsseite **speichern** ". Dieser Code teilt Teams mit, dass Sie die Anforderungskonfiguration abgeschlossen haben, und kann mit der Installation fortfahren. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 

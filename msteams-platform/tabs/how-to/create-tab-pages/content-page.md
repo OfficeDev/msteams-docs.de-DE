@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über Webseiten im Teams-Client und sind Teil der
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450373"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560463"
 ---
 # <a name="create-a-content-page"></a>Erstellen einer Inhaltsseite
 
@@ -20,7 +20,7 @@ Eine Inhaltsseite ist eine Webseite, die im Teams-Client gerendert wird, die Tei
 * Eine benutzerdefinierte Kanal- oder Gruppenregisterkarte: Die Inhaltsseite wird angezeigt, nachdem der Benutzer die Registerkarte im entsprechenden Kontext angehefteten und konfiguriert hat.
 * Ein [Aufgabenmodul](~/task-modules-and-cards/what-are-task-modules.md): Sie können eine Inhaltsseite erstellen und als Webview in ein Aufgabenmodul einbetten. Die Seite wird innerhalb des modalen Popups gerendert.
 
-Dieser Artikel betrifft die Verwendung von Inhaltsseiten als Registerkarten. der großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer präsentiert wird.
+Dieser Artikel betrifft die Verwendung von Inhaltsseiten als Registerkarten. Der großteil der hier aufgeführten Anleitungen gilt jedoch unabhängig davon, wie die Inhaltsseite dem Benutzer präsentiert wird.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -46,13 +46,16 @@ Der folgende Code enthält ein Beispiel für die Kommunikation Ihrer Seite und d
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ Der folgende Code enthält ein Beispiel für die Kommunikation Ihrer Seite und d
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ Sie können auf zusätzliche Inhalte zugreifen, indem Sie das SDK für die Inter
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Verwenden des SDK für die Interaktion mit Teams
 
-Das [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) bietet viele zusätzliche Funktionen, die Sie beim Entwickeln Ihrer Inhaltsseite hilfreich finden können.
+Das [Teams-Client-JavaScript-SDK](~/tabs/how-to/using-teams-client-sdk.md) bietet viele weitere Funktionen, die Sie beim Entwickeln Ihrer Inhaltsseite hilfreich finden können.
 
 ### <a name="deep-links"></a>Deep-Links
 
@@ -117,7 +119,7 @@ So zeigen Sie die Ladeanzeige an:
 
 1. Fügen Sie Ihrem Manifest hinzu `"showLoadingIndicator": true` .
 1. Aufrufen von `app.initialize();`
-1. Rufen Sie `app.notifySuccess()` als **obligatorischen** Schritt Teams auf, um zu benachrichtigen, dass Ihre App erfolgreich geladen wurde. Anschließend blendet Teams ggf. den Ladeindikator aus. Wenn `notifySuccess`  Teams nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass die App ein Timeout hat, und es wird ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt.
+1. Rufen Sie `app.notifySuccess()` als **obligatorischen** Schritt Teams auf, um zu benachrichtigen, dass Ihre App erfolgreich geladen wurde. Anschließend blendet Teams ggf. den Ladeindikator aus. Wenn `notifySuccess`  Microsoft Teams nicht innerhalb von 30 Sekunden aufgerufen wird, wird davon ausgegangen, dass ihr App-Timeout aufgetreten ist, und es wird ein Fehlerbildschirm mit einer Wiederholungsoption angezeigt.
 1. **Wenn Sie zum** Drucken auf dem Bildschirm bereit sind und den Rest des Anwendungsinhalts verzögert laden möchten, können Sie die Ladeanzeige manuell ausblenden, indem Sie aufrufen `app.notifyAppLoaded();`.
 1. Wenn Ihre Anwendung nicht geladen wird, können Sie Teams über `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` den Fehler informieren und optional eine Fehlermeldung bereitstellen. Dem Benutzer wird ein Fehlerbildschirm angezeigt. Der folgende Code zeigt die Enumeration, die die möglichen Gründe definiert, die Sie für das Nichtladen der Anwendung angeben können:
 

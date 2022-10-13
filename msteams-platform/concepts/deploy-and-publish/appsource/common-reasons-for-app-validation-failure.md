@@ -1,16 +1,16 @@
 ---
 title: Häufige Gründe für App-Überprüfungsfehler
-description: Erfahren Sie mehr über die häufigsten Gründe für das Fehlschlagen der App-Überprüfung. Fehlerhafte Links, Fehler in der Beschreibung, ungültige Richtlinienlinks, verstöße gegen gültige Domänenrichtlinien, ungültige Supportlinks und vieles mehr.
+description: Erfahren Sie mehr über die häufigsten Ursachen für Fehler bei der App-Überprüfung, z. B. fehlerhafte Links, unerwartete Fehler, Abstürze, verstöße gegen gültige Domänenrichtlinien, Funktionsfehler.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100910"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560652"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Häufige Gründe für App-Überprüfungsfehler
 

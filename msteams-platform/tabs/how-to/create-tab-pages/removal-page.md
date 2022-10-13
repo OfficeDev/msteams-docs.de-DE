@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie ihre Registerkarte nach der Installation neu 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499294"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560449"
 ---
 # <a name="create-a-removal-page"></a>Erstellen einer Seite zum Entfernen
 
@@ -40,7 +40,7 @@ Die optionale Seite zum Entfernen ist eine HTML-Seite, die Sie hosten, und wird 
 
 ### <a name="register-a-remove-handler"></a>Registrieren eines Remove-Handlers
 
-Optional können Sie in der Logik der Entfernungsseite den `registerOnRemoveHandler((RemoveEvent) => {}` Ereignishandler aufrufen, wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die Methode übernimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Die Methode wird verwendet, um Bereinigungsvorgänge auszuführen, z. B. das Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt läuft. Gleichzeitig kann nur ein Remove-Handler registriert werden.
+Optional können Sie in der Logik der Entfernungsseite den `registerOnRemoveHandler((RemoveEvent) => {}` Ereignishandler aufrufen, wenn der Benutzer eine vorhandene Registerkartenkonfiguration entfernt. Die Methode übernimmt die [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) Schnittstelle und führt den Code im Handler aus, wenn ein Benutzer versucht, Inhalte zu entfernen. Die Methode wird verwendet, um Bereinigungsvorgänge auszuführen, z. B. das Entfernen der zugrunde liegenden Ressource, die den Registerkarteninhalt läuft. Zu einem Zeitpunkt kann nur ein Remove-Handler registriert werden.
 
 Die `RemoveEvent` Schnittstelle beschreibt ein Objekt mit zwei Methoden:
 
@@ -67,9 +67,8 @@ Es folgt ein Beispielcodeblock zum Entfernen von Registerkarten:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

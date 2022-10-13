@@ -1,16 +1,16 @@
 ---
 title: Beheben von Problemen mit Der Store-Übermittlung
-description: Erfahren Sie, wie Sie Probleme mit Ihrer Microsoft Teams Store-Übermittlung behandeln und beheben. Rufen Sie Hilfe direkt von Microsoft ab, beheben Sie Probleme, und übermitteln Sie Ihre App erneut.
+description: Behandeln und Beheben von Problemen mit Ihrer Microsoft Teams Store-Übermittlung. Rufen Sie Hilfe direkt von Microsoft ab, beheben Sie Probleme, und übermitteln Sie Ihre App erneut.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 729275b141fc30571dcfc1a1b5e303734d216aa2
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100280"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560715"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Beheben von Problemen, wenn die Anmeldung Ihres Teams Store fehlschlägt
 
@@ -84,7 +84,7 @@ Wenn Sie Folgendes ausführen, kann dies zu einer erfolgreichen Übermittlung f�
 
 <summary><b>Meine App befindet sich in Betatests. Kann ich meine App trotzdem übermitteln, um Zeit beim Veröffentlichungsprozess zu sparen?</b></summary>
 
-Nein. Microsoft überprüft nur produktionsfähige Apps.
+Nein Microsoft überprüft nur produktionsfähige Apps.
 
 <br>
 
@@ -94,7 +94,7 @@ Nein. Microsoft überprüft nur produktionsfähige Apps.
 
 <summary><b>Darf ich die teamsubm@microsoft.com E-Mail kontaktieren, bevor ich meine App zum ersten Mal im Partner Center sende?</b></summary>
 
-Nein. Microsoft beginnt erst dann mit der Überprüfung Ihrer App, wenn Sie Ihre App zum ersten Mal im Partner Center übermitteln.
+Nein Microsoft beginnt erst dann mit der Überprüfung Ihrer App, wenn Sie Ihre App zum ersten Mal im Partner Center übermitteln.
 
 <br>
 

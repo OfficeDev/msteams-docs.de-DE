@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 6d2e1dc9d49ab1ec551fd814ba8baa330e9ace3f
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0e2c2a41eee5bf77dfeaf7150eede97a4b60ded8
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552549"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560624"
 ---
 # <a name="live-share-core-capabilities"></a>Live Share Kernfunktionen
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot zeigt ein Beispiel für Benutzer, die agiles Pokerspiel in einer Teams-Besprechung spielen, die die Live-Freigabefunktion zeigt.":::
 
 Das Live Share SDK kann mit minimalem Aufwand den `sidePanel` und `meetingStage` Kontexten Ihrer Besprechungserweiterung hinzugefügt werden. Dieser Artikel konzentriert sich auf die Integration des Live Share SDK in Ihre App und wichtige Funktionen des SDK.
 
@@ -86,7 +86,7 @@ Um das Live Share SDK für Ihre Besprechungserweiterung zu aktivieren, müssen S
 
 ## <a name="join-a-meeting-session"></a>Beitreten einer Besprechungssitzung
 
-Führen Sie die Schritte aus, um einer Sitzung beizutreten, die der Besprechung eines Benutzers zugeordnet ist:
+Führen Sie die Schritte aus, um an einer Sitzung teilzunehmen, die der Besprechung eines Benutzers zugeordnet ist:
 
 1. Initialisieren Sie [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
 2. Definieren der vertraulichen Daten, die Sie schützen möchten. Beispiel: `SharedMap`.
@@ -221,7 +221,7 @@ Das Live Share SDK enthält eine Reihe neuer Live Share-Klassen `SharedObject` ,
 
 ### <a name="livepresence-example"></a>LivePresence-Beispiel
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Teams Live Share-Anwesenheit":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot zeigt ein Beispiel für die Anzeige von Personen, die in einer SessionTeams mit Live Share Presence verfügbar sind.":::
 
 Die `LivePresence` Klasse erleichtert das Nachverfolgen, wer sich in der Sitzung befindet. Beim Aufrufen der `.initialize()` oder `.updatePresence()` Methoden können Sie benutzerdefinierte Metadaten für diesen Benutzer zuweisen, z. B. Name oder Profilbild. Durch das Überwachen von `presenceChanged` Ereignissen empfängt jeder Client das neueste `LivePresenceUser` Objekt, wodurch alle Anwesenheitsaktualisierungen in einem einzigen Datensatz für jeden eindeutigen `userId`Datensatz zusammengefasst werden.
 
@@ -317,7 +317,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### <a name="liveevent-example"></a>LiveEvent-Beispiel
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Teams Live Share-Ereignis zum Anzeigen von Benachrichtigungen":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot zeigt ein Beispiel für den Teams-Client, der eine Benachrichtigung anzeigt, wenn sich das Ereignis ändert.":::
 
 `LiveEvent` ist eine hervorragende Möglichkeit, einfache Ereignisse an andere Clients in einer Besprechung zu senden. Es ist nützlich für Szenarien wie das Senden von Sitzungsbenachrichtigungen.
 
@@ -399,7 +399,7 @@ notifications.sendEvent({
 
 ### <a name="livetimer-example"></a>LiveTimer-Beispiel
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Countdown-Timer für Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot zeigt ein Beispiel für einen Timer für die Anzahl von 9 Sekunden.":::
 
 `LiveTimer` ermöglicht Szenarien, die ein Zeitlimit haben, z. B. einen Gruppenmeditationszeitgeber oder einen Rundentimer für ein Spiel.
 

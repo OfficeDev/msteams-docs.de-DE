@@ -1,16 +1,16 @@
 ---
 title: Bewertungsparameter für Microsoft Teams-Store
-description: Grundlegendes zu den Bewertungsparametern für den Microsoft Teams-Store. Hauptparameter zur Ermittlung von App-Platzierungen sind historische Nutzungsdaten, Benutzerbindungsdaten, App-Qualität und -Werte, Udience-Relevanz, App-Update.
+description: Grundlegendes zu den Bewertungsparametern für den Microsoft Teams-Store, z. B. historische Nutzungs- und Benutzerbindungsdaten, App-Qualität und -Werte, Zielgruppenrelevanz, App-Update.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: e285f2a69703b6870a4392d35a377bf7a585b360
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100336"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560484"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Bewertungsparameter für Microsoft Teams-Store
 

@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552631"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560610"
 ---
 # <a name="live-share-canvas-overview"></a>Übersicht über die Live-Freigabe-Canvas
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Teams Live Share-Mediensynchronisierung":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Screenshot zeigt ein Beispiel für einen Zeichenbereich, der mit anderen Besprechungsteilnehmern in einer Teams-Besprechung synchronisiert ist.":::
 
-In Konferenzräumen und Klassenzimmern auf der ganzen Welt sind Whiteboards ein zentraler Bestandteil der Zusammenarbeit. In der Modernen Zeit reicht das Whiteboard jedoch nicht mehr aus. Da zahlreiche digitale Tools wie PowerPoint in der Moderne im Mittelpunkt der Zusammenarbeit stehen, ist es wichtig, dasselbe kreative Potenzial zu ermöglichen.
+In Konferenzräumen und Klassenzimmern auf der ganzen Welt sind Whiteboards ein zentraler Bestandteil der Zusammenarbeit. In der Modernen Zeit reicht das Whiteboard jedoch nicht mehr aus. Da zahlreiche digitale Tools wie PowerPoint im Mittelpunkt der Zusammenarbeit in der Moderne stehen, ist es wichtig, dasselbe kreative Potenzial zu ermöglichen.
 
 Um eine nahtlosere Zusammenarbeit zu ermöglichen, hat Microsoft PowerPoint Live erstellt, die entscheidend für die Arbeitsweise von Personen in Teams geworden ist. Referenten können Folien kommentieren, die jeder sehen kann, indem sie Stifte, Textmarker und Laserpointer verwenden, um die Aufmerksamkeit auf wichtige Konzepte zu lenken. Mithilfe der Live Share-Canvas kann Ihre App mit minimalem Aufwand die Leistungsfähigkeit PowerPoint Live Freihandtools nutzen.
 
@@ -103,9 +103,9 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>Zeichenbereichstools & Cursor
+## <a name="canvas-tools-and-cursors"></a>Canvas-Tools und Cursor
 
-Nachdem die Live-Freigabe-Canvas eingerichtet und synchronisiert wurde, können Sie den Zeichenbereich für Benutzerinteraktionen konfigurieren, z. B. Schaltflächen zum Auswählen eines Stifttools. In diesem Abschnitt werden wir erläutern, welche Tools verfügbar sind und wie sie verwendet werden können.
+Nachdem die Live-Freigabe-Canvas eingerichtet und synchronisiert wurde, können Sie den Zeichenbereich für Benutzerinteraktionen konfigurieren, z. B. Schaltflächen zum Auswählen eines Stifttools. In diesem Abschnitt wird erläutert, welche Tools verfügbar sind und wie sie verwendet werden können.
 
 ### <a name="inking-tools"></a>Freihandtools
 
@@ -113,7 +113,7 @@ Jedes Freihandtool in der Live Share-Canvas rendert Striche, während Benutzer z
 
 #### <a name="pen-tool"></a>Stifttool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Teams Live Share Canvas-Zeichenstift-Tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF zeigt ein Beispiel für Zeichenstriche auf dem Zeichenbereich mithilfe des Stifttools.":::
 
 Das Stifttool zeichnet einfarbige Striche, die im Zeichenbereich gespeichert sind. Die Standard-Spitzenform ist ein Kreis.
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>Textmarkertool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share Canvas-Textmarker-Tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen transluzenter Striche auf dem Zeichenbereich mithilfe des Textmarkertools.":::
 
 Das Textmarkertool zeichnet durchscheinende Striche, die in der Canvas gespeichert sind. Die Standardspitze ist ein Quadrat.
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>Radierertool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Teams Live Share Canvas Eraser Tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Löschen von Strichen auf der Canvas mithilfe des Radierertools.":::
 
 Das Radierertool löscht ganze Striche, die seinen Pfad kreuzen.
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>Punktradierertool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Teams Live Share-Zeichenbereich Punktradierer-Tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Entfernen einzelner Punkte innerhalb von Strichen auf der Canvas mithilfe des Punktradierertools.":::
 
 Das Punktradierertool löscht einzelne Punkte innerhalb von Strichen, die seinen Pfad kreuzen, indem vorhandene Striche in zwei Hälften geteilt werden. Dieses Tool ist rechenintensiv und kann zu langsameren Bildfrequenzen für Ihre Benutzer führen.
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>Laserpointer
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Laserpointertool für Teams Live Share Canvas":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF zeigt ein Beispiel für Zeichenstriche auf der Canvas mithilfe des Laserpointertools.":::
 
 Der Laserpointer ist einzigartig, da die Spitze des Lasers eine nachgestellte Wirkung hat, während Sie die Maus bewegen. Wenn Sie Striche zeichnen, wird der nachfolgende Effekt für einen kurzen Zeitraum gerendert, bevor er vollständig ausgeblendet wird. Dieses Tool ist perfekt, um während einer Besprechung auf Informationen auf dem Bildschirm hinzuweisen, da der Referent nicht zwischen Tools wechseln muss, um Striche zu löschen.
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>Linien- und Pfeiltools
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Teams Live Share Canvas Line Tool":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen gerader Linien auf einem Zeichenbereich mithilfe des Linien- und Pfeiltools.":::
 
 Mit dem Linientool können Benutzer gerade Linien von einem Punkt zum anderen zeichnen, mit einem optionalen Pfeil, der am Ende angewendet werden kann.
 
@@ -333,7 +333,7 @@ Sie können alle Striche im Zeichenbereich löschen, indem Sie aufrufen `inkingM
 
 ### <a name="cursors"></a>Cursor
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Freigabe des Teams Live Share-Cursors":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF zeigt ein Beispiel für Benutzer, die einen Cursor auf einer Canvas freigeben.":::
 
 Sie können Livecursor in Ihrer Anwendung aktivieren, damit Benutzer die Cursorpositionen des anderen auf der Canvas nachverfolgen können. Im Gegensatz zu den Freihandtools werden Cursor vollständig durch die `LiveCanvas` Klasse bewegt. Sie können optional einen Namen und ein Bild angeben, um jeden Benutzer zu identifizieren. Sie können Cursor separat oder mit den Freihandtools aktivieren.
 
@@ -357,7 +357,7 @@ Standardmäßig funktioniert die Live Share-Canvas wie eine Whiteboard-App, wobe
 
 Hier ist ein einfaches Diagramm, um dieses Konzept zu visualisieren:
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Viewportvisualisierung der Live-Freigabe-Canvas":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Screenshot zeigt das Vollbild-Canvas-Layout für Desktop- und mobile Benutzer zusammen.":::
 
 Sie können dieses Verhalten auf folgende Weise anpassen:
 

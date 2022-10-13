@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: c242faa57809bb967a29b7ab224e6cc0e859247b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552528"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560554"
 ---
 ---
 
@@ -49,7 +49,7 @@ Weitere Informationen zu diesem Paket finden Sie auf der [Seite "Kernfunktionen"
 
 ### <a name="live-share-media"></a>Live Teilen von Medien
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Live Share Video-Sharing-Erfahrung":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Screenshot zeigt ein Beispiel für die Videofreigabe in Live Share.":::
 
 Video und Audio sind wichtige Bestandteile der modernen Welt und des Arbeitsplatzes. Live Share Media ermöglicht **die Mediensynchronisierung** für jeden Media Player mit nur wenigen Codezeilen. Durch die Synchronisierung von Medien auf der Ebene der Zustands- und Transportsteuerelemente des Players können Sie Ansichten einzeln zuordnen und gleichzeitig die höchstmögliche Qualität bereitstellen, die über Ihre App verfügbar ist. Da Microsoft Ihre Medieninhalte nicht erneut aktualisiert, bleiben Ihre Lizenzierungs- und Zugriffsanforderungen erhalten.
 
@@ -67,7 +67,7 @@ Weitere Informationen zu diesem Paket finden Sie auf der [Live Share-Medienseite
 
 ### <a name="live-share-canvas"></a>Live-Freigabe-Canvas
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Screenshots zeigen ein Beispiel für mehrere Benutzer, die während einer Besprechung auf einem Zeichenbereich zeichnen.":::
 
 Bei der Zusammenarbeit in Besprechungen ist es wichtig, dass Benutzer auf Inhalte auf dem Bildschirm hinweisen und diese hervorheben können. Live Share Canvas erleichtert das Hinzufügen von Freihandeingaben, Laserpointern und Cursorn zu Ihrer App für eine nahtlose Zusammenarbeit.
 
@@ -173,7 +173,7 @@ Weitere Informationen finden Sie im benutzerdefinierten Leitfaden zum Azure Flui
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Während einer Marketingbewertung möchte ein Benutzer Feedback zu seiner neuesten Videobearbeitung sammeln. | Der Benutzer teilt das Video in der Besprechungsphase und startet das Video. Bei Bedarf hält der Benutzer das Video an, um die Szene zu besprechen, und die Teilnehmer zeichnen über Teile des Bildschirms, um wichtige Punkte hervorzuheben. |
 | Ein Projektmanager spielt agiles Poker mit ihrem Team während der Planung.                    | Der Manager teilt eine Agile Poker-App für die Besprechungsphase, die es ermöglicht, das Planungsspiel zu spielen, bis das Team konsensfähig ist.                                                                        |
-| Ein Finanzberater überprüft PDF-Dokumente mit Kunden vor der Unterzeichnung.                  | Der Finanzberater teilt den PDF-Vertrag mit der Besprechungsphase. Alle Teilnehmer können sich gegenseitig Cursor und hervorgehobenen Text in der PDF-Datei sehen, nach dem beide Parteien die Vereinbarung unterzeichnen.        |
+| Ein Finanzberater überprüft PDF-Dokumente mit Kunden vor der Unterzeichnung.                  | Der Finanzberater teilt den PDF-Vertrag mit der Besprechungsphase. Alle Teilnehmer können die Cursor und den hervorgehobenen Text in der PDF-Datei sehen, nachdem beide Parteien die Vereinbarung unterzeichnet haben.        |
 
 > [!IMPORTANT]
 > Live Share ist unter der [Microsoft Live Share SDK-Lizenz](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE) lizenziert. Um diese Funktionen in Ihrer App nutzen zu können, müssen Sie diese Bedingungen zuerst lesen und akzeptieren.
