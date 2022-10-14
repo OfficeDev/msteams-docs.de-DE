@@ -3,12 +3,12 @@ title: Registerkarten auf mobilen Geräten
 description: Erfahren Sie, wie Registerkartenfunktionen auf Android- und iOS-Microsoft Teams-Clients (mobil), deren Authentifizierung, Verbindung mit geringer Bandbreite, Tests oder Verteilung funktionieren.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450478"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575768"
 ---
 # <a name="tabs-on-mobile"></a>Registerkarten auf mobilen Geräten
 
@@ -42,7 +42,7 @@ Mobile Clients funktionieren mit geringer Bandbreite und zeitweiligen Verbindung
 
 Sie müssen überprüfen, ob Ihre Registerkarte auf mobilen Geräten unterschiedlicher Größe und Qualität ordnungsgemäß funktioniert. Für Android-Geräte können Sie [DevTools](~/tabs/how-to/developer-tools.md) verwenden, um Ihre Registerkarte zu debuggen, während sie ausgeführt wird. Es wird empfohlen, sowohl auf Geräten mit hoher als auch auf leistungsschwachen Geräten zu testen, einschließlich eines Tablets.
 
-## <a name="distribution"></a>Distribution
+## <a name="distribution"></a>Verteilung
 
 Apps, die im Teams-Store aufgeführt sind, müssen für die mobile Verwendung genehmigt werden, damit sie im mobilen Microsoft Teams-Client ordnungsgemäß funktionieren. Die Verfügbarkeit und das Verhalten von Registerkarten hängen davon ab, ob Ihre App genehmigt wurde.
 
@@ -63,6 +63,11 @@ In der folgenden Tabelle werden die Verfügbarkeit und das Verhalten von Registe
 |----------|-----------|------------|
 |Kanal- und Gruppenregisterkarte|Ja|Die Registerkarte wird im Standardbrowser des Geräts anstelle des mobilen Teams-Clients mithilfe der `websiteUrl` App-Konfiguration geöffnet, die ebenfalls in der [Funktion](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace) Ihres Quellcodes `setSettings()` enthalten sein muss. Benutzer können die Registerkarte jedoch im mobilen Microsoft Teams-Client anzeigen, indem sie neben der App **"Weitere** " auswählen und " **Öffnen**" auswählen, wodurch die Konfiguration Ihrer App `contentUrl` ausgelöst wird.|
 |Persönliche App|Nein|Nicht zutreffend|
+
+> [!NOTE]
+> Die Bot-Nachrichten werden im Chatabschnitt angezeigt, wenn eine mobile App sowohl über die Bot- als auch die Registerkartenfunktionen verfügt.
+>
+> Wenn Sie **"Chat** der Bot-App" und dann " **Mehr (...)** " auswählen, wird die Registerkartenfunktion dieser App in der Liste nicht angezeigt. Wenn Sie jedoch " **Mehr (...)** " unten rechts im **Abschnitt "Chat** " auswählen, können Sie die Registerkarten-App mit einem Link zur Bot-App-Funktion dieser App anzeigen.
 
 ### <a name="apps-not-on-teams-store"></a>Apps, die nicht im Teams-Store gespeichert sind
 
