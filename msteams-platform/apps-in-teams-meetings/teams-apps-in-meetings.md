@@ -6,22 +6,16 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 7420a7fb92d6abd684d931896221bf86eb9acf9a
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560533"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575761"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Apps für Teams-Besprechungen und -Anrufe
 
 Besprechungen ermöglichen Zusammenarbeit, Partnerschaft, informierte Kommunikation und geteiltes Feedback. Die Besprechungs-App kann eine Benutzererfahrung für jede Phase des Besprechungslebenszyklus bereitstellen. Der Besprechungslebenszyklus umfasst die App-Erfahrung vor der Besprechung, während der Besprechung und nach der Besprechung, abhängig vom Status des Teilnehmers.
-
-> [!NOTE]
->
-> * Apps für geplante Besprechungen im öffentlichen Kanal sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
->
-> * Apps werden in [PSTN -Anrufen (Public Switched Telephone Network)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) und [end-to-End-verschlüsselten Teams-Anrufen](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90) nicht unterstützt.
 
 Teams unterstützt den Zugriff auf Apps während der Besprechung für die folgenden Besprechungstypen:
 
@@ -31,6 +25,16 @@ Teams unterstützt den Zugriff auf Apps während der Besprechung für die folgen
 * [**Gruppenanrufe**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Anrufe, die im Gruppenchat initiiert wurden.
 * [**Sofortbesprechungen: Besprechungen**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5), die über die Schaltfläche " **Jetzt besprechen** " im Teams-Kalender initiiert wurden.
 
+> [!NOTE]
+>
+> * Apps für geplante Besprechungen im öffentlichen Kanal sind derzeit nur in der [öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+>
+> * Folgende Apps werden nicht unterstützt:
+>   * [PSTN-Teams-Anrufe (Public Switched Telephone Network)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [End-to-End-verschlüsselte Teams-Anrufe](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [Sofortkanalbesprechungen](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * Besprechungen im [freigegebenen Kanal](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+
 Benutzer können der Besprechung Apps hinzufügen, indem sie die **+** Option aus ihrem Teams-Besprechungsfenster verwenden.
 
 :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Hinzufügen einer App in einer Besprechung" border="true":::
@@ -39,9 +43,7 @@ Besuchen Sie den [Teams-Store](https://go.microsoft.com/fwlink/p/?LinkID=2183121
 
 > [!NOTE]
 >
-> * Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
->
-> * Derzeit werden App-Erfahrungen in Teams-Sofortkanalbesprechungen nicht unterstützt.
+> Wenn derzeit eine dritte Person zu einem 1:1-Anruf hinzugefügt wird, wird der Anruf zu einem Gruppenanruf erhöht, was bedeutet, dass eine neue Sitzung gestartet wird. Apps, die dem 1:1-Anruf hinzugefügt wurden, sind im Gruppenanruf nicht verfügbar. Sie können jedoch erneut hinzugefügt werden.
 
 Die folgende Abbildung vermittelt eine Vorstellung von den Erweiterungsmöglichkeiten der Besprechungs-App:
 

@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338823"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575790"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Entwerfen Ihrer persönlichen App für Microsoft Teams
 
-Eine persönliche App kann ein Bot, ein privater Arbeitsbereich oder beides sein. Manchmal funktioniert sie wie ein Ort zum Erstellen oder Anzeigen von Inhalten, manchmal bietet sie dem Benutzer eine Vogelperspektive auf alles, was ihm gehört, wenn die App als Registerkarte in mehreren Kanälen konfiguriert wurde.
+Eine persönliche App kann ein Bot, ein privater Arbeitsbereich oder beides sein. Manchmal dient es als Ort zum Erstellen oder Anzeigen von Inhalten. In anderen Fällen bietet es dem Benutzer eine Vogelperspektive auf alles, was seine ist, wenn die App als Registerkarte in mehreren Kanälen konfiguriert wurde.
 
 Die folgenden Informationen beschreiben und veranschaulichen, wie Benutzer persönliche Apps in Teams hinzufügen, verwenden und verwalten können.
 
@@ -47,8 +47,39 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte anzeigen, die fü
 |----------|-----------|
 |A|**App-Zuordnung**: Ihr App-Name.|
 |B|**Registerkarten**: Ermöglicht die Navigation in Ihrer persönlichen App.|
-|C|**Mehr Menü**: Enthält zusätzliche App-Optionen und Informationen.|
+|C|**Weiteres Menü**: Enthält weitere App-Optionen und -Informationen.|
 |D|**Primäre Navigation**: Ermöglicht die Navigation zu den anderen Hauptfunktionen Ihrer App Teams.|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**Konfigurieren und Hinzufügen mehrerer Aktionen in NavBar**
+
+Sie können der oberen rechten Navigationsleiste mehrere Aktionen hinzufügen und ein Überlaufmenü für zusätzliche Aktionen in einer App erstellen.
+
+>[!NOTE]
+> In der Navigationsleiste können maximal fünf Aktionen hinzugefügt werden, einschließlich des Überlaufmenüs.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="Der Screenshot ist ein Beispiel, in dem das Menü &quot;Navigationsleiste&quot; und &quot;Überlauf&quot; beschrieben wird.":::
+
+Rufen Sie zum **Konfigurieren und Hinzufügen mehrerer Aktionen in NavBar** die [setNavBarMenu-API](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) auf. und fügen Sie die `displayMode enum` Eigenschaft zu `MenuItem`hinzu. Mit `displayMode enum` dieser Eigenschaft wird definiert, wie ein Menü in der Navigationsleiste angezeigt wird. Der Standardwert von `displayMode enum` ist auf `ifRoom`.
+
+Legen Sie basierend auf den Anforderungen und dem verfügbaren Platz in der Navigationsleiste eine der folgenden Optionen fest `displayMode enum` .
+
+* Wenn Platz vorhanden ist, legen Sie fest `ifRoom = 0` , dass ein Element in der Navigationsleiste platziert wird.
+* Wenn kein Raum vorhanden ist, legen Sie fest `overflowOnly = 1`, dass das Element immer im Überlaufmenü der Navigationsleiste, aber nicht in der Navigationsleiste platziert wird.
+
+Es folgt ein Beispiel für die Konfiguration der Navigationsleiste mit einem Überlaufmenü für mehrere Aktionen:
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> Die `setNavBarMenu` API steuert nicht die Schaltfläche **"Aktualisieren** ". Sie wird standardmäßig angezeigt.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="Der Screenshot ist ein Beispiel für die Navigationsleiste und mehrere Aktionen in einem Überlaufmenü.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text=" Das Beispiel zeigt die strukturelle Anatomie der persönlichen Registerkarte.":::
 
@@ -66,7 +97,7 @@ Mit einem privaten Arbeitsbereich können Benutzer App-Inhalte anzeigen, die fü
 |A|**App-Zuordnung**: Ihr App-Logo und -Name.|
 |B|**Registerkarten**: Ermöglicht die Navigation in Ihrer persönlichen App.|
 |C|**Popupansicht**: Pusht Ihre App-Inhalte aus einem übergeordneten Fenster in ein eigenständiges untergeordnetes Fenster.|
-|D|**Mehr Menü**: Enthält zusätzliche App-Optionen und Informationen. (Alternativ können Sie **"Einstellungen"** als Registerkarte festlegen.)|
+|D|**Weiteres Menü**: Enthält weitere App-Optionen und -Informationen. (Alternativ können Sie **"Einstellungen"** als Registerkarte festlegen.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Dieses Beispiel zeigt die strukturelle Anatomie der persönlichen Registerkarte.":::
 
@@ -102,6 +133,30 @@ Persönliche Apps können einen Bot für 1:1-Unterhaltungen und private Benachri
 |B|**Schaltfläche "Zurück"**: Führt Benutzer zurück in den privaten Arbeitsbereich.|
 |C|**Botnachricht**: Bots senden oft Nachrichten und Benachrichtigungen in Form einer Karte (z. B. einer Adaptiven Karte).|
 |D|**Kompositionsfeld**: Eingabefeld zum Senden von Nachrichten an den Bot.|
+
+#### <a name="configure-back-button"></a>Schaltfläche "Zurück" konfigurieren
+
+Wenn Sie die Schaltfläche "Zurück" in einer Teams-App auswählen, kehren Sie zur Teams-Plattform zurück, ohne in der App zu navigieren.
+
+Um innerhalb der App zu navigieren, konfigurieren Sie die Schaltfläche "Zurück", damit Sie beim Auswählen der Schaltfläche "Zurück" zu den vorherigen Schritten zurückkehren und innerhalb der App navigieren können.
+
+Rufen **Sie zum Konfigurieren der Zurück-Schaltfläche** die [registerBackButtonHandler-API](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) auf, die die Funktionalität der Zurück-Schaltfläche in Abhängigkeit von einer der folgenden Bedingungen behandelt:
+
+* Wenn `registerBackButtonHandler` dieser Wert festgelegt `false`ist, ruft das JavaScript SDK die `navigateBack` API auf, und die Teams-Plattform behandelt die Schaltfläche "Zurück".
+* Wenn `registerBackButtonHandler` dieser Wert festgelegt `true`ist, übernimmt die App die Funktionen der Schaltfläche "Zurück" (Sie können zu den vorherigen Schritten zurückkehren und innerhalb der App navigieren), und die Teams-Plattform führt keine weiteren Aktionen aus.
+
+Es folgt ein Beispiel für die Konfiguration der Schaltfläche "Zurück":
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>Desktop
 
@@ -204,4 +259,6 @@ Wenn Sie Ihre App nicht speziell für Teams entwickelt haben, haben Sie wahrsche
 Diese anderen Designrichtlinien können je nach Umfang Ihrer persönlichen App hilfreich sein:
 
 * [Entwerfen ihrer Registerkarte](../../tabs/design/tabs.md)
-* [Entwerfen ihres Bots](../../bots/design/bots.md)
+* [Entwerfen Ihres Bots](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [DisplayMode-Enumeration](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
