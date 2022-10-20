@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Ihre Apps mithilfe des Entw
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
-ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
+ms.openlocfilehash: e66ee0a46417fe18c6729cb11bb2851795cda4c4
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68098918"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615317"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Verwalten Ihrer Apps im Entwicklerportal
 
@@ -55,6 +55,8 @@ Im Abschnitt **"Konfigurieren"** sehen Sie die folgenden Komponenten zum Verwalt
   * Messaging-Erweiterung
   * Besprechungserweiterung
   * Aktivitätsfeedbenachrichtigung
+  > [!NOTE]
+  > Connector ist derzeit nicht für GCC-Mandanten (Government Community Cloud) verfügbar.
 * **Berechtigungen**: In diesem Abschnitt können Sie Geräteberechtigungen, Teamberechtigungen, Chat- oder Besprechungsberechtigungen und Benutzerberechtigungen für Ihre App erteilen.
 * **Einmaliges Anmelden**: Der in Azure AD registrierte Bot unterstützt single Sign-On (SSO). Wenn ein Bot im Bot Framework-Portal (oder im Entwicklerportal unter Bot-Verwaltung) registriert ist, unterstützen diese Bots SSO nicht, und Sie müssen Ihren Bot bei Azure AD registrieren, um SSO zu unterstützen. Fügen Sie für einen in Azure AD registrierten Bot den **Anwendungs-ID-URI hinzu**. Informationen zum Abrufen des Anwendungs-ID-URI aus Azure AD finden [Sie unter Verwenden der SSO-Authentifizierung für Bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Sprachen**: Sie können die Sprache Ihrer App einrichten oder ändern.

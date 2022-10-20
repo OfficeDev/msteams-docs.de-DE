@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie mehr über das Entwicklerportal und 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417500"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615135"
 ---
 # <a name="developer-portal-for-teams"></a>Entwicklerportal für Teams
 
@@ -19,9 +19,8 @@ Das <a href="https://dev.teams.microsoft.com" target="_blank">Entwicklerportal f
 
 > [!NOTE]
 >
-> * Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC),GCC-High- oder Department of Defense (DOD)-Mandanten verfügbar.
+> * Derzeit ist das Entwicklerportal nicht für Government Community Cloud (GCC)-High- oder Department of Defense (DOD)-Mandanten verfügbar.
 > * Sie können jedoch einen regulären Mandanten verwenden, um eine App im Entwicklerportal zu erstellen, die App herunterzuladen und die App mit [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) in eine nationale Cloud hochzuladen. Weitere Informationen finden Sie unter ["Nationale Cloudbereitstellungen"](/graph/deployments).
-> * Derzeit wird das Entwicklerportal in einigen Szenarien nicht im Browser geladen, wenn AdBlocker aktiviert ist. Um mit dem Entwicklerportal im Browser fortzufahren, deaktivieren Sie AdBlocker.
 
 ## <a name="register-an-app"></a>Registrieren einer App
 
