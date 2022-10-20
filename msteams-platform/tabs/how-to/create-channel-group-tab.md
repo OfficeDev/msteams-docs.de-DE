@@ -1,19 +1,19 @@
 ---
-title: Erstellen einer Kanalregisterkarte
+title: Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte
 author: laujan
 description: Erstellen Sie einen benutzerdefinierten Kanal, eine Gruppenregisterkarte mit Node.js, ASP.NET Core ASP.NET Core MVC. App generieren, Paket erstellen, App erstellen und ausführen, geheimer Tunnel, In Teams hochladen
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560491"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615240"
 ---
-# <a name="create-a-channel-tab"></a>Erstellen einer Kanalregisterkarte
+# <a name="create-a-channel-tab-or-group-tab"></a>Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte
 
 Kanal- oder Gruppenregisterkarten liefern Inhalte an Kanäle und Gruppenchats, was dazu beiträgt, Räume für die Zusammenarbeit rund um dedizierte webbasierte Inhalte zu schaffen.
 

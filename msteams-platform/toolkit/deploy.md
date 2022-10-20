@@ -7,16 +7,16 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781104"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615142"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Bereitstellen der Teams-App in der Cloud
 
-Das Teams-Toolkit hilft Ihnen beim Bereitstellen oder Hochladen des Frontend- und Back-End-Codes in Ihrer Anwendung in Ihre bereitgestellten Cloudressourcen in Azure.
+Das Teams-Toolkit hilft Ihnen beim Bereitstellen oder Hochladen des Front-End- und Back-End-Codes in Ihrer Anwendung in Ihre bereitgestellten Cloudressourcen in Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -24,9 +24,9 @@ Das Teams-Toolkit hilft Ihnen beim Bereitstellen oder Hochladen des Frontend- un
 
 Sie können Folgendes in der Cloud bereitstellen:
 
-* Die Registerkarte, z. B. Frontend-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting oder eine SharePoint-Website konfiguriert.
-* Die Back-End-APIs werden für Azure-Funktionen bereitgestellt.
-* Der Bot oder die Nachrichtenerweiterung wird im Azure-App-Dienst bereitgestellt.
+* Die Registerkarte, z. B. Front-End-Anwendungen, wird in Azure Storage bereitgestellt und für statisches Webhosting oder eine SharePoint-Website konfiguriert.
+* Die Back-End-APIs werden für Azure Functions bereitgestellt.
+* Der Bot oder die Nachrichtenerweiterung wird für Azure App Service bereitgestellt.
 
   > [!NOTE]
   > Bevor Sie App-Code in der Azure-Cloud bereitstellen, müssen Sie die [Bereitstellung von Cloudressourcen](provision.md) erfolgreich abschließen.
@@ -44,11 +44,11 @@ Die Anleitungen "Erste Schritte" helfen Ihnen bei der Bereitstellung mithilfe de
 |-------------|----------|---------------|---------------|
 |Registerkarten mit React </br> Die Frontend-Workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
 |Registerkarten mit SharePoint </br> Die Frontend-Workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint-App-Katalog |
-|APIs für Azure-Funktionen </br> Die Back-End-Workload | `yourProjectFolder/api`| Nicht zutreffend |Azure-Funktionen |
-|Bots und Nachrichtenerweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure-App-Dienst |
+|APIs auf Azure Functions </br> Die Back-End-Workload | `yourProjectFolder/api`| Nicht zutreffend |Azure Functions |
+|Bots und Nachrichtenerweiterungen </br> Die Back-End-Workload | `yourProjectFolder/bot` | Nicht zutreffend | Azure App Services |
 
 > [!NOTE]
-> Wenn Sie die Azure-API-Verwaltungsressource in Ihr Projekt einbeziehen und die Bereitstellung auslösen, können Sie Ihre APIs in Azure-Funktionen im Azure-API-Verwaltungsdienst veröffentlichen.
+> Wenn Sie die Azure API-Verwaltungsressource in Ihr Projekt einschließen und die Bereitstellung auslösen, können Sie Ihre APIs in Azure Functions im Azure-API-Verwaltungsdienst veröffentlichen.
 
 ::: zone-end
 
@@ -58,9 +58,9 @@ Die Anleitungen "Erste Schritte" helfen Ihnen bei der Bereitstellung mithilfe de
 
 Die folgenden Apps können in Visual Studio bereitgestellt werden:
 
-* Die Registerkarten-App, z. B. Frontend-Anwendungen, wird im Azure-Speicher bereitgestellt und für statisches Webhosting konfiguriert.
-* Die Benachrichtigungs-Bot-App mit Azure-Funktionstriggern kann für Azure-Funktionen bereitgestellt werden.
-* Die Bot-App oder Nachrichtenerweiterung kann für Azure-App-Dienste bereitgestellt werden.
+* Die Registerkarten-App, z. B. Frontend-Anwendungen, wird in Azure Storage bereitgestellt und für statisches Webhosting konfiguriert.
+* Die Benachrichtigungs-Bot-App mit Azure Functions Triggern kann für Azure Functions bereitgestellt werden.
+* Die Bot-App oder Nachrichtenerweiterung kann für Azure-App Services bereitgestellt werden.
 
 Nach der Bereitstellung können Sie eine Vorschau der App im Teams-Client oder im Webbrowser anzeigen, bevor Sie mit der Verwendung beginnen können.
 

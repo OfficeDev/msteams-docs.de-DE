@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296025"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615338"
 ---
 # <a name="teams-toolkit-overview"></a>Überblick über das Teams-Toolkit
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey des Teams-Toolkits" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Das Teams-Toolkit erleichtert die ersten Schritte mit der App-Entwicklung für Microsoft Teams mit Visual Studio und Visual Studio Code.
 
@@ -26,6 +24,8 @@ Das Teams-Toolkit erleichtert die ersten Schritte mit der App-Entwicklung für M
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep
 * Erstellen von eindeutigen Konfigurationen wie Dev, Test und Prod mithilfe des Features "Umgebungen"
 * Bringen Sie Ihre App in Ihre Organisation oder die Teams-App Store mithilfe integrierter Veröffentlichungstools
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey des Teams-Toolkits" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>Verfügbar für Visual Studio und Visual Studio Code
 

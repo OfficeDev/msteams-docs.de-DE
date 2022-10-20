@@ -271,7 +271,9 @@
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: Erstellen von Registerkarten mit adaptiven Karten
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+    - name: Verwenden von Fluid mit Microsoft Teams
+      href: tabs/how-to/using-fluid-msteam.md
     - name: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -378,15 +380,20 @@
   items:
     - name: Übersicht
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Einheitliche Besprechungs-Apps
-      href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, user access, federated users'
-    - name: Aktivieren und Konfigurieren von Apps für Besprechungen
-      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'meeting token generator app, meeting scenario'
-    - name: API-Referenzen für Besprechungs-Apps
-      href: apps-in-teams-meetings/API-references.md
-      displayName: 'CART URL, channel, permissions, access, audio state'
+    - name: Aktivieren und Konfigurieren von Apps für Teams-Besprechungen
+      items:
+        - name: Erstellen von Registerkarten für Besprechungen
+          href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        - name: Erstellen von Apps für die Besprechungsphase
+          href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+        - name: Erstellen einer Benachrichtigung in einer Besprechung für die Besprechung
+          href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+        - name: Erstellen erweiterbarer Unterhaltungen für den Besprechungschat
+          href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
+        - name: Erstellen von Apps für anonyme Benutzer
+          href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+        - name: APIs für Besprechungs-Apps
+          href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: Abrufen von Besprechungstranskripten mithilfe von Graph-APIs
       items:
         - name: Übersicht

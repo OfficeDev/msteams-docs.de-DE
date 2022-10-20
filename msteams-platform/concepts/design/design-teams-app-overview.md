@@ -1,16 +1,16 @@
 ---
 title: Entwerfen Ihrer benutzerdefinierten App
 author: heath-hamilton
-description: Erfahren Sie, wie Sie Microsoft Teams Apps und Ressourcen entwerfen, darunter das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
+description: Erfahren Sie, wie Sie Microsoft Teams-Apps und -Ressourcen entwerfen, darunter das Microsoft Teams UI Kit, bewährte Methoden, Beispiele und vieles mehr.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 341c64b2afda7574b6d230257290220e2c97d325
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142878"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615310"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Entwerfen Ihrer Microsoft Teams-App
 
@@ -185,7 +185,7 @@ Entwerfen Sie adaptive Karten in unserem webbasierten Tool.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Aktivieren und Konfigurieren Ihrer Apps für Teams-Meetings](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Aktivieren und Konfigurieren Ihrer Apps für die Besprechungsphase](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Entwerfen Ihres Microsoft Teams-Bots](~/bots/design/bots.md)
 * [Erstellen eines virtuellen Assistenten](~/samples/virtual-assistant.md)
 * [Entwerfen von Aufgabenmodulen für Ihre Microsoft Teams-App](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
