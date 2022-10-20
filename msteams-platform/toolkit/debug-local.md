@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026962"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653661"
 ---
 # <a name="debug-your-teams-app-locally"></a>Lokales Debuggen Ihrer Teams-App
 
@@ -23,6 +23,10 @@ Mit dem Teams-Toolkit können Sie Ihre Microsoft Teams-App lokal debuggen und ei
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Lokales Debuggen Ihrer Microsoft Teams-App für Visual Studio Code
 
 Das Teams-Toolkit in Visual Studio Code bietet Ihnen die Funktionen, um das Debuggen Ihrer Teams-App lokal zu automatisieren. Mit Visual Studio können Sie Registerkarten-, Bot- und Nachrichtenerweiterungen debuggen. Sie müssen das Teams-Toolkit einrichten, bevor Sie Ihre App debuggen.
+
+> [!NOTE]
+>
+> Sie können Ihr altes Teams-Toolkit-Projekt aktualisieren, um neue Aufgaben zu verwenden. Weitere Informationen finden Sie im [Dokument "Debugeinstellungen"](https://aka.ms/teamsfx-debug-upgrade-new-tasks).
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Einrichten Ihres Teams-Toolkits für das Debuggen
 
@@ -110,7 +114,7 @@ Führt Aufgaben wie in definiert aus `.vscode/tasks.json`.
 
 In der folgenden Abbildung werden aufgabennamen auf den Registerkarten **OUTPUT** und **TERMINAL** des Visual Studio Code angezeigt, während registerkarte, Bot oder Nachrichtenerweiterung ausgeführt wird, und Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Startet App-Dienste":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Startet App-Dienste" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>Startet Debugkonfigurationen
 
