@@ -3,12 +3,12 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Erfahren Sie mehr über die allgemeinen Begriffe, Bedeutungen und Definitionen, die in der Microsoft Teams-Entwicklerdokumentation verwendet werden.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100861"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615233"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -20,7 +20,6 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Aktionsbefehl](../messaging-extensions/how-to/action-commands/define-action-command.md) | Eine Art von Nachrichtenerweiterungs-App, die ein Popup verwendet, um Informationen zu sammeln oder anzuzeigen. <br>**Siehe auch**: [Nachrichtenerweiterung](#m);[Suchbefehle](#s) |
 | [Adaptive Karten](../task-modules-and-cards/what-are-cards.md) | Ein umsetzbarer Inhaltsausschnitt, der einer Unterhaltung von einem Bot oder einer Nachrichtenerweiterung hinzugefügt wird. Verwenden Sie Text, Grafiken und Schaltflächen mit diesen Karten für eine umfassende Kommunikation. |
-| [Anonymer Benutzer](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**Weitere Informationen unter**: [Verbundbenutzer](#f) |
 | [App-Katalog](../toolkit/publish.md) | Eine Website, die SharePoint- und Office-Apps für die interne Verwendung einer Organisation speichert. <br>**Weitere Informationen unter**: [SPFx](#s) |
 | [App-Manifest](../resources/schema/manifest-schema.md) | Das Teams App-Manifest beschreibt, wie die App in das Microsoft Teams Produkt integriert wird. Das Manifest muss dem [Manifestschema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) entsprechen. |
 | [App-Paket](../concepts/build-and-test/apps-package.md) | Ein Teams-App-Paket ist eine ZIP-Datei, die die App-Manifestdatei, das Farbsymbol und das Gliederungssymbol enthält. |
@@ -86,7 +85,6 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Partnerbenutzer](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Ein externer Benutzertyp in einer Teams-App-Besprechung, der zur Besprechung eingeladen wird. Dieser Benutzer verfügt über gültige Anmeldeinformationen, die von autorisierten Teams Partnern verbunden werden. Sie werden auch als externe Benutzer bezeichnet. <br>**Weitere Informationen unter**: [Anonymer Benutzer](#a) |
 | [Erste Ausführung](../concepts/design/design-teams-app-ui-templates.md)|Eine Erste-Ausführung-Erfahrung (FRE) ist die Einführung eines Benutzers in Ihr Produkt. Die FRE hilft Benutzern, mit den Funktionen, Features und Vorteilen des Produkts zu beginnen, und beeinflusst, dass benutzer wiederkommen und Ihr Produkt weiterhin verwenden.|
 
 ## <a name="g"></a>G
@@ -104,7 +102,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Identitätsanbieter](../concepts/authentication/authentication.md) | Eine Entität, die Anmeldeinformationen speichert und für den Benutzer bereitstellt. Es ermöglicht benutzern auch, sich selbst zu registrieren.  <br>**Weitere Informationen unter**: [Authentifizierung](#a) |
 | [Eingehender Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Eine externe App kann Inhalte in Teams-Kanälen freigeben. Diese Webhooks werden als Nachverfolgungs- und Benachrichtigungstools verwendet. <br>**Weitere Informationen unter**: [Webhook](#w); [Ausgehender Webhook](#o) |
-| [In-Meeting-App-Umgebung](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Weitere Informationen unter**: [Besprechungslebenszyklus](#m) |
+| [In-Meeting-App-Umgebung](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Weitere Informationen unter**: [Besprechungslebenszyklus](#m) |
 
 ## <a name="l"></a>L
 
@@ -122,7 +120,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | --- | --- |
 | [Medienfunktion](../concepts/device-capabilities/media-capabilities.md) | Systemeigene Gerätefunktionen wie Kamera und Mikrofon, die Sie in Ihre Teams App integrieren können. <br>**Weitere Informationen unter**: [Funktion](#c); [Gerätefunktion](#d) |
 | [Besprechungsbot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots, die mit Teams-Anrufen und Besprechungen interagieren, verwenden Sprach-, Video- und Bildschirmfreigabe in Echtzeit. <br>**Weitere Informationen unter**: [Anruf-Bot](#c); [Chat-Bot](#c) |
-| [Der Besprechungslebenszyklus](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Es umfasst App-Erfahrungen vor der Besprechung, während sowie nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren. <br>**Weitere Informationen unter**: [Besprechungserfahrung](#i) |
+| [Der Besprechungslebenszyklus](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Es umfasst App-Erfahrungen vor der Besprechung, während sowie nach der Besprechung. Sie können Registerkarten, Bots und Nachrichtenerweiterungen in jeder Phase des Besprechungslebenszyklus integrieren. <br>**Weitere Informationen unter**: [Besprechungserfahrung](#i) |
 | [Besprechungsphase](../sbs-meetings-stage-view.yml) | Ein Feature der Besprechungserweiterungs-App. Es handelt sich um einen freigegebenen Bereich, auf den alle Teilnehmer während der Besprechung zugriffen können. Es hilft Teilnehmern, in Echtzeit mit App-Inhalten zu interagieren und zusammenzuarbeiten. <br>**Weitere Informationen unter**: [Phasenansicht](#s) |
 | [Nachrichtenerweiterung](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**Weitere Informationen unter**: [Suchbefehle](#s); [Aktionsbefehle](#a) |
 | [Besprechungserweiterung](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Eine App, die während des Besprechungslebenszyklus verwendet werden soll, um sie produktiver zu machen, wie z. B. Whiteboard, Dashboard und viele mehr. |
