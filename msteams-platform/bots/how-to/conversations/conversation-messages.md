@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Nachricht, vorgeschlagene Aktionen, Bena
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
+ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327594"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68657625"
 ---
 # <a name="messages-in-bot-conversations"></a>Meldungen in Bot-Unterhaltungen
 
@@ -23,11 +23,11 @@ Grundlegende Unterhaltungen werden über den Bot Framework-Connector, eine einze
 
 Ihr Bot empfängt Nachrichten von Teams mithilfe der `Text` Eigenschaft und sendet einzelne oder mehrere Nachrichtenantworten an die Benutzer.
 
-Weitere Informationen finden Sie [unter Benutzerzuordnung für Bot-Nachrichten](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
+Weitere Informationen finden Sie unter [Benutzerzuordnung für Bot-Nachrichten](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
 
 ## <a name="receive-a-message"></a>Empfangen einer Nachricht
 
-Um eine Textnachricht zu empfangen, verwenden Sie die `Text`-Eigenschaft des `Activity`-Objekts. Verwenden Sie im Aktivitäts-Handler des Bots die `Activity` des Turn-Kontextobjekts, um eine einzelne Nachrichtenanforderung zu lesen.
+Verwenden Sie zum Empfangen einer Textnachricht die `Text` Eigenschaft eines Objekts `Activity` . Verwenden Sie im Aktivitäts-Handler des Bots die `Activity` des Turn-Kontextobjekts, um eine einzelne Nachrichtenanforderung zu lesen.
 
 Der folgende Code zeigt ein Beispiel für den Empfang einer Nachricht:
 
@@ -120,7 +120,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Senden einer Nachricht
 
-Um eine Textnachricht zu senden, geben Sie die Zeichenfolge an, die Sie als Aktivität senden möchten. Verwenden Sie im Aktivitätshandler des Bots die Methode des Turn-Kontextobjekts `SendActivityAsync` , um eine einzelne Nachrichtenantwort zu senden. Verwenden Sie die Methode des Objekts `SendActivitiesAsync` , um mehrere Antworten gleichzeitig zu senden.
+Um eine Textnachricht zu senden, geben Sie die Zeichenfolge an, die Sie als Aktivität senden möchten. Verwenden Sie im Aktivitätshandler des Bots die Methode des Turn-Kontextobjekts `SendActivityAsync` , um eine einzelne Nachrichtenantwort zu senden. Verwenden Sie die Methode des Objekts `SendActivitiesAsync` , um mehrere Antworten zu senden.
 
 Der folgende Code zeigt ein Beispiel für das Senden einer Nachricht, wenn ein Benutzer zu einer Unterhaltung hinzugefügt wird:
 
@@ -193,17 +193,17 @@ async def on_members_added_activity(
 
 > [!NOTE]
 >
->* Die Nachrichtenaufteilung erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Diese Aktivität wird von Microsoft Teams in separate Aktivitäten unterteilt, eine mit nur einer Textnachricht und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie als Antwort keine Nachrichten-ID, die verwendet wird, um die Nachricht proaktiv zu [aktualisieren oder zu löschen](~/bots/how-to/update-and-delete-bot-messages.md) . Es wird empfohlen, getrennte Aktivitäten zu senden, anstatt je nach Nachrichtenteilung.
+>* Die Nachrichtenaufteilung erfolgt, wenn eine Textnachricht und eine Anlage in derselben Aktivitätsnutzlast gesendet werden. Teams teilt diese Aktivität in zwei separate Aktivitäten auf, eine mit einer SMS und die andere mit einer Anlage. Wenn die Aktivität geteilt ist, erhalten Sie als Antwort keine Nachrichten-ID, die verwendet wird, um die Nachricht proaktiv zu [aktualisieren oder zu löschen](~/bots/how-to/update-and-delete-bot-messages.md) . Es wird empfohlen, getrennte Aktivitäten zu senden, anstatt je nach Nachrichtenteilung.
 >* Gesendete Nachrichten können lokalisiert werden, um eine Personalisierung bereitzustellen. Weitere Informationen finden Sie [unter Lokalisieren Ihrer App](../../../concepts/build-and-test/apps-localization.md).
 
 Nachrichten, die zwischen Benutzern und Bots gesendet werden, enthalten interne Kanaldaten innerhalb der Nachricht. Diese Daten ermöglichen es dem Bot, in diesem Kanal ordnungsgemäß zu kommunizieren. Mit dem Bot Builder SDK können Sie die Nachrichtenstruktur ändern.
 
 ## <a name="send-suggested-actions"></a>Vorgeschlagene Aktionen senden
 
-Vorgeschlagene Aktionen ermöglichen es Ihrem Bot, Schaltflächen darzustellen, die der Benutzer auswählen kann, um Eingaben bereitzustellen. Vorgeschlagene Aktionen verbessern die Benutzerfreundlichkeit, indem sie es dem Benutzer ermöglichen, eine Frage zu beantworten oder eine Auswahl mit einer Schaltfläche zu treffen, anstatt eine Antwort mit einer Tastatur einzugeben.
-Die Schaltflächen bleiben in den Rich-Karten für den Benutzer sichtbar und zugänglich, auch nachdem der Benutzer eine Auswahl getroffen hat, während für vorgeschlagene Aktionen keine Schaltflächen verfügbar sind. Dadurch wird verhindert, dass der Benutzer veraltete Schaltflächen in einer Unterhaltung auswährt.
+Die vorgeschlagenen Aktionen ermöglichen es Ihrem Bot, Schaltflächen darzustellen, die der Benutzer auswählen kann, um Eingaben bereitzustellen. Vorgeschlagene Aktionen verbessern die Benutzerfreundlichkeit, indem sie es dem Benutzer ermöglichen, eine Frage zu beantworten oder eine Auswahl mit einer Schaltfläche zu treffen, anstatt eine Antwort mit einer Tastatur einzugeben.
+Wenn der Benutzer eine Schaltfläche auswählt, bleibt sie in den Rich-Karten sichtbar und zugänglich, jedoch nicht für die vorgeschlagenen Aktionen. Dadurch wird verhindert, dass der Benutzer veraltete Schaltflächen in einer Unterhaltung auswährt.
 
-Wenn Sie einer Nachricht vorgeschlagene Aktionen hinzufügen möchten, legen Sie die `suggestedActions` Eigenschaft des [Activity-Objekts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) fest, um die Liste der [CardAction-Objekte](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) anzugeben, die die Schaltflächen darstellen, die dem Benutzer angezeigt werden sollen. Weitere Informationen finden Sie unter [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+Wenn Sie einer Nachricht vorgeschlagene Aktionen hinzufügen möchten, legen Sie die `suggestedActions` Eigenschaft eines [Aktivitätsobjekts](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) fest, um die Liste der [Kartenaktionsobjekte](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) anzugeben, die die Schaltflächen darstellen, die dem Benutzer angezeigt werden sollen. Weitere Informationen finden Sie unter [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
 
 Es folgt ein Beispiel für die Implementierung und Erfahrung mit vorgeschlagenen Aktionen:
 
@@ -225,16 +225,18 @@ Es folgt ein Beispiel für die Implementierung und Erfahrung mit vorgeschlagenen
   }
 ```
 
+Im Folgenden wird ein Beispiel für vorgeschlagene Aktionen veranschaulicht:
+
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot vorgeschlagene Aktionen" border="true":::
 
 > [!NOTE]
 >
 > * `SuggestedActions` werden nur für 1:1-Chat-Bots und textbasierte Nachrichten und nicht für adaptive Karten oder Anlagen unterstützt.
-> * Derzeit `imBack` ist der einzige unterstützte Aktionstyp, und Teams zeigt bis zu drei vorgeschlagene Aktionen an.
+> * `imBack` ist der einzige unterstützte Aktionstyp, und Teams zeigt bis zu drei vorgeschlagene Aktionen an.
 
 ## <a name="teams-channel-data"></a>Teams-Kanaldaten
 
-Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine definitive Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden. Das `TeamsActivityHandler` SDK ruft wichtige Informationen aus dem `channelData` Objekt ab, um es leicht zugänglich zu machen. Sie können jedoch immer über das Objekt auf die `turnContext` ursprünglichen Daten zugreifen.
+Das `channelData` Objekt enthält Teams-spezifische Informationen und ist eine definitive Quelle für Team- und Kanal-IDs. Optional können Sie diese IDs zwischenspeichern und als Schlüssel für den lokalen Speicher verwenden. Das `TeamsActivityHandler` SDK ruft wichtige Informationen aus dem `channelData` Objekt ab, um es barrierefrei zu machen. Sie können jedoch immer über das Objekt auf die `turnContext` ursprünglichen Daten zugreifen.
 
 Das `channelData` Objekt ist nicht in Nachrichten in persönlichen Unterhaltungen enthalten, da diese außerhalb eines Kanals stattfinden.
 
@@ -278,13 +280,100 @@ Nachrichten, die von Ihrem Bot empfangen oder an diesen gesendet werden, können
 | Format    | Vom Benutzer zum Bot | Vom Bot zum Benutzer | Anmerkungen                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich-Text  | ✔️                | ✔️                | Ihr Bot kann Rich-Text, Bilder und Karten senden. Benutzer können Rich-Text und Bilder an Ihren Bot senden.                                                                                        |
-| Bilder  | ✔️                | ✔️                | Maximal 1024 × 1024 Pixel und 1 MB im PNG-, JPEG- oder GIF-Format. Animierte GIFs werden nicht unterstützt.  |
-| Karten     | ❌                | ✔️                | Informationen zu unterstützten Karten finden Sie in der [Teams-Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) . |
+| Bilder  | ✔️                | ✔️                | Maximal 1024 × 1024 Pixel und 1 MB im PNG-, JPEG- oder GIF-Format. Unterstützt das animierte GIF nicht. |
+| Karten     | ❌                | ✔️                | Unterstützte Karten finden Sie [in der Teams-Kartenreferenz](~/task-modules-and-cards/cards/cards-reference.md) . |
 | Emojis    | ✔️                | ✔️                | Teams unterstützt derzeit Emojis über UTF-16, z. B. U+1F600 zum Grinsen im Gesicht. |
 
-## <a name="notifications-to-your-message"></a>Benachrichtigungen an Ihre Nachricht
+### <a name="picture-messages"></a>Bildnachrichten
 
-Sie können Ihrer Nachricht auch mithilfe der `Notification.Alert` Eigenschaft Benachrichtigungen hinzufügen. Benachrichtigungen benachrichtigen Benutzer über neue Aufgaben, Erwähnungen und Kommentare. Diese Warnungen beziehen sich auf das, was Benutzer gerade bearbeiten oder was sie durch Einfügen einer Benachrichtigung in ihren Aktivitätsfeed anzeigen müssen. Damit Benachrichtigungen von Ihrer Bot-Nachricht ausgelöst werden, legen Sie die `TeamsChannelData` Objekteigenschaft `Notification.Alert` auf *"true"* fest. Ob eine Benachrichtigung ausgelöst wird, hängt von den Teams-Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen. Der Benachrichtigungstyp ist entweder ein Banner oder sowohl ein Banner als auch eine E-Mail.
+Um Ihre Nachricht zu verbessern, können Sie Bilder als Anlagen zu dieser Nachricht hinzufügen. Weitere Informationen zu Anlagen finden Sie unter [Hinzufügen von Medienanlagen zu Nachrichten](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+Bilder können höchstens 1024 × 1024 Pixel und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIFs werden nicht unterstützt.
+
+Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
+
+* Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+Ein Unterhaltungsbot kann adaptive Karten enthalten, die Geschäftsworkflows vereinfachen. Adaptive Karten bieten anpassbaren Text, Sprache, Bilder, Schaltflächen und Eingabefelder.
+
+### <a name="adaptive-cards"></a>Adaptive Karten
+
+Adaptive Karten können in einem Bot erstellt und in mehreren Apps wie Teams, Ihrer Website usw. angezeigt werden. Weitere Informationen finden Sie unter [Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+Der folgende Code zeigt ein Beispiel für das Senden einer einfachen adaptiven Karte:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+#### <a name="form-completion-feedback"></a>Feedback zum Ausfüllen des Formulars
+
+Mithilfe einer adaptiven Karte können Sie Feedback zum Ausfüllen von Formularen erstellen. Die Meldung zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, während eine Antwort an den Bot gesendet wird. Die Nachricht kann zwei Typen aufweisen: Fehler oder Erfolg:
+
+* **Fehler**: Wenn eine an den Bot gesendete Antwort nicht erfolgreich war, **hat etwas nicht geklappt. Die Meldung "Erneut versuchen** " wird angezeigt.
+
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Fehlermeldung"border="true":::
+
+* **Erfolg**: Wenn eine an den Bot gesendete Antwort erfolgreich ist, **wird Ihre Antwort an die App-Nachricht gesendet** .
+
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Erfolgsmeldung"border="true":::
+
+     Sie können den Chat **schließen** oder wechseln, um die Nachricht zu schließen.
+
+     Wenn Sie die Erfolgsmeldung nicht anzeigen möchten, legen Sie das Attribut `hide` in der `msTeams` `feedback` Eigenschaft fest`true`. Es folgt ein Beispiel:
+
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+
+Weitere Informationen zu Karten und Karten in Bots finden Sie in der [Kartendokumentation](~/task-modules-and-cards/what-are-cards.md).
+
+## <a name="add-notifications-to-your-message"></a>Hinzufügen von Benachrichtigungen zu Ihrer Nachricht
+
+Es gibt zwei Möglichkeiten zum Senden einer Benachrichtigung von Ihrer Anwendung:
+
+* Durch Festlegen der Eigenschaft für die `Notification.Alert` Botnachricht.
+* Durch Senden einer Aktivitätsfeedbenachrichtigung mithilfe der Graph-API.
+
+Sie können Ihrer Nachricht mithilfe der `Notification.Alert` Eigenschaft Benachrichtigungen hinzufügen. Benachrichtigungen benachrichtigen Benutzer über ein Ereignis in Ihrer Anwendung, z. B. neue Aufgaben, Erwähnungen oder Kommentare. Diese Warnungen beziehen sich auf das, was Benutzer gerade bearbeiten oder was sie durch Einfügen einer Benachrichtigung in ihren Aktivitätsfeed anzeigen müssen. Damit Benachrichtigungen von Ihrer Bot-Nachricht ausgelöst werden, legen Sie die `TeamsChannelData` Objekteigenschaft `Notification.Alert` auf *"true"* fest. Wenn eine Benachrichtigung ausgelöst wird, hängt von den Teams-Einstellungen des einzelnen Benutzers ab, und Sie können diese Einstellungen nicht außer Kraft setzen.
+
+Wenn Sie eine beliebige Benachrichtigung generieren möchten, ohne eine Nachricht an den Benutzer zu senden, können Sie die Graph-API verwenden. Weitere Informationen finden Sie unter [Senden von Aktivitätsfeedbenachrichtigungen mit Graph-API](/graph/teams-send-activityfeednotifications) zusammen mit den [bewährten Methoden](/graph/teams-activity-feed-notifications-best-practices).
 
 > [!NOTE]
 > Im Feld **"Zusammenfassung** " wird text vom Benutzer als Benachrichtigung im Feed angezeigt.
@@ -362,88 +451,6 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-Um Ihre Nachricht zu verbessern, können Sie Bilder als Anlagen zu dieser Nachricht hinzufügen.
-
-## <a name="picture-messages"></a>Bildnachrichten
-
-Bilder werden gesendet, indem Anhänge zu einer Nachricht hinzugefügt werden. Weitere Informationen zu Anlagen finden Sie unter [Hinzufügen von Medienanlagen zu Nachrichten](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
-
-Bilder können höchstens 1024×1024 MB und 1 MB im PNG-, JPEG- oder GIF-Format sein. Animierte GIFs werden nicht unterstützt.
-
-Geben Sie die Höhe und Breite der einzelnen Bilder mithilfe von XML an. In Markdown ist die Bildgröße standardmäßig 256×256. Beispiel:
-
-* Verwenden Sie: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-* Verwenden Sie nicht: `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-Ein Unterhaltungsbot kann adaptive Karten enthalten, die Geschäftsworkflows vereinfachen. Adaptive Karten bieten anpassbaren Text, Sprache, Bilder, Schaltflächen und Eingabefelder.
-
-## <a name="adaptive-cards"></a>Adaptive Karten
-
-Adaptive Karten können in einem Bot erstellt und in mehreren Apps wie Teams, Ihrer Website usw. angezeigt werden. Weitere Informationen finden Sie unter [Adaptive Karten](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
-
-Der folgende Code zeigt ein Beispiel für das Senden einer einfachen adaptiven Karte:
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-    {
-        "items": [
-        {
-            "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
-            "type": "TextBlock",
-            "weight": "bolder",
-            "wrap": true
-        },
-        ],
-        "spacing": "extraLarge",
-        "type": "Container",
-        "verticalContentAlignment": "center"
-    }
-    ]
-}
-```
-
-### <a name="form-completion-feedback"></a>Feedback zum Ausfüllen des Formulars
-
-Die Meldung zum Ausfüllen des Formulars wird in adaptiven Karten angezeigt, während eine Antwort an den Bot gesendet wird. Die Nachricht kann zwei Typen aufweisen: Fehler oder Erfolg:
-
-* **Fehler**: Wenn eine an den Bot gesendete Antwort nicht erfolgreich war, **hat etwas nicht geklappt. Die Meldung "Erneut versuchen** " wird angezeigt.
-
-     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="Fehlermeldung"border="true":::
-
-* **Erfolg**: Wenn eine an den Bot gesendete Antwort erfolgreich ist, **wird Ihre Antwort an die App-Nachricht gesendet** .
-
-     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Erfolgsmeldung"border="true":::
-
-     Sie können den Chat **schließen** oder wechseln, um die Nachricht zu schließen.
-
-     Wenn Sie die Erfolgsmeldung nicht anzeigen möchten, legen Sie das Attribut `hide` in der `msTeams` `feedback` Eigenschaft fest`true`. Es folgt ein Beispiel:
-
-     ```json
-        "content": {
-            "type": "AdaptiveCard",
-            "title": "Card with hidden footer messages",
-            "version": "1.0",
-            "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Submit",
-                "msTeams": {
-                    "feedback": {
-                    "hide": true
-                    }
-                }
-            }
-            ]
-        } 
-     ```
-
-Weitere Informationen zu Karten und Karten in Bots finden Sie in der [Kartendokumentation](~/task-modules-and-cards/what-are-cards.md).
-
 ## <a name="status-codes-from-bot-conversational-apis"></a>Statuscodes von Bot-Unterhaltungs-APIs
 
 Stellen Sie sicher, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behandelt werden. In der folgenden Tabelle sind die Fehlercodes und beschreibungen aufgeführt, unter denen die Fehler generiert werden:
@@ -468,7 +475,7 @@ Stellen Sie sicher, dass diese Fehler in Ihrer Teams-App ordnungsgemäß behande
 
 ### <a name="status-codes-retry-guidance"></a>Statuscodes – Wiederholungsanleitung
 
-Die allgemeinen Wiederholungsanleitungen für jeden Statuscode sind in der folgenden Tabelle aufgeführt. Der Bot sollte es vermeiden, statuscodes erneut zu verwenden, die in der folgenden Tabelle nicht angegeben sind:
+Die allgemeinen Wiederholungsanleitungen für jeden Statuscode sind in der folgenden Tabelle aufgeführt. Der Bot muss das Wiederholen von Statuscodes vermeiden, die nicht angegeben sind:
 
 |Statuscode | Wiederholungsstrategie |
 |----------------|-----------------|
@@ -482,7 +489,7 @@ Die allgemeinen Wiederholungsanleitungen für jeden Statuscode sind in der folge
 
 | Beispielname | Beschreibung | Node.js | .NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Anzeigen](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | – |
+| Teams-Unterhaltungsbot | Verarbeitung von Nachrichten- und Unterhaltungsereignissen. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | – |
 | Lokalisierung von Teams-Apps | Lokalisierung von Teams-Apps mithilfe von Bot und Registerkarte. | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | – | – | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Nächster Schritt
