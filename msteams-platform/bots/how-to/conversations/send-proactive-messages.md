@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot sen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: dec8739cbab66e9ddd6aac18038a001b1fdfa104
+ms.sourcegitcommit: b72f51377f41be18ee9b70b042f736605f755cf1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243024"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68670049"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -85,7 +85,7 @@ Im folgenden Video erfahren Sie, wie Sie proaktive Nachrichten aus Bots senden:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>Verstehen, wer einen Bot blockiert, stummgeschaltet oder deinstalliert hat
