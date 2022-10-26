@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die neuen Microsoft Teams-Entwicklerfeature
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699185"
+ms.locfileid: "68701041"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -31,6 +31,7 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 **Oktober 2022**
 
+* ***26. Oktober 2022***: [Erstellen einer App zum Signieren von Dokumenten in Besprechungen](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***19. Oktober 2022***: [Das Entwicklerportal für Teams ist jetzt für GCC-Mandanten verfügbar](concepts/build-and-test/teams-developer-portal.md).
 * ***13. Oktober 2022***: [Konfigurieren Sie NavBar, und erstellen Sie ein Überlaufmenü für mehrere Aktionen](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***13. Oktober 2022***: [Konfigurieren der Zurück-Schaltfläche einer App](concepts/design/personal-apps.md#configure-back-button).

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: ea5d7b57b9ee6344d34fcc6ed560936ac6109304
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699139"
+ms.locfileid: "68701034"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Erstellen von Apps für teams-Besprechungsphase
 
@@ -277,7 +277,7 @@ Sie können eine Signatur-App für Besprechungen verwenden, um Folgendes zu erre
 
 Die Teilnehmer können Dokumente wie Kaufverträge und Bestellungen überprüfen und unterschreiben.
 
-![Signatur-App für Besprechungsdokument](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Signatur-App für Besprechungsdokument":::
 
 Die folgenden Teilnehmerrollen können während der Besprechung beteiligt sein:
 
@@ -289,9 +289,9 @@ Die folgenden Teilnehmerrollen können während der Besprechung beteiligt sein:
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-|Beispiel für Freigabefenster | Beispiel-App zum Anzeigen einer Registerkarte im Freigabefenster für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-| Besprechungsinterne Benachrichtigung | Veranschaulicht die Implementierung von Benachrichtigungen in Besprechungen mithilfe eines Bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| Dokumentsignierung in der Besprechung | Veranschaulicht die Implementierung einer Teams-App zum Signieren von Dokumenten. Umfasst die Freigabe bestimmter App-Inhalte für die Stufe, teams-SSO und benutzerspezifische Phasenansicht. | [Anzeigen](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | – |
+|Beispiel für Freigabefenster | Beispiel-App zum Anzeigen einer Registerkarte im Freigabefenster für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| Besprechungsinterne Benachrichtigung | Veranschaulicht die Implementierung von Benachrichtigungen in Besprechungen mithilfe eines Bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| Dokumentsignierung in der Besprechung | Veranschaulicht die Implementierung einer Teams-App zum Signieren von Dokumenten. Umfasst die Freigabe bestimmter App-Inhalte für die Stufe, teams-SSO und benutzerspezifische Phasenansicht. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | – |
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
@@ -307,4 +307,3 @@ Befolgen Sie die [schrittweise Anleitung](../sbs-inmeeting-document-signing.yml)
 * [Erweiterte Besprechungs-APIs](meeting-apps-apis.md)
 * [Benutzerdefinierte Zusammen-Modus-Szenen](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
-* [Schritt-für-Schritt-Anleitung zum Erstellen einer App zum Signieren von Dokumenten in Besprechungen](../sbs-inmeeting-document-signing.yml)
