@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 440e48d370d18564f5bba869d95c63bc25b11e4e
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615436"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699139"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Erstellen von Apps für teams-Besprechungsphase
 
@@ -265,6 +265,26 @@ Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest konfi
 > [!NOTE]
 > Damit Ihre App die Überprüfung besteht, verwenden Sie beim Erstellen eines Deep-Links von Ihrer Website, Web-App oder adaptiven Karte " **In Besprechung freigeben** " als Zeichenfolge oder Kopie.
 
+## <a name="build-an-in-meeting-document-signing-app"></a>Erstellen einer Signatur-App für Besprechungsdokumenten
+
+Sie können eine In-Meeting-App erstellen, mit der Besprechungsteilnehmer Dokumente in Echtzeit signieren können. Es erleichtert das Überprüfen und Signieren von Dokumenten in einer einzigen Sitzung. Die Teilnehmer können die Dokumente mit ihrer aktuellen Mandantenidentität signieren.
+
+Sie können eine Signatur-App für Besprechungen verwenden, um Folgendes zu erreichen:
+
+- Hinzufügen von Dokumenten, die während einer Besprechung überprüft werden sollen
+- Freigeben von Dokumenten, die in der Hauptphase überprüft werden sollen
+- Signieren von Dokumenten mithilfe der Identität des Signierers
+
+Die Teilnehmer können Dokumente wie Kaufverträge und Bestellungen überprüfen und unterschreiben.
+
+![Signatur-App für Besprechungsdokument](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+
+Die folgenden Teilnehmerrollen können während der Besprechung beteiligt sein:
+
+- **Dokumentersteller**: Diese Rolle kann eigene Dokumente hinzufügen, die überprüft und signiert werden sollen.
+- **Signierer**: Diese Rolle kann überprüfte Dokumente signiert.
+- **Leser**: Diese Rolle kann die dokumente anzeigen, die der Besprechung hinzugefügt wurden.
+
 ## <a name="code-sample"></a>Codebeispiel
 
 |Beispielname | Beschreibung | C# | Node.js |
@@ -272,6 +292,10 @@ Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest konfi
 |Beispiel für Freigabefenster | Beispiel-App zum Anzeigen einer Registerkarte im Freigabefenster für die Zusammenarbeit | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | Besprechungsinterne Benachrichtigung | Veranschaulicht die Implementierung von Benachrichtigungen in Besprechungen mithilfe eines Bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | Dokumentsignierung in der Besprechung | Veranschaulicht die Implementierung einer Teams-App zum Signieren von Dokumenten. Umfasst die Freigabe bestimmter App-Inhalte für die Stufe, teams-SSO und benutzerspezifische Phasenansicht. | [Anzeigen](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | – |
+
+## <a name="step-by-step-guide"></a>Schrittweise Anleitung
+
+Befolgen Sie die [schrittweise Anleitung](../sbs-inmeeting-document-signing.yml) zum Erstellen einer App zum Signieren von Besprechungsdokumenten.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -283,3 +307,4 @@ Um die gesamte App für die Phase freizugeben, müssen Sie im App-Manifest konfi
 * [Erweiterte Besprechungs-APIs](meeting-apps-apis.md)
 * [Benutzerdefinierte Zusammen-Modus-Szenen](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Schritt-für-Schritt-Anleitung zum Erstellen einer App zum Signieren von Dokumenten in Besprechungen](../sbs-inmeeting-document-signing.yml)

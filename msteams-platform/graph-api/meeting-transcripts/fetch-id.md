@@ -2,13 +2,13 @@
 title: Abrufen von Besprechungs-ID und Organisator-ID zum Abrufen von Besprechungstranskripten
 description: Beschreibt den Prozess zum Abrufen von Besprechungs-ID und Organisator-ID zum Abrufen von Besprechungstranskripten
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.topic: conceptual
+ms.openlocfilehash: 0f9502b9e4f399725b115ece7c6ab5b705a1bf3f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027312"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699171"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>Abrufen von Besprechungs-ID und Organisator-ID
 

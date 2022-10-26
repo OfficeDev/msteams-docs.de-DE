@@ -2,13 +2,13 @@
 title: Verwenden von Microsoft Graph zum Abrufen von Transkripten für eine Teams-Besprechung
 description: Beschreibt den Prozess sowie die Szenarien und APIs zum Abrufen von Transkripten im Szenario nach der Besprechung.
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: 48d94bcfb41caf7bff171e4ae25146578c5d5fd8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.topic: conceptual
+ms.openlocfilehash: 4953c5bd77700becb92e71881222eb70fbc401a0
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615302"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699157"
 ---
 # <a name="get-meeting-transcripts-using-graph-apis"></a>Abrufen von Besprechungstranskripten mithilfe von Graph-APIs
 
