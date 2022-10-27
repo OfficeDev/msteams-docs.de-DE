@@ -43,6 +43,8 @@
       href: sbs-gs-notificationbot.yml
     - name: Erstellen eines Befehlsbots mit JavaScript
       href: sbs-gs-commandbot.yml
+    - name: Erstellen eines Workflowbots
+      href: sbs-gs-workflow-bot.yml
     - name: Codebeispiele
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Planen Ihrer App
@@ -113,36 +115,34 @@
           href: toolkit/install-Teams-Toolkit.md
         - name: Erkunden des Teams-Toolkits
           href: toolkit/explore-Teams-Toolkit.md
-        - name: Vorbereiten des Erstellens von Apps mithilfe des Teams-Toolkits
+        - name: Vorbereiten der Erstellung von Apps mithilfe des Teams-Toolkits
           href: toolkit/build-environments.md
         - name: Verwenden des Teams-Toolkits zum Erstellen Ihrer App
           items:
-            - name: Voraussetzungen für das Erstellen Ihrer Teams-App
+            - name: Voraussetzungen für die Erstellung Ihrer Teams-App
               href: toolkit/tools-prerequisites.md
               displayName: Accounts to build your Teams app
             - name: Erstellen eines neuen Teams-App-Projekts
               href: toolkit/create-new-project.md
             - name: Entwickeln Ihrer Teams-App
               items:
-                - name: Hinzufügen und Verwalten von Umgebungen
+                - name: Hinzufügen und Verwalten einer Umgebung
                   href: toolkit/TeamsFx-multi-env.md
-                - name: Erstellen einer App mit mehreren Funktionen
+                - name: Erstellen einer Multifunktions-App
                   href: toolkit/add-capability.md
                   displayName: Multiple capabilities app
                 - name: Erstellen von funktionsbasierten Cloudressourcen
                   href: toolkit/add-resource.md
-                - name: Integrieren vorhandener Drittanbieter-APIs
+                - name: Integrieren vorhandener APIs von Drittanbietern
                   href: toolkit/add-API-connection.md
                 - name: Hinzufügen des einmaligen Anmeldens zur Teams-App
                   href: toolkit/add-single-sign-on.md
-            - name: Manifest anpassen
+            - name: Anpassen des Manifests
               items:
                 - name: Anpassen des Teams-App-Manifests
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
                 - name: Bearbeiten des Azure AD-Manifests
                   href: toolkit/AAD-manifest-customization.md
-            - name: TeamsFx SDK
-              href: toolkit/TeamsFx-SDK.md
             - name: Debuggen Sie Ihre Teams-App
               items:
                 - name: Übersicht
@@ -165,16 +165,18 @@
                   href: toolkit/use-CICD-template.md
                 - name: Querladen und Testen der App in der Teams-Umgebung
                   href: toolkit/sideload-and-test-app.md
-                - name: Testen des App-Verhaltens in unterschiedlichen Umgebungen
+                - name: Testen des App-Verhaltens in einer anderen Umgebung
                   href: toolkit/test-app-behavior.md
         - name: Veröffentlichen Ihrer Teams-App
           items:
             - name: Veröffentlichen von Teams-Apps mithilfe von Teams-Toolkits
               href: toolkit/publish.md
-            - name: Integration in das Entwicklerportal
+            - name: Integrieren in das Entwicklerportal
               href: toolkit/Integrate-with-developer-portal.md
         - name: Häufig gestellte Fragen
           href: toolkit/faq.md
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
     - name: Teams-Toolkit-CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Entwicklerportal für Teams
@@ -382,17 +384,17 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Aktivieren und Konfigurieren von Apps für Teams-Besprechungen
       items:
-        - name: Erstellen von Registerkarten für Besprechungen
+        - name: Registerkarten erstellen für Besprechungen
           href: apps-in-teams-meetings/build-tabs-for-meeting.md
         - name: Erstellen von Apps für die Besprechungsphase
           href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-        - name: Erstellen einer Benachrichtigung in einer Besprechung für die Besprechung
+        - name: Erstellen einer Besprechungsbenachrichtigung für besprechungsinterne Besprechungen
           href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-        - name: Erstellen erweiterbarer Unterhaltungen für den Besprechungschat
+        - name: Erstellen erweiterbarer Unterhaltungen für Besprechungschats
           href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
         - name: Erstellen von Apps für anonyme Benutzer
           href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
-        - name: APIs für Besprechungs-Apps
+        - name: Besprechungs-Apps-APIs
           href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: Abrufen von Besprechungstranskripten mithilfe von Graph-APIs
       items:
@@ -659,7 +661,7 @@
         - name: Vorbereiten ihrer Teams Store-Übermittlung
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration'
-        - name: 'Aktualisieren von Apple App Store Connect Team ID im Partner Center, App-Käufe auf mobilgeräten'
+        - name: 'Aktualisieren der Apple App Store Connect Team-ID im Partner Center, App-Erwerb auf Mobilgeräten'
           href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
           displayName: Enable users to install your app on Teams iOS platform.
         - name: Übermitteln Ihrer App
