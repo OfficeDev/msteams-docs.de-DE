@@ -1,23 +1,23 @@
 ---
 title: Formatieren von Bot-Nachrichten
 author: surbhigupta
-description: Erfahren Sie, wie Sie Ihre Bot-Nachrichten formatieren und formatieren, z. B. durchgestrichen, sortierte und ungeordnete Liste, Link oder Bildlink. Grundlegendes zur plattformübergreifenden Unterstützung.
+description: Erfahren Sie, wie Sie Botnachrichten wie durchgestrichene, sortierte und ungeordnete Listen, Links oder Bildlinks formatieren und formatieren. Grundlegendes zur plattformübergreifenden Unterstützung.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b0db9f9d9e55dc3f11474dac4b8c6563caf5fd1b
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100182"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772300"
 ---
 # <a name="format-your-bot-messages"></a>Formatieren von Bot-Nachrichten
 
-Mithilfe der Nachrichtenformatierung können Sie das Beste der Bot-Nachrichten hervorheben. Sie können Ihre Bot-Nachrichten so formatieren, dass sie Rich-Karten als Anlagen enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder, Audio, Video usw. enthalten.
+Mithilfe der Nachrichtenformatierung können Sie das Beste der Bot-Nachrichten hervorheben. Sie können Ihre Botnachrichten so formatieren, dass sie Rich Cards als Anlagen enthalten, die interaktive Elemente wie Schaltflächen, Text, Bilder usw. enthalten.
 
 > [!NOTE]
-> Der Grenzwert für die Größe von Botnachrichten beträgt 40 KB. Wenn der Grenzwert für die Größe der Bot-Nachricht 40 KB überschreitet, erhält der Bot einen `413` Statuscode (`RequestEntityTooLarge`), der den Fehlercode `MessageSizeTooBig`enthält. Der Grenzwert für die Größe der Bot-Nachricht umfasst die gesamte Nachrichtennutzlast, die als UTF-16 codiert ist, und enthält keine Base64-codierten Bilder.
+> Die Maximale Größe von Botnachrichten beträgt 40 KB. Wenn der Grenzwert für die Botnachrichtengröße 40 KB überschreitet, empfängt der Bot einen `413` Statuscode (`RequestEntityTooLarge`), der den Fehlercode `MessageSizeTooBig`enthält. Die Größenbeschränkung für Botnachrichten umfasst die gesamte Nachrichtennutzlast, die als UTF-16 codiert ist, und umfasst keine Base64-codierten Bilder.
 
 ## <a name="format-text-content"></a>Formatieren von Textinhalten
 
@@ -35,11 +35,11 @@ Teams unterstützt eine Reihe von Markdown- und XML- oder HTML-Formatierungstags
 
 Derzeit gelten die folgenden Einschränkungen für die Formatierung:
 
-* Nur-Text-Nachrichten unterstützen keine Tabellenformatierung.
+* Reine Textnachrichten unterstützen keine Tabellenformatierung.
 * Funktionsreiche Karten unterstützen die Formatierung nur in der Texteigenschaft, nicht in den Titel- oder Untertiteleigenschaften.
 * Rich-Karten unterstützen keine Markdown- oder Tabellenformatierung.
 
-Nachdem Sie Textinhalte formatiert haben, stellen Sie sicher, dass Ihre Formatierung auf allen Plattformen funktioniert, die von Teams unterstützt werden.
+Stellen Sie nach dem Formatieren von Textinhalten sicher, dass Ihre Formatierung auf allen plattformen funktioniert, die von Teams unterstützt werden.
 
 ## <a name="cross-platform-support"></a>Plattformübergreifender Support
 

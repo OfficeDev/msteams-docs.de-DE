@@ -1,32 +1,37 @@
 ---
 title: Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 author: surbhigupta
-description: Erfahren Sie, wie Sie mithilfe eines Aktionsbefehls für die Nachrichtenerweiterung mit proaktiver Nachricht auf die Aufgabenmodul-Sendeaktion reagieren. Definieren Sie Suchbefehle, und reagieren Sie auf Suchvorgänge.
+description: Erfahren Sie, wie Sie mit proaktiver Nachricht auf das Aufgabenmodul reagieren, um eine Aktion über einen Aktionsbefehl für die Nachrichtenerweiterung zu senden. Definieren Sie Suchbefehle, und reagieren Sie auf Suchvorgänge.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100483"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772307"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Auf die Aktion zum Absenden des Aufgabenmoduls reagieren
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 In diesem Dokument erfahren Sie, wie Ihre App auf Aktionsbefehle reagiert, z. B. auf die Aktion "Aufgabenmodul einreichen" des Benutzers.
-Nachdem ein Benutzer das Aufgabenmodul abgeschickt hat, erhält Ihr Webdienst eine`composeExtension/submitAction`Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren. Andernfalls erhält der Benutzer die Fehlermeldung **Kann die App nicht erreichen**, und jede Antwort auf den Aufruf wird vom Teams-Client ignoriert.
+Nachdem ein Benutzer das Aufgabenmodul abgeschickt hat, erhält Ihr Webdienst eine`composeExtension/submitAction`Aufrufnachricht mit der Befehls-ID und den Parameterwerten. Ihre App hat fünf Sekunden Zeit, um auf den Aufruf zu reagieren.  
 
 Sie haben die folgenden Möglichkeiten zu antworten:
 
-* Keine Antwort: Verwenden Sie die Submit-Aktion, um einen Prozess in einem externen System auszulösen und dem Benutzer keine Rückmeldung zu geben. Es ist nützlich für lang andauernde Prozesse und um abwechselnd Feedback zu geben. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md) geben.
+* Keine Antwort: Verwenden Sie die Submit-Aktion, um einen Prozess in einem externen System auszulösen und dem Benutzer keine Rückmeldung zu geben. Es ist nützlich für prozesse mit langer Ausführungsdauer und alternativ Feedback zu geben. Sie können z. B. Feedback mit einer [proaktiven Nachricht](~/bots/how-to/conversations/send-proactive-messages.md) geben.
 * [Ein weiteres Aufgabenmodul](#respond-with-another-task-module): Sie können mit einem zusätzlichen Aufgabenmodul als Teil einer mehrstufigen Interaktion antworten.
 * [Kartenantwort](#respond-with-a-card-inserted-into-the-compose-message-area): mit einer Karte antworten, mit der der Benutzer interagieren oder die er in eine Nachricht einfügen kann
 * [Adaptive Karte vom Bot](#bot-response-with-adaptive-card): Fügen Sie eine adaptive Karte direkt in die Unterhaltung ein.
 * [Fordern Sie den Benutzer auf, sich zu authentifizieren](~/messaging-extensions/how-to/add-authentication.md).
 * [Fordern Sie den Benutzer auf, zusätzliche Konfigurationen bereitzustellen](~/get-started/first-message-extension.md).
+
+Wenn die App nicht innerhalb von fünf Sekunden antwortet, versucht der Teams-Client die Anforderung zweimal, bevor die Fehlermeldung **Unable to reach the app** gesendet wird. Wenn der Bot nach dem Timeout antwortet, wird die Antwort ignoriert.
+
+> [!NOTE]
+> Die App muss alle Aktionen mit langer Ausführungszeit zurückstellen, nachdem der Bot auf die Aufrufanforderung antwortet. Die Ergebnisse der aktion mit langer Ausführungsdauer können als Nachricht übermittelt werden.
 
 Für die Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf an Ihren Webdienst zurückgesendet, nachdem der Benutzer den Vorgang abgeschlossen hat. Die folgende Tabelle zeigt, welche Arten von Antworten verfügbar sind, basierend auf dem Aufrufspeicherort `commandContext` der Nachrichtenerweiterung:
 
@@ -42,7 +47,7 @@ Für die Authentifizierung oder Konfiguration wird der ursprüngliche Aufruf an 
 > * Wenn Sie **Action.Submit** über ME-Karten auswählen, wird eine Aufrufaktivität mit dem Namen **composeExtension** gesendet, wobei der Wert der üblichen Nutzlast entspricht.
 > * Wenn Sie **Action.Submit** über ME-Karten auswählen, wird eine Aufrufaktivität mit dem Namen **composeExtension** gesendet, wobei der Wert der üblichen Nutzlast entspricht.
 
-Wenn die App einen Unterhaltungs-Bot enthält, installieren Sie den Bot in der Unterhaltung, und laden Sie dann das Aufgabenmodul. Der Bot ist nützlich, um zusätzlichen Kontext für das Aufgabenmodul abzurufen. Informationen zum Installieren eines Konversationsbots finden Sie unter [Anfordern der Installation Ihres Konversationsbots](create-task-module.md#request-to-install-your-conversational-bot).
+Wenn die App einen Konversationsbot enthält, installieren Sie den Bot in der Unterhaltung, und laden Sie dann das Aufgabenmodul. Der Bot ist nützlich, um zusätzlichen Kontext für das Aufgabenmodul abzurufen. Informationen zum Installieren eines Konversationsbots finden Sie unter [Anfordern der Installation Ihres Konversationsbots](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## <a name="the-submitaction-invoke-event"></a>Das submitAction-Aufrufereignis
 
@@ -215,14 +220,14 @@ So konfigurieren Sie die Umfrage:
 1. Der Benutzer wählt die Nachrichtenerweiterung aus, um das Aufgabenmodul aufzurufen.
 1. Der Benutzer konfiguriert die Abfrage mit dem Aufgabenmodul.
 1. Nach dem Übermitteln des Aufgabenmoduls verwendet die App die bereitgestellten Informationen, um die Abstimmung als adaptive Karte zu erstellen, und sendet sie als `botMessagePreview` Antwort an den Client.
-1. Der Benutzer kann dann eine Vorschau der Adaptive Card-Nachricht anzeigen, bevor der Bot sie in den Kanal einfügt. Wenn die App kein Mitglied des Kanals ist, wählen Sie diese Option `Send` aus, um sie hinzuzufügen.
+1. Der Benutzer kann dann eine Vorschau der Adaptive Card-Nachricht anzeigen, bevor der Bot sie in den Kanal einfügt. Wenn die App kein Mitglied des Kanals ist, wählen Sie aus `Send` , um sie hinzuzufügen.
 
     > [!NOTE]
     >
     > * Die Benutzer können auch auswählen, dass `Edit`die Nachricht werden soll, wodurch sie an das ursprüngliche Aufgabenmodul zurückgegeben werden.
     > * Durch die Interaktion mit der adaptiven Karte wird die Nachricht vor dem Senden geändert.
     >
-1. Nachdem der Benutzer die Option ausgewählt hat `Send`, sendet der Bot die Nachricht an den Kanal.
+1. Nachdem der Benutzer ausgewählt hat `Send`, sendet der Bot die Nachricht an den Kanal.
 
 ## <a name="respond-to-initial-submit-action"></a>Reagieren auf erste Übermittlungsaktion
 

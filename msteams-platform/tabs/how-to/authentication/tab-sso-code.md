@@ -4,12 +4,12 @@ description: Aktualisieren Sie Code in Ihrer Registerkarten-App zum Anfordern un
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 20b11032227a08d057a6cdae8e46154004bfdb02
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586784"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772265"
 ---
 # <a name="add-code-to-enable-sso"></a>Hinzufügen von Code zum Aktivieren von SSO
 
@@ -47,7 +47,7 @@ Verwenden Sie `getAuthToken()` zum Zeitpunkt, zu dem Sie das Zugriffstoken für 
 
 | Wenn ein Zugriffstoken erforderlich ist... | Rufen Sie getAuthToken() auf... |
 | --- | --- |
-| Wenn der App-Benutzer auf die App zugreift | Von innen `microsoftTeams.initialize()`. |
+| Wenn der App-Benutzer auf die App zugreift | Nach `microsoftTeams.initialize()`. |
 | So verwenden Sie eine bestimmte Funktionalität der App | Wenn der App-Benutzer eine Aktion ausführt, für die eine Anmeldung erforderlich ist. |
 
 ### <a name="add-code-for-getauthtoken"></a>Hinzufügen von Code für getAuthToken
