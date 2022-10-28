@@ -1,16 +1,16 @@
 ---
 title: Grundlegendes zu Anwendungsfällen und Teams-Features Ihrer App
 author: heath-hamilton
-description: Erfahren Sie mehr über Microsoft Teaams-App-Funktionen– Registerkarten, Bots, Besprechungserweiterungen, Nachrichtenerweiterungen, Webhook-Connectors, persönliche App-Erfahrung, gemeinsame App-Erfahrung.
+description: Erfahren Sie mehr über Microsoft Teams-App-Funktionen wie Registerkarten, Bots, Besprechungserweiterungen, Nachrichtenerweiterungen, Webhookconnectors, persönliche App-Erfahrungen und freigegebene App-Erfahrungen.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100455"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773513"
 ---
 # <a name="understand-your-use-cases"></a>Grundlegendes zu Ihren Anwendungsfällen
 
@@ -20,21 +20,22 @@ Der App-Benutzer und die Anforderungen an seine App sind die grundlegenden Richt
 
 Wenn Sie die Benutzeranforderungen mit Ihrer App erfüllen sollen, müssen Sie diese zunächst verstehen.
 
-- **Grundlegendes zum Benutzer**:
-  - Erkennen sie Nutzerprobleme und identifizieren Sie die Lösungen für einige häufige Probleme, mit denen die Nutzer konfrontiert sind.
-  - Erstellen Sie Ihre Teams-App, indem Sie die richtige Kombination von Teams-Features finden, um die Anforderungen Ihrer Nutzer zu erfüllen.
-  - Verstehen Sie Anwendungsfälle, um zu erkennen, wie ein Endbenutzer mit Ihrer Anwendung interagiert.
+* **Grundlegendes zum Benutzer**:
+  * Erkennen sie Nutzerprobleme und identifizieren Sie die Lösungen für einige häufige Probleme, mit denen die Nutzer konfrontiert sind.
+  * Erstellen Sie Ihre Teams-App, indem Sie die richtige Kombination von Teams-Features finden, um die Anforderungen Ihrer Nutzer zu erfüllen.
+  * Verstehen Sie Anwendungsfälle, um zu erkennen, wie ein Endbenutzer mit Ihrer Anwendung interagiert.
+  * Es wird empfohlen, das Lean-Modul zum [Veröffentlichen Ihrer App im Teams App Store](/training/modules/microsoft-teams-publish-app-to-store/) durchzugehen, um Ihre App beim Bestehen des Microsoft Teams Store-Übermittlungsprozesses zu unterstützen.
 
-- **Verstehen des Problems**: Ermitteln Sie das Kernproblem, das Ihre App lösen muss.
+* **Verstehen des Problems**: Ermitteln Sie das Kernproblem, das Ihre App lösen muss.
 
-- **Berücksichtigen Sie die Integration**: Identifizieren Sie die Anwendungen und Dienste, die Ihre App benötigt, wie Authentifizierung, Microsoft Graph oder Webanwendungen.
+* **Berücksichtigen Sie die Integration**: Identifizieren Sie die Anwendungen und Dienste, die Ihre App benötigt, wie Authentifizierung, Microsoft Graph oder Webanwendungen.
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams-App-Features
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [App-Funktionen](#app-capabilities)
-- [App-Bereich](#app-scope)
+* [App-Funktionen](#app-capabilities)
+* [App-Bereich](#app-scope)
 
 ### <a name="app-capabilities"></a>App-Funktionen
 
@@ -150,7 +151,7 @@ Es gibt einige Möglichkeiten,[Ihre App in die Teams-Anrufe einzubinden](../../a
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph für Teams
 
-Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugriff auf Informationen über Teams, Kanäle, Benutzer und Nachrichten, mit denen Sie Funktionen für Ihre App erstellen oder verbessern können.
+Der [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugriff auf Informationen zu Teams, Kanälen, Benutzern und Nachrichten, die Ihnen helfen, Features für Ihre App zu erstellen oder zu verbessern.
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ Die [Microsoft Graph-API für Teams](/graph/teams-concept-overview) bietet Zugri
 
 Ihre App kann einen der folgenden Bereiche aufweisen:
 
-- **Persönliche App-Benutzeroberfläche**: Eine persönliche App ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
-- **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder das Freischalten neuer sozialer Interaktionen.
+* **Persönliche App-Benutzeroberfläche**: Eine persönliche App ist ein bestimmter Bereich oder Bot, der Nutzern hilft, sich auf ihre eigenen Aufgaben zu konzentrieren oder für sie wichtige Aktivitäten anzuzeigen.
+* **Gemeinsame App-Erfahrung**: Team, Kanal und Chat sind Bereiche für die Zusammenarbeit. Apps in diesen Kontexten sind für alle Nutzer in diesem Bereich verfügbar. Zusammenarbeitsbereiche konzentrieren sich in der Regel auf Workflows für die Interaktionen Ihrer App oder das Freischalten neuer sozialer Interaktionen.
 
 Eine App kann über verschiedene Bereiche hinweg vorhanden sein. Beispiel:
 
-- Ihre App kann Daten an einem zentralen freigegebenen Speicherort anzeigen, d. h. auf einer Registerkarte.
-- Sie kann dieselben Informationen auch über eine persönliche Konversationsschnittstelle, d. h. einen Bot, darstellen.
+* Ihre App kann Daten an einem zentralen freigegebenen Speicherort anzeigen, d. h. auf einer Registerkarte.
+* Sie kann dieselben Informationen auch über eine persönliche Konversationsschnittstelle, d. h. einen Bot, darstellen.
 
 Ein Nutzer kann mit einer App auf einer Canvas-Registerkarte interagieren, um eine Aktivität auszuführen, oder er kann dies mithilfe eines Konversationsbots tun.
 

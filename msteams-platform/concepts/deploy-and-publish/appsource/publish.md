@@ -1,16 +1,16 @@
 ---
 title: Übersicht – Veröffentlichen Sie Ihre App im Microsoft Teams Store
-description: Veröffentlichen Sie Ihre App im Microsoft Teams Store oder in AppSource. Was Sie nach dem Einreichen erwarten können, Tipps für die schnelle Genehmigung und Veröffentlichung von Apps, die mit einem SaaS-Angebot verknüpft sind.
+description: Veröffentlichen Sie Ihre App im Microsoft Teams Store oder in AppSource. Was Sie nach der Übermittlung erwarten können, Tipps für die schnelle Genehmigung und Veröffentlichung von Apps, die mit einem SaaS-Angebot verknüpft sind.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560729"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773506"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Veröffentlichen Sie Ihre App im Microsoft Teams Store
 
@@ -124,7 +124,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
 * **Nach der App-Übermittlung**
 
-  * Nachdem Sie den Überprüfungsbericht überprüft haben, beantworten Sie den E-Mail-Thread mit allen Abfragen im Zusammenhang mit dem Überprüfungsbericht, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
+  * Nachdem Sie den Überprüfungsbericht überprüft haben, antworten Sie auf den E-Mail-Thread mit allen Abfragen im Zusammenhang mit dem Validierungsbericht, oder wenn Sie zusätzliche Unterstützung benötigen, um die gemeldeten Probleme zu beheben.
 
   * Stellen Sie sicher, dass Sie über eine ausreichende Entwicklerbandbreite verfügen, um gemeldete Probleme zu beheben, bis die App genehmigt wird.
 
@@ -172,6 +172,7 @@ Wenn Ihre App produktionsbereit ist, können Sie damit beginnen, sie im Teams St
 
 ## <a name="see-also"></a>Siehe auch
 
+* [Veröffentlichen von Teams-Apps im Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Veröffentlichung in Microsoft 365 App Stores](/office/dev/store/)
 * [Hochladen Ihrer Teams-App](~/concepts/deploy-and-publish/apps-upload.md)
 * [Veröffentlichen Ihrer Teams-App in Ihrer Organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
