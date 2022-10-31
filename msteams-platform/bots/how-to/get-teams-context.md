@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams-Kontext für Ihren Bot erhalten
 author: surbhigupta
-description: Rufen Sie teamsspezifischen Kontext für Ihren Bot ab, rufen Sie das Benutzerprofil ab, rufen Sie ein einzelnes Mitglied, team's, liste der Kanäle in einem Team details ab. Beispiel zum Erstellen eines neuen Kanalthreads.
+description: Rufen Sie Teams-spezifischen Kontext für Ihren Bot ab, rufen Sie ein Benutzerprofil ab, rufen Sie einzelnes Mitglied, Team und Liste der Kanäle in einem Teamdetails ab. Beispiel zum Erstellen eines neuen Kanalthreads.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1958d45bf4fac927c32b628ea8aebc4c1c03ad46
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100140"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789989"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Microsoft Teams-Kontext für Ihren Bot erhalten
 
@@ -375,6 +375,7 @@ Response body
 > [!div class="nextstepaction"]
 > [Senden und Empfangen von Dateien über den Bot](~/bots/how-to/bots-filesv4.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Lokalisieren IhrerApp](../../concepts/build-and-test/apps-localization.md)
+* [Lokalisieren IhrerApp](../../concepts/build-and-test/apps-localization.md)
+* [Abrufen des Profilfotos eines Benutzers, einer Gruppe, eines Teams oder eines Outlook-Kontakts](/graph/api/profilephoto-get)

@@ -1,21 +1,21 @@
 ---
-title: APIs für Besprechungs-Apps
+title: Besprechungs-Apps-APIs
 author: v-sdhakshina
-description: In diesem Artikel erfahren Sie mehr über API-Verweise auf Besprechungs-Apps, die für Teams-Clients und Bot Framework-SDK verfügbar sind, mit Beispielen, Codebeispielen und Antwortcodes.
+description: In diesem Artikel lernen Sie API-Referenzen für Besprechungs-Apps kennen, die für Teams-Clients und Bot Framework-SDK verfügbar sind, mit Beispielen, Codebeispielen und Antwortcodes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 79b5f58f5089ac40a12f608616dc52b90ed6ef08
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f3d44317dbc8ea317e8fe3c5bdeb19404df75265
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615473"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789863"
 ---
-# <a name="meeting-apps-apis"></a>APIs für Besprechungs-Apps
+# <a name="meeting-apps-apis"></a>Besprechungs-Apps-APIs
 
-Die Besprechungserweiterung bietet APIs, um die Besprechungserfahrung zu verbessern. Mit Hilfe der aufgeführten APIs können Sie Folgendes ausführen:
+Die Erweiterbarkeit von Besprechungen stellt APIs bereit, um die Besprechungserfahrung zu verbessern. Mit Hilfe der aufgeführten APIs können Sie Folgendes ausführen:
 
 * Erstellen Sie Apps oder integrieren Sie vorhandene Apps in den Meeting-Lebenszyklus.
 * Verwenden Sie APIs, um Ihre App auf Meetings aufmerksam zu machen.
@@ -24,19 +24,19 @@ Die Besprechungserweiterung bietet APIs, um die Besprechungserfahrung zu verbess
 > [!NOTE]
 > Verwenden Sie Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 und höher) für SSO, um im Meeting-Seitenbereich zu arbeiten.
 
-Die folgende Tabelle enthält eine Liste der APIs, die in der Microsoft Teams-JavaScript-Bibliothek und Microsoft Bot Framework SDKs verfügbar sind:
+Die folgende Tabelle enthält eine Liste der APIs, die in der JavaScript-Bibliothek von Microsoft Teams und Microsoft Bot Framework SDKs verfügbar sind:
 
 |Methode| Beschreibung| Quelle|
 |---|---|----|
-|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie kontextbezogene Informationen ab, um relevante Inhalte auf einer Microsoft Teams-Registerkarte anzuzeigen.| [JavaScript-Bibliotheks-SDK für Microsoft Teams](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Benutzerkontext abrufen**](#get-user-context-api)| Rufen Sie Kontextinformationen ab, um relevante Inhalte auf einer Microsoft Teams-Registerkarte anzuzeigen.| [Microsoft Teams JavaScript-Bibliotheks-SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Teilnehmer abrufen**](#get-participant-api)| Rufen Sie Teilnehmerinformationen nach Meeting-ID und Teilnehmer-ID ab. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Senden Sie eine Besprechungsbenachrichtigung**](#send-an-in-meeting-notification)| Stellen Sie Meeting-Signale mithilfe der vorhandenen Konversationsbenachrichtigungs-API für den Benutzer-Bot-Chat bereit und ermöglichen Sie die Benachrichtigung von Benutzeraktionen, die eine Benachrichtigung im Meeting anzeigen. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Besprechungsdetails abrufen**](#get-meeting-details-api)| Rufen Sie die statischen Metadaten eines Meetings ab. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Senden Sie Untertitel in Echtzeit**](#send-real-time-captions-api)| Senden Sie Untertitel in Echtzeit an ein laufendes Meeting. | [JavaScript-Bibliotheks-SDK für Microsoft Teams](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Teilen Sie App-Inhalte auf der Bühne**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. | [JavaScript-Bibliotheks-SDK für Microsoft Teams](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Senden Sie Untertitel in Echtzeit**](#send-real-time-captions-api)| Senden Sie Untertitel in Echtzeit an ein laufendes Meeting. | [Microsoft Teams JavaScript-Bibliotheks-SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Teilen Sie App-Inhalte auf der Bühne**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Teilen Sie bestimmte Teile der App für die Meeting-Phase aus dem Seitenbereich der App in einem Meeting. | [Microsoft Teams JavaScript-Bibliotheks-SDK](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Holen Sie sich Team-Meeting-Events in Echtzeit**](#get-real-time-teams-meeting-events-api)|Rufen Sie Meeting-Ereignisse in Echtzeit ab, z. B. die tatsächliche Start- und Endzeit.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Abrufen des Status eingehender Audiodaten**](#get-incoming-audio-state) | Ermöglicht einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer abzurufen.| [JavaScript-Bibliotheks-SDK für Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Umschalten eingehender Audiodaten**](#toggle-incoming-audio) | Ermöglicht einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umzuschalten.| [JavaScript-Bibliotheks-SDK für Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Abrufen des eingehenden Audiozustands**](#get-incoming-audio-state) | Ermöglicht es einer App, die Einstellung für den eingehenden Audiozustand für den Besprechungsbenutzer abzurufen.| [Microsoft Teams JavaScript-Bibliotheks-SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Eingehende Audiodaten umschalten**](#toggle-incoming-audio) | Ermöglicht einer App das Umschalten der Einstellung für den eingehenden Audiozustand für den Besprechungsbenutzer von Stummschaltung zu Stummschaltung aufheben oder umgekehrt.| [Microsoft Teams JavaScript-Bibliotheks-SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Holen Sie sich die Benutzerkontext-API
 
@@ -145,10 +145,10 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | E-Mail-ID des Benutzers. |
 | **user.userPrincipalName** | UPN des Benutzers. |
 | **user.tenantId** | Azure Active Directory Mandanten-ID. |
-| **user.userRole** | Rolle des Benutzers. Beispiel: "Administrator" oder "Benutzer". |
-| **meeting.role** | Die Rolle des Teilnehmers in der Besprechung. Beispiel: 'Organizer' oder 'Presenter' oder 'Attendee'. |
-| **meeting.inMeeting** | Der Wert, der angibt, ob sich der Teilnehmer an der Besprechung befindet. |
-| **conversation.id** | Die Besprechungschat-ID. |
+| **user.userRole** | Rolle des Benutzers. Beispiel: "admin" oder "user". |
+| **meeting.role** | Die Rolle des Teilnehmers in der Besprechung. Beispiel: "Organizer" oder "Presenter" oder "Attendee". |
+| **meeting.inMeeting** | Der Wert, der angibt, ob der Teilnehmer an der Besprechung teilnimmt. |
+| **conversation.id** | Die Chat-ID der Besprechung. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
 
 ### <a name="response-codes"></a>Antwortcodes
@@ -353,7 +353,7 @@ Verwenden Sie das folgende Beispiel, um die `webApplicationInfo` Eigenschaft Ihr
 > [!NOTE]
 >
 > * Der Bot kann Meeting-Start- oder -Endereignisse automatisch von allen Meetings empfangen, die in allen Kanälen erstellt wurden, indem er zum `ChannelMeeting.ReadBasic.Group` Manifest die RSC-Berechtigung hinzufügt.
-> * Für einen Einzelanruf `organizer` ist der Initiator des Chats und für Gruppenanrufe `organizer` der Anrufinitiator. Bei Besprechungen `organizer` im öffentlichen Kanal ist die Person, die den Kanalbeitrag erstellt hat.
+> * Bei einem Einzelanruf `organizer` ist der Initiator des Chats und bei Gruppenanrufen `organizer` der Anrufinitiator. Bei Besprechungen `organizer` im öffentlichen Kanal ist die Person, die den Kanalbeitrag erstellt hat.
 
 ### <a name="query-parameter"></a>Abfrageparameter
 
@@ -490,7 +490,7 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
     
     ```
 
-* **Sofortbesprechungen:**
+* **Sofortige Besprechungen:**
 
     ```json
     { 
@@ -523,32 +523,32 @@ Der JSON-Antworttext für die Besprechungsdetails-API lautet wie folgt:
 | Eigenschaftenname | Beschreibung |
 |---|---|
 | **details.id** | Die ID der Besprechung, codiert als BASE64-Zeichenfolge. |
-| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS-Graph-API-Aufrufe verwendet wird. |
+| **details.msGraphResourceId** | Die MsGraphResourceId, die speziell für MS Graph-API-Aufrufe verwendet wird. |
 | **details.scheduledStartTime** | Die geplante Startzeit der Besprechung in UTC. |
 | **details.scheduledEndTime** | Die geplante Endzeit der Besprechung in UTC. |
 | **details.joinUrl** | Die URL, die für die Teilnahme an der Besprechung verwendet wird. |
 | **details.title** | Der Titel der Besprechung. |
-| **details.type** | Der Besprechungstyp (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled und ChannelRecurring). |
+| **details.type** | Der Typ der Besprechung (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled und ChannelRecurring). |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
-| **conversation.conversationType** | Der Unterhaltungstyp. |
-| **conversation.id** | Die Besprechungschat-ID. |
+| **conversation.conversationType** | Der Konversationstyp. |
+| **conversation.id** | Die Chat-ID der Besprechung. |
 | **organizer.id** | Die Benutzer-ID des Organisators. |
 | **organizer.aadObjectId** | Die Azure Active Directory-Objekt-ID des Organisators. |
 | **organizer.tenantId** | Die Azure Active Directory-Mandanten-ID des Organisators. |
 
-Im Falle eines Besprechungsserientyps:
+Im Fall eines Besprechungsserientyps:
 
-**startDate**: Gibt das Datum an, an dem mit der Anwendung des Musters begonnen werden soll. Der Wert von "startDate" muss dem Datumswert der Starteigenschaft für die Ereignisressource entsprechen. Beachten Sie, dass das erste Vorkommen der Besprechung an diesem Datum möglicherweise nicht auftritt, wenn es nicht zum Muster passt.
+**startDate**: Gibt das Datum an, an dem mit der Anwendung des Musters begonnen werden soll. Der Wert von startDate muss dem Datumswert der start-Eigenschaft für die Ereignisressource entsprechen. Beachten Sie, dass das erste Vorkommen der Besprechung möglicherweise nicht an diesem Datum auftritt, wenn es nicht zum Muster passt.
 
-**endDate**: Gibt das Datum an, an dem das Anwenden des Musters beendet werden soll. Beachten Sie, dass das letzte Vorkommen der Besprechung an diesem Datum möglicherweise nicht auftritt, wenn es nicht zum Muster passt.
+**endDate**: Gibt das Datum an, an dem die Anwendung des Musters beendet werden soll. Beachten Sie, dass das letzte Vorkommen der Besprechung möglicherweise nicht an diesem Datum stattfindet, wenn es nicht zum Muster passt.
 
 ## <a name="send-real-time-captions-api"></a>API zum Senden von Beschriftungen in Echtzeit
 
-Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Den Zugriff auf Echtzeitübersetzungen (REAL-Time Translation, CART) verfügbar, von Menschen eingegebene Untertitel. Textinhalte, die an diesen Endpunkt gesendet werden, werden Endbenutzern in einer Teams-Besprechung angezeigt, wenn sie Untertitel aktiviert haben.
+Die API zum Senden von Beschriftungen in Echtzeit macht einen POST-Endpunkt für Teams-Cart-Untertitel (Communication Access Real-Time Translation, Echtzeitübersetzung) verfügbar, also von Menschen typisierte Untertitel. An diesen Endpunkt gesendeter Textinhalt wird endbenutzern in einer Teams-Besprechung angezeigt, wenn für sie Untertitel aktiviert sind.
 
 ### <a name="cart-url"></a>CART-URL
 
-Sie können die CART-URL für den POST-Endpunkt von der Seite **"Besprechungsoptionen"** in einer Teams-Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
+Sie können die CART-URL für den POST-Endpunkt auf der Seite **Besprechungsoptionen** in einer Teams-Besprechung abrufen. Weitere Informationen finden Sie [unter CART-Beschriftungen in einer Microsoft Teams Besprechung](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Sie müssen die CART-URL nicht ändern, um CART-Beschriftungen zu verwenden.
 
 #### <a name="query-parameter"></a>Abfrageparameter
 
@@ -796,7 +796,7 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 |---|---|
 | **name** | Der Name des Benutzers.|
 | **type** | Aktivitätstyp. |
-| **Timestamp** | Lokales Datum und Uhrzeit der Nachricht, ausgedrückt im ISO-8601-Format. |
+| **Timestamp** | Lokales Datum und uhrzeit der Nachricht, ausgedrückt im ISO-8601-Format. |
 | **id** | ID für die Aktivität. |
 | **channelId** | Kanal, dem diese Aktivität zugeordnet ist. |
 | **serviceUrl** | Dienst-URL, an die Antworten auf diese Aktivität gesendet werden sollen. |
@@ -804,31 +804,31 @@ Der folgende Code stellt ein Beispiel für die Nutzlast eines Besprechungsende-E
 | **from.aadObjectId** | Azure Active Directory-Objekt-ID des Benutzers, der die Anforderung gesendet hat. |
 | **conversation.isGroup** | Boolescher Wert, der angibt, ob die Unterhaltung mehr als zwei Teilnehmer hat. |
 | **conversation.tenantId** | Azure Active Directory-Mandanten-ID der Unterhaltung oder Besprechung. |
-| **conversation.id** | Die Besprechungschat-ID. |
-| **recipient.id** | DIE ID des Benutzers, der die Anforderung empfängt. |
-| **recipient.name** | Der Name des Benutzers, der die Anforderung empfängt. |
+| **conversation.id** | Die Chat-ID der Besprechung. |
+| **recipient.id** | ID des Benutzers, der die Anforderung erhält. |
+| **recipient.name** | Der Name des Benutzers, der die Anforderung erhält. |
 | **entities.locale** | Entität, die Metadaten zum Gebietsschema enthält. |
 | **entities.country** | Entität, die Metadaten zum Land enthält. |
 | **entities.type** | Entität, die Metadaten zum Client enthält. |
 | **channelData.tenant.id** | Azure Active Directory Mandanten-ID. |
-| **channelData.source** | Der Quellname, aus dem das Ereignis ausgelöst oder aufgerufen wird. |
-| **channelData.meeting.id** | Die der Besprechung zugeordnete Standard-ID. |
+| **channelData.source** | Der Quellname, von dem aus das Ereignis ausgelöst oder aufgerufen wird. |
+| **channelData.meeting.id** | Die standard-ID, die der Besprechung zugeordnet ist. |
 | **Wert. MeetingType** | Der Besprechungstyp. |
-| **Wert. Titel** | Der Betreff der Besprechung. |
-| **Wert. Id** | Die der Besprechung zugeordnete Standard-ID. |
+| **Wert. Titel** | Das Thema der Besprechung. |
+| **Wert. Id** | Die standard-ID, die der Besprechung zugeordnet ist. |
 | **Wert. JoinUrl** | Die Teilnahme-URL der Besprechung. |
 | **Wert. Starttime** | Die Startzeit der Besprechung in UTC. |
-| **Wert. Endtime** | Die Besprechungsendzeit in UTC. |
-| **locale**| Das Gebietsschema der vom Client festgelegten Nachricht. |
+| **Wert. Endtime** | Die Endzeit der Besprechung in UTC. |
+| **locale**| Das Gebietsschema der nachricht, die vom Client festgelegt wurde. |
 
-## <a name="get-incoming-audio-state"></a>Abrufen des Status eingehender Audiodaten
+## <a name="get-incoming-audio-state"></a>Abrufen des eingehenden Audiozustands
 
-Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
+Die `getIncomingClientAudioState` API ermöglicht es einer App, die Einstellung für den eingehenden Audiozustand für den Besprechungsbenutzer abzurufen. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
 >
-> * Die `getIncomingClientAudioState` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
-> * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
+> * Die `getIncomingClientAudioState` API für Mobilgeräte ist derzeit in [der Öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+> * Die ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
 ### <a name="manifest"></a>Manifest
 
@@ -866,7 +866,7 @@ Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Audioabruf erfolgreich ist. Das *Ergebnis* kann entweder den Wert "true" oder "false" enthalten, wenn der Audioabruf erfolgreich ist, oder null, wenn der Audioabruf fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet. |
+|**callback**| Zeichenfolge | Ja | Callback enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Audioabruf erfolgreich ist. Das *Ergebnis* kann entweder den Wert true oder false enthalten, wenn der Audioabruf erfolgreich ist, oder NULL, wenn der Audioabruf fehlschlägt. Die eingehende Audiowiedergabe wird stummgeschaltet, wenn das Ergebnis true ist, und nicht stummgeschaltet, wenn das Ergebnis false ist. |
   
 ### <a name="response-codes"></a>Antwortcodes
 
@@ -875,17 +875,17 @@ Die folgende Tabelle enthält die Antwortcodes:
 |Antwortcode|Beschreibung|
 |---|---|
 | **500** | Interner Fehler. |
-| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
-| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
+| **501** | Die API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die richtigen Berechtigungen, um das Staging der Freigabe zuzulassen.|
 
-## <a name="toggle-incoming-audio"></a>Umschalten eingehender Audiodaten
+## <a name="toggle-incoming-audio"></a>Eingehende Audiodaten umschalten
 
-Mit `toggleIncomingClientAudio` der API kann eine App die Einstellung für den Eingehenden Audiostatus für den Besprechungsbenutzer vom Stummschalten zum Aufheben der Stummschaltung oder umgekehrt umschalten. Die API ist über das Teams-Client-SDK verfügbar.
+Die `toggleIncomingClientAudio` API ermöglicht es einer App, die Einstellung für den eingehenden Audiozustand für den Besprechungsbenutzer von Stummschaltung auf Stummschaltung aufheben oder umgekehrt umzuschalten. Die API ist über das Teams-Client-SDK verfügbar.
 
 > [!NOTE]
 >
-> * Die `toggleIncomingClientAudio` API für mobile Geräte ist derzeit in [der öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
-> * Ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
+> * Die `toggleIncomingClientAudio` API für Mobilgeräte ist derzeit in [der Öffentlichen Entwicklervorschau](../resources/dev-preview/developer-preview-intro.md) verfügbar.
+> * Die ressourcenspezifische Zustimmung ist für Manifestversion 1.12 und höhere Versionen verfügbar, daher funktioniert diese API nicht für Manifestversion 1.11 und frühere Versionen.
 
 ### <a name="manifest"></a>Manifest
 
@@ -923,7 +923,7 @@ Die folgende Tabelle enthält den Abfrageparameter:
 
 |Wert|Typ|Erforderlich|Beschreibung|
 |---|---|----|---|
-|**callback**| Zeichenfolge | Ja | Der Rückruf enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Umschalter erfolgreich ist. Das *Ergebnis* kann entweder "true" oder "false" enthalten, wenn die Umschaltfläche erfolgreich ist, oder null, wenn die Umschaltfläche fehlschlägt. Die eingehenden Audiodaten werden stummgeschaltet, wenn das Ergebnis "true" ist, und die Stummschaltung wird aufgehoben, wenn das Ergebnis "false" lautet.
+|**callback**| Zeichenfolge | Ja | Callback enthält zwei Parameter `error` und `result`. Der *Fehler* kann entweder einen Fehlertyp `SdkError` enthalten oder `null` wenn der Umschalter erfolgreich ist. Das *Ergebnis* kann entweder den Wert true oder false enthalten, wenn der Umschalter erfolgreich ist, oder NULL, wenn die Umschaltfläche fehlschlägt. Die eingehende Audiowiedergabe wird stummgeschaltet, wenn das Ergebnis true ist, und nicht stummgeschaltet, wenn das Ergebnis false ist.
   
 ### <a name="response-code"></a>Antwortcode
 
@@ -932,17 +932,17 @@ Die folgende Tabelle enthält die Antwortcodes:
 |Antwortcode|Beschreibung|
 |---|---|
 | **500** | Interner Fehler. |
-| **501** | DIE API wird im aktuellen Kontext nicht unterstützt.|
-| **1000** | Die App verfügt nicht über die erforderlichen Berechtigungen, um die Freigabe für die Phase zuzulassen.|
+| **501** | Die API wird im aktuellen Kontext nicht unterstützt.|
+| **1000** | Die App verfügt nicht über die richtigen Berechtigungen, um das Staging der Freigabe zuzulassen.|
 
 ## <a name="code-sample"></a>Codebeispiel
 
 |Beispielname | Beschreibung | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Erweiterbarkeit von Besprechungen | Teams-Besprechungserweiterungsbeispiel für das Übergeben von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bubble-Bot für Besprechungsinhalte | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit Einem Inhaltsblasen-Bot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Besprechungsseitenbereich | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Registerkarte „Details“ im Meeting | Teams-Besprechungserweiterungsbeispiel für die Interaktion mit der Registerkarte "Details" in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Erweiterbarkeit von Besprechungen | Beispiel für die Erweiterbarkeit von Teams-Besprechungen für die Übergabe von Token. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Bubble-Bot für Besprechungsinhalte | Beispiel für die Erweiterbarkeit von Teams-Besprechungen für die Interaktion mit einem Inhaltsblasenbot in einer Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Besprechungsseitenbereich | Beispiel für die Erweiterbarkeit von Teams-Besprechungen für die Interaktion mit dem Seitenbereich in der Besprechung. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Registerkarte „Details“ im Meeting | Beispiel für die Erweiterbarkeit von Teams-Besprechungen für die Interaktion mit der Registerkarte "Details" in besprechungsinternen Besprechungen. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 | Beispiel für Meeting-Ereignisse | Beispiel-App zum Anzeigen von Teams-Besprechungsereignissen in Echtzeit|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 | Beispiel für die Rekrutierung von Meetings |Beispiel-App, um die Meeting-Erfahrung für das Rekrutierungsszenario zu zeigen.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | App-Installation mit QR-Code |Beispiel-App, die den QR-Code generiert und die App mithilfe des QR-Codes installiert|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Anzeigen](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
@@ -952,7 +952,8 @@ Die folgende Tabelle enthält die Antwortcodes:
 * [Teams-Authentifizierungsablauf für Registerkarten](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps für Teams-Besprechungen](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Aufzeichnung einer Teams-Cloudbesprechung](/microsoftteams/cloud-recording)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Erstellen von Registerkarten für Besprechungen](build-tabs-for-meeting.md)
+[Registerkarten erstellen für Besprechungen](build-tabs-for-meeting.md)
