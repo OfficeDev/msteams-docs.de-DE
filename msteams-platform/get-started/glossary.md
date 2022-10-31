@@ -3,16 +3,16 @@ title: Microsoft Teams-Entwicklerdokumentation – Glossar
 description: Erfahren Sie mehr über die allgemeinen Begriffe, Bedeutungen und Definitionen, die in der Microsoft Teams-Entwicklerdokumentation verwendet werden.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615233"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791440"
 ---
 # <a name="glossary"></a>Glossar
 
-Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation verwendet werden.
+Allgemeine Begriffe und Definitionen, die in der Microsoft Teams-Entwicklerdokumentation verwendet werden.
 
 ## <a name="a"></a>Ein
 
@@ -27,9 +27,9 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [App-Bereich](../concepts/design/understand-use-cases.md#app-scope) | Ein Bereich in Teams, in dem Personen Ihre App verwenden können. Apps können einen oder mehrere Bereiche haben, darunter Privat, Kanäle, Chats und Besprechungen. Eine Teams-App kann bereichsübergreifend vorhanden sein. |
 | Anwendungsleiste | Eine Anwendungsleiste, die sich auf der unteren Leiste einer mobilen Teams-App befindet. Sie sammelt alle Apps, die geöffnet sind, aber derzeit nicht verwendet werden oder deaktiviert sind. <br>**Weitere Informationen unter**: [Teams Mobile](#t) |
 | [Azure-Ressource](../toolkit/provision.md) | Ein über Azure verfügbarer Dienst, den Ihre Teams-App für die Azure-Bereitstellung verwenden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Der cloudbasierte Identitäts- und Zugriffsverwaltungsdienst von Microsoft. Es hilft authentifizierten Benutzern, auf interne und externe Ressourcen zuzugreifen. |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Der cloudbasierte Identitäts- und Zugriffsverwaltungsdienst von Microsoft. Sie hilft authentifizierten Benutzern beim Zugriff auf interne und externe Ressourcen. |
 | [Authentifizierung](../concepts/authentication/authentication.md) | Der Prozess zum Überprüfen der Identität eines Benutzers für den Zugriff auf Ihre App. <br> **Weitere Informationen**: [Identitätsanbieter](#i); [SSO](#s) |
-| [Authentifizierungsfluss](../concepts/authentication/authentication.md) | Die Art und Weise, wie sich ein Benutzer bei Ihrer App authentifiziert. Für Teams-Apps empfehlen wir die Verwendung von Single Sign On (SSO) mit Azure Active Directory (AAD), aber eine Alternative ist die Verwendung eines OAuth-Anbieters eines Drittanbieters.|
+| [Authentifizierungsfluss](../concepts/authentication/authentication.md) | Die Art und Weise, wie sich ein Benutzer bei Ihrer App authentifiziert. Für Teams-Apps wird die Verwendung des einmaligen Anmeldens (Single Sign On, SSO) mit Azure Active Directory (AAD) empfohlen, eine Alternative besteht darin, einen OAuth-Drittanbieter zu verwenden.|
 
 ## <a name="b"></a>B
 
@@ -49,7 +49,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | [Funktionalität](../toolkit/add-capability.md) | Ein Teams Feature, das Sie in Ihre App für die Interaktion mit App-Benutzern integrieren können. Eine App-Funktion wird verwendet, um Teams an Ihre App-Anforderungen anzupassen. Eine App kann über eine oder mehrere Kernfunktionen verfügen, z. B. Registerkarte, Bot und Nachrichtenerweiterung. <br>**Weitere Informationen unter**: [Gerätefunktion](#d); [Medienfunktion](#m) |
 | [Chat-Bot](../bots/how-to/conversations/conversation-basics.md) | Ein Bot wird auch als Chatbot oder Unterhaltungsbot bezeichnet. Es handelt sich um eine App, die einfache und sich wiederholende Aufgaben für Benutzern ausführt, z. B. Kundendienst- oder Supportmitarbeiter. <br> **Weitere Informationen unter**: [Unterhaltungs-Bot](#c) |
 | Kanal | Ein zentraler Ort, an dem ein Team Nachrichten, Tools und Dateien gemeinsam nutzen kann. Sie können einen Kanal für Teamarbeit und Kommunikation verwenden. <br>**Weitere Informationen unter**: [Unterhaltung](#c) |
-| [Geheimer Clientschlüssel](../bots/how-to/authentication/add-authentication.md) | Eine geheime Zeichenfolge, mit der die Anwendung ihre Identität beim Anfordern eines Tokens nachweist. Außerdem kann es als Anwendungskennwort bezeichnet werden.|
+| [Geheimer Clientschlüssel](../bots/how-to/authentication/add-authentication.md) | Eine geheime Zeichenfolge, die die Anwendung verwendet, um ihre Identität beim Anfordern eines Tokens nachzuweisen. Es kann auch als Anwendungskennwort bezeichnet werden.|
 | [Cloudressourcen](../toolkit/add-resource.md) | Ein Dienst, der in der Cloud über das Internet verfügbar ist und von Ihrer Teams-App verwendet werden kann. Dabei kann es sich um Speicherkonten, Web-Apps, Datenbanken und vieles mehr handeln. |
 | [Apps für die Zusammenarbeit](../concepts/extensibility-points.md) | Eine App mit Funktionen, mit denen ein Benutzer in einem kollaborativen Arbeitsbereich mit anderen Benutzern arbeiten kann. <br> **Weitere Informationen unter**: [Eigenständige App](#s) |
 | [Verfassen-Erweiterung](../resources/schema/manifest-schema.md#composeextensions) | Eine Eigenschaft im App-Manifest (`composeExtensions`), die auf die Nachrichtenerweiterungsfunktion verweist. Es wird verwendet, wenn sich Ihre Erweiterung entweder authentifizieren oder konfigurieren muss, um fortzufahren. <br>**Weitere Informationen**: [App-Manifest](#a); [Nachrichtenerweiterung](#m) |
@@ -63,7 +63,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 | Begriff | Definition |
 | --- | --- |
 | [Deep Linking](../concepts/build-and-test/deep-links.md) | In einer Teams-App können Sie Deep Links zu Informationen und Funktionen in Teams erstellen oder dem Benutzer helfen, zu Inhalten in Ihrer App zu navigieren. |
-|[Verteidigungsministerium (DoD, Department of Defense)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD-Umgebungen erfüllen die Richtlinien des Department of Defense Security Requirements, die Defense Federal Acquisition Regulations Supplement (DFARS) und die International Traffic in Arms Regulations (ITAR).|
+|[Verteidigungsministerium (DoD, Department of Defense)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD-Umgebungen erfüllen die Richtlinien für Sicherheitsanforderungen des Us-Verteidigungsministeriums, DFARS -Ergänzung (Defense Federal Acquisition Regulations) und International Traffic in Arms Regulations (ITAR).|
 | [Entwicklerportal für Teams](../concepts/build-and-test/teams-developer-portal.md) | Das primäre Tool zum Konfigurieren, Verteilen und Verwalten Ihrer Microsoft Teams-Apps. Mit dem Entwicklerportal können Sie mit Kollegen an Ihrer App zusammenarbeiten, Laufzeitumgebungen einrichten und vieles mehr. |
 | [Developer Preview](../resources/dev-preview/developer-preview-intro.md) | Ein öffentliches Programm für Entwickler, das frühzeitigen Zugriff auf nicht freigegebene Features in Microsoft Teams bietet. Damit können Sie bevorstehende Features erkunden und testen, um eine potenzielle Einbindung in Ihre Microsoft Teams-App zu ermöglichen. |
 | Bereitstellen | Ein Prozess zum Upload des Back-End- und Front-End-Codes für die Anwendung. Bei der Bereitstellung wird der Code für Ihre App in die Ressourcen kopiert, die Sie während der Bereitstellung erstellt haben. <br>**Weitere Informationen**: [Bereitstellung](#p) |
@@ -85,14 +85,14 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Erste Ausführung](../concepts/design/design-teams-app-ui-templates.md)|Eine Erste-Ausführung-Erfahrung (FRE) ist die Einführung eines Benutzers in Ihr Produkt. Die FRE hilft Benutzern, mit den Funktionen, Features und Vorteilen des Produkts zu beginnen, und beeinflusst, dass benutzer wiederkommen und Ihr Produkt weiterhin verwenden.|
+| [Erste Ausführung](../concepts/design/design-teams-app-ui-templates.md)|Eine First-Run-Experience (FRE) ist die Einführung eines Benutzers in Ihr Produkt. Die FRE hilft Benutzern bei den ersten Schritten mit den Funktionen, Features und Vorteilen des Produkts und beeinflusst die Benutzer, wieder zurückzukommen und Ihr Produkt weiterhin zu verwenden.|
 
 ## <a name="g"></a>G
 
 | Begriff | Definition |
 | --- | --- |
-|[Government Community Cloud (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Die GCC-Umgebung bietet die Einhaltung der Anforderungen des Bundes für Clouddienste, einschließlich FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS) und Anforderungen für die Strafjustiz und federal tax information systems (CJI- und FTI-Datentypen).|
-|[Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC-Hochumgebungen erfüllen die Sicherheitsanforderungen des Department of Defense (DoD), die Defense Federal Acquisition Regulations Supplement (DFARS) und die International Traffic in Arms Regulations (ITAR).<br>**Siehe auch**: [Department of Defense (DoD)](#d)|
+|[Government Community Cloud (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Die GCC-Umgebung bietet die Einhaltung der Bundesanforderungen für Clouddienste, einschließlich FedRAMP High, DFARS -Ergänzung (Defense Federal Acquisition Regulations, DFARS) und Anforderungen für Strafjustiz- und Bundessteuerinformationssysteme (CJI- und FTI-Datentypen).|
+|[Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC High-Umgebungen erfüllen die Sicherheitsanforderungen des Verteidigungsministeriums (Department of Defense, DoD), DFARS (Defense Federal Acquisition Regulations Supplement) und International Traffic in Arms Regulations (ITAR).<br>**Siehe auch**: [Department of Defense (DoD)](#d)|
 | [Graph-API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Eine RESTful-Web-API für Microsoft Graph, mit der Sie auf Microsoft Cloud-Dienstressourcen zugreifen können. <br>**Weitere Informationen unter**: [Microsoft Graph Explorer](#m) |
 | [Gruppen-Chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | Ein Chat-Feature, bei dem ein Benutzer mit einem Bot in einer Gruppeneinstellung chatten kann, indem er @mention verwendet, um den Bot aufzurufen. <br>**Weitere Informationen unter**: [1:1-Chat](#o); [Chat-Bot](#c) |
 
@@ -100,7 +100,7 @@ Allgemeine Begriffe und Definitionen, die in der Teams-Entwicklerdokumentation v
 
 | Begriff | Definition |
 | --- | --- |
-| [Identitätsanbieter](../concepts/authentication/authentication.md) | Eine Entität, die Anmeldeinformationen speichert und für den Benutzer bereitstellt. Es ermöglicht benutzern auch, sich selbst zu registrieren.  <br>**Weitere Informationen unter**: [Authentifizierung](#a) |
+| [Identitätsanbieter](../concepts/authentication/authentication.md) | Eine Entität, die Anmeldeinformationen speichert und dem Benutzer zur Verfügung stellt. Es ermöglicht benutzern auch, sich selbst zu registrieren.  <br>**Weitere Informationen unter**: [Authentifizierung](#a) |
 | [Eingehender Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Eine externe App kann Inhalte in Teams-Kanälen freigeben. Diese Webhooks werden als Nachverfolgungs- und Benachrichtigungstools verwendet. <br>**Weitere Informationen unter**: [Webhook](#w); [Ausgehender Webhook](#o) |
 | [In-Meeting-App-Umgebung](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Weitere Informationen unter**: [Besprechungslebenszyklus](#m) |
 

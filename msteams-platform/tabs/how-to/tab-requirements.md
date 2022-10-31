@@ -1,16 +1,16 @@
 ---
 title: Voraussetzungen
 author: surbhigupta
-description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen zum Erstellen der persönlichen Registerkartenregisterkarte, des Kanals oder der Registerkarte "Gruppe" in Microsoft Teams. Kennen Sie die Tools, die zum Erstellen Ihrer Registerkarte erforderlich sind.
+description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen zum Erstellen einer persönlichen, kanal- oder gruppenbasierten Registerkarte für Microsoft Teams. Kennen Sie die Tools, die zum Erstellen Ihrer Registerkarte erforderlich sind.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450415"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791811"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -30,13 +30,13 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, während S
 
 * Gestalten Sie Ihre Registerkarten basierend auf dem Design, dem Design und der Absicht des Teams-Clients. Registerkarten funktionieren am besten, wenn sie für einen bestimmten Bedarf erstellt wurden und sich auf eine kleine Gruppe von Aufgaben oder eine Teilmenge von Daten konzentrieren, die für die Kanalposition der Registerkarte relevant sind.
 
-* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skript-Tags einen Verweis auf das JavaScript-Client-SDK von [Microsoft Teams](/javascript/api/overview/msteams-client) hinzu. Führen Sie nach dem Laden der Seite einen Aufruf durch `app.initialize()`, andernfalls wird ihre Seite nicht angezeigt.
+* Fügen Sie auf Ihrer Inhaltsseite mithilfe von Skript-Tags einen Verweis auf das JavaScript-Client-SDK von [Microsoft Teams](/javascript/api/overview/msteams-client) hinzu. Nachdem die Seite geladen wurde, rufen Sie auf, `app.initialize()`andernfalls wird Ihre Seite nicht angezeigt.
 
 * Damit die Authentifizierung auf mobilen Clients funktioniert, müssen Sie auf Teams JavaScript SDK 1.4.1 und höher aktualisieren.
 
 * Wenn Sie festlegen, dass Ihre Kanal- oder Gruppenregisterkarte auf dem mobilen Teams-Client angezeigt wird, muss die `setConfig()` Konfiguration einen Wert für die `websiteUrl` Eigenschaft aufweisen.
 
-* Die Microsoft Teams-Registerkarte unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignierte Zertifikate verwenden.
+* Die Registerkarte Microsoft Teams unterstützt nicht die Möglichkeit, Intranetwebsites zu laden, die selbstsignierte Zertifikate verwenden.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -45,10 +45,10 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, während S
 | &nbsp; | Installieren | Zum Benutzen... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-End-JavaScript-Laufzeitumgebung. Verwenden Sie die neueste Version von v16 LTS.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-End-JavaScript-Laufzeitumgebung. Verwenden Sie das neueste v16 LTS-Release.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (empfohlen) oder [Google Chrome](https://www.google.com/chrome/) | Ein Browser mit Entwicklertools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Build-Umgebungen für JavaScript, TypeScript oder SharePoint Framework (SPFx). |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET und Webentwicklung**, oder **plattformübergreifende .NET** Core-Entwicklungsworkload | .NET. Sie können die kostenlose Community Edition von Visual Studio 2019 installieren. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET- und Webentwicklung** oder **plattformübergreifende .NET Core-Entwicklungsworkload** | .NET. Sie können die kostenlose Community-Edition von Visual Studio 2022 installieren. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git, um das Repository für Beispiel-Apps von GitHub zu verwenden. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams für die Zusammenarbeit mit allen, mit denen Sie zusammenarbeiten, über Apps für Chats, Besprechungen und Anrufe – alles an einem Ort. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok ist ein Reverse-Proxy-Softwaretool. Ngrok erstellt einen Tunnel zu den öffentlich verfügbaren HTTPS-Endpunkten Ihres lokal ausgeführten Webservers. Die Webendpunkte Ihres Servers sind während der aktuellen Sitzung auf Ihrem Computer verfügbar. Wenn der Computer heruntergefahren wird oder in den Energiesparmodus wechselt, ist der Dienst nicht mehr verfügbar. |

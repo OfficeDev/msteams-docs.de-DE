@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die Webseite innerhalb des Teams-Clients un
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773443"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791538"
 ---
 # <a name="create-a-content-page"></a>Erstellen einer Inhaltsseite
 
@@ -111,7 +111,7 @@ Ab [Manifestschema v1.7](../../../resources/schema/manifest-schema.md) können S
 
 > [!NOTE]
 >
-> * Das Verhalten auf mobilen Clients kann nicht über die Eigenschaft des nativen Ladeindikators konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iFrame-basierten Aufgabenmodulen an. Dieser Indikator wird auf Mobilgeräten angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird und verworfen wird, sobald die Anforderung abgeschlossen ist.
+> Das Verhalten auf mobilen Clients kann nicht über die Eigenschaft des nativen Ladeindikators konfiguriert werden. Mobile Clients zeigen diesen Indikator standardmäßig auf Inhaltsseiten und iFrame-basierten Aufgabenmodulen an. Dieser Indikator wird auf Mobilgeräten angezeigt, wenn eine Anforderung zum Abrufen von Inhalten gestellt wird und verworfen wird, sobald die Anforderung abgeschlossen ist.
 
 Wenn Sie in Ihrem App-Manifest angeben `showLoadingIndicator : true`  , müssen alle Registerkartenkonfigurationen, Inhalte, Entfernungsseiten und alle iframe-basierten Aufgabenmodule die folgenden Schritte ausführen:
 

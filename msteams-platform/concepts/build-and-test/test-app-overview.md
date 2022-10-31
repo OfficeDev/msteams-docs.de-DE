@@ -1,14 +1,14 @@
 ---
 title: 'Testen der App: Übersicht'
-description: In diesem Modul erfahren Sie, wie Sie Ihre Teams benutzerdefinierte App in Microsoft 365 testen und debuggen und Testdaten zu Ihrem Microsoft 365 Mandanten hinzufügen.
+description: In diesem Modul erfahren Sie, wie Sie Ihre benutzerdefinierte Teams-App in Microsoft 365 testen und debuggen und Ihrem Microsoft 365-Mandanten Testdaten hinzufügen.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7cb0d194cfa5cab503a632889b5449f086532afd
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144383"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791552"
 ---
 # <a name="test-your-app"></a>Testen eigener Apps
 
@@ -20,7 +20,7 @@ Nachdem Sie Ihre App in Microsoft Teams integriert haben, müssen Sie ihre App t
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Vorbereiten Ihres Microsoft 365-Mandanten
 
-Bevor Sie mit dem Testen Ihrer App beginnen, bereiten Sie Ihren Microsoft 365 Testmandanten vor, und aktivieren Sie die benutzerdefinierte Microsoft Teams-App, mit der Sie Ihre App hochladen können. Sie müssen sich für das Microsoft 365-Entwicklerprogramm registrieren und die Microsoft Teams-Einstellungen für Ihre Organisation verwalten. Richten Sie Ihr Entwicklerabonnement ein, und konfigurieren Sie es über [Vorbereiten Ihres Microsoft 365-Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Bevor Sie mit dem Testen Ihrer App beginnen, bereiten Sie Ihren Microsoft 365-Testmandanten vor, und aktivieren Sie die benutzerdefinierte Teams-App, damit Sie Ihre App hochladen können. Sie müssen sich für das Microsoft 365-Entwicklerprogramm registrieren und die Microsoft Teams-Einstellungen für Ihre Organisation verwalten. Richten Sie Ihr Entwicklerabonnement ein, und konfigurieren Sie es über [Vorbereiten Ihres Microsoft 365-Mandanten](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ## <a name="test-and-debug"></a>Testen und Debuggen
 

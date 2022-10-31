@@ -1,16 +1,16 @@
 ---
 title: Erstellen einer Konfigurationsseite
 author: surbhigupta
-description: Konfigurationsseite erstellen, um Informationen vom Benutzer zu sammeln. Rufen Sie außerdem Kontextdaten für Microsoft Teams-Registerkarten ab, informieren Sie sich über die Authentifizierung, ändern oder entfernen Sie Registerkarten.
+description: Seite "Konfiguration erstellen", um Informationen vom Benutzer zu sammeln. Rufen Sie außerdem Kontextdaten für Microsoft Teams-Registerkarten ab, wissen Sie über die Authentifizierung, ändern oder entfernen Sie Registerkarten.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560659"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791701"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -30,7 +30,7 @@ Die Anwendung muss auf das JavaScript-Client-SDK von [Microsoft Teams](/javascri
 
 Ein Beispiel für eine Konfigurationsseite ist in der folgenden Abbildung dargestellt:
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot: Konfigurationsseite":::
 
 Der folgende Code ist ein Beispiel für entsprechenden Code für die Konfigurationsseite:
 
@@ -160,11 +160,11 @@ Wählen Sie auf der **Konfigurationsseite** entweder **die Schaltfläche Grau au
 
 Das folgende Bild zeigt den Inhalt der Registerkarte mit ausgewähltem **grauem** Symbol:
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot: Registerkarte &quot;Konfigurieren&quot; mit grauer Option":::
 
 Das folgende Bild zeigt den Inhalt der Registerkarte mit ausgewähltem **rotem** Symbol:
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot: Registerkarte &quot;Konfigurieren&quot; mit roter Option":::
 
 Die Auswahl der entsprechenden Schaltfläche löst entweder `saveGray()` oder `saveRed()` aus und ruft Folgendes auf:
 
@@ -172,14 +172,14 @@ Die Auswahl der entsprechenden Schaltfläche löst entweder `saveGray()` oder `s
 * Der `pages.config.registerOnSaveHandler()` Ereignishandler wird ausgelöst.
 * **Speichern** auf der Konfigurationsseite der App ist aktiviert.
 
-Der Code der Konfigurationsseite informiert Teams darüber, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer **Speichern** auswählt, werden die `pages.config.setConfig()` Parameter von eingestellt, wie von der Schnittstelle `Config` definiert. Weitere Informationen finden Sie unter [config interface](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+Der Konfigurationsseitencode informiert Teams darüber, dass die Konfigurationsanforderungen erfüllt sind und die Installation fortgesetzt werden kann. Wenn der Benutzer **Speichern** auswählt, werden die `pages.config.setConfig()` Parameter von eingestellt, wie von der Schnittstelle `Config` definiert. Weitere Informationen finden Sie unter [Konfigurationsschnittstelle](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` wird aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 >[!NOTE]
 >
->* Sie haben 30 Sekunden Zeit, um den Speichervorgang (den Rückruf `registerOnSaveHandler`an) vor dem Timeout abzuschließen. Nach dem Timeout erscheint eine allgemeine Fehlermeldung.
+>* Vor dem Timeout haben Sie 30 Sekunden Zeit, um den Speichervorgang (rückruf an `registerOnSaveHandler`) abzuschließen. Nach dem Timeout erscheint eine allgemeine Fehlermeldung.
 >* Wenn Sie einen save-Handler mit registrieren `registerOnSaveHandler()`, muss der Callback `saveEvent.notifySuccess()` oder `saveEvent.notifyFailure()` aufrufen, um das Ergebnis der Konfiguration anzugeben.
 >* Wenn Sie keinen Speicherhandler registrieren, erfolgt der `saveEvent.notifySuccess()` Aufruf automatisch, wenn der Benutzer **Speichern auswählt**.
->* Stellen Sie sicher, dass Sie über eindeutige `entityId`. Doppelte `entityId` Umleitungen zur ersten Instanz der Registerkarte.
+>* Stellen Sie sicher, dass eindeutig `entityId`ist. Doppelte `entityId` Umleitungen zur ersten Instanz der Registerkarte.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Rufen Sie Kontextdaten für Ihre Registerkarteneinstellungen ab
 
@@ -295,9 +295,9 @@ Authentifizieren Sie sich, bevor Sie einem Benutzer erlauben, Ihre App zu konfig
 
 ## <a name="modify-or-remove-a-tab"></a>Ändern oder entfernen Sie eine Registerkarte
 
-Legen Sie die Eigenschaft Ihres Manifests `canUpdateConfiguration` auf `true`. Es ermöglicht den Benutzern, einen Kanal oder eine Gruppenregisterkarte zu ändern oder neu zu konfigurieren. Sie können Ihre Registerkarte nur über die Microsoft Teams-Benutzeroberfläche umbenennen. Informieren Sie den Benutzer über die Auswirkungen auf inhalte, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Legen Sie die -Eigenschaft Ihres Manifests `canUpdateConfiguration` auf fest `true`. Es ermöglicht den Benutzern, einen Kanal oder eine Gruppenregisterkarte zu ändern oder neu zu konfigurieren. Sie können Ihre Registerkarte nur über die Teams-Benutzeroberfläche umbenennen. Informieren Sie den Benutzer über die Auswirkungen auf den Inhalt, wenn eine Registerkarte entfernt wird. Fügen Sie dazu eine Seite mit Den Entfernungsoptionen in die App ein, und legen Sie einen Wert für die `removeUrl` Eigenschaft in der `setConfig()` (früheren `setSettings()`) Konfiguration fest. Der Benutzer kann persönliche Registerkarten deinstallieren, aber nicht ändern. Weitere Informationen finden [Sie unter Erstellen einer Entfernungsseite für Ihren Tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Konfiguration von Microsoft Teams `setConfig()` (früher `setSettings()`) für die Entfernungsseite:
+Microsoft Teams `setConfig()` -Konfiguration (früher `setSettings()`) für die Entfernungsseite:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

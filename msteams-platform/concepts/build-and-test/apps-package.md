@@ -1,18 +1,18 @@
 ---
 title: Verpacken Ihrer App
-description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App verpacken und in Teams hochladen. Erstellen Sie ein App-Paket, aktivieren Sie das benutzerdefinierte Hochladen, stellen Sie sicher, dass Ihre App ausgeführt wird und über HTTPs darauf zugegriffen werden kann.
+description: Erfahren Sie, wie Sie Ihre Microsoft Teams-App packen und in Teams hochladen. Erstellen Sie ein App-Paket, aktivieren Sie das benutzerdefinierte Hochladen, und stellen Sie sicher, dass Ihre App mit HTTPs ausgeführt und zugänglich ist.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: cd2bb1c2f0ff97a28f467334148c283142b2d535
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100196"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791454"
 ---
 # <a name="create-teams-app-package"></a>Teams-App-Paket erstellen
 
-Sie benötigen ein App-Paket, wie immer Sie planen, Ihre Microsoft Teams-App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
+Sie benötigen ein App-Paket. Sie planen jedoch, Ihre Microsoft Teams-App zu verteilen. Ein gültiges Paket ist eine ZIP-Datei, die Folgendes enthält:
 
 * **App-Manifest**: Das Manifest beschreibt, wie Ihre App konfiguriert ist, einschließlich ihrer Funktionen, der erforderlichen Ressourcen und anderer wichtiger Attribute.
 * **App-Symbole**: Jedes Paket erfordert ein Farb- und ein Kontursymbol für Ihre App.

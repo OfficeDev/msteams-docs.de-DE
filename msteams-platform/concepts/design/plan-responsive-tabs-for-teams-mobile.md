@@ -1,16 +1,16 @@
 ---
 title: Planen Ihrer Apps für mobile Microsoft Teams-Geräte
 author: surbhigupta
-description: Mit diesem Lernmodul erfahren Sie, wie Sie das Erstellen einer App auf Mobilen Teams planen und verschiedene Phasen zum Erstellen von Apps verstehen.
+description: In diesem Lernmodul erfahren Sie, wie Sie die Erstellung einer App auf Teams Mobile planen und die verschiedenen Phasen zum Erstellen einer App verstehen.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484000"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791559"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planen reaktionsfähiger Registerkarten für Teams Mobile
 
@@ -40,8 +40,8 @@ Nachdem Sie den App-Anwendungsbereich identifiziert haben, gilt es, die folgende
 
    Stellen Sie vollständige App-Funktionen für Interaktionen auf Mobilgeräten bereit. Bieten Sie für Interaktionen mit Ihrer App auf Mobilgeräten eine vollständige immersive Benutzererfahrung, die entweder so gut oder noch besser als jene auf Desktops ist. Um den Nutzern eine gute Benutzererfahrung zu bieten, sorgen Sie für Reaktionsfähigkeit für alle Anwendungsfälle auf Mobilgeräten.
 
-> [!TIP]
-> Informationen zu den Entwurfsrichtlinien finden Sie unter [Entwurfsprozess für Microsoft Teams-Apps](design-teams-app-process.md).
+    > [!TIP]
+    > Informationen zu den Entwurfsrichtlinien finden Sie unter [Entwurfsprozess für Microsoft Teams-Apps](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Anwendungsfälle
 
@@ -62,10 +62,10 @@ In der ersten Phase können Sie die grundlegendste Nutzungsumgebung implementier
 Die folgenden Informationen können ebenfalls angezeigt werden:
 
 * Dashboards und Zusammenfassungen.
-* Visuelle Daten, Karten und Infografiken.
+* Datenvisuals, Karten und Infografiken.
 * Diagramme, Diagramme und Tabellen.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Zeigen Sie die Daten in Form einer Visualisierung an.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Zeigen Sie die Daten in Form von Visualisierungen an.":::
 
 Schnelle Aktionen:
 
@@ -73,9 +73,9 @@ In der zweiten Phase können die Benutzer über die Desktopversion an den vorhan
 
 * Inhalt durchsuchen.
 * Filtern von Daten.
-* Erstellen von Textmarken
+* Lesezeichen erstellen.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Schnelle Aktionen für das vorhandene Diagramm und die vorhandenen visuellen Elemente.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Schnelle Aktionen für das vorhandene Diagramm und die vorhandenen Visuals.":::
 
 Aktivierung:
 
@@ -85,9 +85,9 @@ Sie können Benutzern folgende Zugriffsoptionen bieten:
 
 * Titel und Beschreibung ändern.
 * Fügen Sie Datenelemente ein, um Visualisierungen zu erstellen.
-* Freigeben von Visualisierungen in einem Kanal- oder Gruppenchat.
+* Freigeben von Visualisierungen in einem Kanal oder Gruppenchat.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Ermöglichen Sie Benutzern das Erstellen von Inhalten wie Diagrammgrafiken.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Benutzern das Erstellen von Inhalten wie Diagrammgrafiken ermöglichen.":::
 
 <br>
 
@@ -111,24 +111,24 @@ Schnelle Aktionen:
 
 In der zweiten Phase können Sie den Benutzern folgende Zugriffoptionen in der App bieten:
 
-* Erstellen Sie Aufgaben oder Elemente mit den obligatorischen Feldern, um die kognitive Belastung der Benutzer zu verringern.
+* Erstellen Sie Aufgaben oder Elemente mit den Pflichtfeldern, um die kognitive Last der Benutzer zu reduzieren.
 * Ändern Sie den Boardtyp oder die Ansicht.
 * Überprüfen Sie Aufgaben, indem Sie die Ansicht erweitern.
 * Verwenden Sie Aufgabenmodule, um eine detaillierte Ansicht anzuzeigen.
 * Verschieben Sie die Aufgaben in verschiedene Kategorien.
 * Teilen Sie relevante Aufgaben in Chats und Kanälen über E-Mails und Aktivitätsfeeds.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Erstellen Sie Aufgaben, um die kognitive Belastung der Benutzer zu reduzieren.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Erstellen Sie Aufgaben, um die kognitive Last der Benutzer zu reduzieren.":::
 
 Aktivierung:
 
 In der dritten Phase können Sie die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
 * Fügen Sie neue Projekte und Boards hinzu.
-* Fügen Sie verschiedene Kategorien hinzu, z. B. **"Vorgeschlagen**", " **Aktiv"** und "Geschlossen", und ändern **Sie** sie.
+* Fügen Sie verschiedene Kategorien hinzu, und ändern Sie sie, z. B **. Vorgeschlagen**, **Aktiv** und **Geschlossen**.
 * Konfigurieren Sie die Aufgaben für Kommentare, Anlagen und andere komplexe Features.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzeroberfläche, indem Sie Projekte und Boards hinzufügen.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzererfahrung, indem Sie Projekte und Boards hinzufügen.":::
 
 <br>
 
@@ -147,7 +147,7 @@ Nutzung:
 In der ersten Phase können Sie eine Desktoplösung in Betracht ziehen, um die Inhalte und Ressourcen in Ihrer App anzuzeigen.  Sie können die folgenden Funktionen anzeigen:
 
 * Kommentare oder Feedback.
-* Vergrößern oder Verkleinern.
+* Vergrößern oder Verkleineren.
 * Aktuelle Phase oder Fortschritt eines ausstehenden Dokuments.
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Zeigt Inhalte und Ressourcen in der Desktopoberfläche an.":::
@@ -156,7 +156,7 @@ Schnelle Aktionen:
 
 In der zweiten Phase können Sie die folgenden Aktionen einführen:
 
-* Erstellen Sie eine neue Tafel für die Zusammenarbeit oder neue Dokumente zum Signieren.
+* Erstellen Sie ein neues Board für die Zusammenarbeit oder neue Dokumente zum Signieren.
 * Teilen Sie Boards intern und auch mit Gästen.
 * Konfigurieren sie Administratorberechtigungen.
 
@@ -170,12 +170,12 @@ Aktivierung:
 Stellen Sie in der dritten Phase ihren Benutzern eine vollständige Lösung bereit. Sie können die Benutzererfahrung um die folgenden Aktivitäten erweitern:
 
 * Hinzufügen von Text, Formen und schnellen Notizen.
-* Navigieren sie durch Inhalte.
+* Navigieren sie im Inhalt.
 * Fügen Sie Ebenen und Filter hinzu.
-* Löschen, Rückgängigmachen und Wiederholen von Vorgängen.
+* Lösch-, Rückgängig- und Wiederholungsvorgänge.
 * Zugreifen auf Kamera und Mikrofon mit JS SDK-APIs. Weitere Informationen zu Gerätefunktionen finden Sie in der [Übersicht über Gerätefunktionen](../device-capabilities/device-capabilities-overview.md).
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzererfahrung, indem Sie Textformen und schnelle Notizen und andere Funktionen hinzufügen.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Aktivieren Sie die Benutzererfahrung, indem Sie Textformen, schnelle Notizen und andere Funktionen hinzufügen.":::
 
 <br>
 

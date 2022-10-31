@@ -1,16 +1,16 @@
 ---
 title: Häufige Gründe für App-Überprüfungsfehler
-description: Erfahren Sie mehr über die häufigsten Ursachen für Fehler bei der App-Überprüfung, z. B. fehlerhafte Links, unerwartete Fehler, Abstürze, verstöße gegen gültige Domänenrichtlinien, Funktionsfehler.
+description: Erfahren Sie mehr über die häufigsten Gründe für Fehler bei der App-Überprüfung, z. B. fehlerhafte Links, unerwartete Fehler, Abstürze, Verstöße gegen gültige Domänenrichtlinien und Funktionsfehler.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 006fe6d9e939d9578fa84c61daaa4c404a10d5f6
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560652"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791727"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Häufige Gründe für App-Überprüfungsfehler
 
@@ -155,7 +155,7 @@ Ihr App-Name spielt eine wichtige Rolle, damit Benutzer Ihre App im Microsoft Te
 * Uneinheitliche Verwendung des App-Namens während der gesamten App-Funktionalität.
 * Diskrepanz zwischen dem im App-Manifest angegebenen App-Namen, der als Teil des App-Pakets übermittelt wurde, und dem App-Namen im Partner Center.
 * App-Namen, die mit *Beta*, *Dev* und *Prod* angefügt werden, um anzugeben, dass die App nicht produktionsbereit ist.
-* App-Einreichungen, bei denen der Entwickler den App-Namen geändert hat, wobei der alte App-Name jedoch in der App verwendet wird.
+* App-Übermittlungen, bei denen der Entwickler den App-Namen geändert hat, aber der alte App-Name weiterhin innerhalb der App verwendet wird.
 
 ## <a name="support-link"></a>Supportlink
 

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über neue Microsoft Teams-Entwicklerfeatures und
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740611"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791587"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Neuigkeiten für Entwickler in Microsoft Teams
 
@@ -27,7 +27,7 @@ Entdecken Sie die allgemein verfügbaren Features der Microsoft Teams-Plattform.
 :::column-end:::
 :::column span="2":::
 
-Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
+Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 
 **Oktober 2022**
 
@@ -94,8 +94,8 @@ Microsoft Teams-Plattformfeatures, die für alle App-Entwickler verfügbar sind.
 | 24.02.2022 | Schrittweise Anleitung zum Erstellen ausgehender Webhooks eingeführt | Erstellen von Webhooks und Connectors > Erstellen ausgehender Webhooks > [Erstellen ausgehender Webhooks](sbs-outgoing-webhooks.yml)|
 | 23.02.2022 | Bewertungsparameter für Microsoft Teams-Store| Vermarkten Ihrer App > Veröffentlichen im Teams Store > [Bewertungsparameter für Microsoft Teams Store](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18.02.2022 | Ein umfangreiches Glossar für die Microsoft Teams-Entwicklerdokumentation wurde eingeführt, damit Sie die Definition eines Begriffs schnell finden können. | [Glossar](~/get-started/glossary.md) |
-| 18.02.2022 | Aktualisierung des Übersichtsmoduls für die Zuordnung der Teams-App zu den Unternehmenszielen, der Benutzergeschichte und der Erkundung der Funktionen der Teams-App | [Übersicht > Passende Teams-App](overview.md) |
-| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält. | [Planen ihrer App > Übersicht](~/concepts/app-fundamentals-overview.md) |
+| 18.02.2022 | Aktualisierung des Übersichtsmoduls für die Zuordnung der Teams-App zu den Unternehmenszielen, der Benutzergeschichte und der Erkundung der Funktionen der Teams-App | Übersicht > [Teams-App, die passt](overview.md) |
+| 18.02.2022 | Das Modul „App-Grundlagen“ wurde aktualisiert, um Ihre App so zu planen, dass sie die Zuordnung von Anwendungsfällen zu Teams-Features und eine Checkliste für die App-Planung enthält. | Planen Ihrer App > [Übersicht](~/concepts/app-fundamentals-overview.md) |
 | 17.02.2022 | Was ist zu erwarten, nachdem Sie Ihre App eingereicht haben?| Verteilen Ihrer App > Im Teams-Store veröffentlichen > [Übersicht](concepts/deploy-and-publish/appsource/publish.md) |
 | 15.02.2022 | Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot eingeführt | Erstellen von Bots > Senden und Empfangen von Dateien > [Schritt-für-Schritt-Anleitung zum Hochladen von Dateien zu Teams aus einem Bot](sbs-file-handling-in-bot.yml) |
 | 11.02.2022 | Freigegebenes Besprechungsfreigabefenster| • Erstellen von Apps für Teams-Besprechungen > [Freigegebene Besprechungsbühne](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Erstellen von Apps für Teams-Besprechungen > [Erstellen von Apps für Teams-Besprechungen](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • App-Manifest > Öffentliche Entwickler-Vorschau > [Manifest-Schema für die Entwickler-Vorschau](resources/schema/manifest-schema-dev-preview.md)|
@@ -233,7 +233,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | 23.04.2019 | Aktionsbasierte Nachrichtenerweiterungen sind jetzt verfügbar. | [Aktionsbasierte Nachrichtenerweiterungen](~/concepts/messaging-extensions/create-extensions.md) |
 | 18.02.2019 | Erstellen von Deep-Links zu privatem Chat. | [Deep-Link zu einem Chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 23.01.2019 | Anzeigen von SKU- und Lizenztyp-Informationen im Registerkartenkontext. | [Registerkartenkontext](~/concepts/tabs/tabs-context.md) |
-|
+
 </details>
 
 <br>
@@ -269,7 +269,7 @@ Informieren Sie sich über Updates aus den vorherigen GA-Versionen, die hier auf
 | 15.03.2018 | Umgestaltete Dokumentation für Karten. |[Karten](~/concepts/cards/cards.md), [Kartenaktionen](~/concepts/cards/cards-actions.md), [Kartenformatierung](~/concepts/cards/cards-format.md), [Kartenreferenz](~/concepts/cards/cards-reference.md)|
 | 27.02.2018 | Beispielcode zum Veranschaulichen der AsTeamsChannelAccounts()-Methode hinzugefügt. |[Kontext für Ihren Bot erhalten](~/concepts/bots/bots-context.md)|
 | 05.02.2018 | Themen für die ersten Schritte mit C# hinzugefügt. |[Erste Schritte mit der Microsoft Teams-Plattform mit C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-|
+
 </details>
 </details>
 </details>
@@ -330,7 +330,7 @@ Entdecken Sie die veralteten Features der Microsoft Teams-Plattform. Sie können
 :::column-end:::
 :::column span="2":::
 
-Microsoft Teams-Plattformfeatures, die nicht verfügbar sind.
+Features der Teams-Plattform, die nicht verfügbar sind.
 
 **August 2022**
 
@@ -355,7 +355,7 @@ Sie können die neuesten Updates der Teams-Plattform erhalten, indem Sie den [RS
 
 ### <a name="to-configure-rss-feed"></a>So konfigurieren Sie den RSS-Feed
 
-1. Öffnen Sie Microsoft Teams.
+1. Öffnen Sie Teams.
 1. Wählen Sie im linken Bereich **Teams** aus.
 1. Wählen Sie einen Kanal im Team aus.
 1. Wählen Sie die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; und dann in der Dropdownliste **Connectors** aus.

@@ -1,23 +1,23 @@
 ---
 title: Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte
 author: laujan
-description: Erstellen Sie einen benutzerdefinierten Kanal, eine Gruppenregisterkarte mit Node.js, ASP.NET Core ASP.NET Core MVC. App generieren, Paket erstellen, App erstellen und ausführen, geheimer Tunnel, In Teams hochladen
+description: Erstellen Sie einen benutzerdefinierten Kanal, die Registerkarte "Gruppierung" mit Node.js, ASP.NET Core ASP.NET Core MVC. App generieren, Paket erstellen, App erstellen und ausführen, Geheimnistunnel, Hochladen in Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615240"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791664"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte
 
-Kanal- oder Gruppenregisterkarten liefern Inhalte an Kanäle und Gruppenchats, was dazu beiträgt, Räume für die Zusammenarbeit rund um dedizierte webbasierte Inhalte zu schaffen.
+Kanal- oder Gruppenregisterkarten stellen Inhalte an Kanäle und Gruppenchats bereit, was dazu beiträgt, Räume für die Zusammenarbeit um dedizierte webbasierte Inhalte zu erstellen.
 
-Stellen Sie sicher, dass Sie alle [Voraussetzungen](~/tabs/how-to/tab-requirements.md) zum Erstellen Ihrer Kanal- oder Gruppenregisterkarte haben.
+Stellen Sie sicher, dass Sie über alle [Voraussetzungen](~/tabs/how-to/tab-requirements.md) verfügen, um Ihre Kanal- oder Gruppenregisterkarte zu erstellen.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -55,7 +55,7 @@ Im Folgenden sind die Schritte zum Erstellen einer Kanal- oder Gruppenregisterka
     yo teams
     ```
 
-1. Geben Sie Ihre Werte für eine Reihe von Fragen an, die vom Microsoft Teams-App-Generator aufgefordert werden, Ihre `manifest.json` Datei zu aktualisieren:
+1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die vom Microsoft Teams-App-Generator zum Aktualisieren Ihrer `manifest.json` Datei aufgefordert werden:
 
     ![Screenshot zum Öffnen des Generators](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
 1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
-1. Wählen Sie **"Apps** >  verwalten **" aus. Laden Sie eine App** >  hoch **, um eine benutzerdefinierte App hochzuladen**.
+1. Wählen **Sie Apps verwalten** > **App** >  hochladen **Benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner des App-Pakets und dann **Öffnen** aus.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Hochgeladene Kanalregisterkarte":::
@@ -214,12 +214,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Folgen Sie den Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Ihre Kanal- oder Gruppenregisterkarte.
+1. Befolgen Sie die Anweisungen zum Hinzufügen einer Registerkarte. Es gibt ein benutzerdefiniertes Konfigurationsdialogfeld für Ihre Kanal- oder Gruppenregisterkarte.
 1. Klicken Sie auf **Speichern**, und Ihre Registerkarte wird der Registerkartenleiste des Kanals hinzugefügt.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Die hochgeladene Kanalregisterkarte":::
 
-    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
+    Nun haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -296,7 +296,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer Ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Teams die `configurationUrl` in Ihrem Manifest angegebene Registerkarte, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Microsoft Teams verwendet werden können. Wenn ein Benutzer ihre Registerkarte hinzufügen oder aktualisieren möchte, lädt Teams die `configurationUrl` in Ihrem Manifest angegebene, bettet sie in einen IFrame ein und rendert sie auf Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 
@@ -349,9 +349,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie einen Aufruf von `microsoftTeams.app.initialize();` in das `script`-Tag ein.
 
-1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Pages**", und öffnen **Sie Tab.cshtml**
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **Pages**, und öffnen Sie **Tab.cshtml.**
 
-    In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche " **Grau auswählen** " oder " **Rot auswählen** " wird ausgelöst `saveGray()` bzw `saveRed()` . festgelegt `pages.config.setValidityState(true)`und aktiviert "Auf der Konfigurationsseite **speichern** ". Dieser Code teilt Teams mit, dass Sie die Anforderungskonfiguration abgeschlossen haben, und kann mit der Installation fortfahren. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+    In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche **Grau auswählen** oder **Rot auswählen** löst `saveGray()` bzw `saveRed()` . legt fest `pages.config.setValidityState(true)`, und aktiviert **Speichern** auf der Konfigurationsseite. Dieser Code teilt Teams mit, dass Sie die Konfiguration der Anforderungen abgeschlossen haben und mit der Installation fortfahren können. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 1. Aktualisieren Sie die Werte `websiteUrl` und `contentUrl` jeder Funktion mit der HTTPS-ngrok-URL zu Ihrer Registerkarte.
 
@@ -410,10 +410,10 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Öffnen Sie **Apps**, und wählen Sie **App importieren** aus.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. Der Name Ihres App-Pakets lautet `tab.zip`. Es ist im folgenden Pfad verfügbar:
 
@@ -431,7 +431,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
-1. Wählen Sie **in den App-Features** **"Gruppen- und Kanal-App**" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
+1. Wählen Sie unter **App-Features** **die Option Gruppierungs- und Kanal-App** aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -445,7 +445,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET hochgeladen":::
 
-    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
+    Nun haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 
@@ -546,9 +546,9 @@ Klicken Sie im Visual Studio-Projektmappen-Explorerfenster mit der rechten Maust
 
 Dies sind die verschiedenen Ansichten in ASP.NET Core MVC:
 
-* Startseite: ASP.NET Core behandelt Dateien namens **Index** als die Standard- oder Startseite für die Website. Wenn Ihre Browser-URL auf den Stamm der Website verweist, kann **Index.cshtml** als Startseite für Ihre Anwendung angezeigt werden.
+* Startseite: ASP.NET Core behandelt Dateien namens **Index** als die Standard- oder Startseite für die Website. Wenn ihre Browser-URL auf das Stammverzeichnis der Website verweist, kann **Index.cshtml** als Startseite für Ihre Anwendung angezeigt werden.
 
-* Freigegeben: Das Partielle **Ansichtsmarkup _Layout.cshtml** enthält die allgemeine Seitenstruktur der Anwendung und freigegebene visuelle Elemente, die auch auf die Teams-Bibliothek verweisen.
+* Freigegeben: Das Teilansichtsmarkup **_Layout.cshtml** enthält die gesamte Seitenstruktur der Anwendung und freigegebene visuelle Elemente, die ebenfalls auf die Teams-Bibliothek verweisen.
 
 #### <a name="controllers"></a>Controller
 
@@ -583,9 +583,9 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Fügen Sie einen Aufruf von `microsoftTeams.app.initialize();` in das `script`-Tag ein.
 
-1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **"Tab"**, und öffnen **Sie "Tab.cshtml"**.
+1. Wechseln Sie in Visual Studio Projektmappen-Explorer zum Ordner **Tab**, und öffnen Sie **Tab.cshtml.**
 
-    In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche " **Grau auswählen** " oder " **Rot auswählen** " wird ausgelöst `saveGray()` bzw `saveRed()` . festgelegt `pages.config.setValidityState(true)`und aktiviert "Auf der Konfigurationsseite **speichern** ". Dieser Code teilt Teams mit, dass Sie die Anforderungskonfiguration abgeschlossen haben, und kann mit der Installation fortfahren. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
+    In **Tab.cshtml** bietet die Anwendung dem Benutzer zwei Optionen zum Anzeigen der Registerkarte mit einem roten oder grauen Symbol. Die Schaltfläche **Grau auswählen** oder **Rot auswählen** löst `saveGray()` bzw `saveRed()` . legt fest `pages.config.setValidityState(true)`, und aktiviert **Speichern** auf der Konfigurationsseite. Dieser Code teilt Teams mit, dass Sie die Konfiguration der Anforderungen abgeschlossen haben und mit der Installation fortfahren können. Die Parameter von `pages.config.setConfig` sind festgelegt. Schließlich wird `saveEvent.notifySuccess()` aufgerufen, um anzugeben, dass die Inhalts-URL erfolgreich aufgelöst wurde.
 
 1. Aktualisieren Sie die Werte `websiteUrl` und `contentUrl` jeder Funktion mit der HTTPS-ngrok-URL zu Ihrer Registerkarte.
 
@@ -655,7 +655,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
 1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf `https://<yourngrokurl>/tou`, und speichern Sie.
 
-1. Wählen Sie **in den App-Features** **"Gruppen- und Kanal-App**" aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
+1. Wählen Sie unter **App-Features** **die Option Gruppierungs- und Kanal-App** aus. Aktualisieren Sie die **Konfigurations-URL** mit `https://<yourngrokurl>/tab`, und wählen Sie den **Bereich** Ihrer Registerkarte aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -669,7 +669,7 @@ Stellen Sie sicher, dass die Eingabeaufforderung bei aktivem ngrok ausgeführt w
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Kanalregisterkarte-ASPNET MVC hochgeladen":::
 
-    Jetzt haben Sie Erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
+    Nun haben Sie erfolgreich Ihre Kanal- oder Gruppenregisterkarte in Teams erstellt und hinzugefügt.
 
 ::: zone-end
 

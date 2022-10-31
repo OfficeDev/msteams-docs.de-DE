@@ -1,26 +1,26 @@
 ---
 title: Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 author: Rajeshwari-v
-description: Erfahren Sie mehr über die Phasenansicht, eine Vollbild-UI-Komponente, die aufgerufen wird, um Ihre Webinhalte anzuzeigen. Die Verbreitung von Links wird verwendet, um URLs mithilfe adaptiver Karten in eine Registerkarte umzuwandeln.
+description: Erfahren Sie mehr über die Phasenansicht, eine Vollbild-UI-Komponente, die aufgerufen wird, um Ihre Webinhalte anzuzeigen. Die Linkentflechtung wird verwendet, um URLs mithilfe von adaptiven Karten in eine Registerkarte umzuwandeln.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484920"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791566"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Aufgeklappte Registerkartenverknüpfung und Phasenansicht
 
-Die Phasenansicht ist eine neue Benutzeroberflächenkomponente. Sie können den Inhalt rendern, der in Teams im Vollbildmodus geöffnet und als Registerkarte angeheftet ist.
+Die Phasenansicht ist eine neue Komponente der Benutzeroberfläche ( UI). Es ermöglicht Ihnen, den Inhalt zu rendern, der im Vollbildmodus in Teams geöffnet und als Registerkarte angeheftet wird.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>Bühnenansicht
 
-Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie aufrufen können, um Webinhalte anzuzeigen. Der vorhandene Link-Entknüpfungsdienst wird so aktualisiert, dass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird eine Vorschau der URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann auf **Ansicht** auf der Karte klicken und den Inhalt direkt aus der Bühnenansicht als Registerkarte anheften.
+Die Bühnenansicht ist eine Vollbild-Benutzeroberflächenkomponente, die Sie aufrufen können, um Webinhalte anzuzeigen. Der vorhandene Link-Unfurling-Dienst wird aktualisiert, sodass er verwendet wird, um URLs mithilfe einer adaptiven Karte und Chatdiensten in eine Registerkarte umzuwandeln. Wenn ein Benutzer eine URL in einem Chat oder Kanal sendet, wird eine Vorschau der URL auf einer adaptiven Karte bereitgestellt. Der Benutzer kann auf **Ansicht** auf der Karte klicken und den Inhalt direkt aus der Bühnenansicht als Registerkarte anheften.
 
 ## <a name="advantage-of-stage-view"></a>Vorteile der Bühnenansicht
 
@@ -45,9 +45,9 @@ Wenn der Benutzer eine URL auf dem Microsoft Teams-Desktopclient eingibt, wird d
 
 Die folgenden Bilder zeigen eine Bühnenansicht, die über eine adaptive Karte geöffnet wurde:
 
-[![Öffnen einer Bühnenansicht über eine adaptive Karte](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot: Geöffnete Phase von adaptiver Karte"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Öffnen einer Bühnenansicht](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot: Geöffnete Phase von der Karte aus"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>Beispiel
 
@@ -90,7 +90,7 @@ Im Folgenden sehen Sie den Ablauf zum Aufrufen der Bühnenansicht:
 
 > [!NOTE]
 >
-> Wenn Sie auf mobilen Teams-Clients die Phasenansicht für Apps aufrufen, die über den [Teams-Store](~/concepts/deploy-and-publish/apps-publish-overview.md) verteilt sind und keine für Mobilgeräte optimierte Umgebung haben, wird der Standardwebbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
+> Wenn Sie auf mobilen Teams-Clients die Phasenansicht für Apps aufrufen, die über den [Teams Store](~/concepts/deploy-and-publish/apps-publish-overview.md) verteilt werden und nicht über eine für Mobilgeräte optimierte Oberfläche verfügen, wird der Standardwebbrowser des Geräts geöffnet. Der Browser öffnet die im `websiteUrl`-Parameter des `TabInfo`-Objekts angegebene URL.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Aufrufen der Bühnenansicht über einen Deep-Link
 
@@ -98,13 +98,13 @@ Um die Bühnenansicht über einen Deep-Link von Ihrer Registerkarte aufzurufen, 
 
 ### <a name="syntax"></a>Syntax
 
-Es folgt die Deep-Link-Syntax:
+Im Folgenden finden Sie die Deep Link-Syntax:
 
 `<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 ### <a name="examples"></a>Beispiele
 
-Wenn ein Benutzer eine URL eingibt, wird sie in eine adaptive Karte eingeblendet.
+Wenn ein Benutzer eine URL eingibt, wird sie in einer adaptiven Karte entladen.
 
 Im Folgenden sind die Deep-Link-Beispiele zum Aufrufen der Bühnenansicht aufgeführt:
 
@@ -129,7 +129,7 @@ Codiert
 `<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> Alle Deep-Links müssen vor dem Einfügen der URL codiert werden. Nicht codierte URLs werden nicht unterstützt.
+> Alle DeepLinks müssen vor dem Einfügen der URL codiert werden. Nicht codierte URLs werden nicht unterstützt.
 >
 > * `name` ist in Deep-Links optional. Wenn er nicht enthalten ist, wird er durch den App-Namen ersetzt.
 > * Der Deep-Link kann auch durch eine `OpenURL`-Aktion übergeben werden.

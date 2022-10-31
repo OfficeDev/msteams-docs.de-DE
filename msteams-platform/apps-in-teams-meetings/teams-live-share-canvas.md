@@ -1,25 +1,25 @@
 ---
-title: Übersicht über die Live-Freigabe-Canvas
+title: Übersicht über die Live Share-Canvas
 author: surbhigupta
-description: In diesem Modul erfahren Sie mehr über die Live Share-Canvas, eine Erweiterung, die Freihandeingaben, Laserpointer und Cursor für Besprechungs-Apps ermöglicht.
+description: In diesem Modul erfahren Sie mehr über die Live Share-Canvas, eine Erweiterung, die Freihand, Laserpointer und Cursor für Besprechungs-Apps ermöglicht.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 11f465072d496f466df28c37b8eee7289bae4180
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560610"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791447"
 ---
-# <a name="live-share-canvas-overview"></a>Übersicht über die Live-Freigabe-Canvas
+# <a name="live-share-canvas-overview"></a>Übersicht über die Live Share-Canvas
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Screenshot zeigt ein Beispiel für einen Zeichenbereich, der mit anderen Besprechungsteilnehmern in einer Teams-Besprechung synchronisiert ist.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Screenshot: Beispiel für eine Canvas, die mit anderen Besprechungsteilnehmern in einer Teams-Besprechung synchronisiert ist":::
 
-In Konferenzräumen und Klassenzimmern auf der ganzen Welt sind Whiteboards ein zentraler Bestandteil der Zusammenarbeit. In der Modernen Zeit reicht das Whiteboard jedoch nicht mehr aus. Da zahlreiche digitale Tools wie PowerPoint im Mittelpunkt der Zusammenarbeit in der Moderne stehen, ist es wichtig, dasselbe kreative Potenzial zu ermöglichen.
+In Konferenzräumen und Klassenzimmern auf der ganzen Welt sind Whiteboards ein zentraler Bestandteil der Zusammenarbeit. In der Neuzeit reicht das Whiteboard jedoch nicht mehr aus. Mit zahlreichen digitalen Tools wie PowerPoint, die im Mittelpunkt der Zusammenarbeit in der modernen Ära stehen, ist es unerlässlich, das gleiche kreative Potenzial zu ermöglichen.
 
-Um eine nahtlosere Zusammenarbeit zu ermöglichen, hat Microsoft PowerPoint Live erstellt, die entscheidend für die Arbeitsweise von Personen in Teams geworden ist. Referenten können Folien kommentieren, die jeder sehen kann, indem sie Stifte, Textmarker und Laserpointer verwenden, um die Aufmerksamkeit auf wichtige Konzepte zu lenken. Mithilfe der Live Share-Canvas kann Ihre App mit minimalem Aufwand die Leistungsfähigkeit PowerPoint Live Freihandtools nutzen.
+Um eine nahtlose Zusammenarbeit zu ermöglichen, hat Microsoft PowerPoint Live erstellt, die entscheidend für die Arbeit von Personen in Microsoft Teams geworden ist. Referenten können Folien kommentieren, die jeder sehen kann, indem sie Stifte, Textmarker und Laserpointer verwenden, um die Aufmerksamkeit auf wichtige Konzepte zu lenken. Mithilfe der Live Share-Canvas kann Ihre App die Leistungsfähigkeit PowerPoint Live Freihandtools mit minimalem Aufwand nutzen.
 
 ## <a name="install"></a>Installieren
 
@@ -41,12 +41,12 @@ yarn add @microsoft/live-share-canvas@next
 
 ## <a name="setting-up-the-package"></a>Einrichten des Pakets
 
-Die Live-Freigabe-Canvas verfügt über zwei primäre Klassen, die die Zusammenarbeit mit Schlüsseln ermöglichen: `InkingManager` und `LiveCanvas`. `InkingManager` ist für das Anfügen eines Elements mit vollem Funktionsumfang `<canvas>` an Ihre App verantwortlich, während `LiveCanvas` die Remotesynchronisierung mit anderen Besprechungsteilnehmern verwaltet wird. Zusammen verwendet, kann Ihre App in nur wenigen Codezeilen über eine vollständige Whiteboard-ähnliche Funktionalität verfügen.
+Die Live Share-Canvas verfügt über zwei primäre Klassen, die die schlüsselfertige Zusammenarbeit ermöglichen: `InkingManager` und `LiveCanvas`. `InkingManager` ist für das Anfügen eines elements mit vollem Funktionsumfang `<canvas>` an Ihre App verantwortlich, während `LiveCanvas` die Remotesynchronisierung mit anderen Besprechungsteilnehmern verwaltet wird. Zusammen verwendet, kann Ihre App über vollständige Whiteboard-ähnliche Funktionen in nur wenigen Codezeilen verfügen.
 
 | Klassen                                                                     | Beschreibung                                                                                                                                                                                                                                      |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Klasse, die einem bestimmten `<div>` Element ein `<canvas>` Element hinzufügt, um Stift- oder Textmarkerstriche, Laserpointer, Linien und Pfeile sowie Radierer automatisch zu verwalten. Macht eine Reihe von APIs (um zu steuern, welches Tool aktiv ist) und grundlegende Konfigurationseinstellungen verfügbar. |
-| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)      | Eine `SharedObject` Klasse, die Striche und Cursorpositionen für `InkingManager` jeden in einer Live Share-Sitzung synchronisiert.                                                                                                                   |
+| [InkingManager](/javascript/api/@microsoft/live-share-canvas/inkingmanager) | Klasse, die ein `<canvas>` Element an ein angegebenes `<div>` anfügt, um Stift- oder Textmarkerstriche, Laserpointer, Linien und Pfeile sowie Radierer automatisch zu verwalten. Macht eine Reihe von APIs (zum Steuern des aktiven Tools) und grundlegende Konfigurationseinstellungen verfügbar. |
+| [LiveCanvas](/javascript/api/@microsoft/live-share-canvas/livecanvas)      | Eine `SharedObject` Klasse, die Striche und Cursorpositionen für `InkingManager` alle Personen in einer Live Share-Sitzung synchronisiert.                                                                                                                   |
 
 Beispiel:
 
@@ -103,19 +103,19 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools-and-cursors"></a>Canvas-Tools und Cursor
+## <a name="canvas-tools-and-cursors"></a>Canvastools und Cursor
 
-Nachdem die Live-Freigabe-Canvas eingerichtet und synchronisiert wurde, können Sie den Zeichenbereich für Benutzerinteraktionen konfigurieren, z. B. Schaltflächen zum Auswählen eines Stifttools. In diesem Abschnitt wird erläutert, welche Tools verfügbar sind und wie sie verwendet werden können.
+Nachdem die Live Share-Canvas eingerichtet und synchronisiert wurde, können Sie die Canvas für die Benutzerinteraktion konfigurieren, z. B. Schaltflächen zum Auswählen eines Stifttools. In diesem Abschnitt wird erläutert, welche Tools verfügbar sind und wie sie verwendet werden können.
 
 ### <a name="inking-tools"></a>Freihandtools
 
-Jedes Freihandtool in der Live Share-Canvas rendert Striche, während Benutzer zeichnen. Bei Verwendung eines Touchscreens oder Eingabestifts unterstützen die Tools auch die Druckdynamik, was sich auf die Strichbreite auswirkt. Zu den Konfigurationseinstellungen gehören Pinselfarbe, Stärke, Form und ein optionaler Endpfeil.
+Jedes Freihandtool im Live Share-Zeichenbereich rendert Striche, wenn Benutzer zeichnen. Bei Verwendung eines Touchscreens oder Tablettstifts unterstützen die Tools auch die Druckdynamik und wirken sich auf die Strichbreite aus. Zu den Konfigurationseinstellungen gehören Pinselfarbe, Stärke, Form und ein optionaler Endpfeil.
 
 #### <a name="pen-tool"></a>Stifttool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF zeigt ein Beispiel für Zeichenstriche auf dem Zeichenbereich mithilfe des Stifttools.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen von Strichen auf der Canvas mit dem Stifttool.":::
 
-Das Stifttool zeichnet einfarbige Striche, die im Zeichenbereich gespeichert sind. Die Standard-Spitzenform ist ein Kreis.
+Das Stifttool zeichnet einfarbige Striche, die im Zeichenbereich gespeichert sind. Die Standardmäßige Spitzenform ist ein Kreis.
 
 ```html
 <div>
@@ -151,9 +151,9 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>Textmarkertool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen transluzenter Striche auf dem Zeichenbereich mithilfe des Textmarkertools.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen von durchscheinenden Strichen auf der Canvas mit dem Textmarkertool.":::
 
-Das Textmarkertool zeichnet durchscheinende Striche, die in der Canvas gespeichert sind. Die Standardspitze ist ein Quadrat.
+Das Textmarkertool zeichnet durchscheinende Striche, die im Zeichenbereich gespeichert sind. Die Standardmäßige Spitzenform ist ein Quadrat.
 
 ```html
 <div>
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>Radierertool
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Löschen von Strichen auf der Canvas mithilfe des Radierertools.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Löschen von Strichen auf der Canvas mit dem Radierertool.":::
 
 Das Radierertool löscht ganze Striche, die seinen Pfad kreuzen.
 
@@ -217,11 +217,11 @@ document.getElementById("eraser-size").onclick = () => {
 };
 ```
 
-#### <a name="point-eraser-tool"></a>Punktradierertool
+#### <a name="point-eraser-tool"></a>Punkt-Radierer-Tool
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Entfernen einzelner Punkte innerhalb von Strichen auf der Canvas mithilfe des Punktradierertools.":::
 
-Das Punktradierertool löscht einzelne Punkte innerhalb von Strichen, die seinen Pfad kreuzen, indem vorhandene Striche in zwei Hälften geteilt werden. Dieses Tool ist rechenintensiv und kann zu langsameren Bildfrequenzen für Ihre Benutzer führen.
+Das Punkt-Radierer-Tool löscht einzelne Punkte innerhalb von Strichen, die seinen Pfad kreuzen, indem vorhandene Striche in die Hälfte aufgeteilt werden. Dieses Tool ist rechenintensiv und kann zu langsameren Bildfrequenzen für Ihre Benutzer führen.
 
 > [!NOTE]
 > Der Punktradierer hat dieselbe Radiererpunktgröße wie das normale Radierertool.
@@ -247,9 +247,9 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>Laserpointer
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF zeigt ein Beispiel für Zeichenstriche auf der Canvas mithilfe des Laserpointertools.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen von Strichen auf der Canvas mit dem Laserpointertool.":::
 
-Der Laserpointer ist einzigartig, da die Spitze des Lasers eine nachgestellte Wirkung hat, während Sie die Maus bewegen. Wenn Sie Striche zeichnen, wird der nachfolgende Effekt für einen kurzen Zeitraum gerendert, bevor er vollständig ausgeblendet wird. Dieses Tool ist perfekt, um während einer Besprechung auf Informationen auf dem Bildschirm hinzuweisen, da der Referent nicht zwischen Tools wechseln muss, um Striche zu löschen.
+Der Laserpointer ist einzigartig, da die Spitze des Lasers einen nachgestellten Effekt hat, wenn Sie Ihre Maus bewegen. Wenn Sie Striche zeichnen, wird der nachfolgende Effekt für einen kurzen Zeitraum gerendert, bevor er vollständig ausgeblendet wird. Dieses Tool ist perfekt, um während einer Besprechung Informationen auf dem Bildschirm anzuzeigen, da der Referent nicht zwischen Tools wechseln muss, um Striche zu löschen.
 
 ```html
 <div>
@@ -285,9 +285,9 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>Linien- und Pfeiltools
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen gerader Linien auf einem Zeichenbereich mithilfe des Linien- und Pfeiltools.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF zeigt ein Beispiel für das Zeichnen gerader Linien auf einer Canvas mit dem Linien- und Pfeiltool .":::
 
-Mit dem Linientool können Benutzer gerade Linien von einem Punkt zum anderen zeichnen, mit einem optionalen Pfeil, der am Ende angewendet werden kann.
+Mit dem Linientool können Benutzer gerade Linien von einem Punkt zum anderen zeichnen, mit einem optionalen Pfeil, der auf das Ende angewendet werden kann.
 
 ```html
 <div>
@@ -335,7 +335,7 @@ Sie können alle Striche im Zeichenbereich löschen, indem Sie aufrufen `inkingM
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF zeigt ein Beispiel für Benutzer, die einen Cursor auf einer Canvas freigeben.":::
 
-Sie können Livecursor in Ihrer Anwendung aktivieren, damit Benutzer die Cursorpositionen des anderen auf der Canvas nachverfolgen können. Im Gegensatz zu den Freihandtools werden Cursor vollständig durch die `LiveCanvas` Klasse bewegt. Sie können optional einen Namen und ein Bild angeben, um jeden Benutzer zu identifizieren. Sie können Cursor separat oder mit den Freihandtools aktivieren.
+Sie können Livecursor in Ihrer Anwendung aktivieren, damit Benutzer die Cursorpositionen des jeweils anderen auf der Canvas nachverfolgen können. Im Gegensatz zu den Freihandtools werden Cursor vollständig über die `LiveCanvas` -Klasse ausgeführt. Optional können Sie einen Namen und ein Bild angeben, um jeden Benutzer zu identifizieren. Sie können Cursor separat oder mit den Freihandtools aktivieren.
 
 ```javascript
 // Optional. Set user display info
@@ -351,18 +351,18 @@ liveCanvas.isCursorShared = !isCursorShared;
 
 ## <a name="optimizing-across-devices"></a>Geräteübergreifende Optimierung
 
-Bei den meisten Anwendungen im Web werden Inhalte je nach Bildschirmgröße oder variierendem Anwendungszustand unterschiedlich gerendert. Wenn `InkingManager` die App nicht ordnungsgemäß optimiert ist, kann dies dazu führen, dass Striche und Cursor für jeden Benutzer unterschiedlich angezeigt werden. Die Live Share-Canvas unterstützt einen einfachen Satz von APIs, mit dem die `<canvas>` Strichpositionen korrekt an Ihren Inhalt angepasst werden können.
+Bei den meisten Anwendungen im Web werden Inhalte je nach Bildschirmgröße oder unterschiedlichem Anwendungszustand unterschiedlich gerendert. Wenn `InkingManager` nicht ordnungsgemäß für Ihre App optimiert ist, kann dies dazu führen, dass Striche und Cursor für jeden Benutzer unterschiedlich angezeigt werden. Der Live Share-Canvas unterstützt einen einfachen Satz von APIs, mit dem die `<canvas>` Strichpositionen so angepasst werden können, dass sie ordnungsgemäß an Ihrem Inhalt ausgerichtet sind.
 
-Standardmäßig funktioniert die Live Share-Canvas wie eine Whiteboard-App, wobei der Inhalt mit einem 1x-Zoomfaktor zentriert am Viewport ausgerichtet wird. Nur ein Teil des Inhalts wird innerhalb der sichtbaren Grenzen des `<canvas>`gerendert. Vom Konzept her ist es so, als würde man ein Video aus der Vogelperspektive aufnehmen. Während der Viewport der Kamera einen Teil der Welt darunter aufzeichnet, dehnt sich die reale Welt nahezu unendlich in jede Richtung aus.
+Standardmäßig funktioniert die Live Share-Canvas sehr ähnlich wie eine Whiteboard-App, wobei der Inhalt zentriert am Viewport ausgerichtet ist und einen 1-fachen Zoomfaktor aufweist. Nur ein Teil des Inhalts wird innerhalb der sichtbaren Grenzen des `<canvas>`gerendert. Konzeptionell ist es wie das Aufzeichnen eines Videos aus der Vogelperspektive. Während der Viewport der Kamera einen Teil der darunter liegenden Welt aufzeichnet, erstreckt sich die reale Welt nahezu unendlich in jede Richtung.
 
-Hier ist ein einfaches Diagramm, um dieses Konzept zu visualisieren:
+Im Folgenden finden Sie ein einfaches Diagramm zur Visualisierung dieses Konzepts:
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Screenshot zeigt das Vollbild-Canvas-Layout für Desktop- und mobile Benutzer zusammen.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Screenshot: Vollbild-Canvas-Layout für Desktop- und mobile Benutzer":::
 
 Sie können dieses Verhalten auf folgende Weise anpassen:
 
-- Ändern des Startbezugspunkts in die obere linke Ecke des Zeichenbereichs.
-- Ändern Sie die x- und y-Pixelpositionen des Viewports.
+- Ändern des Anfangsverweispunkts in die obere linke Ecke des Zeichenbereichs.
+- Ändern Sie die Pixeloffsetpositionen x und y des Viewports.
 - Ändern Sie die Skalierungsebene des Viewports.
 
 > [!NOTE]
@@ -435,21 +435,21 @@ document.getElementById("change-reference").onclick = () => {
 
 ## <a name="ideal-scenarios"></a>Ideale Szenarien
 
-Da Webseiten in allen Formen und Größen verfügbar sind, ist es nicht möglich, die Live Share-Canvas so zu gestalten, dass sie jedes Szenario unterstützt. Das Paket eignet sich ideal für Szenarien, in denen alle Benutzer denselben Inhalt gleichzeitig betrachten. Obwohl nicht alle Inhalte auf dem Bildschirm sichtbar sein müssen, muss es sich um Inhalte handeln, die geräteübergreifend linear skaliert werden.
+Da Webseiten in allen Formen und Größen verfügbar sind, ist es nicht möglich, die Live Share-Canvas so zu gestalten, dass sie jedes Szenario unterstützt. Das Paket eignet sich ideal für Szenarien, in denen alle Benutzer denselben Inhalt gleichzeitig betrachten. Obwohl nicht alle Inhalte auf dem Bildschirm sichtbar sein müssen, muss es sich um Inhalte handeln, die geräteübergreifend linear skaliert werden können.
 
-Hier sind einige Beispiele für Szenarien, in denen die Live Share-Canvas eine großartige Option für Ihre Anwendung ist:
+Im Folgenden finden Sie einige Beispiele für Szenarien, in denen der Live Share-Canvas eine hervorragende Option für Ihre Anwendung ist:
 
-- Überlagern Sie Bilder und Videos, die mit demselben Seitenverhältnis auf allen Clients gerendert werden.
+- Überlagern Sie Bilder und Videos, die auf allen Clients mit dem gleichen Seitenverhältnis gerendert werden.
 - Anzeigen einer Karte, eines 3D-Modells oder eines Whiteboards aus demselben Drehwinkel.
 
-Beide Szenarien funktionieren gut, da der Inhalt auf allen Geräten gleich angezeigt werden kann, auch wenn die Benutzer ihn mit unterschiedlichen Zoomstufen und Offsets betrachten. Wenn sich das Layout oder der Inhalt Ihrer App abhängig von der Bildschirmgröße ändert und es nicht möglich ist, eine gemeinsame Ansicht für alle Teilnehmer zu generieren, eignet sich die Livefreigabe-Canvas möglicherweise nicht gut für Ihr Szenario.
+Beide Szenarien funktionieren gut, da der Inhalt auf allen Geräten gleich angezeigt werden kann, auch wenn die Benutzer ihn mit unterschiedlichen Zoomstufen und Offsets betrachten. Wenn sich das Layout oder der Inhalt Ihrer App je nach Bildschirmgröße ändert und es nicht möglich ist, eine gemeinsame Ansicht für alle Teilnehmer zu generieren, ist die Live Share-Canvas möglicherweise nicht gut für Ihr Szenario geeignet.
 
 ## <a name="code-samples"></a>Codebeispiele
 
 | Beispielname          | Beschreibung                            | JavaScript                                                                                |
 | -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas-Demo     | Einfache Whiteboard-Anwendung.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React-Medienvorlage | Zeichnen Sie über einem synchronisierten Videoplayer. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Live Canvas-Demo     | Einfache Whiteboardanwendung.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
+| React-Medienvorlage | Zeichnen sie über einen synchronisierten Videoplayer. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
 
 ## <a name="next-step"></a>Nächster Schritt
 
@@ -460,5 +460,5 @@ Beide Szenarien funktionieren gut, da der Inhalt auf allen Geräten gleich angez
 
 - [Live Share SDK – FAQ](teams-live-share-faq.md)
 - [Live Share SDK-Referenzdokumente](/javascript/api/@microsoft/live-share/)
-- [Referenzdokumente zum Live Share Canvas SDK](/javascript/api/@microsoft/live-share-canvas/)
+- [Referenzdokumentation zum Live Share Canvas SDK](/javascript/api/@microsoft/live-share-canvas/)
 - [Teams-Apps in Besprechungen](teams-apps-in-meetings.md)

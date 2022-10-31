@@ -1,15 +1,15 @@
 ---
 title: Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen
-description: Konfigurieren Sie zusätzliche Berechtigungen und Bereiche mit Microsoft Graph, um einmaliges Anmelden (Single Sign-On, SSO) zu aktivieren.
+description: Konfigurieren Sie zusätzliche Berechtigungen und Bereiche mit Microsoft Graph zum Aktivieren des einmaligen Anmeldens (Single Sign-On, SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Delegierter Berechtigungszugriffstokenbereich für Teams-Authentifizierungsregisterkarten in Microsoft Azure Active Directory (Azure AD)-Graph-API
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780849"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791720"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Erweitern der Registerkarten-App mit Microsoft Graph-Berechtigungen und -Bereich
 
@@ -221,7 +221,7 @@ Sie können die Zustimmung mithilfe der Auth-API anfordern. Ein weiterer Ansatz 
     - Verwenden Sie `?prompt=consent&scope={scopes}` anstelle von `?scope={scopes}`
     - Stellen Sie sicher, dass `{scopes}` alle Bereiche enthält, für die Sie den Benutzer auffordern, z. B. `Mail.Read` oder `User.Read`.
 
-    Informationen zum Behandeln der inkrementellen Zustimmung für die Registerkarten-App finden Sie [unter "Inkrementelle und dynamische Benutzerzustimmung"](/azure/active-directory/develop/v2-permissions-and-consent).
+    Informationen zum Verarbeiten der inkrementellen Zustimmung für tab-Apps finden Sie unter [Inkrementelle und dynamische Benutzerzustimmung](/azure/active-directory/develop/v2-permissions-and-consent).
 5. Nachdem der App-Benutzer mehr Berechtigungen erteilt hat, wiederholen Sie den OBO-Fluss, um Zugriff auf diese anderen APIs zu erhalten.
     </details>
 

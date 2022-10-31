@@ -5,12 +5,12 @@ description: In diesem Artikel erfahren Sie mehr über Tools und Bot Framework S
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
-ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
+ms.openlocfilehash: 2a6e4201603bd30262cfcd275e8f995dcc730e9a
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2022
-ms.locfileid: "68789898"
+ms.locfileid: "68791671"
 ---
 # <a name="bots-and-sdks"></a>Tools und SDKs
 
