@@ -1,14 +1,14 @@
 ---
 title: Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
-description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanruf-Bot für Microsoft Teams registrieren, neuen Bot erstellen oder Anruffunktionen hinzufügen, Diagrammberechtigungen hinzufügen. Beispiel zum Erstellen von Anrufen, Teilnehmen an Besprechungen und Durchstellen von Anrufen.
+description: Erfahren Sie, wie Sie einen neuen Audio-/Videoanrufbot für Microsoft Teams registrieren, einen neuen Bot erstellen oder eine Anruffunktion hinzufügen und Graphberechtigungen hinzufügen. Beispiel zum Erstellen eines Anrufs, zum Teilnehmen an einer Besprechung und zum Übertragen eines Anrufs.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
-ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
+ms.openlocfilehash: 6ee71c6ca790bdc2016c02143256e2d21b9595f2
+ms.sourcegitcommit: 88fb2e9a18de3bd84e3c604ff235fc753c8de8f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2022
-ms.locfileid: "68319937"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68817979"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registrierung eines Anruf- und Besprechungsbots für Microsoft Teams
 
@@ -58,7 +58,7 @@ Die folgende Tabelle enthält eine Liste der Anwendungsberechtigungen für Aufru
 |Berechtigung    |Anzeigezeichenfolge   |Beschreibung |Administratorzustimmung erforderlich |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Ausgehende 1:1-Anrufe aus der App initiieren (Vorschau) |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer zu tätigen und Anrufe an Benutzer im Organisationsverzeichnis zu übertragen (ohne angemeldeten Benutzer).|Ja|
-| Calls.InitiateGroupCall.All |Initiieren Sie ausgehende 1:1- und Gruppenanrufe aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer, mehrere Benutzer, Anrufe zu tätigen und Teilnehmer zu Besprechungen in Ihrer Organisation hinzuzufügen, ohne dass ein Benutzer angemeldet ist.|Ja|
+| Calls.InitiateGroupCall.All |Initiieren Sie ausgehende 1:1- und Gruppenanrufe aus der App-Vorschau. |Ermöglicht der App, ausgehende Anrufe an einen einzelnen Benutzer, mehrere Benutzer zu tätigen, Anrufe zu übertragen und Teilnehmer zu Besprechungen in Ihrer Organisation hinzuzufügen, ohne dass ein Benutzer angemeldet ist.|Ja|
 | Calls.JoinGroupCall.All |Gruppenanrufen und Besprechungen beitreten als App (Vorschau) |Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer zu verknüpfen. Die App tritt Besprechungen in Ihrem Mandanten mit den Berechtigungen eines Verzeichnisbenutzers bei.|Ja|
 | Calls.JoinGroupCallasGuest.All |Gruppenanrufen und Besprechungen als Gast beitreten (Vorschau) |Ermöglicht der App, Gruppenanrufe und geplante Besprechungen in Ihrer Organisation ohne einen angemeldeten Benutzer anonym zu verknüpfen. Die App tritt Besprechungen in Ihrem Mandanten als Gast bei.|Ja|
 | Calls.AccessMedia.All |Auf Medienstreams in einem Anruf als App zugreifen (Vorschau) |Ermöglicht der App, direkten Zugriff auf Medienstreams in einem Anruf ohne einen angemeldeten Benutzer zu erhalten.|Ja|
@@ -96,11 +96,11 @@ You can rely on an administrator to grant the permissions your app needs at the 
 | **Beispielname** | **Beschreibung** | **C#** |
 |---------------|----------|--------|
 | Anruf- und Besprechungs-Bots | Die Beispiel-App verdeutlicht, wie Bots Anrufe erstellen, an Besprechungen teilnehmen und Anrufe durchstellen können. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
-| Echtzeitbesprechungsereignisse |Die Beispiel-App veranschaulicht, wie Bot Echtzeitbesprechungsereignisse empfangen kann.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
+| Echtzeitbesprechungsereignisse |Die Beispiel-App veranschaulicht, wie Bot Besprechungsereignisse in Echtzeit empfangen kann.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>Schrittweise Anleitung
 
-Befolgen Sie die [schrittweise Anleitung](../../sbs-calling-and-meeting.yml) zum Einrichten von Anrufen und Besprechungen in einem Bot.
+Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../sbs-calling-and-meeting.yml) , um den Anruf- und Besprechungsbot für Teams einzurichten.
 
 ## <a name="next-step"></a>Nächster Schritt
 
