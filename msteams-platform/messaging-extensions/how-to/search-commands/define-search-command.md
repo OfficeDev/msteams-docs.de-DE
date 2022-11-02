@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über Suchbefehle für Nachrichtenerweiterungen f
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c126d6436c5fb091804c92caeb2876c09392bd9b
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 9ec7ea734e331fcfb563702d18284f4831c369f6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791832"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820178"
 ---
 # <a name="define-message-extension-search-commands"></a>Definieren von Suchbefehlen für Nachrichtenerweiterungen
 
@@ -24,7 +24,7 @@ Mithilfe von Suchbefehlen für Nachrichtenerweiterungen können Benutzer externe
 Im folgenden Video erfahren Sie, wie Sie Suchbefehle für Nachrichtenerweiterungen definieren:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Auswählen von Suchbefehlsaufrufspeicherorten
@@ -161,3 +161,11 @@ Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../../sbs-messagingextensio
 
 > [!div class="nextstepaction"]
 > [Reagieren Sie auf die Suchbefehle](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## <a name="see-also"></a>Siehe auch
+
+* [Karten](../../../task-modules-and-cards/what-are-cards.md)
+* [Aufgabenmodule](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App-Manifestschema für Teams](../../../resources/schema/manifest-schema.md)
+* [Entwicklerportal für Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Nachrichtenerweiterungen](../../what-are-messaging-extensions.md)

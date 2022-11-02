@@ -1,36 +1,36 @@
 ---
 title: Verbreiten von Links
 author: surbhigupta
-description: Hinzufügen der Verbreitung von Links mit Messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell. Hinzufügen der Verbreitung von Links mithilfe des Entwicklerportals. So aktualisieren Sie den Webdienstcode, um die Aufrufanforderung zu behandeln.
+description: Fügen Sie die Linkentflechtung mit messaging-Erweiterung in einer Microsoft Teams-App mit App-Manifest oder manuell hinzu. Fügen Sie die Linkentflechtung über das Entwicklerportal hinzu. Hier erfahren Sie, wie Sie Ihren Webdienstcode aktualisieren, um die Aufrufanforderung zu verarbeiten.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: c706bd4caf8ab7859fb0c8f9b5b9e8f337a3b269
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100630"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820150"
 ---
 # <a name="add-link-unfurling"></a>Linkausweitung hinzufügen
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In diesem Dokument erfahren Sie, wie Sie Mithilfe des Entwicklerportals oder manuell links zu Ihrem App-Manifest hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. Enthält `invoke` die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde. Sie können mit einer Karte antworten, die der Benutzer für zusätzliche Informationen oder Aktionen ausblenden kann. Dies funktioniert als Suchbefehl mit der URL als Suchbegriff.
+In diesem Dokument erfahren Sie, wie Sie Ihrem App-Manifest mithilfe des Entwicklerportals oder manuell die Linkentflechtung hinzufügen. Mit der Verbreitung von Links kann Ihre App sich registrieren, um eine `invoke`-Aktivität zu empfangen, wenn URLs mit einer bestimmten Domäne in den Bereich zum Verfassen von Nachrichten eingefügt werden. enthält `invoke` die vollständige URL, die in den Nachrichtenbereich zum Verfassen eingefügt wurde. Sie können mit einer Karte antworten, die der Benutzer für weitere Informationen oder Aktionen entfurlen kann. Dies funktioniert als Suchbefehl mit der URL als Suchbegriff.
 
 > [!NOTE]
 >
 > * Derzeit wird das Aufheben der Verbreitung von Links auf mobilen Clients nicht unterstützt.
 > * Das Ergebnis der Verbreitung von Links wird 30 Minuten lang zwischengespeichert.
-> * Messaging-Erweiterungsbefehle sind für die Verbreitung von Links nicht erforderlich. Es muss jedoch mindestens ein Befehl im Manifest vorhanden sein, da es sich um eine obligatorische Eigenschaft in Messagingerweiterungen handelt. Weitere Informationen finden Sie [unter Verfassen von Erweiterungen](/microsoftteams/platform/resources/schema/manifest-schema)
+> * Messagingerweiterungsbefehle sind für die Link-Entflechtung nicht erforderlich. Es muss jedoch mindestens ein Befehl im Manifest vorhanden sein, da es sich um eine obligatorische Eigenschaft in Messagingerweiterungen handelt. Weitere Informationen finden Sie unter [Compose-Erweiterungen](/microsoftteams/platform/resources/schema/manifest-schema).
 
 Die Azure DevOps Nachrichtenerweiterung verwendet die Verbreitung von Links, um nach URLs zu suchen, die in den Bereich für das Verfassen von Nachrichten eingefügt werden, der auf ein Arbeitselement verweist. In der folgenden Abbildung hat ein Benutzer eine URL für ein Element in Azure DevOps eingefügt, das die Nachrichtenerweiterung in eine Karte aufgelöst hat:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Beispiel der Verbreitung von Links":::
 
-Weitere Informationen zur Verbreitung von Links finden Sie im folgenden Video:
+Weitere Informationen zum Entpacken von Links finden Sie im folgenden Video:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Hinzufügen einer Verbreitung von Links zum App-Manifest
@@ -38,15 +38,15 @@ Weitere Informationen zur Verbreitung von Links finden Sie im folgenden Video:
 Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `composeExtensions`-Abschnitt des JSON-Codes Ihres App-Manifests ein neues `messageHandlers`-Array hinzu. Sie können das Array mithilfe des Entwicklerportals oder manuell hinzufügen. Domain-Auflistungen können Platzhalter enthalten, zum Beispiel `*.example.com`. Dies entspricht genau einem Segment der Domäne; Wenn Sie übereinstimmen müssen, verwenden `a.b.example.com` Sie `*.*.example.com`.
 
 > [!NOTE]
-> Fügen Sie keine Domänen hinzu, die sich weder direkt noch über Platzhalter in Ihrem Steuerelement befinden. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Die Domänen der obersten Ebene sind verboten, `*.com`z. B. . `*.org`
+> Fügen Sie keine Domänen hinzu, die sich nicht in Ihrem Steuerelement befinden, weder direkt noch über Wildcards. Beispielsweise ist `yourapp.onmicrosoft.com` gültig, `*.onmicrosoft.com` gilt jedoch nicht. Die Domänen der obersten Ebene sind verboten, `*.com`z. B. , `*.org`.
 
-### <a name="add-link-unfurling-using-developer-portal"></a>Hinzufügen der Verbreitung von Links mithilfe des Entwicklerportals
+### <a name="add-link-unfurling-using-developer-portal"></a>Hinzufügen der Linkentfurlingung über das Entwicklerportal
 
-1. Öffnen Sie das **Entwicklerportal** über den Microsoft Teams-Client, und wählen Sie dann die Registerkarte **"Apps** " aus.
+1. Öffnen Sie **das Entwicklerportal** über den Microsoft Teams-Client, und wählen Sie dann die Registerkarte **Apps** aus.
 1. Laden Sie Ihr App-Manifest.
-1. Wählen Sie auf der Seite " **Messaging-Erweiterung** " unter **"App-Features**" einen vorhandenen Bot aus, oder erstellen Sie einen neuen Bot.
+1. Wählen Sie auf der Seite **Messagingerweiterung** unter **App-Features** einen vorhandenen Bot aus, oder erstellen Sie einen neuen Bot.
 1. Wählen Sie **Speichern** aus.
-1. Wählen Sie im Abschnitt "**Vorschaulinks**" die Option **"Domäne hinzufügen**" aus, und geben Sie dann eine gültige Domäne ein.
+1. Wählen Sie im Abschnitt **Vorschaulinks** die Option **Domäne hinzufügen** aus, und geben Sie dann eine gültige Domäne ein.
 1. Klicken Sie auf **Hinzufügen**. In der folgenden Abbildung wird der Prozess erläutert:
 
    :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot des Abschnitts &quot;Nachrichtenhandler&quot; im Entwicklerportal." lightbox="../../assets/images/tdp/add-domain.PNG":::
@@ -54,7 +54,7 @@ Um Ihrem App-Manifest das Verbreiten von Links hinzuzufügen, fügen Sie dem `co
 ### <a name="add-link-unfurling-manually"></a>Verbreitung von Links manuell hinzufügen
 
 > [!NOTE]
-> Wenn die Authentifizierung über Azure AD hinzugefügt wird, [lösen Sie Links in Teams mithilfe des Bots](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4) aus.
+> Wenn die Authentifizierung über Azure AD hinzugefügt wird, [lösen Sie Links in Teams mithilfe des Bots](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4) auf.
 
 Damit Ihre Nachrichtenerweiterung mit Links interagieren kann, müssen Sie zuerst das `messageHandlers`-Array zu Ihrem App-Manifest hinzufügen. Im folgenden Beispiel wird erläutert, wie Sie das Verbreiten von Links manuell hinzufügen:
 
@@ -197,5 +197,7 @@ Befolgen Sie die [Schritt-für-Schritt-Anleitung](../../sbs-botbuilder-linkunfur
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Karten](~/task-modules-and-cards/what-are-cards.md)
-* [Registerkartenlink entfalten und Bühnenansicht](~/tabs/tabs-link-unfurling.md)
+* [Nachrichtenerweiterungen](../what-are-messaging-extensions.md)
+* [Adaptive Karten](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Registerkartenlink entfalten und Bühnenansicht](../../tabs/tabs-link-unfurling.md)
+* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)

@@ -1,17 +1,17 @@
 ---
 title: Erstellen einer persönlichen Registerkarte
 author: laujan
-description: Erfahren Sie, wie Sie eine persönliche Registerkarte erstellen. Wählen Sie die MVC-Umgebung Node.js, ASP.NET Core oder ASP.NET Core aus. Generieren Sie Die App, fügen Sie Inhalte hinzu, erstellen Sie ein Paket, erstellen Sie die App, und führen Sie sie aus.
+description: Erfahren Sie, wie Sie eine persönliche Registerkarte erstellen. Wählen Sie die Node.js-, ASP.NET Core- oder ASP.NET Core MVC-Umgebung aus. App generieren, Inhalt hinzufügen, Paket erstellen, App erstellen und ausführen.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560736"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820003"
 ---
 # <a name="create-a-personal-tab"></a>Erstellen einer persönlichen Registerkarte
 
@@ -56,7 +56,7 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
     yo teams
     ```
 
-1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die vom Microsoft Teams-App-Generator aufgefordert werden, Ihre `manifest.json` Datei zu aktualisieren.
+1. Stellen Sie Ihre Werte für eine Reihe von Fragen bereit, die vom Microsoft Teams-App-Generator zum Aktualisieren Ihrer `manifest.json` Datei aufgefordert werden.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams-Generator":::
 
@@ -131,7 +131,7 @@ Im Folgenden finden Sie die Schritte zum Erstellen einer persönlichen Registerk
 
       Legen Sie fest, **keine** Azure AD SSO-Unterstützung für die Registerkarte einzuschließen. Der Standardwert ist „ja“, geben Sie **n** ein.
     > [!NOTE]
-    > In einer Registerkarte wird die Registerkartenhomepage nur angezeigt, wenn der Benutzer die Schaltfläche "Zurück" auswählt (oder sich aus der Registerkarte heraus bewegt) und zur Startseite zurückkehrt. Die Registerkarte behält den vorherigen Zustand nicht standardmäßig bei.
+    > Auf einer Registerkarte wird die Registerkarten-Startseite nur angezeigt, wenn der Benutzer die Zurück-Schaltfläche auswählt (oder aus der Registerkarte heraus bewegt) und zur Startseite zurückkehrt. Die Registerkarte behält den vorherigen Zustand nicht beabsichtigt bei oder behält sie nicht bei.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Hinzufügen einer Inhaltsseite zur persönlichen Registerkarte
@@ -193,13 +193,13 @@ Erstellen Sie eine Inhaltsseite, und aktualisieren Sie die vorhandenen Dateien d
 
 1. Speichern Sie die aktualisierte `manifest.json`-Datei.
 
-1. Öffnen Sie **Tab.ts** in Visual Studio Code über den folgenden Pfad, um die Inhaltsseite in einem iFrame bereitzustellen:
+1. Öffnen Sie **Tab.ts** in Visual Studio Code aus dem folgenden Pfad, um Ihre Inhaltsseite in einem iFrame bereitzustellen:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Fügen Sie der Liste der iFrame-Dekorateure Folgendes hinzu:
+1. Fügen Sie der Liste der iFrame-Decorators Folgendes hinzu:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Hochladen Ihrer Anwendung in Teams
 
 1. Wechseln Sie zu Teams, und wählen Sie **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store"::: aus.
-1. Wählen Sie **"Apps** >  verwalten **" aus. Laden Sie eine App** >  hoch **, um eine benutzerdefinierte App hochzuladen**.
+1. Wählen **Sie Apps verwalten** > **App** >  hochladen **Benutzerdefinierte App hochladen** aus.
 1. Wechseln Sie zu Ihrem Projektverzeichnis, navigieren Sie zum Ordner **./package**, wählen Sie den ZIP-Ordner aus und dann **Öffnen**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Hinzufügen Ihrer persönlichen Registerkarte":::
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. Wählen Sie im linken Bereich von Teams die Auslassungspunkte &#x25CF;&#x25CF;&#x25CF; aus, und wählen Sie dann Ihre hochgeladene App aus, um Ihre persönliche Registerkarte anzuzeigen.
 
-   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
+   Nun haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
   
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -371,7 +371,7 @@ Klicken Sie im Visual Studio-Lösungsexplorer mit der rechten Maustaste auf das 
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab.cshtml** aus dem Ordner **"Pages**", und fügen Sie die `<script>` Tags hinzu`microsoftTeams.app.initialize()`.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab.cshtml** im Ordner **Pages**, und fügen Sie die `<script>` Tags hinzu`microsoftTeams.app.initialize()`.
 
 1. Wählen Sie **Speichern** aus.
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Öffnen Sie **Apps**, und wählen Sie **App importieren** aus.
 
-1. Der Dateiname des App-Pakets ist `tab.zip` und ist im `/bin/Debug/netcoreapp3.1/tab.zip` Pfad verfügbar.
+1. Der Dateiname des App-Pakets lautet `tab.zip` und ist unter pfad `/bin/Debug/netcoreapp3.1/tab.zip` verfügbar.
 
 1. Wählen Sie `tab.zip` aus, und öffnen Sie es im Entwicklerportal.
 
@@ -401,9 +401,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL ein.
 
-1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
+1. Aktualisieren Sie unter **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf, `https://<yourngrokurl>/tou` und wählen **Sie Speichern** aus.
 
-1. Wählen Sie in **den App-Features** **die Option "Persönliche App** > **Erstellen Ihrer ersten persönlichen App-Registerkarte"** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
+1. Wählen Sie unter **App-Features** die Option **Persönliche App** > **Erstellen Sie Ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld Website-URL leer, wählen Sie **kontext** as personalTab aus der Dropdownliste aus, und wählen Sie **Bestätigen** aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -417,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Standardregisterkarte":::
 
-   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
+   Nun haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
   
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -487,7 +487,7 @@ Dieser Ordner enthält die folgenden erforderlichen App-Paketdateien:
 * Ein **transparentes Kontursymbol** mit einer Größe von 32 x 32 Pixeln.
 * Eine `manifest.json`-Datei, welche die Attribute Ihrer App angibt.
 
-Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt das `contentUrl` in Ihrem Manifest angegebene Element, bettet es in einen iFrame ein und rendert es auf Ihrer Registerkarte.
+Diese Dateien müssen in einem App-Paket gezippt werden, damit sie beim Hochladen Ihrer Registerkarte in Teams verwendet werden können. Teams lädt die `contentUrl` in Ihrem Manifest angegebene, bettet sie in einen iFrame ein und rendert sie auf Ihrer Registerkarte.
 
 #### <a name="csproj"></a>.csproj
 
@@ -538,7 +538,7 @@ Die Controller verwenden die `ViewBag`-Eigenschaft, um Werte dynamisch in die An
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab.cshtml** aus dem Ordner **"Views** > **PersonalTab"**, und fügen Sie die `<script>` Tags hinzu`microsoftTeams.app.initialize()`.
+1. Öffnen Sie in Visual Studio Projektmappen-Explorer **PersonalTab im** Ordner **"Views** > **PersonalTab**", und fügen Sie `microsoftTeams.app.initialize()` innerhalb der `<script>` Tags hinzu.
 
 1. Wählen Sie **Speichern** aus.
 
@@ -570,11 +570,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Fügen Sie die Kurz- und Langbeschreibung für Ihre App in **Beschreibungen** hinzu.
 
-1. Fügen Sie in **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie auf der **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL an.
+1. Fügen Sie unter **Entwicklerinformationen** die erforderlichen Details hinzu, und geben Sie unter **Website (muss eine gültige HTTPS-URL sein)** Ihre ngrok-HTTPS-URL an.
 
-1. Aktualisieren Sie in **App-URLs** die Datenschutzrichtlinie und `https://<yourngrokurl>/privacy` die Nutzungsbedingungen, und `https://<yourngrokurl>/tou` wählen Sie **"Speichern" aus**.
+1. Aktualisieren Sie unter **App-URLs** die Datenschutzrichtlinie auf `https://<yourngrokurl>/privacy` und die Nutzungsbedingungen auf, `https://<yourngrokurl>/tou` und wählen **Sie Speichern** aus.
 
-1. Wählen Sie in **den App-Features** **die Option "Persönliche App** > **Erstellen Ihrer ersten persönlichen App-Registerkarte"** aus, geben Sie den Namen ein, und aktualisieren Sie die **Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld "Website-URL" leer, und wählen Sie **"Kontext** als persönliche Registerkarte" aus der Dropdownliste aus, und wählen Sie **"Bestätigen"** aus.
+1. Wählen Sie unter **App-Features** die Option **Persönliche App** > **Erstellen Sie Ihre erste persönliche App-Registerkarte** aus, geben Sie den Namen ein, und aktualisieren **Sie die Inhalts-URL** mit `https://<yourngrokurl>/personalTab`. Lassen Sie das Feld Website-URL leer, wählen Sie **kontext** as personalTab aus der Dropdownliste aus, und wählen Sie **Bestätigen** aus.
 
 1. Wählen Sie **Speichern**.
 
@@ -588,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Registerkarte „Persönlich“":::
   
-   Jetzt haben Sie Ihre persönliche Registerkarte in Teams erfolgreich erstellt und hinzugefügt.
+   Nun haben Sie erfolgreich Ihre persönliche Registerkarte in Teams erstellt und hinzugefügt.
 
    Da Sie ihre persönliche Registerkarte in Teams haben, können Sie Ihre persönlichen Registerkarte auch [neu anordnen](#reorder-static-personal-tabs).
 
@@ -596,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Statische persönliche Registerkarten neu anordnen
 
-Ab Manifestversion 1.7 können Entwickler alle Registerkarten in ihrer persönlichen App neu anordnen. Sie können die **Bot-Chat-Registerkarte** , die immer auf die erste Position festgelegt ist, an eine beliebige Stelle in der Kopfzeile der persönlichen App-Registerkarte verschieben. Es werden zwei reservierte `entityId`-Schlüsselwörter für die Registerkarte deklariert, **Unterhaltungen** und **Info**.
+Ab Manifestversion 1.7 können Entwickler alle Registerkarten in ihrer persönlichen App neu anordnen. Sie können die **Registerkarte Botchat** , die standardmäßig immer auf die erste Position festgelegt ist, an eine beliebige Stelle in der Kopfzeile der persönlichen App-Registerkarte verschieben. Es werden zwei reservierte `entityId`-Schlüsselwörter für die Registerkarte deklariert, **Unterhaltungen** und **Info**.
 
 Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standardmäßig in der ersten Registerkartenposition in einer persönlichen App angezeigt. Wenn Sie ihn an eine andere Position verschieben möchten, müssen Sie Ihrem Manifest ein statisches Registerkartenobjekt mit dem reservierten Schlüsselwort **Unterhaltungen** hinzufügen. Die Registerkarte **Unterhaltung** wird im Web oder Desktop angezeigt, je nachdem, wo Sie die Registerkarte **Unterhaltung** im `staticTabs`-Array hinzufügen.
 
@@ -625,8 +625,10 @@ Wenn Sie einen Bot mit einem **persönlichen** Bereich erstellen, wird er standa
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Teams-Registerkarten](~/tabs/what-are-tabs.md)
-* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-* [Erstellen von Registerkarten mit adaptiven Karten](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Registerkarten für Unterhaltungen erstellen](~/tabs/how-to/conversational-tabs.md)
+* [Erstellen von Registerkarten für Teams](../what-are-tabs.md)
+* [Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte](create-channel-group-tab.md)
 * [Für Teams über persönliche App oder Registerkarte freigeben](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Entwicklerportal für Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [App-Manifestschema für Teams](../../resources/schema/manifest-schema.md)
+* [Erstellen von Registerkarten mit adaptiven Karten](build-adaptive-card-tabs.md)
+* [Registerkarten auf mobilen Geräten](../design/tabs-mobile.md)

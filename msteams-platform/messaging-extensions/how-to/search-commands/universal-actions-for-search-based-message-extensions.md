@@ -5,22 +5,22 @@ description: In diesem Artikel erfahren Sie mehr über universelle Aktionen und 
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
-ms.openlocfilehash: 78b8c525b51603245fc379a826fa0cc11cbc5fd8
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 18f5b783797d69144aac82e5ebd95fc30dad57a2
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376592"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819968"
 ---
 # <a name="universal-actions-for-search-based-message-extensions"></a>Universelle Aktionen für suchbasierte Nachrichtenerweiterungen
 
-Adaptive Karten in suchbasierten Nachrichtenerweiterungen unterstützen jetzt universelle Aktionen. Um universelle Aktionen für suchbasierte Nachrichtenerweiterungen zu aktivieren, muss die App dem [Schema für universelle Aktionen für adaptive Karten](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) sowie den folgenden Anforderungen entsprechen:
+Adaptive Karten in suchbasierten Nachrichtenerweiterungen unterstützen jetzt Universelle Aktionen. Um Universelle Aktionen für suchbasierte Nachrichtenerweiterungen zu aktivieren, muss die App dem [Schema für Universelle Aktionen für adaptive Karten](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) sowie den folgenden Anforderungen entsprechen:
 
-1. Für die App muss ein Unterhaltungs-Bot im App-Manifest definiert sein.
-1. Wenn Sie bereits über einen Unterhaltungs-Bot verfügen, müssen Sie denselben Bot verwenden, der in Ihrer Nachrichtenerweiterung verwendet wird.
-1. Wenn die Karte in einer Gruppe gesendet wird, muss die App den Bot im Manifest angeben `team` oder `groupchat` den Bereich festlegen.
+1. Für die App muss ein Konversationsbot im App-Manifest definiert sein.
+1. Wenn Sie bereits über einen Konversationsbot verfügen, müssen Sie denselben Bot verwenden, der in Ihrer Nachrichtenerweiterung verwendet wird.
+1. Wenn die Karte in einer Gruppe gesendet wird, muss die App für ihren Bot im Manifest angeben oder `groupchat` den Bereich angeben`team`.
 
-Beispiel für ein JSON-Schema mit `team` und `groupchat` Werten:
+Beispiel für ein JSON-Schema mit `team` den Werten und `groupchat` :
 
 ```json
 {
@@ -49,9 +49,9 @@ Beispiel für ein JSON-Schema mit `team` und `groupchat` Werten:
 
 ## <a name="automatic-refresh-for-adaptive-cards-in-search-based-message-extensions"></a>Automatische Aktualisierung für adaptive Karten in suchbasierten Nachrichtenerweiterungen
 
-Aktivieren Sie die automatische Aktualisierung für adaptive Karten in suchbasierten Nachrichtenerweiterungen, um sicherzustellen, dass Benutzern immer die neuesten Informationen angezeigt werden. Definieren Sie `userIds` zum Aktivieren das Array entweder in  `29:<ID>` der Eigenschaft oder `8:orgid:<AAD ID>` das Format in der `refresh` Eigenschaft. Weitere Informationen finden Sie [unter Arbeiten mit universellen Aktionen für adaptive Karten](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
+Aktivieren Sie die automatische Aktualisierung für adaptive Karten in suchbasierten Nachrichtenerweiterungen, um sicherzustellen, dass Benutzer immer die neuesten Informationen sehen. Um dies zu aktivieren, definieren Sie `userIds` das Array entweder im  `29:<ID>` -Format oder `8:orgid:<AAD ID>` in der `refresh` -Eigenschaft. Weitere Informationen finden Sie unter [Arbeiten mit universellen Aktionen für adaptive Karten](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
 
-Beispiel für `userIds` ein Array in der `refresh` Eigenschaft:
+Beispiel für ein `userIds` Array in der `refresh` -Eigenschaft:
 
 ```json
     {
@@ -84,9 +84,9 @@ Beispiel für `userIds` ein Array in der `refresh` Eigenschaft:
 ```
 
 > [!NOTE]
-> Die automatische Aktualisierung ist für alle Benutzer im Gruppenchat oder -kanal mit *mindestens* 60 Benutzern aktiviert. Für Unterhaltungen (Gruppenchat oder Kanal) mit mehr als 60 Benutzern können Benutzer die Schaltfläche "Aktualisieren" im Menü "Nachrichtenoptionen" verwenden, um das neueste Ergebnis zu erhalten.
+> Die automatische Aktualisierung ist für alle Benutzer im Gruppenchat oder Kanal mit *weniger als oder gleich* 60 Benutzern aktiviert. Für Unterhaltungen (Gruppenchat oder Kanal) mit mehr als 60 Benutzern können Benutzer die Schaltfläche Aktualisieren im Menü mit den Nachrichtenoptionen verwenden, um das neueste Ergebnis zu erhalten.
 
-`Action.Execute` Beispiel für die `refresh` Eigenschaft:
+Beispiel für `Action.Execute` in der `refresh` -Eigenschaft:
 
 ```json
     {
@@ -114,20 +114,21 @@ Beispiel für `userIds` ein Array in der `refresh` Eigenschaft:
     }
 ```
 
-## <a name="just-in-time-install"></a>Just-in-Time-Installation
+## <a name="just-in-time-install"></a>Just-In-Time-Installation
 
-Mit Just-in-Time (JIT) können Sie eine Karte oder Nachrichtenerweiterung für mehrere Benutzer in einem Gruppenchat oder Kanal installieren. Um universelle Aktionen in suchbasierten Nachrichtenerweiterungen zu unterstützen, wird Ihr Bot der Unterhaltung hinzugefügt, in der die Karte (mit `Action.Execute`) vom Benutzer gesendet wird.
+Just-in-Time (JIT) ermöglicht es Ihnen, eine Karte oder Nachrichtenerweiterung für mehrere Benutzer in einem Gruppenchat oder Kanal zu installieren. Um universelle Aktionen in suchbasierten Nachrichtenerweiterungen zu unterstützen, wird Ihr Bot der Konversation hinzugefügt, an die die Karte (mit `Action.Execute`) vom Benutzer gesendet wird.
 
-Wenn ein Benutzer eine Karte auswählt und sie in einem Gruppenchat oder Kanal sendet,  wird eine JIT-Installationsaufforderung angezeigt. Nachdem der Benutzer die **Sendeoption** ausgewählt hat, wird die App für alle Benutzer im Chat oder Kanal im Hintergrund hinzugefügt.
+Wenn ein Benutzer eine Karte auswählt und sie in einem Gruppenchat oder Kanal sendet, wird eine **JIT-Installationsaufforderung** angezeigt. Nachdem der Benutzer die **Option "Senden"** ausgewählt hat, wird die App für alle Benutzer im Chat oder Kanal im Hintergrund hinzugefügt.
 
 > [!NOTE]
-> Für Apps, die nicht definiert sind `Action.Execute` und `refresh` für die kein Schema definiert ist, wird die Installationsaufforderung den Benutzern nicht angezeigt.
+> Für Apps, für die und `refresh` das Schema nicht `Action.Execute` definiert sind, wird den Benutzern die Installationsaufforderung nicht angezeigt.
 
-Beispiel für einen dynamischen ME- und JIT-Installationsbenutzerablauf:
+Beispiel für einen dynamischen ME- und JIT-Installationsbenutzerflow:
 
-  :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF zeigt den Benutzerablauf für eine dynamische Nachrichtenerweiterung und JIT-Installation an.":::
+  :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF zeigt den Benutzerflow für eine dynamische Nachrichtenerweiterung und JIT-Installation an.":::
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Nachrichtenerweiterungen](../../what-are-messaging-extensions.md)
+* [Adaptive Karten](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Universal-Aktionen für adaptive Karten](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)

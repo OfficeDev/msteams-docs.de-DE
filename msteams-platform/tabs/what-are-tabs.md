@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Sie Registerkarten erstellen, Webseiten, die in M
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
-ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
+ms.openlocfilehash: cd8e57a0773a5c1b8cd145176de703018c4e45e7
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772508"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819989"
 ---
 # <a name="build-tabs-for-teams"></a>Erstellen von Registerkarten für Teams
 
@@ -90,9 +90,7 @@ Sie können mehrere Kanäle oder Gruppenregisterkarten und bis zu 16 persönlich
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Benutzerdefinierte Registerkarten in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
-* [Geräteberechtigungen anfordern](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrieren von Medienfunktionen](../concepts/device-capabilities/media-capabilities.md)
-* [Integrieren eines QR- oder Barcodescanners](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Integration von Standortfunktionen](../concepts/device-capabilities/location-capability.md)
+* [Entwerfen Sie Ihre Registerkarte für Microsoft Teams](design/tabs.md)
+* [Gerätefunktionen](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Registerkarten auf mobilen Geräten](design/tabs-mobile.md#tabs-on-mobile)
+* [Features zugeordnete App-Funktionen](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)

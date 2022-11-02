@@ -257,7 +257,7 @@
     - name: Erstellen einer Inhaltsseite
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
-    - name: Konfigurationsseite erstellen
+    - name: Erstellen einer Konfigurationsseite
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Erstellen einer Seite zum Entfernen
       href: tabs/how-to/create-tab-pages/removal-page.md

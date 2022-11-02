@@ -1,22 +1,22 @@
 ---
 title: Erstellen von Registerkarten mit adaptiven Karten
 author: KirtiPereira
-description: Erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen, bei denen das Front-End mit adaptiven Karten gerendert wird und das Back-End von einem Bot unterstützt wird. Erkunden Sie Aufrufaktivitäten und behandeln Sie Übermittlungen.
+description: Erfahren Sie, wie Sie Registerkarten mit adaptiven Karten erstellen, bei denen das Front-End mit adaptiven Karten gerendert wird und das Back-End von einem Bot unterstützt wird. Erkunden von Aufrufaktivitäten und Verarbeiten von Übermittlungen.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499286"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820129"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Erstellen von Registerkarten mit adaptiven Karten
 
 > [!IMPORTANT]
 >
-> Registerkarten mit adaptiven Karten werden derzeit nur als persönliche Apps unterstützt.
+> Registerkarten mit adaptiven Karten werden nur als persönliche Apps unterstützt.
 
 Bei der Entwicklung einer Registerkarte mithilfe der herkömmlichen Methode können die folgenden Probleme auftreten:
 
@@ -45,7 +45,7 @@ Bevor Sie beginnen, adaptive Karten zum Erstellen von Registerkarten zu verwende
 Persönliche Apps, die Registerkarten rendern, müssen ein `staticTabs`-Array in ihr App-Manifest einschließen. Registerkarten mit adaptiven Karten werden gerendert, wenn die `contentBotId`-Eigenschaft in der `staticTab`-Definition bereitgestellt wird. Statische Registerkartendefinitionen müssen entweder eine `contentBotId` für die Spezifikation einer Registerkarte mit adaptiven Karten oder eine `contentUrl` für die Spezifikation einer typischen gehosteten Webinhaltsregisterkarte enthalten.
 
 > [!NOTE]
-> Die `contentBotId`-Eigenschaft ist derzeit ab der Manifestversion 1.9 verfügbar.
+> Die `contentBotId` -Eigenschaft ist in Manifestversion 1.9 oder höher verfügbar.
 
 Geben Sie die `contentBotId`-Eigenschaft mit dem `botId` an, mit dem die Registerkarte mit adaptiven Karten kommunizieren muss. Die für die Registerkarte mit adaptiven Karten konfigurierte `entityId` wird im `tabContext`-Parameter jeder Aufrufanforderung gesendet und kann verwendet werden, um Registerkarten mit adaptiven Karten zu unterscheiden, die von demselben Bot unterstützt werden. Weitere Informationen zu anderen statischen Registerkartendefinitionsfeldern finden Sie unter [Manifestschema](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -437,9 +437,8 @@ Der folgende Code zeigt ein Beispiel für eine erneute Anforderung:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Adaptive Karte](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
-* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
-* [Feedback zum Ausfüllen des Formulars](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Erstellen von Registerkarten für Teams](../what-are-tabs.md)
+* [Registerkarten auf mobilen Geräten](../design/tabs-mobile.md)
+* [Karten](../../task-modules-and-cards/what-are-cards.md)
+* [Verwenden von Aufgabenmodulen in Registerkarten](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Feedback zum Ausfüllen des Formulars](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -5,12 +5,12 @@ description: Erfahren Sie mehr über die Webseite innerhalb des Teams-Clients un
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4074b3bb4499cca2453a9d928a83b1cd04f5c064
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791538"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820164"
 ---
 # <a name="create-a-content-page"></a>Erstellen einer Inhaltsseite
 
@@ -139,8 +139,8 @@ So zeigen Sie den Ladeindikator an:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
-* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Registerkartenlink entfalten und Bühnenansicht](~/tabs/tabs-link-unfurling.md)
-* [Erstellen einer Konfigurationsseite](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Erstellen von Registerkarten für Teams](../../what-are-tabs.md)
+* [Erstellen einer persönlichen Registerkarte](../create-personal-tab.md)
+* [Erstellen einer Kanalregisterkarte oder Gruppenregisterkarte](../create-channel-group-tab.md)
+* [App-Manifestschema für Teams](../../../resources/schema/manifest-schema.md)
 * [Entwicklertools für Microsoft Teams-Registerkarten](~/tabs/how-to/developer-tools.md)

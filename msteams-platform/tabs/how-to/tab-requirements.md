@@ -5,12 +5,12 @@ description: In diesem Artikel erfahren Sie mehr über die Voraussetzungen zum E
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4471d88b7f9b0fd6364c833f6b3dd910aadb300a
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791811"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819961"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -65,5 +65,7 @@ Lassen Sie uns jetzt Ihren Tab erstellen. Aber wählen Sie zuerst die Registerka
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Teams-Registerkarten](~/tabs/what-are-tabs.md)
+* [Erstellen von Registerkarten für Teams](../what-are-tabs.md)
+* [Erstellen Ihrer ersten Registerkarten-App mit JavaScript](../../sbs-gs-javascript.yml)
+* [Registrieren Ihrer Registerkarten-App in Azure AD](authentication/tab-sso-register-aad.md)
 * [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)

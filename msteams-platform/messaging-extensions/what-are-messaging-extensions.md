@@ -5,12 +5,12 @@ description: Erfahren Sie, wie Nachrichtenerweiterungen verwendet werden, ihre T
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6b486e732542cbd6fdfeaecbef74b9724a024e67
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791734"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819975"
 ---
 # <a name="message-extensions"></a>Nachrichtenerweiterungen
 
@@ -247,6 +247,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Definieren des Befehls zur Nachrichtenerweiterung auf Suchbasis](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [Erstellen einer Nachrichtenerweiterung](../build-your-first-app/build-messaging-extension.md)
-* [Universelle Aktionen für suchbasierte Messagingerweiterungen](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [Features zugeordnete App-Funktionen](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [Erstellen Ihrer ersten Nachrichtenerweiterungs-App mit JavaScript](../sbs-gs-msgext.yml)
+* [Entwerfen Ihrer Microsoft Teams-Nachrichtenerweiterung](design/messaging-extension-design.md)
+* [Definieren von Aktionsbefehlen für Nachrichtenerweiterungen](how-to/action-commands/define-action-command.md)
+* [Definieren von Suchbefehlen für Nachrichtenerweiterungen](how-to/search-commands/define-search-command.md)
+* [Linkausweitung hinzufügen](how-to/link-unfurling.md)
+* [App-Manifestschema für Teams](../resources/schema/manifest-schema.md)
+* [Entwicklerportal für Teams](../concepts/build-and-test/teams-developer-portal.md)

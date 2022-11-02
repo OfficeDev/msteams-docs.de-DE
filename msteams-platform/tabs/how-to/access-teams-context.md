@@ -3,12 +3,12 @@ title: Kontext für Ihre Registerkarte erhalten
 description: Erfahren Sie, wie Sie einen Kontext für Ihre Registerkarte, ihren Benutzer-, Team- oder Unternehmenskontext erstellen, auf Informationen zugreifen, Kontext in privaten oder freigegebenen Kanälen abrufen und Designänderungen behandeln.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: d4dee147da2fd0091e038526ca56d66a9b80f7e5
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791545"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820108"
 ---
 # <a name="get-context-for-your-tab"></a>Kontext für Ihre Registerkarte erhalten
 
@@ -286,8 +286,9 @@ Das `theme` Argument in der Funktion ist eine Zeichenfolge mit dem Wert `default
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Richtlinien zum Entwerfen von Registerkarten](../../tabs/design/tabs.md)
-* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
-* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Erstellen einer Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Verwenden von Aufgabenmodulen in Registerkarten](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Erstellen von Registerkarten für Teams](../what-are-tabs.md)
+* [Entwerfen Sie Ihre Registerkarte für Microsoft Teams](../design/tabs.md)
+* [Aktivieren von SSO für die Registerkarten-App](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect freigegebener Kanäle](../../concepts/build-and-test/shared-channels.md)
+* [App-Manifestschema für Teams](../../resources/schema/manifest-schema.md)
+* [Verwenden von Aufgabenmodulen in Registerkarten](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

@@ -1,16 +1,16 @@
 ---
 title: Aufgabenmodul erstellen und versenden
 author: surbhigupta
-description: Erfahren Sie, wie Sie Aufgabenmodule erstellen und senden. Behandeln Sie die anfängliche Aufrufaktion, und antworten Sie mit einem Aufgabenmodul über einen Aktionsnachrichtenerweiterungsbefehl.
+description: Erfahren Sie, wie Sie Aufgabenmodule erstellen und senden. Behandeln Sie die anfängliche Aufrufaktion, und antworten Sie mit einem Aufgabenmodul aus einem Aktionsmeldungserweiterungsbefehl.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100315"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820115"
 ---
 # <a name="create-and-send-task-module"></a>Aufgabenmodul erstellen und versenden
 
@@ -648,7 +648,7 @@ Antworten Sie auf die Aufrufanforderung mit einem `task`-Objekt, das ein `taskIn
 
 |Eigenschaftenname|Zweck|
 |---|---|
-|`type`| Dies kann entweder `continue` das Präsentieren eines Formulars oder `message` ein einfaches Popup sein. |
+|`type`| Kann entweder `continue` zum Präsentieren eines Formulars oder `message` für ein einfaches Popupfenster verwendet werden. |
 |`value`| Entweder ein `taskInfo`-Objekt für ein Formular oder ein `string`-Objekt für eine Nachricht. |
 
 Das Schema für das taskInfo-Objekt ist wie folgt:
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Definieren von Aktionsbefehlen](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Karten](../../../task-modules-and-cards/what-are-cards.md)
+* [Personenauswahl in Adaptiven Karten](../../../task-modules-and-cards/cards/people-picker.md)
+* [Aufgabenmodule](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App-Manifestschema für Teams](../../../resources/schema/manifest-schema.md)
+* [Definieren von Aktionsbefehlen für Nachrichtenerweiterungen](define-action-command.md)
+* [Nachrichtenerweiterungen](../../what-are-messaging-extensions.md)

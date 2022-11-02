@@ -5,12 +5,12 @@ description: Seite "Konfiguration erstellen", um Informationen vom Benutzer zu s
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6cd9ed8572b3df2db4a727225159774156008fa6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791701"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820171"
 ---
 # <a name="create-a-configuration-page"></a>Erstellen einer Konfigurationsseite
 
@@ -340,8 +340,9 @@ Wenn Sie festlegen, dass Ihre Kanal- oder Gruppenregisterkarte auf den mobilen T
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Microsoft Teams-Registerkarten](~/tabs/what-are-tabs.md)
-* [Erstellen einer persönlichen Registerkarte](~/tabs/how-to/create-personal-tab.md)
-* [Erstellen Sie eine Kanal- oder Gruppenregisterkarte](~/tabs/how-to/create-channel-group-tab.md)
-* [Erstellen einer Inhaltsseite](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Registerkarten auf mobilen Geräten](~/tabs/design/tabs-mobile.md)
+* [Erstellen von Registerkarten für Teams](../../what-are-tabs.md)
+* [Aktualisieren von App-Manifest für SSO und App-Vorschau](../authentication/tab-sso-manifest.md)
+* [Konfigurieren der OAuth-IdP-Authentifizierung von Drittanbietern](../authentication/auth-tab-aad.md)
+* [Erstellen von Office 365-Connectors](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Kontext für Ihre Registerkarte erhalten](../access-teams-context.md)
+* [Registerkarten auf mobilen Geräten](../../design/tabs-mobile.md)
