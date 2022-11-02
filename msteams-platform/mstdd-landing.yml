@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 7a21f1d000d586124aa1338eb5f7f74dc5b43c71
-  ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+  ms.openlocfilehash: 226ed5b42b972e8534932c33f395b663c96696bb
+  ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/31/2022
-  ms.locfileid: "68791797"
+  ms.lasthandoff: 11/02/2022
+  ms.locfileid: "68819676"
 landingContent:
 - title: Entdecken Sie die neuesten
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
+    - text: Unterstützung des globalen Routings für Bot-APIs
+      url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
     - text: Entwicklerportal für Teams ist jetzt für GCC-Mandanten verfügbar
       url: concepts/build-and-test/teams-developer-portal.md
     - text: Live Share-Canvas

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie proaktive Nachrichten mit Ihrem Teams-Bot sen
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 7e50719e9befd807127a1eae4022b4af67a9fc00
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791461"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819683"
 ---
 # <a name="proactive-messages"></a>Proaktive Nachrichten
 
@@ -25,7 +25,7 @@ Eine proaktive Nachricht ist jede Nachricht, die von einem Bot gesendet wird, di
 >
 > * Um proaktive Nachrichten zu senden, wird empfohlen, mit dem [Erstellen eines Benachrichtigungsbots mit JavaScript](../../../sbs-gs-notificationbot.yml) oder [einem Beispiel für eingehende Webhookbenachrichtigungen](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) zu beginnen. Laden Sie zunächst [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore herunter. Weitere Informationen finden Sie unter [Teams Toolkit-Dokumente](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD). Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden: <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> – GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Derzeit sind Bots in Government Community Cloud (GCC) und in GCC-High verfügbar, aber nicht in Department of Defense (DOD). Für proaktive Nachrichten sollten die Bots die folgenden Endpunkte für Government Cloud-Umgebungen verwenden: <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 Um eine proaktive Nachricht an einen Benutzer, einen Gruppenchat oder ein Team zu senden, muss Ihr Bot über den erforderlichen Zugriff zum Senden der Nachricht verfügen. Für einen Gruppenchat oder ein Team muss die App, die Ihren Bot enthält, zuerst an diesem Speicherort installiert werden.
 
@@ -44,7 +44,7 @@ Die Codeausschnitte im [Beispielabschnitt](#samples) dienen zum Erstellen einer 
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Abrufen der Benutzer-ID, Team-ID oder Kanal-ID
 
-Um eine neue Unterhaltung oder einen Konversationsthread in einem Kanal zu erstellen, müssen Sie über die richtige ID verfügen. Sie können diese ID auf eine der folgenden Arten empfangen oder abrufen:
+Sie können eine neue Unterhaltung mit einem Benutzer oder einem Unterhaltungsthread in einem Kanal erstellen, und Sie müssen über die richtige ID verfügen. Sie können diese ID auf eine der folgenden Arten empfangen oder abrufen:
 
 * Wenn Ihre App in einem bestimmten Kontext installiert ist, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Wenn ein neuer Benutzer zu einem Kontext hinzugefügt wird, in dem Ihre App installiert ist, erhalten Sie eine [`onMembersAdded` Aktivität](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -60,7 +60,17 @@ Erstellen Sie die Unterhaltung, nachdem Sie über die Benutzer- oder Kanalinform
 
 ## <a name="create-the-conversation"></a>Erstellen der Unterhaltung
 
-Erstellen Sie die Unterhaltung, wenn sie nicht vorhanden ist oder Sie die `conversationId`nicht kennen. Erstellen Sie die Konversation nur einmal, und speichern Sie den Wert oder `conversationReference` das `conversationId` Objekt.
+Sie können die Konversation erstellen, wenn sie nicht vorhanden ist oder Sie die `conversationId`nicht kennen. Erstellen Sie die Konversation nur einmal, und speichern Sie den Wert oder `conversationReference` das `conversationId` Objekt.
+
+Zum Erstellen der Unterhaltung benötigen Sie , `userId``tenantId`und `serviceUrl`.
+
+Verwenden Sie für `serviceUrl`den Wert einer eingehenden Aktivität, die den Flow auslöst, oder eine der globalen Dienst-URLs. Wenn von einer eingehenden Aktivität, die `serviceUrl` das proaktive Szenario auslöst, nicht verfügbar ist, verwenden Sie die folgenden globalen URL-Endpunkte:
+
+* Öffentlich: `https://smba.trafficmanager.net/teams/`
+* GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
+
+Ein Codebeispiel finden Sie unter dem Aufruf `CreateConversationAsync` im [**Beispiel**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
 
 Sie können die Unterhaltung abrufen, wenn die App zum ersten Mal installiert wird. Nachdem die Unterhaltung erstellt wurde, [rufen Sie die Konversations-ID ab](#get-the-conversation-id). Die `conversationId` ist in den Aktualisierungsereignissen der Unterhaltung verfügbar.
 
