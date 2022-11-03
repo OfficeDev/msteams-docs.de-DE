@@ -1,18 +1,18 @@
 ---
 title: Anpassen des Teams-App-Manifests im Teams-Toolkit
 author: zyxiaoyuer
-description: In diesem Modul erfahren Sie, wie Sie das Microsoft Teams-App-Manifest in der verschiedenen Umgebung bearbeiten, in der Vorschau anzeigen und anpassen.
+description: In diesem Modul erfahren Sie, wie Sie das Teams-App-Manifest in der unterschiedlichen Umgebung bearbeiten, in der Vorschau anzeigen und anpassen.
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: ac0be381837b62e1a3108f71a0320ae8b0c0a908
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: e92e30cf30dd06dbbe3c513a79fe4b7ed7c4bc1a
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499314"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833100"
 ---
 # <a name="customize-teams-app-manifest"></a>Anpassen des Teams-App-Manifests
 
@@ -25,14 +25,14 @@ Das Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt i
 Das Teams-App-Manifest beschreibt, wie Ihre App in das Microsoft Teams-Produkt integriert wird. Weitere Informationen zum Manifest finden Sie unter [App-Manifestschema für Teams](../resources/schema/manifest-schema.md). In diesem Abschnitt werden folgende Themen behandelt:
 
 * [Vorschau der Manifestdatei in der lokalen Umgebung](#preview-manifest-file-in-local-environment)
-* [Vorschau der Manifestdatei in der Remoteumgebung](#preview-manifest-file-in-remote-environment)
+* [Vorschau der Manifestdatei in einer Remoteumgebung](#preview-manifest-file-in-remote-environment)
 * [Lokale Änderungen mit dem Entwicklerportal synchronisieren](#sync-local-changes-to-developer-portal)
-* [Anpassen ihres Teams-App-Manifests](#customize-your-teams-app-manifest)
+* [Anpassen Ihres Teams-App-Manifests](#customize-your-teams-app-manifest)
 * [Überprüfen des Manifests](#validate-manifest)
 
-Die Manifestvorlagendatei `manifest.template.json` ist nach dem Gerüstbau unter `templates/appPackage` Ordner verfügbar. Die Vorlagendatei mit Platzhaltern und die tatsächlichen Werte werden vom Teams-Toolkit mithilfe von Dateien unter `.fx/configs` und `.fx/states` für verschiedene Umgebungen aufgelöst.
+Die Manifestvorlagendatei `manifest.template.json` ist nach dem Gerüstbau unter `templates/appPackage` Ordner verfügbar. Die Vorlagendatei mit Platzhaltern und die tatsächlichen Werte werden vom Teams Toolkit mithilfe von Dateien unter `.fx/configs` und `.fx/states` für verschiedene Umgebungen aufgelöst.
 
-Um eine Vorschau des Manifests mit tatsächlichen Inhalten anzuzeigen, generiert das Teams-Toolkit Vorschaumanifestdateien unter `build/appPackage` dem Ordner:
+Um eine Vorschau des Manifests mit tatsächlichen Inhalten anzuzeigen, generiert Teams Toolkit Vorschaumanifestdateien unter dem `build/appPackage` Ordner:
 
 ```text
 └───build
@@ -46,71 +46,71 @@ Um eine Vorschau des Manifests mit tatsächlichen Inhalten anzuzeigen, generiert
 Sie können eine Vorschau der Manifestdatei in lokalen und Remoteumgebungen anzeigen.
 
 * [Vorschau der Manifestdatei in der lokalen Umgebung](#preview-manifest-file-in-local-environment)
-* [Vorschau der Manifestdatei in der Remoteumgebung](#preview-manifest-file-in-remote-environment)
+* [Vorschau der Manifestdatei in einer Remoteumgebung](#preview-manifest-file-in-remote-environment)
 
 ## <a name="preview-manifest-file-in-local-environment"></a>Vorschau der Manifestdatei in der lokalen Umgebung
 
 Um eine Vorschau der Manifestdatei in der lokalen Umgebung anzuzeigen, können Sie **F5** drücken, um das lokale Debuggen auszuführen. Es generiert lokale Standardeinstellungen für Sie, dann werden das App-Paket und das Vorschaumanifest unter dem `build/appPackage` Ordner erstellt.
 
-Sie können eine Vorschau der lokalen Manifestdatei auch mit zwei Methoden anzeigen
+Sie können auch eine Vorschau der lokalen Manifestdatei mit zwei Methoden anzeigen.
 
-* Verwenden der Vorschauoption in Codelens
-* Mithilfe der Zip **Teams-Metadatenpaketoption**
+* Mithilfe der Vorschauoption in codeLens
+* Mithilfe der Option **"Teams-Metadatenpaket zippen** "
 
-Die folgenden Schritte helfen bei der Vorschau der lokalen Manifestdatei mithilfe der Vorschauoption in Codelens:
+Die folgenden Schritte helfen ihnen, eine Vorschau der lokalen Manifestdatei mithilfe der Vorschauoption in codelens anzuzeigen:
 
-1. Wählen Sie " **Vorschau** " in den Codelen der `manifest.template.json` Datei aus.
+1. Wählen Sie in der Codelens der Datei **Vorschau** aus `manifest.template.json` .
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot ist ein Beispiel, das die Vorschau in den Codelens der Manifestdatei zeigt.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot: Vorschau in der Codelens der Manifestdatei":::
 
-1. Wählen Sie **"Lokal**" aus.
+1. Wählen Sie **lokal** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot ist ein Beispiel für die Anzeige der Lokalen Auswahl in der Umgebung.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot: Beispiel für die Auswahl von &quot;Lokal&quot; in der Umgebung":::
 
-Mit den folgenden Schritten können Sie eine Vorschau der lokalen Manifestdatei mithilfe der Zip **Teams-Metadatenpaketoption** anzeigen:
+Die folgenden Schritte helfen bei der Vorschau der lokalen Manifestdatei mithilfe der Option **Zip Teams-Metadatenpaket** :
 
-1. Datei auswählen `manifest.template.json` .
+1. Wählen Sie Datei aus `manifest.template.json` .
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot ist ein Beispiel für die Auswahl von manifest.template.json.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot: Beispiel für die Auswahl von manifest.template.json":::
 
-1. Wählen Sie das Microsoft Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: auf der Visual Studio Code-Symbolleiste aus.
+1. Wählen Sie auf der Visual Studio Code-Symbolleiste das Symbol Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: aus.
 
-1. Wählen Sie unter **"BEREITSTELLUNG**" **das Zip-Teams-Metadatenpaket** aus.
+1. Wählen Sie unter **BEREITSTELLUNG** die Option **Teams-Metadatenpaket zippen** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Screenshot ist ein Beispiel für die Auswahl des ZIP-Teams-Metadatenpakets.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Screenshot: Beispiel für die Auswahl des Zip-Teams-Metadatenpakets":::
 
-1. Wählen Sie **"Lokal**" aus.
+1. Wählen Sie **lokal** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot ist ein Beispiel für die Anzeige der Lokalen Auswahl in der Umgebung.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot: Beispiel für die Auswahl von &quot;Lokal&quot; in der Umgebung":::
 
 Der Beispielkatalog wird wie in der folgenden Abbildung dargestellt angezeigt:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot ist ein Beispiel für die Vorschau des lokalen Elements.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot: Beispiel für die Vorschauversion von &quot;local&quot;":::
 
-## <a name="preview-manifest-file-in-remote-environment"></a>Vorschau der Manifestdatei in der Remoteumgebung
+## <a name="preview-manifest-file-in-remote-environment"></a>Vorschau der Manifestdatei in einer Remoteumgebung
 
 So zeigen Sie eine Vorschau der Manifestdatei mit Visual Studio Code an:
 
-* Wählen Sie **"Bereitstellung in der Cloud** " unter **"ENTWICKLUNG** in Teams-Toolkit"-Erweiterung aus.
+* Wählen Sie in der **Erweiterung "ENTWICKLUNG** in Teams Toolkit" die Option **Bereitstellung in der Cloud** aus.
   
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot ist ein Beispiel für die Auswahl der Bereitstellung in der Cloudressource.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot: Beispiel für die Auswahl der Bereitstellung in der Cloudressource.":::
 
 So zeigen Sie eine Vorschau der Manifestdatei mithilfe der Befehlspalette an:
 
-* Trigger **Teams: Bereitstellung in der Cloud über die** Befehlspalette.
+* Teams auslösen **: Bereitstellen in der Cloud über die** Befehlspalette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot ist ein Beispiel für die Bereitstellung einer Cloudressource mithilfe der Befehlspalette.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot: Bereitstellen einer Cloudressource mithilfe der Befehlspalette":::
 
-Es generiert die Konfiguration für die Remote-Teams-App und erstellt paket- und Vorschaumanifest unter `build/appPackage` dem Ordner.
+Es generiert die Konfiguration für die Teams-Remote-App und erstellt das Paket- und Vorschaumanifest unter dem `build/appPackage` Ordner.
 
-Sie können eine Vorschau der Manifestdatei auch mit zwei Methoden in der Remoteumgebung anzeigen.
+Sie können eine Vorschau der Manifestdatei auch mit zwei Methoden in einer Remoteumgebung anzeigen.
 
-* Verwenden der Vorschauoption in Codelens
-* Mithilfe der Zip **Teams-Metadatenpaketoption**
+* Mithilfe der Vorschauoption in codeLens
+* Mithilfe der Option **"Teams-Metadatenpaket zippen** "
 
-Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der Vorschauoption in Codelens:
+Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der Vorschauoption in codelens:
 
-1. Wählen Sie " **Vorschau** " in den Codelen der `manifest.template.json` Datei aus.
+1. Wählen Sie in der Codelens der Datei **Vorschau** aus `manifest.template.json` .
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot ist ein Beispiel für die Vorschau in der Codelens der Manifestdatei.":::
 
@@ -119,33 +119,33 @@ Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der Vo
    > [!NOTE]
    > Wenn es mehr als eine Umgebung gibt, müssen Sie die Umgebung auswählen, die Sie in der Vorschau anzeigen möchten (siehe Abbildung):
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot ist ein Beispiel für das Hinzufügen von Umgebungen.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot: Beispiel für das Hinzufügen einer Umgebung":::
 
-Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der **Zip Teams-Metadatenpaketoption** in der Remoteumgebung:
+Die folgenden Schritte helfen bei der Vorschau der Manifestdatei mithilfe der Option **Zip Teams-Metadatenpaket** in einer Remoteumgebung:
 
-1. Datei auswählen `manifest.template.json` .
+1. Wählen Sie Datei aus `manifest.template.json` .
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot ist ein Beispiel für die Auswahl von manifest.template.json.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot: Beispiel für die Auswahl von manifest.template.json":::
 
-1. Wählen Sie das Microsoft Teams-Toolkit-Symbol :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: auf der Visual Studio Code-Symbolleiste aus.
+1. Wählen Sie auf der Visual Studio Code-Symbolleiste das Symbol Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: aus.
 
-1. Wählen Sie unter **"BEREITSTELLUNG**" **das Zip-Teams-Metadatenpaket** aus.
+1. Wählen Sie unter **BEREITSTELLUNG** die Option **Teams-Metadatenpaket zippen** aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Screenshot ist ein Beispiel für die Auswahl des ZIP-Teams-Metadatenpakets.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Screenshot: Beispiel für die Auswahl des Zip-Teams-Metadatenpakets":::
 
 1. Wählen Sie Ihre Umgebung aus.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot ist ein Beispiel für das Hinzufügen von Umgebungen.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot: Beispiel für das Hinzufügen einer Umgebung":::
 
    > [!NOTE]
    > Wenn es mehr als eine Umgebung gibt, müssen Sie die Umgebung auswählen, die Sie in der Vorschau anzeigen möchten (siehe Abbildung):
 
 ## <a name="sync-local-changes-to-developer-portal"></a>Lokale Änderungen mit dem Entwicklerportal synchronisieren
 
-Nach der Vorschau der Manifestdatei können Sie Ihre lokalen Änderungen auf folgende Weise mit dem Entwicklerportal synchronisieren:
+Nach dem Anzeigen einer Vorschau der Manifestdatei können Sie Ihre lokalen Änderungen wie folgt mit dem Entwicklerportal synchronisieren:
 
 > [!NOTE]
-> Weitere Informationen zum Entwicklerportal finden Sie im [Entwicklerportal für Teams](../concepts/build-and-test/teams-developer-portal.md).
+> Weitere Informationen zum Entwicklerportal finden Sie unter [Entwicklerportal für Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 1. Bereitstellen des Teams-App-Manifests.
 
@@ -153,28 +153,28 @@ Nach der Vorschau der Manifestdatei können Sie Ihre lokalen Änderungen auf fol
 
    * Wechseln Sie zur `manifest.template.json` Datei, und klicken Sie mit der rechten Maustaste, um aus dem Kontextmenü auszuwählen `Deploy Teams app manifest` .
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Screenshot ist ein Beispiel für die Auswahl des Teams-App-Manifests bereitstellen.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Der Screenshot zeigt ein Beispiel für die Auswahl des Teams-App-Manifests bereitstellen.":::
 
-   * Trigger `Teams: Deploy Teams app manifest` aus Befehlspalette.
+   * Trigger `Teams: Deploy Teams app manifest` aus der Befehlspalette.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Screenshot ist ein Beispiel für die Bereitstellung über die Befehlspalette.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Screenshot: Beispiel für die Bereitstellung über die Befehlspalette":::
 
-2. Auf Teams-Plattform aktualisieren.
+2. Aktualisieren sie auf die Teams-Plattform.
 
    Sie können auf eine der folgenden Arten auf die Teams-Plattform aktualisieren:
 
-   * Wählen Sie " **Auf Teams-Plattform aktualisieren** " in der oberen linken Ecke von `manifest.{env}.json`aus.
+   * Wählen Sie in der linken oberen Ecke von **Auf Teams-Plattform aktualisieren** aus `manifest.{env}.json`.
 
-   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
+   * Auslösen von **Teams: Aktualisieren Sie das Manifest auf der Teams-Plattform** auf der Menüleiste von `manifest.{env}.json`.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Screenshot ist ein Beispiel für die Anzeige des Updates für die Teams-Plattform auf der Menüleiste des Manifests.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Screenshot: Beispiel für die Aktualisierung der Teams-Plattform auf der Menüleiste des Manifests.":::
 
-Sie können auch **"Teams: Update manifest to Teams platform** " aus der Befehlspalette auslösen:
+Sie können **teams: Manifest auf der Teams-Plattform** aktualisieren auch über die Befehlspalette auslösen:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="Screenshot ist ein Beispiel für die Auswahl von Teams: Aktualisieren des Manifests auf die Teams-Plattform aus der Befehlspalette.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="Screenshot: Beispiel für die Auswahl von &quot;Teams: Manifest auf Teams-Plattform aktualisieren&quot; aus der Befehlspalette":::
 
 > [!NOTE]
-> Trigger from editor codelens or menu bar updates current manifest file to Teams platform. Der Trigger aus der Befehlspalette erfordert die Auswahl der Zielumgebung.
+> Der Trigger aus editor codelens oder der Menüleiste aktualisiert die aktuelle Manifestdatei auf der Teams-Plattform. Der Trigger aus der Befehlspalette erfordert die Auswahl der Zielumgebung.
 
  CLI-Befehl:
 
@@ -185,37 +185,37 @@ Sie können auch **"Teams: Update manifest to Teams platform** " aus der Befehls
 ---
 
 > [!NOTE]
-> Die Änderung wird in Dev Portal aktualisiert. Alle manuellen Updates im Dev Portal werden überschrieben.
+> Die Änderung wird im Dev Portal aktualisiert. Alle manuellen Updates im Dev Portal werden überschrieben.
 
 Wenn die Manifestdatei aufgrund von Konfigurationsdateiänderungen oder Vorlagenänderungen veraltet ist, wählen Sie eine der folgenden Aktionen aus:
 
 * **Nur Vorschau**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben.
-* **Vorschau und Update**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben und auch auf die Teams-Plattform aktualisiert.
+* **Vorschau und Aktualisierung**: Die lokale Manifestdatei wird gemäß der aktuellen Konfiguration überschrieben und auch auf die Teams-Plattform aktualisiert.
 * **Abbrechen**: Es wird keine Aktion ausgeführt.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Screenshot ist ein Beispiel für die Anzeige, die Navigation, um nur Vorschau auszuwählen, Vorschau- und Aktualisierungs- und Abbruchoptionen, wenn die Manifestdatei aufgrund von Konfigurations- oder Vorlagenänderungen veraltet ist.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Screenshot ist ein Beispiel für die Navigation, nur Vorschau, Vorschau und Aktualisierung und Abbrechen von Optionen, wenn die Manifestdatei aufgrund von Konfiguration oder Vorlagenänderung veraltet ist.":::
 
-## <a name="customize-your-teams-app-manifest"></a>Anpassen ihres Teams-App-Manifests
+## <a name="customize-your-teams-app-manifest"></a>Anpassen Ihres Teams-App-Manifests
 
 Teams Toolkit besteht aus den folgenden Manifest-Vorlagendateien im `manifest.template.json` Ordner in lokalen und Remote-Umgebungen:
 
 * `manifest.template.json`
 * `templates/appPackage`
 
-Während des lokalen Debuggens oder der lokalen Bereitstellung lädt das Teams-Toolkit manifest aus `manifest.template.json`, mit den Konfigurationen von `state.{env}.json`, `config.{env}.json`und erstellt die Teams-App im [Dev Portal](https://dev.teams.microsoft.com/apps).
+Während des lokalen Debuggens oder Bereitstellens lädt das Teams-Toolkit das Manifest aus `manifest.template.json`, mit den Konfigurationen aus `state.{env}.json`, `config.{env}.json`und erstellt die Teams-App im [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ### <a name="supported-placeholders-in-manifesttemplatejson"></a>Unterstützte Platzhalter in manifest.template.json
 
 Die folgende Liste enthält unterstützte Platzhalter in `manifest.template.json`:
 
-* `{{state.xx}}`ist ein vordefinierter Platzhalter und sein Wert wird vom Teams Toolkit aufgelöst, definiert in `state.{env}.json`. Stellen Sie sicher, dass Sie die Werte in `state.{env}.json`
-* `{{config.manifest.xx}}` ist ein benutzerdefinierter Platzhalter, und sein Wert wird von `config.{env}.json`
+* `{{state.xx}}`ist ein vordefinierter Platzhalter und sein Wert wird vom Teams Toolkit aufgelöst, definiert in `state.{env}.json`. Stellen Sie sicher, dass Sie die Werte in nicht ändern. `state.{env}.json`
+* `{{config.manifest.xx}}` ist ein benutzerdefinierter Platzhalter, dessen Wert von aufgelöst wird `config.{env}.json`
 
 **So fügen Sie einen benutzerdefinierten Parameter hinzu**
 
-1. Fügen Sie benutzerdefinierte Parameter wie folgt hinzu:</br>
-   a. Fügen Sie einen Platzhalter `manifest.template.json` mit Muster `{{config.manifest.xx}}`hinzu.</br>
-   b. Fügen Sie einen Config-Wert in `config.{env}.json`hinzu.
+1. Fügen Sie einen benutzerdefinierten Parameter wie folgt hinzu:</br>
+   a. Fügen Sie einen Platzhalter in `manifest.template.json` mit dem Muster `{{config.manifest.xx}}`hinzu.</br>
+   b. Fügen Sie einen Konfigurationswert in hinzu `config.{env}.json`.
 
      ```json
      {
@@ -225,17 +225,17 @@ Die folgende Liste enthält unterstützte Platzhalter in `manifest.template.json
      }
      ```
 
-2. Sie können zur Konfigurationsdatei wechseln, indem Sie einen der Konfigurationsplatzhalter " **Gehe zu Konfigurationsdatei** " oder **"Statusdatei anzeigen"** in `manifest.template.json`auswählen.
+2. Sie können zur Konfigurationsdatei wechseln, indem Sie einen der Konfigurationsplatzhalter **Go to config file (Zur Konfigurationsdatei wechseln** ) oder **View the state file in (Anzeigen der Zustandsdatei** in `manifest.template.json`) auswählen.
 
 ### <a name="validate-manifest"></a>Überprüfen des Manifests
 
-Bei Vorgängen wie zip **Teams-Metadatenpaketen** überprüft das Teams-Toolkit das Manifest anhand seines Schemas. Die folgende Liste bietet verschiedene Möglichkeiten zum Überprüfen des Manifests:
+Während Vorgängen wie **Zip Teams-Metadatenpaket** überprüft Teams Toolkit das Manifest anhand seines Schemas. Die folgende Liste enthält verschiedene Möglichkeiten zum Überprüfen des Manifests:
 
-* Lösen Sie `Teams: Validate manifest file` in VSC aus der Befehlspalette Folgendes aus:
+* Lösen Sie `Teams: Validate manifest file` in VSC über die Befehlspalette aus:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Screenshot ist ein Beispiel für das Anzeigen der Microsoft Teams-Manifestdatei aus der Befehlspalette.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Screenshot: Beispiel für die Teams-Überprüfungsmanifestdatei aus der Befehlspalette":::
 
-* Verwenden Sie in CLI den folgenden Befehl:
+* Verwenden Sie in der CLI den Folgenden Befehl:
 
      ``` bash
         teamsfx validate --env local
@@ -362,7 +362,5 @@ The changes are updated to Teams Developer Portal.
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
