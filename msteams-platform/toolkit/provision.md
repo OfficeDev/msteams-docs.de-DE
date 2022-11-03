@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
-ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
+ms.openlocfilehash: 6c3e44de4d63911dff5481ab859019aea37559d1
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68350461"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833198"
 ---
 # <a name="provision-cloud-resources"></a>Bereitstellen von Cloudressourcen
 
@@ -22,7 +22,7 @@ TeamsFx lässt sich in Azure und Microsoft 365 Cloud integrieren, sodass Sie Ihr
 
 ## <a name="provision-using-teams-toolkit-in-visual-studio-code"></a>Bereitstellen mithilfe des Teams-Toolkits in Visual Studio Code
 
-Die Bereitstellung erfolgt mit einem einzigen Befehl im Teams-Toolkit für Visual Studio Code oder TeamsFx CLI. Weitere Informationen finden [Sie unter Bereitstellen einer Azure-basierten App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
+Die Bereitstellung erfolgt mit einem einzelnen Befehl in Teams Toolkit for Visual Studio Code oder TeamsFx CLI. Weitere Informationen finden Sie unter [Bereitstellen einer Azure-basierten App](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 
 ## <a name="create-resources"></a>Ressourcen erstellen
 
@@ -118,7 +118,7 @@ Die folgende Liste zeigt die Ressourcenerstellung für verschiedene Arten von Ap
 
 ## <a name="customize-resource-provision"></a>Passen Sie die Ressourcenbereitstellung an
 
-Mit dem Teams-Toolkit können Sie einen Infrastruktur-as-Code-Ansatz verwenden, um Azure-Ressourcen zu definieren, die Sie bereitstellen und wie Sie konfigurieren möchten. Das Tool verwendet eine ARM-Vorlage, um Azure-Ressourcen zu definieren. Die ARM-Vorlage ist eine Reihe von Bicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Bicep-Dokument](/azure/azure-resource-manager/bicep).
+Mit dem Teams-Toolkit können Sie einen Infrastructure-as-Code-Ansatz verwenden, um Azure-Ressourcen zu definieren, die Sie bereitstellen möchten, und wie Sie konfigurieren möchten. Das Tool verwendet eine ARM-Vorlage, um Azure-Ressourcen zu definieren. Die ARM-Vorlage ist eine Reihe von Bicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Bicep-Dokument](/azure/azure-resource-manager/bicep).
 
 Die Bereitstellung mit ARM umfasst die Änderung der folgenden Sätze von Dateien, Parametern und Vorlagen:
 
@@ -140,7 +140,7 @@ Die Bereitstellung mit ARM umfasst die Änderung der folgenden Sätze von Dateie
 
 Die ARM-Vorlagendateien verwenden Platzhalter für Parameter. Der Zweck dieser Platzhalter besteht darin, die Erstellung neuer Ressourcen für Sie in einer neuen Umgebung sicherzustellen. Die tatsächlichen Werte werden aus `.fx/states/state.{env}.json` aufgelöst.
 
-Es gibt zwei Arten von Parametern, z. B. Azure AD-Anwendungsparameter und Azure-ressourcenbezogene Parameter.
+Es gibt zwei Arten von Parametern, z. B. anwendungsbezogene Azure AD-Parameter und Azure-ressourcenbezogene Parameter.
 
 ##### <a name="azure-ad-application-related-parameters"></a>Anwendungsbezogene Azure AD-Parameter
 
@@ -238,8 +238,8 @@ Sie können anstelle des Standardnamens `contosoteamsappapi` für die Function-A
 Die folgenden Schritte sind:
 
 1. Öffnen Sie `.fx/configs/azure.parameters.{env}.json` für Ihre aktuelle Umgebung.
-2. Fügen Sie beispielsweise `functionAppName` unter dem `provisionParameters` Abschnitt eine neue Eigenschaft hinzu.
-3. Geben Sie einen Wert von `functionAppName`ein, z. B `contosoteamsappapi`. .
+2. Fügen Sie beispielsweise `functionAppName` eine neue Eigenschaft unter dem `provisionParameters` Abschnitt hinzu.
+3. Geben Sie den Wert ein `functionAppName`, z. B `contosoteamsappapi`. .
 4. Die endgültige Parameterdatei wird im folgenden Snippet angezeigt:
 
     ```json
@@ -261,7 +261,7 @@ So fügen Sie der Anwendung andere Azure-Ressourcen oder -Speicher hinzu:
 
 Stellen Sie sich folgendes Szenario vor:
 
-Sie möchten Azure-Speicher zu Ihrem Azure-Funktions-Back-End hinzufügen, um BLOB-Daten zu speichern. Es gibt keinen automatischen Ablauf zum Aktualisieren der Biceps-Vorlage mit Azure-Speicherunterstützung. Sie können jedoch die Bicep-Datei bearbeiten und die Ressource hinzufügen. Führen Sie dazu folgende Schritte aus:
+Sie möchten Ihrem Azure-Funktions-Back-End Azure Storage hinzufügen, um Blobdaten zu speichern. Es gibt keinen automatischen Ablauf zum Aktualisieren der Biceps-Vorlage mit Azure-Speicherunterstützung. Sie können jedoch die Bicep-Datei bearbeiten und die Ressource hinzufügen. Führen Sie dazu folgende Schritte aus:
 
 1. Erstellen Sie ein Registerkartenprojekt.
 2. Funktion zum Projekt hinzufügen. Weitere Informationen finden Sie unter [Ressourcen hinzufügen](./add-resource.md).
@@ -296,38 +296,38 @@ Sie möchten Azure-Speicher zu Ihrem Azure-Funktions-Back-End hinzufügen, um BL
 
 ## <a name="provision-using-teams-toolkit-in-visual-studio"></a>Bereitstellen mithilfe des Teams-Toolkits in Visual Studio
 
-Die folgenden Schritte helfen Ihnen bei der Bereitstellung von Cloudressourcen mit Visual Studio:
+Die folgenden Schritte helfen Ihnen beim Bereitstellen von Cloudressourcen mithilfe von Visual Studio:
 
 ### <a name="sign-in-to-your-microsoft-365-account"></a>Anmelden bei Ihrem Microsoft 365-Konto
 
 1. Öffnen Sie Visual Studio 2022.
 1. Öffnen Sie das Microsoft Teams-App-Projekt.
-1. Wählen Sie **"Project** > **Teams Toolkit** > **Vorbereiten von Teams-App-Abhängigkeiten" aus**.
+1. Wählen Sie Project **Teams Toolkit** > **Prepare Teams App Dependencies (Teams-App-Abhängigkeiten** >  vorbereiten) aus.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies1.png" alt-text="Vorbereiten von Abhängigkeiten von Teams-Apps":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare-app-dependencies1.png" alt-text="Vorbereiten von Teams-App-Abhängigkeiten":::
 
-1. Wählen Sie **"Anmelden"** aus, um sich bei Ihrem Azure-Konto anzumelden.
+1. Wählen Sie **Anmelden** aus, um sich bei Ihrem Azure-Konto anzumelden.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Bei Microsoft 365 anmelden":::
 
     > [!NOTE]
-    > Wenn Sie bereits angemeldet sind, wird Ihr Benutzername angezeigt, oder Sie können dasselbe auswählen, um Ihr Konto zu wechseln.
+    > Wenn Sie bereits angemeldet sind, wird Ihr Benutzername angezeigt, oder Sie können denselben auswählen, um Ihr Konto zu wechseln.
 
 1. Ihr Standardwebbrowser wird geöffnet, damit Sie [sich beim Konto anmelden](https://developer.microsoft.com/en-us/microsoft-365/dev-program) können.
 
-1. Wählen Sie **"Weiter"** aus, nachdem Sie sich bei Ihrem Konto angemeldet haben.
+1. Wählen Sie **Weiter** aus, nachdem Sie sich bei Ihrem Konto angemeldet haben.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Bestätigen Sie dies, indem Sie &quot;Weiter&quot; auswählen.":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-signin-M365.png" alt-text="Bestätigen Sie, indem Sie Weiter auswählen.":::
 
 ### <a name="sign-in-to-your-azure-account"></a>Anmelden bei Ihrem Azure-Konto
 
 1. Öffnen Sie Visual Studio 2022.
-1. Öffnen Sie das Teams-App-Projekt.
-1. Wählen Sie **"Project** > **Teams Toolkit-Bereitstellung** > **in der Cloud**" aus.
+1. Öffnen Sie das Projekt Teams-App.
+1. Wählen Sie **Project** > **Teams Toolkit** > **Bereitstellen in der Cloud** aus.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Anmelden bei Azure-Konto":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Anmelden beim Azure-Konto":::
 
-1. Wählen Sie **"Anmelden...** aus, um sich bei Ihrem Azure-Konto anzumelden.
+1. Wählen Sie **Anmelden...** aus, um sich bei Ihrem Azure-Konto anzumelden.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-start.png" alt-text="Anmelden bei Ihrem Azure-Konto":::
 
@@ -338,34 +338,34 @@ Die folgenden Schritte helfen Ihnen bei der Bereitstellung von Cloudressourcen m
 
 ### <a name="to-provision-cloud-resources"></a>So stellen Sie Cloudressourcen bereit
 
-Nachdem Sie das Projekt in Visual Studio geöffnet haben:
+Nachdem Sie Ihr Projekt in Visual Studio geöffnet haben:
 
-1. Wählen Sie **"Project** > **Teams Toolkit-Bereitstellung** > **in der Cloud**" aus.
+1. Wählen Sie **Project** > **Teams Toolkit** > **Bereitstellen in der Cloud** aus.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Bereitstellung in der Cloud":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Bereitstellen in der Cloud":::
 
-   Das **Bereitstellungsfenster** wird angezeigt.
+   Das Fenster **Bereitstellen** wird angezeigt.
 
 1. Geben Sie die folgenden Details ein, um Ihre Ressourcen bereitzustellen.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Ressourcengruppe auswählen":::
 
-   1. Wählen Sie Ihren **Abonnementnamen** aus der Dropdownliste aus.
+   1. Wählen Sie in der Dropdownliste Ihren **Abonnementnamen** aus.
    1. Wählen Sie Ihre **Ressourcengruppe** aus der Dropdownliste aus.
-   1. Wählen Sie Ihre **Region** aus der Dropdownliste aus.
+   1. Wählen Sie in der Dropdownliste Ihre **Region** aus.
 
       > [!NOTE]
-      > Sie können eine neue Ressourcengruppe erstellen, indem Sie " **Neu**" auswählen.
+      > Sie können eine neue Ressourcengruppe erstellen, indem Sie **Neu** auswählen.
 
-   1. Wählen Sie **"Bereitstellen" aus**.
+   1. Wählen Sie **Bereitstellen** aus.
 
-1. Das Dialogfeld wird angezeigt, in dem erwähnt wird, dass Gebühren gemäß Azure-Nutzung hinzugefügt werden können. Wählen Sie **"Bereitstellen" aus**.
+1. Das Dialogfeld wird mit dem Hinweis angezeigt, dass Gebühren gemäß Azure-Nutzung hinzugefügt werden können. Wählen Sie **Bereitstellen** aus.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Bereitstellungswarnung":::
 
-   Der Bereitstellungsprozess erstellt Ressourcen in der Azure-Cloud. Sie können den Fortschritt überwachen, indem Sie das Ausgabefenster des Teams-Toolkits beobachten.
+   Beim Bereitstellungsprozess werden Ressourcen in der Azure-Cloud erstellt. Sie können den Fortschritt überwachen, indem Sie das Ausgabefenster des Teams-Toolkits beobachten.
 
-1. Sie werden nach Abschluss der Bereitstellung aufgefordert. Wählen Sie **"Bereitgestellte Ressourcen anzeigen** " aus, um alle bereitgestellten Ressourcen anzuzeigen.
+1. Sie werden nach Abschluss der Bereitstellung aufgefordert. Wählen Sie **Bereitgestellte Ressourcen anzeigen** aus, um alle bereitgestellten Ressourcen anzuzeigen.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="Anzeigen bereitgestellter Ressourcen":::
 
@@ -377,7 +377,7 @@ Wenn Sie den Bereitstellungsbefehl in Teams Toolkit oder TeamsFx CLI auslösen, 
 * Teams-App-Registrierung unter der Teams-Plattform Ihres Microsoft 365-Mandanten.
 * Azure-Ressourcen unter Ihrem ausgewählten Azure-Abonnement.
 
-Wenn Sie ein neues Projekt erstellen, müssen Sie auch Azure-Ressourcen erstellen. Die Azure Resource Manager-Vorlagen (ARM) definieren alle Azure-Ressourcen und helfen Ihnen, erforderliche Azure-Ressourcen während der Bereitstellung zu erstellen.
+Wenn Sie ein neues Projekt erstellen, müssen Sie auch Azure-Ressourcen erstellen. Die ARM-Vorlagen (Azure Resource Manager) definieren alle Azure-Ressourcen und helfen Ihnen beim Erstellen der erforderlichen Azure-Ressourcen während der Bereitstellung.
 
 Die folgende Liste zeigt die Ressourcenerstellung für verschiedene Arten von App- und Azure-Ressourcen:
 <br>
@@ -387,139 +387,139 @@ Die folgende Liste zeigt die Ressourcenerstellung für verschiedene Arten von Ap
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| App-Serviceplan | Hostet Ihre Web-App der Registerkarte. | Nicht zutreffend |
-| App-Dienst | Hostet Ihre Blazor-Registerkarten-App und einen einfachen Authentifizierungsserver, der ihnen hilft, Zugriff auf andere Dienste zu erhalten. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
-| Identität verwalten | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
+| App Service-Plan | Hostet Ihre Web-App der Registerkarte. | Nicht zutreffend |
+| App Service | Hosten Ihrer Blazor-Registerkarten-App und eines einfachen Authentifizierungsservers, mit dem Sie Zugriff auf andere Dienste erhalten können. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
+| Identität verwalten | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für die Teams-Nachrichtenerweiterungsanwendung</b></summary>
+<summary><b>Ressourcenerstellung für die Microsoft Teams-Nachrichtenerweiterungsanwendung</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
 | App Service Plan | Hostet Ihre Webbot-App. | Nicht zutreffend |
 | App Service | Hostet Ihre Bot-App. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
-| Identität verwalten | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
+| Identität verwalten | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für die Teams-Befehls-Bot-Anwendung</b></summary>
+<summary><b>Ressourcenerstellung für die Teams-Befehlsbotanwendung</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
-| App-Serviceplan | Hostet Ihre Webbot-App. | Nicht zutreffend |
-| App-Dienst | Hostet Ihre Bot-App. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
-| Identität verwalten | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
+| App Service-Plan | Hostet Ihre Webbot-App. | Nicht zutreffend |
+| App Service | Hostet Ihre Bot-App. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
+| Identität verwalten | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für Teams-Benachrichtigungs-Bot mit HTTP-Triggeranwendung (Web-API-Server)</b></summary>
+<summary><b>Ressourcenerstellung für den Teams-Benachrichtigungsbot mit HTTP-Triggeranwendung (Web-API-Server)</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
-| App-Serviceplan | Hostet Ihre Webbot-App. | Nicht zutreffend |
-| App-Dienst | Hosten Sie Ihre Bot-App. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
-| Verwaltete Identität | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
+| App Service-Plan | Hostet Ihre Webbot-App. | Nicht zutreffend |
+| App Service | Hosten Sie Ihre Bot-App. | Fügt eine vom Benutzer zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen. |
+| Verwaltete Identität | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für Den Teams-Benachrichtigungs-Bot mit EINER HTTP-Triggeranwendung (Azure-Funktion)</b></summary>
+<summary><b>Ressourcenerstellung für einen Teams-Benachrichtigungsbot mit HTTP-Triggeranwendung (Azure-Funktion)</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
-| Identität verwalten | Authentifiziert Azure-Service-to-Service-Anforderungen. | Gemeinsam genutzt über verschiedene Funktionen und Ressourcen. |
-| Speicherkonto | Hilft beim Erstellen der Funktions-App. | Nicht zutreffend |
-| App-Serviceplan | Hostet die Funktions-Bot-App. | Nicht zutreffend |
-| Function-App | Hostet Ihre Bot-App. | – Fügt dem Benutzer eine zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen.<br>– Fügt cors-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>– Fügt App-Einstellungen hinzu, die vom TeamsFx SDK erforderlich sind. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
+| Identität verwalten | Authentifiziert Azure Service-to-Service-Anforderungen. | Gemeinsame Nutzung über verschiedene Funktionen und Ressourcen hinweg. |
+| Speicherkonto | Hilft beim Erstellen einer Funktions-App. | Nicht zutreffend |
+| App Service-Plan | Hostet die Funktionsbot-App. | Nicht zutreffend |
+| Function-App | Hostet Ihre Bot-App. | : Fügt eine benutzerseitig zugewiesene Identität für den Zugriff auf andere Azure-Ressourcen hinzu.<br>– Fügt CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>: Fügt App-Einstellungen hinzu, die für das TeamsFx SDK erforderlich sind. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für Den Teams-Benachrichtigungs-Bot mit Zeitgebertriggeranwendung (Azure-Funktion)</b></summary>
+<summary><b>Ressourcenerstellung für teams-Benachrichtigungsbots mit Timertriggeranwendung (Azure-Funktion)</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
-| Identität verwalten | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
-| Speicherkonto | Hilft beim Erstellen der Funktions-App. | Nicht zutreffend. |
-| App-Serviceplan | Hostet die Funktions-Bot-App. | Nicht zutreffend |
-| Function-App | Hostet Ihre Bot-App. | – Fügt dem Benutzer eine zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen.<br>– Fügt cors-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>– Fügt App-Einstellungen hinzu, die vom TeamsFx SDK erforderlich sind. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
+| Identität verwalten | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
+| Speicherkonto | Hilft beim Erstellen einer Funktions-App. | Nicht zutreffend. |
+| App Service-Plan | Hostet die Funktionsbot-App. | Nicht zutreffend |
+| Function-App | Hostet Ihre Bot-App. | : Fügt eine benutzerseitig zugewiesene Identität für den Zugriff auf andere Azure-Ressourcen hinzu.<br>– Fügt CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>: Fügt App-Einstellungen hinzu, die für das TeamsFx SDK erforderlich sind. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Ressourcenerstellung für Teams-Benachrichtigungs-Bot mit HTTP-Trigger + Zeitgebertriggeranwendung (Azure-Funktion)</b></summary>
+<summary><b>Ressourcenerstellung für den Teams-Benachrichtigungsbot mit HTTP-Trigger und Timertriggeranwendung (Azure-Funktion)</b></summary>
 
 | Ressource | Zweck | Beschreibung |
 | --- | --- | --- |
-| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Stellt eine Verbindung zwischen Bot und Teams her. |
-| Identität verwalten | Authentifizieren von Azure Service-to-Service-Anforderungen. | Freigabe über verschiedene Funktionen und Ressourcen hinweg. |
-| Speicherkonto | Hilft beim Erstellen der Funktions-App. | Nicht zutreffend |
-| App-Serviceplan | Hostet die Funktions-Bot-App. | Nicht zutreffend |
-| Funktions-App | Hostet Ihre Bot-App. | – Fügt dem Benutzer eine zugewiesene Identität hinzu, um auf andere Azure-Ressourcen zuzugreifen.<br>– Fügt cors-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>– Fügt App-Einstellungen hinzu, die vom TeamsFx SDK erforderlich sind. |
+| Azure-Bot | Registriert Ihre App als Bot beim Bot-Framework. | Verbindet den Bot mit Teams. |
+| Identität verwalten | Authentifizieren von Azure-Dienst-zu-Dienst-Anforderungen. | Freigaben für verschiedene Funktionen und Ressourcen. |
+| Speicherkonto | Hilft beim Erstellen einer Funktions-App. | Nicht zutreffend |
+| App Service-Plan | Hostet die Funktionsbot-App. | Nicht zutreffend |
+| Funktions-App | Hostet Ihre Bot-App. | : Fügt eine benutzerseitig zugewiesene Identität für den Zugriff auf andere Azure-Ressourcen hinzu.<br>– Fügt CORS-Regel (Cross-Origin Resource Sharing) hinzu, um Anforderungen von Ihrer Registerkarten-App zuzulassen.<br>– Fügt eine Authentifizierungseinstellung hinzu, die nur Anforderungen von Ihrer Teams-App zulässt.<br>: Fügt App-Einstellungen hinzu, die für das TeamsFx SDK erforderlich sind. |
 
 </details>
 <br>
 
 ### <a name="manage-your-resources"></a>Verwalten Ihrer Ressourcen
 
-Sie können sich bei [Azure-Portal](https://portal.azure.com/) anmelden und alle ressourcen verwalten, die vom Teams-Toolkit erstellt wurden.
+Sie können sich bei [Azure-Portal](https://portal.azure.com/) anmelden und alle ressourcen verwalten, die von Teams Toolkit erstellt wurden.
 
-* Sie können die Ressourcengruppe aus der vorhandenen Liste oder der neuen Ressourcengruppe auswählen, die Sie erstellt haben.
+* Sie können eine Ressourcengruppe aus der vorhandenen Liste oder der neuen Ressourcengruppe auswählen, die Sie erstellt haben.
 * Die Details der ausgewählten Ressourcengruppe finden Sie im Abschnitt "Übersicht" des Inhaltsverzeichnisses.
 
 ## <a name="customize-resource-provision"></a>Passen Sie die Ressourcenbereitstellung an
 
-Mit dem Teams-Toolkit können Sie eine Infrastruktur für den Codeansatz verwenden, um die Azure-Ressourcen zu definieren, die Sie bereitstellen möchten. Sie können die Konfiguration im Teams-Toolkit entsprechend Ihren Anforderungen ändern.
+Mit dem Teams-Toolkit können Sie eine Infrastruktur für den Codeansatz verwenden, um die Azure-Ressourcen zu definieren, die Sie bereitstellen möchten. Sie können die Konfiguration im Teams-Toolkit gemäß Ihren Anforderungen ändern.
 
-Das Teams-Toolkit verwendet arm-Vorlage, um Azure-Ressourcen zu definieren. Die ARM-Vorlage ist eine Reihe von Bicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Bicep-Dokument](/azure/azure-resource-manager/bicep).
+Das Teams-Toolkit verwendet eine ARM-Vorlage, um Azure-Ressourcen zu definieren. Die ARM-Vorlage ist eine Reihe von Bicep-Dateien, die die Infrastruktur und Konfiguration für Ihr Projekt definieren. Sie können Azure-Ressourcen anpassen, indem Sie die ARM-Vorlage ändern. Weitere Informationen finden Sie im [Bicep-Dokument](/azure/azure-resource-manager/bicep).
 
 Die Bereitstellung mit ARM umfasst die Änderung der folgenden Sätze von Dateien, Parametern und Vorlagen:
 
 * ARM-Parameterdateien (`azure.parameters.{your_env_name}.json`) im `.fx/configs` Ordner zum Übergeben von Parametern an Vorlagen.
-* ARM-Vorlagendateien, die sich im `templates/azure` Ordner befinden, enthalten folgende Dateien:
+* ARM-Vorlagendateien, die sich im `templates/azure` Ordner befinden, enthalten die folgenden Dateien:
 
 | Datei | Funktion | Anpassung zulassen |
 | --- | --- | --- |
-| main.bicep | Stellen Sie den Einstiegspunkt für die Azure-Ressource bereit. Bereitstellung | Ja |
-| provision.bicep | Erstellen und Konfigurieren von Azure-Ressourcen. | Ja |
+| main.bicep | Geben Sie einen Einstiegspunkt für die Azure-Ressource an. Bereitstellung | Ja |
+| provision.bicep | Erstellen und Konfigurieren von Azure-Ressourcen | Ja |
 | config.bicep | Fügen Sie erforderliche TeamsFx-Konfigurationen zu Azure-Ressourcen hinzu. | Ja |
-| provision/xxx.bicep | Erstellen und konfigurieren Sie jede Azure-Ressource, die von verbraucht wird `provision.bicep`. | Ja |
-| teamsfx/xxx.bicep | Fügen Sie die erforderlichen TeamsFx-Konfigurationen zu jeder Azure-Ressource hinzu, die von verbraucht wird `config.bicep`.| Nein |
+| provision/xxx.bicep | Erstellen und konfigurieren Sie jede azure-Ressource, die von genutzt wird `provision.bicep`. | Ja |
+| teamsfx/xxx.bicep | Fügen Sie die erforderlichen TeamsFx-Konfigurationen zu jeder Azure-Ressource hinzu, die von genutzt wird `config.bicep`.| Nein |
 
 > [!NOTE]
-> Nachdem Sie Ihrem Projekt Ressourcen oder Funktionen hinzugefügt haben, `teamsfx/xxx.bicep` wird es neu generiert. Zum Ändern der Bicep-Dateien können Sie Git verwenden, um Ihre Änderungen an Dateien nachzuverfolgen `teamsfx/xxx.bicep` . Dadurch gehen beim Hinzufügen von Ressourcen oder Funktionen zu Ihrem Projekt keine Änderungen verloren.
+> Nachdem Sie Ihrem Projekt Ressourcen oder Funktionen hinzugefügt haben, `teamsfx/xxx.bicep` wird neu generiert. Um die Bicep-Dateien zu ändern, können Sie Git verwenden, um Ihre Änderungen an Dateien nachzuverfolgen `teamsfx/xxx.bicep` . Dadurch verlieren Sie beim Hinzufügen von Ressourcen oder Funktionen zu Ihrem Projekt keine Änderungen.
 
 Die ARM-Vorlagendateien verwenden Platzhalter für Parameter. Der Zweck der Platzhalter besteht darin, sicherzustellen, dass neue Ressourcen in der neuen Umgebung erstellt werden können. Die tatsächlichen Werte werden aus der `.fx/states/state.{env}.json` Datei aufgelöst.
 
-### <a name="azure-ad-application-related-parameters"></a>Azure AD-Anwendungsbezogene Parameter
+### <a name="azure-ad-application-related-parameters"></a>Azure AD-anwendungsbezogene Parameter
 
 | Parametername | Standardwert-Platzhalter | Bedeutung des Platzhalters | So passen Sie es an |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Die Azure AD-App-Client-ID Ihrer App, die während der Bereitstellung erstellt wurde. | [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Die Während der Bereitstellung erstellte Azure AD-App-Client-ID Ihrer App. | [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Der geheime Azure AD-App-Clientschlüssel Ihrer App, der während der Bereitstellung erstellt wurde. | [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Mandanten-ID der Azure AD-App Ihrer App. | [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth-Autoritätshost der Azure AD-App Ihrer App. | [Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Die Azure AD-App-Client-ID des Bots, die während der Bereitstellung erstellt wurde. | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Der geheime Azure AD-App-Clientschlüssel des Bots, der während der Bereitstellung erstellt wurde. | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Die Während der Bereitstellung erstellte Client-ID der Azure AD-App des Bots. | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Der geheime Clientschlüssel der Azure AD-App des Bots, der während der Bereitstellung erstellt wurde. | [Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot](#use-an-existing-azure-ad-app-for-your-bot) |
 
-### <a name="reference-environment-variables-in-parameter-files"></a>Referenzumgebungsvariablen in Parameterdateien
+### <a name="reference-environment-variables-in-parameter-files"></a>Verweisen auf Umgebungsvariablen in Parameterdateien
 
-Wenn der Wert geheim ist, müssen Sie sie nicht in der Parameterdatei hartcodieren. Die Parameterdateien unterstützen das Referenzieren der Werte aus Umgebungsvariablen. Sie können diese Syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in den Parameterwerten für das Teams-Toolkit verwenden, um die Auflösung aus der aktuellen Umgebungsvariablen durchzuführen.
+Wenn der Wert geheimnis ist, müssen Sie sie nicht in der Parameterdatei hartcodieren. Die Parameterdateien unterstützen das Referenzieren der Werte aus Umgebungsvariablen. Sie können diese Syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in den Parameterwerten für Teams Toolkit verwenden, um die Auflösung aus der aktuellen Umgebungsvariablen zu ermöglichen.
 
 Das folgende Beispiel liest den Wert des Parameters `mySelfHostedDbConnectionString` aus der Umgebungsvariablen `DB_CONNECTION_STRING`:
 
@@ -531,21 +531,21 @@ Das folgende Beispiel liest den Wert des Parameters `mySelfHostedDbConnectionStr
 
 ### <a name="customize-arm-template-files"></a>Passen Sie ARM-Vorlagendateien an
 
-Wenn die vordefinierten Vorlagen Ihre Anwendungsanforderung nicht erfüllen, können Sie die ARM-Vorlagen unter `templates/azure` dem Ordner anpassen. Beispielsweise können Sie die ARM-Vorlage anpassen, um einige zusätzliche Azure-Ressourcen für Ihre App zu erstellen. Sie müssen über Grundkenntnisse der Bicep-Sprache verfügen, die zum Erstellen von ARM-Vorlagen verwendet wird.
+Wenn die vordefinierten Vorlagen Ihre Anwendungsanforderung nicht erfüllen, können Sie die ARM-Vorlagen unter dem `templates/azure` Ordner anpassen. Beispielsweise können Sie die ARM-Vorlage anpassen, um zusätzliche Azure-Ressourcen für Ihre App zu erstellen. Sie müssen über Grundkenntnisse der Bicep-Sprache verfügen, die zum Erstellen von ARM-Vorlagen verwendet wird.
 
-Um sicherzustellen, dass das TeamsFx-Tool ordnungsgemäß funktioniert, passen Sie die ARM-Vorlage an, die die folgende Anforderung erfüllt:
+Um sicherzustellen, dass das TeamsFx-Tool ordnungsgemäß funktioniert, passen Sie die ARM-Vorlage an, die die folgenden Anforderungen erfüllt:
 
 * Stellen Sie sicher, dass die Ordnerstruktur und der Dateiname unverändert bleiben. Das Tool fügt möglicherweise neue Inhalte an die vorhandenen Dateien an, wenn Sie Ihrem Projekt weitere Ressourcen oder Funktionen hinzufügen.
-* Stellen Sie sicher, dass der Name der automatisch generierten Parameter und dessen Eigenschaftsnamen nicht hängen bleiben. Die automatisch generierten Parameter können verwendet werden, wenn Sie Ihrem Projekt weitere Ressourcen oder Fähigkeiten hinzufügen.
-* Stellen Sie sicher, dass auch die Ausgabe der automatisch generierten ARM-Vorlage unverändert bleibt. Sie können der ARM-Vorlage weitere Ausgaben hinzufügen. Die Ausgabe wird `.fx/states/state.{env}.json` und kann in anderen Features verwendet werden, z. B. bereitstellen und Überprüfen der Manifestdatei.
+* Stellen Sie sicher, dass der Name der automatisch generierten Parameter und die zugehörigen Eigenschaftennamen nicht hängen bleiben. Die automatisch generierten Parameter können verwendet werden, wenn Sie Ihrem Projekt weitere Ressourcen oder Fähigkeiten hinzufügen.
+* Stellen Sie sicher, dass auch die Ausgabe der automatisch generierten ARM-Vorlage unverändert ist. Sie können der ARM-Vorlage weitere Ausgaben hinzufügen. Die Ausgabe ist `.fx/states/state.{env}.json` und kann in anderen Features wie bereitstellen und überprüfen der Manifestdatei verwendet werden.
 
 ### <a name="customize-teams-app"></a>Anpassen der Teams-App
 
-Sie können Ihren Bot oder die Teams-App anpassen, indem Sie Konfigurationsausschnitte hinzufügen, um eine von Ihnen erstellte Azure AD-App zu verwenden. Sie können folgendeRmaßen vorgehen:
+Sie können Ihren Bot oder die Teams-App anpassen, indem Sie Konfigurationsausschnitte hinzufügen, um eine von Ihnen erstellte Azure AD-App zu verwenden. Sie haben folgende Möglichkeiten:
 
 #### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Verwenden Sie eine vorhandene Azure AD-App für Ihre Teams-App
 
-Sie können den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um eine von Ihnen erstellte Azure AD-App für Ihre Teams-App zu verwenden. Um eine Azure AD-App zu erstellen, folgen Sie dem Link <https://aka.ms/teamsfx-existing-aad-doc>.
+Sie können den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.json` hinzufügen, um eine von Ihnen für Ihre Teams-App erstellte Azure AD-App zu verwenden. Um eine Azure AD-App zu erstellen, folgen Sie dem Link <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -556,14 +556,14 @@ Sie können den folgenden Konfigurationsausschnitt `.fx/configs/config.{env}.jso
 }
 ```
 
-Fügen Sie nach dem Hinzufügen des Codeausschnitts Ihren geheimen Clientschlüssel zur zugehörigen Umgebungsvariable hinzu, damit das Teams-Toolkit den tatsächlichen geheimen Clientschlüssel während der Bereitstellung auflösen kann.
+Nachdem Sie den Codeausschnitt hinzugefügt haben, fügen Sie Ihren geheimen Clientschlüssel der zugehörigen Umgebungsvariablen hinzu, damit teams Toolkit den tatsächlichen geheimen Clientschlüssel während der Bereitstellung auflösen kann.
 
 > [!NOTE]
-> Stellen Sie sicher, dass Sie dieselbe Azure AD-App nicht in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der Azure AD-App verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der Azure AD-App. Befolgen Sie die folgenden Anweisungen, um Ihre Azure AD-App nach der Bereitstellung zu aktualisieren.
+> Stellen Sie sicher, dass Sie dieselbe Azure AD-App nicht in mehreren Umgebungen freigeben. Wenn Sie nicht über die Berechtigung zum Aktualisieren der Azure AD-App verfügen, erhalten Sie eine Warnung mit Anweisungen zum manuellen Aktualisieren der Azure AD-App. Befolgen Sie diese Anweisungen, um Ihre Azure AD-App nach der Bereitstellung zu aktualisieren.
 
 #### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Verwenden Sie eine vorhandene Azure AD-App für Ihren Bot
 
-Sie können den folgenden Konfigurationsausschnitt hinzufügen, um `.fx/configs/config.{env}.json` die für Ihren Bot erstellte Azure AD-App zu verwenden:
+Sie können den folgenden Konfigurationsausschnitt hinzufügen, um die für Ihren Bot erstellte Azure AD-App zu `.fx/configs/config.{env}.json` verwenden:
 
 ```json
 "bot": {
@@ -572,11 +572,11 @@ Sie können den folgenden Konfigurationsausschnitt hinzufügen, um `.fx/configs/
 }
 ```
 
-Fügen Sie nach dem Hinzufügen des Codeausschnitts Ihren geheimen Clientschlüssel zur zugehörigen Umgebungsvariablen für das Teams-Toolkit hinzu, um den tatsächlichen geheimen Clientschlüssel während der Bereitstellung aufzulösen.
+Fügen Sie nach dem Hinzufügen des Codeausschnitts Ihren geheimen Clientschlüssel zur zugehörigen Umgebungsvariablen für Teams Toolkit hinzu, um den tatsächlichen geheimen Clientschlüssel während der Bereitstellung aufzulösen.
 
 #### <a name="skip-adding-user-for-sql-database"></a>Überspringen Sie das Hinzufügen eines Benutzers für die SQL-Datenbank
 
-Wenn beim Versuch des Teams-Toolkits, Benutzer zur SQL-Datenbank hinzuzufügen, ein unzureichender Berechtigungsfehler auftritt, können Sie den folgenden Konfigurationsausschnitt hinzufügen, um das Hinzufügen von SQL-Datenbankbenutzern zu `.fx/configs/config.{env}.json` überspringen:
+Wenn beim Versuch des Teams-Toolkits, benutzer zur SQL-Datenbank hinzuzufügen, ein Fehler aufgrund unzureichender Berechtigungen angezeigt wird, können Sie den folgenden Konfigurationsausschnitt zu hinzufügen, um `.fx/configs/config.{env}.json` das Hinzufügen eines SQL-Datenbankbenutzers zu überspringen:
 
 ```json
 "skipAddingSqlUser": true
@@ -589,6 +589,6 @@ Wenn beim Versuch des Teams-Toolkits, Benutzer zur SQL-Datenbank hinzuzufügen, 
 * [Bereitstellen der Teams-App in der Cloud](deploy.md)
 * [Verwalten mehrerer Umgebungen](TeamsFx-multi-env.md)
 * [Zusammenarbeit mit anderen Entwicklern am Teams-Projekt](TeamsFx-collaboration.md)
-* [Bereitstellen der Teams-App in der Cloud mit Visual Studio](deploy-teams-app.md)
+* [Bereitstellen der Teams-App in der Cloud mithilfe von Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 * [Bearbeiten des Teams-App-Manifests mit Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Lokales Debuggen der Teams-App für Visual Studio](debug-teams-app-visual-studio.md)
+* [Lokales Debuggen der Teams-App für Visual Studio](debug-local.md#debug-your-teams-app-locally-using-visual-studio)

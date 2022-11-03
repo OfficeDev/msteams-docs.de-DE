@@ -1,14 +1,14 @@
 ---
 title: Hinzufügen von Kartenaktionen in einem Bot
-description: In diesem Modul erfahren Sie, was Kartenaktionen in Microsoft Teams, Aktionstypen und deren Verwendung in Ihren Bots sind.
+description: In diesem Modul erfahren Sie, was Kartenaktionen in Microsoft Teams, Aktionstypen sind und wie Sie sie in Ihren Bots verwenden.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1111e8dfe71ad1289f5057b6cb76b98c3ca8d99b
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 77f2631ae55f5794567d83233e1311d935cefabc
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858891"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833177"
 ---
 # <a name="card-actions"></a>Kartenaktionen
 
@@ -99,7 +99,7 @@ Mit `messageBack` können Sie eine vollständig angepasste Aktion mit den folgen
 | `value` | Wird an Ihren Bot gesendet, wenn die Aktion ausgeführt wird. Sie können den Kontext für die Aktion codieren, z. B. eindeutige Bezeichner oder ein JSON-Objekt. |
 | `text` | Wird an Ihren Bot gesendet, wenn die Aktion ausgeführt wird. Verwenden Sie diese Eigenschaft, um die Botentwicklung zu vereinfachen. Ihr Code kann eine einzelne Eigenschaft der obersten Ebene überprüfen, um Botlogik zu verteilen. |
 
-Die Flexibilität bedeutet `messageBack` , dass Ihr Code keine sichtbare Benutzermeldung im Verlauf hinterlassen kann, indem er einfach nicht verwendet `displayText`.
+Die Flexibilität von `messageBack` bedeutet, dass Ihr Code keine sichtbare Benutzernachricht im Verlauf hinterlassen kann, indem einfach nicht verwendet `displayText`wird.
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -433,7 +433,7 @@ Sie können auch die Nutzlast der adaptiven Karte "`Action.Submit`" ändern, um 
 > [!NOTE]
 >* Das Hinzufügen von "`msteams`" zu Daten mit einer Bot-Framework-Aktion funktioniert nicht mit einem Aufgabenmodul für adaptive Karten.
 > 
->* Primär oder desctuctive `ActionStyle` wird in Microsoft Teams nicht unterstützt. 
+>* Primär oder aktutiv `ActionStyle` wird in Microsoft Teams nicht unterstützt. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Adaptive Karten mit messageBack-Aktion
 
@@ -563,13 +563,13 @@ Der folgende Code zeigt ein Beispiel für adaptive Karten mit `invoke`-Aktion mi
 
 ## <a name="code-samples"></a>Codebeispiele
 
-|S.no|Karte| description|.NET|Javascript|Python|Java|
+|S.no|Karte| description|.NET|JavaScript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|Verwenden von Karten|Führt alle Kartentypen ein, einschließlich Miniaturansicht, Audio, Medien usw. Baut auf "Einladender Benutzer" + Bot mit mehreren Eingabeaufforderungen auf, indem eine Karte mit Schaltflächen in der Willkommensnachricht präsentiert wird, die zum entsprechenden Dialogfeld geleitet werden.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|Adaptive Karten|Veranschaulicht, wie das Dialogfeld mit mehreren Drehungen eine Karte verwenden kann, um Benutzereingaben für Name und Alter abzurufen.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1|Verwenden von Karten|Führt alle Kartentypen ein, einschließlich Miniaturansichten, Audio, Medien usw. Baut auf Begrüßung von Benutzer + Bot mit mehreren Eingabeaufforderungen auf, indem eine Karte mit Schaltflächen in der Willkommensnachricht angezeigt wird, die an den entsprechenden Dialog weitergeleitet werden.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Adaptive Karten|Veranschaulicht, wie das Dialogfeld mit mehreren Durchläufen eine Karte verwenden kann, um Benutzereingaben für Name und Alter abzurufen.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Anzeigen](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> Medienelemente werden für adaptive Karten in Teams nicht unterstützt.
+> Medienelemente werden für adaptive Karten in Teams nicht unterstützt
 
 ## <a name="next-step"></a>Nächster Schritt
 
