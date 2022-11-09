@@ -799,8 +799,6 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Json-Schemareferenz lokalisieren
           href: resources/schema/localization-schema.md
-    - name: Stille Authentifizierung in Azure AD verwenden
-      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: SameSite-Cookieattribut
       href: resources/samesite-cookie-update.md
       displayName: Cookies
