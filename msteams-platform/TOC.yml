@@ -502,14 +502,13 @@
   items:
     - name: Übersicht
       href: concepts/authentication/authentication.md
-      displayName: Authentication method
-    - name: Registerkarten
+    - name: Aktivieren von SSO für Ihre Teams-App
       items:
-        - name: Aktivieren von SSO für die Registerkarten-App
+        - name: Aktivieren des einmaligen Anmeldens für Ihre Registerkarten-App
           items:
-            - name: Übersicht
+            - name: Übersicht für Registerkarten-SSO
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: Registrieren Ihrer Registerkarten-App in Azure AD
+            - name: Konfigurieren Ihrer Registerkarten-App in Azure AD
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: Hinzufügen von Code zum Aktivieren von SSO
               href: tabs/how-to/authentication/tab-sso-code.md
@@ -517,33 +516,32 @@
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: Erteilen von Berechtigungen und Bereichen für Microsoft Graph
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: Configure authentication for different platforms
-            - name: Fehlerbehebung bei der SSO-Authentifizierung
-              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-        - name: OAuth IdP-Authentifizierung von Drittanbietern verwenden
+        - name: Aktivieren des einmaligen Anmeldens für Ihren Bot und Ihre Nachrichtenerweiterungs-App
           items:
             - name: Übersicht
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: Konfigurieren der OAuth-IdP-Authentifizierung von Drittanbietern
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Verwenden externer OAuth-Anbieter
-              href: tabs/how-to/authentication/auth-oauth-provider.md
-    - name: Bots
+              href: bots/how-to/authentication/bot-sso-overview.md
+            - name: Konfigurieren Ihrer App in Azure AD
+              href: bots/how-to/authentication/bot-sso-register-aad.md
+            - name: Hinzufügen von Code zum Aktivieren von SSO
+              href: bots/how-to/authentication/bot-sso-code.md
+            - name: Aktualisieren von App-Manifest für SSO und App-Vorschau
+              href: bots/how-to/authentication/bot-sso-manifest.md
+            - name: Erteilen von Berechtigungen und Bereichen für Microsoft Graph
+              href: bots/how-to/authentication/bot-sso-graph-api.md
+        - name: Fehlerbehebung bei der SSO-Authentifizierung
+          href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    - name: Verwenden der IdP-Authentifizierung eines Drittanbieters
       items:
-        - name: Authentifizierungsfluss in Bots
-          href: bots/how-to/authentication/auth-flow-bot.md
-        - name: Ihrem Bot Authentifizierung hinzufügen
+        - name: Übersicht
+          href: tabs/how-to/authentication/auth-flow-tab.md
+        - name: Hinzufügen der IdP-Authentifizierung eines Drittanbieters zur Registerkarten-App
+          href: tabs/how-to/authentication/auth-tab-aad.md
+        - name: Hinzufügen der IdP-Authentifizierung eines Drittanbieters zur Bot-App
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
-        - name: Verwenden von SSO-Authentifizierung (einmaliges Anmelden)
-          href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Nachrichtenerweiterungen
-      items:
-        - name: Hinzufügen der Authentifizierung zu Ihrer Nachrichtenerweiterung
+        - name: Hinzufügen der IdP-Authentifizierung eines Drittanbieters zur Nachrichtenerweiterungs-App
           href: messaging-extensions/how-to/add-authentication.md
-          displayName: Configuration
-        - name: Aktivieren des einmaligen Anmeldens für Nachrichtenerweiterungen
-          href: messaging-extensions/how-to/enable-SSO-auth-me.md
+    - name: Verwenden externer OAuth-Anbieter
+      href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrieren von Gerätefunktionen
   items:
     - name: Übersicht
